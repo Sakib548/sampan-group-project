@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+@keyframes page-turn-next {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) rotateY(-88deg) translateX(-8%) scale(0.96);
+    transform-origin: left center;
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+    transform-origin: left center;
+  }
+}
+
+@keyframes page-turn-previous {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) rotateY(88deg) translateX(8%) scale(0.96);
+    transform-origin: right center;
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+    transform-origin: right center;
+  }
+}
+
+.animate-page-turn-next {
+  animation: page-turn-next 850ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  backface-visibility: hidden;
+}
+
+.animate-page-turn-previous {
+  animation: page-turn-previous 850ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  backface-visibility: hidden;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* Updated to use the fonts loaded via <link> in layout.tsx */
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "Roboto", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* From Uiverse.io by Web-Potato */
+.learn-more {
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.learn-more span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+}
+
+.learn-more span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+.learn-more span:not(hover) {
+  transition: all 1s;
+}
+
+.counter-section {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+.redText {
+  color: oklch(80.8% 0.114 19.571);
+}
+.greenText {
+  color: oklch(80.8% 0.114 155);
+}
+.greenTextDark {
+  color: oklch(45% 0.12 155);
+}
+.redTextDark {
+  color: oklch(50% 0.14 25);
+}
+
+/* button style */
+
+/* Base button */
+.site-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  min-height: 3.25rem;
+  padding: 0.7rem 1.15rem;
+
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    transform 250ms ease;
+}
+
+.site-btn:hover {
+  transform: translateY(-2px);
+}
+
+.site-btn__arrow {
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: transform 250ms ease;
+}
+
+.site-btn:hover .site-btn__arrow {
+  transform: translateX(4px);
+}
+
+/* 1. Recommended: green glass with red arrow */
+.site-btn--glass-brand {
+  background: rgba(0, 161, 116, 0.22);
+  border-color: rgba(65, 220, 168, 0.48);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 12px 32px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.site-btn--glass-brand .site-btn__arrow {
+  color: #ef636b;
+}
+
+.site-btn--glass-brand:hover {
+  background: rgba(0, 161, 116, 0.36);
+  border-color: rgba(65, 220, 168, 0.72);
+}
+
+/* 2. Neutral dark glass */
+.site-btn--glass-dark {
+  background: rgba(8, 21, 16, 0.38);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.site-btn--glass-dark:hover {
+  background: rgba(8, 21, 16, 0.58);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 3. Red glass */
+.site-btn--glass-red {
+  background: rgba(239, 99, 107, 0.2);
+  border-color: rgba(255, 135, 143, 0.5);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.site-btn--glass-red:hover {
+  background: rgba(239, 99, 107, 0.36);
+  border-color: rgba(255, 135, 143, 0.75);
+}
+
+/* 4. Solid green */
+.site-btn--solid-green {
+  background: #00a174;
+  border-color: #00a174;
+}
+
+.site-btn--solid-green:hover {
+  background: #008f68;
+  border-color: #008f68;
+}
+
+.site-btn--green {
+  background: rgba(22, 129, 91, 0.88);
+  border: 1px solid rgba(168, 223, 115, 0.65);
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: all 300ms ease;
+}
+
+.site-btn--green:hover {
+  background: #a8df73;
+  border-color: #a8df73;
+  color: #183b2b;
+}
+
+/* 5. Transparent outline */
+.site-btn--outline {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.42);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.site-btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Optional: even smaller button */
+.site-btn--compact {
+  min-height: 2.9rem;
+  padding: 0.6rem 0.95rem;
+  font-size: 0.67rem;
+}
