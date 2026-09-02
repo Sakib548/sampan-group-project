@@ -774,7 +774,7 @@ export default function ClubAndMembershipPage() {
                         <Image
                           src={project.image}
                           alt={project.title}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover"
                         />
                       </div>
@@ -826,7 +826,7 @@ export default function ClubAndMembershipPage() {
                     <Image
                       src={project.image}
                       alt={`Experience ${index + 1}`}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover transition-transform duration-1000 ease-out"
                       style={{ transform: "scale(1.1)" }}
                     />

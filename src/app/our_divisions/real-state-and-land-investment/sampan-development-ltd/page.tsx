@@ -73,7 +73,7 @@ const floorPlans = [
     name: "Sampan Development Portfolio Master Plan",
     category: "Division Master Plan",
     sizeSqFt: "Multi-Acre Development Grid",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     description: "Master architectural planning incorporating green zones, commercial facades, and residential towers.",
     features: ["Sustainable Green Corridors", "100% Sound Earthquake Resistant Grid", "Gated Security Control"],
   },
@@ -102,7 +102,7 @@ const renders = [
     title: "Sampan Development Architectural Vision",
     category: "exterior" as const,
     categoryLabel: "Exterior Architecture",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     type: "image" as const,
     description: "Flagship urban architecture and land-share developments across prime transit corridors.",
   },
@@ -126,7 +126,7 @@ export default function SampanDevelopmentLtdPage() {
         statusBadge="Division Flagship"
         statusType="flagship"
         description="The flagship real estate company of Sampan Group. Engineering commercial trade emporiums, residential land-share towers, and sustainable infrastructure across Bangladesh."
-        image="/images/concerns/sampan-development-ltd.png"
+        image="/images/concerns/sampan-dev-ltd.png"
         facts={facts}
         accentColor="#0284c7"
         badgeColor="#0284c7"

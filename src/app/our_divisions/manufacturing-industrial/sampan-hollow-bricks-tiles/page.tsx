@@ -74,7 +74,7 @@ const capacityStats = [
 ];
 
 const factoryPhotos = [
-  "/images/concerns/sampan-development-ltd.png",
+  "/images/concerns/sampan-dev-ltd.png",
   "/images/projects/sampanmetrosquare.jpg",
   "/images/concerns/sampan-auto.png",
   "/images/brand/sampanhollowbricksandtiles.png",

@@ -233,7 +233,7 @@ export default function CafeMetroSpecial() {
             {mockVehicles.map((v) => (
               <div key={v.id} className="border border-[#183b2b]/15 bg-white overflow-hidden group shadow-sm">
                 <div className="relative h-48 w-full bg-neutral-200">
-                  <Image src={v.image} alt={v.name} fill className="object-cover group-hover:scale-105 transition-transform" />
+                  <Image src={v.image} alt={v.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform" />
                   <span className="absolute top-3 left-3 bg-[#ca8a04] text-neutral-950 font-mono text-[10px] font-bold px-2 py-0.5 uppercase">
                     {v.year} Model
                   </span>

@@ -1,228 +1,132 @@
-import Image from "next/image";
-import { AgroGolfModern } from "@/components/HospitalityDistinctPages";
+import type { Metadata } from "next";
+import ResortHero from "../components/ResortHero";
+import ResortOverview from "../components/ResortOverview";
+import ResortMasterplanMap from "../components/ResortMasterplanMap";
+import ResortPhasedTimeline from "../components/ResortPhasedTimeline";
+import ResortPricingComparison from "../components/ResortPricingComparison";
+import ResortFoundingMemberPricing from "../components/ResortFoundingMemberPricing";
+import ResortPreLaunchWaitlist from "../components/ResortPreLaunchWaitlist";
+import ResortDroneProgress from "../components/ResortDroneProgress";
+import GolfMediaGallery from "../../golf-zone/components/GolfMediaGallery";
+import GolfLocationAndMap from "../../golf-zone/components/GolfLocationAndMap";
+import GolfNearbyModule from "../../golf-zone/components/GolfNearbyModule";
 
-const heroImage = "/images/featuredConcerns/sampan-agro-golf-resort.png";
-const gallery = [
-  heroImage,
-  "/images/concerns/4-sampan-go-lfresort.png",
-  "/images/concerns/3-sampan-eco-agro.png",
-  "/images/facilities/highway_inn/all_day_comfort.png",
-];
-
-const amenities = [
-  [
-    "Golf course",
-    "Enjoy the game of green across peaceful fairways and open landscapes.",
-  ],
-  [
-    "Agro experience",
-    "Discover fresh vegetables, fruits, flowers, fish, and cattle from our sustainable farm.",
-  ],
-  [
-    "Luxury restaurant",
-    "Relax over quality meals and refreshing drinks in a calm natural setting.",
-  ],
-  [
-    "VVIP lounge",
-    "A comfortable premium space for private gatherings and unhurried conversations.",
-  ],
-  [
-    "Billiards & card room",
-    "Play, relax, and compete with friends and family indoors.",
-  ],
-  [
-    "Pool & recreation",
-    "Unwind in refreshing water and spacious outdoor surroundings.",
-  ],
-  [
-    "EV charging",
-    "Convenient charging facilities for guests traveling by electric vehicle.",
-  ],
-  [
-    "Automatic car wash",
-    "Keep your vehicle refreshed before continuing your journey.",
-  ],
-];
-
-export const metadata = {
-  title: "Sampan Agro & Golf Resort | Sampan Group",
+export const metadata: Metadata = {
+  title: "Sampan Agro & Golf Resort (Ongoing) | 160-Acre Eco-Agro & Championship Golf Fairways",
   description:
-    "A serene destination where nature, comfort, and recreation come together.",
+    "Sampan Agro & Golf Resort is Bangladesh's premier 160-acre destination combining championship golf fairways, VVIP luxury eco-villas, organic farm-to-table dining, and wellness spa facilities.",
 };
 
-function LegacySampanAgroGolfResortPage() {
+const resortFacts = [
+  { value: "160 Acres", label: "Masterplanned Estate" },
+  { value: "9-Hole", label: "Executive Golf Course" },
+  { value: "40 Villas", label: "Luxury VVIP Eco-Villas" },
+  { value: "Phased 2026", label: "Opening Roadmap" },
+];
+
+const resortLandmarks = [
+  { landmark: "Sampan Golf Academy", distance: "300 meters", driveTime: "2 Mins Walk" },
+  { landmark: "Sampan Short Drive Range", distance: "400 meters", driveTime: "3 Mins Walk" },
+  { landmark: "Sampan Cafe Metro", distance: "4 km", driveTime: "5 Mins Drive" },
+  { landmark: "Sampan Highway Inn", distance: "6 km", driveTime: "8 Mins Drive" },
+];
+
+const resortGallery = [
+  {
+    id: "resort-1",
+    title: "Championship Fairway & Golf Greens",
+    category: "Golf Fairways",
+    type: "photo" as const,
+    src: "/images/featuredConcerns/sampan-agro-golf-resort.png",
+    caption: "PGA-calibrated fairway turf with water hazards and natural contours.",
+  },
+  {
+    id: "resort-2",
+    title: "VVIP Eco-Villa & Private Plunge Pool",
+    category: "Luxury Villas",
+    type: "photo" as const,
+    src: "/images/featuredConcerns/sampan-agro-golf-resort.png",
+    caption: "Secluded eco-villas featuring private infinity pools and butler service.",
+  },
+  {
+    id: "resort-3",
+    title: "Organic Farm-to-Table Crop Estate",
+    category: "Agro Farm",
+    type: "photo" as const,
+    src: "/images/concerns/3-sampan-eco-agro.png",
+    caption: "Solar-drip irrigated organic fruit orchards and greenhouse vegetables.",
+  },
+  {
+    id: "resort-4",
+    title: "Boating Lake & Wellness Spa Pier",
+    category: "Recreation & Spa",
+    type: "photo" as const,
+    src: "/images/facilities/highway_inn/all_day_comfort.png",
+    caption: "Natural lake for kayaking and serene wellness spa retreats.",
+  },
+];
+
+export default function SampanAgroGolfResortPage() {
   return (
-    <main className="bg-[#f7f5ec] text-[#253247]">
-      <section className="relative flex min-h-screen items-end overflow-hidden px-8 pb-16 pt-32 text-white sm:px-12 lg:px-20 lg:pb-24">
-        <Image
-          src={heroImage}
-          alt="Sampan Agro and Golf Resort"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
-        <div className="relative z-10 mx-auto w-full max-w-[1200px]">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-200">
-            Hospitality, Leisure & Agro
-          </p>
-          <h1 className="mt-5 max-w-4xl text-[clamp(2.5rem,5vw,5rem)] font-semibold leading-[0.95] tracking-tight">
-            Sampan Agro & Golf Resort
-          </h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
-            Where nature, comfort, and recreation come together.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#experiences"
-              className="inline-flex bg-emerald-700 px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em] transition hover:bg-emerald-600"
-            >
-              Explore the resort
-            </a>
-            <a
-              href="mailto:info@sampangroup.com.bd"
-              className="inline-flex border border-white/60 px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em] transition hover:bg-white hover:text-black"
-            >
-              Make an enquiry
-            </a>
-          </div>
-        </div>
-      </section>
+    <main className="min-h-screen bg-[#f8faf6] text-[#183b2b]">
+      {/* SECTION 1: Hero Header */}
+      <ResortHero
+        title="Sampan Agro & Golf Resort"
+        subtitle="Integrated Luxury Resort, Championship Fairways & Sustainable Organic Farm Escape"
+        concernName="Sampan Agro & Golf Resort"
+        statusBadge="Ongoing Development — Phased Opening 2026"
+        description="A 160-acre sanctuary where championship golf fairways, luxury eco-villas, organic farm-to-table dining, and wellness spa retreats come together."
+        facts={resortFacts}
+        bannerImage="/images/brand/agroandgolf.png"
+      />
 
-      <section className="px-8 py-16 sm:px-12 lg:px-20 lg:py-24">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-              Where nature meets luxury
-            </p>
-            <h2 className="mt-5 text-[clamp(2.2rem,4vw,4rem)] font-semibold leading-tight tracking-tight">
-              A green escape rooted in sustainable living.
-            </h2>
-          </div>
-          <div className="space-y-5 text-base leading-8 text-slate-600 sm:text-lg">
-            <p>
-              Sampan Agro & Golf Resort is a serene destination where lush
-              landscapes, modern leisure, and agro-living create a refreshing
-              escape from the city.
-            </p>
-            <p>
-              Enjoy golf across scenic fairways, relax in comfortable spaces,
-              share a meal with family, or explore a more sustainable way of
-              living close to nature.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* SECTION 2: Overview */}
+      <ResortOverview />
 
-      <section
-        id="experiences"
-        className="bg-[#e4eee2] px-8 py-16 sm:px-12 lg:px-20 lg:py-24"
-      >
-        <div className="mx-auto w-full max-w-[1200px]">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-600">
-            Resort experiences
-          </p>
-          <h2 className="mt-4 max-w-3xl text-[clamp(2.2rem,4vw,4rem)] font-semibold tracking-tight">
-            Relax, play, and reconnect.
-          </h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {amenities.map(([title, description]) => (
-              <article
-                key={title}
-                className="border border-emerald-900/15 bg-white p-6 shadow-sm"
-              >
-                <h3 className="text-xl font-semibold text-[#123b2c]">
-                  {title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-500">
-                  {description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* SECTION 3: Masterplan Overview & Interactive Map */}
+      <ResortMasterplanMap />
 
-      <section className="bg-[#123b2c] px-8 py-16 text-white sm:px-12 lg:px-20 lg:py-24">
-        <div className="mx-auto grid w-full max-w-[1200px] items-center gap-10 lg:grid-cols-2">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-200">
-              Agro & sustainability
-            </p>
-            <h2 className="mt-4 text-[clamp(2.2rem,4vw,4rem)] font-semibold tracking-tight">
-              A resort connected to the land.
-            </h2>
-          </div>
-          <p className="text-base leading-8 text-white/70 sm:text-lg">
-            Our agro experience brings guests closer to chemical-free farming,
-            fresh produce, and the natural rhythms of rural life. It is a place
-            to slow down, learn, and enjoy the landscape.
-          </p>
-        </div>
-      </section>
+      {/* SECTION 4: Phased-Opening Timeline */}
+      <ResortPhasedTimeline />
 
-      <section className="px-8 py-16 sm:px-12 lg:px-20 lg:py-24">
-        <div className="mx-auto w-full max-w-[1200px]">
-          <div className="flex items-end justify-between gap-5">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-                Resort gallery
-              </p>
-              <h2 className="mt-4 text-[clamp(2rem,3.4vw,3.5rem)] font-semibold tracking-tight">
-                Moments in the green.
-              </h2>
-            </div>
-            <a
-              href="mailto:info@sampangroup.com.bd"
-              className="hidden text-sm font-semibold uppercase tracking-[0.14em] text-red-600 hover:text-red-700 sm:block"
-            >
-              Plan a visit →
-            </a>
-          </div>
-          <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-            {gallery.map((image, index) => (
-              <div
-                key={`${image}-${index}`}
-                className={`relative aspect-square overflow-hidden ${index === 0 ? "col-span-2 row-span-2" : ""}`}
-              >
-                <Image
-                  src={image}
-                  alt={`Resort gallery ${index + 1}`}
-                  fill
-                  sizes="(min-width: 768px) 25vw, 50vw"
-                  className="object-cover transition duration-700 hover:scale-105"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* SECTION 5: Founding Member Pricing */}
+      <ResortFoundingMemberPricing />
 
-      <section className="border-t border-emerald-900/10 bg-white px-8 py-16 sm:px-12 lg:px-20 lg:py-20">
-        <div className="mx-auto grid w-full max-w-[1200px] gap-8 md:grid-cols-[1fr_auto] md:items-center">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-600">
-              Plan your escape
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Make room for nature.
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-500">
-              Contact the Sampan team to learn more about the resort,
-              facilities, visits, and future opportunities.
-            </p>
-          </div>
-          <a
-            href="mailto:info@sampangroup.com.bd"
-            className="inline-flex bg-[#123b2c] px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-emerald-800"
-          >
-            Contact the resort
-          </a>
-        </div>
-      </section>
+      {/* SECTION 6: Membership vs. Day-Visitor Pricing Comparison */}
+      <ResortPricingComparison />
+
+      {/* SECTION 7: Drone Footage of Construction Progress */}
+      <ResortDroneProgress />
+
+      {/* SECTION 8: Photo / Video Gallery */}
+      <GolfMediaGallery
+        title="Resort Photo & Media Gallery"
+        subtitle="Take a visual tour inside our golf fairways, VVIP luxury villas, organic farms, and lake facilities."
+        mediaItems={resortGallery}
+      />
+
+      {/* SECTION 9: Location + Map */}
+      <GolfLocationAndMap
+        title="Resort Location & Accessibility"
+        subtitle="Positioned in Sreemangal, Moulvibazar — easily accessible via expressways from Dhaka and Sylhet."
+        projectName="Sampan Agro & Golf Resort"
+        address="Sampan Agro & Golf Complex, Sreemangal, Moulvibazar, Sylhet Division, Bangladesh."
+        gpsCoordinates="24.3000° N, 91.7000° E"
+        landmarks={resortLandmarks}
+      />
+
+      {/* SECTION 10: "Nearby at this location" module */}
+      <GolfNearbyModule
+        currentStoreName="Sampan Agro & Golf Resort"
+        locationHubName="Sampan Agro Complex, Moulvibazar"
+      />
+
+      {/* SECTION 11 & 12: Pre-launch Waitlist Signup & Enquiry CTA */}
+      <ResortPreLaunchWaitlist
+        title="Pre-Launch Waitlist & Founding Member Signup"
+        subtitle="Register your interest to secure founding member share pricing and receive VIP preview invitation passes."
+        projectName="Sampan Agro & Golf Resort"
+      />
     </main>
   );
 }
-
-export default AgroGolfModern;

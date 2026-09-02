@@ -161,7 +161,7 @@ export default function AutoInventoryBrowser({
                       <Image
                         src={car.image}
                         alt={car.name}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <span className="absolute top-4 left-4 bg-neutral-900/90 text-white font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1">

@@ -46,7 +46,7 @@ const photoGallery = [
   "/images/concerns/sampan-auto.png",
   "/images/brand/sampanfillingstation.png",
   "/images/projects/sampanmetrosquare.jpg",
-  "/images/concerns/sampan-development-ltd.png",
+  "/images/concerns/sampan-dev-ltd.png",
 ];
 
 const nearbyFacilities = [

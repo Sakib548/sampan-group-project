@@ -92,7 +92,7 @@ export default function VirtualTourViewer() {
             <Image
               src={activeHotspot.image}
               alt={activeHotspot.name}
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-all duration-700 brightness-90"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/40" />

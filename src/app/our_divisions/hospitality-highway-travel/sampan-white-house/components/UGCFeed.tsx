@@ -130,7 +130,7 @@ export default function UGCFeed() {
               </button>
 
               <div className="relative aspect-[16/10] w-full rounded-none overflow-hidden bg-black mb-6">
-                <Image src={selectedPost.image} alt={selectedPost.author} fill className="object-contain" />
+                <Image src={selectedPost.image} alt={selectedPost.author} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-contain" />
               </div>
 
               <div className="flex items-center justify-between border-b border-neutral-200 pb-3 mb-3">

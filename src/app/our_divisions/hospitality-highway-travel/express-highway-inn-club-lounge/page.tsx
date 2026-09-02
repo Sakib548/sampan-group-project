@@ -158,31 +158,54 @@ const clubFacilities = [
 // --- Club Categories for Filtering ---
 const facilityCategories = ["All", "Lounge & Leisure", "Sports & Fitness", "Wellness", "Mobility & Services"];
 
-// --- Nearby Locations (Preserved) ---
 const nearbyLocations = [
   {
-    name: "Sampan Trade Emporium",
-    distance: "2.5 km",
-    type: "Shopping & Commerce",
+    name: "Sampan Filling Station",
+    distance: "100 m",
+    type: "Automotive & Fuel",
     description:
-      "A premier shopping destination offering diverse retail experiences and commercial services.",
-    image: "/images/nearby/trade-emporium.jpg",
+      "24/7 high-volume highway refuel, octane & diesel station with dedicated heavy vehicle bays.",
+    image: "/images/concerns/sampan-filling-station.png",
   },
   {
-    name: "Sampan Tower 1",
-    distance: "3.1 km",
-    type: "Commercial Complex",
+    name: "Sampan LPG Station",
+    distance: "150 m",
+    type: "Clean Mobility & Fuel",
     description:
-      "Modern commercial tower featuring office spaces, retail outlets, and business facilities.",
-    image: "/images/nearby/tower-1.jpg",
+      "State-of-the-art LPG autogas conversion and rapid dispenser refueling station.",
+    image: "/images/concerns/lpg.png",
   },
   {
-    name: "Sampan Tower 2",
-    distance: "3.3 km",
-    type: "Mixed-Use Development",
+    name: "Sampan Mart",
+    distance: "50 m",
+    type: "Retail Super Shop",
     description:
-      "Contemporary mixed-use development with residential and commercial spaces.",
-    image: "/images/nearby/tower-2.jpg",
+      "24/7 highway retail super shop stocked with travel essentials, groceries, and fresh snacks.",
+    image: "/images/facilities/express_highway_inn/4.Sampan-Mart.png",
+  },
+  {
+    name: "Mini Sampan Super Shop",
+    distance: "50 m",
+    type: "Express Convenience",
+    description:
+      "Quick-stop express retail kiosk for instant refreshments and travel accessories.",
+    image: "/images/logos/mini-sampan.png",
+  },
+  {
+    name: "Sampan White House & Motel",
+    distance: "1.2 km",
+    type: "Transit Accommodation",
+    description:
+      "A sister hospitality property providing flexible hourly stays, quiet rooms, and private parking.",
+    image: "/images/projects/Sampan-White-House-&-Motel.png",
+  },
+  {
+    name: "Sampan Short Drive Range (Coming Soon)",
+    distance: "Adjacent Corridor",
+    type: "Golf & Recreation",
+    description:
+      "Upcoming precision short-game golf practice range and driving bays for golf enthusiasts and highway visitors.",
+    image: "/images/featuredConcerns/sampan-agro-golf-resort.png",
   },
 ];
 
@@ -1012,7 +1035,7 @@ export default function ExpressHighwayInnClubLoungePage() {
             <Image
               src={selectedImage}
               alt="Club & Lounge Facility Zoom"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-contain"
             />
           </div>

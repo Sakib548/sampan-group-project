@@ -90,7 +90,6 @@ export default function LeadershipMessage() {
       mm.add("(prefers-reduced-motion: reduce)", () => {
         gsap.set(
           [
-            ".lead-header > *",
             ".lead-video",
             ".lead-content > *",
             ".lead-corner",
@@ -114,23 +113,6 @@ export default function LeadershipMessage() {
 
       /* Full animation suite */
       mm.add("(prefers-reduced-motion: no-preference)", () => {
-        /* ── Header entrance ── */
-        gsap.fromTo(
-          ".lead-header > *",
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: ".lead-header",
-              start: "top 85%",
-              once: true,
-            },
-          }
-        );
 
         /* ── Video + Content entrance timeline ── */
         const tl = gsap.timeline({

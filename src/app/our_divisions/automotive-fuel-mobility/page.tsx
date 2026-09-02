@@ -126,7 +126,7 @@ export default function AutomotiveFuelMobilityArchivePage() {
                       <Image
                         src={concern.image}
                         alt={concern.name}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-contain transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>

@@ -73,7 +73,7 @@ const floorPlans = [
     name: "Typical Skyline Floor Plan",
     category: "Typical Floor",
     sizeSqFt: "3 Units Per Floor",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     description: "Low-density 3-unit per floor layout ensuring maximum privacy and light.",
     features: ["Low Density Design", "3 Passenger Lifts", "Rooftop Sky Garden"],
   },

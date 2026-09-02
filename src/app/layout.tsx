@@ -106,9 +106,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={
-        "h-full antialiased js-focus-visible  data-js-focus-visible=''"
-      }
+      className="h-full antialiased"
+      suppressHydrationWarning
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -138,7 +137,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <AnimationProvider>
           <Navbar2 />
           {children}

@@ -76,7 +76,7 @@ const vehicleList = [
     mileageKm: "12,000 km",
     engineCc: "1800 cc Hybrid",
     fuelType: "Octane Hybrid",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     highlights: ["Dual Power Sliding Doors", "Dual Air Conditioning Units", "Safety Sense Collision Avoidance"],
   },
 ];
@@ -91,7 +91,7 @@ const partsList = [
 const photoGallery = [
   "/images/concerns/sampan-auto.png",
   "/images/projects/sampanmetrosquare.jpg",
-  "/images/concerns/sampan-development-ltd.png",
+  "/images/concerns/sampan-dev-ltd.png",
   "/images/brand/sampanauto.png",
 ];
 

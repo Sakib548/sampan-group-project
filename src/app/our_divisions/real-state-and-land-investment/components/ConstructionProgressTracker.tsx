@@ -141,7 +141,7 @@ export default function ConstructionProgressTracker({
                   <Image
                     src={photo}
                     alt={`Site Photo ${i + 1}`}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>

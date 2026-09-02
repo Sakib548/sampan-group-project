@@ -224,7 +224,7 @@ export default function PhotoVideoGallery() {
               <Image
                 src={filteredItems[lightboxIndex].src}
                 alt={filteredItems[lightboxIndex].title}
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-contain"
               />
 
@@ -283,7 +283,7 @@ export default function PhotoVideoGallery() {
                 <Image
                   src="/images/projects/sampan-highway-inn.png"
                   alt="Aerial Drone Video Cover"
-                  fill
+                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover opacity-60"
                 />
                 <div className="relative z-10 text-center p-6">

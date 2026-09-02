@@ -18,7 +18,7 @@ const projectsList = [
     statusType: "flagship",
     location: "Dhaka & Strategic Corridors",
     description: "Master architectural development, land acquisition, commercial hubs, and sustainable residential communities.",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     link: "/our_divisions/real-state-and-land-investment/sampan-development-ltd",
     highlights: ["Master Planning", "Land Acquisition", "Commercial & Residential"],
   },
@@ -102,7 +102,7 @@ const projectsList = [
     statusType: "coming-soon",
     location: "Greater Dhaka Growth Zone",
     description: "Eco-centric master-planned housing community engineered for 21st-century modern living.",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     link: "/our_divisions/real-state-and-land-investment/sampan-21st-century",
     highlights: ["Master Planned Estate", "Eco-Centric Infrastructure", "Gated Security"],
   },
@@ -114,7 +114,7 @@ const projectsList = [
     statusType: "coming-soon",
     location: "Dhaka Residential Zone",
     description: "Boutique luxury residential apartments offering privacy, premium finishings, and dedicated parking.",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     link: "/our_divisions/real-state-and-land-investment/sampan-taj",
     highlights: ["Boutique Architecture", "Single Unit per Floor", "Prime Location"],
   },
@@ -126,7 +126,7 @@ const projectsList = [
     statusType: "coming-soon",
     location: "Niketon Vicinity",
     description: "Serene residential housing complex designed for multi-generational families with green courtyards.",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     link: "/our_divisions/real-state-and-land-investment/sampan-niketon",
     highlights: ["Family Community Living", "Courtyard Landscaping", "Secure Gated Compound"],
   },
@@ -180,7 +180,7 @@ export default function RealEstateArchivePage() {
                     <Image
                       src={project.image}
                       alt={project.name}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60" />

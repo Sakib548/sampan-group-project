@@ -61,7 +61,7 @@ const floorPlans = [
     name: "Niketon Family Complex Layout",
     category: "Complex Master Plan",
     sizeSqFt: "14 Katha Footprint",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     description: "Central courtyard residential layout promoting community living.",
     features: ["Central Green Courtyard", "Children's Play Area", "24/7 CCTV Monitoring"],
   },
@@ -83,7 +83,7 @@ const renders = [
     title: "Sampan Niketon Courtyard Rendering",
     category: "exterior" as const,
     categoryLabel: "Exterior Renders",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     type: "image" as const,
     description: "Serene residential housing complex with landscaped courtyards.",
   },
@@ -106,7 +106,7 @@ export default function SampanNiketonPage() {
         statusBadge="Upcoming Project"
         statusType="coming-soon"
         description="A serene residential housing complex designed for multi-generational families with landscaped green courtyards in the Niketon vicinity."
-        image="/images/concerns/sampan-development-ltd.png"
+        image="/images/concerns/sampan-dev-ltd.png"
         facts={facts}
         accentColor="#25633a"
         badgeColor="#25633a"

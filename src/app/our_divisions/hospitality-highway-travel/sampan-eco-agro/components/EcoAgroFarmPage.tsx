@@ -142,7 +142,7 @@ export default function EcoAgroFarmPage() {
             <Image
               src={farmImage}
               alt="Fresh produce at Sampan ECO and Agro"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -268,7 +268,7 @@ export default function EcoAgroFarmPage() {
               <Image
                 src={farmImage}
                 alt="Life at Sampan farm"
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>
@@ -277,7 +277,7 @@ export default function EcoAgroFarmPage() {
                 <Image
                   src={farmMark}
                   alt="Sampan ECO and Agro"
-                  fill
+                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>
@@ -322,7 +322,7 @@ export default function EcoAgroFarmPage() {
         <Image
           src={farmImage}
           alt="Sampan ECO and Agro fields"
-          fill
+          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#10251b] to-transparent" />

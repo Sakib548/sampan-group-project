@@ -58,7 +58,7 @@ export default function HospitalityModernPage({
         <Image
           src={c.hero}
           alt={c.title}
-          fill
+          fill sizes="100vw"
           priority
           className="object-cover opacity-65"
         />
@@ -116,7 +116,7 @@ export default function HospitalityModernPage({
             <Image
               src={gallery[1]}
               alt={`${c.title} experience`}
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>

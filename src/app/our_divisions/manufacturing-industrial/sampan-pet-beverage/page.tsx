@@ -77,7 +77,7 @@ const factoryPhotos = [
   "/images/brand/petandbeverage.png",
   "/images/concerns/sampan-auto.png",
   "/images/projects/sampanmetrosquare.jpg",
-  "/images/concerns/sampan-development-ltd.png",
+  "/images/concerns/sampan-dev-ltd.png",
 ];
 
 const clientList = [

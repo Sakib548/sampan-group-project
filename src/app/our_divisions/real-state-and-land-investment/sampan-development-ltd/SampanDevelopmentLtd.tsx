@@ -1065,7 +1065,7 @@ export default function SampanDevelopmentLtd() {
                 <Image
                   src="/images.jpg"
                   alt=""
-                  fill
+                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover scale-110"
                 />
                 <div className="absolute inset-0 bg-white/90 backdrop-blur-xl" />
@@ -1200,7 +1200,7 @@ export default function SampanDevelopmentLtd() {
         {/* ============================================================ */}
         <section className="fc-sec relative flex min-h-[80vh] items-center overflow-hidden bg-[#050505]">
           <div className="absolute inset-0 z-0 opacity-0 transition-opacity duration-1500 hover:opacity-[0.08]">
-            <Image src="/images.jpg" alt="" fill className="object-cover" />
+            <Image src="/images/concerns/sampan-dev-ltd.png" alt="" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
 
           <div className="relative z-10 mx-auto w-full max-w-[1400px] px-8 py-32 lg:px-20 lg:py-0">

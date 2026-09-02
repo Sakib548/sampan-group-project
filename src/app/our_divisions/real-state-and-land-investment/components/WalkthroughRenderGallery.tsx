@@ -96,7 +96,7 @@ export default function WalkthroughRenderGallery({
                 <Image
                   src={item.image}
                   alt={item.title}
-                  fill
+                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
@@ -158,7 +158,7 @@ export default function WalkthroughRenderGallery({
                   <Image
                     src={selectedMedia.image}
                     alt={selectedMedia.title}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>

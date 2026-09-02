@@ -92,7 +92,7 @@ export default function EcoAgroStory() {
             <Image
               src={panels[0].image}
               alt="Sampan Eco and Agro"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
@@ -110,7 +110,7 @@ export default function EcoAgroStory() {
             <Image
               src="/images/concerns/eco-agro.png"
               alt="Fresh produce grown at Sampan Eco and Agro"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover object-[70%_center]"
             />
           </div>

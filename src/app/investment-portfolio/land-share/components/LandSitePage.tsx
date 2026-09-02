@@ -309,7 +309,7 @@ export default function SampanDevelopmentLtd() {
                   <Image
                     src="/images.jpg"
                     alt={cat.title}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>
@@ -603,7 +603,7 @@ export default function SampanDevelopmentLtd() {
           <Image
             src="/images.jpg"
             alt="Background"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
         </div>

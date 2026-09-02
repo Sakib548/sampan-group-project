@@ -61,7 +61,7 @@ const floorPlans = [
     name: "Single Floor Palatial Layout",
     category: "Full Floor Plan",
     sizeSqFt: "2,100 sq ft Single Unit",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     description: "360-degree ventilation layout covering the entire floor plate.",
     features: ["4 Open Balconies", "Private Elevator Hall", "Staff Room & Bath"],
   },
@@ -83,7 +83,7 @@ const renders = [
     title: "Sampan Taj Boutique Elevation",
     category: "exterior" as const,
     categoryLabel: "Exterior Renders",
-    image: "/images/concerns/sampan-development-ltd.png",
+    image: "/images/concerns/sampan-dev-ltd.png",
     type: "image" as const,
     description: "Elegant boutique luxury facade.",
   },
@@ -105,7 +105,7 @@ export default function SampanTajPage() {
         statusBadge="Upcoming Project"
         statusType="coming-soon"
         description="Boutique luxury residential apartments offering single-unit-per-floor privacy, palatial 2,100 sq ft floor plans, and imported luxury finishes."
-        image="/images/concerns/sampan-development-ltd.png"
+        image="/images/concerns/sampan-dev-ltd.png"
         facts={facts}
         accentColor="#25633a"
         badgeColor="#25633a"
