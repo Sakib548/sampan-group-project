@@ -4,7 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaMapMarkerAlt, FaCar, FaExternalLinkAlt, FaClock } from "react-icons/fa";
 
-const nearbySpots = [
+interface NearbySpot {
+  id: string;
+  name: string;
+  type: string;
+  distance: string;
+  driveTime: string;
+  image: string;
+  description: string;
+  link: string;
+  external?: boolean;
+}
+
+const nearbySpots: NearbySpot[] = [
   {
     id: "filling-station",
     name: "Sampan Filling Station",
