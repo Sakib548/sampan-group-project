@@ -40,9 +40,13 @@ export default function AgroHero({
   onExploreCatalog,
   onWholesaleInquiry,
 }: AgroHeroProps) {
+  const titleWords = title.trim().split(" ");
+  const firstWord = titleWords[0];
+  const remainingTitle = titleWords.slice(1).join(" ");
+
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-20 bg-[#06180e] text-white border-b border-white/10">
-      
+    <section className="relative overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-24 lg:pb-16 bg-[#06180e] text-white border-b border-white/10">
+
       {/* Background Hero Banner with Dark Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -51,8 +55,9 @@ export default function AgroHero({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center brightness-[0.3]"
+          className="object-cover object-center"
         />
+        {/* brightness-[0.3] */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#06180e]/95 via-[#06180e]/85 to-[#06180e]/45" />
       </div>
 
@@ -63,9 +68,9 @@ export default function AgroHero({
       />
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Top Badges */}
-        <div className="flex flex-wrap items-center gap-3 mb-6">
+        <div className="flex flex-wrap items-center gap-3 mb-5">
           <div
             className="inline-flex items-center gap-2 border px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.2em]"
             style={{ color: badgeColor, borderColor: `${badgeColor}50`, backgroundColor: `${badgeColor}15` }}
@@ -81,10 +86,10 @@ export default function AgroHero({
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Text & CTAs */}
-          <div className="lg:col-span-7 space-y-6">
-            
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+
             {/* Logo + Title */}
             <div className="flex items-center gap-5">
               <div className="relative h-16 w-24 bg-white/95 border border-white/20 p-2 flex items-center justify-center shrink-0 shadow-lg">
@@ -100,17 +105,25 @@ export default function AgroHero({
                 <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-emerald-400 block">
                   Agro &amp; Fresh Produce Division
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-light tracking-tight text-white leading-tight">
-                  {title}
+                <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold tracking-tight text-white leading-[0.98]">
+                  <span>{firstWord}</span>
+                  {remainingTitle && (
+                    <>
+                      <br />
+                      <span className="block mt-1">{remainingTitle}</span>
+                    </>
+                  )}
                 </h1>
               </div>
             </div>
 
-            <p className="text-lg sm:text-xl font-medium text-emerald-300/90 leading-snug">
-              {subtitle}
-            </p>
+            {subtitle && (
+              <p className="text-base sm:text-lg lg:text-xl font-medium text-emerald-300/90 tracking-wide leading-snug max-w-3xl">
+                {subtitle}
+              </p>
+            )}
 
-            <p className="text-base text-white/80 leading-relaxed max-w-2xl font-normal">
+            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-emerald-400/60 pl-4">
               {description}
             </p>
 

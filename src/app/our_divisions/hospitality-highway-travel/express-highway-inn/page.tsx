@@ -260,7 +260,7 @@ export default function ExpressHighwayInnPage() {
     <main className="bg-[#F5F5F2] text-neutral-900 antialiased scroll-smooth selection:bg-[#58b9eb]/30 selection:text-neutral-900">
 
       {/* ================= 1. OVERVIEW (HERO WITH BACKGROUND IMAGE & DARK CONTRAST) ================= */}
-      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-32 pb-20 lg:py-0 border-b border-white/10">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-20 pb-10 lg:pt-24 lg:pb-14 border-b border-white/10">
         {/* Real Background Image with cinematic dark gradient overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -269,7 +269,7 @@ export default function ExpressHighwayInnPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center brightness-[0.85]"
+            className="object-cover object-center"
           />
           {/* Dual-layer dark gradient for text readability and navbar contrast */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/60" />
@@ -281,30 +281,29 @@ export default function ExpressHighwayInnPage() {
         <div className="pointer-events-none absolute right-10 bottom-10 h-80 w-80 rounded-none bg-[#58b9eb]/10 blur-[120px] z-0" />
 
         {/* Hero Content Container */}
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 py-12 lg:py-24">
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
 
             {/* Left Headline & Content */}
-            <div className="lg:col-span-7 max-w-2xl">
+            <div className="lg:col-span-7 max-w-2xl space-y-5 sm:space-y-6">
 
               {/* Eyebrow Square Badge */}
-              <div className="mb-6 inline-flex items-center gap-3 border border-[#58b9eb]/50 bg-[#58b9eb]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#58b9eb]">
+              <div className="inline-flex items-center gap-3 border border-[#58b9eb]/50 bg-[#58b9eb]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#58b9eb]">
                 <span className="h-2 w-2 rounded-none bg-[#58b9eb]" />
                 <span>Express Highway Inn • Luxury Transit Hub</span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-[-0.03em] text-white">
+              <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold leading-[0.98] tracking-[-0.03em] text-white">
                 Express <br />
-                <span className="text-[#58b9eb]">
+                <span className="text-[#58b9eb] block mt-1">
                   Highway Inn
                 </span>
               </h1>
 
               {/* Subheadline */}
-              <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-white/75 font-normal">
-                Where relaxation meets luxury. A seamless fusion of comfort,
-                elegance, and tailored services engineered for the modern highway traveler.
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md font-light tracking-wide border-l-2 border-[#58b9eb]/80 pl-4">
+                Soundproof suites, 24/7 dining, and tailored services for highway travelers.
               </p>
 
               {/* Square Action Buttons */}

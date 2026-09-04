@@ -18,7 +18,7 @@ const heroImage = "/images/projects/Sampan-White-House-&-Motel.png";
 
 export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => void }) {
   return (
-    <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-32 pb-20 lg:py-0 border-b border-white/10">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-20 pb-10 lg:pt-24 lg:pb-14 border-b border-white/10">
       {/* Real Background Image with cinematic dark gradient overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -27,7 +27,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center brightness-[0.8]"
+          className="object-cover object-center"
         />
         {/* Dual-layer dark gradient for text contrast and seamless transparent navbar */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/60" />
@@ -38,29 +38,28 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
       <div className="pointer-events-none absolute top-1/4 left-10 w-96 h-96 bg-[#e8b84b]/15 rounded-none blur-[140px] z-0" />
       <div className="pointer-events-none absolute bottom-10 right-10 w-96 h-96 bg-amber-600/10 rounded-none blur-[120px] z-0" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 py-12 lg:py-24">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Hero Text Content */}
-          <div className="lg:col-span-8 max-w-3xl">
+          <div className="lg:col-span-8 max-w-3xl space-y-4 sm:space-y-5">
             {/* Eyebrow Square Badge */}
-            <div className="inline-flex items-center gap-3 border border-[#e8b84b]/50 bg-[#e8b84b]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#e8b84b] mb-6">
+            <div className="inline-flex items-center gap-3 border border-[#e8b84b]/50 bg-[#e8b84b]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#e8b84b]">
               <span className="h-2 w-2 rounded-none bg-[#e8b84b]" />
               <span>A Softer Place to Stop • Highway Motel &amp; White Hall</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05]">
-              Sampan Highway Hotel <br className="hidden sm:inline" />
-              <span className="text-[#e8b84b]">
+            <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold tracking-tight text-white leading-[0.98]">
+              Sampan Highway Hotel <br />
+              <span className="text-[#e8b84b] block mt-1">
                 &amp; Motel (White Hall)
               </span>
             </h1>
 
             {/* Tagline & Subheading */}
-            <p className="mt-6 text-base sm:text-lg text-white/75 leading-relaxed max-w-2xl font-normal">
-              A serene pause for highway travelers and celebratory gatherings. Soundproof motel suites, 
-              the iconic White Hall banquet center, 24/7 garden dining, and dependable highway hospitality close to your route.
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md font-light tracking-wide border-l-2 border-[#e8b84b]/80 pl-4">
+              Soundproof motel suites, iconic White Hall banquet center, 24/7 garden dining, and dependable highway hospitality.
             </p>
 
             {/* Square Quick Action CTAs */}

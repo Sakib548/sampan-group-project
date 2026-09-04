@@ -62,7 +62,7 @@ export default function SampanAgroGolfFeature() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="https://sampangolfresort.com/"
+              href="/our_divisions/hospitality-highway-travel/sampan-agro-golf-resort"
               className="group inline-flex min-h-14 items-center justify-between gap-8 bg-[#d7e969] px-6 text-xs font-bold uppercase tracking-[0.15em] text-[#071b13] transition duration-300 hover:bg-white"
             >
               Membership Offer

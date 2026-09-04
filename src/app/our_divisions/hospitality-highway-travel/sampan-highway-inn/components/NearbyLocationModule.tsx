@@ -4,7 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaMapMarkerAlt, FaCar, FaExternalLinkAlt, FaClock } from "react-icons/fa";
 
-const nearbySpots = [
+interface NearbySpot {
+  id: string;
+  name: string;
+  type: string;
+  distance: string;
+  driveTime: string;
+  image: string;
+  description: string;
+  link: string;
+  external?: boolean;
+}
+
+const nearbySpots: NearbySpot[] = [
   {
     id: "filling-station",
     name: "Sampan Filling Station",
@@ -71,7 +83,7 @@ export default function NearbyLocationModule() {
   return (
     <section id="nearby" className="bg-[#0b100d] py-24 sm:py-32 text-white border-t border-white/10 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -107,7 +119,7 @@ export default function NearbyLocationModule() {
                   sizes="(max-width: 768px) 100vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                
+
                 {/* Distance Chip */}
                 <div className="absolute top-3.5 right-3.5 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-xs font-bold text-emerald-400 flex items-center gap-1.5">
                   <FaMapMarkerAlt className="text-[10px]" />

@@ -9,19 +9,19 @@ const projects = [
     "Sampan 21st Century",
     "/images/projects/21.jpg",
     "A successful residential development offering modern living and premium land-share opportunities.",
-    "/projects/Sampan21stCentury",
+    "/our_divisions/real-state-and-land-investment/sampan-21st-century",
   ],
   [
     "Sampan Taj",
     "/images/projects/sampantaj.jpg",
     "A premium land-share residential project, developed with Sampan’s commitment to quality and trust.",
-    "/projects/SampanTaj",
+    "/our_divisions/real-state-and-land-investment/sampan-taj",
   ],
   [
     "Sampan Niketon",
     "/images/projects/sampanniketon.jpg",
     "A successful addition to Sampan’s residential portfolio, reflecting our experience in creating quality addresses.",
-    "/projects/SampanNiketon",
+    "/our_divisions/real-state-and-land-investment/sampan-niketon",
   ],
 ] as const;
 
@@ -52,22 +52,20 @@ export default function ResidentialProjectsSection() {
               key={name}
               onMouseEnter={() => setActive(index)}
               onMouseLeave={() => setActive(null)}
-              className={`group relative min-h-[300px] flex-1 overflow-hidden transition-[flex] duration-700 sm:min-h-0 ${
-                active === null
-                  ? "flex-1"
-                  : isActive
-                    ? "sm:flex-[1.8]"
-                    : "sm:flex-[0.7]"
-              }`}
+              className={`group relative min-h-[300px] flex-1 overflow-hidden transition-[flex] duration-700 sm:min-h-0 ${active === null
+                ? "flex-1"
+                : isActive
+                  ? "sm:flex-[1.8]"
+                  : "sm:flex-[0.7]"
+                }`}
             >
               <Image
                 src={image}
                 alt={name}
                 fill
                 sizes="(max-width: 640px) 100vw, 40vw"
-                className={`object-cover transition duration-1000 ${
-                  isActive ? "scale-105" : "scale-100"
-                }`}
+                className={`object-cover transition duration-1000 ${isActive ? "scale-105" : "scale-100"
+                  }`}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />

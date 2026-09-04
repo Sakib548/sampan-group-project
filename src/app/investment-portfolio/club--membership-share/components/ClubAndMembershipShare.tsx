@@ -1,1066 +1,593 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import {
-  FiUsers,
-  FiStar,
-  FiShield,
-  FiCalendar,
-  FiCoffee,
-  FiHeart,
-  FiZap,
   FiArrowRight,
-  FiCheckCircle,
-  FiSun,
-  FiGrid,
-  FiMessageSquare,
-  FiHome,
+  FiMapPin,
   FiDownload,
-  FiPlayCircle,
+  FiMessageCircle,
+  FiPlay,
+  FiCheckCircle,
+  FiChevronDown,
+  FiAnchor,
 } from "react-icons/fi";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-// --- Data Arrays ---
-
-const introHighlights = [
-  {
-    num: "01",
-    title: "Exclusive Access",
-    desc: "Member-only facilities and experiences.",
-  },
-  {
-    num: "02",
-    title: "Hospitality",
-    desc: "Premium services and lounge comfort.",
-  },
-  {
-    num: "03",
-    title: "Recreation",
-    desc: "Leisure activities for all lifestyles.",
-  },
-  { num: "04", title: "Networking", desc: "Connect with a growing community." },
-  {
-    num: "05",
-    title: "Member Events",
-    desc: "Invitations to exclusive gatherings.",
-  },
-  {
-    num: "06",
-    title: "Lifestyle Privileges",
-    desc: "Benefits across Sampan destinations.",
-  },
-];
-
-const expressExperience = [
-  {
-    icon: FiCoffee,
-    title: "Premium Lounge Access",
-    desc: "Sophisticated environment for relaxation and meetings.",
-  },
-  {
-    icon: FiStar,
-    title: "Hospitality Privileges",
-    desc: "Member benefits across hospitality facilities.",
-  },
-  {
-    icon: FiUsers,
-    title: "Business & Social Networking",
-    desc: "Meet professionals and entrepreneurs.",
-  },
-  {
-    icon: FiCalendar,
-    title: "Member Events",
-    desc: "Exclusive member-focused experiences.",
-  },
-  {
-    icon: FiHeart,
-    title: "Family Leisure",
-    desc: "Memorable moments with family and friends.",
-  },
-];
-
-const agroExperience = [
-  {
-    icon: FiZap,
-    title: "Golf & Recreation",
-    desc: "Access to recreational experiences and facilities.",
-  },
-  {
-    icon: FiSun,
-    title: "Nature & Open Spaces",
-    desc: "Green landscapes and a relaxed environment.",
-  },
-  {
-    icon: FiHome,
-    title: "Club Lounge",
-    desc: "Dedicated setting for conversations and gatherings.",
-  },
-  {
-    icon: FiHeart,
-    title: "Family Experiences",
-    desc: "Leisure time with family and friends.",
-  },
-  {
-    icon: FiCalendar,
-    title: "Exclusive Club Events",
-    desc: "Member-focused activities and gatherings.",
-  },
-];
-
-const communityFeatures = [
-  {
-    num: "01",
-    icon: FiShield,
-    title: "Exclusive Access",
-    desc: "Enjoy selected member-only facilities, experiences, and events.",
-  },
-  {
-    num: "02",
-    icon: FiStar,
-    title: "Lifestyle Privileges",
-    desc: "Experience specially designed benefits across Sampan destinations.",
-  },
-  {
-    num: "03",
-    icon: FiUsers,
-    title: "Community",
-    desc: "Become part of a growing network of professionals and families.",
-  },
-  {
-    num: "04",
-    icon: FiHeart,
-    title: "Experiences",
-    desc: "Create memorable moments through recreation and leisure.",
-  },
-];
-
-const memberBenefits = [
-  {
-    num: "01",
-    icon: FiStar,
-    title: "Member Privileges",
-    desc: "Access selected benefits reserved exclusively for members.",
-  },
-  {
-    num: "02",
-    icon: FiZap,
-    title: "Preferred Experience",
-    desc: "Enjoy a more personalized experience across facilities.",
-  },
-  {
-    num: "03",
-    icon: FiCalendar,
-    title: "Event Invitations",
-    desc: "Receive invitations to selected member events and activities.",
-  },
-  {
-    num: "04",
-    icon: FiUsers,
-    title: "Networking Opportunities",
-    desc: "Build relationships with the wider Sampan community.",
-  },
-  {
-    num: "05",
-    icon: FiHeart,
-    title: "Family & Social Leisure",
-    desc: "Enjoy quality time in engaging environments.",
-  },
-  {
-    num: "06",
-    icon: FiGrid,
-    title: "Future Benefits",
-    desc: "Benefits that evolve as the Sampan ecosystem grows.",
-  },
-];
+// --- Data Mapping ---
 
 const processSteps = [
+  { num: "01", title: "OWN", desc: "Purchase fractional shares of a commercial vessel." },
+  { num: "02", title: "OPERATE", desc: "Our team manages logistics, maintenance, and chartering." },
+  { num: "03", title: "EARN", desc: "Receive passive revenue from shipping operations." },
+  { num: "04", title: "EXIT", desc: "Sell your shares after the asset appreciates or at project end." },
+];
+
+const timelinePhases = [
+  { phase: "Concept", status: "Completed" },
+  { phase: "Vessel Selection", status: "Completed" },
+  { phase: "Legal & Registration", status: "In Progress" },
+  { phase: "Investment Open", status: "Pre-Launch" },
+  { phase: "Operation", status: "Upcoming" },
+];
+
+const trustSignals = [
+  { value: 15, suffix: "+", label: "Years of Experience" },
+  { value: 100, suffix: "%", label: "Legal Transparency" },
+  { value: 500, suffix: "+", label: "Active Investors" },
+  { value: 10, suffix: "M+", label: "Assets Under Management" },
+];
+
+const legalCredentials = [
+  "RJSC Registration",
+  "Verified Ownership Structure",
+  "Vessel Documentation",
+  "Regulatory Compliance",
+  "Transparent Investment Model",
+];
+
+const galleryImages = [
+  { src: "/images/ship-1.jpg", size: "col-span-12 md:col-span-8 row-span-2", alt: "Cargo Vessel" },
+  { src: "/images/port-1.jpg", size: "col-span-6 md:col-span-4", alt: "Port Operations" },
+  { src: "/images/bridge-1.jpg", size: "col-span-6 md:col-span-4", alt: "Ship Bridge" },
+  { src: "/images/cargo-1.jpg", size: "col-span-12 md:col-span-4", alt: "Container Cargo" },
+  { src: "/images/deck-1.jpg", size: "col-span-12 md:col-span-8", alt: "Vessel Deck" },
+];
+
+const faqItems = [
   {
-    step: "01",
-    title: "Explore",
-    desc: "Choose the membership that matches your lifestyle.",
+    q: "How does Ship Space Share generate returns?",
+    a: "Revenue is generated through chartering the vessel to global logistics companies. As an investor, you receive a proportional share of the operating revenue and asset appreciation.",
   },
   {
-    step: "02",
-    title: "Enquire",
-    desc: "Speak with our team to understand options and terms.",
+    q: "What is the minimum investment?",
+    a: "The minimum investment threshold will be announced closer to the pre-launch date. It is designed to be accessible while maintaining the quality of a premium asset class.",
   },
   {
-    step: "03",
-    title: "Apply",
-    desc: "Submit your membership application and information.",
-  },
-  {
-    step: "04",
-    title: "Become a Member",
-    desc: "Complete the process and enjoy your privileges.",
+    q: "Who manages the vessel operations?",
+    a: "Our experienced maritime management team handles all technical operations, crew management, maintenance, and chartering logistics. Investors do not need any maritime expertise.",
   },
 ];
 
 // --- Main Component ---
 
-export default function ClubAndMembershipPage() {
+export default function ShipSpaceSharePage() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const stageRef = useRef<HTMLDivElement>(null);
-  const [activeProject, setActiveProject] = useState(0);
-  const handleProjectClick = (index: number) => setActiveProject(index);
+  const [activeFaq, setActiveFaq] = useState<number | null>(0);
 
   useGSAP(
     () => {
       const mm = gsap.matchMedia();
 
-      // --- PREMIUM CINEMATIC SCROLL ANIMATIONS ---
       mm.add("(prefers-reduced-motion: no-preference)", () => {
-        // 1. Hero Entrance
+        // 1. Hero Cinematic Entrance
         const heroTl = gsap.timeline({ delay: 0.3 });
         heroTl
           .fromTo(
-            ".hero-eyebrow",
-            { y: 20, autoAlpha: 0 },
-            { y: 0, autoAlpha: 1, duration: 0.8, ease: "power3.out" },
+            ".hero-bg-image",
+            { scale: 1.1, xPercent: -2, autoAlpha: 0.8 },
+            { scale: 1.0, xPercent: 0, autoAlpha: 1, duration: 2, ease: "power3.out" }
           )
           .fromTo(
             ".hero-title-line",
-            { y: 60, autoAlpha: 0 },
-            {
-              y: 0,
-              autoAlpha: 1,
-              duration: 1,
-              stagger: 0.15,
-              ease: "power3.out",
-            },
-            "-=0.4",
+            { yPercent: 100 },
+            { yPercent: 0, duration: 1.2, stagger: 0.15, ease: "power4.out" },
+            "-=1.5"
           )
           .fromTo(
-            ".hero-desc",
-            { y: 30, autoAlpha: 0 },
-            { y: 0, autoAlpha: 1, duration: 0.8, ease: "power3.out" },
-            "-=0.6",
-          )
-          .fromTo(
-            ".hero-ctas > *",
-            { y: 20, autoAlpha: 0 },
-            {
-              y: 0,
-              autoAlpha: 1,
-              duration: 0.7,
-              stagger: 0.1,
-              ease: "power3.out",
-            },
-            "-=0.4",
-          )
-          .fromTo(
-            ".hero-scroll",
-            { autoAlpha: 0 },
-            { autoAlpha: 1, duration: 1, ease: "power2.out" },
-            "-=0.2",
+            ".hero-sub",
+            { autoAlpha: 0, y: 20 },
+            { autoAlpha: 1, y: 0, duration: 0.8 },
+            "-=0.6"
           );
 
-        // 2. Hero Background Parallax
-        gsap.to(".hero-bg-img", {
-          yPercent: 20,
+        // Hero Scroll Parallax
+        gsap.to(".hero-bg-image", {
+          yPercent: 15,
           ease: "none",
-          scrollTrigger: {
-            trigger: ".hero-section",
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
+          scrollTrigger: { trigger: ".hero-section", start: "top top", end: "bottom top", scrub: 1 },
+        });
+        gsap.to(".hero-content", {
+          yPercent: -15,
+          opacity: 0.3,
+          ease: "none",
+          scrollTrigger: { trigger: ".hero-section", start: "top top", end: "bottom top", scrub: 1 },
         });
 
-        // 3. Cinematic Image Reveals (Clip-path + Scale)
-        gsap.utils
-          .toArray<HTMLElement>(".cinematic-img-wrap")
-          .forEach((wrap) => {
-            gsap.fromTo(
-              wrap,
-              { clipPath: "inset(10% 0% 10% 0%)" },
-              {
-                clipPath: "inset(0% 0% 0% 0%)",
-                duration: 1.5,
-                ease: "power3.out",
-                scrollTrigger: { trigger: wrap, start: "top 85%", once: true },
-              },
-            );
+        // 2. General Reveals
+        gsap.utils.toArray<HTMLElement>(".reveal-up").forEach((el) => {
+          gsap.fromTo(el, { y: 60, autoAlpha: 0 }, {
+            y: 0, autoAlpha: 1, duration: 1, ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 85%" },
+          });
+        });
+
+        // 3. Reusable Cinematic Image Reveal & Parallax
+        gsap.utils.toArray<HTMLElement>(".aa-parallax-image-wrapper").forEach((wrapper) => {
+          const img = wrapper.querySelector(".aa-parallax-image");
+          if (!img) return;
+
+          gsap.fromTo(wrapper, { clipPath: "inset(0 100% 0 0)" }, {
+            clipPath: "inset(0 0% 0 0)", duration: 1.4, ease: "power4.out",
+            scrollTrigger: { trigger: wrapper, start: "top 85%" },
           });
 
-        // 4. Image Parallax
-        const parallaxMovement = window.innerWidth > 768 ? 12 : 5;
-        gsap.utils.toArray<HTMLElement>(".cinematic-img").forEach((img) => {
-          gsap.fromTo(
-            img,
-            { yPercent: -parallaxMovement, scale: 1.15 },
-            {
-              yPercent: parallaxMovement,
-              ease: "none",
-              scale: 1.05,
-              scrollTrigger: {
-                trigger: img.closest(".cinematic-img-wrap"),
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-              },
+          gsap.fromTo(img, { yPercent: -8, scale: 1.1 }, {
+            yPercent: 8, scale: 1.0, ease: "none",
+            scrollTrigger: { trigger: wrapper, start: "top bottom", end: "bottom top", scrub: 1 },
+          });
+        });
+
+        // 4. Count Up Animation
+        gsap.utils.toArray<HTMLElement>(".count-up").forEach((el) => {
+          const target = { val: 0 };
+          const finalVal = parseInt(el.dataset.value || "0");
+          gsap.to(target, {
+            val: finalVal,
+            duration: 2,
+            ease: "power2.out",
+            onUpdate: () => {
+              el.textContent = Math.floor(target.val) + (el.dataset.suffix || "");
             },
+            scrollTrigger: { trigger: el, start: "top 85%" },
+          });
+        });
+
+        // 5. Gallery Alternating Parallax
+        gsap.utils.toArray<HTMLElement>(".gallery-parallax").forEach((img, i) => {
+          gsap.fromTo(img, 
+            { yPercent: i % 2 === 0 ? -10 : 10 }, 
+            {
+              yPercent: i % 2 === 0 ? 10 : -10,
+              ease: "none",
+              scrollTrigger: { trigger: img.parentElement, start: "top bottom", end: "bottom top", scrub: 1 }
+            }
           );
         });
 
-        // 5. Giant Section Number Parallax
-        gsap.utils.toArray<HTMLElement>(".section-number").forEach((num) => {
-          gsap.to(num, {
-            yPercent: -25,
+        // 6. Timeline Line Draw
+        gsap.fromTo(".timeline-line", 
+          { scaleY: 0 }, 
+          {
+            scaleY: 1,
             ease: "none",
-            scrollTrigger: {
-              trigger: num.closest("section"),
-              start: "top bottom",
-              end: "bottom top",
-              scrub: true,
-            },
-          });
-        });
+            transformOrigin: "top",
+            scrollTrigger: { trigger: ".timeline-container", start: "top 70%", end: "bottom 50%", scrub: 1 }
+          }
+        );
 
-        // 6. Layered Text Parallax
-        const textMoveFast = window.innerWidth > 768 ? -30 : -10;
-        const textMoveSlow = window.innerWidth > 768 ? -15 : -5;
-
-        gsap.utils
-          .toArray<HTMLElement>(".parallax-text-fast")
-          .forEach((text) => {
-            gsap.to(text, {
-              y: textMoveFast,
-              ease: "none",
-              scrollTrigger: {
-                trigger: text.closest("section"),
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-              },
-            });
+        // 7. Maritime Route Map Animation
+        const path = containerRef.current?.querySelector(".route-path") as SVGPathElement;
+        if (path) {
+          const pathLength = path.getTotalLength();
+          gsap.set(path, { strokeDasharray: pathLength, strokeDashoffset: pathLength });
+          
+          const mapTl = gsap.timeline({
+            scrollTrigger: { trigger: ".map-container", start: "top 70%", end: "bottom 60%", scrub: 1 }
           });
 
-        gsap.utils
-          .toArray<HTMLElement>(".parallax-text-slow")
-          .forEach((text) => {
-            gsap.to(text, {
-              y: textMoveSlow,
-              ease: "none",
-              scrollTrigger: {
-                trigger: text.closest("section"),
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-              },
-            });
-          });
+          mapTl.to(path, { strokeDashoffset: 0, duration: 2 })
+               .fromTo(".ship-marker", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2 }, 0)
+               .fromTo(".ship-marker", 
+                  { x: 0, y: 0 }, 
+                  { 
+                    x: 350, // Approximate end X coordinate based on SVG layout
+                    y: 120, // Approximate end Y coordinate based on SVG layout
+                    duration: 2, 
+                    ease: "none" 
+                  }, 0);
+        }
 
-        // 7. Staggered Card Entrance
-        gsap.utils.toArray<HTMLElement>(".stagger-group").forEach((group) => {
-          gsap.fromTo(
-            group.children,
-            { y: 50, autoAlpha: 0 },
-            {
-              y: 0,
-              autoAlpha: 1,
-              duration: 0.8,
-              stagger: 0.12,
-              ease: "power3.out",
-              scrollTrigger: { trigger: group, start: "top 80%", once: true },
-            },
-          );
-        });
-
-        // 8. Background Image Parallax
-        gsap.utils.toArray<HTMLElement>(".bg-parallax").forEach((bg) => {
-          gsap.to(bg, {
-            yPercent: 15,
-            ease: "none",
-            scrollTrigger: {
-              trigger: bg.closest("section"),
-              start: "top bottom",
-              end: "bottom top",
-              scrub: true,
-            },
-          });
+        // 8. Final CTA Background
+        gsap.fromTo(".cta-bg-image", { scale: 1.12, xPercent: -3 }, {
+          scale: 1.0, xPercent: 3, ease: "none",
+          scrollTrigger: { trigger: ".cta-section", start: "top bottom", end: "bottom top", scrub: 1 }
         });
       });
 
-      // --- ACCESSIBILITY: Reduced Motion Fallback ---
       mm.add("(prefers-reduced-motion: reduce)", () => {
-        gsap.set(
-          [
-            ".hero-eyebrow",
-            ".hero-title-line",
-            ".hero-desc",
-            ".hero-ctas > *",
-            ".hero-scroll",
-            ".stagger-group > *",
-          ],
-          { autoAlpha: 1, y: 0 },
-        );
-        gsap.set([".cinematic-img-wrap"], { clipPath: "none" });
-        gsap.set([".cinematic-img"], { scale: 1, y: 0 });
+        gsap.set([".hero-title-line", ".hero-sub", ".reveal-up"], { autoAlpha: 1, y: 0 });
+        gsap.set([".aa-parallax-image-wrapper", ".cta-bg-image", ".hero-bg-image"], { clipPath: "none", scale: 1, xPercent: 0, yPercent: 0 });
+        gsap.utils.toArray<HTMLElement>(".count-up").forEach(el => {
+          el.textContent = el.dataset.value + (el.dataset.suffix || "");
+        });
+        gsap.set([".timeline-line", ".route-path"], { scaleY: 1, strokeDashoffset: 0 });
       });
 
       return () => mm.revert();
     },
-    { scope: containerRef },
+    { scope: containerRef }
   );
 
   return (
-    <main
-      ref={containerRef}
-      className="overflow-x-hidden bg-white text-neutral-950"
-    >
-      {/* HERO */}
-      <section
-        data-no-reveal
-        className="hero-section relative flex min-h-screen items-end overflow-hidden bg-black"
-      >
-        <div className="absolute inset-0">
-          <div className="hero-bg-img absolute inset-0 scale-110">
-            <Image
-              src="/images.jpg"
-              alt="Sampan Club & Membership"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
+    <main ref={containerRef} className="bg-white text-neutral-950 overflow-x-hidden">
+      {/* 1. HERO SECTION */}
+      <section className="hero-section relative h-screen w-full flex items-center bg-neutral-950 text-white overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image src="/images/ship-hero.jpg" alt="Maritime Vessel" fill className="hero-bg-image object-cover will-change-transform" priority sizes="100vw" />
         </div>
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-20 pt-32 lg:px-12 lg:pb-32">
-          <p className="hero-eyebrow mb-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.3em] text-emerald-300">
-            <span className="h-px w-8 bg-emerald-300" /> Sampan Club &
-            Membership
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 to-black/70 z-[1]"></div>
+
+        <div className="hero-content relative z-10 mx-auto max-w-[1600px] px-6 md:px-12 w-full will-change-transform">
+          <p className="hero-sub mb-8 text-xs font-medium uppercase tracking-[0.3em] text-emerald-400">
+            Investment Model
           </p>
-          <h1 className="max-w-5xl text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-[1.05] tracking-tight text-white">
-            <span className="hero-title-line block">Belong to More.</span>
-            <span className="hero-title-line block text-emerald-400">
-              Experience More.
-            </span>
+          <h1 className="flex flex-col overflow-hidden text-[clamp(3rem,8vw,7rem)] font-semibold leading-[0.9] tracking-tighter">
+            <span className="hero-title-line block">SHIP</span>
+            <span className="hero-title-line block">SPACE</span>
+            <span className="hero-title-line block text-emerald-500">SHARE</span>
           </h1>
-          <p className="hero-desc mt-8 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-            Discover exclusive membership opportunities at Sampan&apos;s
-            hospitality, leisure, and lifestyle destinations—designed around
-            comfort, recreation, networking, and memorable experiences.
-          </p>
-          <div className="hero-ctas mt-10 flex flex-wrap items-center gap-4">
-            <Link
-              href="#intro"
-              className="group inline-flex items-center gap-3 bg-emerald-600 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-colors hover:bg-emerald-500"
-            >
-              Explore Memberships{" "}
-              <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link
-              href="#contact"
-              className="inline-flex items-center gap-3 border border-white/30 bg-white/5 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-md transition-colors hover:bg-white hover:text-neutral-950"
-            >
-              Become a Member
-            </Link>
-          </div>
-        </div>
-        <div className="hero-scroll absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex">
-          <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">
-            Scroll
-          </span>
-          <span className="h-12 w-px animate-pulse bg-gradient-to-b from-white/50 to-transparent" />
-        </div>
-      </section>
-
-      {/* SECTION 01 -  MEMBERSHIP INTRO */}
-      <section data-no-reveal className="relative bg-white py-20 lg:py-32">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 lg:grid-cols-2 lg:gap-20 lg:px-12">
-          <div className="relative">
-            <div className="cinematic-img-wrap relative aspect-[4/5] w-full overflow-hidden">
-              <Image
-                src="/images.jpg"
-                alt="Modern club infrastructure"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="cinematic-img object-cover"
-                style={{ willChange: "transform" }}
-              />
-            </div>
-            <div className="section-number absolute -left-4 -top-4 -z-10 text-[12rem] font-bold leading-none text-neutral-100">
-              01
-            </div>
-            <p className="parallax-text-slow mt-4 text-xs uppercase tracking-[0.2em] text-neutral-400">
-              Club Excellence
-            </p>
-          </div>
-          <div className="flex flex-col justify-center">
-            <p className="parallax-text-fast mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-              THE SAMPAN MEMBERSHIP
-            </p>
-            <h2 className="parallax-text-fast text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight">
-              Membership Designed Around the Way You Live.
-            </h2>
-            <p className="parallax-text-slow mt-6 max-w-xl text-base leading-7 text-neutral-600">
-              Sampan Club & Membership brings together hospitality, leisure,
-              recreation, networking, and lifestyle experiences under one
-              membership platform.
-            </p>
-            <div className="stagger-group mt-10 space-y-6">
-              {introHighlights.map((item) => (
-                <div
-                  key={item.num}
-                  className="flex items-start gap-4 border-t border-neutral-200 pt-4"
-                >
-                  <span className="text-xs font-bold text-neutral-400">
-                    {item.num}
-                  </span>
-                  <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-900">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1 text-xs text-neutral-500">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 02 -  EXPRESS HIGHWAY INN */}
-      <section data-no-reveal className="bg-[#f8f8f8] py-20 lg:py-32">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-20 lg:px-12">
-          <div className="flex flex-col justify-center">
-            <p className="parallax-text-fast mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-              01 - EXPRESS HIGHWAY INN
-            </p>
-            <div className="relative mt-4">
-              <div className="section-number absolute -left-4 -top-8 -z-10 text-[10rem] font-bold leading-none text-neutral-200">
-                02
-              </div>
-            </div>
-            <h2 className="parallax-text-fast text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight">
-              Your Private Gateway to Hospitality & Leisure.
-            </h2>
-            <p className="parallax-text-slow mt-6 max-w-xl text-base leading-7 text-neutral-600">
-              Designed for members who appreciate premium hospitality,
-              comfortable social spaces, and a more personalized experience in a
-              refined environment.
-            </p>
-            <div className="stagger-group mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2">
-              {expressExperience.map((item) => (
-                <div
-                  key={item.title}
-                  className="border-t border-neutral-300 pt-5"
-                >
-                  <item.icon className="h-6 w-6 text-emerald-700" />
-                  <h3 className="mt-4 text-base font-semibold tracking-tight text-neutral-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-neutral-500">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="parallax-text-fast mt-12">
-              <Link
-                href="#contact"
-                className="group inline-flex items-center gap-3 border border-neutral-900 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white"
-              >
-                Explore Membership{" "}
-                <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
-          <div className="cinematic-img-wrap relative aspect-[4/5] w-full overflow-hidden">
-            <Image
-              src="/images.jpg"
-              alt="Express Highway Inn"
-              fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="cinematic-img object-cover"
-              style={{ willChange: "transform" }}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 03 -  DARK -  AGRO & GOLF */}
-      <section
-        data-no-reveal
-        className="bg-[#080808] py-20 text-white lg:py-32"
-      >
-        <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12">
-          <div className="mb-16 max-w-2xl">
-            <p className="parallax-text-fast mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400">
-              02 - AGRO & GOLF
-            </p>
-            <h2 className="parallax-text-fast text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-tight tracking-tight">
-              Where Leisure Meets Nature.
-            </h2>
-            <p className="parallax-text-slow mt-4 text-base leading-7 text-white/60">
-              Brings together nature, recreation, hospitality, and social
-              experiences in one distinctive destination for open spaces.
-            </p>
-          </div>
-          <div className="stagger-group grid gap-x-8 gap-y-8 sm:grid-cols-2">
-            {agroExperience.map((item) => (
-              <div key={item.title} className="border-t border-white/10 pt-5">
-                <item.icon className="h-6 w-6 text-emerald-400" />
-                <h3 className="mt-4 text-base font-semibold tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-white/60">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="parallax-text-fast mt-12">
-            <Link
-              href="#contact"
-              className="group inline-flex items-center gap-3 border border-emerald-500 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-emerald-500 transition-colors hover:bg-emerald-500 hover:text-white"
-            >
-              Explore Membership{" "}
-              <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 04 -  WHITE -  COMMUNITY */}
-      <section data-no-reveal className="bg-white py-20 lg:py-32">
-        <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12">
-          <div className="relative mb-16 max-w-3xl">
-            <div className="section-number absolute -left-8 -top-12 -z-10 text-[10rem] font-bold leading-none text-neutral-100">
-              04
-            </div>
-            <p className="parallax-text-fast mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-              THE COMMUNITY
-            </p>
-            <h2 className="parallax-text-fast text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-tight tracking-tight">
-              More Than a Membership. A Community.
-            </h2>
-            <p className="parallax-text-slow mt-6 max-w-2xl text-base leading-7 text-neutral-600">
-              Sampan membership is designed around experiences and
-              relationships—not simply access. Connect, relax, and experience a
-              growing ecosystem.
-            </p>
-          </div>
-          <div className="stagger-group grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {communityFeatures.map((item) => (
-              <div
-                key={item.num}
-                className="group relative flex flex-col border border-neutral-200 bg-neutral-50 p-8 transition-all hover:-translate-y-1 hover:shadow-sm"
-              >
-                <span className="text-xs font-bold text-neutral-400">
-                  {item.num}
-                </span>
-                <item.icon className="mt-6 h-7 w-7 text-neutral-800" />
-                <h3 className="mt-6 text-lg font-semibold tracking-tight text-neutral-900">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-500">
-                  {item.desc}
-                </p>
-                <span className="absolute bottom-0 left-0 h-px w-0 bg-emerald-600 transition-all duration-500 group-hover:w-full" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* --------------------------------------------------------- */}
-      {/* SECTION 05 -  WHITE -  CHOOSE YOUR EXPERIENCE (AWWWARDS) */}
-      {/* --------------------------------------------------------- */}
-      <section
-        id="experience"
-        data-no-reveal
-        className="relative overflow-hidden bg-white py-20 lg:py-0 lg:min-h-screen"
-      >
-        <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12">
-          {/* Mobile Only Header */}
-          <div className="parallax-text-fast mb-12 text-center lg:hidden">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-              Choose Your Experience
-            </p>
-            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-tight tracking-tight">
-              Two Destinations. Different Ways to Belong.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 items-center gap-12 lg:min-h-[85vh] lg:grid-cols-[1fr_1.2fr] lg:gap-0">
-            {/* LEFT COLUMN: Interactive Text List */}
-            <div className="relative flex flex-col justify-center py-6 lg:border-r lg:border-neutral-200 lg:py-0 lg:pr-12">
-              {/* Desktop Eyebrow */}
-              <p className="parallax-text-fast mb-12 hidden text-xs font-semibold uppercase tracking-[0.3em] text-neutral-400 lg:block">
-                <span className="text-emerald-700">05</span> / Choose Your
-                Experience
+          <div className="hero-sub mt-12 flex flex-col md:flex-row items-start gap-8">
+            <div className="max-w-md">
+              <p className="text-lg leading-relaxed text-white/60">
+                Own a share of the infrastructure that moves the world. Premium maritime investment made accessible.
               </p>
-
-              {/* Giant Background Number */}
-              <div className="pointer-events-none absolute -left-6 top-1/2 -z-10 -translate-y-1/2 text-[18rem] font-bold leading-none text-neutral-100 lg:block">
-                05
-              </div>
-
-              <div className="flex flex-col">
-                {[
-                  {
-                    title: "Express Highway Inn",
-                    subtitle: "Club & Lounge",
-                    desc: "Best for hospitality, business networking, lounge experiences, meetings, social gatherings, and convenient leisure. Designed for members who appreciate premium hospitality, comfortable social spaces, and a more personalized experience.",
-                    image: "/images/land/urban.jfif",
-                    cta: "View Details",
-                  },
-                  {
-                    title: "Agro & Golf",
-                    subtitle: "Club & Lounge",
-                    desc: "Best for nature, recreation, family leisure, golf-oriented experiences, social gatherings, and destination-based relaxation. Brings together nature, recreation, hospitality, and social experiences in one distinctive destination.",
-                    image: "/images/land/urban.jfif",
-                    cta: "View Details",
-                  },
-                ].map((project, index) => (
-                  <div
-                    key={project.title}
-                    onClick={() => handleProjectClick(index)}
-                    className="group relative cursor-pointer py-6 lg:py-10"
-                  >
-                    {/* Active Indicator Bar (Desktop) */}
-                    <div
-                      className="absolute left-0 top-0 hidden h-full w-[3px] origin-top scale-y-0 rounded-full bg-emerald-600 transition-transform duration-500 ease-out lg:block"
-                      style={{
-                        transform:
-                          activeProject === index ? "scaleY(1)" : "scaleY(0)",
-                      }}
-                    />
-
-                    <div className="flex flex-col gap-1 lg:gap-3">
-                      <span
-                        className={`hidden text-xs font-mono font-medium uppercase tracking-widest transition-colors duration-300 lg:block ${
-                          activeProject === index
-                            ? "text-emerald-600"
-                            : "text-neutral-400"
-                        }`}
-                      >
-                        {project.subtitle}
-                      </span>
-                      <h3
-                        className={`text-[clamp(1.8rem,5vw,5.5rem)] font-bold leading-[0.9] tracking-tighter transition-colors duration-500 lg:text-[clamp(2.5rem,5vw,5.5rem)] ${
-                          activeProject === index
-                            ? "text-neutral-950"
-                            : "text-neutral-300"
-                        }`}
-                      >
-                        {project.title.split(" ").map((word, i) => (
-                          <span key={i} className="inline-block">
-                            {word}&nbsp;
-                          </span>
-                        ))}
-                      </h3>
-                    </div>
-
-                    {/* MOBILE ONLY: Expanded Content */}
-                    <div
-                      className="mt-4 block overflow-hidden lg:hidden"
-                      style={{
-                        maxHeight: activeProject === index ? "500px" : "0px",
-                        transition:
-                          "max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
-                      }}
-                    >
-                      <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl border border-neutral-200">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="object-cover"
-                        />
-                      </div>
-                      <p className="text-sm leading-7 text-neutral-600">
-                        {project.desc}
-                      </p>
-                      <div className="mt-6">
-                        <Link
-                          href="#contact"
-                          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-emerald-700"
-                        >
-                          {project.cta} <FiArrowRight className="h-4 w-4" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
-
-            {/* RIGHT COLUMN: Visual Stage (Desktop) */}
-            <div
-              ref={stageRef}
-              className="relative hidden h-[85vh] overflow-hidden lg:block"
-            >
-              <div className="default-stage-text absolute inset-0 z-0 flex items-center justify-center">
-                <p className="text-center text-sm uppercase tracking-[0.3em] text-neutral-300">
-                  Loading experience...
-                </p>
-              </div>
-
-              {[
-                {
-                  desc: "Best for hospitality, business networking, lounge experiences, meetings, social gatherings, and convenient leisure. Designed for members who appreciate premium hospitality.",
-                  image: "/images/land/urban.jfif",
-                  cta: "View Details",
-                },
-                {
-                  desc: "Best for nature, recreation, family leisure, golf-oriented experiences, social gatherings, and destination-based relaxation. Brings together nature, recreation, hospitality, and social experiences in one distinctive destination.",
-                  image: "/images/land/urban.jfif",
-                  cta: "View Details",
-                },
-              ].map((project, index) => (
-                <div
-                  key={index}
-                  className={`project-visual-${index} absolute inset-0`}
-                >
-                  <div className="absolute inset-0">
-                    <Image
-                      src={project.image}
-                      alt={`Experience ${index + 1}`}
-                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-1000 ease-out"
-                      style={{ transform: "scale(1.1)" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  </div>
-
-                  <div
-                    className={`info-panel-${index} absolute inset-x-0 bottom-0 z-10 translate-y-full p-10`}
-                  >
-                    <div className="w-full max-w-lg rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl">
-                      <p className="text-sm leading-7 text-white/80">
-                        {project.desc}
-                      </p>
-                      <div className="mt-6">
-                        <Link
-                          href="#contact"
-                          className="group/btn inline-flex items-center gap-2 border border-white/40 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black"
-                        >
-                          {project.cta}{" "}
-                          <FiArrowRight className="transition-transform group-hover/btn:translate-x-1" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="flex flex-col border-l border-white/20 pl-6">
+              <span className="text-xs font-medium uppercase tracking-[0.3em] text-white/50">Coming Soon</span>
+              <div className="w-12 h-px bg-white/30 my-2"></div>
+              <span className="text-sm font-semibold uppercase tracking-widest text-emerald-400 flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span> Pre-Launch Phase
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 06 -  DARK -  MEMBER BENEFITS */}
-      <section
-        data-no-reveal
-        className="bg-[#080808] py-20 text-white lg:py-32"
-      >
-        <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12">
-          <div className="mb-16 max-w-2xl">
-            <p className="parallax-text-fast mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400">
-              MEMBER BENEFITS
-            </p>
-            <h2 className="parallax-text-fast text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-tight tracking-tight">
-              Privileges That Make Membership Worth Belonging To.
-            </h2>
-          </div>
-          <div className="stagger-group grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {memberBenefits.map((benefit) => (
-              <div
-                key={benefit.num}
-                className="group relative flex h-full flex-col overflow-hidden border border-white/10 bg-white/[0.03] p-8 backdrop-blur-sm transition-all duration-500 hover:border-emerald-500/50 hover:bg-white/[0.06]"
-              >
-                <div>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 transition-colors group-hover:border-emerald-500/50">
-                    <benefit.icon className="h-5 w-5 text-emerald-400" />
-                  </div>
-                  <h3 className="mt-6 text-xl font-semibold tracking-tight">
-                    {benefit.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-white/60">
-                    {benefit.desc}
-                  </p>
-                </div>
-                <div className="mt-6 h-px w-0 bg-emerald-500 transition-all duration-500 group-hover:w-full" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 07 -  WHITE -  PROCESS */}
-      <section data-no-reveal className="bg-[#f8f8f8] py-20 lg:py-32">
-        <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12">
-          <div className="relative mb-16 max-w-2xl">
-            <div className="section-number absolute -left-8 -top-12 -z-10 text-[10rem] font-bold leading-none text-neutral-200">
-              07
+      {/* 2. HOW IT WORKS */}
+      <section className="bg-white py-20 lg:py-32">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+          <div className="grid grid-cols-12 gap-8 mb-16">
+            <div className="col-span-12 md:col-span-4">
+              <p className="reveal-up text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600 mb-4">How it Works</p>
             </div>
-            <p className="parallax-text-fast mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-              THE PROCESS
-            </p>
-            <h2 className="parallax-text-fast text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-tight tracking-tight">
-              Getting Started Is Simple.
-            </h2>
+            <div className="col-span-12 md:col-span-8">
+              <h2 className="reveal-up text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight">
+                A transparent path to maritime ownership.
+              </h2>
+            </div>
           </div>
-          <div className="stagger-group relative grid gap-12 lg:grid-cols-4">
-            <div className="absolute left-0 top-8 hidden h-px w-full bg-neutral-300 lg:block" />
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {processSteps.map((step) => (
-              <div key={step.step} className="relative">
-                <div className="relative z-10 mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-neutral-300 bg-[#f8f8f8] text-xl font-bold text-neutral-900">
-                  {step.step}
-                </div>
-                <h3 className="text-xl font-semibold tracking-tight text-neutral-900">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-600">
-                  {step.desc}
-                </p>
+              <div key={step.num} className="reveal-up border-t border-neutral-200 pt-6">
+                <span className="text-6xl font-bold text-neutral-200 block mb-4">{step.num}</span>
+                <h3 className="text-2xl font-semibold tracking-tight mb-3">{step.title}</h3>
+                <p className="text-neutral-600">{step.desc}</p>
               </div>
             ))}
           </div>
-          <p className="parallax-text-slow mt-16 border-l-2 border-neutral-300 pl-4 text-xs italic text-neutral-500">
-            Membership benefits, facilities, terms, availability, and applicable
-            fees may vary by membership category and club.
-          </p>
         </div>
       </section>
 
-      {/* SECTION 08 -  WHITE -  TRUST & TRANSPARENCY */}
-      <section data-no-reveal className="bg-white py-20 lg:py-32">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 lg:grid-cols-2 lg:gap-20 lg:px-12">
-          <div className="relative flex flex-col justify-center">
-            <div className="section-number absolute -right-8 -top-8 -z-10 text-[10rem] font-bold leading-none text-neutral-100">
-              08
+      {/* 3. VESSEL OVERVIEW */}
+      <section className="bg-[#f8f8f8] py-20 lg:py-32">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+          <div className="aa-parallax-image-wrapper relative aspect-[21/9] w-full overflow-hidden mb-12 bg-neutral-200">
+            <Image src="/images/vessel-overview.jpg" alt="Vessel Overview" fill className="aa-parallax-image object-cover will-change-transform" sizes="100vw" />
+          </div>
+          <div className="grid grid-cols-12 gap-8">
+            <div className="col-span-12 md:col-span-5 reveal-up">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700 mb-4">Project Details</p>
+              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight mb-6">
+                MV Sampan Voyager
+              </h2>
+              <p className="text-lg text-neutral-600">
+                A 45,000 DWT Handymax bulk carrier designed for global trade. Equipped with modern fuel-efficient engines and optimized for diverse cargo operations.
+              </p>
             </div>
-            <p className="parallax-text-fast mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-              TRANSPARENCY
-            </p>
-            <h2 className="parallax-text-fast text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight text-neutral-950">
-              Membership With Clarity.
+            <div className="col-span-12 md:col-span-7 reveal-up grid grid-cols-2 gap-8">
+              <div className="border-t border-neutral-300 pt-4">
+                <p className="text-xs uppercase tracking-widest text-neutral-500 mb-1">Vessel Type</p>
+                <p className="text-xl font-semibold">Handymax Bulk Carrier</p>
+              </div>
+              <div className="border-t border-neutral-300 pt-4">
+                <p className="text-xs uppercase tracking-widest text-neutral-500 mb-1">Capacity</p>
+                <p className="text-xl font-semibold">45,000 DWT</p>
+              </div>
+              <div className="border-t border-neutral-300 pt-4">
+                <p className="text-xs uppercase tracking-widest text-neutral-500 mb-1">Operating Region</p>
+                <p className="text-xl font-semibold">Asia / Europe</p>
+              </div>
+              <div className="border-t border-neutral-300 pt-4">
+                <p className="text-xs uppercase tracking-widest text-neutral-500 mb-1">Project Status</p>
+                <p className="text-xl font-semibold text-emerald-600">Pre-Launch</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. OPPORTUNITY STATUS & TIMELINE */}
+      <section className="bg-neutral-950 py-20 lg:py-32 text-white">
+        <div className="mx-auto max-w-[800px] px-6 text-center mb-20">
+          <p className="reveal-up text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400 mb-4">Project Status</p>
+          <h2 className="reveal-up text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight">
+            Pre-Launch <br/> <span className="text-white/50">Investment opportunities will open soon.</span>
+          </h2>
+        </div>
+
+        <div className="mx-auto max-w-[800px] px-6 timeline-container relative">
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
+          <div className="timeline-line absolute left-1/2 top-0 bottom-0 w-px bg-emerald-500 -translate-x-1/2 will-change-transform"></div>
+          
+          <div className="space-y-16">
+            {timelinePhases.map((item, i) => (
+              <div key={i} className={`reveal-up flex items-center ${i % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                <div className={`w-1/2 ${i % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
+                  <h3 className="text-2xl font-semibold tracking-tight">{item.phase}</h3>
+                  <p className="text-sm uppercase tracking-widest text-emerald-400 mt-2">{item.status}</p>
+                </div>
+                <div className="absolute left-1/2 -translate-x-1/2 h-4 w-4 rounded-full border-2 border-emerald-500 bg-neutral-950 z-10"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. BROCHURE DOWNLOAD */}
+      <section className="bg-white py-20 lg:py-32">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 grid grid-cols-12 gap-8 items-center">
+          <div className="col-span-12 md:col-span-5 reveal-up">
+            <div className="aa-parallax-image-wrapper relative aspect-[3/4] w-full overflow-hidden bg-neutral-900 group">
+              <Image src="/images/prospectus.jpg" alt="Prospectus" fill className="aa-parallax-image object-cover group-hover:scale-105 transition-transform duration-700 will-change-transform" sizes="33vw" />
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-7 reveal-up md:pl-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600 mb-4">Publication</p>
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight mb-6">
+              Ship Space Share Investment Prospectus
             </h2>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
-              <span className="text-[clamp(2rem,4vw,3.5rem)] font-light tracking-tight text-neutral-900">
-                CLEAR.
-              </span>
-              <span className="text-[clamp(2rem,4vw,3.5rem)] font-light tracking-tight text-neutral-400">
-                SIMPLE.
-              </span>
-              <span className="text-[clamp(2rem,4vw,3.5rem)] font-light tracking-tight text-neutral-400">
-                TRANSPARENT.
-              </span>
-            </div>
-          </div>
-          <div className="flex flex-col justify-center">
-            <p className="parallax-text-slow text-base leading-7 text-neutral-600">
-              We ensure complete transparency in membership options, benefits,
-              facilities, terms, and availability. Our team ensures clear
-              communication throughout the entire membership process.
+            <p className="text-lg text-neutral-600 mb-10 max-w-xl">
+              Explore the vessel specifications, investment model, legal structure, and project roadmap in our official prospectus.
             </p>
-            <div className="cinematic-img-wrap relative mt-10 aspect-[16/10] w-full overflow-hidden border border-neutral-200">
-              <Image
-                src="/images.jpg"
-                alt="Transparency"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="cinematic-img object-cover"
-                style={{ willChange: "transform" }}
-              />
+            <button className="group inline-flex items-center gap-4 border border-neutral-950 px-8 py-4 hover:bg-neutral-950 hover:text-white transition-colors duration-300">
+              <span className="text-sm font-bold uppercase tracking-widest">Download Prospectus</span>
+              <FiDownload className="h-5 w-5 transition-transform group-hover:translate-y-1" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. TRUST SIGNALS */}
+      <section className="bg-[#f8f8f8] py-20 lg:py-32">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {trustSignals.map((stat, i) => (
+            <div key={i} className="reveal-up flex flex-col border-l border-neutral-300 pl-6">
+              <span className="count-up text-5xl md:text-7xl font-bold text-neutral-900" data-value={stat.value} data-suffix={stat.suffix}>0{stat.suffix}</span>
+              <span className="mt-2 text-xs uppercase tracking-widest text-neutral-500">{stat.label}</span>
             </div>
-            <div className="parallax-text-fast mt-10">
-              <Link
-                href="#contact"
-                className="group inline-flex items-center gap-3 border border-neutral-900 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white"
-              >
-                Request Membership Details{" "}
-                <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-              </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* 7. TESTIMONIALS */}
+      <section className="bg-white py-20 lg:py-32">
+        <div className="mx-auto max-w-[1200px] px-6 grid grid-cols-12 gap-8 items-center">
+          <div className="aa-parallax-image-wrapper col-span-12 md:col-span-4 overflow-hidden">
+            <div className="relative aspect-square w-full rounded-full overflow-hidden">
+              <Image src="/images/investor.jpg" alt="Investor" fill className="aa-parallax-image object-cover will-change-transform" sizes="33vw" />
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-8 reveal-up">
+            <blockquote className="text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.3] tracking-tight text-neutral-800">
+              “Ship Space Share gives investors access to an asset class that was traditionally difficult to enter. It’s a tangible investment in global infrastructure.”
+            </blockquote>
+            <div className="mt-8 flex items-center gap-4">
+              <div>
+                <p className="font-bold text-lg">Tahsin Rahman</p>
+                <p className="text-sm text-neutral-500">Maritime Investor</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 09 -  DARK -  STATEMENT */}
-      <section
-        data-no-reveal
-        className="bg-[#080808] py-20 text-white lg:py-32"
-      >
-        <div className="mx-auto w-full max-w-[1000px] px-6 text-center lg:px-12">
-          <p className="parallax-text-fast mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400">
-            FIND YOUR PLACE
-          </p>
-          <h2 className="parallax-text-fast text-[clamp(2rem,4.5vw,4rem)] font-semibold leading-[1.05] tracking-tight">
-            Find Your Place Within Sampan.
+      {/* 8. PHOTO GALLERY */}
+      <section className="bg-[#f8f8f8] py-20 lg:py-32">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+          <p className="reveal-up mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">Gallery</p>
+          <h2 className="reveal-up text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight mb-16">
+            Vessel & Infrastructure
           </h2>
-          <p className="parallax-text-slow mx-auto mt-8 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-            Choose the membership experience that fits your lifestyle,
-            interests, and ambitions.
-          </p>
-          <div className="parallax-text-fast mt-12 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="#contact"
-              className="group inline-flex items-center gap-3 border border-white/30 bg-white/5 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-md transition-colors hover:bg-white hover:text-neutral-950"
-            >
-              Express Highway Inn{" "}
-              <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link
-              href="#contact"
-              className="group inline-flex items-center gap-3 border border-emerald-500 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-emerald-500 transition-colors hover:bg-emerald-500 hover:text-white"
-            >
-              Agro & Golf{" "}
-              <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Link>
+
+          <div className="grid grid-cols-12 grid-rows-[300px] md:grid-rows-[400px] gap-4">
+            {galleryImages.map((img, i) => (
+              <div key={i} className={`${img.size} relative overflow-hidden group bg-neutral-200`}>
+                <div className="absolute inset-0 overflow-hidden">
+                  <Image src={img.src} alt={img.alt} fill className="gallery-parallax object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform" sizes="50vw" />
+                </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-500 z-[1]"></div>
+                <div className="absolute bottom-6 left-6 z-[2] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="text-xl font-semibold flex items-center gap-2"><FiAnchor /> {img.alt}</h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 10 -  WHITE -  FINAL CTA */}
-      <section
-        id="contact"
-        className="relative overflow-hidden bg-white py-24 lg:py-32"
-      >
-        <div className="absolute -right-32 -bottom-32 h-[500px] w-[500px] rounded-full bg-[#E8EFE9]" />
-        <div className="absolute -left-20 -top-20 h-[300px] w-[300px] rounded-full border border-neutral-200" />
-        <div className="relative z-10 mx-auto max-w-[900px] px-6 text-center lg:px-12">
-          <p className="parallax-text-fast mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
-            YOUR MEMBERSHIP AWAITS
-          </p>
-          <h2 className="parallax-text-fast text-[clamp(2.2rem,5vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-neutral-950">
-            Step Into a More Exclusive Experience.
+      {/* 9. LEGAL & CREDENTIALS */}
+      <section className="bg-neutral-950 py-20 lg:py-32 text-white">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 grid grid-cols-12 gap-8">
+          <div className="col-span-12 md:col-span-4">
+            <p className="reveal-up mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400">Trust & Security</p>
+            <h2 className="reveal-up text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight">
+              Legal & Registration
+            </h2>
+          </div>
+          <div className="col-span-12 md:col-span-8">
+            <ul>
+              {legalCredentials.map((cred, i) => (
+                <li key={i} className="reveal-up flex items-center justify-between border-b border-white/10 py-6 group">
+                  <span className="text-lg md:text-xl font-medium group-hover:translate-x-2 transition-transform duration-300">{cred}</span>
+                  <FiCheckCircle className="h-6 w-6 text-emerald-400 opacity-50 group-hover:opacity-100 transition-opacity" />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. ROUTE MAP OVERVIEW */}
+      <section className="bg-white py-20 lg:py-32">
+        <div className="mx-auto max-w-[1200px] px-6 text-center mb-12">
+          <p className="reveal-up text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600 mb-4">Operating Route</p>
+          <h2 className="reveal-up text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight">
+            Global Trade Network
           </h2>
-          <p className="parallax-text-slow mx-auto mt-8 max-w-2xl text-base leading-7 text-neutral-500 sm:text-lg">
-            Explore the membership opportunities at Express Highway Inn Club &
-            Lounge and Agro & Golf Club & Lounge. Speak with our team to
-            discover the right membership for you.
-          </p>
-          <div className="parallax-text-fast mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/contact"
-              className="group inline-flex w-full items-center justify-center gap-3 bg-neutral-950 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-colors hover:bg-emerald-700 sm:w-auto"
-            >
-              Become a Member{" "}
-              <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex w-full items-center justify-center gap-3 border border-neutral-300 px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-neutral-950 transition-colors hover:border-neutral-950 sm:w-auto"
-            >
-              Talk to Membership Team{" "}
-              <FiMessageSquare className="transition-transform group-hover:scale-110" />
+        </div>
+
+        <div className="map-container relative w-full h-[500px] bg-[#f8f8f8] overflow-hidden border-y border-neutral-200">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+            {/* Grid Lines */}
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e5e5e5" strokeWidth="1"/>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+
+            {/* Route Path */}
+            <path 
+              className="route-path"
+              d="M150,350 Q300,50 450,250 T650,150" 
+              fill="none" 
+              stroke="#10b981" 
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeDasharray="4 4"
+            />
+            
+            {/* Port A */}
+            <circle cx="150" cy="350" r="6" fill="#10b981" />
+            <text x="170" y="355" fill="#171717" fontSize="14" fontWeight="bold" fontFamily="monospace">PORT A (Chittagong)</text>
+            <text x="170" y="370" fill="#737373" fontSize="10" fontFamily="monospace">22.3564° N, 91.8211° E</text>
+            
+            {/* Port B */}
+            <circle cx="650" cy="150" r="6" fill="#10b981" />
+            <text x="580" y="135" fill="#171717" fontSize="14" fontWeight="bold" fontFamily="monospace">PORT B (Rotterdam)</text>
+            <text x="580" y="150" fill="#737373" fontSize="10" fontFamily="monospace">51.9244° N, 4.4777° E</text>
+
+            {/* Ship Marker */}
+            <g className="ship-marker">
+              <rect x="-8" y="-4" width="16" height="8" fill="#171717" rx="2" />
+              <rect x="-4" y="-8" width="8" height="4" fill="#171717" rx="1" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      {/* 11. VIDEO WALKTHROUGH */}
+      <section className="bg-white py-20 lg:py-32">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+          <div className="aa-parallax-image-wrapper relative aspect-video w-full overflow-hidden bg-neutral-900 cursor-pointer group">
+            <Image src="/images/ship-video.jpg" alt="Video Tour" fill className="aa-parallax-image object-cover opacity-70 group-hover:scale-[1.12] transition-transform duration-700 will-change-transform" sizes="100vw" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+              <div className="h-20 w-20 rounded-full border border-white/80 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 transition-all duration-300">
+                <FiPlay className="ml-1 text-white text-2xl" />
+              </div>
+              <h3 className="mt-6 text-2xl font-semibold text-white">Experience the Vessel</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 12. SITE VISIT & WHATSAPP CTA */}
+      <section className="bg-[#f8f8f8] py-20 lg:py-32">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 grid grid-cols-12 gap-8 items-center">
+          <div className="reveal-up col-span-12 md:col-span-5 flex flex-col justify-center">
+            <h3 className="text-3xl md:text-4xl font-semibold leading-tight mb-6">
+              See the operation before you invest.
+            </h3>
+            <p className="text-neutral-600 mb-8">
+              Book a guided site visit with our maritime advisors to inspect the vessel and port operations.
+            </p>
+            <Link href="#contact" className="group inline-flex items-center gap-4 text-lg font-bold border-b-2 border-emerald-500 pb-2 w-fit text-neutral-900 hover:text-emerald-600 transition-colors">
+              Book a Site Visit <FiArrowRight className="transition-transform group-hover:translate-x-2" />
             </Link>
           </div>
-          <p className="parallax-text-slow mt-10 text-xs text-neutral-400">
-            Membership availability and benefits are subject to applicable terms
-            and conditions.
+          
+          <div className="reveal-up col-span-12 md:col-span-7 bg-neutral-950 text-white p-8 md:p-12 flex flex-col justify-center">
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">Want to understand the opportunity before launch?</h3>
+            <p className="text-white/60 mb-8">Speak directly with an investment advisor and receive early access information.</p>
+            <a href="https://wa.me/8801000000000" target="_blank" rel="noreferrer" className="group bg-emerald-500 text-black px-8 py-4 font-bold uppercase tracking-widest text-sm flex items-center gap-3 hover:bg-white transition-colors w-fit">
+              <FiMessageCircle className="text-xl" /> Talk to an Advisor <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 13. FAQ */}
+      <section className="bg-white py-20 lg:py-32">
+        <div className="mx-auto max-w-[800px] px-6">
+          <p className="reveal-up mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600 text-center">FAQ</p>
+          <h2 className="reveal-up text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-tight tracking-tight mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-4">
+            {faqItems.map((item, i) => (
+              <div key={i} className="reveal-up border border-neutral-200 overflow-hidden">
+                <button className="w-full flex justify-between items-center p-6 text-left hover:bg-neutral-50 transition-colors" onClick={() => setActiveFaq(activeFaq === i ? null : i)}>
+                  <span className="text-lg font-semibold">{item.q}</span>
+                  <FiChevronDown className={`h-5 w-5 text-emerald-600 transition-transform duration-300 ${activeFaq === i ? "rotate-180" : ""}`} />
+                </button>
+                <div className={`grid transition-all duration-300 ${activeFaq === i ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
+                  <div className="overflow-hidden">
+                    <p className="p-6 pt-0 text-neutral-600 leading-7">{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 14. FINAL CTA */}
+      <section className="cta-section relative min-h-[90vh] bg-black text-white flex flex-col justify-center overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image src="/images/ship-cta.jpg" alt="Ocean Horizon" fill className="cta-bg-image object-cover opacity-40 will-change-transform" sizes="100vw" />
+        </div>
+        <div className="absolute inset-0 bg-black/50 z-[1]"></div>
+
+        <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-12 w-full">
+          <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-[1.05] tracking-tight">
+            BE FIRST <br />
+            TO KNOW. <br />
+            <span className="text-emerald-500">GET EARLY ACCESS.</span>
+          </h2>
+          <p className="mt-8 text-xl text-white/60 max-w-lg">
+            Ship Space Share is coming soon. Register today to secure your position in this premium maritime investment opportunity.
           </p>
+          <div className="reveal-up mt-12">
+            <Link href="/contact" className="group bg-white text-black px-8 py-4 text-sm font-bold uppercase tracking-widest flex items-center gap-4 hover:bg-emerald-500 transition-colors w-fit">
+              Get Early Access <FiArrowRight />
+            </Link>
+          </div>
         </div>
       </section>
     </main>

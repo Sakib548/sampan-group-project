@@ -13,7 +13,7 @@ const heroImage = "/images/concerns/eco-agro.png";
 
 export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => void }) {
   return (
-    <section id="overview" className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-[#0c1c14] text-white pt-32 pb-20 lg:py-0 border-b border-white/10">
+    <section id="overview" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-[#0c1c14] text-white pt-20 pb-10 lg:pt-24 lg:pb-14 border-b border-white/10">
       {/* Background Image with Dark Nature Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -22,8 +22,9 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center brightness-[0.75]"
+          className="object-cover object-center"
         />
+        {/* Dual-layer dark gradient for text readability and navbar contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#07130d]/95 via-[#07130d]/80 to-[#07130d]/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c1c14] via-transparent to-[#07130d]/80" />
       </div>
@@ -32,29 +33,28 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
       <div className="pointer-events-none absolute top-1/4 left-10 w-96 h-96 bg-[#2f6b45]/20 rounded-full blur-[140px] z-0" />
       <div className="pointer-events-none absolute bottom-10 right-10 w-96 h-96 bg-[#b9e583]/15 rounded-full blur-[120px] z-0" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 py-12 lg:py-24">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Hero Content */}
-          <div className="lg:col-span-8 max-w-3xl">
+          <div className="lg:col-span-8 max-w-3xl space-y-4 sm:space-y-5">
             {/* Eyebrow Badge */}
-            <div className="inline-flex items-center gap-3 border border-[#b9e583]/50 bg-[#b9e583]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#b9e583] mb-6">
+            <div className="inline-flex items-center gap-3 border border-[#b9e583]/50 bg-[#b9e583]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#b9e583]">
               <FaLeaf className="text-xs text-[#b9e583]" />
               <span>Sustainable Farming • Agro-Resort &amp; Farm Dining</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-white leading-[1.05]">
-              Sampan Eco &amp; <br className="hidden sm:inline" />
-              <span className="font-semibold text-[#b9e583]">
+            <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold tracking-tight text-white leading-[0.98]">
+              Sampan Eco &amp; <br />
+              <span className="text-[#b9e583] block mt-1">
                 Agro Resort
               </span>
             </h1>
 
             {/* Tagline & Subheading */}
-            <p className="mt-6 text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl font-normal">
-              A lush, 50+ acre organic farm sanctuary along the highway corridor. Discover organic harvests, 
-              lakeview eco-cottages, authentic farm-to-table dining, and revitalizing countryside experiences.
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md font-light tracking-wide border-l-2 border-[#b9e583]/80 pl-4">
+              A 50+ acre organic farm sanctuary with lakeview eco-cottages and farm-to-table dining.
             </p>
 
             {/* CTAs */}

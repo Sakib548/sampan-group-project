@@ -49,7 +49,7 @@ const fishAndMeatProducts = [
     category: "Wild River Fish",
     priceBDT: "1,850 BDT / kg",
     packSize: "1.2 kg - 1.5 kg Whole Fish",
-    image: "/images/brand/fishandmeat.png",
+    image: "/images/our_divisions/sampan-fish-and-meat/original-padma-hilsa-fish-bangladesh.jpg",
     tag: "Premium Catch",
     description: "Authentic wild Padma river Hilsa with natural silver sheen, rich fish-oil aroma, and soft melting texture.",
     highlights: ["100% Authentic Padma Catch", "Chemical & Formalin Free", "Cleaned & Scale Free Available"],
@@ -60,29 +60,29 @@ const fishAndMeatProducts = [
     category: "Freshwater Fish",
     priceBDT: "380 BDT / kg",
     packSize: "2 kg - 3 kg Whole Fish",
-    image: "/images/brand/fishandmeat.png",
+    image: "/images/our_divisions/sampan-fish-and-meat/Bio-Farm_Fresh_Ruhi_Fish.png",
     tag: "Daily Fresh",
     description: "Cultivated in bio-secure freshwater ponds fed with organic floating feed. Firm sweet flesh with no muddy odor.",
     highlights: ["Bio-Secure Pond Harvested", "No Muddy Odor", "Gutted & Cleaned Option"],
   },
-  {
-    id: "grassfed-beef-curry",
-    name: "Grass-Fed Premium Beef Curry Cut",
-    category: "Fresh Meat",
-    priceBDT: "820 BDT / kg",
-    packSize: "1 kg Vacuum Pack",
-    image: "/images/brand/fishandmeat.png",
-    tag: "100% Halal",
-    description: "Tender, fresh grass-fed beef curry cuts from healthy young pasture cattle. Hygienically slaughtered and vacuum packed.",
-    highlights: ["100% Certified Halal Slaughter", "Pasture Raised Cattle", "Bone-In Curry Cut"],
-  },
+  // {
+  //   id: "grassfed-beef-curry",
+  //   name: "Grass-Fed Premium Beef Curry Cut",
+  //   category: "Fresh Meat",
+  //   priceBDT: "820 BDT / kg",
+  //   packSize: "1 kg Vacuum Pack",
+  //   image: "/images/brand/fishandmeat.png",
+  //   tag: "100% Halal",
+  //   description: "Tender, fresh grass-fed beef curry cuts from healthy young pasture cattle. Hygienically slaughtered and vacuum packed.",
+  //   highlights: ["100% Certified Halal Slaughter", "Pasture Raised Cattle", "Bone-In Curry Cut"],
+  // },
   {
     id: "deshi-chicken",
     name: "Free-Range Deshi Poultry",
     category: "Fresh Poultry",
     priceBDT: "550 BDT / kg",
     packSize: "800g - 1.2 kg Whole Dressed",
-    image: "/images/brand/fishandmeat.png",
+    image: "/images/our_divisions/sampan-fish-and-meat/Free_Range_Deshi_Poultry.jpg",
     tag: "Free Range",
     description: "Authentic village free-range Deshi chicken raised on natural grains, high in lean protein and rich traditional broth flavor.",
     highlights: ["Free-Range Scavenged", "Zero Antibiotics", "Skin-On Dressed"],
@@ -93,7 +93,7 @@ const fishAndMeatProducts = [
     category: "Fresh Meat",
     priceBDT: "1,150 BDT / kg",
     packSize: "1 kg Pack",
-    image: "/images/brand/fishandmeat.png",
+    image: "/images/our_divisions/sampan-fish-and-meat/Fresh_Mutton_Leg_Rib_Cut.jpg",
     description: "Tender Bengal Black Goat mutton cuts, known nationally for rich flavor, lean muscle texture, and quick cooking.",
     highlights: ["Bengal Black Goat Breed", "Hygienically Processed", "Tender Muscle Cut"],
   },
@@ -103,7 +103,7 @@ const fishAndMeatProducts = [
     category: "Crustaceans & Marine",
     priceBDT: "1,450 BDT / kg",
     packSize: "500g Pack (15-20 Pcs)",
-    image: "/images/brand/fishandmeat.png",
+    image: "/images/our_divisions/sampan-fish-and-meat/Fresh_Bay_King_Tiger_Prawns_Bagda.png",
     tag: "Seafood Special",
     description: "Large sea-caught tiger prawns ice-chilled immediately after harvest for firm juicy crunch.",
     highlights: ["Head-On Shell-On", "Flash Ice Chilled", "Zero Preservative Chemical"],
@@ -195,9 +195,9 @@ const fishAndMeatFacilities = [
 ];
 
 const photos = [
-  { id: "photo-1", title: "Padma Hilsa Catch", category: "Wild River Fisheries", image: "/images/brand/fishandmeat.png", caption: "Freshly arrived Padma river wild Hilsa iced crates at central processing hub." },
-  { id: "photo-2", title: "Hygienic Meat Butchery", category: "Processing", image: "/images/brand/fishandmeat.png", caption: "Stainless-steel temperature-controlled butchery line for vacuum packaging." },
-  { id: "photo-3", title: "Reefer Transport Fleet", category: "Cold Chain Logistics", image: "/images/brand/fishandmeat.png", caption: "Refrigerated transport fleet delivering zero-temperature fluctuation produce." },
+  { id: "photo-1", title: "Padma Hilsa Catch", category: "Wild River Fisheries", image: "/images/our_divisions/sampan-fish-and-meat/hilsa_catch.png", caption: "Freshly arrived Padma river wild Hilsa iced crates at central processing hub." },
+  { id: "photo-2", title: "Hygienic Meat Butchery", category: "Processing", image: "/images/our_divisions/sampan-fish-and-meat/Hygienic Meat Butchery.png", caption: "Stainless-steel temperature-controlled butchery line for vacuum packaging." },
+  { id: "photo-3", title: "Reefer Transport Fleet", category: "Cold Chain Logistics", image: "/images/our_divisions/sampan-fish-and-meat/Reefer-Trucking.jpg", caption: "Refrigerated transport fleet delivering zero-temperature fluctuation produce." },
 ];
 
 const nearbyConcerns = [
@@ -224,7 +224,7 @@ const nearbyConcerns = [
 export default function SampanFishAndMeatPage() {
   return (
     <main className="min-h-screen bg-[#F5F5F2] text-neutral-950">
-      
+
       {/* 1. Hero Banner */}
       <AgroHero
         title="Sampan Fish & Meat"
@@ -234,7 +234,7 @@ export default function SampanFishAndMeatPage() {
         statusBadge="Formalin-Free Certified & Cold-Chain Logistics"
         statusType="operating"
         description="Operating bio-secure freshwater aquaculture ponds, wild river fish collection hubs, and modern halal livestock processing units. Delivering 100% formalin-free, lab-tested fresh fish, beef, mutton, and poultry across Bangladesh."
-        bannerImage="/images/brand/fishandmeat.png"
+        bannerImage="/images/our_divisions/sampan-fish-and-meat/hero_banner.jpg"
         facts={[
           { value: "100%", label: "Formalin & Chemical Free" },
           { value: "0°C - 4°C", label: "Cold-Chain Fleet" },
@@ -251,7 +251,7 @@ export default function SampanFishAndMeatPage() {
         concernName="Sampan Fish & Meat"
         storyParagraphs={storyParagraphs}
         pillars={storyPillars}
-        farmImage="/images/brand/fishandmeat.png"
+        farmImage="/images/our_divisions/sampan-fish-and-meat/hero_banner.jpg"
         bgTheme="divisions-green"
         accentColor="#047857"
       />

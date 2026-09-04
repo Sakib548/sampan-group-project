@@ -21,7 +21,7 @@ const sweetBoxProducts = [
     category: "Traditional Sweets",
     priceBDT: "550 BDT / kg",
     packSize: "1 kg / 500g Box",
-    image: "/images/brand/sweetbox.png",
+    image: "/images/our_divisions/sampan-sweet-box/Classic_Spongy_Rosogolla.jpg",
     tag: "Bestseller",
     description: "Soft, spongy curd-cheese balls soaked in light cardamom-infused sugar syrup. Prepared fresh daily using pure milk chhana.",
     highlights: ["100% Pure Cow Milk Chhana", "No Artificial Preservatives", "Handcrafted Daily"],
@@ -32,7 +32,7 @@ const sweetBoxProducts = [
     category: "Traditional Sweets",
     priceBDT: "650 BDT / kg",
     packSize: "1 kg Box",
-    image: "/images/brand/sweetbox.png",
+    image: "/images/our_divisions/sampan-sweet-box/Royal_Shahi_Kalojam.jpg",
     tag: "Chef Special",
     description: "Rich dark caramelized sweet infused with mawa, roasted ghee, and saffron syrup for a luxurious melting texture.",
     highlights: ["Pure Deshi Ghee Fried", "Infused with Iranian Saffron", "Rich Mawa Core"],
@@ -43,28 +43,28 @@ const sweetBoxProducts = [
     category: "Traditional Sweets",
     priceBDT: "600 BDT / kg",
     packSize: "1 kg Box",
-    image: "/images/brand/sweetbox.png",
+    image: "/images/our_divisions/sampan-sweet-box/Porabari_Style_Chamcham.jpg",
     description: "Golden oblong mishti garnished with fresh mawa shavings and crushed pistachios.",
     highlights: ["Authentic Regional Recipe", "Garnished with Mawa & Pistachio"],
   },
-  {
-    id: "gift-hamper-luxury",
-    name: "Sampan Signature Royal Hamper Box",
-    category: "Gift Hampers",
-    priceBDT: "2,450 BDT",
-    packSize: "2.5 kg Assorted Box",
-    image: "/images/brand/sweetbox.png",
-    tag: "Luxury Gift",
-    description: "Exclusive hardbound velvet gift hamper box containing Sandesh, Kaju Barfi, Mawa Laddoo, and Dry Fruit Mishti.",
-    highlights: ["Premium Hardbound Packaging", "9 Premium Varieties", "Custom Greeting Card Included"],
-  },
+  // {
+  //   id: "gift-hamper-luxury",
+  //   name: "Sampan Signature Royal Hamper Box",
+  //   category: "Gift Hampers",
+  //   priceBDT: "2,450 BDT",
+  //   packSize: "2.5 kg Assorted Box",
+  //   image: "/images/brand/sweetbox.png",
+  //   tag: "Luxury Gift",
+  //   description: "Exclusive hardbound velvet gift hamper box containing Sandesh, Kaju Barfi, Mawa Laddoo, and Dry Fruit Mishti.",
+  //   highlights: ["Premium Hardbound Packaging", "9 Premium Varieties", "Custom Greeting Card Included"],
+  // },
   {
     id: "kaju-barfi",
     name: "Gold Leaf Kaju Barfi",
     category: "Dry & Mawa Sweets",
     priceBDT: "1,400 BDT / kg",
     packSize: "500g / 1kg Box",
-    image: "/images/brand/sweetbox.png",
+    image: "/images/our_divisions/sampan-sweet-box/Gold_Leaf_Kaju_Barfi.jpg",
     tag: "Premium",
     description: "Smooth cashew nut fudge topped with edible silver-gold leaf vark, made with 100% imported cashews.",
     highlights: ["Pure Whole Cashew Paste", "Edible Silver Foil", "Long Shelf Life"],
@@ -75,7 +75,7 @@ const sweetBoxProducts = [
     category: "Dry & Mawa Sweets",
     priceBDT: "700 BDT / kg",
     packSize: "1 kg Box",
-    image: "/images/brand/sweetbox.png",
+    image: "/images/our_divisions/sampan-sweet-box/Shahi_Ghee_Mihidana_Laddoo.png",
     description: "Tiny gram flour pearls bound with pure deshi ghee, saffron, and melon seeds.",
     highlights: ["Pure Organic Ghee", "Crisp & Melt-in-mouth"],
   },
@@ -186,7 +186,7 @@ const photos = [
 export default function SampanSweetBoxPage() {
   return (
     <main className="min-h-screen bg-[#F5F5F2] text-neutral-950">
-      
+
       {/* 1. Hero Banner */}
       <RetailHero
         title="Sampan Sweet Box"
@@ -196,7 +196,7 @@ export default function SampanSweetBoxPage() {
         statusBadge="Operational Outlets & Express Highway Delivery"
         statusType="operating"
         description="Crafted using 100% pure milk chhana, organic deshi ghee, and traditional copper-cauldron recipes. Tied directly to Sampan Highway Inn for highway travelers, event catering, and gourmet gift hamper deliveries nationwide."
-        bannerImage="/images/brand/sweetbox.png"
+        bannerImage="/images/our_divisions/sampan-sweet-box/hero_image.png"
         facts={[
           { value: "30+", label: "Handcrafted Sweet Varieties" },
           { value: "100%", label: "Pure Organic Ghee & Chhana" },

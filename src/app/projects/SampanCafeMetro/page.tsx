@@ -87,7 +87,7 @@ export default function SampanCafeMetroFeature() {
             </p>
 
             <Link
-              href="https://www.sampangroup.com.bd/sampan-auto"
+              href="/our_divisions/real-state-and-land-investment/sampan-cafe-metro"
               className="group mt-8 inline-flex min-h-14 items-center justify-between gap-10 bg-[#a8df73] px-6 text-xs font-bold uppercase tracking-[0.15em] text-[#07131f] transition duration-300 hover:bg-white"
             >
               Explore Cafe Metro

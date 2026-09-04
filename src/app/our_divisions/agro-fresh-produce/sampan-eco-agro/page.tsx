@@ -49,7 +49,7 @@ const ecoAgroProducts = [
     category: "Fresh Vegetables",
     priceBDT: "45 BDT / kg",
     packSize: "20 kg Crate",
-    image: "/images/brand/sampanechoagro.png",
+    image: "/images/our_divisions/eco-agro/Red_Vine_Organic_Tomatoes.jpg",
     tag: "Fresh Harvest",
     description: "Juicy, firm red vine tomatoes cultivated in greenhouse conditions without synthetic ripening agents.",
     highlights: ["100% Vine Ripened", "Zero Ripening Chemicals", "20kg Standard Agro Crate"],
@@ -60,7 +60,7 @@ const ecoAgroProducts = [
     category: "Seasonal Fruits",
     priceBDT: "120 BDT / kg",
     packSize: "10 kg Box",
-    image: "/images/brand/sampanechoagro.png",
+    image: "/images/our_divisions/eco-agro/Rangpur_Haribhanga_Mangoes.jpg",
     tag: "Summer Special",
     description: "Fibreless, sweet, highly aromatic Haribhanga mangoes harvested direct from our Rangpur orchard estate.",
     highlights: ["Fibreless Sweet Pulp", "Naturally Tree Ripened", "Export Grade Quality"],
@@ -71,7 +71,7 @@ const ecoAgroProducts = [
     category: "Fresh Vegetables",
     priceBDT: "28 BDT / kg",
     packSize: "50 kg Jute Bag",
-    image: "/images/brand/sampanechoagro.png",
+    image: "/images/our_divisions/eco-agro/Diamond_Potatoes.jpg",
     description: "High-density starch diamond potatoes ideal for household cooking and commercial chip manufacturing.",
     highlights: ["Low Moisture Starch", "Cleaned & Sorted", "Long Cold-Storage Life"],
   },
@@ -81,7 +81,7 @@ const ecoAgroProducts = [
     category: "Seasonal Fruits",
     priceBDT: "75 BDT / kg",
     packSize: "15 kg Crate",
-    image: "/images/brand/sampanechoagro.png",
+    image: "/images/our_divisions/eco-agro/Thai_Kazi_Guava.jpg",
     tag: "Year-Round",
     description: "Crisp, sweet, seed-light Thai Guava rich in Vitamin C, harvested weekly year-round.",
     highlights: ["Crisp Flesh & Light Seed", "High Vitamin C", "Foam Net Wrapped"],
@@ -92,7 +92,7 @@ const ecoAgroProducts = [
     category: "Grains & Oilseeds",
     priceBDT: "110 BDT / kg",
     packSize: "25 kg Sack",
-    image: "/images/brand/sampanechoagro.png",
+    image: "/images/our_divisions/eco-agro/Yellow_Mustard_Seed.jpg",
     description: "High oil-content organic yellow mustard seeds for cold-pressed mustard oil production.",
     highlights: ["42% Oil Content", "Sun Dried & De-dusted"],
   },
@@ -185,9 +185,9 @@ const ecoAgroFacilities = [
 ];
 
 const photos = [
-  { id: "photo-1", title: "Organic Crop Fields", category: "Cultivation", image: "/images/brand/sampanechoagro.png", caption: "Expansive solar-drip irrigated organic crop fields in Sreemangal." },
-  { id: "photo-2", title: "Harvesting & Sorting", category: "Farmgate Operations", image: "/images/brand/sampanechoagro.png", caption: "Hygienic sorting and washing of vine tomatoes before crate packaging." },
-  { id: "photo-3", title: "Cold Storage Warehouse", category: "Logistics", image: "/images/brand/sampanechoagro.png", caption: "Temperature-controlled holding room maintaining produce freshness." },
+  { id: "photo-1", title: "Organic Crop Fields", category: "Cultivation", image: "/images/our_divisions/sampan-eco-agro/Organic_Crop_Fields.jpg", caption: "Expansive solar-drip irrigated organic crop fields in Sreemangal." },
+  { id: "photo-2", title: "Harvesting & Sorting", category: "Farmgate Operations", image: "/images/our_divisions/sampan-eco-agro/Harvesting_Sorting.png", caption: "Hygienic sorting and washing of vine tomatoes before crate packaging." },
+  { id: "photo-3", title: "Cold Storage Warehouse", category: "Logistics", image: "/images/our_divisions/sampan-eco-agro/Cold_Storage_Warehouse.jpg", caption: "Temperature-controlled holding room maintaining produce freshness." },
 ];
 
 const nearbyConcerns = [
@@ -214,7 +214,7 @@ const nearbyConcerns = [
 export default function SampanEcoAgroPage() {
   return (
     <main className="min-h-screen bg-[#F5F5F2] text-neutral-950">
-      
+
       {/* 1. Hero Banner */}
       <AgroHero
         title="Sampan Eco & Agro"
@@ -224,7 +224,7 @@ export default function SampanEcoAgroPage() {
         statusBadge="Organic Cultivation & Bulk B2B Supply"
         statusType="operating"
         description="Operating over 150 acres of certified organic crop fields, fruit orchards, and solar-drip greenhouse complexes. Supplying fresh, chemical-free vegetables and seasonal fruits to supermarket chains, hotel groups, and wholesale market distributors."
-        bannerImage="/images/brand/sampanechoagro.png"
+        bannerImage="/images/our_divisions/sampan-eco-agro/eco-agro.png"
         facts={[
           { value: "150+", label: "Acres Organic Estates" },
           { value: "100%", label: "Chemical-Free Produce" },
@@ -241,7 +241,7 @@ export default function SampanEcoAgroPage() {
         concernName="Sampan Eco & Agro"
         storyParagraphs={storyParagraphs}
         pillars={storyPillars}
-        farmImage="/images/brand/sampanechoagro.png"
+        farmImage="/images/our_divisions/sampan-eco-agro/hero_banner.png"
         bgTheme="divisions-green"
         accentColor="#15803d"
       />

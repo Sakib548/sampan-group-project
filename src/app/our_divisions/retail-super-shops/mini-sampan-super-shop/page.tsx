@@ -21,29 +21,29 @@ const miniShopProducts = [
     category: "Breakfast Essentials",
     priceBDT: "165 BDT",
     packSize: "Sliced Bread + 1L Milk",
-    image: "/images/brand/happyshopping.png",
+    image: "/images/our_divisions/mini-sampan-super-shop/bakery_milk_pack.png",
     tag: "Daily Essential",
     description: "Freshly baked morning sandwich bread paired with 1 liter pasteurized pure milk.",
     highlights: ["Delivered Fresh Every Morning", "No Chemical Preservatives"],
   },
-  {
-    id: "snack-pack-express",
-    name: "Express Travel Snack & Juice Combo",
-    category: "Snacks & Drinks",
-    priceBDT: "220 BDT",
-    packSize: "Juice Pack + Chips + Biscuit",
-    image: "/images/brand/happyshopping.png",
-    tag: "Grab & Go",
-    description: "Convenient travel snack pack for highway commuters and quick neighborhood breaks.",
-    highlights: ["Ready Grab & Go", "Popular Brand Selection"],
-  },
+  // {
+  //   id: "snack-pack-express",
+  //   name: "Express Travel Snack & Juice Combo",
+  //   category: "Snacks & Drinks",
+  //   priceBDT: "220 BDT",
+  //   packSize: "Juice Pack + Chips + Biscuit",
+  //   image: "/images/brand/happyshopping.png",
+  //   tag: "Grab & Go",
+  //   description: "Convenient travel snack pack for highway commuters and quick neighborhood breaks.",
+  //   highlights: ["Ready Grab & Go", "Popular Brand Selection"],
+  // },
   {
     id: "fresh-eggs",
     name: "Farm Fresh Brown Eggs",
     category: "Breakfast Essentials",
     priceBDT: "155 BDT",
     packSize: "12 Eggs Tray",
-    image: "/images/brand/happyshopping.png",
+    image: "/images/our_divisions/mini-sampan-super-shop/brown_eggs.png",
     description: "Antibiotic-free fresh farm brown eggs, rich in protein and omega-3.",
     highlights: ["Grade A Cleaned Eggs", "Shock-Proof Tray Pack"],
   },
@@ -53,7 +53,7 @@ const miniShopProducts = [
     category: "Beverages",
     priceBDT: "240 BDT",
     packSize: "500ml x 12 Bottles",
-    image: "/images/brand/happyshopping.png",
+    image: "/images/our_divisions/mini-sampan-super-shop/sampan_water_bottle.png",
     tag: "Best Value",
     description: "Ultra-purified bottled mineral water with balanced essential minerals.",
     highlights: ["Ozone Purified", "BPA Free PET Bottles"],
@@ -64,20 +64,20 @@ const miniShopProducts = [
     category: "Quick Meals",
     priceBDT: "180 BDT",
     packSize: "8 Packs Box",
-    image: "/images/brand/happyshopping.png",
+    image: "/images/our_divisions/mini-sampan-super-shop/noodles.png",
     description: "Delicious spicy masala instant wheat noodles for 2-minute quick meals.",
     highlights: ["2-Minute Easy Cooking", "Includes Real Vegetable Sachets"],
   },
-  {
-    id: "sanitizer-wipes",
-    name: "Pocket Hand Sanitizer & Hygiene Wipes",
-    category: "Personal Care",
-    priceBDT: "135 BDT",
-    packSize: "Combo Pack",
-    image: "/images/brand/happyshopping.png",
-    description: "70% alcohol antibacterial hand sanitizer gel paired with 20-pack wet wipes.",
-    highlights: ["Kills 99.9% Germs", "Aloe Vera Skin Moisturizer"],
-  },
+  // {
+  //   id: "sanitizer-wipes",
+  //   name: "Pocket Hand Sanitizer & Hygiene Wipes",
+  //   category: "Personal Care",
+  //   priceBDT: "135 BDT",
+  //   packSize: "Combo Pack",
+  //   image: "/images/brand/happyshopping.png",
+  //   description: "70% alcohol antibacterial hand sanitizer gel paired with 20-pack wet wipes.",
+  //   highlights: ["Kills 99.9% Germs", "Aloe Vera Skin Moisturizer"],
+  // },
 ];
 
 const miniShopOffers = [
@@ -161,15 +161,15 @@ const nearbyConcerns = [
 ];
 
 const photos = [
-  { id: "photo-1", title: "Neighborhood Outlet", category: "Store Outlet", image: "/images/brand/happyshopping.png", caption: "Mini Sampan Super Shop Neighborhood Outlet" },
-  { id: "photo-2", title: "Express Counter", category: "24/7 Convenience", image: "/images/brand/happyshopping.png", caption: "24/7 Grab & Go Express Counter" },
-  { id: "photo-3", title: "Refrigerated Aisle", category: "Dairy & Fresh", image: "/images/brand/happyshopping.png", caption: "Fresh Breakfast & Dairy Refrigerated Aisle" },
+  { id: "photo-1", title: "Neighborhood Outlet", category: "Store Outlet", image: "/images/our_divisions/mini-sampan-super-shop/mart.jpg", caption: "Mini Sampan Super Shop Neighborhood Outlet" },
+  // { id: "photo-2", title: "Express Counter", category: "24/7 Convenience", image: "/images/brand/happyshopping.png", caption: "24/7 Grab & Go Express Counter" },
+  // { id: "photo-3", title: "Refrigerated Aisle", category: "Dairy & Fresh", image: "/images/brand/happyshopping.png", caption: "Fresh Breakfast & Dairy Refrigerated Aisle" },
 ];
 
 export default function MiniSampanSuperShopPage() {
   return (
     <main className="min-h-screen bg-[#F5F5F2] text-neutral-950">
-      
+
       {/* 1. Hero Banner */}
       <RetailHero
         title="Mini Sampan Super Shop"
@@ -179,7 +179,7 @@ export default function MiniSampanSuperShopPage() {
         statusBadge="Neighborhood Outlets Operational"
         statusType="operating"
         description="Compact 15-minute neighborhood super shops designed for residential communities, highway rest stops, and high-density apartment complexes. Offering daily fresh milk, bread, eggs, snacks, beverages, and emergency household supplies 24/7."
-        bannerImage="/images/brand/happyshopping.png"
+        bannerImage="/images/our_divisions/mini-sampan-super-shop/mart.jpg"
         facts={[
           { value: "15 Mins", label: "Walk-in & Quick Pickup" },
           { value: "24/7", label: "Select Highway Outlets" },

@@ -31,13 +31,12 @@ const divisionMegaMenu: MegaMenuColumn[] = divisionGroups.map((group) => ({
   title: group.title,
   href: group.href,
   items: group.items.map((item) => {
-    // ✅ FIX: Safely compare string/number ids
-    const concern = concerns2.find(
+    const concern = concerns.find(
       (c) => String(c.id) === String(item.concernId),
     );
     return {
-      id: String(item.id), // ✅ FIX: Force string
-      label: item.label ?? concern?.name ?? group.title,
+      id: String(item.id),
+      label: concern?.name ?? group.title,
       href: item.href,
       external: false,
     };
@@ -52,25 +51,25 @@ const whoAreWeMenu: MegaMenuColumn[] = [
       {
         id: "about-us",
         label: "About Us",
-        href: "/about",
+        href: "/who-are-we/aboutus",
         description: "Our story, vision, mission & journey.",
       },
       {
         id: "newsroom",
         label: "Newsroom / Media",
-        href: "/newsroom",
+        href: "/who-are-we/blogs",
         description: "Latest news, announcements, media & updates.",
       },
       {
         id: "awards",
         label: "Accreditation, Honors & Awards",
-        href: "/awards",
+        href: "/who-are-we/awards",
         description: "Recognition, awards & credentials.",
       },
       {
         id: "careers",
         label: "Careers",
-        href: "/careers",
+        href: "/who-are-we/career",
         description: "Build your future with Sampan Group.",
         comingSoon: true,
       },
@@ -86,19 +85,19 @@ const investmentMenu: MegaMenuColumn[] = [
       {
         id: "land-share",
         label: "Land Share",
-        href: "/investments/land-share",
+        href: "/investment-portfolio/land-share",
         description: "Real Estate Investment",
       },
       {
         id: "club-membership",
         label: "Club & Membership",
-        href: "/investments/club-membership",
+        href: "/investment-portfolio/club--membership-share",
         description: "Lifestyle & Hospitality",
       },
       {
         id: "ship-space-share",
         label: "Ship Space Share",
-        href: "/investments/ship-space-share",
+        href: "/investment-portfolio/ship-share",
         description: "Maritime Investment",
         comingSoon: true,
       },
@@ -121,13 +120,13 @@ export const navItems: NavItem[] = [
     layout: "concerns", // Uses the same column layout as Concerns
     megaMenu: divisionMegaMenu,
   },
-  {
-    id: "3",
-    label: "Our Concerns",
-    href: "/concerns",
-    layout: "concerns",
-    megaMenu: concernMegaMenu,
-  },
+  // {
+  //   id: "3",
+  //   label: "Our Concerns",
+  //   href: "/concerns",
+  //   layout: "concerns",
+  //   megaMenu: concernMegaMenu,
+  // },
   {
     id: "4",
     label: "Investment Portfolio",

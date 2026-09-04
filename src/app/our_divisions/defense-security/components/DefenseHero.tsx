@@ -35,9 +35,13 @@ export default function DefenseHero({
   onEnquire,
 }: DefenseHeroProps) {
 
+  const titleWords = title.trim().split(" ");
+  const firstWord = titleWords[0];
+  const remainingTitle = titleWords.slice(1).join(" ");
+
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-20 bg-[#090d16] text-white border-b border-white/10">
-      
+    <section className="relative overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-24 lg:pb-16 bg-[#090d16] text-white border-b border-white/10">
+
       {/* Background Image with Dark Vignette for Navbar Readability */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -46,14 +50,15 @@ export default function DefenseHero({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center brightness-[0.35]"
+          className="object-cover object-center"
         />
+        {/* brightness-[0.35] */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#090d16]/95 via-[#090d16]/85 to-[#090d16]/50" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        <div className="max-w-4xl space-y-6">
-          
+        <div className="max-w-4xl space-y-4 sm:space-y-5">
+
           {/* Status Badges with Custom Logo Colors */}
           <div className="flex flex-wrap items-center gap-3">
             <div
@@ -67,7 +72,7 @@ export default function DefenseHero({
               <FaShieldAlt className="text-xs" />
               <span>{divisionName}</span>
             </div>
-            
+
             <span
               className="font-mono text-[11px] font-bold uppercase tracking-wider px-3 py-1 border backdrop-blur-md flex items-center gap-1.5"
               style={{
@@ -81,16 +86,32 @@ export default function DefenseHero({
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-[clamp(2.5rem,5vw,4.8rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-white">
-            {title} <br className="hidden sm:inline" />
-            <span className="font-normal" style={{ color: accentColor }}>
-              {subtitle}
-            </span>
+          {/* Main Headline - Split across two lines */}
+          <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold leading-[0.98] tracking-[-0.03em] text-white">
+            <span>{firstWord}</span>
+            {remainingTitle && (
+              <>
+                <br />
+                <span className="block mt-1">{remainingTitle}</span>
+              </>
+            )}
           </h1>
 
-          {/* Description */}
-          <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl font-normal">
+          {/* Sleek Subtitle */}
+          {subtitle && (
+            <p
+              className="text-base sm:text-lg lg:text-xl font-medium tracking-wide leading-snug max-w-3xl"
+              style={{ color: accentColor }}
+            >
+              {subtitle}
+            </p>
+          )}
+
+          {/* Sleek Description */}
+          <p
+            className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xl font-light tracking-wide border-l-2 pl-4"
+            style={{ borderColor: `${accentColor}80` }}
+          >
             {description}
           </p>
 

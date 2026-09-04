@@ -26,13 +26,13 @@ const transitionOptions: Array<{
   value: TransitionMode;
   label: string;
 }> = [
-  { value: "crossfade", label: "Original" },
-  { value: "parallax", label: "Parallax" },
-  { value: "mask", label: "Masked reveal" },
-  { value: "split", label: "Split panels" },
-  { value: "blur", label: "Blur to sharp" },
-  { value: "pan", label: "Slow pan" },
-];
+    { value: "crossfade", label: "Original" },
+    { value: "parallax", label: "Parallax" },
+    { value: "mask", label: "Masked reveal" },
+    { value: "split", label: "Split panels" },
+    { value: "blur", label: "Blur to sharp" },
+    { value: "pan", label: "Slow pan" },
+  ];
 
 type HeroSlide = {
   id: string;
@@ -66,7 +66,7 @@ const slides: HeroSlide[] = [
     subhead:
       "A land-share residential project built for people who want to invest in a home, not just a plot.",
     cta: "Explore Metro Square",
-    href: "#",
+    href: "/our_divisions/real-state-and-land-investment/sampan-metro-square",
     image: "/images/projects/sampanmetrosquare.jpg",
     imagePosition: "center center",
     drift: "driftLeft",
@@ -200,9 +200,8 @@ export default function HeroCarousel({
 
   return (
     <section
-      className={`${styles.hero} relative w-full ${
-        showAnimationPicker ? styles.heroWithPicker : ""
-      }`}
+      className={`${styles.hero} relative w-full ${showAnimationPicker ? styles.heroWithPicker : ""
+        }`}
       role="region"
       aria-roledescription="carousel"
       aria-label="Sampan Group featured destinations and projects"
@@ -217,9 +216,8 @@ export default function HeroCarousel({
           return (
             <div
               key={slide.id}
-              className={`${styles.slide} ${styles[slide.drift]} ${transitionClassName} ${
-                isActive ? styles.slideActive : ""
-              }`}
+              className={`${styles.slide} ${styles[slide.drift]} ${transitionClassName} ${isActive ? styles.slideActive : ""
+                }`}
             >
               <Image
                 src={slide.image}
@@ -273,9 +271,8 @@ export default function HeroCarousel({
                   <button
                     key={option.value}
                     type="button"
-                    className={`${styles.animationOption} ${
-                      selected ? styles.animationOptionActive : ""
-                    }`}
+                    className={`${styles.animationOption} ${selected ? styles.animationOptionActive : ""
+                      }`}
                     aria-pressed={selected}
                     onClick={() => previewAnimation(option.value)}
                   >

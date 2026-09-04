@@ -126,7 +126,7 @@ export default function SampanDevelopmentLtdPage() {
         statusBadge="Division Flagship"
         statusType="flagship"
         description="The flagship real estate company of Sampan Group. Engineering commercial trade emporiums, residential land-share towers, and sustainable infrastructure across Bangladesh."
-        image="/images/concerns/sampan-dev-ltd.png"
+        image="/images/projects/sampan-development.jpeg"
         facts={facts}
         accentColor="#0284c7"
         badgeColor="#0284c7"

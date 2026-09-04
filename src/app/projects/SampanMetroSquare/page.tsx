@@ -67,7 +67,8 @@ export default function SampanMetroSquareFeature() {
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/our_divisions/real-estate-land-investment/sampan-metro-square"
+                href="/our_divisions/real-state-and-land-investment/sampan-metro-square"
+
                 className="group inline-flex min-h-14 items-center justify-between gap-8 bg-[#ef636b] px-6 text-xs font-bold uppercase tracking-[0.15em] text-[#071b13] transition duration-300 hover:bg-white"
               >
                 Explore Metro Square

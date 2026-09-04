@@ -26,7 +26,7 @@ const offeredServices = [
   },
   {
     title: "Ready Showroom Vehicle Inventory",
-    description: "Browse high-spec Toyota Harrier, Prado, Noah, Premio, and Honda Grace ready for immediate delivery in our Expressway showroom.",
+    description: "Browse high-spec Toyota Noah, Lexus RX, Prado, Premio, and Honda Grace ready for immediate delivery in our Expressway showroom.",
     highlights: ["Ready Sub-Kabala Tax Token & Smart Card", "Zero Mileage In-Country Drive", "Complimentary First Service"],
   },
   {
@@ -39,45 +39,49 @@ const offeredServices = [
 const vehicleList = [
   {
     id: "v-1",
-    name: "Toyota Harrier Z Leather Package 2021",
+    name: "Toyota Noah S-Z Hybrid 2023",
     make: "Toyota",
-    modelYear: "2021",
-    priceBDT: "BDT 88 Lacs",
+    modelYear: "2023",
+    priceBDT: "BDT 62 Lacs",
     importStatus: "Ready in Showroom" as const,
-    auctionGrade: "4.5 / A",
-    mileageKm: "28,000 km",
-    engineCc: "2000 cc Hybrid",
+    auctionGrade: "5.0 / A",
+    mileageKm: "11,309 km",
+    engineCc: "1800 cc Hybrid",
     fuelType: "Octane Hybrid",
-    image: "/images/concerns/sampan-auto.png",
-    highlights: ["Panoramic Sunroof & JBL Audio", "Modellista Full Body Aerokit", "360-Degree Surround Camera"],
+    image: "/images/our_divisions/sampan-auto/𝑻𝒐𝒚𝒐𝒕𝒂_𝑵𝒐𝒂𝒉_𝑺-𝒁_𝑯𝒚𝒃𝒓𝒊𝒅_2023.jpg",
+    highlights: ["Dual Power Sliding Doors with Kick Sensor", "Ottoman Captain Seats & Dual Sunroof", "Modellista Aerokit & 360° Panoramic View"],
   },
   {
     id: "v-2",
-    name: "Toyota Land Cruiser Prado TX-L 2020",
-    make: "Toyota",
-    modelYear: "2020",
-    priceBDT: "BDT 1.65 Crore",
+    name: "Lexus RX300 F Sport 2021",
+    make: "Lexus",
+    modelYear: "2021",
+    priceBDT: "BDT 1.48 Crore",
     importStatus: "Ready in Showroom" as const,
-    auctionGrade: "4.5 / B",
-    mileageKm: "34,000 km",
-    engineCc: "2700 cc Petrol",
+    auctionGrade: "4.5 / A",
+    mileageKm: "29,600 KM",
+    engineCc: "2000 cc Turbo",
     fuelType: "Octane Petrol",
-    image: "/images/projects/sampanmetrosquare.jpg",
-    highlights: ["7 Seater Beige Leather Interior", "Sunroof & Roof Railing", "4WD Low/High Transfer Case"],
+    image: "/images/our_divisions/sampan-auto/Lexus_RX300_F_Sport_2021.jpg",
+    highlights: ["F Sport Red Leather & Ventilated Seats", "Mark Levinson 15-Speaker Audio & Sunroof", "Triple-Beam LED & 360° Panoramic Camera"],
   },
   {
     id: "v-3",
-    name: "Toyota Noah Hybrid WxB 2022",
+    name: "Toyota Harrier Z 2021",
     make: "Toyota",
-    modelYear: "2022",
-    priceBDT: "BDT 52 Lacs",
-    importStatus: "In-Transit (Ship)" as const,
-    auctionGrade: "5.0 / A",
-    mileageKm: "12,000 km",
-    engineCc: "1800 cc Hybrid",
-    fuelType: "Octane Hybrid",
-    image: "/images/concerns/sampan-dev-ltd.png",
-    highlights: ["Dual Power Sliding Doors", "Dual Air Conditioning Units", "Safety Sense Collision Avoidance"],
+    modelYear: "2021",
+    priceBDT: "BDT 86 Lacs",
+    importStatus: "Ready in Showroom" as const,
+    auctionGrade: "4.5 / A",
+    mileageKm: "30,950  km",
+    engineCc: "2000 cc Petrol",
+    fuelType: "Octane Petrol",
+    image: "/images/our_divisions/sampan-auto/Toyota_Harrier_Z_2021.jpg",
+    highlights: [
+      "Panoramic Sunroof with Dimming Glass",
+      "Modellista Full Body Aerokit",
+      "12.3-inch JBL Audio & 360° Camera",
+    ],
   },
 ];
 
@@ -89,10 +93,11 @@ const partsList = [
 ];
 
 const photoGallery = [
-  "/images/concerns/sampan-auto.png",
-  "/images/projects/sampanmetrosquare.jpg",
-  "/images/concerns/sampan-dev-ltd.png",
-  "/images/brand/sampanauto.png",
+  "/images/our_divisions/sampan-auto/sampan-auto.png",
+  "/images/our_divisions/sampan-auto/Lexus_RX300_F_Sport_2021.jpg",
+  "/images/our_divisions/sampan-auto/Toyota_Harrier_Z_2021.jpg",
+  "/images/our_divisions/sampan-auto/𝑻𝒐𝒚𝒐𝒕𝒂_𝑵𝒐𝒂𝒉_𝑺-𝒁_𝑯𝒚𝒃𝒓𝒊𝒅_2023.jpg",
+
 ];
 
 const nearbyFacilities = [
@@ -104,7 +109,7 @@ const nearbyFacilities = [
 export default function SampanAutoPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#4c2a85] selection:text-white">
-      
+
       {/* 1. Hero Overview — Purple (#4c2a85) Accent from Logo */}
       <MobilityHero
         title="Sampan Auto"
@@ -113,7 +118,7 @@ export default function SampanAutoPage() {
         statusBadge="Active Showroom Hub"
         statusType="active"
         description="Official importer of Japanese recondition vehicles, luxury SUVs, sedans, and genuine Toyota/Nissan spare parts. Offering auction sheet transparency and direct bidding."
-        image="/images/concerns/sampan-auto.png"
+        image="/images/our_divisions/sampan-auto/sampan-auto.png"
         facts={heroFacts}
         accentColor="#4c2a85"
         badgeColor="#b91c1c"

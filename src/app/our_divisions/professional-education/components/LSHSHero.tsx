@@ -10,6 +10,7 @@ interface LSHSHeroProps {
   subtitle?: string;
   description?: string;
   facts?: FactItem[];
+  statusBadge?: string;
 }
 
 export default function LSHSHero({
@@ -22,36 +23,48 @@ export default function LSHSHero({
     { value: "Save 80%+", label: "Expense Savings vs UK Study" },
     { value: "20% Higher", label: "Average Salary Boost" },
   ],
+  statusBadge = "A Sampan Group Concern",
 }: LSHSHeroProps) {
+  const titleWords = title.trim().split(" ");
+  const firstWord = titleWords[0];
+  const remainingTitle = titleWords.slice(1).join(" ");
+
   return (
-    <section className="relative overflow-hidden bg-[#0c4a6e] text-white pt-32 pb-20 px-6 sm:px-12 lg:px-20">
+    <section className="relative overflow-hidden bg-[#0c4a6e] text-white pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-24 lg:pb-16 px-6 sm:px-12 lg:px-20">
       {/* Background Radial Glow */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 rounded-full bg-[#0b73b9]/20 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 rounded-full bg-[#f4d210]/15 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Text Column */}
-        <div className="lg:col-span-7 space-y-6">
+        {/* Left Column Text Content */}
+        <div className="lg:col-span-7 space-y-4 sm:space-y-5">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#0b73b9]/30 text-sky-200 border border-sky-400/30">
-              CIPS UK Approved Centre • Centre No: 10005967
+            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#0b73b9]/30 text-sky-200 border border-[#0b73b9]/50">
+              Professional Education Division
             </span>
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-[#f4d210]/20 text-[#f4d210] border border-[#f4d210]/40">
               <span className="w-2 h-2 rounded-full bg-[#f4d210] animate-pulse" />
-              A Sampan Group Concern
+              {statusBadge}
             </span>
           </div>
 
-          <div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-serif leading-tight">
-              {title}
-            </h1>
-            <p className="mt-3 text-lg sm:text-xl font-medium text-sky-100/90">
+          <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold tracking-tight text-white font-serif leading-[0.98]">
+            <span>{firstWord}</span>
+            {remainingTitle && (
+              <>
+                <br />
+                <span className="block mt-1">{remainingTitle}</span>
+              </>
+            )}
+          </h1>
+
+          {subtitle && (
+            <p className="text-base sm:text-lg lg:text-xl font-medium text-[#f4d210] tracking-wide leading-snug max-w-3xl">
               {subtitle}
             </p>
-          </div>
+          )}
 
-          <p className="text-base sm:text-lg text-sky-100/80 leading-relaxed max-w-2xl">
+          <p className="text-xs sm:text-sm text-sky-100/80 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-[#f4d210]/60 pl-4">
             {description}
           </p>
 

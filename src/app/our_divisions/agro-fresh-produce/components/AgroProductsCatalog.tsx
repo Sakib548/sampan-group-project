@@ -11,6 +11,7 @@ export interface AgroProductItem {
   priceBDT: string;
   packSize: string;
   image: string;
+  imageFit?: "cover" | "contain";
   tag?: string;
   description: string;
   highlights: string[];
@@ -93,77 +94,89 @@ export default function AgroProductsCatalog({
 
         {/* Products Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProducts.map((product) => (
-            <div
-              key={product.id}
-              className="border border-neutral-300 bg-white p-6 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg transition duration-300 relative group overflow-hidden"
-            >
-              {/* Product Header / Tag */}
-              <div className="space-y-4">
-                <div className="relative h-48 w-full bg-[#f8f9fa] border border-neutral-200 overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                  />
-                  {product.tag && (
-                    <span
-                      className="absolute top-3 right-3 font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 text-white shadow-sm"
-                      style={{ backgroundColor: badgeColor }}
-                    >
-                      {product.tag}
-                    </span>
-                  )}
-                </div>
+          {filteredProducts.map((product) => {
+            const isBrandLogo =
+              product.image.includes("/images/brand/") || product.image.includes("/images/concerns/");
+            const useContain = product.imageFit === "contain" || (!product.imageFit && isBrandLogo);
 
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-emerald-700">
-                    {product.category}
-                  </span>
-                  <span className="font-mono text-xs font-semibold text-neutral-500 bg-neutral-100 px-2 py-0.5 border border-neutral-200">
-                    {product.packSize}
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-bold text-neutral-950 leading-snug">
-                  {product.name}
-                </h3>
-
-                <p className="text-xs text-neutral-600 leading-relaxed font-normal">
-                  {product.description}
-                </p>
-
-                {/* Highlights */}
-                <div className="pt-2 space-y-1.5 border-t border-neutral-100 font-mono text-[11px] text-neutral-700">
-                  {product.highlights.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <FaCheckCircle className="text-emerald-600 text-xs shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Price & Action */}
-              <div className="pt-4 border-t border-neutral-200 flex items-center justify-between">
+            return (
+              <div
+                key={product.id}
+                className="border border-neutral-300 bg-white flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-300 relative group overflow-hidden"
+              >
+                {/* Product Header / Image & Details */}
                 <div>
-                  <span className="font-mono text-[10px] uppercase text-neutral-400 block">Indicated B2B Rate</span>
-                  <span className="text-lg font-bold text-emerald-800">{product.priceBDT}</span>
+                  <div className="relative h-56 w-full bg-[#f8f9fa] border-b border-neutral-200 overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className={`${
+                        useContain ? "object-contain p-6" : "object-cover"
+                      } group-hover:scale-105 transition-transform duration-500`}
+                    />
+                    {product.tag && (
+                      <span
+                        className="absolute top-3 right-3 font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 text-white shadow-sm z-10"
+                        style={{ backgroundColor: badgeColor }}
+                      >
+                        {product.tag}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-xs font-bold uppercase tracking-wider text-emerald-700">
+                        {product.category}
+                      </span>
+                      <span className="font-mono text-xs font-semibold text-neutral-500 bg-neutral-100 px-2 py-0.5 border border-neutral-200">
+                        {product.packSize}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-neutral-950 leading-snug">
+                      {product.name}
+                    </h3>
+
+                    <p className="text-xs text-neutral-600 leading-relaxed font-normal">
+                      {product.description}
+                    </p>
+
+                    {/* Highlights */}
+                    <div className="pt-2 space-y-1.5 border-t border-neutral-100 font-mono text-[11px] text-neutral-700">
+                      {product.highlights.map((item, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <FaCheckCircle className="text-emerald-600 text-xs shrink-0" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
-                <a
-                  href="#wholesale-inquiry"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-neutral-950 bg-emerald-100 hover:bg-emerald-200 px-3.5 py-2 border border-emerald-300 transition duration-300"
-                >
-                  <FaBoxes className="text-xs text-emerald-700" />
-                  <span>Order Bulk</span>
-                </a>
-              </div>
+                {/* Price & Action */}
+                <div className="p-6 pt-0">
+                  <div className="pt-4 border-t border-neutral-200 flex items-center justify-between">
+                    <div>
+                      <span className="font-mono text-[10px] uppercase text-neutral-400 block">Indicated B2B Rate</span>
+                      <span className="text-lg font-bold text-emerald-800">{product.priceBDT}</span>
+                    </div>
 
-            </div>
-          ))}
+                    <a
+                      href="#wholesale-inquiry"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-neutral-950 bg-emerald-100 hover:bg-emerald-200 px-3.5 py-2 border border-emerald-300 transition duration-300"
+                    >
+                      <FaBoxes className="text-xs text-emerald-700" />
+                      <span>Order Bulk</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            );
+          })}
         </div>
 
       </div>
