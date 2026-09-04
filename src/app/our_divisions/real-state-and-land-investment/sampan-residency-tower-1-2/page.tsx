@@ -110,7 +110,7 @@ const landmarks = [
 export default function SampanResidencyTowerPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#ca8a04] selection:text-neutral-950">
-      
+
       {/* 1. Hero Overview — Dark for Transparent Navbar */}
       <RealEstateHero
         title="Sampan Residency Tower 1 & 2"
@@ -119,7 +119,7 @@ export default function SampanResidencyTowerPage() {
         statusBadge="Ongoing Development"
         statusType="ongoing"
         description="Twin 16-storey luxury residential towers integrated with Express Highway Inn hospitality perks and direct corridor connectivity."
-        image="/images/projects/sampan-highway-inn.png"
+        image="/images/projects/sampan-highway-inn.ng"
         facts={facts}
         theme="dark-slate"
       />

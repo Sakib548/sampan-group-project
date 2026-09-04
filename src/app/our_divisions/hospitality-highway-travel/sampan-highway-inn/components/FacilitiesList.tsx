@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { 
-  FaBed, 
-  FaUtensils, 
-  FaBolt, 
-  FaCar, 
-  FaGlassCheers, 
-  FaHandsWash, 
-  FaShoppingBag, 
+import {
+  FaBed,
+  FaUtensils,
+  FaBolt,
+  FaCar,
+  FaGlassCheers,
+  FaHandsWash,
+  FaShoppingBag,
   FaMoneyBillWave,
   FaCheck,
   FaArrowRight
@@ -80,28 +80,28 @@ const facilitiesData = [
     features: ["HD Projection & Video Tech", "Ergonomic Conference Seating", "High-Speed Fiber Network", "Coffee & Lunch Catering", "Private Secretariat Desk"],
     hours: "On Demand & Booking",
   },
-  {
-    id: "car-wash",
-    category: "ev",
-    title: "Automated Touchless Car Wash & Express Detailing",
-    badge: "Vehicle Care",
-    image: "/images/facilities/express_highway_inn/7.Automatic-Car-Wash.png",
-    description:
-      "High-pressure underbody rinse, foam wash, and rapid drying system that leaves your car immaculate while you dine or rest inside the lounge.",
-    features: ["Touchless Jet Cleaning", "Underbody Mud Flush", "Ceramic Wax Gloss Coating", "Interior Quick Vacuum", "Tire Pressure & Air Station"],
-    hours: "7:00 AM – 11:00 PM",
-  },
-  {
-    id: "prayer-washrooms",
-    category: "essentials",
-    title: "Spotless Sanitized Restrooms & Dedicated Prayer Halls",
-    badge: "Hygiene Standard",
-    image: "/images/facilities/express_highway_inn/11.Prayers-Room.png",
-    description:
-      "Impeccably clean, air-conditioned prayer spaces with separated wudu facilities for ladies and gentlemen, plus spotless baby-care restrooms.",
-    features: ["Separate Men & Women Halls", "Modern Wudu Ablution Area", "Baby Changing Facilities", "Wheelchair Accessible", "Continuous Sanitation Staff"],
-    hours: "24/7 Spotless",
-  },
+  // {
+  //   id: "car-wash",
+  //   category: "ev",
+  //   title: "Automated Touchless Car Wash & Express Detailing",
+  //   badge: "Vehicle Care",
+  //   image: "/images/facilities/express_highway_inn/7.Automatic-Car-Wash.png",
+  //   description:
+  //     "High-pressure underbody rinse, foam wash, and rapid drying system that leaves your car immaculate while you dine or rest inside the lounge.",
+  //   features: ["Touchless Jet Cleaning", "Underbody Mud Flush", "Ceramic Wax Gloss Coating", "Interior Quick Vacuum", "Tire Pressure & Air Station"],
+  //   hours: "7:00 AM – 11:00 PM",
+  // },
+  // {
+  //   id: "prayer-washrooms",
+  //   category: "essentials",
+  //   title: "Spotless Sanitized Restrooms & Dedicated Prayer Halls",
+  //   badge: "Hygiene Standard",
+  //   image: "/images/facilities/express_highway_inn/11.Prayers-Room.png",
+  //   description:
+  //     "Impeccably clean, air-conditioned prayer spaces with separated wudu facilities for ladies and gentlemen, plus spotless baby-care restrooms.",
+  //   features: ["Separate Men & Women Halls", "Modern Wudu Ablution Area", "Baby Changing Facilities", "Wheelchair Accessible", "Continuous Sanitation Staff"],
+  //   hours: "24/7 Spotless",
+  // },
   {
     id: "sampan-mart",
     category: "essentials",
@@ -125,7 +125,7 @@ export default function FacilitiesList({ onSelectFacility }: { onSelectFacility?
   return (
     <section id="facilities" className="bg-[#faf9f6] py-24 sm:py-32 text-[#1a1a1a]">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -151,11 +151,10 @@ export default function FacilitiesList({ onSelectFacility }: { onSelectFacility?
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                activeCategory === cat.id
+              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
                   ? "bg-[#070b09] text-white shadow-md"
                   : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
-              }`}
+                }`}
             >
               {cat.label}
             </button>

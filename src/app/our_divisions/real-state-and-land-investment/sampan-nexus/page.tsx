@@ -61,7 +61,7 @@ const floorPlans = [
     name: "Sampan Nexus Master Site Layout",
     category: "Master Plan",
     sizeSqFt: "16 Katha Footprint",
-    image: "/images/concerns/3-sampan-eco-agro.png",
+    image: "/images/concerns/3-sampan-eco-agro.ng",
     description: "Mixed-use layout integrating ground commercial retail with residential towers.",
     features: ["Mixed-Use Zoning", "Wide Internal Access Roads", "Green Landscaping"],
   },
@@ -97,7 +97,7 @@ const landmarks = [
 export default function SampanNexusPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#0284c7] selection:text-white">
-      
+
       {/* 1. Hero Overview — Custom Ocean Blue (#0284c7) Accent & Green (#10b981) Badge from Logo */}
       <RealEstateHero
         title="Sampan Nexus"

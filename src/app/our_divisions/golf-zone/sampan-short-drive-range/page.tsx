@@ -185,7 +185,9 @@ export default function SampanShortDriveRangePage() {
         statusBadge="Coming Soon — Launching Q4 2026"
         description="Bangladesh's premier automated driving range featuring 35+ Toptracer technology bays, floodlit night driving, live scoring leaderboards, and corporate event lounges."
         facts={rangeFacts}
-        bannerImage="/images/brand/golfrage.png"
+        logo="/images/brand/golfrage.png"
+        bannerImage="/images/our_divisions/sampan-short-drive-range/hero_banner.jpg"
+        backgroundImage="/images/our_divisions/sampan-short-drive-range/hero_banner.jpg"
       />
 
       {/* SECTION 2: What It Offers */}

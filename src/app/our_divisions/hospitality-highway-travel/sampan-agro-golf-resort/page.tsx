@@ -56,14 +56,14 @@ const resortGallery = [
     src: "/images/concerns/3-sampan-eco-agro.png",
     caption: "Solar-drip irrigated organic fruit orchards and greenhouse vegetables.",
   },
-  {
-    id: "resort-4",
-    title: "Boating Lake & Wellness Spa Pier",
-    category: "Recreation & Spa",
-    type: "photo" as const,
-    src: "/images/facilities/highway_inn/all_day_comfort.png",
-    caption: "Natural lake for kayaking and serene wellness spa retreats.",
-  },
+  // {
+  //   id: "resort-4",
+  //   title: "Boating Lake & Wellness Spa Pier",
+  //   category: "Recreation & Spa",
+  //   type: "photo" as const,
+  //   src: "/images/facilities/highway_inn/all_day_comfort.png",
+  //   caption: "Natural lake for kayaking and serene wellness spa retreats.",
+  // },
 ];
 
 export default function SampanAgroGolfResortPage() {
@@ -77,7 +77,9 @@ export default function SampanAgroGolfResortPage() {
         statusBadge="Ongoing Development — Phased Opening 2026"
         description="A 160-acre sanctuary where championship golf fairways, luxury eco-villas, organic farm-to-table dining, and wellness spa retreats come together."
         facts={resortFacts}
-        bannerImage="/images/brand/agroandgolf.png"
+        logo="/images/brand/agroandgolf.png"
+        bannerImage="/images/our_divisions/sampan_agro_golf_resort/sampan-agro-golf-resort.png"
+        backgroundImage="/images/our_divisions/sampan_agro_golf_resort/sampan-agro-golf-resort.png"
       />
 
       {/* SECTION 2: Overview */}

@@ -67,7 +67,9 @@ export default function SampanAgroGolfClubLoungePage() {
         statusBadge="Ongoing Development — Membership Pre-Launch 2026"
         description="The pinnacle of private club membership in Bangladesh, offering executive lounge access, priority golf fairway tee-times, villa discounts, and digital member portal services."
         facts={clubFacts}
-        bannerImage="/images/brand/sampanagroandgolfclubandlounge.png"
+        logo="/images/brand/sampanagroandgolfclubandlounge.png"
+        bannerImage="/images/our_divisions/sampan-agro-golf-club-lounge/hero_banner.jpg"
+        backgroundImage="/images/our_divisions/sampan-agro-golf-club-lounge/hero_banner.jpg"
       />
 
       {/* SECTION 2 & 3: Membership Tiers & Pricing per Tier */}

@@ -109,7 +109,7 @@ const landmarks = [
 export default function SampanTradeEmporiumPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#026597] selection:text-white">
-      
+
       {/* 1. Hero Overview — Trade Emporium Blue (#026597) Accent from Logo */}
       <RealEstateHero
         title="Sampan Trade Emporium"
@@ -118,7 +118,7 @@ export default function SampanTradeEmporiumPage() {
         statusBadge="Ongoing Commercial Project"
         statusType="ongoing"
         description="A 12-storey commercial trade emporium engineered for retail outlets, executive corporate office suites, and high lease yields."
-        image="/images/projects/Sampan-White-House-&-Motel.png"
+        image="/images/projects/Sampan-White-House-&-Motel.ng"
         facts={facts}
         accentColor="#026597"
         badgeColor="#026597"

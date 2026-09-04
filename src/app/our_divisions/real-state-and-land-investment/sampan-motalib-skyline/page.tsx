@@ -109,7 +109,7 @@ const landmarks = [
 export default function SampanMotalibSkylinePage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#0284c7] selection:text-white">
-      
+
       {/* 1. Hero Overview — Skyline Blue (#0284c7) Accent */}
       <RealEstateHero
         title="Sampan Motalib Skyline"
@@ -118,7 +118,7 @@ export default function SampanMotalibSkylinePage() {
         statusBadge="Coming Soon — Pre-Launch Bookings"
         statusType="coming-soon"
         description="Experience pre-launch pricing on an 18-storey high-rise luxury residential tower featuring smart home automation and panoramic urban views."
-        image="/images/projects/Sampan-White-House-&-Motel.png"
+        image="/images/projects/Sampan-White-House-&-Motel.ng"
         facts={facts}
         accentColor="#0284c7"
         badgeColor="#0284c7"

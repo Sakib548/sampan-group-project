@@ -59,7 +59,9 @@ export default function GolfZonePage() {
         statusBadge="Archive & Development Hub — Coming Soon 2026"
         description="Developing Bangladesh's premier golf infrastructure, combining PGA-certified training labs with state-of-the-art Toptracer short-drive practice range and floodlit sports lounges."
         facts={divisionFacts}
-        bannerImage="/images/brand/golfacademy.png"
+        logo="/images/brand/golfacademy.png"
+        bannerImage="/images/our_divisions/golf-zone/hero_banner.jpg"
+        backgroundImage="/images/our_divisions/golf-zone/hero_banner.jpg"
       />
 
       {/* Concerns Showcase */}

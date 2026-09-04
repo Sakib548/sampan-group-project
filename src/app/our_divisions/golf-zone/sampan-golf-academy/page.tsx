@@ -185,7 +185,9 @@ export default function SampanGolfAcademyPage() {
         statusBadge="Coming Soon — Launching Q4 2026"
         description="Bangladesh's premier high-tech golf academy combining PGA Class A coaching, TrackMan 4 dual-radar simulators, putting studios, and junior development pathways."
         facts={academyFacts}
-        bannerImage="/images/brand/golfacademy.png"
+        logo="/images/brand/golfacademy.png"
+        bannerImage="/images/our_divisions/sampan-golf-academy/hero_banner.jpg"
+        backgroundImage="/images/our_divisions/sampan-golf-academy/hero_banner.jpg"
       />
 
       {/* SECTION 2: What It Offers */}
