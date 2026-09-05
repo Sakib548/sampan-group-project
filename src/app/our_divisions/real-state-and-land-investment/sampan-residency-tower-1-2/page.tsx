@@ -10,6 +10,7 @@ import PaymentPlanCalculator from "../components/PaymentPlanCalculator";
 import SiteVisitBookingForm from "../components/SiteVisitBookingForm";
 import DownloadableBrochureCTA from "../components/DownloadableBrochureCTA";
 import RealEstateLocationMap from "../components/RealEstateLocationMap";
+import ResidencyFacilitiesOverview from "../components/ResidencyFacilitiesOverview";
 
 export const metadata: Metadata = {
   title: "Sampan Residency Tower 1 & 2 | Luxury Highway Corridor Residential Complex",
@@ -73,7 +74,7 @@ const floorPlans = [
     name: "Tower 1 Typical Floor Layout",
     category: "Typical Floor",
     sizeSqFt: "4 Units Per Floor",
-    image: "/images/projects/sampan-highway-inn.png",
+    image: "/images/our_divisions/sampan-tower/architectural_floor_plans.jpg.jpeg",
     description: "4-unit per floor symmetrical layout with central high-speed lifts and acoustic insulation.",
     features: ["Dual High-Speed Passenger Lifts", "Soundproof Double Glass", "Fire Escape Stairs"],
   },
@@ -119,7 +120,7 @@ export default function SampanResidencyTowerPage() {
         statusBadge="Ongoing Development"
         statusType="ongoing"
         description="Twin 16-storey luxury residential towers integrated with Express Highway Inn hospitality perks and direct corridor connectivity."
-        image="/images/projects/sampan-highway-inn.ng"
+        image="/images/our_divisions/sampan-tower/sampan-tower.png"
         facts={facts}
         theme="dark-slate"
       />
@@ -133,13 +134,13 @@ export default function SampanResidencyTowerPage() {
       />
 
       {/* 3. Land Share Model — AboutPreview Warm Ivory bg-[#F5F5F2] */}
-      <LandShareStructure
+      {/* <LandShareStructure
         totalLandArea="18 Katha"
         totalSharesCount="64 Land Shares"
         registrationStatus="Sub-Kabala Ready"
         tiers={landShareTiers}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 4. Location + Map — DivisionsSection Green bg-[#f3f6f2] */}
       <RealEstateLocationMap
@@ -152,13 +153,13 @@ export default function SampanResidencyTowerPage() {
       />
 
       {/* 5. Construction Progress — AboutPreview Warm Ivory bg-[#F5F5F2] */}
-      <ConstructionProgressTracker
+      {/* <ConstructionProgressTracker
         overallCompletionPercentage={50}
         expectedHandoverDate="Q3 2028"
         currentPhase="Piling & Substructure Casting"
         milestones={progressMilestones}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 6. Floor Plans — DivisionsSection Green bg-[#f3f6f2] */}
       <FloorPlansViewer
@@ -166,10 +167,18 @@ export default function SampanResidencyTowerPage() {
         bgTheme="divisions-green"
       />
 
-      {/* 7. Legal Credentials — AboutPreview Warm Ivory bg-[#F5F5F2] */}
+      {/* 7. Facilities Overview — Gym & Swimming Pool */}
+      <ResidencyFacilitiesOverview
+        title="Exclusive Club & Wellness Facilities"
+        subtitle="Residents of Sampan Residency Tower 1 & 2 enjoy complimentary, integrated privileges at the adjacent Express Highway Inn lifestyle complex, featuring an Olympic-standard outdoor pool and modern fitness gym."
+        bgTheme="about-ivory"
+        accentColor="#ca8a04"
+      />
+
+      {/* 8. Legal Credentials — DivisionsSection Green bg-[#f3f6f2] */}
       <LegalCredentialsModule
         credentials={legalCredentials}
-        bgTheme="about-ivory"
+        bgTheme="divisions-green"
       />
 
       {/* 8. 3D Renders — DivisionsSection Green bg-[#f3f6f2] */}
@@ -179,10 +188,10 @@ export default function SampanResidencyTowerPage() {
       />
 
       {/* 9. Payment Calculator — AboutPreview Warm Ivory bg-[#F5F5F2] */}
-      <PaymentPlanCalculator
+      {/* <PaymentPlanCalculator
         defaultPropertyPriceBDT={7200000}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 10. Brochure Download — DivisionsSection Green bg-[#f3f6f2] */}
       <DownloadableBrochureCTA

@@ -66,7 +66,7 @@ export default function RealEstateHero({
         <div className="max-w-4xl space-y-4 sm:space-y-5">
 
           {/* Status Badges with Custom Logo Colors */}
-          <div className="flex flex-wrap items-center gap-3">
+          {/* <div className="flex flex-wrap items-center gap-3">
             <div
               className="inline-flex items-center gap-2 border px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em]"
               style={{
@@ -89,7 +89,7 @@ export default function RealEstateHero({
             >
               {statusBadge}
             </span>
-          </div>
+          </div> */}
 
           {/* Main Headline - Split across two lines for architectural aesthetic */}
           <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold leading-[0.98] tracking-[-0.03em] text-white">
@@ -121,7 +121,7 @@ export default function RealEstateHero({
           </p>
 
           {/* CTAs with Dynamic Logo Accent Colors */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
+          {/* <div className="flex flex-wrap items-center gap-4 pt-4">
             <button
               onClick={onBookSiteVisit}
               className="group inline-flex items-center justify-center gap-3 text-white px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] shadow-lg transition-all duration-300 cursor-pointer hover:opacity-90"
@@ -152,7 +152,7 @@ export default function RealEstateHero({
               <FaPhoneAlt className="text-xs" style={{ color: accentColor }} />
               <span>Sales Hotline</span>
             </a>
-          </div>
+          </div> */}
 
           {/* Fact Bar */}
           {facts && facts.length > 0 && (

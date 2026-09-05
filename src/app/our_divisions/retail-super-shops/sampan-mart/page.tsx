@@ -127,14 +127,14 @@ const sampanMartLoyaltyTiers = [
     tierName: "Mart Gold VIP",
     spendThreshold: "15,000 BDT",
     pointsRate: "10 Points / 100 BDT",
-    badgeColor: "#d97706",
+    badgeColor: "#c59228",
     perks: ["10% Reward Points", "Free Express 30-Min Delivery", "Priority Checkout Counter"],
   },
   {
     tierName: "Mart Platinum Elite",
     spendThreshold: "40,000 BDT",
     pointsRate: "15 Points / 100 BDT",
-    badgeColor: "#0284c7",
+    badgeColor: "#b45309",
     perks: ["15% Reward Points", "Personal Shopper Concierge", "Exclusive Imported Gourmet Preview Access"],
   },
 ];
@@ -185,8 +185,8 @@ export default function SampanMartPage() {
           { value: "30 Mins", label: "Express Doorstep Delivery" },
           { value: "100%", label: "Organic Farm Fresh" },
         ]}
-        accentColor="#2563eb"
-        badgeColor="#3b82f6"
+        accentColor="#c59228"
+        badgeColor="#d97706"
         openingHours="08:00 AM - 11:30 PM Daily"
       />
 
@@ -196,8 +196,8 @@ export default function SampanMartPage() {
         subtitle="Discover our wide range of organic farm produce, daily kitchen staples, imported gourmet items, and household essentials."
         products={sampanMartProducts}
         bgTheme="about-ivory"
-        accentColor="#2563eb"
-        badgeColor="#3b82f6"
+        accentColor="#c59228"
+        badgeColor="#d97706"
       />
 
       {/* 3. Omnichannel Experience Note */}
@@ -206,7 +206,8 @@ export default function SampanMartPage() {
         subtitle="Order via app for 30-minute doorstep delivery or visit our flagship walk-in superstore experience lounge."
         concernName="Sampan Mart"
         bgTheme="divisions-green"
-        accentColor="#2563eb"
+        accentColor="#c59228"
+        badgeColor="#d97706"
       />
 
       {/* 4. Weekly Offers & Discounts */}
@@ -215,7 +216,8 @@ export default function SampanMartPage() {
         subtitle="Save big with weekend grocery bundles, launch coupons, and daily basket discounts."
         offers={sampanMartOffers}
         bgTheme="about-ivory"
-        accentColor="#2563eb"
+        accentColor="#c59228"
+        badgeColor="#d97706"
       />
 
       {/* 5. Loyalty Program */}
@@ -225,7 +227,8 @@ export default function SampanMartPage() {
         programName="Sampan Mart Club Rewards"
         tiers={sampanMartLoyaltyTiers}
         bgTheme="white"
-        accentColor="#2563eb"
+        accentColor="#c59228"
+        badgeColor="#d97706"
       />
 
       {/* 6. Physical Store Locations */}
@@ -236,7 +239,7 @@ export default function SampanMartPage() {
         locations={sampanMartLocations}
         embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902442430137!2d90.4000!3d23.9000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDU0JzAwLjAiTiA5MMKwMjQnMDAuMCJF!5e0!3m2!1sen!2sbd!4v1625000000000!5m2!1sen!2sbd"
         bgTheme="divisions-green"
-        accentColor="#2563eb"
+        accentColor="#c59228"
       />
 
       {/* 7. Photo Gallery */}
@@ -245,7 +248,7 @@ export default function SampanMartPage() {
         subtitle="Take a look inside our modern superstore aisles, cold-chain fulfillment, and express delivery fleet."
         photos={photos}
         bgTheme="about-ivory"
-        accentColor="#2563eb"
+        accentColor="#c59228"
       />
 
       {/* 8. Nearby Sister Concerns */}
@@ -256,7 +259,7 @@ export default function SampanMartPage() {
         locationHubName="Sampan Ashulia Hub"
         nearbyConcerns={nearbyConcerns}
         bgTheme="divisions-green"
-        accentColor="#2563eb"
+        accentColor="#c59228"
       />
 
       {/* 9. Order & Inquiry Form */}
@@ -265,7 +268,7 @@ export default function SampanMartPage() {
         subtitle="Looking to supply your products or place a large corporate grocery order? Contact our store manager."
         concernName="Sampan Mart"
         bgTheme="white"
-        accentColor="#2563eb"
+        accentColor="#c59228"
       />
 
     </main>

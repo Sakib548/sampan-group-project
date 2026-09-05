@@ -123,7 +123,7 @@ const showrooms = [
 export default function NagarArmsAmmunitionPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#7c2d12] selection:text-white">
-      
+
       {/* 1. Hero Overview — Bronze / Brown (#7c2d12) Accent from Crest Logo */}
       <DefenseHero
         title="Nagar Arms & Ammunition"
@@ -131,7 +131,7 @@ export default function NagarArmsAmmunitionPage() {
         divisionName="Defense & Security Division"
         statusBadge="Govt Enlisted License #1878-DH"
         description="Historic government-certified armory dealer in Bangladesh. Specializing in precision hunting rifles, sporting shotguns, target cartridges, and armorers repair services under strict MOBA regulations."
-        image="/images/brand/nagararmsand.png"
+        image="/images/our_divisions/nagar-firearms/banner.jpg"
         facts={heroFacts}
         accentColor="#7c2d12"
         badgeColor="#ca8a04"

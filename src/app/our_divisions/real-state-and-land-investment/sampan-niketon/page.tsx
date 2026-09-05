@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import RealEstateHero from "../components/RealEstateHero";
 import UnitTypesAndSizes from "../components/UnitTypesAndSizes";
 import LandShareStructure from "../components/LandShareStructure";
 import ConstructionProgressTracker from "../components/ConstructionProgressTracker";
@@ -11,6 +10,7 @@ import PaymentPlanCalculator from "../components/PaymentPlanCalculator";
 import SiteVisitBookingForm from "../components/SiteVisitBookingForm";
 import DownloadableBrochureCTA from "../components/DownloadableBrochureCTA";
 import RealEstateLocationMap from "../components/RealEstateLocationMap";
+import RealEstateHero2 from "../components/RealEstateHero2";
 
 export const metadata: Metadata = {
   title: "Sampan Niketon | 1,250 sft Residential Apartments in Shanti Niketon",
@@ -212,7 +212,7 @@ export default function SampanNiketonPage() {
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#25633a] selection:text-white">
 
       {/* 1. Hero Overview */}
-      <RealEstateHero
+      <RealEstateHero2
         title="Sampan Niketon"
         subtitle="1,250 sft 3-Bedroom Residential Apartments in Shanti Niketon"
         divisionName="Sampan Development Ltd"

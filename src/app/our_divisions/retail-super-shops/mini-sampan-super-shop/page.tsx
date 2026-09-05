@@ -134,7 +134,7 @@ const miniShopLoyaltyTiers = [
     tierName: "Neighborhood VIP",
     spendThreshold: "8,000 BDT",
     pointsRate: "10 Points / 100 BDT",
-    badgeColor: "#d97706",
+    badgeColor: "#dc2626",
     perks: ["10% Reward Points", "15-Minute Free Neighborhood Delivery", "Priority Morning Milk Reservation"],
   },
 ];
@@ -185,8 +185,8 @@ export default function MiniSampanSuperShopPage() {
           { value: "24/7", label: "Select Highway Outlets" },
           { value: "1,000+", label: "Essential Items" },
         ]}
-        accentColor="#16a34a"
-        badgeColor="#22c55e"
+        accentColor="#dc2626"
+        badgeColor="#16a34a"
         openingHours="07:00 AM - 11:00 PM (24/7 at Highway Outlets)"
       />
 
@@ -196,8 +196,8 @@ export default function MiniSampanSuperShopPage() {
         subtitle="Explore our selection of morning fresh dairy, bakery items, grab-and-go snacks, and household quick items."
         products={miniShopProducts}
         bgTheme="about-ivory"
-        accentColor="#16a34a"
-        badgeColor="#22c55e"
+        accentColor="#dc2626"
+        badgeColor="#16a34a"
       />
 
       {/* 3. Omnichannel Experience Note */}
@@ -206,7 +206,8 @@ export default function MiniSampanSuperShopPage() {
         subtitle="Step into your nearby Mini Sampan outlet for instant 2-minute checkout or call for 15-minute neighborhood delivery."
         concernName="Mini Sampan Super Shop"
         bgTheme="divisions-green"
-        accentColor="#16a34a"
+        accentColor="#dc2626"
+        badgeColor="#16a34a"
       />
 
       {/* 4. Weekly Offers & Discounts */}
@@ -215,7 +216,8 @@ export default function MiniSampanSuperShopPage() {
         subtitle="Enjoy morning breakfast combo savings and highway travel quick discounts."
         offers={miniShopOffers}
         bgTheme="about-ivory"
-        accentColor="#16a34a"
+        accentColor="#dc2626"
+        badgeColor="#16a34a"
       />
 
       {/* 5. Loyalty Program */}
@@ -225,7 +227,8 @@ export default function MiniSampanSuperShopPage() {
         programName="Mini Sampan Express Club"
         tiers={miniShopLoyaltyTiers}
         bgTheme="white"
-        accentColor="#16a34a"
+        accentColor="#dc2626"
+        badgeColor="#16a34a"
       />
 
       {/* 6. Physical Store Locations */}
@@ -236,7 +239,7 @@ export default function MiniSampanSuperShopPage() {
         locations={miniShopLocations}
         embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902442430137!2d90.4000!3d23.9000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDU0JzAwLjAiTiA5MMKwMjQnMDAuMCJF!5e0!3m2!1sen!2sbd!4v1625000000000!5m2!1sen!2sbd"
         bgTheme="divisions-green"
-        accentColor="#16a34a"
+        accentColor="#dc2626"
       />
 
       {/* 7. Photo Gallery */}
@@ -245,7 +248,7 @@ export default function MiniSampanSuperShopPage() {
         subtitle="A quick look inside our neighborhood convenience stores."
         photos={photos}
         bgTheme="about-ivory"
-        accentColor="#16a34a"
+        accentColor="#dc2626"
       />
 
       {/* 8. Nearby Sister Concerns */}
@@ -256,7 +259,7 @@ export default function MiniSampanSuperShopPage() {
         locationHubName="Sampan Community Outlet Plaza"
         nearbyConcerns={nearbyConcerns}
         bgTheme="divisions-green"
-        accentColor="#16a34a"
+        accentColor="#dc2626"
       />
 
       {/* 9. Order & Inquiry Form */}
@@ -265,7 +268,7 @@ export default function MiniSampanSuperShopPage() {
         subtitle="Submit a quick grocery request or inquire about opening a Mini Sampan outlet in your residential area."
         concernName="Mini Sampan Super Shop"
         bgTheme="white"
-        accentColor="#16a34a"
+        accentColor="#dc2626"
       />
 
     </main>

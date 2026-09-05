@@ -533,8 +533,8 @@ export default function ExpressHighwayInnPage() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-[0.18em] transition-all duration-300 cursor-pointer ${activeCategory === cat
-                    ? "bg-neutral-950 text-white shadow-sm"
-                    : "bg-neutral-100 text-neutral-700 hover:bg-[#58b9eb] hover:text-white border border-neutral-200"
+                  ? "bg-neutral-950 text-white shadow-sm"
+                  : "bg-neutral-100 text-neutral-700 hover:bg-[#58b9eb] hover:text-white border border-neutral-200"
                   }`}
               >
                 {cat}
@@ -719,8 +719,8 @@ export default function ExpressHighwayInnPage() {
                 key={i}
                 onClick={() => setSelectedImage(src)}
                 className={`group relative overflow-hidden rounded-none bg-neutral-100 border border-neutral-200 shadow-sm cursor-pointer ${i === 0
-                    ? "aspect-[16/10] md:col-span-2 md:row-span-2 md:aspect-auto min-h-[340px]"
-                    : "aspect-[16/10]"
+                  ? "aspect-[16/10] md:col-span-2 md:row-span-2 md:aspect-auto min-h-[340px]"
+                  : "aspect-[16/10]"
                   }`}
               >
                 <Image
@@ -913,7 +913,7 @@ export default function ExpressHighwayInnPage() {
       </section> */}
 
       {/* ================= 8. NEARBY AT THIS LOCATION ================= */}
-      <section className="bg-[#F5F5F2] px-6 py-24 sm:px-10 lg:px-16 lg:py-32 border-b border-neutral-200">
+      {/* <section className="bg-[#F5F5F2] px-6 py-24 sm:px-10 lg:px-16 lg:py-32 border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
 
           <div className="mb-6 flex items-center gap-4">
@@ -938,7 +938,7 @@ export default function ExpressHighwayInnPage() {
                 key={i}
                 className="group flex flex-col overflow-hidden rounded-none border border-neutral-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#58b9eb] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)]"
               >
-                {/* Top Cyan Hover Line */}
+
                 <div className="h-[3px] w-0 bg-[#58b9eb] transition-all duration-500 group-hover:w-full" />
 
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
@@ -969,7 +969,7 @@ export default function ExpressHighwayInnPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= 9. INTERACTIVE MASTERPLAN MAP (PRESERVED COMMENTED OUT) ================= */}
       {/* <section className="bg-white px-6 py-24 sm:px-10 lg:px-16 lg:py-32"> 

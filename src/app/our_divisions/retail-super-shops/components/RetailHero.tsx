@@ -48,7 +48,7 @@ export default function RetailHero({
 
   return (
     <section className="relative overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-24 lg:pb-16 bg-[#090d16] text-white border-b border-white/10">
-      
+
       {/* Background Hero Banner with Dark Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -71,12 +71,12 @@ export default function RetailHero({
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Main Text Content */}
           <div className="lg:col-span-8 space-y-4 sm:space-y-5">
-            
+
             {/* Top Badge & Logo Strip */}
-            <div className="flex flex-wrap items-center gap-3">
+            {/* <div className="flex flex-wrap items-center gap-3">
               <div className="relative h-10 w-28 bg-white/95 border border-white/20 px-3 py-1.5 flex items-center justify-center shadow-md">
                 <Image
                   src={logo}
@@ -109,7 +109,7 @@ export default function RetailHero({
               >
                 {statusBadge}
               </span>
-            </div>
+            </div> */}
 
             {/* Main Headline - Split across two lines */}
             <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold leading-[0.98] tracking-[-0.03em] text-white">

@@ -61,7 +61,7 @@ export default function GolfHero({
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Column Text Content */}
         <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-          <div className="flex flex-wrap items-center gap-3">
+          {/* <div className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
               Golf Zone Division
             </span>
@@ -69,7 +69,7 @@ export default function GolfHero({
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
               {statusBadge}
             </span>
-          </div>
+          </div> */}
 
           <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold tracking-tight text-white font-serif leading-[0.98]">
             <span>{firstWord}</span>

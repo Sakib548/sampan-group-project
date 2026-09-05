@@ -95,6 +95,30 @@ const slides: HeroSlide[] = [
     imagePosition: "center center",
     drift: "driftLeft",
   },
+  {
+    id: "sa",
+    title: "Sampan Auto",
+    eyebrow: "Our First & Well-Recognized Business",
+    subhead:
+      "One of Sampan's pioneering and well-established businesses, offering vehicle sales, imports, and genuine Japanese automotive parts.",
+    cta: "Explore Sampan Auto",
+    href: "https://www.sampangroup.com.bd/sampan-auto",
+    image: "/images/our_divisions/sampan-auto/sampan-auto.png",
+    imagePosition: "center center",
+    drift: "driftLeft",
+  },
+  {
+    id: "sagr",
+    title: "Sampan Agro and Golf Resort",
+    eyebrow: "A modern family Resort for everyone",
+    subhead:
+      "Discover a perfect blend of nature and luxury at Sampan Agro and Golf Resort. Your ultimate escape for relaxation, recreation, and family fun.",
+    cta: "Explore Sampan Agro and Golf Resort",
+    href: "/our_divisions/agro-and-resort/sampan-agro-and-golf-resort",
+    image: "/images/our_divisions/sampan-agro-golf-resort/sampan-agro-golf-resort.png",
+    imagePosition: "center center",
+    drift: "driftRight",
+  },
 ];
 
 type HeroCarouselProps = {

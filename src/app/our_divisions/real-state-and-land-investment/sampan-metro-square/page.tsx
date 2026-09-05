@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RealEstateHero from "../components/RealEstateHero";
+import RealEstateHero2 from "../components/RealEstateHero2";
 import UnitTypesAndSizes from "../components/UnitTypesAndSizes";
 import LandShareStructure from "../components/LandShareStructure";
 import ConstructionProgressTracker from "../components/ConstructionProgressTracker";
@@ -144,18 +144,16 @@ export default function SampanMetroSquarePage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#dc2626] selection:text-white">
       
-      {/* 1. Hero Overview — Custom Red (#dc2626) & Forest Green (#047857) from Logo */}
-      <RealEstateHero
+      {/* 1. Hero Overview — Sleek Minimal RealEstateHero2 */}
+      <RealEstateHero2
         title="Sampan Metro Square"
         subtitle="Ashulia Land-Share Residential Project"
         divisionName="Sampan Development Ltd"
-        statusBadge="Ongoing Land-Share Project"
-        statusType="ongoing"
         description="Own a piece of Ashulia's next address—a land-share residential project for people who want to invest in a future home, not only a plot."
         image="/images/metro-square/tower-home.webp"
         facts={facts}
         accentColor="#dc2626"
-        badgeColor="#047857"
+        locationLabel="Ashulia Metro Corridor, Dhaka"
       />
 
       {/* 2. Unit Types & Sizes Breakdown */}

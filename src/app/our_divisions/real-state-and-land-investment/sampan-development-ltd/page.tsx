@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import RealEstateHero from "../components/RealEstateHero";
 import UnitTypesAndSizes from "../components/UnitTypesAndSizes";
 import LandShareStructure from "../components/LandShareStructure";
 import ConstructionProgressTracker from "../components/ConstructionProgressTracker";
@@ -10,6 +9,7 @@ import PaymentPlanCalculator from "../components/PaymentPlanCalculator";
 import SiteVisitBookingForm from "../components/SiteVisitBookingForm";
 import DownloadableBrochureCTA from "../components/DownloadableBrochureCTA";
 import RealEstateLocationMap from "../components/RealEstateLocationMap";
+import RealEstateHero2 from "../components/RealEstateHero2";
 
 export const metadata: Metadata = {
   title: "Sampan Development Ltd | Master Architectural & Land Development",
@@ -36,6 +36,7 @@ const units = [
     priceRange: "BDT 58 Lacs",
     orientation: "Ashulia Metro Corridor",
     highlights: ["14-Storey Planned Residential Tower", "Sub-Kabala Land Deed Registration", "20 Mins to Uttara Metro Station"],
+    image: "/images/our_divisions/sampan-metro-square/metro-square.png",
   },
   {
     id: "sdl-flagship-2",
@@ -48,6 +49,94 @@ const units = [
     priceRange: "BDT 1.2 Crore+",
     orientation: "Commercial Highway Hub",
     highlights: ["Multi-Storey Trade Outlets & Executive Offices", "High Lease Rental Opportunities", "Ample Underground Valet Parking"],
+  },
+  {
+    id: "sdl-flagship-3",
+    name: "Sampan Residency Tower 1 & 2 Suites",
+    category: "Twin Tower Residency",
+    sizeSqFt: "1,450–1,650 sq ft",
+    bedrooms: 3,
+    bathrooms: 3,
+    balconies: 3,
+    priceRange: "BDT 72 Lacs+",
+    orientation: "Express Highway Corridor",
+    highlights: ["Twin 16-Storey Luxury High-Rise Towers", "Integrated Highway Inn Concierge Access", "Soundproof Double-Glazed Glass"],
+    image: "/images/projects/sampan-highway-inn.png",
+  },
+  {
+    id: "sdl-flagship-4",
+    name: "Sampan Niketon Luxury Apartments",
+    category: "Premium Residential",
+    sizeSqFt: "1,250 sq ft",
+    bedrooms: 3,
+    bathrooms: 3,
+    balconies: 2,
+    priceRange: "BDT 95 Lacs",
+    orientation: "Shanti Niketon, Gulshan Link",
+    highlights: ["8-Storied Landmark on Gulshan Link Road", "RAJUK Approved Structural Design", "40% Open Space & Ample Ventilation"],
+    image: "/images/projects/sampanniketon.jpg",
+  },
+  {
+    id: "sdl-flagship-5",
+    name: "Sampan Taj Executive Condominium",
+    category: "Luxury Condominium",
+    sizeSqFt: "1,800+ sq ft",
+    bedrooms: 3,
+    bathrooms: 4,
+    balconies: 3,
+    priceRange: "BDT 1.45 Crore",
+    orientation: "Bashundhara R/A",
+    highlights: ["Exclusive Prime Residential Neighborhood", "Smart Home Automation Systems", "Rooftop Garden & Lounge"],
+    image: "/images/projects/sampantaj.jpg",
+  },
+  {
+    id: "sdl-flagship-6",
+    name: "Sampan Nexus Mixed-Use Corridor",
+    category: "Mixed-Use Corridor",
+    sizeSqFt: "950–2,200 sq ft",
+    bedrooms: 2,
+    bathrooms: 2,
+    balconies: 2,
+    priceRange: "BDT 42 Lacs+",
+    orientation: "Mawna Growth Hub",
+    highlights: ["Commercial Retail + Residential Apartments", "Rapidly Growing Industrial Growth Belt", "Sub-Kabala Ready Land Registration"],
+  },
+  {
+    id: "sdl-flagship-7",
+    name: "Sampan Motalib Skyline Tower",
+    category: "Skyline Residency",
+    sizeSqFt: "1,550 sq ft",
+    bedrooms: 3,
+    bathrooms: 3,
+    balconies: 3,
+    priceRange: "BDT 85 Lacs",
+    orientation: "Urban Metro Skyline",
+    highlights: ["High-Elevation City Panoramas", "Dedicated Sub-Station & 100% Power Backup", "Multi-Tier Biometric Security"],
+  },
+  {
+    id: "sdl-flagship-8",
+    name: "Sampan Cafe Metro Commercial Plaza",
+    category: "Commercial Plaza",
+    sizeSqFt: "400–1,800 sq ft",
+    bedrooms: 0,
+    bathrooms: 2,
+    balconies: 0,
+    priceRange: "BDT 65 Lacs+",
+    orientation: "Metro Rail Interchange",
+    highlights: ["Prime Footfall Metro Transit Location", "Boutique Cafe & Retail Showroom Bays", "High Rental Yield Investment"],
+  },
+  {
+    id: "sdl-flagship-9",
+    name: "Sampan 21st Century Trade Center",
+    category: "Commercial Trade Center",
+    sizeSqFt: "800–2,500 sq ft",
+    bedrooms: 0,
+    bathrooms: 2,
+    balconies: 1,
+    priceRange: "BDT 1.1 Crore",
+    orientation: "Commercial Core Zone",
+    highlights: ["Modern Corporate Suites & Financial Counters", "Central HVAC & Energy Efficient Facade", "24/7 Monitored Access Control"],
+    image: "/images/projects/21.jpg",
   },
 ];
 
@@ -119,7 +208,7 @@ export default function SampanDevelopmentLtdPage() {
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#ca8a04] selection:text-neutral-950">
 
       {/* 1. Hero Overview — Dark for Transparent Navbar Contrast */}
-      <RealEstateHero
+      <RealEstateHero2
         title="Sampan Development Ltd"
         subtitle="Master Architectural & Land Development Flagship"
         divisionName="Real Estate & Land Investment Division"

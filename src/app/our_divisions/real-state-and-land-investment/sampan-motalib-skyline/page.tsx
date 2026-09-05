@@ -118,7 +118,8 @@ export default function SampanMotalibSkylinePage() {
         statusBadge="Coming Soon — Pre-Launch Bookings"
         statusType="coming-soon"
         description="Experience pre-launch pricing on an 18-storey high-rise luxury residential tower featuring smart home automation and panoramic urban views."
-        image="/images/projects/Sampan-White-House-&-Motel.ng"
+        image="/images/our_divisions/sampan-motalib-skyline/motalib-skyline.png"
+
         facts={facts}
         accentColor="#0284c7"
         badgeColor="#0284c7"

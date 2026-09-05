@@ -106,7 +106,7 @@ export default function SampanNexusPage() {
         statusBadge="Coming Soon — Early Inquiries"
         statusType="coming-soon"
         description="A strategic mixed-use project combining commercial spaces and residential land-share apartments in the rapidly growing Mawna industrial belt."
-        image="/images/concerns/3-sampan-eco-agro.png"
+        image="/images/our_divisions/sampan-nexus/nexus.jpeg"
         facts={facts}
         accentColor="#0284c7"
         badgeColor="#10b981"

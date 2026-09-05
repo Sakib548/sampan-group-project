@@ -122,7 +122,7 @@ const showrooms = [
 export default function SampanFireArmsCoPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#b91c1c] selection:text-white">
-      
+
       {/* 1. Hero Overview — Crimson Red (#b91c1c) Accent from Logo */}
       <DefenseHero
         title="Sampan Fire Arms Co."
@@ -130,7 +130,7 @@ export default function SampanFireArmsCoPage() {
         divisionName="Defense & Security Division"
         statusBadge="Ministry Enlisted License #MOBA-0912"
         description="Premier government-certified firearms importer and defense contractor in Bangladesh. Supplying civilian personal protection arms, sporting rifles, target shotguns, and ammunition under strict Arms Act 1878 compliance."
-        image="/images/brand/firearmsco.png"
+        image="/images/our_divisions/sampan-firearms/banner.jpg"
         facts={heroFacts}
         accentColor="#b91c1c"
         badgeColor="#dc2626"

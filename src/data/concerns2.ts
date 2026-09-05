@@ -302,7 +302,8 @@ export const concerns2: Concern[] = [
     category: "Professional Education",
     tagline: "CIPS-Accredited UK Procurement & Supply Chain, Hospitality & Business Qualifications",
     logo: "/images/brand/lshs.png",
-    href: "/our_divisions/professional-education/london-school-of-higher-studies",
+    // href: "/our_divisions/professional-education/london-school-of-higher-studies",
+    href: "https://london-schools-seven.vercel.app/",
   },
 
   {

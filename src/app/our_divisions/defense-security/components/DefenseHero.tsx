@@ -60,7 +60,7 @@ export default function DefenseHero({
         <div className="max-w-4xl space-y-4 sm:space-y-5">
 
           {/* Status Badges with Custom Logo Colors */}
-          <div className="flex flex-wrap items-center gap-3">
+          {/* <div className="flex flex-wrap items-center gap-3">
             <div
               className="inline-flex items-center gap-2 border px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em]"
               style={{
@@ -84,7 +84,7 @@ export default function DefenseHero({
               <FaLock className="text-[10px]" />
               <span>{statusBadge}</span>
             </span>
-          </div>
+          </div> */}
 
           {/* Main Headline - Split across two lines */}
           <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold leading-[0.98] tracking-[-0.03em] text-white">
