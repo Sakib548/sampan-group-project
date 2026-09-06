@@ -26,12 +26,12 @@ export default function SampanWhiteHouseClient() {
 
   return (
     <main className="bg-[#F5F5F2] text-neutral-900 antialiased selection:bg-[#e8b84b] selection:text-neutral-950">
-      
+
       {/* 1. OVERVIEW (Hero with Background Image & Transparent Navbar Dark Contrast) */}
       <HeroOverview onOpenBooking={() => scrollToSection("booking-widget")} />
 
       {/* 10. ONLINE BOOKING WIDGET (Instant Calculator & Reservation) */}
-      <OnlineBookingWidget />
+      {/* <OnlineBookingWidget /> */}
 
       {/* 9. MILESTONE COUNTER (Track Record & Scale) */}
       <MilestoneCounter />
@@ -46,7 +46,7 @@ export default function SampanWhiteHouseClient() {
       <LocationAndMap />
 
       {/* 6. ROOM / PACKAGE PRICING OVERVIEW (Transparent Tiers & Inclusions) */}
-      <PricingOverview />
+      {/* <PricingOverview /> */}
 
       {/* 12. VIRTUAL TOUR (360° Walkthrough Simulator & Interactive Hotspots) */}
       <VirtualTourViewer />

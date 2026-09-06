@@ -20,11 +20,11 @@ export const concerns2: Concern[] = [
   },
   {
     id: 3,
-    name: "Sampan Motalib Skyline",
+    name: "Sampan Skyline",
     category: "Development & Construction",
     tagline: "Commercial + residential construction project",
     logo: "/images/brand/sampanmotolibskyline.webp",
-    href: "/our_divisions/real-state-and-land-investment/sampan-motalib-skyline",
+    href: "/our_divisions/real-state-and-land-investment/sampan-skyline",
   },
   {
     id: 4,
@@ -42,14 +42,14 @@ export const concerns2: Concern[] = [
     logo: "/images/brand/sampantradeemporium.png",
     href: "/our_divisions/real-state-and-land-investment/sampan-trade-emporium",
   },
-  {
-    id: 6,
-    name: "Sampan Tower 1 & 2",
-    category: "Development & Construction",
-    tagline: "Hotel/motel beside Express Highway Inn.",
-    logo: "/images/brand/sampantower.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-residency-tower-1-2",
-  },
+  // {
+  //   id: 6,
+  //   name: "Sampan Tower 1 & 2",
+  //   category: "Development & Construction",
+  //   tagline: "Hotel/motel beside Express Highway Inn.",
+  //   logo: "/images/brand/sampantower.png",
+  //   href: "/our_divisions/real-state-and-land-investment/sampan-residency-tower-1-2",
+  // },
   {
     id: 7,
     name: "Sampan 21st Century",

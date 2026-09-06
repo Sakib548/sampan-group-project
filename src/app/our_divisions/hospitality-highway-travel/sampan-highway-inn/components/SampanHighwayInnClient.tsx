@@ -26,12 +26,12 @@ export default function SampanHighwayInnClient() {
 
   return (
     <main className="bg-[#F5F5F2] text-neutral-900 antialiased selection:bg-emerald-600 selection:text-white">
-      
+
       {/* 1. OVERVIEW (Hero & Brand Introduction) */}
       <HeroOverview onOpenBooking={() => scrollToSection("booking-widget")} />
 
       {/* 10. ONLINE BOOKING WIDGET (Interactive Calculator & Instant Reservation) */}
-      <OnlineBookingWidget />
+      {/* <OnlineBookingWidget /> */}
 
       {/* 9. MILESTONE COUNTER (Track Record & Scale) */}
       <MilestoneCounter />
@@ -46,7 +46,7 @@ export default function SampanHighwayInnClient() {
       <LocationAndMap />
 
       {/* 6. ROOM / PACKAGE PRICING OVERVIEW (Transparent Tiers & Inclusions) */}
-      <PricingOverview />
+      {/* <PricingOverview /> */}
 
       {/* 12. VIRTUAL TOUR (360° Walkthrough Simulator & Interactive Hotspots) */}
       <VirtualTourViewer />

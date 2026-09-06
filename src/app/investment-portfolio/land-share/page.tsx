@@ -31,7 +31,7 @@ const openOpportunities = [
   },
   {
     num: "02",
-    name: "Sampan Motalib Skyline",
+    name: "Sampan  Skyline",
     location: "Dhaka",
     shares: "8 Shares Available",
     price: "Tk 2,20,000 / share",
@@ -654,17 +654,15 @@ export default function LandSharePage() {
                 >
                   <span className="text-lg font-semibold">{item.q}</span>
                   <FiChevronDown
-                    className={`h-5 w-5 text-emerald-600 transition-transform duration-300 ${
-                      activeFaq === i ? "rotate-180" : ""
-                    }`}
+                    className={`h-5 w-5 text-emerald-600 transition-transform duration-300 ${activeFaq === i ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 <div
-                  className={`grid transition-all duration-300 ${
-                    activeFaq === i
+                  className={`grid transition-all duration-300 ${activeFaq === i
                       ? "grid-rows-[1fr] opacity-100"
                       : "grid-rows-[0fr] opacity-0"
-                  }`}
+                    }`}
                 >
                   <div className="overflow-hidden">
                     <p className="p-6 pt-0 text-neutral-600 leading-7">

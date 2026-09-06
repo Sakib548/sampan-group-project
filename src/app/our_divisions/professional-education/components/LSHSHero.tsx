@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface FactItem {
   value: string;
   label: string;
@@ -35,9 +33,9 @@ export default function LSHSHero({
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 rounded-full bg-[#0b73b9]/20 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 rounded-full bg-[#f4d210]/15 blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column Text Content */}
-        <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Main Column Content */}
+        <div className="max-w-4xl space-y-4 sm:space-y-5">
           <div className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#0b73b9]/30 text-sky-200 border border-[#0b73b9]/50">
               Professional Education Division
@@ -107,32 +105,6 @@ export default function LSHSHero({
                 <div className="text-xs text-sky-200/70 mt-1 font-medium">{fact.label}</div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Right Crest Display */}
-        <div className="lg:col-span-5 flex justify-center">
-          <div className="relative w-full max-w-md aspect-square bg-gradient-to-b from-sky-900/50 to-sky-950/90 rounded-3xl border border-sky-700/40 p-8 shadow-2xl flex flex-col items-center justify-center group hover:border-[#0b73b9] transition-all">
-            <div className="absolute inset-4 rounded-2xl border border-sky-500/20 pointer-events-none" />
-
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 transition-transform duration-500 group-hover:scale-105">
-              <Image
-                src="/images/brand/lshs.png"
-                alt="London School of Higher Studies Logo"
-                fill sizes="100vw"
-                priority
-                className="object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.5)]"
-              />
-            </div>
-
-            <div className="mt-4 text-center">
-              <span className="text-xs font-semibold uppercase tracking-widest text-[#f4d210]">
-                CIPS UK Approved Centre #10005967
-              </span>
-              <p className="text-sm font-semibold text-white mt-0.5">
-                London School of Higher Studies
-              </p>
-            </div>
           </div>
         </div>
       </div>

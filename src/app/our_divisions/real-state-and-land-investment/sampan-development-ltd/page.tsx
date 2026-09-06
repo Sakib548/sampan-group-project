@@ -27,7 +27,7 @@ const facts = [
 const units = [
   {
     id: "sdl-flagship-1",
-    name: "Sampan Metro Square Residential Share",
+    name: "Sampan Metro Square",
     category: "Residential Land Share",
     sizeSqFt: "1,350+ sq ft",
     bedrooms: 3,
@@ -37,10 +37,11 @@ const units = [
     orientation: "Ashulia Metro Corridor",
     highlights: ["14-Storey Planned Residential Tower", "Sub-Kabala Land Deed Registration", "20 Mins to Uttara Metro Station"],
     image: "/images/our_divisions/sampan-metro-square/metro-square.png",
+    link: "/our_divisions/real-state-and-land-investment/sampan-metro-square",
   },
   {
     id: "sdl-flagship-2",
-    name: "Sampan Trade Emporium Commercial Suite",
+    name: "Sampan Trade Emporium ",
     category: "Commercial Trade Center",
     sizeSqFt: "650–3,000 sq ft",
     bedrooms: 0,
@@ -49,23 +50,53 @@ const units = [
     priceRange: "BDT 1.2 Crore+",
     orientation: "Commercial Highway Hub",
     highlights: ["Multi-Storey Trade Outlets & Executive Offices", "High Lease Rental Opportunities", "Ample Underground Valet Parking"],
+    link: "/our_divisions/real-state-and-land-investment/sampan-trade-emporium",
   },
   {
-    id: "sdl-flagship-3",
-    name: "Sampan Residency Tower 1 & 2 Suites",
-    category: "Twin Tower Residency",
-    sizeSqFt: "1,450–1,650 sq ft",
-    bedrooms: 3,
-    bathrooms: 3,
-    balconies: 3,
-    priceRange: "BDT 72 Lacs+",
-    orientation: "Express Highway Corridor",
-    highlights: ["Twin 16-Storey Luxury High-Rise Towers", "Integrated Highway Inn Concierge Access", "Soundproof Double-Glazed Glass"],
+    id: "sdl-sampan-highway-inn",
+    name: "Sampan Highway Inn",
+    category: "Highway Hospitality",
+    sizeSqFt: "450–1,200 sq ft",
+    bedrooms: 1,
+    bathrooms: 1,
+    balconies: 1,
+    priceRange: "BDT 45 Lacs+",
+    orientation: "Dhaka-Mymensingh Highway, Mawna",
+    highlights: ["Prime Highway Transit Landmark", "Luxury Guest Suites & Multi-Cuisine Restaurant", "Ample Highway Parking & 24/7 Security"],
     image: "/images/projects/sampan-highway-inn.png",
+    link: "/our_divisions/hospitality-highway-travel/sampan-highway-inn",
+  },
+  {
+    id: "sdl-express-highway-inn",
+    name: "Express Highway Inn",
+    category: "Highway Hospitality",
+    sizeSqFt: "500–1,400 sq ft",
+    bedrooms: 1,
+    bathrooms: 1,
+    balconies: 1,
+    priceRange: "BDT 50 Lacs+",
+    orientation: "Express Highway Corridor, Mawna",
+    highlights: ["Modern Highway Transit Accommodation", "VIP Club Lounge & Corporate Meeting Facilities", "Direct Expressway Access & Valet Services"],
+    image: "/images/projects/express-highway-inn.jpg",
+    link: "/our_divisions/hospitality-highway-travel/express-highway-inn",
+  },
+  {
+    id: "sdl-sampan-white-house",
+    name: "Sampan White House",
+    category: "Highway Hospitality",
+    sizeSqFt: "400–1,100 sq ft",
+    bedrooms: 1,
+    bathrooms: 1,
+    balconies: 1,
+    priceRange: "BDT 38 Lacs+",
+    orientation: "Scenic Highway Zone, Mawna",
+    highlights: ["Comfortable Motel Suites & Green Courtyard", "Family-Friendly Rest Stop & Dining Experience", "Dedicated Highway Tourist Hospitality"],
+    image: "/images/projects/Sampan-White-House-&-Motel.png",
+    link: "/our_divisions/hospitality-highway-travel/sampan-white-house",
   },
   {
     id: "sdl-flagship-4",
-    name: "Sampan Niketon Luxury Apartments",
+    name: "Sampan Niketon",
     category: "Premium Residential",
     sizeSqFt: "1,250 sq ft",
     bedrooms: 3,
@@ -75,10 +106,11 @@ const units = [
     orientation: "Shanti Niketon, Gulshan Link",
     highlights: ["8-Storied Landmark on Gulshan Link Road", "RAJUK Approved Structural Design", "40% Open Space & Ample Ventilation"],
     image: "/images/projects/sampanniketon.jpg",
+    link: "/our_divisions/real-state-and-land-investment/sampan-niketon",
   },
   {
     id: "sdl-flagship-5",
-    name: "Sampan Taj Executive Condominium",
+    name: "Sampan Taj ",
     category: "Luxury Condominium",
     sizeSqFt: "1,800+ sq ft",
     bedrooms: 3,
@@ -88,10 +120,11 @@ const units = [
     orientation: "Bashundhara R/A",
     highlights: ["Exclusive Prime Residential Neighborhood", "Smart Home Automation Systems", "Rooftop Garden & Lounge"],
     image: "/images/projects/sampantaj.jpg",
+    link: "/our_divisions/real-state-and-land-investment/sampan-taj",
   },
   {
     id: "sdl-flagship-6",
-    name: "Sampan Nexus Mixed-Use Corridor",
+    name: "Sampan Nexus ",
     category: "Mixed-Use Corridor",
     sizeSqFt: "950–2,200 sq ft",
     bedrooms: 2,
@@ -100,10 +133,11 @@ const units = [
     priceRange: "BDT 42 Lacs+",
     orientation: "Mawna Growth Hub",
     highlights: ["Commercial Retail + Residential Apartments", "Rapidly Growing Industrial Growth Belt", "Sub-Kabala Ready Land Registration"],
+    link: "/our_divisions/real-state-and-land-investment/sampan-nexus",
   },
   {
     id: "sdl-flagship-7",
-    name: "Sampan Motalib Skyline Tower",
+    name: "Sampan  Skyline ",
     category: "Skyline Residency",
     sizeSqFt: "1,550 sq ft",
     bedrooms: 3,
@@ -112,10 +146,11 @@ const units = [
     priceRange: "BDT 85 Lacs",
     orientation: "Urban Metro Skyline",
     highlights: ["High-Elevation City Panoramas", "Dedicated Sub-Station & 100% Power Backup", "Multi-Tier Biometric Security"],
+    link: "/our_divisions/real-state-and-land-investment/sampan-skyline",
   },
   {
     id: "sdl-flagship-8",
-    name: "Sampan Cafe Metro Commercial Plaza",
+    name: "Sampan Cafe Metro ",
     category: "Commercial Plaza",
     sizeSqFt: "400–1,800 sq ft",
     bedrooms: 0,
@@ -124,10 +159,11 @@ const units = [
     priceRange: "BDT 65 Lacs+",
     orientation: "Metro Rail Interchange",
     highlights: ["Prime Footfall Metro Transit Location", "Boutique Cafe & Retail Showroom Bays", "High Rental Yield Investment"],
+    link: "/our_divisions/real-state-and-land-investment/sampan-cafe-metro",
   },
   {
     id: "sdl-flagship-9",
-    name: "Sampan 21st Century Trade Center",
+    name: "Sampan 21st Century ",
     category: "Commercial Trade Center",
     sizeSqFt: "800–2,500 sq ft",
     bedrooms: 0,
@@ -137,6 +173,7 @@ const units = [
     orientation: "Commercial Core Zone",
     highlights: ["Modern Corporate Suites & Financial Counters", "Central HVAC & Energy Efficient Facade", "24/7 Monitored Access Control"],
     image: "/images/projects/21.jpg",
+    link: "/our_divisions/real-state-and-land-investment/sampan-21st-century",
   },
 ];
 
@@ -253,7 +290,7 @@ export default function SampanDevelopmentLtdPage() {
       />
 
       {/* 5. Construction Progress — AboutPreview Warm Ivory bg-[#F5F5F2] */}
-      <ConstructionProgressTracker
+      {/* <ConstructionProgressTracker
         title="Division Project Development Status"
         subtitle="Track live site developments, architectural milestones, and expected handover timelines."
         overallCompletionPercentage={65}
@@ -261,7 +298,7 @@ export default function SampanDevelopmentLtdPage() {
         currentPhase="Multi-Site Piling & Superstructure Framing"
         milestones={progressMilestones}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 6. Floor Plans — DivisionsSection Soft Green bg-[#f3f6f2] */}
       <FloorPlansViewer

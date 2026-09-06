@@ -37,7 +37,7 @@ const sitemap = [
     links: [
       { label: "SDL", href: "/real-estate/sdl" },
       { label: "Metro Square", href: "/real-estate/metro-square" },
-      { label: "Motalib Skyline", href: "/real-estate/motalib-skyline" },
+      { label: " Skyline", href: "/real-estate/-skyline" },
       { label: "Nexus", href: "/real-estate/nexus" },
       { label: "Residency Tower 1 & 2", href: "/real-estate/residency" },
       { label: "Taj", href: "/real-estate/taj" },
@@ -806,11 +806,10 @@ export default function Footer() {
           <button
             onClick={scrollToTop}
             aria-label="Back to top"
-            className={`flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.15em] text-white/[0.32] transition-all duration-500 hover:text-emerald-400/80 ${
-              showBackToTop
+            className={`flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.15em] text-white/[0.32] transition-all duration-500 hover:text-emerald-400/80 ${showBackToTop
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-2 pointer-events-none"
-            }`}
+              }`}
           >
             <span>Top</span>
             <FiArrowUp className="h-2.5 w-2.5" />

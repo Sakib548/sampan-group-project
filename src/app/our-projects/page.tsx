@@ -22,10 +22,10 @@ const concerns = [
   },
   {
     id: 2,
-    name: "Sampan Motalib Skyline",
+    name: "Sampan  Skyline",
     category: "Development & Construction",
     tagline: "Premium urban real estate development",
-    logo: "/images/brand/sampan-motalib-skyline.webp",
+    logo: "/images/brand/sampan--skyline.webp",
     href: "/projects/skyline",
   },
   {
@@ -464,11 +464,10 @@ export default function BusinessArchivePage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`group relative text-[11px] font-semibold uppercase tracking-widest transition-colors duration-300 ${
-                  activeCategory === cat
+                className={`group relative text-[11px] font-semibold uppercase tracking-widest transition-colors duration-300 ${activeCategory === cat
                     ? "text-neutral-900"
                     : "text-neutral-400 hover:text-neutral-700"
-                }`}
+                  }`}
               >
                 {cat}
                 <span className="ml-2 text-[10px] text-neutral-400">
@@ -477,9 +476,8 @@ export default function BusinessArchivePage() {
                     : concerns.filter((c) => c.category === cat).length}
                 </span>
                 <span
-                  className={`absolute -bottom-1 left-0 h-[1px] bg-emerald-500 transition-all duration-300 ${
-                    activeCategory === cat ? "w-full" : "w-0 group-hover:w-full"
-                  }`}
+                  className={`absolute -bottom-1 left-0 h-[1px] bg-emerald-500 transition-all duration-300 ${activeCategory === cat ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
                 ></span>
               </button>
             ))}
@@ -554,9 +552,8 @@ export default function BusinessArchivePage() {
                         </span>
                       </div>
                       <h3
-                        className={`group-hover:text-emerald-600 transition-colors duration-300 font-semibold tracking-tight text-neutral-900 ${
-                          isFeatured ? "text-3xl md:text-4xl" : "text-2xl"
-                        }`}
+                        className={`group-hover:text-emerald-600 transition-colors duration-300 font-semibold tracking-tight text-neutral-900 ${isFeatured ? "text-3xl md:text-4xl" : "text-2xl"
+                          }`}
                       >
                         {item.name}
                       </h3>

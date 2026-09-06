@@ -44,7 +44,7 @@ const ongoingProjects = [
   },
   {
     num: "02",
-    name: "Sampan Motalib Skyline",
+    name: "Sampan  Skyline",
     location: "Dhaka",
     img: "/images.jpg",
   },
@@ -398,11 +398,10 @@ export default function SampanDevelopmentLtd() {
                 {ongoingProjects.map((project, i) => (
                   <div
                     key={project.num}
-                    className={`absolute inset-0 transition-all duration-700 ease-out ${
-                      activeProject === i
+                    className={`absolute inset-0 transition-all duration-700 ease-out ${activeProject === i
                         ? "opacity-100 scale-100 translate-x-0"
                         : "opacity-0 scale-95 -translate-x-10 pointer-events-none"
-                    }`}
+                      }`}
                   >
                     <Image
                       src="/images.jpg"

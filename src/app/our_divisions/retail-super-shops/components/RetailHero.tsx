@@ -70,10 +70,8 @@ export default function RetailHero({
       />
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-
-          {/* Main Text Content */}
-          <div className="lg:col-span-8 space-y-4 sm:space-y-5">
+        {/* Main Text Content */}
+        <div className="max-w-4xl space-y-4 sm:space-y-5">
 
             {/* Top Badge & Logo Strip */}
             {/* <div className="flex flex-wrap items-center gap-3">
@@ -200,44 +198,6 @@ export default function RetailHero({
                 ))}
               </div>
             )}
-
-          </div>
-
-          {/* Right Column: Featured Logo Showcase Card */}
-          <div className="lg:col-span-4 hidden lg:block">
-            <div className="border border-white/20 bg-white/5 backdrop-blur-md p-8 relative overflow-hidden text-center space-y-6 shadow-2xl">
-              <div className="absolute top-0 left-0 h-1.5 w-full" style={{ backgroundColor: accentColor }} />
-
-              <div className="relative h-24 w-full bg-white p-4 flex items-center justify-center shadow-inner">
-                <Image
-                  src={logo}
-                  alt={concernName}
-                  width={200}
-                  height={80}
-                  className="object-contain max-h-16"
-                />
-              </div>
-
-              <div className="space-y-2 text-xs font-mono">
-                <span className="text-amber-400 font-bold uppercase tracking-wider block">
-                  Sampan Group Retail Division
-                </span>
-                <h3 className="text-xl font-bold text-white">{concernName}</h3>
-                <p className="text-white/70 leading-relaxed font-sans text-xs">
-                  Premium quality assurance, daily fresh restocking, and seamless home delivery across Bangladesh.
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-white/15 flex items-center justify-between text-[11px] font-mono opacity-80">
-                <span className="flex items-center gap-1 text-emerald-400">
-                  <FaCheckCircle /> Verified Fresh
-                </span>
-                <span className="flex items-center gap-1 text-amber-300">
-                  <FaStar /> 4.9 Super Ratings
-                </span>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>

@@ -143,7 +143,7 @@ const landmarks = [
 export default function SampanMetroSquarePage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#dc2626] selection:text-white">
-      
+
       {/* 1. Hero Overview — Sleek Minimal RealEstateHero2 */}
       <RealEstateHero2
         title="Sampan Metro Square"
@@ -188,7 +188,7 @@ export default function SampanMetroSquarePage() {
       />
 
       {/* 5. Construction Progress */}
-      <ConstructionProgressTracker
+      {/* <ConstructionProgressTracker
         title="Live Construction Progress"
         subtitle="Track live site developments and foundation milestones for Sampan Metro Square."
         overallCompletionPercentage={42}
@@ -196,7 +196,7 @@ export default function SampanMetroSquarePage() {
         currentPhase="Piling & Substructure Casting"
         milestones={progressMilestones}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 6. Floor Plans Viewer */}
       <FloorPlansViewer

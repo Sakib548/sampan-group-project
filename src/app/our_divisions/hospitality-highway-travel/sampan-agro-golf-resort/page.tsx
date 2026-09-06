@@ -92,7 +92,7 @@ export default function SampanAgroGolfResortPage() {
       <ResortPhasedTimeline />
 
       {/* SECTION 5: Founding Member Pricing */}
-      <ResortFoundingMemberPricing />
+      {/* <ResortFoundingMemberPricing /> */}
 
       {/* SECTION 6: Membership vs. Day-Visitor Pricing Comparison */}
       <ResortPricingComparison />

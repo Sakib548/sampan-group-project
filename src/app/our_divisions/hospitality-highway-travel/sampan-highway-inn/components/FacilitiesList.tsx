@@ -36,28 +36,28 @@ const facilitiesData = [
     features: ["Acoustic Soundproofing", "King Orthopaedic Bedding", "High-Speed Fiber Wi-Fi", "In-Room Gourmet Service", "Hourly & Overnight Options"],
     hours: "24/7 Available",
   },
-  {
-    id: "dining-bakery",
-    category: "dining",
-    title: "24/7 Highway Multi-Cuisine Restaurant & Cafe",
-    badge: "Farm-to-Table",
-    image: "/images/facilities/express_highway_inn/1.Highway-Club-&-Lounge.png",
-    description:
-      "Indulge in authentic Bengali culinary specialties, live tandoor and kebabs, fresh bakery treats, and artisanal barista coffee prepared with organic farm ingredients.",
-    features: ["Authentic Bengali Curries", "Live Grill & Barbecue", "Fresh Espresso Bar", "Family Dining Halls", "Express 15-min Takeaway"],
-    hours: "24/7 All-Day Service",
-  },
-  {
-    id: "ev-charging",
-    category: "ev",
-    title: "Ultra-Fast 120kW DC EV Supercharging Plaza",
-    badge: "Green Mobility",
-    image: "/images/facilities/express_highway_inn/6.EV-Car-Charging.png",
-    description:
-      "High-output DC dual-gun rapid charging stations alongside Level 2 AC chargers compatible with Tesla, BYD, Audi, BMW, MG, Hyundai, and all EV models.",
-    features: ["120kW High-Speed DC", "Dual CCS2 & Type 2 Connectors", "Canopied Charging Bays", "Priority Lounge Access", "App & Cashless Payment"],
-    hours: "24/7 Continuous Power",
-  },
+  // {
+  //   id: "dining-bakery",
+  //   category: "dining",
+  //   title: "24/7 Highway Multi-Cuisine Restaurant & Cafe",
+  //   badge: "Farm-to-Table",
+  //   image: "/images/facilities/express_highway_inn/1.Highway-Club-&-Lounge.png",
+  //   description:
+  //     "Indulge in authentic Bengali culinary specialties, live tandoor and kebabs, fresh bakery treats, and artisanal barista coffee prepared with organic farm ingredients.",
+  //   features: ["Authentic Bengali Curries", "Live Grill & Barbecue", "Fresh Espresso Bar", "Family Dining Halls", "Express 15-min Takeaway"],
+  //   hours: "24/7 All-Day Service",
+  // },
+  // {
+  //   id: "ev-charging",
+  //   category: "ev",
+  //   title: "Ultra-Fast 120kW DC EV Supercharging Plaza",
+  //   badge: "Green Mobility",
+  //   image: "/images/facilities/express_highway_inn/6.EV-Car-Charging.png",
+  //   description:
+  //     "High-output DC dual-gun rapid charging stations alongside Level 2 AC chargers compatible with Tesla, BYD, Audi, BMW, MG, Hyundai, and all EV models.",
+  //   features: ["120kW High-Speed DC", "Dual CCS2 & Type 2 Connectors", "Canopied Charging Bays", "Priority Lounge Access", "App & Cashless Payment"],
+  //   hours: "24/7 Continuous Power",
+  // },
   {
     id: "party-center",
     category: "events",
@@ -102,17 +102,17 @@ const facilitiesData = [
   //   features: ["Separate Men & Women Halls", "Modern Wudu Ablution Area", "Baby Changing Facilities", "Wheelchair Accessible", "Continuous Sanitation Staff"],
   //   hours: "24/7 Spotless",
   // },
-  {
-    id: "sampan-mart",
-    category: "essentials",
-    title: "24/7 Sampan Mart & Travel Convenience",
-    badge: "Travel Essentials",
-    image: "/images/facilities/express_highway_inn/4.Sampan-Mart.png",
-    description:
-      "Stock up on cold beverages, snacks, local confectionery, organic highway produce, road trip essentials, personal care, and vehicle accessories.",
-    features: ["Cold Drinks & Mineral Water", "Snacks & Local Delights", "First-Aid & Pharmacy Essentials", "Car Accessories & Chargers", "ATM / CRM Banking Booth"],
-    hours: "24/7 Open",
-  },
+  // {
+  //   id: "sampan-mart",
+  //   category: "essentials",
+  //   title: "24/7 Sampan Mart & Travel Convenience",
+  //   badge: "Travel Essentials",
+  //   image: "/images/facilities/express_highway_inn/4.Sampan-Mart.png",
+  //   description:
+  //     "Stock up on cold beverages, snacks, local confectionery, organic highway produce, road trip essentials, personal care, and vehicle accessories.",
+  //   features: ["Cold Drinks & Mineral Water", "Snacks & Local Delights", "First-Aid & Pharmacy Essentials", "Car Accessories & Chargers", "ATM / CRM Banking Booth"],
+  //   hours: "24/7 Open",
+  // },
 ];
 
 export default function FacilitiesList({ onSelectFacility }: { onSelectFacility?: (title: string) => void }) {
@@ -152,8 +152,8 @@ export default function FacilitiesList({ onSelectFacility }: { onSelectFacility?
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
-                  ? "bg-[#070b09] text-white shadow-md"
-                  : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
+                ? "bg-[#070b09] text-white shadow-md"
+                : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
                 }`}
             >
               {cat.label}

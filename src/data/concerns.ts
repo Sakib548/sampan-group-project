@@ -19,7 +19,7 @@ export const concerns: Concern[] = [
   },
   {
     id: 3,
-    name: "Sampan Motalib Skyline",
+    name: "Sampan  Skyline",
     category: "Development & Construction",
     tagline: "Commercial + residential construction project",
     logo: "/images/brand/sampanmotolibskyline.webp",

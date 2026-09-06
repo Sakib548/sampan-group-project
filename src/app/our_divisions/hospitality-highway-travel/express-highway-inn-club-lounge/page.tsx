@@ -259,154 +259,78 @@ export default function ExpressHighwayInnClubLoungePage() {
 
         {/* Hero Content Container */}
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            {/* Left Headline & Content */}
-            <div className="lg:col-span-7 max-w-2xl space-y-5 sm:space-y-6">
-              {/* Eyebrow Square Badge (Royal Sapphire) */}
-              {/* <div className="inline-flex items-center gap-3 border border-[#3b82f6]/50 bg-[#2563eb]/20 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#60a5fa]">
+          {/* Main Headline & Content */}
+          <div className="max-w-4xl space-y-5 sm:space-y-6">
+            {/* Eyebrow Square Badge (Royal Sapphire) */}
+            {/* <div className="inline-flex items-center gap-3 border border-[#3b82f6]/50 bg-[#2563eb]/20 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#60a5fa]">
                 <span className="h-2 w-2 rounded-none bg-[#3b82f6]" />
                 <span>Private Members&apos; Club &amp; Lounge • Membership Share</span>
               </div>*/}
 
-              {/* Headline */}
-              <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold leading-[0.98] tracking-[-0.03em] text-white">
-                Express Highway Inn <br />
-                <span className="text-[#3b82f6] block mt-1">
-                  Club &amp; Lounge
-                </span>
-              </h1>
+            {/* Headline */}
+            <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold leading-[0.98] tracking-[-0.03em] text-white">
+              Express Highway Inn <br />
+              <span className="text-[#3b82f6] block mt-1">
+                Club &amp; Lounge
+              </span>
+            </h1>
 
-              {/* Subheadline */}
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md font-light tracking-wide border-l-2 border-[#3b82f6]/80 pl-4">
-                Private member lounges, wellness suites, and exclusive
-                membership share privileges.
-              </p>
+            {/* Subheadline */}
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md font-light tracking-wide border-l-2 border-[#3b82f6]/80 pl-4">
+              Private member lounges, wellness suites, and exclusive
+              membership share privileges.
+            </p>
 
-              {/* Square Action Buttons */}
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  href="#waitlist"
-                  className="group inline-flex items-center justify-center gap-2 rounded-none bg-[#2563eb] hover:bg-[#1d4ed8] px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-[#2563eb]/25"
-                >
-                  <span>Join Members Waitlist</span>
-                  <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
+            {/* Square Action Buttons */}
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Link
+                href="#waitlist"
+                className="group inline-flex items-center justify-center gap-2 rounded-none bg-[#2563eb] hover:bg-[#1d4ed8] px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-[#2563eb]/25"
+              >
+                <span>Join Members Waitlist</span>
+                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
 
-                <Link
-                  href="#club-overview"
-                  className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm"
-                >
-                  View Club Privileges
-                </Link>
+              <Link
+                href="#club-overview"
+                className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm"
+              >
+                View Club Privileges
+              </Link>
 
-                <Link
-                  href="#facilities-gallery"
-                  className="inline-flex items-center justify-center rounded-none border border-[#3b82f6]/40 bg-[#2563eb]/10 hover:bg-[#2563eb]/20 px-6 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#60a5fa] transition-all duration-300 backdrop-blur-sm"
-                >
-                  Explore 12+ Facilities
-                </Link>
-              </div>
-
-              {/* Quick Metrics (Square Cards) */}
-              <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-xs">
-                <div className="border-l-2 border-[#3b82f6] pl-4">
-                  <p className="text-xl sm:text-2xl font-bold text-white">
-                    Private
-                  </p>
-                  <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">
-                    Access Tier
-                  </p>
-                </div>
-                <div className="border-l-2 border-[#3b82f6] pl-4">
-                  <p className="text-xl sm:text-2xl font-bold text-[#60a5fa]">
-                    12+ Suites
-                  </p>
-                  <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">
-                    Club Amenities
-                  </p>
-                </div>
-                <div className="border-l-2 border-[#3b82f6] pl-4">
-                  <p className="text-xl sm:text-2xl font-bold text-white">
-                    Lifetime
-                  </p>
-                  <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">
-                    Share Dividend
-                  </p>
-                </div>
-              </div>
+              <Link
+                href="#facilities-gallery"
+                className="inline-flex items-center justify-center rounded-none border border-[#3b82f6]/40 bg-[#2563eb]/10 hover:bg-[#2563eb]/20 px-6 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#60a5fa] transition-all duration-300 backdrop-blur-sm"
+              >
+                Explore 12+ Facilities
+              </Link>
             </div>
 
-            {/* Right: Founding Club Shareholder Spotlight Card (Glassmorphic Luxury) */}
-            <div className="lg:col-span-5">
-              <div className="group relative rounded-none border border-white/15 bg-black/60 backdrop-blur-xl p-8 sm:p-10 shadow-2xl transition-all duration-500 hover:border-[#3b82f6]/80">
-                {/* Top Royal Blue Accent Line */}
-                <div className="absolute top-0 left-0 h-[3px] w-full bg-[#2563eb]" />
-
-                <div className="flex items-start justify-between">
-                  <div>
-                    <span className="inline-block rounded-none bg-[#2563eb]/20 border border-[#3b82f6]/50 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#60a5fa]">
-                      Founding Club Share
-                    </span>
-                    <h3 className="mt-3 text-xl font-bold text-white">
-                      Lifetime Membership Pass
-                    </h3>
-                    <p className="mt-1 text-xs text-white/60 leading-relaxed">
-                      Become a founding shareholder member with guaranteed
-                      capital appreciation, priority access, and VIP family
-                      privileges.
-                    </p>
-                  </div>
-                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-none border border-[#3b82f6]/40 bg-[#2563eb]/15 text-[#60a5fa]">
-                    <FaCrown className="text-sm" />
-                  </div>
-                </div>
-
-                <div className="mt-6 space-y-2.5 text-xs text-white/80 border-t border-white/10 pt-5">
-                  <div className="flex items-center gap-2.5">
-                    <FaCheck className="text-[#3b82f6] text-[10px] flex-shrink-0" />
-                    <span>
-                      Unlimited access to Executive Club &amp; VVIP Lounge
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <FaCheck className="text-[#3b82f6] text-[10px] flex-shrink-0" />
-                    <span>
-                      Complimentary Heated Pool, GYM &amp; Billiards Room
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <FaCheck className="text-[#3b82f6] text-[10px] flex-shrink-0" />
-                    <span>
-                      Free monthly automated car wash &amp; EV Supercharging
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
-                  <div>
-                    <p className="font-mono text-[10px] uppercase tracking-wider text-white/40">
-                      Founding Share
-                    </p>
-                    <p className="text-2xl font-extrabold text-white">
-                      ৳75,000
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-mono text-[10px] uppercase tracking-wider text-white/40">
-                      Share Pool
-                    </p>
-                    <span className="inline-block rounded-none border border-[#3b82f6]/60 bg-[#2563eb]/20 px-3 py-1 font-mono text-[10px] font-bold text-[#60a5fa]">
-                      Limited 50 Shares
-                    </span>
-                  </div>
-                </div>
-
-                <Link
-                  href="#waitlist"
-                  className="mt-6 block text-center w-full py-3.5 rounded-none bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-md shadow-[#2563eb]/25"
-                >
-                  Apply For Club Share
-                </Link>
+            {/* Quick Metrics (Square Cards) */}
+            <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-xs">
+              <div className="border-l-2 border-[#3b82f6] pl-4">
+                <p className="text-xl sm:text-2xl font-bold text-white">
+                  Private
+                </p>
+                <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">
+                  Access Tier
+                </p>
+              </div>
+              <div className="border-l-2 border-[#3b82f6] pl-4">
+                <p className="text-xl sm:text-2xl font-bold text-[#60a5fa]">
+                  12+ Suites
+                </p>
+                <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">
+                  Club Amenities
+                </p>
+              </div>
+              <div className="border-l-2 border-[#3b82f6] pl-4">
+                <p className="text-xl sm:text-2xl font-bold text-white">
+                  Lifetime
+                </p>
+                <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">
+                  Share Dividend
+                </p>
               </div>
             </div>
           </div>
@@ -529,11 +453,10 @@ export default function ExpressHighwayInnClubLoungePage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-[0.18em] transition-all duration-300 cursor-pointer ${
-                  activeCategory === cat
+                className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-[0.18em] transition-all duration-300 cursor-pointer ${activeCategory === cat
                     ? "bg-neutral-950 text-white shadow-sm"
                     : "bg-neutral-100 text-neutral-700 hover:bg-[#2563eb] hover:text-white border border-neutral-200"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -713,11 +636,10 @@ export default function ExpressHighwayInnClubLoungePage() {
               <div
                 key={i}
                 onClick={() => setSelectedImage(src)}
-                className={`group relative overflow-hidden rounded-none bg-neutral-100 border border-neutral-200 shadow-sm cursor-pointer ${
-                  i === 0
+                className={`group relative overflow-hidden rounded-none bg-neutral-100 border border-neutral-200 shadow-sm cursor-pointer ${i === 0
                     ? "aspect-[16/10] md:col-span-2 md:row-span-2 md:aspect-auto min-h-[340px]"
                     : "aspect-[16/10]"
-                }`}
+                  }`}
               >
                 <Image
                   src={src}
@@ -905,7 +827,7 @@ export default function ExpressHighwayInnClubLoungePage() {
       </section>
 
       {/* ================= 7. FOUNDING SHARE PRICING (ROYAL SAPPHIRE BANNER) ================= */}
-      <section className="bg-[#2563eb] px-6 py-24 text-white sm:px-10 lg:px-16 lg:py-32 border-b border-neutral-200">
+      {/* <section className="bg-[#2563eb] px-6 py-24 text-white sm:px-10 lg:px-16 lg:py-32 border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
           <div className="flex items-center gap-4 mb-6">
             <span className="h-px w-10 bg-white"></span>
@@ -990,7 +912,7 @@ export default function ExpressHighwayInnClubLoungePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= 8. NEARBY AT THIS LOCATION ================= */}
       <section className="bg-[#F5F5F2] px-6 py-24 sm:px-10 lg:px-16 lg:py-32 border-b border-neutral-200">

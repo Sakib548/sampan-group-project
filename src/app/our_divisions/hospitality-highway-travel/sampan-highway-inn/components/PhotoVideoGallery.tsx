@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { 
-  FaImages, 
-  FaPlay, 
-  FaTimes, 
-  FaChevronLeft, 
-  FaChevronRight, 
+import {
+  FaImages,
+  FaPlay,
+  FaTimes,
+  FaChevronLeft,
+  FaChevronRight,
   FaExpand,
   FaVideo
 } from "react-icons/fa";
@@ -29,14 +29,14 @@ const galleryItems = [
     aspect: "col-span-2 row-span-2",
     caption: "Architectural night facade showing direct highway frontage and lighted entry.",
   },
-  {
-    id: 2,
-    title: "Gourmet Highway Restaurant & Lounge",
-    category: "dining",
-    src: "/images/facilities/express_highway_inn/1.Highway-Club-&-Lounge.png",
-    aspect: "col-span-1",
-    caption: "Warm ambiance, live culinary stations, and family dining tables.",
-  },
+  // {
+  //   id: 2,
+  //   title: "Gourmet Highway Restaurant & Lounge",
+  //   category: "dining",
+  //   src: "/images/facilities/express_highway_inn/1.Highway-Club-&-Lounge.png",
+  //   aspect: "col-span-1",
+  //   caption: "Warm ambiance, live culinary stations, and family dining tables.",
+  // },
   {
     id: 3,
     title: "VVIP Soundproof Rest Suite",
@@ -45,14 +45,14 @@ const galleryItems = [
     aspect: "col-span-1",
     caption: "King orthopaedic bed with acoustic triple-glazing for peaceful sleep.",
   },
-  {
-    id: 4,
-    title: "120kW DC EV Ultra-Fast Charging Plaza",
-    category: "exterior",
-    src: "/images/facilities/express_highway_inn/6.EV-Car-Charging.png",
-    aspect: "col-span-1",
-    caption: "Covered high-output dual-gun DC superchargers for all EV models.",
-  },
+  // {
+  //   id: 4,
+  //   title: "120kW DC EV Ultra-Fast Charging Plaza",
+  //   category: "exterior",
+  //   src: "/images/facilities/express_highway_inn/6.EV-Car-Charging.png",
+  //   aspect: "col-span-1",
+  //   caption: "Covered high-output dual-gun DC superchargers for all EV models.",
+  // },
   {
     id: 5,
     title: "Executive Outings & Corporate Sessions",
@@ -77,14 +77,14 @@ const galleryItems = [
     aspect: "col-span-1",
     caption: "Exclusive private waiting lounge with continuous barista coffee.",
   },
-  {
-    id: 8,
-    title: "Automated Touchless Car Wash Plaza",
-    category: "exterior",
-    src: "/images/facilities/express_highway_inn/7.Automatic-Car-Wash.png",
-    aspect: "col-span-1",
-    caption: "High-pressure underbody rinse and detailing while guests dine.",
-  },
+  // {
+  //   id: 8,
+  //   title: "Automated Touchless Car Wash Plaza",
+  //   category: "exterior",
+  //   src: "/images/facilities/express_highway_inn/7.Automatic-Car-Wash.png",
+  //   aspect: "col-span-1",
+  //   caption: "High-pressure underbody rinse and detailing while guests dine.",
+  // },
 ];
 
 export default function PhotoVideoGallery() {
@@ -113,7 +113,7 @@ export default function PhotoVideoGallery() {
   return (
     <section id="gallery" className="bg-[#faf9f6] py-24 sm:py-32 text-[#1a1a1a]">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -149,11 +149,10 @@ export default function PhotoVideoGallery() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                activeCategory === cat.id
+              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
                   ? "bg-[#070b09] text-white shadow-md"
                   : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
-              }`}
+                }`}
             >
               {cat.label}
             </button>
@@ -166,9 +165,8 @@ export default function PhotoVideoGallery() {
             <div
               key={item.id}
               onClick={() => setLightboxIndex(index)}
-              className={`group relative overflow-hidden rounded-2xl bg-neutral-200 shadow-sm border border-neutral-200 cursor-pointer ${
-                index === 0 ? "aspect-[4/3] sm:col-span-2 sm:row-span-2 sm:aspect-auto min-h-[320px]" : "aspect-[4/3]"
-              }`}
+              className={`group relative overflow-hidden rounded-2xl bg-neutral-200 shadow-sm border border-neutral-200 cursor-pointer ${index === 0 ? "aspect-[4/3] sm:col-span-2 sm:row-span-2 sm:aspect-auto min-h-[320px]" : "aspect-[4/3]"
+                }`}
             >
               <Image
                 src={item.src}

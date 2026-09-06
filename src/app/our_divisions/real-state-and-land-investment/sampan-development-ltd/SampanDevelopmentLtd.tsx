@@ -23,7 +23,7 @@ const buildCategories = [
 
 const atlasProjects = [
   { num: "01", name: "Sampan Metro Square", location: "Ashulia" },
-  { num: "02", name: "Sampan Motalib Skyline", location: "Dhaka" },
+  { num: "02", name: "Sampan  Skyline", location: "Dhaka" },
   { num: "03", name: "Sampan Nexus", location: "Mawna" },
   {
     num: "04",

@@ -73,7 +73,7 @@ export default function SampanAgroGolfClubLoungePage() {
       />
 
       {/* SECTION 2 & 3: Membership Tiers & Pricing per Tier */}
-      <ClubMembershipTiers />
+      {/* <ClubMembershipTiers /> */}
 
       {/* SECTION 4: Facility Photo Gallery */}
       <GolfMediaGallery

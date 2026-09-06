@@ -75,7 +75,7 @@ export default function SampanHighwayInnRestaurantPartyCenterPage() {
       <PartyCenterMenuOverview />
 
       {/* SECTION 5: Event Package Pricing */}
-      <PartyCenterPackagePricing />
+      {/* <PartyCenterPackagePricing /> */}
 
       {/* SECTION 6: Availability Calendar */}
       <PartyCenterAvailabilityCalendar />

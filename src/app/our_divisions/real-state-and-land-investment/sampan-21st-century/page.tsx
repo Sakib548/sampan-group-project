@@ -256,7 +256,7 @@ export default function Sampan21stCenturyPage() {
 
       {/* 7. Construction Progress */}
       <ConstructionProgressTracker
-        overallCompletionPercentage={45}
+        overallCompletionPercentage={100}
         expectedHandoverDate="Active Development"
         currentPhase="Structure & Floor Layout Construction"
         milestones={progressMilestones}

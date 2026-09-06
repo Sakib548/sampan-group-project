@@ -256,11 +256,11 @@ export default function SampanTajPage() {
 
       {/* 7. Construction Progress */}
       <ConstructionProgressTracker
-        overallCompletionPercentage={50}
+        overallCompletionPercentage={100}
         expectedHandoverDate="Active Construction Phase"
         currentPhase="Piling & Structural Frame Construction"
         milestones={progressMilestones}
-        bgTheme="about-ivory"
+        bgTheme="divisions-green"
       />
 
       {/* 8. Legal Credentials */}

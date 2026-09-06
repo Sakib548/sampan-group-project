@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FaBed, FaBath, FaCompass, FaCheckCircle, FaBuilding } from "react-icons/fa";
 
@@ -16,6 +17,8 @@ export interface UnitTypeItem {
   orientation: string;
   highlights: string[];
   image?: string;
+  link?: string;
+  href?: string;
 }
 
 export interface UnitTypesAndSizesProps {
@@ -97,7 +100,7 @@ export default function UnitTypesAndSizes({
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredUnits.map((unit) => {
             const hasImage = Boolean(unit.image && unit.image.trim().length > 0);
-            const displayImage = hasImage ? unit.image! : "/images/projects/coming-soon-bg.jpg";
+            const displayImage = hasImage ? unit.image! : "/images/projects/unit-coming-soon.jpg";
 
             return (
               <div
@@ -124,9 +127,9 @@ export default function UnitTypesAndSizes({
 
                   {/* Coming Soon Indicator */}
                   {!hasImage && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px] z-10">
-                      <span className="font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-white bg-black/70 border border-white/25 px-4 py-1.5 shadow-lg">
-                        Photo Coming Soon
+                    <div className="absolute top-3 right-3 z-10">
+                      <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-amber-300 bg-black/80 border border-amber-500/40 px-3 py-1 shadow-md backdrop-blur-sm">
+                        Upcoming Unit
                       </span>
                     </div>
                   )}
@@ -185,12 +188,21 @@ export default function UnitTypesAndSizes({
                       <span className="font-mono font-bold text-lg text-[#ca8a04]">{unit.priceRange}</span>
                     </div>
 
-                    <button
-                      onClick={() => onSelectUnit && onSelectUnit(unit.id)}
-                      className="bg-[#183b2b] hover:bg-[#ca8a04] text-white hover:text-neutral-950 px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
-                    >
-                      Inquire
-                    </button>
+                    {unit.link || unit.href ? (
+                      <Link
+                        href={unit.link || unit.href!}
+                        className="bg-[#183b2b] hover:bg-[#ca8a04] text-white hover:text-neutral-950 px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm inline-flex items-center justify-center cursor-pointer"
+                      >
+                        Inquire
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={() => onSelectUnit && onSelectUnit(unit.id)}
+                        className="bg-[#183b2b] hover:bg-[#ca8a04] text-white hover:text-neutral-950 px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
+                      >
+                        Inquire
+                      </button>
+                    )}
                   </div>
                 </div>
 

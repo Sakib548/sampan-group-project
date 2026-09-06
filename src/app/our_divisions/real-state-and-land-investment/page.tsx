@@ -71,15 +71,15 @@ const projectsList = [
     highlights: ["Commercial Outlets", "Executive Office Suites", "Ample Parking"],
   },
   {
-    id: "sampan-motalib-skyline",
-    name: "Sampan Motalib Skyline",
+    id: "sampan--skyline",
+    name: "Sampan  Skyline",
     category: "High-Rise Residential",
     status: "Coming Soon",
     statusType: "coming-soon",
     location: "Central Dhaka Corridor",
     description: "Pre-launch luxury skyline apartment tower featuring panoramic urban views and smart automation.",
     image: "/images/projects/Sampan-White-House-&-Motel.png",
-    link: "/our_divisions/real-state-and-land-investment/sampan-motalib-skyline",
+    link: "/our_divisions/real-state-and-land-investment/sampan--skyline",
     highlights: ["Pre-Launch Bookings", "Smart Automation", "Central Dhaka Location"],
   },
   {
@@ -135,7 +135,7 @@ const projectsList = [
 export default function RealEstateArchivePage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased min-h-screen selection:bg-[#00a651] selection:text-white">
-      
+
       {/* Archive Dark Hero Header with Brand Logo Colors (#00a651 & #38bdf8) */}
       <section className="relative pt-36 pb-24 border-b border-white/10 overflow-hidden bg-[#090d16] text-white">
         <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 relative z-10">
@@ -159,7 +159,7 @@ export default function RealEstateArchivePage() {
 
       {/* Projects Grid Section with Signature Ambient Radial Overlay */}
       <section className="py-20 bg-[#f3f6f2] text-[#183b2b] relative overflow-hidden">
-        
+
         {/* Signature DivisionsSection Ambient Radial Mesh */}
         <div
           aria-hidden="true"
@@ -167,7 +167,7 @@ export default function RealEstateArchivePage() {
         />
 
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsList.map((project) => (
               <div
@@ -189,13 +189,12 @@ export default function RealEstateArchivePage() {
                       {project.category}
                     </span>
 
-                    <span className={`absolute top-4 right-4 font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 border backdrop-blur-md shadow-sm ${
-                      project.statusType === "flagship"
+                    <span className={`absolute top-4 right-4 font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 border backdrop-blur-md shadow-sm ${project.statusType === "flagship"
                         ? "bg-blue-500/10 text-blue-700 border-blue-500/30"
                         : project.statusType === "ongoing"
-                        ? "bg-emerald-500/10 text-emerald-700 border-emerald-500/30"
-                        : "bg-amber-500/10 text-amber-700 border-amber-500/30"
-                    }`}>
+                          ? "bg-emerald-500/10 text-emerald-700 border-emerald-500/30"
+                          : "bg-amber-500/10 text-amber-700 border-amber-500/30"
+                      }`}>
                       {project.status}
                     </span>
                   </div>

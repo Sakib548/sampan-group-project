@@ -209,11 +209,11 @@ export default function SampanGolfAcademyPage() {
       <GolfInstructorProfiles />
 
       {/* SECTION 5: Program Pricing / Package Tiers */}
-      <GolfPricingTiers
+      {/* <GolfPricingTiers
         title="Academy Program Pricing & Package Tiers"
         subtitle="Flexible coaching packages designed for complete beginners, intermediate golfers, and junior talent."
         tiers={academyPricing}
-      />
+      /> */}
 
       {/* SECTION 6: Junior / Youth Program Spotlight */}
       <GolfJuniorSpotlight />

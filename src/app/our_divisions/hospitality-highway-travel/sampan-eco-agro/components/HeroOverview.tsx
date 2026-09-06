@@ -4,8 +4,7 @@ import Image from "next/image";
 import { 
   FaLeaf, 
   FaRoute, 
-  FaPhoneAlt, 
-  FaStar
+  FaPhoneAlt
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -34,10 +33,8 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
       <div className="pointer-events-none absolute bottom-10 right-10 w-96 h-96 bg-[#b9e583]/15 rounded-full blur-[120px] z-0" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-
-          {/* Left Column: Hero Content */}
-          <div className="lg:col-span-8 max-w-3xl space-y-4 sm:space-y-5">
+        {/* Main Hero Content */}
+        <div className="max-w-4xl space-y-4 sm:space-y-5">
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center gap-3 border border-[#b9e583]/50 bg-[#b9e583]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#b9e583]">
               <FaLeaf className="text-xs text-[#b9e583]" />
@@ -53,7 +50,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
             </h1>
 
             {/* Tagline & Subheading */}
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md font-light tracking-wide border-l-2 border-[#b9e583]/80 pl-4">
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-[#b9e583]/80 pl-4">
               A 50+ acre organic farm sanctuary with lakeview eco-cottages and farm-to-table dining.
             </p>
 
@@ -106,63 +103,6 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
                 <p className="text-[11px] text-white/60 mt-0.5">35 Mins from Dhaka City</p>
               </div>
             </div>
-          </div>
-
-          {/* Right Column: Hero Spotlight Card */}
-          <div className="lg:col-span-4">
-            <div className="border border-white/15 bg-[#0c1c14]/80 backdrop-blur-xl p-8 shadow-2xl relative overflow-hidden group">
-              {/* Top Accent Line */}
-              <div className="absolute top-0 left-0 h-[3px] w-full bg-[#b9e583]" />
-              
-              <div className="flex items-center justify-between pb-6 border-b border-white/10">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#b9e583] bg-[#b9e583]/15 border border-[#b9e583]/40 px-3 py-1">
-                  Resort Spotlight
-                </span>
-                <div className="flex items-center gap-1 text-[#b9e583] text-xs font-bold bg-[#b9e583]/10 border border-[#b9e583]/30 px-2.5 py-1">
-                  <FaStar className="text-[10px]" />
-                  <span>4.9 / 5.0 Rating</span>
-                </div>
-              </div>
-
-              <div className="mt-6 space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold text-white">Organic Living &amp; Country Retreat</h3>
-                  <p className="text-xs text-white/70 mt-1 leading-relaxed">
-                    Experience picking seasonal fruit directly from trees, fishing in natural ponds, and relaxing in luxury lakeview cottages.
-                  </p>
-                </div>
-
-                <div className="space-y-2.5 pt-2 text-xs text-white/80">
-                  <div className="flex items-center justify-between py-1.5 border-b border-white/10">
-                    <span className="text-white/50">Experience Types</span>
-                    <span className="font-semibold text-white">Day Long &amp; Overnight Stay</span>
-                  </div>
-                  <div className="flex items-center justify-between py-1.5 border-b border-white/10">
-                    <span className="text-white/50">Meet the Harvest</span>
-                    <span className="font-semibold text-[#b9e583]">Organic Pick-Your-Own</span>
-                  </div>
-                  <div className="flex items-center justify-between py-1.5 border-b border-white/10">
-                    <span className="text-white/50">Dining Kitchen</span>
-                    <span className="font-semibold text-white">Fresh Lake Fish &amp; Agri-Buffet</span>
-                  </div>
-                  <div className="flex items-center justify-between py-1.5">
-                    <span className="text-white/50">Travel Distance</span>
-                    <span className="font-semibold text-[#b9e583]">35km Dhaka Expressway Exit</span>
-                  </div>
-                </div>
-
-                <div className="pt-4">
-                  <button
-                    onClick={onOpenBooking}
-                    className="w-full bg-[#b9e583] hover:bg-[#a6db6c] py-3.5 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0c1c14] transition-all duration-300 cursor-pointer shadow-md shadow-[#b9e583]/20"
-                  >
-                    Calculate Package Price
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

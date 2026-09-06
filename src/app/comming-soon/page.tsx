@@ -173,12 +173,12 @@ export default function ComingSoon() {
       {/* ── Full Screen Background Image ── */}
       <div className="cs-bg-image absolute inset-0 z-0">
         <Image
-          src="/images/projects/coming-soon-bg.jpg"
+          src="/images/projects/coming-soon-abstract.jpg"
           alt="Sampan Group Development"
           fill
           priority
           sizes="100vw"
-          className="h-full w-full object-cover opacity-30 brightness-[0.6]"
+          className="h-full w-full object-cover opacity-35 brightness-[0.7]"
         />
       </div>
 

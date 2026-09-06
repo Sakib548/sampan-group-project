@@ -48,8 +48,8 @@ const locations: Location[] = [
     lng: 90.4,
   },
   {
-    id: "motalib-skyline",
-    name: "Sampan Motalib Skyline",
+    id: "-skyline",
+    name: "Sampan  Skyline",
     category: "Real Estate",
     location: "Dhaka",
     description:
@@ -115,12 +115,11 @@ const createPinIcon = (isActive: boolean) => {
     className: "custom-leaflet-pin",
     html: `
       <div style="position: relative; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px;">
-        ${
-          isActive
-            ? `<span style="position: absolute; width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid #059669; animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;"></span>
+        ${isActive
+        ? `<span style="position: absolute; width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid #059669; animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;"></span>
                <span style="position: absolute; width: 44px; height: 44px; border-radius: 50%; background: rgba(5, 150, 105, 0.1);"></span>`
-            : ""
-        }
+        : ""
+      }
         <span style="
           position: relative; 
           width: ${isActive ? "12px" : "8px"}; 
@@ -390,26 +389,23 @@ export default function LocationMap() {
                   key={location.id}
                   type="button"
                   onClick={() => setActiveLocation(location)}
-                  className={`map-list-item group flex items-center gap-6 border-b border-neutral-200 py-5 text-left transition-colors duration-300 ${
-                    isActive ? "bg-neutral-50" : "hover:bg-neutral-50"
-                  }`}
+                  className={`map-list-item group flex items-center gap-6 border-b border-neutral-200 py-5 text-left transition-colors duration-300 ${isActive ? "bg-neutral-50" : "hover:bg-neutral-50"
+                    }`}
                 >
                   <span
-                    className={`font-mono text-xs tracking-widest transition-colors duration-300 ${
-                      isActive
+                    className={`font-mono text-xs tracking-widest transition-colors duration-300 ${isActive
                         ? "text-emerald-600"
                         : "text-neutral-400 group-hover:text-neutral-800"
-                    }`}
+                      }`}
                   >
                     0{i + 1}
                   </span>
                   <div className="flex-1">
                     <h3
-                      className={`text-base font-semibold tracking-tight transition-colors duration-300 ${
-                        isActive
+                      className={`text-base font-semibold tracking-tight transition-colors duration-300 ${isActive
                           ? "text-neutral-900"
                           : "text-neutral-600 group-hover:text-neutral-900"
-                      }`}
+                        }`}
                     >
                       {location.name}
                     </h3>
@@ -418,11 +414,10 @@ export default function LocationMap() {
                     </p>
                   </div>
                   <FiMapPin
-                    className={`h-5 w-5 transition-colors duration-300 ${
-                      isActive
+                    className={`h-5 w-5 transition-colors duration-300 ${isActive
                         ? "text-emerald-600"
                         : "text-neutral-300 group-hover:text-neutral-500"
-                    }`}
+                      }`}
                   />
                 </button>
               );

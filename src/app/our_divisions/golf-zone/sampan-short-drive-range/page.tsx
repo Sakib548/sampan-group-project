@@ -209,11 +209,11 @@ export default function SampanShortDriveRangePage() {
       <GolfHoursOfOperation />
 
       {/* SECTION 5: Pricing */}
-      <GolfPricingTiers
+      {/* <GolfPricingTiers
         title="Bay Rental Rates & Bucket Passes"
         subtitle="Flexible hourly bay rates, Toptracer VIP suites, and discounted 10-hour practice passes."
         tiers={rangePricing}
-      />
+      /> */}
 
       {/* SECTION 6: Online Bay Booking System */}
       <GolfBayBookingWidget />

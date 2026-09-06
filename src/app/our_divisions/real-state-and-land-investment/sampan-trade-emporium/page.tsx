@@ -152,13 +152,13 @@ export default function SampanTradeEmporiumPage() {
       />
 
       {/* 5. Construction Progress */}
-      <ConstructionProgressTracker
+      {/* <ConstructionProgressTracker
         overallCompletionPercentage={55}
         expectedHandoverDate="Q4 2028"
         currentPhase="Basement Excavation & Foundation"
         milestones={progressMilestones}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 6. Floor Plans */}
       <FloorPlansViewer

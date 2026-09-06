@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface FactItem {
   value: string;
   label: string;
@@ -37,9 +35,9 @@ export default function PartyCenterHero({
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 rounded-full bg-amber-500/15 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 rounded-full bg-red-700/15 blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column Text Content */}
-        <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Main Content */}
+        <div className="max-w-4xl space-y-5 sm:space-y-6">
           <div className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-500/20 text-amber-300 border border-amber-500/30">
               Hospitality &amp; Leisure Division
@@ -66,7 +64,7 @@ export default function PartyCenterHero({
             </p>
           )}
 
-          <p className="text-xs sm:text-sm text-amber-100/80 leading-relaxed max-w-md font-light tracking-wide border-l-2 border-amber-400/60 pl-4">
+          <p className="text-xs sm:text-sm text-amber-100/80 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-amber-400/60 pl-4">
             {description}
           </p>
 
@@ -94,32 +92,6 @@ export default function PartyCenterHero({
                 <div className="text-xs text-amber-200/70 mt-1 font-medium">{fact.label}</div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Right Logo Display */}
-        <div className="lg:col-span-5 flex justify-center">
-          <div className="relative w-full max-w-md bg-gradient-to-b from-[#2a241e] to-[#141210] rounded-3xl border border-amber-700/40 p-8 shadow-2xl flex flex-col items-center justify-center group hover:border-amber-400/60 transition-all">
-            <div className="absolute inset-4 rounded-2xl border border-amber-500/20 pointer-events-none" />
-
-            <div className="relative w-full h-40 transition-transform duration-500 group-hover:scale-105">
-              <Image
-                src="/images/brand/sampanhighwayinnresturant.png"
-                alt={concernName}
-                fill sizes="100vw"
-                priority
-                className="object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)]"
-              />
-            </div>
-
-            <div className="mt-6 text-center">
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-950/80 px-3 py-1 rounded-full border border-amber-800">
-                Official Brand Emblem
-              </span>
-              <p className="text-sm font-semibold text-white mt-2 font-serif">
-                {concernName}
-              </p>
-            </div>
           </div>
         </div>
       </div>

@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { 
-  FaBed, 
-  FaUtensils, 
-  FaGlassCheers, 
-  FaCar, 
-  FaBolt, 
-  FaPrayingHands, 
-  FaHeadset, 
+import {
+  FaBed,
+  FaUtensils,
+  FaGlassCheers,
+  FaCar,
+  FaBolt,
+  FaPrayingHands,
+  FaHeadset,
   FaStore,
   FaCheck,
   FaClock
@@ -40,26 +40,26 @@ const facilitiesData = [
     hours: "Morning & Evening Slots",
     highlights: ["300+ Guest Capacity", "HD Audio/Visual Staging", "Bridal Changing Suite", "Custom Banquet Menus"],
   },
-  {
-    id: "garden-restaurant",
-    title: "24/7 Garden Restaurant & Cafe",
-    category: "Dining",
-    description: "Multi-cuisine highway kitchen serving traditional Bengali delicacies, Chinese sizzling dishes, fresh grill kebabs, and barista coffees.",
-    icon: FaUtensils,
-    image: "/images/facilities/highway_inn/all_day_comfort.png",
-    hours: "Always Open 24/7",
-    highlights: ["Express 20-Min Serving", "Farm-Fresh Organic Ingredients", "Outdoor Lawn Seating", "Takeaway Travel Packs"],
-  },
-  {
-    id: "family-lounge",
-    title: "Family Rest & Children's Play Lounge",
-    category: "Accommodations",
-    description: "Dedicated safe space for traveling families with infant diaper-changing facilities, kid-friendly play areas, and relaxing seating.",
-    icon: FaBed,
-    image: "/images/projects/Sampan-White-House-&-Motel.png",
-    hours: "24 Hours Accessible",
-    highlights: ["Child Safe Environment", "Nursing & Baby Care Station", "Comfortable Sofa Seating", "Filtered Drinking Water"],
-  },
+  // {
+  //   id: "garden-restaurant",
+  //   title: "24/7 Garden Restaurant & Cafe",
+  //   category: "Dining",
+  //   description: "Multi-cuisine highway kitchen serving traditional Bengali delicacies, Chinese sizzling dishes, fresh grill kebabs, and barista coffees.",
+  //   icon: FaUtensils,
+  //   image: "/images/facilities/highway_inn/all_day_comfort.png",
+  //   hours: "Always Open 24/7",
+  //   highlights: ["Express 20-Min Serving", "Farm-Fresh Organic Ingredients", "Outdoor Lawn Seating", "Takeaway Travel Packs"],
+  // },
+  // {
+  //   id: "family-lounge",
+  //   title: "Family Rest & Children's Play Lounge",
+  //   category: "Accommodations",
+  //   description: "Dedicated safe space for traveling families with infant diaper-changing facilities, kid-friendly play areas, and relaxing seating.",
+  //   icon: FaBed,
+  //   image: "/images/projects/Sampan-White-House-&-Motel.png",
+  //   hours: "24 Hours Accessible",
+  //   highlights: ["Child Safe Environment", "Nursing & Baby Care Station", "Comfortable Sofa Seating", "Filtered Drinking Water"],
+  // },
   {
     id: "parking-ev",
     title: "Gated Secure Parking & EV Charging",
@@ -112,7 +112,7 @@ export default function FacilitiesList() {
   return (
     <section id="facilities" className="bg-white py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -127,7 +127,7 @@ export default function FacilitiesList() {
               <span className="text-[#ca8a04]">for a comfortable journey.</span>
             </h2>
           </div>
-          
+
           <p className="max-w-md text-sm text-neutral-500 leading-relaxed font-normal">
             Whether taking a brief driving intermission or hosting an unforgettable banquet in White Hall, we offer complete comfort on the road.
           </p>
@@ -139,11 +139,10 @@ export default function FacilitiesList() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                activeCategory === cat
+              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat
                   ? "bg-neutral-950 text-white shadow-sm"
                   : "bg-neutral-100 text-neutral-700 hover:bg-[#e8b84b] hover:text-neutral-950 border border-neutral-200"
-              }`}
+                }`}
             >
               {cat}
             </button>
