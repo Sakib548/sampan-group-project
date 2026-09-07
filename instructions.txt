@@ -1,0 +1,55 @@
+==================================================
+E-COMMERCE STOREFRONT LEARNING ROADMAP & INSTRUCTIONS
+==================================================
+
+PROJECT PROGRESS:
+[x] Phase 1 - Step 1: Created src/components/Button.tsx
+[x] Phase 1 - Step 2: Defined ButtonProps with React.ButtonHTMLAttributes & optional variant/size defaults
+[x] Phase 1 - Step 3: Implemented modern minimalist styling (Shadcn/Radix inspired) in Button.tsx
+[x] Phase 1 - Step 4: Added custom borderRadius prop (rounded-xl, rounded-lg, rounded-md, rounded-full, rounded-none)
+[x] Phase 1 - Step 5: Added icon support (leftIcon, rightIcon) with lucide-react and shrink-0
+[x] Phase 1 - Step 6: Mobile responsiveness & typography lock (whitespace-nowrap on Button, flex-wrap on containers)
+[ ] Phase 2 - Step 1: Create Badge component (src/components/Badge.tsx)
+[ ] Phase 2 - Step 2: Create Product Card component (src/components/ProductCard.tsx)
+[ ] Phase 2 - Step 3: Create Navbar with Cart counter (src/components/Navbar.tsx)
+[ ] Phase 3: Client State & Cart Drawer (useState, Context)
+[ ] Phase 4: Product Grid, Filters, and Dynamic Details Page
+
+--------------------------------------------------
+LESSONS & BEST PRACTICES LEARNED IN PHASE 1
+--------------------------------------------------
+
+1. Opacity Modifiers (e.g. zinc-900/90):
+   - In Tailwind, the slash `/` controls opacity.
+   - `zinc-900/90` means the color `zinc-900` at 90% opacity.
+   - Great for hover states and subtle overlays without picking mismatched colors.
+
+2. Protecting Buttons from Mobile Squishing:
+   - `whitespace-nowrap` inside Button baseStyles prevents button labels from awkwardly breaking into multiple lines ("Add" / "to" / "Cart") when space is tight.
+   - `shrink-0` on icon wrappers prevents SVGs from distorting or flattening.
+   - Always remember that flex containers default to `flex-row nowrap`. For rows of buttons or chips, add `flex-wrap` so items wrap onto new lines on smaller screens.
+
+--------------------------------------------------
+NEXT STEP: Phase 2 - Step 1: Badge Component
+--------------------------------------------------
+Location: src/components/Badge.tsx
+
+Badges are used across storefronts for:
+- Product tags: "New", "Best Seller", "Sale -20%", "Sold Out"
+- Order status: "Pending", "Shipped", "Delivered"
+
+Specs to implement:
+1. Props:
+   - children: React.ReactNode (badge label)
+   - variant?: "default" | "secondary" | "success" | "warning" | "danger" | "outline"
+   - size?: "sm" | "md"
+2. Styling features:
+   - Pill shape: "rounded-full font-medium"
+   - Compact sizing: "px-2.5 py-0.5 text-xs"
+   - Soft pastel / tinted backgrounds that match our clean minimalist theme:
+     * default: bg-zinc-900 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900
+     * secondary: bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300
+     * success: bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800 (for "In Stock", "Free Shipping")
+     * warning: bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800 (for "Low Stock", "Sale")
+     * danger: bg-rose-50 text-rose-700 border border-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:border-rose-800 (for "Sold Out")
+     * outline: border border-zinc-200 text-zinc-800 dark:border-zinc-700 dark:text-zinc-300
