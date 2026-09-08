@@ -52,7 +52,7 @@ export default function LSHSAccreditationProof() {
             </div>
 
             <p className="text-base text-slate-600 leading-relaxed">
-              London School of Higher Studies (LSHS) is a UK-based training provider with a dedicated centre in Dhaka, Bangladesh, delivering CIPS qualifications exclusively. We support learners at every stage of the procurement career journey with structured, industry-aligned courses, flexible study options and qualified tutors — built around practical, real-world application of the CIPS syllabus.
+              London School of Higher Studies (LSHS) is a UK-based training provider with a dedicated centre in Dhaka, Bangladesh, delivering CIPS qualifications exclusively. We support learners at every stage of the procurement career journey with structured, industry-aligned courses, flexible study options and qualified tutors - built around practical, real-world application of the CIPS syllabus.
             </p>
 
             <p className="text-base text-slate-600 leading-relaxed">

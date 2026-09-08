@@ -120,7 +120,7 @@ export default function PhotoVideoGallery() {
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-emerald-600" />
               <p className="text-xs font-bold uppercase tracking-[0.28em] text-emerald-800">
-                05 — Photo &amp; Video Gallery
+                Photo &amp; Video Gallery
               </p>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] leading-tight">
@@ -265,7 +265,7 @@ export default function PhotoVideoGallery() {
                     <FaVideo />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">Sampan Highway Inn — Aerial Flyover &amp; Experience</h3>
+                    <h3 className="text-lg font-bold">Sampan Highway Inn - Aerial Flyover &amp; Experience</h3>
                     <p className="text-xs text-neutral-400">4K Drone Inspection • Corridor Frontage View</p>
                   </div>
                 </div>

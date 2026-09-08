@@ -20,6 +20,8 @@ export interface RealEstateHero2Props {
   statusBadge?: string;
   statusType?: "ongoing" | "coming-soon" | "flagship" | "completed";
   locationLabel?: string;
+  primaryCtaLabel?: string;
+  primaryCtaLink?: string;
   onBookSiteVisit?: () => void;
   onDownloadBrochure?: () => void;
 }
@@ -33,6 +35,8 @@ export default function RealEstateHero2({
   facts,
   accentColor = "#ca8a04",
   locationLabel = "Ashulia Metro Corridor, Dhaka",
+  primaryCtaLabel,
+  primaryCtaLink,
   onBookSiteVisit,
   onDownloadBrochure,
 }: RealEstateHero2Props) {
@@ -99,13 +103,23 @@ export default function RealEstateHero2({
 
           {/* Sleek Minimal CTA Row */}
           <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2">
-            <button
-              onClick={onBookSiteVisit}
-              className="group inline-flex items-center gap-3 bg-white hover:bg-neutral-100 text-neutral-950 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-xl cursor-pointer"
-            >
-              <span>Schedule Site Visit</span>
-              <FiArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            {primaryCtaLink ? (
+              <a
+                href={primaryCtaLink}
+                className="group inline-flex items-center gap-3 bg-white hover:bg-neutral-100 text-neutral-950 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-xl cursor-pointer"
+              >
+                <span>{primaryCtaLabel || "Schedule Site Visit"}</span>
+                <FiArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+            ) : (
+              <button
+                onClick={onBookSiteVisit}
+                className="group inline-flex items-center gap-3 bg-white hover:bg-neutral-100 text-neutral-950 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-xl cursor-pointer"
+              >
+                <span>{primaryCtaLabel || "Schedule Site Visit"}</span>
+                <FiArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+              </button>
+            )}
 
             {onDownloadBrochure && (
               <button

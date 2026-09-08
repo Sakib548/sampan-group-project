@@ -16,8 +16,8 @@ export default function MaritimeHero({
   title = "Sampan Floating Pearl",
   subtitle = "Fractional Luxury Vessel & Maritime Alternative Asset Investment Shares",
   concernName = "Sampan Floating Pearl Venture",
-  statusBadge = "Coming Soon — Launching Q4 2026",
-  description = "Bangladesh's premier fractional maritime asset opportunity — allowing private investors to own equity shares in a state-of-the-art luxury passenger & cruise vessel operating across coastal Bay of Bengal routes.",
+  statusBadge = "Coming Soon - Launching Q4 2026",
+  description = "Bangladesh's premier fractional maritime asset opportunity - allowing private investors to own equity shares in a state-of-the-art luxury passenger & cruise vessel operating across coastal Bay of Bengal routes.",
   facts = [
     { value: "Q4 2026", label: "Pre-Launch Tranche" },
     { value: "14.5% - 18%", label: "Target Annual IRR" },

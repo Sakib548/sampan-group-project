@@ -59,12 +59,12 @@ export default function SampanTowingServicePage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#1d4ed8] selection:text-white">
       
-      {/* 1. Hero Overview — Royal Blue (#1d4ed8) Accent */}
+      {/* 1. Hero Overview - Royal Blue (#1d4ed8) Accent */}
       <MobilityHero
         title="Sampan Towing Service"
         subtitle="24/7 Emergency Highway Flatbed Towing & Recovery"
         divisionName="Automotive, Fuel & Mobility Division"
-        statusBadge="Coming Soon — 24/7 Dispatch Hotline"
+        statusBadge="Coming Soon - 24/7 Dispatch Hotline"
         statusType="coming-soon"
         description="24/7 emergency flatbed towing and highway vehicle recovery service. Equipped with hydraulic tilt-bed trucks for damage-free transportation of luxury cars, SUVs, and commercial vehicles."
         image="/images/concerns/sampan-auto.png"

@@ -182,7 +182,7 @@ export default function SampanGolfAcademyPage() {
         title="Sampan Golf Academy"
         subtitle="Professional PGA-Certified Golf Training & Development"
         concernName="Sampan Golf Academy"
-        statusBadge="Coming Soon — Launching Q4 2026"
+        statusBadge="Coming Soon - Launching Q4 2026"
         description="Bangladesh's premier high-tech golf academy combining PGA Class A coaching, TrackMan 4 dual-radar simulators, putting studios, and junior development pathways."
         facts={academyFacts}
         logo="/images/brand/golfacademy.png"

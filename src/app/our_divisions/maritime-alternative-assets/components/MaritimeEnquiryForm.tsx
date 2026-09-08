@@ -124,10 +124,10 @@ export default function MaritimeEnquiryForm() {
                 onChange={(e) => setFormData({ ...formData, shareUnits: e.target.value })}
                 className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0077b6] bg-white text-slate-900 text-sm font-medium"
               >
-                <option value="1 Unit (500,000 BDT)">1 Unit — 500,000 BDT</option>
-                <option value="2 Units (1,000,000 BDT)">2 Units — 1,000,000 BDT</option>
-                <option value="5 Units (2,500,000 BDT)">5 Units — 2,500,000 BDT (VIP Tranche)</option>
-                <option value="10+ Units (Institutional Block)">10+ Units — Institutional Block Allocation</option>
+                <option value="1 Unit (500,000 BDT)">1 Unit - 500,000 BDT</option>
+                <option value="2 Units (1,000,000 BDT)">2 Units - 1,000,000 BDT</option>
+                <option value="5 Units (2,500,000 BDT)">5 Units - 2,500,000 BDT (VIP Tranche)</option>
+                <option value="10+ Units (Institutional Block)">10+ Units - Institutional Block Allocation</option>
               </select>
             </div>
 

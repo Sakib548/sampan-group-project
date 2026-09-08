@@ -6,8 +6,8 @@ import { FaClock, FaEnvelope, FaLocationArrow, FaPhone } from "react-icons/fa6";
 const contactItems = [
   {
     title: "Email us",
-    value: "info@sampangroup.com.bd",
-    href: "mailto:info@sampangroup.com.bd",
+    value: "info@sampangroup.com.bd.bd",
+    href: "mailto:info@sampangroup.com.bd.bd",
     icon: FaEnvelope,
   },
   {

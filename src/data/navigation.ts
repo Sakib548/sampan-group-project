@@ -71,7 +71,7 @@ const whoAreWeMenu: MegaMenuColumn[] = [
         label: "Careers",
         href: "/who-are-we/career",
         description: "Build your future with Sampan Group.",
-        comingSoon: true,
+        // comingSoon: true,
       },
     ],
   },
@@ -91,7 +91,7 @@ const investmentMenu: MegaMenuColumn[] = [
       {
         id: "club-membership",
         label: "Club & Membership",
-        href: "/investment-portfolio/club--membership-share",
+        href: "/investment-portfolio/club-membership-share",
         description: "Lifestyle & Hospitality",
       },
       {
@@ -99,7 +99,7 @@ const investmentMenu: MegaMenuColumn[] = [
         label: "Ship Space Share",
         href: "/investment-portfolio/ship-share",
         description: "Maritime Investment",
-        comingSoon: true,
+        // comingSoon: true,
       },
     ],
   },

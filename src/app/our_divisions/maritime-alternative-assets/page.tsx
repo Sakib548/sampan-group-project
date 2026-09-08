@@ -18,9 +18,9 @@ const maritimeConcerns = [
     id: "sampan-floating-pearl",
     name: "Sampan Floating Pearl",
     category: "Fractional Maritime Venture",
-    status: "Coming Soon — Pre-Launch Phase 1",
+    status: "Coming Soon - Pre-Launch Phase 1",
     location: "Chittagong - Cox's Bazar - Bay of Bengal Corridor",
-    description: "Bangladesh's premier fractional maritime vessel asset opportunity — allowing private investors to hold legal equity share units in a 3,200 GRT luxury cruise vessel operating across coastal Bay of Bengal routes.",
+    description: "Bangladesh's premier fractional maritime vessel asset opportunity - allowing private investors to hold legal equity share units in a 3,200 GRT luxury cruise vessel operating across coastal Bay of Bengal routes.",
     link: "/our_divisions/maritime-alternative-assets/sampan-floating-pearl",
     highlights: [
       "14.5% - 18% Target Annualized IRR",
@@ -38,7 +38,7 @@ export default function MaritimeAlternativeAssetsArchivePage() {
       <MaritimeHero
         title="Maritime / Alternative Assets Division"
         subtitle="Fractional Vessel Equity & High-Yield Alternative Asset Ventures"
-        description="Pioneering fractional maritime ownership in Bangladesh — providing institutional-grade transparency, asset-backed security, and quarterly dividend payouts."
+        description="Pioneering fractional maritime ownership in Bangladesh - providing institutional-grade transparency, asset-backed security, and quarterly dividend payouts."
       />
 
       {/* Concerns Grid Section */}

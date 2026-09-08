@@ -15,7 +15,7 @@ import RealEstateLocationMap from "../components/RealEstateLocationMap";
 export const metadata: Metadata = {
   title: "Sampan Twenty First Century | Luxury 2,000 sq ft Residences",
   description:
-    "Official presentation of Sampan Twenty First Century — 2,000 sq ft luxury apartments, south-facing with 40% open space, 25ft wide road, and earthquake-resistant BNBC engineering by Sampan Developments Ltd.",
+    "Official presentation of Sampan Twenty First Century - 2,000 sq ft luxury apartments, south-facing with 40% open space, 25ft wide road, and earthquake-resistant BNBC engineering by Sampan Developments Ltd.",
 };
 
 const facts = [
@@ -43,6 +43,7 @@ const units = [
       "Kitchen (10'-4\" x 6'-3\") with dedicated utility verandah & double gas burner line",
       "25'-0\" Wide Front Road Facing with landscaped entry approach",
     ],
+    image: "/images/projects/21.jpg"
   },
 ];
 
@@ -51,9 +52,9 @@ const landShareTiers = [
     title: "21st Century Land Share Tier",
     shareSize: "Undivided Proportional Land Share",
     equityRatio: "1 Full Apartment Share",
-    deedRegistration: "Sub-Kabala Registered (REHAB Member Developer)",
+    // deedRegistration: "Sub-Kabala Registered (REHAB Member Developer)",
     keyBenefits: [
-      "Direct Sub-Kabala Land Share Registration",
+      // "Direct Sub-Kabala Land Share Registration",
       "40% Open Space with landscaped front setback",
       "Built by Sampan Developments Ltd (REHAB Member)",
     ],
@@ -61,7 +62,7 @@ const landShareTiers = [
 ];
 
 const progressMilestones = [
-  { stage: "Land Title Mutation & Sub-Kabala", completionPercent: 100, status: "Completed" as const, targetDate: "Done", notes: "Clear Title Deed" },
+  { stage: "Land Title Mutation" /* & Sub-Kabala */, completionPercent: 100, status: "Completed" as const, targetDate: "Done", notes: "Clear Title Deed" },
   { stage: "Architectural & Floor Plan Approval", completionPercent: 100, status: "Completed" as const, targetDate: "Done", notes: "2,000 sq ft Typical Layout" },
   { stage: "Foundation & Construction Work", completionPercent: 25, status: "In Progress" as const, targetDate: "Active Phase", notes: "Piling & Structure Setup" },
 ];
@@ -69,7 +70,7 @@ const progressMilestones = [
 const floorPlans = [
   {
     id: "fp-21st-typical",
-    name: "Sampan Twentyfirst Century — Typical Floor Plan",
+    name: "Sampan Twentyfirst Century - Typical Floor Plan",
     category: "Typical Apartment Layout",
     sizeSqFt: "2,000 sq ft",
     image: "/images/projects/21.jpg",
@@ -83,7 +84,7 @@ const floorPlans = [
   },
   {
     id: "fp-21st-ground",
-    name: "Sampan Twentyfirst Century — Ground Floor Plan",
+    name: "Sampan Twentyfirst Century - Ground Floor Plan",
     category: "Parking & Utility Layout",
     sizeSqFt: "2,000 sq ft Ground Footprint",
     image: "/images/projects/21.jpg",
@@ -163,7 +164,7 @@ const specifications: SpecificationCategory[] = [
 const legalCredentials = [
   {
     authority: "REHAB & Ministry of Land",
-    approvalTitle: "Clear Sub-Kabala Land Title & Mutation",
+    approvalTitle: "Clear Land Title & Mutation", // Sub-Kabala
     referenceNumber: "REHAB Member Developer",
     status: "100% Cleared",
     description: "Developed by Sampan Developments Ltd, official REHAB Member with clear title deed and registered land share.",
@@ -215,10 +216,10 @@ export default function Sampan21stCenturyPage() {
       />
 
       {/* 2. Unit Configurations */}
-      <UnitTypesAndSizes
+      {/* <UnitTypesAndSizes
         units={units}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 3. Building Specifications Module (New from Brochure) */}
       <BuildingSpecificationsModule
@@ -236,50 +237,50 @@ export default function Sampan21stCenturyPage() {
       />
 
       {/* 5. Land Share Model */}
-      <LandShareStructure
+      {/* <LandShareStructure
         totalLandArea="20 Katha"
         totalSharesCount="Land Share Registered"
-        registrationStatus="Sub-Kabala Ready"
+        // registrationStatus="Sub-Kabala Ready"
         tiers={landShareTiers}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 6. Location + Map */}
-      <RealEstateLocationMap
+      {/* <RealEstateLocationMap
         projectName="Sampan Twenty First Century"
         address="25-ft Wide Road, Dhaka, Bangladesh."
         gpsCoordinates="23.8212° N, 90.3554° E"
         embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14599.6!2d90.3554!3d23.8212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQ5JzE2LjMiTiA5MMKwMjEnMTkuNCJF!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
         landmarks={landmarks}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 7. Construction Progress */}
-      <ConstructionProgressTracker
+      {/* <ConstructionProgressTracker
         overallCompletionPercentage={100}
         expectedHandoverDate="Active Development"
         currentPhase="Structure & Floor Layout Construction"
         milestones={progressMilestones}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 8. Legal Credentials */}
-      <LegalCredentialsModule
+      {/* <LegalCredentialsModule
         credentials={legalCredentials}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 9. 3D Renders & Elevation */}
-      <WalkthroughRenderGallery
+      {/* <WalkthroughRenderGallery
         items={renders}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 10. Payment Calculator */}
-      <PaymentPlanCalculator
+      {/* <PaymentPlanCalculator
         defaultPropertyPriceBDT={12000000}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 11. Brochure Download */}
       <DownloadableBrochureCTA

@@ -39,7 +39,7 @@ const allPosts = [
     title:
       "Sampan Group Announces Strategic Expansion Across Key Business Divisions",
     date: "02 SEP 2026",
-    image: "/images/news-1.jpg",
+    image: "/images/awards/expressback.jpeg",
   },
   {
     id: 2,
@@ -47,15 +47,15 @@ const allPosts = [
     division: "Development",
     title: "Sampan Development Introduces New Premium Project in Dhaka",
     date: "28 AUG 2026",
-    image: "/images/news-2.jpg",
+    image: "/images/brand/sampandevelopmentltd.png",
   },
   {
     id: 3,
     type: "BLOG",
     division: "Hospitality",
-    title: "Redefining Luxury: The Architecture Behind Sampan Resorts",
+    title: "Redefining Luxury: Sampan Express Highway Inn",
     date: "15 AUG 2026",
-    image: "/images/news-3.jpg",
+    image: "/images/brand/expresshighwayinn.png",
   },
   {
     id: 4,
@@ -92,7 +92,7 @@ const blogPosts = [
     excerpt:
       "How long-term vision and ESG principles guide our investment strategy.",
     date: "12 AUG 2026",
-    image: "/images/blog-1.jpg",
+    image: "/images/blogs/building.jpg",
     size: "lg",
   },
   {
@@ -101,7 +101,7 @@ const blogPosts = [
     title: "Integrating Smart Technology in Modern Real Estate",
     excerpt: "From IoT to AI, exploring the tech shaping our properties.",
     date: "05 AUG 2026",
-    image: "/images/blog-2.jpg",
+    image: "/images/projects/coming-soon-bg.jpg",
     size: "sm",
   },
   {
@@ -110,47 +110,47 @@ const blogPosts = [
     title: "Fostering a Culture of Excellence and Integrity",
     excerpt: "An inside look at our human resources philosophy.",
     date: "28 JUL 2026",
-    image: "/images/blog-3.jpg",
+    image: "/images/projects/lshs.jpg",
     size: "sm",
   },
 ];
 
 const photos = [
   {
-    src: "/images/photo-1.jpg",
+    src: "/images/blogs/events.jpeg",
     category: "Corporate Event",
     size: "row-span-2",
   },
-  { src: "/images/photo-2.jpg", category: "Development", size: "row-span-1" },
-  { src: "/images/photo-3.jpg", category: "Hospitality", size: "row-span-2" },
-  { src: "/images/photo-4.jpg", category: "Agro", size: "row-span-1" },
-  { src: "/images/photo-5.jpg", category: "Maritime", size: "row-span-1" },
-  { src: "/images/photo-6.jpg", category: "Leadership", size: "row-span-2" },
+  { src: "/images/blogs/auto.jpg", category: "Development", size: "row-span-1" },
+  { src: "/images/blogs/hospitality.jpg", category: "Hospitality", size: "row-span-2" },
+  { src: "/images/blogs/agro.jpg", category: "Agro", size: "row-span-1" },
+  { src: "/images/blogs/maritime.jpg", category: "Maritime", size: "row-span-1" },
+  { src: "/images/awards/boss.jpeg", category: "Leadership", size: "row-span-1" },
 ];
 
 const videos = [
   {
-    title: "Sampan Group — Building What's Next",
+    title: "Sampan Group - Building What's Next",
     duration: "02:34",
-    thumbnail: "/images/video-main.jpg",
+    thumbnail: "/images/blogs/building.jpg",
     size: "main",
   },
   {
     title: "Behind the Scenes: Sampan Metro Square",
     duration: "01:12",
-    thumbnail: "/images/video-1.jpg",
+    thumbnail: "/images/our_divisions/sampan-metro-square/metro-square.png",
     size: "small",
   },
   {
     title: "A Day at Sampan Golf Academy",
     duration: "03:45",
-    thumbnail: "/images/video-2.jpg",
+    thumbnail: "/images/our_divisions/sampan-agro-golf-resort/sampan-agro-golf-resort.png",
     size: "small",
   },
   {
     title: "Sustainable Agriculture in Action",
     duration: "04:20",
-    thumbnail: "/images/video-3.jpg",
+    thumbnail: "/images/blogs/agro.jpg",
     size: "small",
   },
 ];
@@ -161,21 +161,22 @@ const socialPosts = [
     date: "02 SEP 2026",
     content:
       "We are thrilled to announce our latest strategic expansion. Read the full press release on our newsroom.",
-    image: "/images/social-1.jpg",
+    image: "/images/blogs/image-editing.jpg",
   },
   {
     platform: "FACEBOOK",
     date: "28 AUG 2026",
     content:
       "Sampan Development hits a major construction milestone at our new Gulshan project.",
-    image: "/images/social-2.jpg",
+    image: "/images/blogs/grouppost.jpg",
+    href: "https://www.facebook.com/story.php?story_fbid=1511323977700228&id=100064679200226&mibextid=wwXIfr&rdid=RYrCNp5AZym0l5JM#",
   },
   {
     platform: "YOUTUBE",
     date: "15 AUG 2026",
     content:
       "Watch the architectural showcase of our new hospitality venture. Link in bio.",
-    image: "/images/social-3.jpg",
+    image: "/images/blogs/events.jpeg",
   },
 ];
 
@@ -338,7 +339,7 @@ export default function NewsroomPage() {
       <section className="relative h-screen min-h-[700px] w-full flex items-center bg-[#071018] text-white overflow-hidden">
         <div className="hero-bg absolute inset-0 opacity-0 will-change-transform">
           <Image
-            src="/images/about/sampangroupteam.png"
+            src="/images/awards/Mockup.jpg"
             alt="Newsroom"
             fill
             className="object-cover"
@@ -805,95 +806,23 @@ export default function NewsroomPage() {
               href="mailto:media@sampangroup.com"
               className="reveal-up flex items-center gap-4 text-lg border-b border-[#E5E9EC] pb-4 hover:text-[#007DC5] transition-colors"
             >
-              <FiMail /> media@sampangroup.com
-            </a>
+              <FiMail /> info@sampangroup.com.bd</a>
             <a
-              href="tel:+8801000000000"
+              href="tel:+8801912234588"
               className="reveal-up flex items-center gap-4 text-lg border-b border-[#E5E9EC] pb-4 hover:text-[#007DC5] transition-colors"
             >
-              <FiPhone /> +880 1000 00000
+              <FiPhone /> +880 1912-234588
             </a>
             <Link
-              href="#"
+              href="/contact"
               className="reveal-up group mt-4 inline-flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-[#071018] hover:text-[#007DC5] transition-colors"
             >
-              Contact Media Team{" "}
+              Contact With Us{" "}
               <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
       </section>
-
-      {/* 11. FOOTER */}
-      <footer className="bg-[#071018] text-white pt-24 pb-12">
-        <div className="mx-auto max-w-[1600px] px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-12 pb-16 border-b border-white/10">
-            <h2 className="text-[clamp(3rem,5vw,6rem)] font-bold tracking-tighter">
-              SAMPAN GROUP
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-sm">
-              <div className="flex flex-col gap-3">
-                <span className="text-white/40 uppercase tracking-widest text-xs mb-2">
-                  Company
-                </span>
-                <Link
-                  href="/about"
-                  className="hover:text-[#007DC5] transition-colors"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/businesses"
-                  className="hover:text-[#007DC5] transition-colors"
-                >
-                  Businesses
-                </Link>
-                <Link
-                  href="/projects"
-                  className="hover:text-[#007DC5] transition-colors"
-                >
-                  Projects
-                </Link>
-              </div>
-              <div className="flex flex-col gap-3">
-                <span className="text-white/40 uppercase tracking-widest text-xs mb-2">
-                  More
-                </span>
-                <Link
-                  href="/newsroom"
-                  className="hover:text-[#007DC5] transition-colors"
-                >
-                  Newsroom
-                </Link>
-                <Link
-                  href="/careers"
-                  className="hover:text-[#007DC5] transition-colors"
-                >
-                  Careers
-                </Link>
-                <Link
-                  href="/contact"
-                  className="hover:text-[#007DC5] transition-colors"
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-            <span>© 2026 Sampan Group. All rights reserved.</span>
-            <div className="flex gap-6">
-              <Link href="#" className="hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:text-white transition-colors">
-                Terms & Conditions
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

@@ -118,7 +118,7 @@ export default function SampanHollowBricksTilesPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#991b1b] selection:text-white">
       
-      {/* 1. Hero Overview — Brick Red (#991b1b) Accent from SHBT Logo */}
+      {/* 1. Hero Overview - Brick Red (#991b1b) Accent from SHBT Logo */}
       <ManufacturingHero
         title="Sampan Hollow Bricks & Tiles"
         subtitle="Eco-Friendly Building Materials & Automated Concrete Block Plant"

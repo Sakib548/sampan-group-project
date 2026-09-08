@@ -103,7 +103,7 @@ export default function OnlineBookingWidget({
         {/* Stay Type Selector Tabs (Square) */}
         <div className="mt-8">
           <label className="block font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 mb-3">
-            1. Select Stopover Duration
+            Select Stopover Duration
           </label>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {stayTiers.map((tier) => (
@@ -243,7 +243,7 @@ export default function OnlineBookingWidget({
             <input
               type="tel"
               required
-              placeholder="+880 1XXXXXXXXX"
+              placeholder="+880 1912234588"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="w-full bg-transparent text-sm font-medium text-neutral-950 placeholder-neutral-400 focus:outline-none"

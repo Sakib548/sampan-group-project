@@ -84,7 +84,7 @@ export default function HighwayRouteVisualizer() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 border border-[#ca8a04]/30 bg-amber-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ca8a04] mb-4">
             <FaCompass />
-            <span>14 / Corridor Navigation &amp; Mile Markers</span>
+            <span>Corridor Navigation &amp; Mile Markers</span>
           </div>
           <h2 className="text-[clamp(2.2rem,4.5vw,4rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950">
             Dedicated highway route guide.

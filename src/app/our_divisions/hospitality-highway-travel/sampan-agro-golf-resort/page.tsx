@@ -74,7 +74,7 @@ export default function SampanAgroGolfResortPage() {
         title="Sampan Agro & Golf Resort"
         subtitle="Integrated Luxury Resort, Championship Fairways & Sustainable Organic Farm Escape"
         concernName="Sampan Agro & Golf Resort"
-        statusBadge="Ongoing Development — Phased Opening 2026"
+        statusBadge="Ongoing Development - Phased Opening 2026"
         description="A 160-acre sanctuary where championship golf fairways, luxury eco-villas, organic farm-to-table dining, and wellness spa retreats come together."
         facts={resortFacts}
         logo="/images/brand/agroandgolf.png"
@@ -110,7 +110,7 @@ export default function SampanAgroGolfResortPage() {
       {/* SECTION 9: Location + Map */}
       <GolfLocationAndMap
         title="Resort Location & Accessibility"
-        subtitle="Positioned in Sreemangal, Moulvibazar — easily accessible via expressways from Dhaka and Sylhet."
+        subtitle="Positioned in Sreemangal, Moulvibazar - easily accessible via expressways from Dhaka and Sylhet."
         projectName="Sampan Agro & Golf Resort"
         address="Sampan Agro & Golf Complex, Sreemangal, Moulvibazar, Sylhet Division, Bangladesh."
         gpsCoordinates="24.3000° N, 91.7000° E"

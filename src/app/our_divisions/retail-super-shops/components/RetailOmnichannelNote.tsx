@@ -13,7 +13,7 @@ export interface RetailOmnichannelNoteProps {
 
 export default function RetailOmnichannelNote({
   title = "Online Ordering vs. In-Store Experience",
-  subtitle = "Choose how you shop — enjoy instant 30-minute doorstep delivery or experience our premium physical store lounge.",
+  subtitle = "Choose how you shop - enjoy instant 30-minute doorstep delivery or experience our premium physical store lounge.",
   concernName,
   bgTheme = "divisions-green",
   accentColor = "#dc2626",

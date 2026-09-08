@@ -212,7 +212,7 @@ export default function ContactCTA() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/8801XXXXXXXXX"
+              href="https://wa.me/8801912234588"
               target="_blank"
               rel="noreferrer"
               className="group mt-10 inline-flex w-fit items-center gap-6"

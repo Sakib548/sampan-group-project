@@ -5,7 +5,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { FiX, FiArrowRight, FiMapPin, FiPlus, FiMinus } from "react-icons/fi";
+import { FiX, FiArrowRight, FiMapPin } from "react-icons/fi";
 import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -19,109 +19,180 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 type Location = {
   id: string;
   name: string;
+  href: string;
   category: string;
   location: string;
   description: string;
   lat: number;
   lng: number;
+  labelDirection?: "top" | "bottom" | "left" | "right"; // Added for collision control
+  companies?: string[];
 };
 
 const locations: Location[] = [
   {
     id: "highway-inn",
     name: "Sampan Highway Inn",
+    href: "/our_divisions/hospitality-highway-travel/sampan-highway-inn",
     category: "Hospitality",
     location: "Dhaka–Khulna Highway",
-    description:
-      "A premium hospitality destination strategically positioned along the Dhaka–Khulna Highway.",
+    description: "A premium hospitality destination strategically positioned along the Dhaka–Khulna Highway.",
     lat: 23.0,
     lng: 90.0,
+    labelDirection: "top", // Isolated, safe to use top
+    companies: [
+      "Sampan Highway Inn",
+      "Sampan White House",
+      "Highway Inn Restaurant & Party Center",
+      "Sampan Filling Station",
+      "Sampan Auto",
+      "Sampan Mart",
+      "Sampan Sweet Box"
+    ]
   },
   {
     id: "metro-square",
     name: "Sampan Metro Square",
+    href: "/our_divisions/real-estate/sampan-metro-square",
     category: "Real Estate",
     location: "Ashulia, Dhaka",
-    description:
-      "A modern land-share development designed for commercial and residential opportunities.",
+    description: "A modern land-share development designed for commercial and residential opportunities.",
     lat: 23.9,
     lng: 90.4,
+    labelDirection: "top", 
+    companies: ["Sampan Metro Square"],
   },
   {
-    id: "-skyline",
-    name: "Sampan  Skyline",
+    id: "motalib-skyline",
+    name: "Sampan Motalib Skyline",
+    href: "/our_divisions/real-estate/sampan-motalib-skyline",
     category: "Real Estate",
     location: "Dhaka",
-    description:
-      "A contemporary mixed-use development combining residential and commercial spaces.",
+    description: "A contemporary mixed-use development combining residential and commercial spaces.",
     lat: 23.75,
     lng: 90.39,
+    labelDirection: "left", // Shifted left to avoid Metro Square
+    companies: ["Sampan Motalib Skyline"],
   },
   {
     id: "nexus",
     name: "Sampan Nexus",
     category: "Residential",
+    href: "/our_divisions/real-estate/sampan-nexus",
     location: "Mawna",
-    description:
-      "A thoughtfully planned residential development focused on modern living.",
+    description: "A thoughtfully planned residential development focused on modern living.",
     lat: 24.06,
     lng: 90.43,
+    labelDirection: "right", // Shifted right to avoid cluster
+    companies: ["Sampan Nexus"],
   },
   {
     id: "residency",
     name: "Sampan Residency Tower",
     category: "Hospitality",
+    href: "/our_divisions/hospitality-highway-travel/sampan-residency-tower",
     location: "Express Highway",
-    description:
-      "Premium hospitality towers designed for travellers and long-term guests.",
+    description: "Premium hospitality towers designed for travellers and long-term guests.",
     lat: 23.81,
     lng: 90.41,
+    labelDirection: "bottom", // Shifted down to avoid cluster
+    companies: [
+      "Sampan Residency Tower 1 & 2",
+      "Express Highway Inn",
+      "Express Highway Inn Club & Lounge",
+      "Sampan Trade Emporium"
+    ]
   },
   {
     id: "agro-golf",
     name: "Sampan Agro & Golf Resort",
     category: "Lifestyle",
+    href: "/our_divisions/hospitality-highway-travel/sampan-agro-golf-resort",
     location: "Moulvibazar",
-    description:
-      "An integrated lifestyle destination bringing together golf, leisure and agro-based experiences.",
+    description: "An integrated lifestyle destination bringing together golf, leisure and agro-based experiences.",
     lat: 24.48,
     lng: 91.78,
+    labelDirection: "top",
+    companies: [
+      "Sampan Agro & Golf Resort",
+      "Sampan Eco & Agro Resort",
+      "Sampan Eco & Agro",
+      "Sampan Golf Academy"
+    ]
   },
   {
     id: "industrial-park",
     name: "Sampan Industrial Park",
     category: "Industry",
+    href: "/our_divisions/industrial-investment/sampan-industrial-park",
     location: "Chattogram",
-    description:
-      "A strategic manufacturing and industrial ecosystem built for long-term growth.",
+    description: "A strategic manufacturing and industrial ecosystem built for long-term growth.",
     lat: 22.3,
     lng: 91.8,
+    labelDirection: "top",
+    companies: [
+      "Sampan Industrial Park",
+      "Sampan Hollow Bricks & Tiles",
+      "Sampan Pet & Beverage"
+    ]
   },
   {
     id: "floating-pearl",
     name: "Sampan Floating Pearl",
     category: "Maritime",
+    href: "/our_divisions/maritime-investment/sampan-floating-pearl",
     location: "Khulna",
-    description:
-      "A distinctive maritime investment concept connecting business with the waterways of Bangladesh.",
+    description: "A distinctive maritime investment concept connecting business with the waterways of Bangladesh.",
     lat: 22.8,
     lng: 89.55,
+    labelDirection: "top",
+    companies: ["Sampan Floating Pearl"],
   },
 ];
 
-// Helper to create custom HTML pins for Leaflet
-const createPinIcon = (isActive: boolean) => {
+// Helper to create custom HTML pins for Leaflet with Labels
+const createPinIcon = (isActive: boolean, label: string, direction: "top" | "bottom" | "left" | "right" = "top") => {
+  let wrapperStyle = "";
+  let connectorStyle = "width: 1px; height: 12px; background: rgba(0,0,0,0.4);";
+  let wrapperClass = "flex flex-col items-center whitespace-nowrap";
+
+  // Adjust layout based on direction to prevent overlapping
+  if (direction === "top") {
+    wrapperStyle = `transform: translate(-50%, -100%); margin-top: -8px;`; 
+  } else if (direction === "bottom") {
+    wrapperClass += " flex-col-reverse";
+    wrapperStyle = `transform: translate(-50%, 0%); margin-top: 8px;`;
+  } else if (direction === "left") {
+    wrapperClass += " flex-row-reverse";
+    wrapperStyle = `transform: translate(-100%, -50%); margin-left: -8px;`;
+    connectorStyle = "width: 12px; height: 1px; background: rgba(0,0,0,0.4);";
+  } else if (direction === "right") {
+    wrapperClass += " flex-row";
+    wrapperStyle = `transform: translate(0%, -50%); margin-left: 8px;`;
+    connectorStyle = "width: 12px; height: 1px; background: rgba(0,0,0,0.4);";
+  }
+
   return L.divIcon({
-    className: "custom-leaflet-pin",
+    className: "custom-leaflet-pin-wrapper",
     html: `
-      <div style="position: relative; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px;">
-        ${isActive
-        ? `<span style="position: absolute; width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid #059669; animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;"></span>
-               <span style="position: absolute; width: 44px; height: 44px; border-radius: 50%; background: rgba(5, 150, 105, 0.1);"></span>`
-        : ""
-      }
-        <span style="
-          position: relative; 
+      <div style="position: absolute; left: 0; top: 0; width: 0; height: 0;">
+        
+        <!-- Active Pulse Rings -->
+        ${
+          isActive
+            ? `
+            <span style="position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid #059669; animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; pointer-events: none;"></span>
+            <span style="position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(5, 150, 105, 0.1); pointer-events: none;"></span>
+          `
+            : ""
+        }
+
+        <!-- Center Dot -->
+        <div style="
+          position: absolute; 
+          left: 0; 
+          top: 0; 
+          transform: translate(-50%, -50%);
           width: ${isActive ? "12px" : "8px"}; 
           height: ${isActive ? "12px" : "8px"}; 
           background: ${isActive ? "#059669" : "#1f2937"}; 
@@ -129,11 +200,33 @@ const createPinIcon = (isActive: boolean) => {
           border: 2px solid white; 
           box-shadow: 0 2px 8px rgba(0,0,0,0.3); 
           transition: all 0.3s ease;
-        "></span>
+          z-index: 10;
+        "></div>
+
+        <!-- Label & Connector Group -->
+        <div class="${wrapperClass}" style="position: absolute; left: 0; top: 0; ${wrapperStyle}">
+          <div style="
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: ${isActive ? 700 : 600};
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: ${isActive ? "#059669" : "#1f2937"};
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            padding: 2px 6px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform: ${isActive ? "translateY(-1px)" : "translateY(0)"};
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+          ">${label}</div>
+          <div style="${connectorStyle}"></div>
+        </div>
+
       </div>
     `,
-    iconSize: [32, 32],
-    iconAnchor: [16, 16],
+    iconSize: [0, 0], // Using 0x0 size and absolute positioning for perfect centering
+    iconAnchor: [0, 0],
   });
 };
 
@@ -250,15 +343,9 @@ export default function LocationMap() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1400px] px-[5vw]">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-[5vw]">
         {/* ====== SECTION HEADER ====== */}
         <div className="map-header mb-16 max-w-3xl lg:mb-20">
-          <div className="mb-6 flex items-center gap-4">
-            <span className="h-px w-10 bg-emerald-600" />
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.4em] text-neutral-500">
-              04 / Our Reach
-            </span>
-          </div>
           <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950">
             Growing across
             <br />
@@ -291,7 +378,12 @@ export default function LocationMap() {
               <Marker
                 key={location.id}
                 position={[location.lat, location.lng]}
-                icon={createPinIcon(activeLocation?.id === location.id)}
+                // Pass label and direction to the icon generator
+                icon={createPinIcon(
+                  activeLocation?.id === location.id, 
+                  location.name.toUpperCase(), 
+                  location.labelDirection || "top"
+                )}
                 eventHandlers={{
                   click: () => setActiveLocation(location),
                 }}
@@ -337,7 +429,7 @@ export default function LocationMap() {
               </button>
 
               {/* Content */}
-              <div className="flex h-full flex-col">
+              <div className="flex h-full flex-col overflow-y-auto pr-2">
                 {/* Top Section: Category & Location */}
                 <div>
                   <p className="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-emerald-600">
@@ -352,17 +444,36 @@ export default function LocationMap() {
                   </div>
                 </div>
 
-                {/* Middle Section: Description */}
-                <div className="my-8 border-y border-neutral-200 py-6">
+                {/* Middle Section: Description & Companies */}
+                <div className="my-8 border-y border-neutral-200 py-6 space-y-6">
                   <p className="text-sm leading-7 text-neutral-600">
                     {activeLocation.description}
                   </p>
+
+                  {/* Companies List */}
+                  {activeLocation.companies && activeLocation.companies.length > 0 && (
+                    <div>
+                      <p className="mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-neutral-400">
+                        Companies at this location
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {activeLocation.companies.map((company, i) => (
+                          <span 
+                            key={i} 
+                            className="border border-neutral-200 px-3 py-1.5 text-xs text-neutral-700 hover:border-emerald-500 hover:text-emerald-700 transition-colors"
+                          >
+                            {company}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Bottom Section: CTA */}
                 <div className="mt-auto">
                   <Link
-                    href={`/businesses/${activeLocation.id}`}
+                    href={activeLocation.href}
                     className="group/cta flex items-center justify-between border border-neutral-300 bg-white px-5 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-900 transition-all duration-300 hover:border-emerald-500 hover:bg-emerald-50"
                   >
                     View Full Details
@@ -389,23 +500,26 @@ export default function LocationMap() {
                   key={location.id}
                   type="button"
                   onClick={() => setActiveLocation(location)}
-                  className={`map-list-item group flex items-center gap-6 border-b border-neutral-200 py-5 text-left transition-colors duration-300 ${isActive ? "bg-neutral-50" : "hover:bg-neutral-50"
-                    }`}
+                  className={`map-list-item group flex items-center gap-6 border-b border-neutral-200 py-5 text-left transition-colors duration-300 ${
+                    isActive ? "bg-neutral-50" : "hover:bg-neutral-50"
+                  }`}
                 >
                   <span
-                    className={`font-mono text-xs tracking-widest transition-colors duration-300 ${isActive
+                    className={`font-mono text-xs tracking-widest transition-colors duration-300 ${
+                      isActive
                         ? "text-emerald-600"
                         : "text-neutral-400 group-hover:text-neutral-800"
-                      }`}
+                    }`}
                   >
                     0{i + 1}
                   </span>
                   <div className="flex-1">
                     <h3
-                      className={`text-base font-semibold tracking-tight transition-colors duration-300 ${isActive
+                      className={`text-base font-semibold tracking-tight transition-colors duration-300 ${
+                        isActive
                           ? "text-neutral-900"
                           : "text-neutral-600 group-hover:text-neutral-900"
-                        }`}
+                      }`}
                     >
                       {location.name}
                     </h3>
@@ -414,10 +528,11 @@ export default function LocationMap() {
                     </p>
                   </div>
                   <FiMapPin
-                    className={`h-5 w-5 transition-colors duration-300 ${isActive
+                    className={`h-5 w-5 transition-colors duration-300 ${
+                      isActive
                         ? "text-emerald-600"
                         : "text-neutral-300 group-hover:text-neutral-500"
-                      }`}
+                    }`}
                   />
                 </button>
               );

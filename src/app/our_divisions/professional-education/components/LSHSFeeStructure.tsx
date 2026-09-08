@@ -33,7 +33,7 @@ export default function LSHSFeeStructure() {
         <div className="bg-[#f4d210]/20 border-2 border-[#f4d210] rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto mb-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-slate-900 bg-[#f4d210] px-3 py-1 rounded-full shadow-sm">
-              Limited Offer — Autumn 2026 Batch
+              Limited Offer - Autumn 2026 Batch
             </span>
             <h3 className="text-2xl font-bold text-slate-900 font-serif mt-2">
               Save 25% OFF Tuition Fees on All CIPS Levels

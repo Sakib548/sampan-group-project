@@ -21,7 +21,7 @@ const golfConcerns = [
   {
     id: "sampan-golf-academy",
     name: "Sampan Golf Academy",
-    badge: "Coming Soon — Launching Q4 2026",
+    badge: "Coming Soon - Launching Q4 2026",
     tagline: "Professional PGA-certified coaching, TrackMan 4 video swing analysis, putting studio, junior academy, and tournament preparation.",
     href: "/our_divisions/golf-zone/sampan-golf-academy",
     image: "/images/brand/golfacademy.png",
@@ -35,7 +35,7 @@ const golfConcerns = [
   {
     id: "sampan-short-drive-range",
     name: "Sampan Short Drive Range",
-    badge: "Coming Soon — Launching Q4 2026",
+    badge: "Coming Soon - Launching Q4 2026",
     tagline: "Short game precision practice, automated tee bays, Toptracer target tracking, floodlit night driving, and corporate lounge events.",
     href: "/our_divisions/golf-zone/sampan-short-drive-range",
     image: "/images/brand/golfrage.png",
@@ -56,7 +56,7 @@ export default function GolfZonePage() {
         title="Golf Zone Division"
         subtitle="Premier Professional Golf Academy & Automated Short Drive Practice Range"
         concernName="Sampan Group Golf Zone"
-        statusBadge="Archive & Development Hub — Coming Soon 2026"
+        statusBadge="Archive & Development Hub - Coming Soon 2026"
         description="Developing Bangladesh's premier golf infrastructure, combining PGA-certified training labs with state-of-the-art Toptracer short-drive practice range and floodlit sports lounges."
         facts={divisionFacts}
         logo="/images/brand/golfacademy.png"

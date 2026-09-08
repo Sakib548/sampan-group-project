@@ -72,29 +72,49 @@ const legalCredentials = [
 
 const galleryImages = [
   {
-    src: "/images/ship-1.jpg",
+    src: "/images/land/infrastructure.jpg",
     size: "col-span-12 md:col-span-8 row-span-2",
     alt: "Cargo Vessel",
   },
   {
-    src: "/images/port-1.jpg",
+    src: "/images/land/infrastructure1.jpg",
     size: "col-span-6 md:col-span-4",
     alt: "Port Operations",
   },
   {
-    src: "/images/bridge-1.jpg",
+    src: "/images/land/bedroom.jpeg",
     size: "col-span-6 md:col-span-4",
-    alt: "Ship Bridge",
+    alt: "Bedroom",
   },
   {
-    src: "/images/cargo-1.jpg",
+    src: "/images/land/interior2.jpeg",
     size: "col-span-12 md:col-span-4",
-    alt: "Container Cargo",
+    alt: "Bar",
   },
   {
-    src: "/images/deck-1.jpg",
-    size: "col-span-12 md:col-span-8",
-    alt: "Vessel Deck",
+    src: "/images/land/interior3.jpeg",
+    size: "col-span-12 md:col-span-4",
+    alt: "Gym",
+  },
+  {
+    src: "/images/land/interior4.jpeg",
+    size: "col-span-12 md:col-span-4",
+    alt: "Kitchen",
+  },
+  {
+    src: "/images/land/meeting.jpeg",
+    size: "col-span-12 md:col-span-4",
+    alt: "Bridge",
+  },
+  {
+    src: "/images/land/drawing.jpeg",
+    size: "col-span-12 md:col-span-4",
+    alt: "Drawing Room",
+  },
+  {
+    src: "/images/land/cardroom.jpeg",
+    size: "col-span-12 md:col-span-4",
+    alt: "Card Room",
   },
 ];
 
@@ -378,7 +398,7 @@ export default function ShipSpaceSharePage() {
       <section className="hero-section relative min-h-screen md:h-screen w-full flex items-center bg-neutral-950 text-white overflow-hidden pt-20 pb-10 md:pt-0 md:pb-0">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/images/ship-hero.jpg"
+            src="/images/investment-portfolio/shipshareHero.jpeg"
             alt="Maritime Vessel"
             fill
             className="hero-bg-image object-cover will-change-transform"
@@ -462,7 +482,7 @@ export default function ShipSpaceSharePage() {
         <div className="mx-auto max-w-[1600px] px-6 sm:px-8 md:px-12">
           <div className="aa-parallax-image-wrapper relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden mb-12 bg-neutral-200">
             <Image
-              src="/images/vessel-overview.jpg"
+              src="/images/investment-portfolio/vassel2.png"
               alt="Vessel Overview"
               fill
               className="aa-parallax-image object-cover will-change-transform"
@@ -658,8 +678,8 @@ export default function ShipSpaceSharePage() {
           <h2 className="reveal-up text-[clamp(1.75rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight mb-12 md:mb-16">
             Vessel & Infrastructure
           </h2>
-
-          <div className="grid grid-cols-12 grid-rows-[180px] sm:grid-rows-[250px] md:grid-rows-[400px] gap-4">
+          {/* grid-rows-[180px] sm:grid-rows-[250px] md:grid-rows-[400px] */}
+          <div className="grid grid-cols-12 auto-rows-[250px] md:auto-rows-[350px] gap-4">
             {galleryImages.map((img, i) => (
               <div
                 key={i}

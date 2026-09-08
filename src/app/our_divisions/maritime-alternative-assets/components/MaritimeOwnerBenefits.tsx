@@ -33,7 +33,7 @@ export default function MaritimeOwnerBenefits() {
             Vessel Shareholder Benefits Breakdown
           </h2>
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            Enjoy a dual advantage — strong quarterly financial yields combined with luxury maritime lifestyle perks.
+            Enjoy a dual advantage - strong quarterly financial yields combined with luxury maritime lifestyle perks.
           </p>
         </div>
 

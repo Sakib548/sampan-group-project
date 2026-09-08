@@ -23,7 +23,7 @@ export default function LocationAndMap() {
         <div className="mb-6 flex items-center gap-3">
           <span className="h-px w-10 bg-[#e8b84b]"></span>
           <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-neutral-600">
-            03 / Location &amp; Live Map
+            Location &amp; Live Map
           </span>
         </div>
 

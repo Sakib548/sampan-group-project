@@ -59,12 +59,12 @@ export default function SampanEvCarChargingStationPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#10b981] selection:text-white">
       
-      {/* 1. Hero Overview — Electric Green (#10b981) Accent from EV Logo */}
+      {/* 1. Hero Overview - Electric Green (#10b981) Accent from EV Logo */}
       <MobilityHero
         title="Sampan EV Car Charging Station"
         subtitle="Ultra-Fast 120kW DC Fast Charging & Destination Chargers"
         divisionName="Automotive, Fuel & Mobility Division"
-        statusBadge="Coming Soon — App Plug Reservation"
+        statusBadge="Coming Soon - App Plug Reservation"
         statusType="coming-soon"
         description="Ultra-fast 120kW DC fast charging station located beside Express Highway Inn. Charge your electric vehicle to 80% in 20 minutes while enjoying dining at Cafe Metro."
         image="/images/brand/evc.png"

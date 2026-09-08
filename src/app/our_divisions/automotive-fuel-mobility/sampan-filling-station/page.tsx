@@ -59,7 +59,7 @@ export default function SampanFillingStationPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#dc2626] selection:text-white">
       
-      {/* 1. Hero Overview — Red (#dc2626) & Green (#047857) Accent from Logo */}
+      {/* 1. Hero Overview - Red (#dc2626) & Green (#047857) Accent from Logo */}
       <MobilityHero
         title="Sampan Filling Station"
         subtitle="24/7 Octane 95, Diesel & Mobil Lubricants Service"

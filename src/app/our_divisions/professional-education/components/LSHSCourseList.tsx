@@ -137,7 +137,7 @@ export default function LSHSCourseList() {
             Build Your Foundation with CIPS
           </h2>
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            Start at the level that matches your experience. Each builds on the last — all the way to MCIPS Chartered Status.
+            Start at the level that matches your experience. Each builds on the last - all the way to MCIPS Chartered Status.
           </p>
 
           {/* Catalog Filter Tabs */}

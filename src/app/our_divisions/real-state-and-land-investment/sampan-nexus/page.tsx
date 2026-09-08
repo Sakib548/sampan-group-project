@@ -27,7 +27,7 @@ const facts = [
 const units = [
   {
     id: "nex-a",
-    name: "Nexus Residential Unit — 1,250 sq ft",
+    name: "Nexus Residential Unit - 1,250 sq ft",
     category: "3-Bedroom Apartment",
     sizeSqFt: "1,250 sq ft",
     bedrooms: 3,
@@ -44,7 +44,7 @@ const landShareTiers = [
     title: "Nexus Growth Land Share",
     shareSize: "1.0 Katha Undivided",
     equityRatio: "1 Residential Unit Share",
-    deedRegistration: "Sub-Kabala Registered",
+    // deedRegistration: "Sub-Kabala Registered",
     keyBenefits: ["Low Entry Capital", "High Industrial Corridor Demand", "Transparent Cost Model"],
   },
 ];
@@ -61,7 +61,7 @@ const floorPlans = [
     name: "Sampan Nexus Master Site Layout",
     category: "Master Plan",
     sizeSqFt: "16 Katha Footprint",
-    image: "/images/concerns/3-sampan-eco-agro.ng",
+    image: "/images/projects/unit-coming-soon.jpg",
     description: "Mixed-use layout integrating ground commercial retail with residential towers.",
     features: ["Mixed-Use Zoning", "Wide Internal Access Roads", "Green Landscaping"],
   },
@@ -83,7 +83,7 @@ const renders = [
     title: "Sampan Nexus Mixed-Use Render",
     category: "exterior" as const,
     categoryLabel: "Exterior Renders",
-    image: "/images/concerns/3-sampan-eco-agro.png",
+    image: "/images/projects/unit-coming-soon.jpg",
     type: "image" as const,
     description: "Modern mixed-use architecture in the Mawna growth hub.",
   },
@@ -98,12 +98,12 @@ export default function SampanNexusPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#0284c7] selection:text-white">
 
-      {/* 1. Hero Overview — Custom Ocean Blue (#0284c7) Accent & Green (#10b981) Badge from Logo */}
+      {/* 1. Hero Overview - Custom Ocean Blue (#0284c7) Accent & Green (#10b981) Badge from Logo */}
       <RealEstateHero
         title="Sampan Nexus"
         subtitle="Mawna Mixed-Use Industrial Corridor Project"
         divisionName="Sampan Development Ltd"
-        statusBadge="Coming Soon — Early Inquiries"
+        statusBadge="Coming Soon - Early Inquiries"
         statusType="coming-soon"
         description="A strategic mixed-use project combining commercial spaces and residential land-share apartments in the rapidly growing Mawna industrial belt."
         image="/images/our_divisions/sampan-nexus/nexus.jpeg"
@@ -113,62 +113,62 @@ export default function SampanNexusPage() {
       />
 
       {/* 2. Unit Configurations */}
-      <UnitTypesAndSizes
+      {/* <UnitTypesAndSizes
         units={units}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 3. Land Share Model */}
-      <LandShareStructure
+      {/* <LandShareStructure
         totalLandArea="16 Katha"
         totalSharesCount="48 Land Shares"
-        registrationStatus="Sub-Kabala Ready"
+        // registrationStatus="Sub-Kabala Ready"
         tiers={landShareTiers}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 4. Location + Map */}
-      <RealEstateLocationMap
+      {/* <RealEstateLocationMap
         projectName="Sampan Nexus"
         address="Mawna Growth Hub Corridor, Bangladesh."
         gpsCoordinates="24.2312° N, 90.3954° E"
         embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14545.6!2d90.3954!3d24.2312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDEzJzUyLjMiTiA5MMKwMjMnNDMuNCJF!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
         landmarks={landmarks}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 5. Construction Progress */}
-      <ConstructionProgressTracker
+      {/* <ConstructionProgressTracker
         overallCompletionPercentage={20}
         expectedHandoverDate="Q4 2029"
         currentPhase="Master Layout & Soil Testing"
         milestones={progressMilestones}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 6. Floor Plans */}
-      <FloorPlansViewer
+      {/* <FloorPlansViewer
         plans={floorPlans}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 7. Legal Credentials */}
-      <LegalCredentialsModule
+      {/* <LegalCredentialsModule
         credentials={legalCredentials}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 8. 3D Renders */}
-      <WalkthroughRenderGallery
+      {/* <WalkthroughRenderGallery
         items={renders}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 9. Payment Calculator */}
-      <PaymentPlanCalculator
+      {/* <PaymentPlanCalculator
         defaultPropertyPriceBDT={4200000}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 10. Brochure Download */}
       <DownloadableBrochureCTA

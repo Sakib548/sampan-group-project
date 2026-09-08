@@ -15,7 +15,7 @@ import RealEstateLocationMap from "../components/RealEstateLocationMap";
 export const metadata: Metadata = {
   title: "Sampan Taj | 1,350 sft Single-Unit Luxury Residences in Bashundhara",
   description:
-    "Official presentation of Sampan Taj in Block F, Bashundhara R/A — 9-storied boutique residential building with 1 apartment per floor (1,350 sft), 40% open space, and premium finishes by Sampan Developments Ltd.",
+    "Official presentation of Sampan Taj in Block F, Bashundhara R/A - 9-storied boutique residential building with 1 apartment per floor (1,350 sft), 40% open space, and premium finishes by Sampan Developments Ltd.",
 };
 
 const facts = [
@@ -28,7 +28,7 @@ const facts = [
 const units = [
   {
     id: "taj-1350-suite",
-    name: "Sampan Taj Single Unit Residence — 1,350 sq ft",
+    name: "Sampan Taj Single Unit Residence - 1,350 sq ft",
     category: "3-Bedroom Single Unit Flat per Floor",
     sizeSqFt: "1,350 sq ft",
     bedrooms: 3,
@@ -44,6 +44,7 @@ const units = [
       "Kitchen (7'-5\" x 5'-10\") with dedicated utility verandah & double gas burner line",
       "7 Covered Car Parking Bays on Ground Floor",
     ],
+    image: "/images/projects/Sampan-Taj-Bashundhara.png"
   },
 ];
 
@@ -52,9 +53,9 @@ const landShareTiers = [
     title: "Bashundhara Block-F Land Share Tier",
     shareSize: "3.5 Katha Total Land Share",
     equityRatio: "1 Full Floor Apartment Share (1/8th Share)",
-    deedRegistration: "Sub-Kabala Registered (REHAB Member Developer)",
+    // deedRegistration: "Sub-Kabala Registered (REHAB Member Developer)",
     keyBenefits: [
-      "Direct Sub-Kabala Land Share Registration in Bashundhara R/A",
+      // "Direct Sub-Kabala Land Share Registration in Bashundhara R/A",
       "Single Flat Per Floor confidentiality and high privacy",
       "Developed by Sampan Developments Ltd (REHAB Member)",
     ],
@@ -70,7 +71,7 @@ const progressMilestones = [
 const floorPlans = [
   {
     id: "fp-taj-typical",
-    name: "Sampan Taj — Typical Floor Plan (1,350 sft)",
+    name: "Sampan Taj - Typical Floor Plan (1,350 sft)",
     category: "Typical Single Unit Floor Layout",
     sizeSqFt: "1,350 sq ft",
     image: "/images/projects/sampantaj.jpg",
@@ -160,7 +161,7 @@ const specifications: SpecificationCategory[] = [
 const legalCredentials = [
   {
     authority: "Bashundhara R/A & Ministry of Land",
-    approvalTitle: "Plot 235 Block-F Sub-Kabala Deed & Mutation",
+    approvalTitle: "Plot 235 Block-F Deed & Mutation", // Sub-Kabala Deed
     referenceNumber: "REHAB Member Developer",
     status: "100% Cleared",
     description: "Clear deed title in Block F, Bashundhara R/A by Sampan Developments Ltd (REHAB Member).",
@@ -215,10 +216,10 @@ export default function SampanTajPage() {
       />
 
       {/* 2. Unit Configurations */}
-      <UnitTypesAndSizes
+      {/* <UnitTypesAndSizes
         units={units}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 3. Building Specifications Module (From Official Brochure) */}
       <BuildingSpecificationsModule
@@ -236,56 +237,56 @@ export default function SampanTajPage() {
       />
 
       {/* 5. Land Share Model */}
-      <LandShareStructure
+      {/* <LandShareStructure
         totalLandArea="3.5 Katha"
         totalSharesCount="8 Exclusive Flat Shares"
-        registrationStatus="Sub-Kabala Ready"
+        // registrationStatus="Sub-Kabala Ready"
         tiers={landShareTiers}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 6. Location + Map */}
-      <RealEstateLocationMap
+      {/* <RealEstateLocationMap
         projectName="Sampan Taj"
         address="Plot 235, Road 2, Block F, Bashundhara R/A, Baridhara, Dhaka."
         gpsCoordinates="23.8124° N, 90.4326° E"
         embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14601.6!2d90.4326!3d23.8124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a5613%3A0x4b8e2b834460f1b2!2sBashundhara%20Residential%20Area%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
         landmarks={landmarks}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 7. Construction Progress */}
-      <ConstructionProgressTracker
+      {/* <ConstructionProgressTracker
         overallCompletionPercentage={100}
         expectedHandoverDate="Active Construction Phase"
         currentPhase="Piling & Structural Frame Construction"
         milestones={progressMilestones}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 8. Legal Credentials */}
-      <LegalCredentialsModule
+      {/* <LegalCredentialsModule
         credentials={legalCredentials}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 9. 3D Renders */}
-      <WalkthroughRenderGallery
+      {/* <WalkthroughRenderGallery
         items={renders}
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 10. Payment Calculator */}
-      <PaymentPlanCalculator
+      {/* <PaymentPlanCalculator
         defaultPropertyPriceBDT={13500000}
         bgTheme="divisions-green"
-      />
+      /> */}
 
       {/* 11. Brochure CTA */}
-      <DownloadableBrochureCTA
+      {/* <DownloadableBrochureCTA
         projectName="Sampan Taj"
         bgTheme="about-ivory"
-      />
+      /> */}
 
       {/* 12. Site Visit Form */}
       <SiteVisitBookingForm

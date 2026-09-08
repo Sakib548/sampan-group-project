@@ -180,7 +180,7 @@ const nearbyConcerns = [
 const photos = [
   { id: "photo-1", title: "Sweet Display", category: "Craftsmanship", image: "/images/brand/sweetbox.png", caption: "Handcrafted Artisanal Sweet Display" },
   { id: "photo-2", title: "Walk-In Lounge", category: "Store Outlet", image: "/images/brand/sampanhighwayinn.png", caption: "Sampan Highway Outlet Walk-In Lounge" },
-  { id: "photo-3", title: "Royal Gift Hamper", category: "Gift Packaging", image: "/images/brand/sweetbox.png", caption: "Signature Festival Royal Gift Hamper Packaging" },
+  // { id: "photo-3", title: "Royal Gift Hamper", category: "Gift Packaging", image: "/images/brand/sweetbox.png", caption: "Signature Festival Royal Gift Hamper Packaging" },
 ];
 
 export default function SampanSweetBoxPage() {
@@ -236,14 +236,14 @@ export default function SampanSweetBoxPage() {
       />
 
       {/* 5. Loyalty Program */}
-      <RetailLoyaltyProgram
+      {/* <RetailLoyaltyProgram
         title="Sampan Sweet Rewards Program"
         subtitle="Earn points on every sweet box purchase and redeem across Sampan Group hotels and cafes."
         programName="Sampan Sweet Rewards"
         tiers={sweetBoxLoyaltyTiers}
         bgTheme="white"
         accentColor="#d97706"
-      />
+      /> */}
 
       {/* 6. Physical Store Locations */}
       <RetailStoreLocationAndMap

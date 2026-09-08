@@ -272,7 +272,7 @@ export default function AboutPreview() {
                 />
               </div>
 
-              {/* ── Type — Editorial Metadata ── */}
+              {/* ── Type - Editorial Metadata ── */}
               <div className="mb-3 flex items-center gap-2.5">
                 <span className="inline-block h-[3px] w-[3px] rounded-full bg-emerald-600/50" />
                 <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
@@ -290,7 +290,7 @@ export default function AboutPreview() {
                 {snapshot.copy}
               </p>
 
-              {/* ── Domain — Digital Signature ── */}
+              {/* ── Domain - Digital Signature ── */}
               <a
                 href={snapshot.href}
                 target="_blank"

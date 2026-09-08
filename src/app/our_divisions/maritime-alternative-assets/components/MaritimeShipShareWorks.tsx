@@ -37,7 +37,7 @@ export default function MaritimeShipShareWorks() {
             How Ship Space & Fractional Share Works
           </h2>
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            Understanding fractional maritime asset ownership — a simple, transparent alternative investment model.
+            Understanding fractional maritime asset ownership - a simple, transparent alternative investment model.
           </p>
         </div>
 

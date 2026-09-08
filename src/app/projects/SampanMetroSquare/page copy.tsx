@@ -476,10 +476,10 @@ export default function SampanMetroSquarePage() {
                   +880 1906-896332
                 </a>
                 <a
-                  href="mailto:info@sampangroup.com.bd"
+                  href="mailto:info@sampangroup.com.bd.bd"
                   className="hover:text-[#071b13]"
                 >
-                  info@sampangroup.com.bd
+                  info@sampangroup.com.bd.bd
                 </a>
               </div>
             </div>

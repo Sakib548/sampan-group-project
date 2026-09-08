@@ -27,7 +27,7 @@ export interface AgroNearbyModuleProps {
 
 export default function AgroNearbyModule({
   title = "Nearby Facilities at This Location",
-  subtitle = "Located within Sampan Group's integrated agro-tourism & hospitality complex — experience sister resorts, golf, and dining facilities.",
+  subtitle = "Located within Sampan Group's integrated agro-tourism & hospitality complex - experience sister resorts, golf, and dining facilities.",
   currentStoreName,
   locationHubName = "Sampan Agro Complex, Moulvibazar",
   nearbyConcerns,

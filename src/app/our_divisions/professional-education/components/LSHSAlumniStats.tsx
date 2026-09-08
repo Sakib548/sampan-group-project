@@ -3,7 +3,7 @@ export default function LSHSAlumniStats() {
     { value: "20%", label: "Higher Salary Premium", detail: "Certified CIPS professionals command up to 20% higher average salaries globally" },
     { value: "65%", label: "Employer Preference", detail: "Of top multinational & corporate employers prefer CIPS-qualified candidates" },
     { value: "200K+", label: "Global Professional Network", detail: "Elite network of over 200,000 certified experts across leading industries worldwide" },
-    { value: "80%+", label: "Expense Savings vs UK", detail: "Zero airfare & zero UK rent — exact same UK curriculum delivered locally in Bangladesh" },
+    { value: "80%+", label: "Expense Savings vs UK", detail: "Zero airfare & zero UK rent - exact same UK curriculum delivered locally in Bangladesh" },
   ];
 
   return (

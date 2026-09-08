@@ -59,7 +59,7 @@ const divisions: Division[] = [
     title: "Hospitality, Resort & Highway Travel",
     shortTitle: "Hospitality",
     oneLiner:
-      "Flagship highway inns, resorts, restaurants and club lounges — the most recognized brand nationally.",
+      "Flagship highway inns, resorts, restaurants and club lounges - the most recognized brand nationally.",
     cta: "Explore Hospitality",
     href: "https://www.sampangroup.com.bd/sampan-highway-inn-restaurant-party-centre",
     image: "/images/brand/sampanhighwayinn.png",
@@ -83,7 +83,7 @@ const divisions: Division[] = [
     title: "Professional Education",
     shortTitle: "Education",
     oneLiner:
-      "UK-recognized CIPS, CMI and international courses — taught close to home.",
+      "UK-recognized CIPS, CMI and international courses - taught close to home.",
     cta: "Explore Education",
     href: "#education",
     image: "/images/brand/lshs.png",
@@ -97,7 +97,7 @@ const divisions: Division[] = [
     title: "Agro & Fresh Produce",
     shortTitle: "Agro",
     oneLiner:
-      "Bulk sale of vegetables, fruits, flowers, fish and meat — from our farm to your table.",
+      "Bulk sale of vegetables, fruits, flowers, fish and meat - from our farm to your table.",
     cta: "Explore Agro",
     href: "https://www.sampangroup.com.bd/sampan-eco-agro",
     image: "/images/brand/sampanechoagro.png",
@@ -109,7 +109,7 @@ const divisions: Division[] = [
     title: "Retail Shop & Super Shop",
     shortTitle: "Retail",
     oneLiner:
-      "Premium sweets, confectionery and everyday essentials — online and offline super shops.",
+      "Premium sweets, confectionery and everyday essentials - online and offline super shops.",
     cta: "Explore Retail",
     href: "https://www.sampangroup.com.bd/sampan-sweet-box",
     image: "/images/brand/sampanretail.png",
@@ -162,7 +162,7 @@ const divisions: Division[] = [
     title: "Defense & Security",
     shortTitle: "Security",
     oneLiner:
-      "Licensed, regulated and trusted firearms and defense supply — Nagar Arms & Fire Arms Co.",
+      "Licensed, regulated and trusted firearms and defense supply - Nagar Arms & Fire Arms Co.",
     cta: "Explore Security",
     href: "https://www.sampangroup.com.bd/sampan-fire-arms-co",
     image: "/images/brand/firearmsco.png",

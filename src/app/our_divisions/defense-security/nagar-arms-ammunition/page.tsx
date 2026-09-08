@@ -124,7 +124,7 @@ export default function NagarArmsAmmunitionPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#7c2d12] selection:text-white">
 
-      {/* 1. Hero Overview — Bronze / Brown (#7c2d12) Accent from Crest Logo */}
+      {/* 1. Hero Overview - Bronze / Brown (#7c2d12) Accent from Crest Logo */}
       <DefenseHero
         title="Nagar Arms & Ammunition"
         subtitle="Historic Defense Armory & Ammunition Supplier"

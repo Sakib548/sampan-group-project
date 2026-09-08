@@ -6,7 +6,7 @@ import { divisionGroups } from "@/data/divisions";
 
 const taglines: Record<string, string> = {
   "real-estate": "Own land, not just visit it.",
-  hospitality: "Stay, celebrate, and unwind — on the highway and beyond.",
+  hospitality: "Stay, celebrate, and unwind - on the highway and beyond.",
   agro: "From our farm to your table.",
   retail: "Everyday essentials, always nearby.",
   manufacturing: "Built by us, for what we build.",
@@ -101,7 +101,7 @@ export default function DivisionsSection() {
                         </div>
 
                         <div className="mt-auto min-w-0 pt-4">
-                          <p className="text-[0.62rem] font-semibold leading-4 text-[#91b594] [overflow-wrap:anywhere]">
+                          <p className="text-[0.65rem] font-semibold leading-4 text-[#91b594] [overflow-wrap:anywhere]">
                             {concern.tagline ??
                               "Part of Sampan Group’s connected portfolio."}
                           </p>

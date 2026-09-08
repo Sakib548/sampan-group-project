@@ -6,7 +6,7 @@ export interface LandShareTier {
   title: string;
   shareSize: string;
   equityRatio: string;
-  deedRegistration: string;
+  deedRegistration?: string;
   keyBenefits: string[];
 }
 
@@ -15,7 +15,7 @@ export interface LandShareStructureProps {
   subtitle?: string;
   totalLandArea: string;
   totalSharesCount: string;
-  registrationStatus: string;
+  registrationStatus?: string;
   tiers: LandShareTier[];
   bgTheme?: "divisions-green" | "about-ivory" | "white";
 }
@@ -37,7 +37,7 @@ export default function LandShareStructure({
 
   return (
     <section id="land-share" className={`py-24 relative overflow-hidden ${containerClasses}`}>
-      
+
       {/* Signature DivisionsSection Radial Ambient Overlay */}
       <div
         aria-hidden="true"
@@ -45,7 +45,7 @@ export default function LandShareStructure({
       />
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -63,7 +63,7 @@ export default function LandShareStructure({
         </div>
 
         {/* Highlight Stats Strip */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
           <div className="border border-current/15 bg-white p-6 space-y-1 shadow-sm">
             <span className="text-xs font-mono uppercase opacity-60">Total Project Footprint</span>
             <p className="text-3xl font-mono font-bold text-[#ca8a04]">{totalLandArea}</p>
@@ -72,14 +72,16 @@ export default function LandShareStructure({
             <span className="text-xs font-mono uppercase opacity-60">Total Shares Allotted</span>
             <p className="text-3xl font-mono font-bold text-current">{totalSharesCount}</p>
           </div>
-          <div className="border border-current/15 bg-white p-6 space-y-1 shadow-sm">
-            <span className="text-xs font-mono uppercase opacity-60">Legal Deed Registration</span>
-            <p className="text-lg font-mono font-bold text-emerald-700 flex items-center gap-2 mt-2">
-              <FaShieldAlt />
-              <span>{registrationStatus}</span>
-            </p>
-          </div>
-        </div>
+          {registrationStatus && (
+            <div className="border border-current/15 bg-white p-6 space-y-1 shadow-sm">
+              <span className="text-xs font-mono uppercase opacity-60">Legal Deed Registration</span>
+              <p className="text-lg font-mono font-bold text-emerald-700 flex items-center gap-2 mt-2">
+                <FaShieldAlt />
+                <span>{registrationStatus}</span>
+              </p>
+            </div>
+          )}
+        </div> */}
 
         {/* Tiers Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -106,10 +108,12 @@ export default function LandShareStructure({
                     <span>Equity Ownership Ratio:</span>
                     <span className="font-bold text-[#ca8a04]">{tier.equityRatio}</span>
                   </div>
-                  <div className="flex justify-between opacity-80">
-                    <span>Deed Transfer:</span>
-                    <span className="font-bold text-current">{tier.deedRegistration}</span>
-                  </div>
+                  {tier.deedRegistration && (
+                    <div className="flex justify-between opacity-80">
+                      <span>Deed Transfer:</span>
+                      <span className="font-bold text-current">{tier.deedRegistration}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-2 pt-2">

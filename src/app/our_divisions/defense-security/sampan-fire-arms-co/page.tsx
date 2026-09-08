@@ -123,7 +123,7 @@ export default function SampanFireArmsCoPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#b91c1c] selection:text-white">
 
-      {/* 1. Hero Overview — Crimson Red (#b91c1c) Accent from Logo */}
+      {/* 1. Hero Overview - Crimson Red (#b91c1c) Accent from Logo */}
       <DefenseHero
         title="Sampan Fire Arms Co."
         subtitle="Government Licensed Firearms & Defense Importer"

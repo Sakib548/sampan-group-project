@@ -7,19 +7,19 @@ import { useState } from "react";
 const projects = [
   [
     "Sampan 21st Century",
-    "/images/projects/21.jpg",
+    "/images/success/Web-image.png",
     "A successful residential development offering modern living and premium land-share opportunities.",
     "/our_divisions/real-state-and-land-investment/sampan-21st-century",
   ],
   [
     "Sampan Taj",
-    "/images/projects/sampantaj.jpg",
+    "/images/success/Web-image-1.png",
     "A premium land-share residential project, developed with Sampan’s commitment to quality and trust.",
     "/our_divisions/real-state-and-land-investment/sampan-taj",
   ],
   [
     "Sampan Niketon",
-    "/images/projects/sampanniketon.jpg",
+    "/images/success/Web-image-2.png",
     "A successful addition to Sampan’s residential portfolio, reflecting our experience in creating quality addresses.",
     "/our_divisions/real-state-and-land-investment/sampan-niketon",
   ],

@@ -22,8 +22,8 @@ export interface AgroHowToBuyProps {
 }
 
 export default function AgroHowToBuy({
-  title = "How to Buy — Procurement Channels",
-  subtitle = "Whether you are a wholesale distributor, supermarket chain, hotel, or individual shopper — choose your convenient buying channel.",
+  title = "How to Buy - Procurement Channels",
+  subtitle = "Whether you are a wholesale distributor, supermarket chain, hotel, or individual shopper - choose your convenient buying channel.",
   concernName,
   channels,
   bgTheme = "divisions-green",

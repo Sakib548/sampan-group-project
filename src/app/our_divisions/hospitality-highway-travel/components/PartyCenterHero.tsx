@@ -17,7 +17,7 @@ export default function PartyCenterHero({
   subtitle = "Premier Highway Dining, Grand Banquet Halls & Celebration Venue",
   concernName = "Sampan Highway Inn Restaurant & Party Center",
   statusBadge = "Now Booking for Weddings & Corporate Events 2026",
-  description = "Bangladesh's leading highway event venue and multi-cuisine restaurant — featuring central air-conditioned banquet halls accommodating up to 500+ guests, gourmet catering, and live BBQ dining.",
+  description = "Bangladesh's leading highway event venue and multi-cuisine restaurant - featuring central air-conditioned banquet halls accommodating up to 500+ guests, gourmet catering, and live BBQ dining.",
   facts = [
     { value: "500+ Capacity", label: "Grand Banquet Hall" },
     { value: "Multi-Cuisine", label: "Feast & Buffet Menus" },

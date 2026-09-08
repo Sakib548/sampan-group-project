@@ -90,7 +90,7 @@ export default function NearbyLocationModule() {
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-emerald-500" />
               <p className="text-xs font-bold uppercase tracking-[0.28em] text-emerald-400">
-                07 — Regional Surroundings
+                Regional Surroundings
               </p>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">

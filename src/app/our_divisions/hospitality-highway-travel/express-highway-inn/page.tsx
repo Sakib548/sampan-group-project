@@ -687,7 +687,7 @@ export default function ExpressHighwayInnPage() {
           <div className="flex items-center gap-4 mb-6"> 
             <span className="h-px w-12 bg-[#58b9eb]"></span> 
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#1a1a1a]/50"> 
-              06 — Development Timeline 
+              06 - Development Timeline 
             </p> 
           </div> 
           <h2 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl mb-16"> 
@@ -755,7 +755,7 @@ export default function ExpressHighwayInnPage() {
           <div className="flex items-center gap-4 mb-6"> 
             <span className="h-px w-12 bg-[#58b9eb]"></span> 
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#1a1a1a]/50"> 
-              07 — Membership Options 
+              07 - Membership Options 
             </p> 
           </div> 
           <h2 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl mb-4"> 
@@ -909,7 +909,7 @@ export default function ExpressHighwayInnPage() {
           <div className="flex items-center gap-4 mb-6"> 
             <span className="h-px w-12 bg-[#58b9eb]"></span> 
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#1a1a1a]/50"> 
-              09 — Interactive Masterplan 
+              09 - Interactive Masterplan 
             </p> 
           </div> 
           <h2 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl mb-12"> 

@@ -9,7 +9,8 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+22Aug.zip
+*.zip
 # testing
 /coverage
 
@@ -39,3 +40,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+*.mp4
+*.mp4

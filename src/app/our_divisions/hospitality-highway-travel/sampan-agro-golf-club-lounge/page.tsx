@@ -64,7 +64,7 @@ export default function SampanAgroGolfClubLoungePage() {
         title="Sampan Agro & Golf Club & Lounge"
         subtitle="Exclusive SAGCL VIP Membership Shares, Private Lounge & Resort Privileges"
         concernName="Sampan Agro & Golf Club & Lounge (SAGCL)"
-        statusBadge="Ongoing Development — Membership Pre-Launch 2026"
+        statusBadge="Ongoing Development - Membership Pre-Launch 2026"
         description="The pinnacle of private club membership in Bangladesh, offering executive lounge access, priority golf fairway tee-times, villa discounts, and digital member portal services."
         facts={clubFacts}
         logo="/images/brand/sampanagroandgolfclubandlounge.png"

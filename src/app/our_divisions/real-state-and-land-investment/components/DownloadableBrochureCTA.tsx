@@ -7,12 +7,20 @@ export interface DownloadableBrochureCTAProps {
   projectName: string;
   brochurePdfUrl?: string;
   bgTheme?: "divisions-green" | "about-ivory" | "white";
+  badge?: string;
+  title?: string;
+  subtitle?: string;
+  ctaText?: string;
 }
 
 export default function DownloadableBrochureCTA({
   projectName,
   brochurePdfUrl = "#",
   bgTheme = "divisions-green",
+  badge = "Downloadable Documentation",
+  title,
+  subtitle,
+  ctaText = "Download PDF Brochure",
 }: DownloadableBrochureCTAProps) {
   const [downloaded, setDownloaded] = useState(false);
 
@@ -34,13 +42,13 @@ export default function DownloadableBrochureCTA({
           
           <div className="space-y-2 max-w-xl">
             <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#ca8a04]">
-              Downloadable Documentation
+              {badge}
             </span>
             <h3 className="text-2xl font-bold text-current">
-              Download Official {projectName} Brochure PDF
+              {title || `Download Official ${projectName} Brochure PDF`}
             </h3>
             <p className="text-xs opacity-75 font-normal leading-relaxed">
-              Includes master architectural plan, floor layouts, specs checklist, and payment schedule.
+              {subtitle || "Includes master architectural plan, floor layouts, specs checklist, and payment schedule."}
             </p>
           </div>
 
@@ -57,7 +65,7 @@ export default function DownloadableBrochureCTA({
                 className="inline-flex items-center gap-3 bg-[#183b2b] hover:bg-[#ca8a04] text-white hover:text-neutral-950 px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all shadow-md"
               >
                 <FaFileDownload />
-                <span>Download PDF Brochure</span>
+                <span>{ctaText}</span>
               </a>
             )}
 

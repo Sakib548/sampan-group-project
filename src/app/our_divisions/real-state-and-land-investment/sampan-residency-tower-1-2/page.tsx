@@ -28,7 +28,7 @@ const facts = [
 const units = [
   {
     id: "res-a",
-    name: "Tower 1 — 1,450 sq ft Executive Suite",
+    name: "Tower 1 - 1,450 sq ft Executive Suite",
     category: "3-Bedroom Deluxe",
     sizeSqFt: "1,450 sq ft",
     bedrooms: 3,
@@ -40,7 +40,7 @@ const units = [
   },
   {
     id: "res-b",
-    name: "Tower 2 — 1,650 sq ft Presidential Suite",
+    name: "Tower 2 - 1,650 sq ft Presidential Suite",
     category: "4-Bedroom Luxury",
     sizeSqFt: "1,650 sq ft",
     bedrooms: 4,
@@ -57,7 +57,7 @@ const landShareTiers = [
     title: "Residency Land Share Tier A",
     shareSize: "1.3 Katha Undivided",
     equityRatio: "1 Suite Unit Share",
-    deedRegistration: "Sub-Kabala Registered",
+    // deedRegistration: "Sub-Kabala Registered",
     keyBenefits: ["Direct Land Mutation Title", "Access to Express Highway Inn Swimming Pool & Gym", "High Rental Yield Potential"],
   },
 ];
@@ -112,7 +112,7 @@ export default function SampanResidencyTowerPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#ca8a04] selection:text-neutral-950">
 
-      {/* 1. Hero Overview — Dark for Transparent Navbar */}
+      {/* 1. Hero Overview - Dark for Transparent Navbar */}
       <RealEstateHero
         title="Sampan Residency Tower 1 & 2"
         subtitle="Luxury Highway Corridor Twin Residential Towers"
@@ -125,7 +125,7 @@ export default function SampanResidencyTowerPage() {
         theme="dark-slate"
       />
 
-      {/* 2. Unit Configurations — DivisionsSection Green bg-[#f3f6f2] */}
+      {/* 2. Unit Configurations - DivisionsSection Green bg-[#f3f6f2] */}
       <UnitTypesAndSizes
         title="Residency Unit Configurations"
         subtitle="Explore 3 & 4 bedroom executive suites with double-glazed soundproof glass."
@@ -133,7 +133,7 @@ export default function SampanResidencyTowerPage() {
         bgTheme="divisions-green"
       />
 
-      {/* 3. Land Share Model — AboutPreview Warm Ivory bg-[#F5F5F2] */}
+      {/* 3. Land Share Model - AboutPreview Warm Ivory bg-[#F5F5F2] */}
       {/* <LandShareStructure
         totalLandArea="18 Katha"
         totalSharesCount="64 Land Shares"
@@ -142,7 +142,7 @@ export default function SampanResidencyTowerPage() {
         bgTheme="about-ivory"
       /> */}
 
-      {/* 4. Location + Map — DivisionsSection Green bg-[#f3f6f2] */}
+      {/* 4. Location + Map - DivisionsSection Green bg-[#f3f6f2] */}
       <RealEstateLocationMap
         projectName="Sampan Residency Tower 1 & 2"
         address="Express Highway Corridor Exit, Bangladesh."
@@ -152,7 +152,7 @@ export default function SampanResidencyTowerPage() {
         bgTheme="divisions-green"
       />
 
-      {/* 5. Construction Progress — AboutPreview Warm Ivory bg-[#F5F5F2] */}
+      {/* 5. Construction Progress - AboutPreview Warm Ivory bg-[#F5F5F2] */}
       {/* <ConstructionProgressTracker
         overallCompletionPercentage={50}
         expectedHandoverDate="Q3 2028"
@@ -161,13 +161,13 @@ export default function SampanResidencyTowerPage() {
         bgTheme="about-ivory"
       /> */}
 
-      {/* 6. Floor Plans — DivisionsSection Green bg-[#f3f6f2] */}
+      {/* 6. Floor Plans - DivisionsSection Green bg-[#f3f6f2] */}
       <FloorPlansViewer
         plans={floorPlans}
         bgTheme="divisions-green"
       />
 
-      {/* 7. Facilities Overview — Gym & Swimming Pool */}
+      {/* 7. Facilities Overview - Gym & Swimming Pool */}
       <ResidencyFacilitiesOverview
         title="Exclusive Club & Wellness Facilities"
         subtitle="Residents of Sampan Residency Tower 1 & 2 enjoy complimentary, integrated privileges at the adjacent Express Highway Inn lifestyle complex, featuring an Olympic-standard outdoor pool and modern fitness gym."
@@ -175,31 +175,31 @@ export default function SampanResidencyTowerPage() {
         accentColor="#ca8a04"
       />
 
-      {/* 8. Legal Credentials — DivisionsSection Green bg-[#f3f6f2] */}
+      {/* 8. Legal Credentials - DivisionsSection Green bg-[#f3f6f2] */}
       <LegalCredentialsModule
         credentials={legalCredentials}
         bgTheme="divisions-green"
       />
 
-      {/* 8. 3D Renders — DivisionsSection Green bg-[#f3f6f2] */}
+      {/* 8. 3D Renders - DivisionsSection Green bg-[#f3f6f2] */}
       <WalkthroughRenderGallery
         items={renders}
         bgTheme="divisions-green"
       />
 
-      {/* 9. Payment Calculator — AboutPreview Warm Ivory bg-[#F5F5F2] */}
+      {/* 9. Payment Calculator - AboutPreview Warm Ivory bg-[#F5F5F2] */}
       {/* <PaymentPlanCalculator
         defaultPropertyPriceBDT={7200000}
         bgTheme="about-ivory"
       /> */}
 
-      {/* 10. Brochure Download — DivisionsSection Green bg-[#f3f6f2] */}
+      {/* 10. Brochure Download - DivisionsSection Green bg-[#f3f6f2] */}
       <DownloadableBrochureCTA
         projectName="Sampan Residency Tower 1 & 2"
         bgTheme="divisions-green"
       />
 
-      {/* 11. Site Visit Form — AboutPreview Warm Ivory bg-[#F5F5F2] */}
+      {/* 11. Site Visit Form - AboutPreview Warm Ivory bg-[#F5F5F2] */}
       <SiteVisitBookingForm
         projectName="Sampan Residency Tower 1 & 2"
         bgTheme="about-ivory"

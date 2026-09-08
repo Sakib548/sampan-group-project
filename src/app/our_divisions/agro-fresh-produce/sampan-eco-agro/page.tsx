@@ -248,7 +248,7 @@ export default function SampanEcoAgroPage() {
 
       {/* 3. What's Sold */}
       <AgroProductsCatalog
-        title="What's Sold — Fresh Harvest & Produce Catalog"
+        title="What's Sold - Fresh Harvest & Produce Catalog"
         subtitle="Explore our organic farm vegetables, seasonal orchard fruits, grains, and oilseeds available for bulk purchase."
         products={ecoAgroProducts}
         bgTheme="about-ivory"
@@ -258,8 +258,8 @@ export default function SampanEcoAgroPage() {
 
       {/* 4. How to Buy */}
       <AgroHowToBuy
-        title="How to Buy — Procurement Channels"
-        subtitle="Choose your preferred channel — direct farmgate pickup, reefer truck B2B delivery, or contract farming agreements."
+        title="How to Buy - Procurement Channels"
+        subtitle="Choose your preferred channel - direct farmgate pickup, reefer truck B2B delivery, or contract farming agreements."
         concernName="Sampan Eco & Agro"
         channels={buyingChannels}
         bgTheme="divisions-green"

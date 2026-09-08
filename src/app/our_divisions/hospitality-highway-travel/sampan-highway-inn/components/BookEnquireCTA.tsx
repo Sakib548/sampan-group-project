@@ -38,7 +38,7 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
           <div className="lg:col-span-6 space-y-8">
             <div className="inline-flex items-center gap-2 border border-emerald-700/30 bg-emerald-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-emerald-800">
               <FaHeadset />
-              <span>04 / 24/7 Front Desk &amp; Concierge</span>
+              <span>24/7 Front Desk &amp; Concierge</span>
             </div>
 
             <h2 className="text-[clamp(2.2rem,4.5vw,4rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950">
@@ -84,7 +84,7 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
               </a>
 
               <a
-                href="mailto:info@sampangroup.com.bd"
+                href="mailto:info@sampangroup.com.bd.bd"
                 className="group p-5 rounded-none bg-white border border-neutral-200 hover:border-emerald-700 transition-all duration-300 flex items-start gap-4 shadow-sm"
               >
                 <div className="p-3 rounded-none bg-emerald-50 text-emerald-800 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
@@ -92,7 +92,7 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
                 </div>
                 <div>
                   <p className="font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-500">Corporate Enquiries</p>
-                  <p className="text-xs font-bold text-neutral-950 mt-0.5 group-hover:text-emerald-700 transition-colors truncate">info@sampangroup.com.bd</p>
+                  <p className="text-xs font-bold text-neutral-950 mt-0.5 group-hover:text-emerald-700 transition-colors truncate">info@sampangroup.com.bd.bd</p>
                   <p className="text-[10px] text-neutral-400 mt-1 font-mono">Official RFP &amp; Contracts</p>
                 </div>
               </a>
@@ -151,7 +151,7 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
                         <input
                           type="tel"
                           required
-                          placeholder="+880 1XXXXXXXXX"
+                          placeholder="+880 1912234588"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="w-full bg-[#F5F5F2] border border-neutral-300 rounded-none p-3.5 text-neutral-950 placeholder-neutral-400 focus:outline-none focus:border-emerald-700"

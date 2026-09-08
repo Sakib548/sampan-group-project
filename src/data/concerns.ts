@@ -97,6 +97,14 @@ export const concerns: Concern[] = [
     tagline: "New Auto showroom + cafe, car wash, facilities.",
     logo: "/images/brand/sampancafemetro.png",
   },
+  {
+    id: 39,
+    name: "Sampan Condominium",
+    category: "Development & Construction",
+    tagline: "16-storied modern luxury high-rise residences.",
+    logo: "/images/brand/development.png",
+    href: "/our_divisions/real-state-and-land-investment/sampan-condominium",
+  },
 
   // Hospitality, Resort & Highway Travel
   {

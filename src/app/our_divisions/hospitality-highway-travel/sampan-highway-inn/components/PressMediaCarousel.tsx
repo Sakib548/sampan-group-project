@@ -75,7 +75,7 @@ export default function PressMediaCarousel() {
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-emerald-600" />
               <p className="text-xs font-bold uppercase tracking-[0.28em] text-emerald-800">
-                08 — Press &amp; Media Mentions
+                Press &amp; Media Mentions
               </p>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] leading-tight">

@@ -14,7 +14,7 @@ const manufacturingConcerns = [
     id: "sampan-industrial-park",
     name: "Sampan Industrial Park",
     category: "Master Manufacturing Hub",
-    status: "Coming Soon — Land Leasing",
+    status: "Coming Soon - Land Leasing",
     statusType: "coming-soon",
     location: "Mawna Industrial Zone Corridor",
     description: "State-of-the-art master-planned industrial park equipped with dedicated high-voltage power substations, central ETP, 60ft freight roads, and resident manufacturing plants.",

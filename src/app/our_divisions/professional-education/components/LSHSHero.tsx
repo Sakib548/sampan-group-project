@@ -13,7 +13,7 @@ interface LSHSHeroProps {
 
 export default function LSHSHero({
   title = "London School of Higher Studies (LSHS)",
-  subtitle = "Build A Stronger Business with CIPS — The World's Leading Procurement Qualification",
+  subtitle = "Build A Stronger Business with CIPS - The World's Leading Procurement Qualification",
   description = "LSHS is an officially approved CIPS UK Study and Exam Centre (Centre No: 10005967). Receive identical UK qualifications in Bangladesh, taught by a 25-year CIPS Fellow while saving over 80% on overall expenses.",
   facts = [
     { value: "No: 10005967", label: "Official CIPS Approved Centre" },

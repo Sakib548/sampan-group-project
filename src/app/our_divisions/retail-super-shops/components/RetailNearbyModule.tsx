@@ -26,7 +26,7 @@ export interface RetailNearbyModuleProps {
 
 export default function RetailNearbyModule({
   title = "Nearby at This Location",
-  subtitle = "Located within the premier Sampan Highway Hub — experience our sister hospitality and mobility facilities right next door.",
+  subtitle = "Located within the premier Sampan Highway Hub - experience our sister hospitality and mobility facilities right next door.",
   currentStoreName,
   locationHubName = "Sampan Highway Complex, N1 Highway",
   nearbyConcerns,

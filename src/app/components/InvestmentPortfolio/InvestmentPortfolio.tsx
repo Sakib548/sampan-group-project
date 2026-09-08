@@ -141,7 +141,7 @@ export default function InvestmentPortfolio() {
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-7 text-neutral-600 lg:text-right">
-            Not just places to visit — assets to hold. Land share, club
+            Not just places to visit - assets to hold. Land share, club
             membership, and ship space share, explained plainly.
           </p>
         </div>

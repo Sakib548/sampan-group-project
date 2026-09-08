@@ -8,13 +8,15 @@ export interface SiteVisitBookingFormProps {
   subtitle?: string;
   projectName: string;
   bgTheme?: "divisions-green" | "about-ivory" | "white";
+  submitButtonText?: string;
 }
 
 export default function SiteVisitBookingForm({
-  title = "Book VIP Site Visit & Consultation",
+  title = "Book a Visit",
   subtitle = "Schedule a guided site tour with our property team. Complimentary vehicle transport available upon request.",
   projectName,
   bgTheme = "about-ivory",
+  submitButtonText = "Confirm VIP Site Visit Slot",
 }: SiteVisitBookingFormProps) {
   const [submitted, setSubmitted] = useState(false);
 
@@ -31,7 +33,7 @@ export default function SiteVisitBookingForm({
 
   return (
     <section id="site-visit" className={`py-24 relative overflow-hidden ${containerClasses}`}>
-      
+
       {/* Signature DivisionsSection Radial Ambient Overlay */}
       <div
         aria-hidden="true"
@@ -39,12 +41,12 @@ export default function SiteVisitBookingForm({
       />
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         <div className="border border-current/15 bg-white p-8 sm:p-12 relative overflow-hidden shadow-sm">
           <div className="absolute top-0 left-0 h-1.5 w-full bg-[#ca8a04]" />
 
           <div className="grid lg:grid-cols-12 gap-8 items-center">
-            
+
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 border border-[#ca8a04]/40 bg-[#ca8a04]/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[#ca8a04]">
                 <FaCalendarAlt className="text-xs" />
@@ -125,8 +127,8 @@ export default function SiteVisitBookingForm({
                   <div className="space-y-1">
                     <label className="block uppercase opacity-70">Transport Pickup Needed?</label>
                     <select className="w-full bg-white border border-neutral-300 p-3 text-xs text-neutral-950 focus:border-[#ca8a04] focus:outline-none">
-                      <option>Yes — Request AC Car Pickup</option>
-                      <option>No — Self Driving to Site</option>
+                      <option>Yes - Request AC Car Pickup</option>
+                      <option>No - Self Driving to Site</option>
                     </select>
                   </div>
 
@@ -134,7 +136,7 @@ export default function SiteVisitBookingForm({
                     type="submit"
                     className="w-full bg-[#183b2b] hover:bg-[#ca8a04] text-white hover:text-neutral-950 py-4 font-bold uppercase tracking-[0.2em] transition-all shadow-md mt-2 cursor-pointer"
                   >
-                    Confirm VIP Site Visit Slot
+                    {submitButtonText}
                   </button>
                 </form>
               )}

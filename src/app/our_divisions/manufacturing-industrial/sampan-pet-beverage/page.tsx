@@ -118,7 +118,7 @@ export default function SampanPetBeveragePage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#ea580c] selection:text-white">
       
-      {/* 1. Hero Overview — Orange (#ea580c) & Chocolate Brown (#582e14) Accent from Logo */}
+      {/* 1. Hero Overview - Orange (#ea580c) & Chocolate Brown (#582e14) Accent from Logo */}
       <ManufacturingHero
         title="Sampan Pet & Beverage"
         subtitle="Automated PET Bottle Preforms & Beverage Bottling Plant"

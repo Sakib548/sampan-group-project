@@ -27,7 +27,11 @@ const offeredServices = [
   {
     title: "Ready Showroom Vehicle Inventory",
     description: "Browse high-spec Toyota Noah, Lexus RX, Prado, Premio, and Honda Grace ready for immediate delivery in our Expressway showroom.",
-    highlights: ["Ready Sub-Kabala Tax Token & Smart Card", "Zero Mileage In-Country Drive", "Complimentary First Service"],
+    highlights: [
+      // "Ready Sub-Kabala Tax Token & Smart Card",
+      "Zero Mileage In-Country Drive",
+      "Complimentary First Service",
+    ],
   },
   {
     title: "Genuine OEM Japanese Spare Parts",
@@ -110,7 +114,7 @@ export default function SampanAutoPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#4c2a85] selection:text-white">
 
-      {/* 1. Hero Overview — Purple (#4c2a85) Accent from Logo */}
+      {/* 1. Hero Overview - Purple (#4c2a85) Accent from Logo */}
       <MobilityHero
         title="Sampan Auto"
         subtitle="Japanese Vehicle Imports, Recondition Cars & Genuine Parts"
@@ -145,7 +149,7 @@ export default function SampanAutoPage() {
       />
 
       {/* 4. Section 2, 10: Location + Map & "Nearby" Link to Sampan Cafe Metro */}
-      <MobilityLocationAndNearby
+      {/* <MobilityLocationAndNearby
         title="Showroom Location & Transit Amenities"
         subtitle="Located at the Expressway Transit Corridor right beside Sampan Cafe Metro and Highway Inn."
         concernName="Sampan Auto Showroom"
@@ -155,9 +159,9 @@ export default function SampanAutoPage() {
         nearbyFacilities={nearbyFacilities}
         bgTheme="divisions-green"
         accentColor="#4c2a85"
-      />
+      /> */}
 
-      {/* 5. Section 3: Contact / CTA — Call or WhatsApp */}
+      {/* 5. Section 3: Contact / CTA - Call or WhatsApp */}
       <MobilityOnlineRequestForm
         title="Contact Sales Desk or Request Import Quote"
         subtitle="Call our sales team directly or send us a message on WhatsApp for instant auction sheet verification."

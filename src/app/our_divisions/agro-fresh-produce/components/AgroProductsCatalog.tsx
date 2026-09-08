@@ -27,7 +27,7 @@ export interface AgroProductsCatalogProps {
 }
 
 export default function AgroProductsCatalog({
-  title = "What's Sold — Fresh Harvest & Produce Catalog",
+  title = "What's Sold - Fresh Harvest & Produce Catalog",
   subtitle = "Explore our organic farm produce, seasonal fruits, wild & farmed fish varieties, and fresh meat cuts.",
   products,
   bgTheme = "about-ivory",

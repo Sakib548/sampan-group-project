@@ -86,7 +86,7 @@ export default function LeadershipMessage() {
     () => {
       const mm = gsap.matchMedia();
 
-      /* Reduced motion — show everything instantly */
+      /* Reduced motion - show everything instantly */
       mm.add("(prefers-reduced-motion: reduce)", () => {
         gsap.set(
           [
@@ -268,7 +268,7 @@ export default function LeadershipMessage() {
           );
         });
 
-        /* ── Cinematic parallax (Mobile — reduced) ── */
+        /* ── Cinematic parallax (Mobile - reduced) ── */
         mm.add("(max-width: 1023px)", () => {
           gsap.fromTo(
             ".lead-image",
@@ -317,7 +317,7 @@ export default function LeadershipMessage() {
               {/* Section label / Subtitle */}
               <div className="mb-10 flex items-center gap-3">
                 <span className="h-px w-5 bg-gradient-to-r from-emerald-600/50 to-emerald-600/0" />
-                <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.45em] text-neutral-400">
+                <span className="font-mono text-[12px] font-semibold uppercase tracking-[0.45em] text-neutral-400">
                   Message from the Managing Director
                 </span>
               </div>
@@ -336,7 +336,7 @@ export default function LeadershipMessage() {
               {/* Attribution */}
               <div className="lead-attribution mt-8 flex items-center gap-4">
                 <span className="h-px w-8 bg-neutral-300" />
-                <p className="text-sm font-semibold tracking-tight text-neutral-900">
+                <p className="text-xl font-bold tracking-tight text-neutral-900">
                   Emamul Hasan
                   <span className="ml-2 font-normal text-neutral-500">
                     Managing Director
@@ -353,7 +353,7 @@ export default function LeadershipMessage() {
                 onMouseLeave={handleCtaLeave}
                 className="group/cta mt-12 inline-flex cursor-pointer items-center gap-5 font-mono text-[9px] font-bold uppercase tracking-[0.35em] text-neutral-600 transition-colors duration-500 hover:text-emerald-700"
               >
-                <span className="relative pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gradient-to-r after:from-emerald-600 after:to-emerald-600/0 after:transition-all after:duration-500 after:ease-out group-hover/cta:after:w-full">
+                <span className="relative pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gradient-to-r after:from-emerald-600 after:to-emerald-600/0 after:transition-all after:duration-500 after:ease-out group-hover/cta:after:w-full text-[14px]">
                   Watch the full message
                 </span>
                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-black/10 transition-all duration-500 group-hover/cta:border-emerald-600/30 group-hover/cta:bg-emerald-600/5">
@@ -365,7 +365,7 @@ export default function LeadershipMessage() {
 
           {/* ================= VIDEO (RIGHT) ================= */}
           <div className="lead-video group relative lg:col-span-7 lg:order-2">
-            <div className="relative aspect-[16/10] w-full overflow-hidden border border-neutral-300/60 bg-neutral-950">
+            <div className="relative aspect-[16/12] w-full overflow-hidden border border-neutral-300/60 bg-neutral-950">
               {!playing ? (
                 <>
                   {/* Border draw segments (clockwise) */}
@@ -424,7 +424,7 @@ export default function LeadershipMessage() {
                 <iframe
                   className="absolute inset-0 h-full w-full"
                   src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0&modestbranding=1&color=white`}
-                  title="Leadership Message — Emamul Hasan, Managing Director, Sampan Group"
+                  title="Leadership Message - Emamul Hasan, Managing Director, Sampan Group"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen

@@ -53,7 +53,7 @@ export default function LSHSIntakeCountdown() {
         {/* Live Ticker Box */}
         <div className="bg-[#0c4a6e] text-white rounded-3xl p-8 sm:p-12 shadow-2xl max-w-4xl mx-auto text-center border border-sky-700/40 mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#f4d210] bg-sky-950 px-3.5 py-1 rounded-full border border-sky-800">
-            Registration Deadline Ticker — Autumn 2026 Batch
+            Registration Deadline Ticker - Autumn 2026 Batch
           </span>
 
           <div className="grid grid-cols-4 gap-4 max-w-xl mx-auto my-8">

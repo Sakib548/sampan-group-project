@@ -57,11 +57,10 @@ export default function BuildingSpecificationsModule({
 
   return (
     <section
-      className={`py-20 sm:py-28 relative border-t ${
-        isGreen
+      className={`py-20 sm:py-28 relative border-t ${isGreen
           ? "bg-[#183b2b] text-white border-white/10"
           : "bg-[#f8faf7] text-[#183b2b] border-[#183b2b]/10"
-      }`}
+        }`}
     >
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
@@ -82,11 +81,10 @@ export default function BuildingSpecificationsModule({
           {categories.map((cat, idx) => (
             <div
               key={idx}
-              className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
-                isGreen
+              className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${isGreen
                   ? "bg-white/[0.04] border-white/10 hover:border-emerald-400/40 hover:bg-white/[0.07]"
                   : "bg-white border-[#183b2b]/10 hover:border-emerald-600/40 shadow-sm hover:shadow-md"
-              }`}
+                }`}
             >
               <div>
                 <div className="flex items-center gap-3 mb-4 pb-3 border-b border-emerald-500/20">
@@ -112,7 +110,7 @@ export default function BuildingSpecificationsModule({
         </div>
 
         {/* Developer Info Card */}
-        {developerInfo && (
+        {/* {developerInfo && (
           <div
             className={`mt-14 p-8 rounded-3xl border ${
               isGreen
@@ -173,7 +171,7 @@ export default function BuildingSpecificationsModule({
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );

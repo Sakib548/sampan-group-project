@@ -258,7 +258,7 @@ export default function SampanFishAndMeatPage() {
 
       {/* 3. What's Sold */}
       <AgroProductsCatalog
-        title="What's Sold — Fresh Fish, Seafood & Meat Catalog"
+        title="What's Sold - Fresh Fish, Seafood & Meat Catalog"
         subtitle="Explore our selection of wild Padma Hilsa, bio-secure Ruhi fish, grass-fed beef cuts, free-range Deshi chicken, and mutton."
         products={fishAndMeatProducts}
         bgTheme="about-ivory"
@@ -268,8 +268,8 @@ export default function SampanFishAndMeatPage() {
 
       {/* 4. How to Buy */}
       <AgroHowToBuy
-        title="How to Buy — Wholesale & Retail Channels"
-        subtitle="Choose your preferred channel — reefer truck wholesale delivery, processing hub pickup, institutional supply contracts, or Sampan Mart counters."
+        title="How to Buy - Wholesale & Retail Channels"
+        subtitle="Choose your preferred channel - reefer truck wholesale delivery, processing hub pickup, institutional supply contracts, or Sampan Mart counters."
         concernName="Sampan Fish & Meat"
         channels={buyingChannels}
         bgTheme="divisions-green"

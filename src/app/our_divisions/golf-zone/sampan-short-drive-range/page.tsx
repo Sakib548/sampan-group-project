@@ -182,7 +182,7 @@ export default function SampanShortDriveRangePage() {
         title="Sampan Short Drive Range"
         subtitle="High-Tech Short Game Practice, Toptracer Bays & Floodlit Sports Lounge"
         concernName="Sampan Short Drive Range"
-        statusBadge="Coming Soon — Launching Q4 2026"
+        statusBadge="Coming Soon - Launching Q4 2026"
         description="Bangladesh's premier automated driving range featuring 35+ Toptracer technology bays, floodlit night driving, live scoring leaderboards, and corporate event lounges."
         facts={rangeFacts}
         logo="/images/brand/golfrage.png"
@@ -216,13 +216,13 @@ export default function SampanShortDriveRangePage() {
       /> */}
 
       {/* SECTION 6: Online Bay Booking System */}
-      <GolfBayBookingWidget />
+      {/* <GolfBayBookingWidget /> */}
 
       {/* SECTION 7: Leaderboard / Scoring Feature */}
-      <GolfLeaderboard />
+      {/* <GolfLeaderboard /> */}
 
       {/* SECTION 8: Group / Corporate Event Packages */}
-      <GolfCorporatePackages />
+      {/* <GolfCorporatePackages /> */}
 
       {/* SECTION 9: Photo / Video Gallery */}
       <GolfMediaGallery

@@ -23,7 +23,7 @@ export default function ResortHero({
   title,
   subtitle,
   concernName,
-  statusBadge = "Ongoing Development — Phased Opening 2026",
+  statusBadge = "Ongoing Development - Phased Opening 2026",
   description,
   facts,
   bannerImage,

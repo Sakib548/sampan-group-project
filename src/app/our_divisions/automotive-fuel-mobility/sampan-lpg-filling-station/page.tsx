@@ -59,7 +59,7 @@ export default function SampanLpgFillingStationPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#eab308] selection:text-neutral-950">
       
-      {/* 1. Hero Overview — Amber/Yellow (#eab308) Accent from LPG Logo */}
+      {/* 1. Hero Overview - Amber/Yellow (#eab308) Accent from LPG Logo */}
       <MobilityHero
         title="Sampan LPG Filling Station"
         subtitle="24/7 High-Pressure Auto LPG & Cylinder Refilling"

@@ -18,14 +18,14 @@ export const concerns2: Concern[] = [
     logo: "/images/brand/sampanmetrosquare.png",
     href: "/our_divisions/real-state-and-land-investment/sampan-metro-square",
   },
-  {
-    id: 3,
-    name: "Sampan Skyline",
-    category: "Development & Construction",
-    tagline: "Commercial + residential construction project",
-    logo: "/images/brand/sampanmotolibskyline.webp",
-    href: "/our_divisions/real-state-and-land-investment/sampan-skyline",
-  },
+  // {
+  //   id: 3,
+  //   name: "Sampan Skyline",
+  //   category: "Development & Construction",
+  //   tagline: "Commercial + residential construction project",
+  //   logo: "/images/brand/sampanmotolibskyline.webp",
+  //   href: "/our_divisions/real-state-and-land-investment/sampan-skyline",
+  // },
   {
     id: 4,
     name: "Sampan Nexus",
@@ -108,6 +108,14 @@ export const concerns2: Concern[] = [
     tagline: "New Auto showroom + cafe, car wash, facilities.",
     logo: "/images/brand/sampanauto.png",
     href: "/our_divisions/real-state-and-land-investment/sampan-cafe-metro",
+  },
+  {
+    id: 39,
+    name: "Sampan Condominium",
+    category: "Development & Construction",
+    tagline: "16-storied modern luxury high-rise residences.",
+    logo: "/images/brand/development.png",
+    href: "/our_divisions/real-state-and-land-investment/sampan-condominium",
   },
 
   // Hospitality, Resort & Highway Travel

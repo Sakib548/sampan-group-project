@@ -105,7 +105,7 @@ const miniShopOffers = [
 
 const miniShopLocations = [
   {
-    name: "Mini Sampan Super Shop — Ashulia Residency Outlet",
+    name: "Mini Sampan Super Shop - Ashulia Residency Outlet",
     address: "Ground Floor, Sampan Metro Square, Ashulia, Dhaka",
     phone: "+880 1700-333444",
     hours: "07:00 AM - 11:00 PM Daily",
@@ -113,7 +113,7 @@ const miniShopLocations = [
     parkingInfo: "Short-stay Express Pickup Parking Zone",
   },
   {
-    name: "Mini Sampan Express — Highway Inn Branch",
+    name: "Mini Sampan Express - Highway Inn Branch",
     address: "Sampan Highway Complex, N1 Highway Rest Plaza",
     phone: "+880 1800-333444",
     hours: "24/7 Open",

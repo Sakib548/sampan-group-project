@@ -27,8 +27,8 @@ export default function SampanFloatingPearlPage() {
         title="Sampan Floating Pearl"
         subtitle="Fractional Luxury Vessel & Maritime Alternative Asset Investment Shares"
         concernName="Sampan Floating Pearl Venture"
-        statusBadge="Coming Soon — Pre-Launch Phase 1 Open"
-        description="Bangladesh's premier fractional maritime asset opportunity — allowing private investors to hold legal equity share units in a 3,200 GRT luxury cruise vessel operating across coastal Bay of Bengal routes."
+        statusBadge="Coming Soon - Pre-Launch Phase 1 Open"
+        description="Bangladesh's premier fractional maritime asset opportunity - allowing private investors to hold legal equity share units in a 3,200 GRT luxury cruise vessel operating across coastal Bay of Bengal routes."
       />
 
       {/* SECTION 2: How ship space share works, in plain language */}

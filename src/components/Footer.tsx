@@ -24,78 +24,82 @@ const sitemap = [
   {
     title: "Corporate",
     links: [
-      { label: "About Us", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Investment Portfolio", href: "/investments" },
-      { label: "Newsroom", href: "/newsroom" },
-      { label: "Accreditation & Awards", href: "/awards" },
+      { label: "About Us", href: "/who-are-we/aboutus" },
+      { label: "Careers", href: "/who-are-we/career" },
+      { label: "Investment Portfolio", href: "/investment-portfolio" },
+      { label: "Newsroom", href: "/who-are-we/blogs" },
+      { label: "Accreditation & Awards", href: "/who-are-we/awards" },
       { label: "Contact Us", href: "/contact" },
     ],
   },
   {
     title: "Real Estate",
     links: [
-      { label: "SDL", href: "/real-estate/sdl" },
-      { label: "Metro Square", href: "/real-estate/metro-square" },
-      { label: " Skyline", href: "/real-estate/-skyline" },
-      { label: "Nexus", href: "/real-estate/nexus" },
-      { label: "Residency Tower 1 & 2", href: "/real-estate/residency" },
-      { label: "Taj", href: "/real-estate/taj" },
-      { label: "Niketon", href: "/real-estate/niketon" },
-      { label: "21st Century", href: "/real-estate/21st-century" },
+      { label: "SDL", href: "/our_divisions/real-state-and-land-investment/sampan-development-ltd" },
+      { label: "Metro Square", href: "/our_divisions/real-state-and-land-investment/sampan-metro-square" },
+      { label: " Skyline", href: "/our_divisions/real-state-and-land-investment/sampan-skyline" },
+      { label: "Nexus", href: "/our_divisions/real-state-and-land-investment/sampan-nexus" },
+      // { label: "Residency Tower 1 & 2", href: "/real-estate/residency" },
+      { label: "Taj", href: "/our_divisions/real-state-and-land-investment/sampan-taj" },
+      { label: "Niketon", href: "/our_divisions/real-state-and-land-investment/sampan-niketon" },
+      { label: "21st Century", href: "/our_divisions/real-state-and-land-investment/sampan-21st-century" },
+      { label: "Trade Emporium", href: "/our_divisions/real-state-and-land-investment/sampan-trade-emporium" },
+      { label: "Cafe Metro", href: "/our_divisions/real-state-and-land-investment/sampan-cafe-metro" },
     ],
   },
   {
     title: "Hospitality & Travel",
     links: [
-      { label: "Highway Inn", href: "/hospitality/highway-inn" },
-      { label: "Express Highway Inn", href: "/hospitality/express" },
-      { label: "EHCL", href: "/hospitality/ehcl" },
-      { label: "White Hall", href: "/hospitality/white-hall" },
-      { label: "Eco & Agro Resort", href: "/hospitality/eco-agro" },
+      { label: "Highway Inn", href: "/our_divisions/hospitality-highway-travel/sampan-highway-inn" },
+      { label: "Express Highway Inn", href: "/our_divisions/hospitality-highway-travel/express-highway-inn" },
+      { label: "EHCL", href: "/our_divisions/hospitality-highway-travel/express-highway-inn-club-lounge" },
+      { label: "White House", href: "/our_divisions/hospitality-highway-travel/sampan-white-house" },
+      { label: "Eco & Agro Resort", href: "/our_divisions/hospitality-highway-travel/sampan-eco-agro" },
+      { label: "Agro & Golf Resort", href: "/our_divisions/hospitality-highway-travel/sampan-agro-golf-resort" },
     ],
     secondary: {
       title: "Golf Zone",
       links: [
-        { label: "Agro & Golf Resort", href: "/golf/agro-resort" },
-        { label: "Golf Academy", href: "/golf/academy" },
-        { label: "Short Drive Range", href: "/golf/range" },
+
+        { label: "Golf Academy", href: "/our_divisions/golf-zone/sampan-golf-academy" },
+        { label: "Short Drive Range", href: "/our_divisions/golf-zone/sampan-short-drive-range" },
       ],
     },
   },
   {
     title: "Education",
-    links: [{ label: "LSHS", href: "/education/lshs" }],
+    links: [{ label: "LSHS", href: "https://london-schools-seven.vercel.app/" }],
     secondary: {
       title: "Agro & Retail",
       links: [
-        { label: "Eco & Agro", href: "/agro/eco-agro" },
-        { label: "Sampan Mart", href: "/retail/sampan-mart" },
-        { label: "Mini Sampan", href: "/retail/mini-sampan" },
-        { label: "Trade Emporium", href: "/retail/emporium" },
-        { label: "Sweet Box", href: "/retail/sweet-box" },
+        { label: "Eco & Agro", href: "/our_divisions/agro-fresh-produce/sampan-eco-agro" },
+        { label: "Sampan Mart", href: "/our_divisions/retail-super-shops/sampan-mart" },
+        { label: "Mini Sampan", href: "/our_divisions/retail-super-shops/mini-sampan-super-shop" },
+        { label: "Sweet Box", href: "/our_divisions/retail-super-shops/sampan-sweet-box" },
       ],
     },
   },
   {
     title: "Manufacturing & Auto",
     links: [
-      { label: "Hollow Bricks & Tile", href: "/mfg/bricks" },
-      { label: "Pet & Beverage", href: "/mfg/beverage" },
-      { label: "Industrial Park", href: "/mfg/industrial-park" },
-      { label: "Sampan Auto", href: "/auto/sampan-auto" },
-      { label: "Cafe Metro", href: "/food/cafe-metro" },
-      { label: "Filling Station", href: "/energy/filling" },
-      { label: "LPG / EV Charging", href: "/energy/lpg-ev" },
-      { label: "Towing", href: "/auto/towing" },
+      { label: "Hollow Bricks & Tile", href: "/our_divisions/manufacturing-industrial/sampan-hollow-bricks-tiles" },
+      { label: "Pet & Beverage", href: "/our_divisions/manufacturing-industrial/sampan-pet-beverage" },
+      { label: "Industrial Park", href: "/our_divisions/manufacturing-industrial/sampan-industrial-park" },
+      { label: "Sampan Auto", href: "/our_divisions/automotive-fuel-mobility/sampan-auto" },
+
+      { label: "Filling Station", href: "/our_divisions/automotive-fuel-mobility/sampan-filling-station" },
+      { label: "LPG ", href: "/our_divisions/automotive-fuel-mobility/sampan-lpg-filling-station" },
+      { label: "Ev Charging Station ", href: "/our_divisions/automotive-fuel-mobility/sampan-ev-car-charging-station" },
+
+      { label: "Towing", href: "/our_divisions/automotive-fuel-mobility/sampan-towing-service" },
     ],
   },
   {
     title: "Defense & Maritime",
     links: [
-      { label: "Fire Arms Co.", href: "/defense/fire-arms" },
-      { label: "Nagar Arms", href: "/defense/nagar-arms" },
-      { label: "Floating Pearl", href: "/maritime/floating-pearl" },
+      { label: "Fire Arms Co.", href: "/our_divisions/defense-security/sampan-fire-arms-co" },
+      { label: "Nagar Arms", href: "/our_divisions/defense-security/nagar-arms-ammunition" },
+      { label: "Floating Pearl", href: "/our_divisions/maritime-alternative-assets/sampan-floating-pearl" },
     ],
   },
 ];
@@ -118,7 +122,7 @@ const socialLinks = [
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/8801XXXXXXXXX",
+    href: "https://wa.me/8801912234588",
     Icon: FaWhatsapp,
   },
 ];
@@ -727,7 +731,7 @@ export default function Footer() {
         {/* ============ CONTACT + SOCIAL ============ */}
         <div className="f-anim grid grid-cols-1 gap-4 py-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:py-10">
           <a
-            href="mailto:info@sampangroup.com.bd"
+            href="mailto:info@sampangroup.com.bd.bd"
             className="group flex items-center gap-3 rounded-lg border border-white/[0.04] p-3 transition-all duration-300 hover:border-emerald-500/15 hover:bg-white/[0.015]"
           >
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/[0.05] bg-white/[0.015] transition-all duration-300 group-hover:border-emerald-500/25 group-hover:bg-emerald-500/[0.04]">
@@ -738,7 +742,7 @@ export default function Footer() {
                 Email
               </span>
               <span className="text-[13px] text-white/[0.55] transition-colors duration-300 group-hover:text-white/[0.85]">
-                info@sampangroup.com.bd
+                info@sampangroup.com.bd.bd
               </span>
             </div>
           </a>
@@ -807,8 +811,8 @@ export default function Footer() {
             onClick={scrollToTop}
             aria-label="Back to top"
             className={`flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.15em] text-white/[0.32] transition-all duration-500 hover:text-emerald-400/80 ${showBackToTop
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-2 pointer-events-none"
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-2 pointer-events-none"
               }`}
           >
             <span>Top</span>

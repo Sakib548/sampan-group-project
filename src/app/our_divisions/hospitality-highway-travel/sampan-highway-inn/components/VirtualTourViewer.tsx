@@ -100,7 +100,7 @@ export default function VirtualTourViewer() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400 mb-4">
               <FaCompass />
-              <span>12 — Interactive Virtual Tour</span>
+              <span>Interactive Virtual Tour</span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
               Step inside before <br />

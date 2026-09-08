@@ -21,7 +21,7 @@ export default function GolfHero({
   title,
   subtitle,
   concernName,
-  statusBadge = "Coming Soon — Launching Q4 2026",
+  statusBadge = "Coming Soon - Launching Q4 2026",
   description,
   facts,
   bannerImage,

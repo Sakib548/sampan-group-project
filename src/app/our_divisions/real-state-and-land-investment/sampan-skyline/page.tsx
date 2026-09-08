@@ -27,7 +27,7 @@ const facts = [
 const units = [
   {
     id: "sky-a",
-    name: "Skyline Suite Type A — 1,550 sq ft",
+    name: "Skyline Suite Type A - 1,550 sq ft",
     category: "3-Bedroom Luxury",
     sizeSqFt: "1,550 sq ft",
     bedrooms: 3,
@@ -39,7 +39,7 @@ const units = [
   },
   {
     id: "sky-b",
-    name: "Skyline Penthouse Unit — 2,200 sq ft",
+    name: "Skyline Penthouse Unit - 2,200 sq ft",
     category: "4-Bedroom Penthouse",
     sizeSqFt: "2,200 sq ft",
     bedrooms: 4,
@@ -56,7 +56,7 @@ const landShareTiers = [
     title: "Pre-Launch Skyline Land Share",
     shareSize: "1.4 Katha Undivided",
     equityRatio: "1 Penthouse / Suite Share",
-    deedRegistration: "Sub-Kabala Direct Transfer",
+    // deedRegistration: "Sub-Kabala Direct Transfer",
     keyBenefits: ["Pre-Construction Discount", "Guaranteed Floor Selection Priority", "High Growth Appreciation"],
   },
 ];
@@ -110,12 +110,12 @@ export default function SampanSkylinePage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#0284c7] selection:text-white">
 
-      {/* 1. Hero Overview — Skyline Blue (#0284c7) Accent */}
+      {/* 1. Hero Overview - Skyline Blue (#0284c7) Accent */}
       <RealEstateHero
         title="Sampan  Skyline"
         subtitle="Pre-Launch 18-Storey High-Rise Residential Tower"
         divisionName="Sampan Development Ltd"
-        statusBadge="Coming Soon — Pre-Launch Bookings"
+        statusBadge="Coming Soon - Pre-Launch Bookings"
         statusType="coming-soon"
         description="Experience pre-launch pricing on an 18-storey high-rise luxury residential tower featuring smart home automation and panoramic urban views."
         image="/images/our_divisions/sampan--skyline/-skyline.png"
@@ -137,7 +137,7 @@ export default function SampanSkylinePage() {
       <LandShareStructure
         totalLandArea="15 Katha"
         totalSharesCount="54 Pre-Launch Shares"
-        registrationStatus="Sub-Kabala Ready"
+        // registrationStatus="Sub-Kabala Ready"
         tiers={landShareTiers}
         bgTheme="about-ivory"
       />

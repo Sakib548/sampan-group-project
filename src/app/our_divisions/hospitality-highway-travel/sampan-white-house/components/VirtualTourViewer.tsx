@@ -78,7 +78,7 @@ export default function VirtualTourViewer() {
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-[#e8b84b]"></span>
               <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-neutral-600">
-                12 / 360° Virtual Walkthrough
+                360° Virtual Walkthrough
               </span>
             </div>
             <h2 className="text-[clamp(2.2rem,4.5vw,4rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950">
