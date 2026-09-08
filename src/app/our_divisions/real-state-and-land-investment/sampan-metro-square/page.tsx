@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   FaBuilding,
@@ -107,24 +108,28 @@ const locationBenefits = [
     title: "20 Mins to Metro Rail",
     description: "Only a 20-minute drive from the Uttara Metro Rail Station, ensuring rapid transit across Dhaka.",
     metric: "20 Mins",
+    image: "/images/our_divisions/sampan-metro-square/metro-rail.jpeg",
   },
   {
     icon: FaGraduationCap,
     title: "8+ Universities & 16+ Schools",
     description: "Surrounded by 8+ reputable universities and 16+ top-tier academic institutions in the educational hub.",
     metric: "Education Hub",
+    image: "/images/our_divisions/sampan-metro-square/university.jpeg",
   },
   {
     icon: FaUniversity,
     title: "5+ Major Banking Institutions",
     description: "Convenient proximity to 5+ major scheduled commercial banks and financial branches.",
     metric: "5+ Banks",
+    image: "/images/our_divisions/sampan-metro-square/bank.jpg",
   },
   {
     icon: FaPlaneDeparture,
     title: "Direct Highway & Airport Access",
     description: "Direct access to the Ashulia Highway Interchange and Hazrat Shahjalal International Airport.",
     metric: "Rapid Corridor",
+    image: "/images/our_divisions/sampan-metro-square/airport.jpeg",
   },
 ];
 
@@ -134,24 +139,38 @@ const elevatedAmenities = [
     title: "B+G 12-Floor Modern Design",
     description: "Architectural B+G 12-floor building engineered for contemporary living with expansive units starting at 1,300+ sq ft.",
     tag: "Architecture",
+    images: [
+      { src: "/images/our_divisions/sampan-metro-square/metro-square.png", label: "Architecture" },
+    ],
   },
   {
     icon: FaHelicopter,
     title: "Exclusive Rooftop Drone Port",
     description: "Future-ready rooftop drone landing station designed for aerial logistics and emergency accessibility.",
     tag: "Future-Ready",
+    images: [
+      { src: "/images/our_divisions/sampan-metro-square/drone.png", label: "Drone Port" },
+    ],
   },
   {
     icon: FaSwimmingPool,
     title: "Gym & Private Swimming Pool",
     description: "State-of-the-art fitness gymnasium paired with an exclusive temperature-tempered private swimming pool.",
     tag: "Wellness",
+    images: [
+      { src: "/images/our_divisions/sampan-metro-square/modern-gym-interior.jpg.jpeg", label: "Fitness Gym" },
+      { src: "/images/our_divisions/sampan-metro-square/swimming_pool.jpeg", label: "Infinity Pool" },
+    ],
   },
   {
     icon: FaUsers,
     title: "Community Hall & Prayer Room",
     description: "Spacious multi-purpose community gathering hall alongside a serene, dedicated on-site prayer room.",
     tag: "Community",
+    images: [
+      { src: "/images/our_divisions/sampan-metro-square/community_hall.png", label: "Community Hall" },
+      { src: "/images/our_divisions/sampan-metro-square/11.Prayers-Room.png", label: "Prayer Room" },
+    ],
   },
 ];
 
@@ -347,21 +366,38 @@ export default function SampanMetroSquarePage() {
               return (
                 <div
                   key={idx}
-                  className="border border-neutral-300/80 bg-white p-7 relative flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group"
+                  className="border border-neutral-300/80 bg-white overflow-hidden relative flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group"
                 >
-                  <div className="space-y-4">
-                    <div className="h-12 w-12 rounded-none bg-[#f3f6f2] border border-neutral-200 flex items-center justify-center text-[#ca8a04] text-xl group-hover:bg-[#ca8a04] group-hover:text-neutral-950 transition-colors">
+                  <div className="relative h-48 w-full overflow-hidden bg-neutral-100">
+                    <Image
+                      src={benefit.image}
+                      alt={benefit.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+
+                    <div className="absolute top-3 left-3">
+                      <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-wider text-[#ca8a04] bg-neutral-950/85 backdrop-blur-sm px-2.5 py-1 border border-[#ca8a04]/30 shadow-sm">
+                        {benefit.metric}
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-3 right-3 h-10 w-10 bg-white/95 backdrop-blur-sm border border-neutral-200 flex items-center justify-center text-[#ca8a04] text-lg shadow-sm group-hover:bg-[#ca8a04] group-hover:text-neutral-950 transition-colors">
                       <IconComponent />
                     </div>
-                    <span className="inline-block font-mono text-[11px] font-bold uppercase tracking-wider text-[#ca8a04]">
-                      {benefit.metric}
-                    </span>
-                    <h3 className="text-xl font-bold text-neutral-950 leading-snug">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-xs text-neutral-600 leading-relaxed font-normal">
-                      {benefit.description}
-                    </p>
+                  </div>
+
+                  <div className="p-6 flex-1 flex flex-col justify-between space-y-3">
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-bold text-neutral-950 leading-snug group-hover:text-[#ca8a04] transition-colors">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-xs text-neutral-600 leading-relaxed font-normal">
+                        {benefit.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               );
@@ -403,24 +439,84 @@ export default function SampanMetroSquarePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {elevatedAmenities.map((amenity, idx) => {
               const IconComp = amenity.icon;
+              const hasMultipleImages = amenity.images.length > 1;
+
               return (
                 <div
                   key={idx}
-                  className="border border-[#183b2b]/15 bg-white p-7 relative flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group"
+                  className="border border-neutral-300/80 bg-white overflow-hidden relative flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group"
                 >
-                  <div className="space-y-4">
-                    <div className="h-12 w-12 bg-[#f3f6f2] border border-[#183b2b]/10 flex items-center justify-center text-[#ca8a04] text-xl group-hover:bg-[#183b2b] group-hover:text-white transition-colors">
-                      <IconComp />
+                  {hasMultipleImages ? (
+                    <div className="relative h-48 w-full overflow-hidden bg-neutral-100 flex">
+                      {amenity.images.map((img, i) => (
+                        <div
+                          key={i}
+                          className={`relative h-full flex-1 transition-all duration-500 ease-out hover:flex-[2.2] group/photo overflow-hidden ${
+                            i === 0 ? "border-r border-white/30" : ""
+                          }`}
+                        >
+                          <Image
+                            src={img.src}
+                            alt={img.label || amenity.title}
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                            className="object-cover group-hover/photo:scale-110 transition-transform duration-500 ease-out"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent pointer-events-none" />
+
+                          {/* Mini label for each photo */}
+                          <div className="absolute bottom-2.5 left-2.5 z-10 pointer-events-none">
+                            <span className="inline-block text-[9px] font-mono font-bold uppercase tracking-wider text-white/90 bg-black/60 backdrop-blur-sm px-2 py-0.5 border border-white/20">
+                              {img.label}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+
+                      {/* Tag badge for whole card */}
+                      <div className="absolute top-3 left-3 z-10 pointer-events-none">
+                        <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-wider text-[#ca8a04] bg-neutral-950/85 backdrop-blur-sm px-2.5 py-1 border border-[#ca8a04]/30 shadow-sm">
+                          {amenity.tag}
+                        </span>
+                      </div>
+
+                      {/* Icon */}
+                      <div className="absolute bottom-3 right-3 z-20 h-10 w-10 bg-white/95 backdrop-blur-sm border border-neutral-200 flex items-center justify-center text-[#ca8a04] text-lg shadow-sm group-hover:bg-[#ca8a04] group-hover:text-neutral-950 transition-colors pointer-events-none">
+                        <IconComp />
+                      </div>
                     </div>
-                    <span className="inline-block font-mono text-[11px] font-bold uppercase tracking-wider text-[#ca8a04]">
-                      {amenity.tag}
-                    </span>
-                    <h3 className="text-xl font-bold text-[#183b2b] leading-snug">
-                      {amenity.title}
-                    </h3>
-                    <p className="text-xs text-neutral-600 leading-relaxed font-normal">
-                      {amenity.description}
-                    </p>
+                  ) : (
+                    <div className="relative h-48 w-full overflow-hidden bg-neutral-100">
+                      <Image
+                        src={amenity.images[0].src}
+                        alt={amenity.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+
+                      <div className="absolute top-3 left-3 z-10">
+                        <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-wider text-[#ca8a04] bg-neutral-950/85 backdrop-blur-sm px-2.5 py-1 border border-[#ca8a04]/30 shadow-sm">
+                          {amenity.tag}
+                        </span>
+                      </div>
+
+                      <div className="absolute bottom-3 right-3 z-10 h-10 w-10 bg-white/95 backdrop-blur-sm border border-neutral-200 flex items-center justify-center text-[#ca8a04] text-lg shadow-sm group-hover:bg-[#ca8a04] group-hover:text-neutral-950 transition-colors">
+                        <IconComp />
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="p-6 flex-1 flex flex-col justify-between space-y-3">
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-bold text-neutral-950 leading-snug group-hover:text-[#ca8a04] transition-colors">
+                        {amenity.title}
+                      </h3>
+                      <p className="text-xs text-neutral-600 leading-relaxed font-normal">
+                        {amenity.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               );
