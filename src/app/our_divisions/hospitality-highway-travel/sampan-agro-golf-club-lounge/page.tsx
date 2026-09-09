@@ -86,20 +86,20 @@ export default function SampanAgroGolfClubLoungePage() {
       <ClubMemberPortalTeaser />
 
       {/* SECTION 6: Referral Program Details */}
-      <ClubReferralProgram />
+      {/* <ClubReferralProgram /> */}
 
       {/* SECTION 7: FAQ Accordion */}
       <ClubFAQ />
 
       {/* SECTION 8: Location + Map */}
-      <GolfLocationAndMap
+      {/* <GolfLocationAndMap
         title="SAGCL Club & Lounge Location"
         subtitle="Located within the main clubhouse complex at Sampan Agro & Golf Complex, Sreemangal."
         projectName="Sampan Agro & Golf Club & Lounge (SAGCL)"
         address="Sampan Agro & Golf Complex, Sreemangal, Moulvibazar, Sylhet Division, Bangladesh."
         gpsCoordinates="24.3000° N, 91.7000° E"
         landmarks={clubLandmarks}
-      />
+      /> */}
 
       {/* SECTION 9: "Nearby at this location" module */}
       <GolfNearbyModule

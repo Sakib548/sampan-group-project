@@ -116,7 +116,7 @@ const showrooms = [
     phone: "+880 1711 009988 / +880 2 9553311",
     hours: "Sat – Thu: 10:00 AM – 06:30 PM (Fri Closed)",
     securityProtocol: "Biometric Screening & Original Gun License Verification Required at Door.",
-    gpsCoordinates: "23.7298° N, 90.4125° E",
+    gpsCoordinates: "23.7425° N, 90.3764° E",
   },
 ];
 
@@ -182,7 +182,7 @@ export default function NagarArmsAmmunitionPage() {
         subtitle="Visit our historic armory showroom. Presentation of original government Arms License is required."
         projectName="Nagar Arms & Ammunition"
         showrooms={showrooms}
-        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14609.6!2d90.4125!3d23.7298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjCsNDMnNDcuMyJOIDkwwrAyNCc0NS4wIkU!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29217.10332713019!2d90.37644384362704!3d23.742460835210792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b90b8698bad9%3A0x49eb2bf885d9506b!2sNagar%20Arms%20%26%20Ammunition!5e0!3m2!1sen!2sbd!4v1788930248602!5m2!1sen!2sbd"
         bgTheme="divisions-green"
         accentColor="#7c2d12"
       />

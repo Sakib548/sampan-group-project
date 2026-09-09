@@ -42,9 +42,9 @@ const facilities = [
     title: "VVIP Accommodation",
     category: "Suites",
     description:
-      "Premium, soundproofed rooms designed for ultimate comfort, privacy, and peaceful rest away from highway noise.",
+      "Premium, ""ed rooms designed for ultimate comfort, privacy, and peaceful rest away from highway noise.",
     image: "/images/facilities/express_highway_inn/5.VVIP-Lounge.png",
-    badge: "Soundproof Suites",
+    badge: """ Suites",
   },
   {
     id: "restaurant",
@@ -301,7 +301,7 @@ export default function ExpressHighwayInnPage() {
 
             {/* Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md font-light tracking-wide border-l-2 border-[#58b9eb]/80 pl-4">
-              Soundproof suites, 24/7 dining, and tailored services for highway travelers.
+              "" suites, 24/7 dining, and tailored services for highway travelers.
             </p>
 
             {/* Square Action Buttons */}

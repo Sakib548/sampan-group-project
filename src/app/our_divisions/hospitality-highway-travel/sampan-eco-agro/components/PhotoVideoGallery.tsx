@@ -23,10 +23,10 @@ const galleryItems: GalleryItem[] = [
     title: "Fresh Mango & Seasonal Orchards",
     category: "harvest",
     categoryLabel: "Meet the Harvest",
-    image: "/images/our_divisions/eco_agro/fruits.jpg",
+    image: "/images/our_divisions/sampan-eco-agro/Rangpur_Haribhanga_Mangoes.jpg",
     type: "image",
     description: "Tree-ripened organic mangoes harvested fresh daily without chemicals.",
-    harvestBadge: "Organic Mango & Guava",
+    harvestBadge: "Organic Mango",
   },
   {
     id: "harvest-2",
@@ -123,7 +123,7 @@ export default function PhotoVideoGallery() {
   return (
     <section id="gallery" className="py-24 bg-[#f4f1e8] text-[#173326] relative border-b border-[#173326]/15">
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -154,11 +154,10 @@ export default function PhotoVideoGallery() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                  activeTab === tab.id
-                    ? "bg-[#173326] text-white shadow-md"
-                    : "bg-white text-[#173326] hover:bg-[#2f6b45] hover:text-white border border-[#173326]/15"
-                }`}
+                className={`flex items-center gap-2 px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeTab === tab.id
+                  ? "bg-[#173326] text-white shadow-md"
+                  : "bg-white text-[#173326] hover:bg-[#2f6b45] hover:text-white border border-[#173326]/15"
+                  }`}
               >
                 <TabIcon className="text-xs" />
                 <span>{tab.label}</span>
@@ -176,7 +175,7 @@ export default function PhotoVideoGallery() {
                 <span className="font-mono text-xs text-[#173326]/60">Source: YouTube Official</span>
               </div>
               <h3 className="text-2xl font-bold text-[#173326]">Shampan Eco &amp; Agro Resort | Sampan Group</h3>
-              
+
               <div className="aspect-video w-full border border-black/20 bg-black overflow-hidden relative shadow-lg">
                 <iframe
                   className="h-full w-full"

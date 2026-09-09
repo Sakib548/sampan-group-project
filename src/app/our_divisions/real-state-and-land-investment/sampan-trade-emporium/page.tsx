@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const facts = [
   { value: "Commercial", label: "Trade Emporium" },
-  { value: "12 Storeys", label: "Corporate Tower" },
+  { value: "12 story ", label: "Corporate Tower" },
   { value: "500–3,000 sq ft", label: "Office Spaces" },
   { value: "24/7 Security", label: "CCTV & Valet" },
 ];

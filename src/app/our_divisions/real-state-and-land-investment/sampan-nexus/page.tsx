@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const facts = [
   { value: "Mawna", label: "Industrial Green Belt" },
   { value: "Mixed-Use", label: "Commercial & Living" },
-  { value: "1,250+ sq ft", label: "Apartments" },
+  // { value: "1,250+ sq ft", label: "Apartments" },
   { value: "High Growth", label: "Appreciation" },
 ];
 

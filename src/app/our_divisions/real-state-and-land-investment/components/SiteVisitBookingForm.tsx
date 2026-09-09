@@ -48,10 +48,10 @@ export default function SiteVisitBookingForm({
           <div className="grid lg:grid-cols-12 gap-8 items-center">
 
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 border border-[#ca8a04]/40 bg-[#ca8a04]/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[#ca8a04]">
+              {/* <div className="inline-flex items-center gap-2 border border-[#ca8a04]/40 bg-[#ca8a04]/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[#ca8a04]">
                 <FaCalendarAlt className="text-xs" />
                 <span>VIP Site Inspection</span>
-              </div>
+              </div> */}
 
               <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-current leading-tight">
                 {title}

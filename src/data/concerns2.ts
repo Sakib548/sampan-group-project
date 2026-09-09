@@ -106,7 +106,7 @@ export const concerns2: Concern[] = [
     name: "Sampan Cafe Metro",
     category: "Development & Construction",
     tagline: "New Auto showroom + cafe, car wash, facilities.",
-    logo: "/images/brand/sampanauto.png",
+    logo: "/images/brand/sampancafemetro.png",
     href: "/our_divisions/real-state-and-land-investment/sampan-cafe-metro",
   },
   {
@@ -148,7 +148,7 @@ export const concerns2: Concern[] = [
     name: "Express Highway Inn",
     category: "Hospitality & Leisure",
     tagline: "Modern-tier sister property to Highway Inn",
-    logo: "/images/brand/sampanhighwayinn.png",
+    logo: "/images/brand/expresshighwayinn.png",
     href: "/our_divisions/hospitality-highway-travel/express-highway-inn",
   },
   {
@@ -281,7 +281,7 @@ export const concerns2: Concern[] = [
     category: "Automotive, Fuel & Mobility",
     tagline:
       "24/7 emergency flatbed towing & highway vehicle recovery service.",
-    logo: "/images/brand/sampanauto.png",
+    logo: "/images/brand/towing.webp",
     href: "/our_divisions/automotive-fuel-mobility/sampan-towing-service",
   },
 

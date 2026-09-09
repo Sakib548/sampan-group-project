@@ -26,12 +26,12 @@ export default function SampanEcoAgroClient() {
 
   return (
     <main className="bg-[#0c1c14] text-white antialiased selection:bg-[#b9e583] selection:text-[#0c1c14]">
-      
+
       {/* 1. OVERVIEW (Hero with Dark Forest Contrast) */}
       <HeroOverview onOpenBooking={() => scrollToSection("booking-widget")} />
 
       {/* 10. ONLINE BOOKING WIDGET (Instant Calculator & Reservation) */}
-      <OnlineBookingWidget />
+      {/* <OnlineBookingWidget /> */}
 
       {/* 9. MILESTONE COUNTER (Track Record & Scale) */}
       <MilestoneCounter />
@@ -43,13 +43,13 @@ export default function SampanEcoAgroClient() {
       <HighwayRouteVisualizer />
 
       {/* 3. LOCATION + LIVE MAP (GPS Coordinates, Hub Distances & Embedded Map) */}
-      <LocationAndMap />
+      {/* <LocationAndMap /> */}
 
       {/* 6. ROOM / PACKAGE PRICING OVERVIEW (Transparent Tiers & Inclusions) */}
-      <PricingOverview onSelectPackage={() => scrollToSection("booking-widget")} />
+      {/* <PricingOverview onSelectPackage={() => scrollToSection("booking-widget")} /> */}
 
       {/* 12. VIRTUAL TOUR (360° Walkthrough Simulator & Interactive Hotspots) */}
-      <VirtualTourViewer />
+      {/* <VirtualTourViewer /> */}
 
       {/* 5. PHOTO / VIDEO GALLERY (Meet the Harvest Showcase & YouTube Video) */}
       <PhotoVideoGallery />
@@ -58,13 +58,13 @@ export default function SampanEcoAgroClient() {
       <NearbyLocationModule />
 
       {/* 8. PRESS / MEDIA MENTIONS CAROUSEL (National Press Mentions) */}
-      <PressMediaCarousel />
+      {/* <PressMediaCarousel /> */}
 
       {/* 11. GUEST REVIEWS (Verified Traveler Feedback & Rating Scorecard) */}
-      <GuestReviews />
+      {/* <GuestReviews /> */}
 
       {/* 13. USER-GENERATED CONTENT FEED (#SampanEcoAgro Community) */}
-      <UGCFeed />
+      {/* <UGCFeed /> */}
 
       {/* 4. BOOK / ENQUIRE CTA (Direct Hotline, WhatsApp & Instant Form) */}
       <BookEnquireCTA onOpenBookingWidget={() => scrollToSection("booking-widget")} />
@@ -72,7 +72,7 @@ export default function SampanEcoAgroClient() {
       {/* Floating Quick Navigation Dock */}
       <aside aria-label="Resort Quick Navigation" className="fixed bottom-6 inset-x-0 z-40 flex justify-center pointer-events-none px-4">
         <div className="pointer-events-auto bg-[#07130d]/90 border border-[#b9e583]/40 backdrop-blur-xl px-4 py-2.5 shadow-2xl flex items-center gap-2 sm:gap-4 text-xs font-mono font-bold text-white">
-          
+
           <button
             onClick={() => scrollToSection("gallery")}
             className="flex items-center gap-1.5 px-3 py-1.5 hover:bg-white/10 text-white/80 hover:text-white transition-colors cursor-pointer"

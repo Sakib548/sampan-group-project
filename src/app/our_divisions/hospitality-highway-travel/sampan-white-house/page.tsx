@@ -4,11 +4,11 @@ import SampanWhiteHouseClient from "./components/SampanWhiteHouseClient";
 export const metadata: Metadata = {
   title: "Sampan White House | Sampan Group",
   description:
-    "A softer, luxurious highway pause offering quiet soundproof motel rooms, the iconic White Hall grand banquet ballroom, 24/7 garden dining, and gated parking.",
+    "A softer, luxurious highway pause offering quiet motel rooms, the iconic White Hall grand banquet ballroom, 24/7 garden dining, and gated parking.",
   openGraph: {
     title: "Sampan White House | Sampan Group",
     description:
-      "A softer, luxurious highway pause offering quiet soundproof motel rooms, the iconic White Hall grand banquet ballroom, 24/7 garden dining, and gated parking.",
+      "A softer, luxurious highway pause offering quiet motel rooms, the iconic White Hall grand banquet ballroom, 24/7 garden dining, and gated parking.",
     images: ["/images/projects/Sampan-White-House-&-Motel.png"],
   },
 };

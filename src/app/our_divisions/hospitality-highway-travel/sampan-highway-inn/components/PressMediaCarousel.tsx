@@ -10,7 +10,7 @@ const pressMentions = [
     tagline: "National Daily",
     headline: "Redefining Highway Hospitality Along the Padma Bridge Corridor",
     quote:
-      "Sampan Highway Inn sets a benchmark for modern expressway transit. With triple-glazed soundproof suites and high-capacity EV charging, it turns a grueling road trip into an effortless retreat.",
+      "Sampan Highway Inn sets a benchmark for modern expressway transit. With triple-glazed "" suites and high-capacity EV charging, it turns a grueling road trip into an effortless retreat.",
     date: "Travel & Infrastructure Feature",
     badge: "Special Report",
   },
@@ -61,14 +61,14 @@ export default function PressMediaCarousel() {
   const current = pressMentions[activeSlide];
 
   return (
-    <section 
+    <section
       id="press"
       className="bg-[#faf9f6] py-24 sm:py-32 text-[#1a1a1a] border-t border-neutral-200 relative overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -90,12 +90,12 @@ export default function PressMediaCarousel() {
 
         {/* Featured Editorial Carousel Card */}
         <div className="relative rounded-3xl bg-white border border-neutral-200/80 shadow-xl p-8 sm:p-12 lg:p-16 overflow-hidden">
-          
+
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             {/* Left Quote Section */}
             <div className="lg:col-span-8">
-              
+
               <div className="flex items-center gap-3 mb-6">
                 <span className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full">
                   <FaAward className="text-emerald-600" />
@@ -139,23 +139,20 @@ export default function PressMediaCarousel() {
                 <button
                   key={mention.id}
                   onClick={() => setActiveSlide(idx)}
-                  className={`p-4 rounded-2xl text-left border transition-all duration-300 cursor-pointer ${
-                    activeSlide === idx
+                  className={`p-4 rounded-2xl text-left border transition-all duration-300 cursor-pointer ${activeSlide === idx
                       ? "bg-[#070b09] text-white border-[#070b09] shadow-lg scale-[1.02]"
                       : "bg-[#faf9f6] text-neutral-700 border-neutral-200 hover:bg-neutral-100"
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-bold">{mention.outlet}</span>
-                    <span className={`text-[10px] uppercase font-bold tracking-wider ${
-                      activeSlide === idx ? "text-emerald-400" : "text-neutral-400"
-                    }`}>
+                    <span className={`text-[10px] uppercase font-bold tracking-wider ${activeSlide === idx ? "text-emerald-400" : "text-neutral-400"
+                      }`}>
                       0{idx + 1}
                     </span>
                   </div>
-                  <p className={`text-xs mt-1 line-clamp-1 ${
-                    activeSlide === idx ? "text-neutral-300" : "text-neutral-500"
-                  }`}>
+                  <p className={`text-xs mt-1 line-clamp-1 ${activeSlide === idx ? "text-neutral-300" : "text-neutral-500"
+                    }`}>
                     {mention.headline}
                   </p>
                 </button>
@@ -172,9 +169,8 @@ export default function PressMediaCarousel() {
                   key={i}
                   onClick={() => setActiveSlide(i)}
                   aria-label={`Slide ${i + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    activeSlide === i ? "w-8 bg-emerald-600" : "w-2 bg-neutral-300"
-                  }`}
+                  className={`h-2 rounded-full transition-all duration-300 ${activeSlide === i ? "w-8 bg-emerald-600" : "w-2 bg-neutral-300"
+                    }`}
                 />
               ))}
             </div>

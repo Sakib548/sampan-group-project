@@ -9,7 +9,7 @@ const pressQuotes = [
     publication: "The Daily Star • Travel & Living",
     headline: "Sampan White House Redefines Southern Highway Hospitality",
     quote:
-      "A much-needed softer stop on the expressway. With the grandeur of White Hall for regional wedding events and quiet soundproof motel suites for tired drivers, Sampan White House delivers exceptional quality.",
+      "A much-needed softer stop on the expressway. With the grandeur of White Hall for regional wedding events and quiet motel suites for tired drivers, Sampan White House delivers exceptional quality.",
     date: "November 2024",
     author: "Hospitality Review Desk",
   },
@@ -65,7 +65,7 @@ export default function PressMediaCarousel() {
   return (
     <section className="bg-white py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 border border-[#ca8a04]/30 bg-amber-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ca8a04] mb-4">
@@ -84,7 +84,7 @@ export default function PressMediaCarousel() {
         <div className="relative mx-auto max-w-4xl rounded-none border border-neutral-200 bg-[#F5F5F2] p-8 sm:p-14 shadow-sm">
           {/* Top Accent Line */}
           <div className="absolute top-0 left-0 h-[3px] w-full bg-[#e8b84b]" />
-          
+
           <div className="flex items-center justify-between pb-6 border-b border-neutral-200 mb-8">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-none bg-amber-50 border border-amber-200 text-[#ca8a04] flex items-center justify-center text-lg">
@@ -132,9 +132,8 @@ export default function PressMediaCarousel() {
                 key={i}
                 onClick={() => setCurrentIndex(i)}
                 aria-label={`Jump to slide ${i + 1}`}
-                className={`h-1.5 transition-all cursor-pointer ${
-                  currentIndex === i ? "w-8 bg-[#e8b84b]" : "w-2 bg-neutral-300"
-                }`}
+                className={`h-1.5 transition-all cursor-pointer ${currentIndex === i ? "w-8 bg-[#e8b84b]" : "w-2 bg-neutral-300"
+                  }`}
               />
             ))}
           </div>

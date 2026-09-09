@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { 
-  FaCompass, 
-  FaEye, 
-  FaInfoCircle, 
-  FaExpand, 
-  FaChevronLeft, 
+import {
+  FaCompass,
+  FaEye,
+  FaInfoCircle,
+  FaExpand,
+  FaChevronLeft,
   FaChevronRight,
   FaBed,
   FaUtensils,
@@ -30,7 +30,7 @@ const tourZones = [
   },
   {
     id: "suite",
-    name: "VVIP Soundproof Deluxe Suite",
+    name: "VVIP "" Deluxe Suite",
     icon: FaBed,
     image: "/images/facilities/highway_inn/all_day_comfort.png",
     tagline: "Triple-glazed acoustic insulation with king orthopaedic bed",
@@ -94,7 +94,7 @@ export default function VirtualTourViewer() {
   return (
     <section id="virtual-tour" className="bg-[#050806] py-24 sm:py-32 text-white border-t border-white/10 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -123,11 +123,10 @@ export default function VirtualTourViewer() {
                   setActiveZoneIndex(idx);
                   setSelectedHotspot(null);
                 }}
-                className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                  activeZoneIndex === idx
+                className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeZoneIndex === idx
                     ? "bg-emerald-500 text-[#070b09] shadow-lg shadow-emerald-500/20 scale-[1.02]"
                     : "bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10 hover:text-white"
-                }`}
+                  }`}
               >
                 <Icon className={activeZoneIndex === idx ? "text-[#070b09]" : "text-emerald-400"} />
                 <span>{zone.name}</span>

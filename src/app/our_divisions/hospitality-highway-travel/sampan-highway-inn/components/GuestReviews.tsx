@@ -24,7 +24,7 @@ const reviewsData = [
     verified: true,
     title: "Best highway stop in Bangladesh hands down!",
     content:
-      "We stopped with our 2 kids and elderly parents on our way to Barishal. The cleanliness of the washrooms was 5-star hotel standard. Food was fresh and served in less than 15 minutes. The soundproof rest room allowed my father to take an hour's nap peacefully.",
+      "We stopped with our 2 kids and elderly parents on our way to Barishal. The cleanliness of the washrooms was 5-star hotel standard. Food was fresh and served in less than 15 minutes. The "" rest room allowed my father to take an hour's nap peacefully.",
     stayType: "Day Pass Suite & Lunch",
     helpful: 42,
   },
@@ -86,7 +86,7 @@ const reviewsData = [
     rating: 5,
     date: "1 month ago",
     verified: true,
-    title: "VVIP Suite was luxurious and soundproof",
+    title: "VVIP Suite was luxurious and """,
     content:
       "We broke our long journey to Kuakata by spending the night here. The bed was remarkably comfortable, hot rain shower had great pressure, and complimentary breakfast in the morning gave us high energy for the rest of the drive.",
     stayType: "Deluxe Overnight Suite",
@@ -112,7 +112,7 @@ export default function GuestReviews() {
   return (
     <section id="reviews" className="bg-[#F5F5F2] py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -145,7 +145,7 @@ export default function GuestReviews() {
         {/* Rating Summary Scorecard (Square & Light) */}
         <div className="rounded-none border border-neutral-200 bg-white p-8 sm:p-10 mb-12 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
+
             <div className="md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-neutral-200 pb-6 md:pb-0 md:pr-8">
               <div className="flex items-baseline justify-center md:justify-start gap-2">
                 <span className="text-5xl sm:text-6xl font-bold text-neutral-950">4.9</span>
@@ -187,11 +187,10 @@ export default function GuestReviews() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                activeCategory === cat.id
+              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
                   ? "bg-neutral-950 text-white shadow-sm"
                   : "bg-white text-neutral-700 hover:bg-neutral-100 border border-neutral-200"
-              }`}
+                }`}
             >
               {cat.label}
             </button>

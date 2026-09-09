@@ -24,7 +24,7 @@ const reviewsData = [
     verified: true,
     title: "Quiet, peaceful motel suite and warm hospitality",
     content:
-      "We took a 6-hour day break here with our twin toddlers. The acoustic soundproofing in the room was truly impressive—we couldn't hear a single highway truck. Restrooms were spotless and tea service was fast.",
+      "We took a 6-hour day break here with our twin toddlers. The acoustic comfort in the room was truly impressive—we couldn't hear a single highway truck. Restrooms were spotless and tea service was fast.",
     stayType: "Day Stay Suite",
     helpful: 34,
   },
@@ -112,7 +112,7 @@ export default function GuestReviews() {
   return (
     <section id="reviews" className="bg-[#F5F5F2] py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -145,7 +145,7 @@ export default function GuestReviews() {
         {/* Rating Scorecard (Square & Light) */}
         <div className="rounded-none border border-neutral-200 bg-white p-8 sm:p-10 mb-12 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
+
             <div className="md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-neutral-200 pb-6 md:pb-0 md:pr-8">
               <div className="flex items-baseline justify-center md:justify-start gap-2">
                 <span className="text-5xl sm:text-6xl font-bold text-neutral-950">4.8</span>
@@ -162,7 +162,7 @@ export default function GuestReviews() {
             <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center sm:text-left">
               <div className="p-4 bg-[#F5F5F2] border border-neutral-200 rounded-none">
                 <p className="text-2xl font-bold text-[#ca8a04]">99.2%</p>
-                <p className="text-[11px] text-neutral-600 mt-0.5">Quiet Soundproofing</p>
+                <p className="text-[11px] text-neutral-600 mt-0.5">Quiet ""ing</p>
               </div>
               <div className="p-4 bg-[#F5F5F2] border border-neutral-200 rounded-none">
                 <p className="text-2xl font-bold text-[#ca8a04]">98.7%</p>
@@ -187,11 +187,10 @@ export default function GuestReviews() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                activeCategory === cat.id
+              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
                   ? "bg-neutral-950 text-white shadow-sm"
                   : "bg-white text-neutral-700 hover:bg-neutral-100 border border-neutral-200"
-              }`}
+                }`}
             >
               {cat.label}
             </button>

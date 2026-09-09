@@ -21,7 +21,7 @@ const packagesData = {
       highlight: false,
       description: "Ideal for drivers and travelers needing a rapid shower, power nap, and vehicle security.",
       features: [
-        "Private soundproof shower & restroom",
+        "Private "" shower & restroom",
         "Air-conditioned rest room",
         "Complimentary high-speed fiber Wi-Fi",
         "Secure reserved parking",
@@ -97,7 +97,7 @@ const packagesData = {
       highlight: true,
       description: "Uncompromised 5-star standard highway comfort with complimentary farm-fresh buffet breakfast.",
       features: [
-        "Soundproof VVIP Deluxe King Suite",
+        """ VVIP Deluxe King Suite",
         "Organic farm-fresh buffet breakfast included",
         "Complimentary overnight EV charging (Full charge)",
         "Free touchless automated car wash",
@@ -193,7 +193,7 @@ export default function PricingOverview({ onSelectPackage }: { onSelectPackage?:
   return (
     <section id="pricing" className="bg-white py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 border border-emerald-700/30 bg-emerald-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-emerald-800 mb-4">
@@ -216,11 +216,10 @@ export default function PricingOverview({ onSelectPackage }: { onSelectPackage?:
                 key={cat.id}
                 type="button"
                 onClick={() => setActiveTab(cat.id as "transit" | "stay" | "events")}
-                className={`px-6 py-3 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                  activeTab === cat.id
+                className={`px-6 py-3 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeTab === cat.id
                     ? "bg-neutral-950 text-white shadow-sm"
                     : "text-neutral-700 hover:text-black hover:bg-neutral-200"
-                }`}
+                  }`}
               >
                 {cat.label}
               </button>
@@ -233,11 +232,10 @@ export default function PricingOverview({ onSelectPackage }: { onSelectPackage?:
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className={`relative flex flex-col rounded-none p-8 transition-all duration-500 ${
-                pkg.highlight
+              className={`relative flex flex-col rounded-none p-8 transition-all duration-500 ${pkg.highlight
                   ? "bg-[#F5F5F2] border-2 border-emerald-700 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.12)] lg:-translate-y-2"
                   : "bg-white border border-neutral-200 hover:border-neutral-300 hover:shadow-sm"
-              }`}
+                }`}
             >
               {/* Top Accent Line */}
               <div className={`absolute top-0 left-0 h-[3px] w-full ${pkg.highlight ? "bg-emerald-700" : "bg-neutral-200"}`} />
@@ -285,11 +283,10 @@ export default function PricingOverview({ onSelectPackage }: { onSelectPackage?:
               {/* Action Button (Square) */}
               <a
                 href="#booking-widget"
-                className={`w-full text-center py-4 rounded-none font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 block cursor-pointer ${
-                  pkg.highlight
+                className={`w-full text-center py-4 rounded-none font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 block cursor-pointer ${pkg.highlight
                     ? "bg-emerald-700 hover:bg-emerald-800 text-white shadow-sm"
                     : "bg-neutral-950 hover:bg-emerald-700 text-white"
-                }`}
+                  }`}
               >
                 {pkg.cta}
               </a>

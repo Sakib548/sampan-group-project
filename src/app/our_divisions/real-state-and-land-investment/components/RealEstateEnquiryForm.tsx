@@ -97,7 +97,7 @@ export default function RealEstateEnquiryForm({
                   className="inline-flex items-center gap-3 text-lg font-bold text-[#ca8a04] hover:underline"
                 >
                   <FaPhoneAlt className="text-sm" />
-                  <span>+880 1929-918408</span>
+                  <span>+880 1906 896 327</span>
                 </a>
               </div>
             </div>

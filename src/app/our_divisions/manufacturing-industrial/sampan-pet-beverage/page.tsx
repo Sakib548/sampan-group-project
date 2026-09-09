@@ -117,7 +117,7 @@ const logisticsCorridors = [
 export default function SampanPetBeveragePage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#ea580c] selection:text-white">
-      
+
       {/* 1. Hero Overview - Orange (#ea580c) & Chocolate Brown (#582e14) Accent from Logo */}
       <ManufacturingHero
         title="Sampan Pet & Beverage"
@@ -161,7 +161,7 @@ export default function SampanPetBeveragePage() {
       />
 
       {/* 5. Section 5, 6, 7, 10: Capacity Stats, Video Production Line, Photos & Client List */}
-      <FactorySpecsAndCapacity
+      {/* <FactorySpecsAndCapacity
         title="Bottling Line Capacity, Video & Client Roster"
         subtitle="Automated high-speed blow molding and bottling lines delivering 100,000 units daily."
         stats={capacityStats}
@@ -171,10 +171,10 @@ export default function SampanPetBeveragePage() {
         productionVideoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
         bgTheme="about-ivory"
         accentColor="#ea580c"
-      />
+      /> */}
 
       {/* 6. Section 8: "Located At" Note & Logistical Map */}
-      <IndustrialLocationNote
+      {/* <IndustrialLocationNote
         title="Plant Location & Logistics"
         subtitle="Located at Sampan Industrial Park in Mawna with direct highway links for nationwide FMCG distribution."
         concernName="Sampan Pet & Beverage"
@@ -184,7 +184,7 @@ export default function SampanPetBeveragePage() {
         logisticsCorridors={logisticsCorridors}
         bgTheme="divisions-green"
         accentColor="#ea580c"
-      />
+      /> */}
 
     </main>
   );

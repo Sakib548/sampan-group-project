@@ -41,10 +41,10 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
         {/* Main Hero Text Content */}
         <div className="max-w-4xl space-y-4 sm:space-y-5">
           {/* Eyebrow Square Badge */}
-          <div className="inline-flex items-center gap-3 border border-[#e8b84b]/50 bg-[#e8b84b]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#e8b84b]">
+          {/* <div className="inline-flex items-center gap-3 border border-[#e8b84b]/50 bg-[#e8b84b]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#e8b84b]">
             <span className="h-2 w-2 rounded-none bg-[#e8b84b]" />
             <span>A Softer Place to Stop • Highway Motel &amp; White Hall</span>
-          </div>
+          </div> */}
 
           {/* Main Headline */}
           <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold tracking-tight text-white leading-[0.98]">
@@ -56,7 +56,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
 
           {/* Tagline & Subheading */}
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-[#e8b84b]/80 pl-4">
-            Soundproof motel suites, iconic White Hall banquet center, 24/7 garden dining, and dependable highway hospitality.
+            Motel suites, iconic White Hall banquet center, 24/7 garden dining, and dependable highway hospitality.
           </p>
 
           {/* Square Quick Action CTAs */}
@@ -77,26 +77,26 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
               <span>View Route Map</span>
             </a>
 
-            <a
+            {/* <a
               href="tel:+8801929918408"
               className="inline-flex items-center justify-center gap-2 rounded-none border border-[#e8b84b]/40 bg-[#e8b84b]/10 hover:bg-[#e8b84b]/20 px-6 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#e8b84b] transition-all duration-300 backdrop-blur-sm"
             >
               <FaPhoneAlt className="text-xs text-[#e8b84b]" />
               <span>+880 1929-918408</span>
-            </a>
+            </a> */}
           </div>
 
           {/* Square Quick Value Badges */}
           <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
             <div className="border-l-2 border-[#e8b84b] pl-4">
               <p className="text-xs font-bold text-white uppercase tracking-wider">White Hall</p>
-              <p className="text-[11px] text-white/50 mt-0.5">300+ Capacity</p>
+              <p className="text-[11px] text-white/50 mt-0.5">Premium Capacity</p>
             </div>
 
-            <div className="border-l-2 border-[#e8b84b] pl-4">
-              <p className="text-xs font-bold text-white uppercase tracking-wider">Soundproof Stays</p>
+            {/* <div className="border-l-2 border-[#e8b84b] pl-4">
+              <p className="text-xs font-bold text-white uppercase tracking-wider">"" Stays</p>
               <p className="text-[11px] text-white/50 mt-0.5">Quiet Motel Suites</p>
-            </div>
+            </div> */}
 
             <div className="border-l-2 border-[#e8b84b] pl-4">
               <p className="text-xs font-bold text-white uppercase tracking-wider">Garden Dining</p>

@@ -131,13 +131,13 @@ export default function RealEstateHero2({
               </button>
             )}
 
-            <a
+            {/* <a
               href="tel:+8801929918408"
               className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-white/80 hover:text-white transition-colors py-2 px-1"
             >
               <FiPhone className="text-xs" style={{ color: accentColor }} />
               <span>+880 1929-918408</span>
-            </a>
+            </a> */}
           </div>
 
         </div>

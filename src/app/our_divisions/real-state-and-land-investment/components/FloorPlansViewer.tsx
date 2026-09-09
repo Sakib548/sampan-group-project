@@ -43,9 +43,9 @@ export default function FloorPlansViewer({
   return (
     <section id="floor-plans" className={`py-24 relative ${containerClasses}`}>
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        {/* <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
             <div className="inline-flex items-center gap-2 border border-[#ca8a04]/40 bg-[#ca8a04]/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[#ca8a04] mb-4">
               <FaDraftingCompass className="text-xs" />
@@ -58,28 +58,27 @@ export default function FloorPlansViewer({
           <p className="max-w-md text-sm leading-relaxed opacity-80 font-normal">
             {subtitle}
           </p>
-        </div>
+        </div> */}
 
         {/* Plan Switcher Tabs */}
-        <div className="flex flex-wrap gap-2 mb-8 border-b border-current/15 pb-4">
+        {/* <div className="flex flex-wrap gap-2 mb-8 border-b border-current/15 pb-4">
           {plans.map((p, idx) => (
             <button
               key={p.id}
               onClick={() => setActivePlanIndex(idx)}
-              className={`px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                activePlanIndex === idx
+              className={`px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${activePlanIndex === idx
                   ? "bg-[#183b2b] text-white shadow-md"
                   : "bg-white text-current hover:bg-[#ca8a04] hover:text-neutral-950 border border-current/20"
-              }`}
+                }`}
             >
               {p.name} ({p.sizeSqFt})
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Main Display Container */}
-        <div className="grid lg:grid-cols-12 gap-8 items-center border border-current/15 p-8 bg-white shadow-sm">
-          
+        <div className="grid lg:grid-cols-12 gap-5 items-center border border-current/15 p-8 bg-white shadow-sm">
+
           {/* Blueprint Image Preview */}
           <div className="lg:col-span-8 relative aspect-[16/10] w-full border border-current/10 overflow-hidden bg-[#f3f6f2] group">
             <Image
@@ -96,9 +95,9 @@ export default function FloorPlansViewer({
               <FaExpand className="text-sm" />
             </button>
 
-            <span className="absolute bottom-4 left-4 bg-[#183b2b] font-mono text-[10px] text-white px-3 py-1">
+            {/* <span className="absolute bottom-4 left-4 bg-[#183b2b] font-mono text-[10px] text-white px-3 py-1">
               Blueprint Layout: {activePlan.name}
-            </span>
+            </span> */}
           </div>
 
           {/* Details Column */}
@@ -125,13 +124,13 @@ export default function FloorPlansViewer({
               ))}
             </div>
 
-            <button
+            {/* <button
               onClick={() => onDownloadBlueprint && onDownloadBlueprint(activePlan.name)}
               className="w-full inline-flex items-center justify-center gap-2 bg-[#183b2b] hover:bg-[#ca8a04] text-white hover:text-neutral-950 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all shadow-md cursor-pointer"
             >
               <FaFileDownload />
               <span>Download Full Blueprint PDF</span>
-            </button>
+            </button> */}
           </div>
 
         </div>

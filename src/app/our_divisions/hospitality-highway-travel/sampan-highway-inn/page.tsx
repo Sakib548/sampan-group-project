@@ -4,7 +4,7 @@ import SampanHighwayInnClient from "./components/SampanHighwayInnClient";
 export const metadata: Metadata = {
   title: "Sampan Highway Inn | Luxury Highway Transit & Hospitality Hub",
   description:
-    "Bangladesh's premier highway stopover on the Dhaka–Khulna Corridor (KM 74). Featuring soundproof VVIP suites, 24/7 authentic farm-fresh dining, 120kW EV supercharging, and celebration banquet halls.",
+    "Bangladesh's premier highway stopover on the Dhaka–Khulna Corridor (KM 74). Featuring  VVIP suites, 24/7 authentic farm-fresh dining, 120kW EV supercharging, and celebration banquet halls.",
   keywords: [
     "Sampan Highway Inn",
     "Dhaka Khulna Highway Hotel",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sampan Highway Inn | Luxury Highway Transit & Hospitality Hub",
     description:
-      "Where your journey pauses in luxury. Soundproof VVIP suites, 24/7 dining, 120kW EV supercharging, and event banquets directly on the Dhaka–Khulna Expressway.",
+      "Where your journey pauses in luxury.  VVIP suites, 24/7 dining, 120kW EV supercharging, and event banquets directly on the Dhaka–Khulna Expressway.",
     images: [
       {
         url: "/images/projects/sampan-highway-inn.png",

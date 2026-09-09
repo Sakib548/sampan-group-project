@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const facts = [
   { value: "2,000 sq ft", label: "Typical Floor Area" },
-  { value: "South Facing", label: "40% Open Space" },
+  // { value: "South Facing", label: "40% Open Space" },
   { value: "25'-0\" Road", label: "Front Road Facing" },
   { value: "BNBC Standard", label: "Earthquake Resistant" },
 ];
@@ -70,7 +70,7 @@ const progressMilestones = [
 const floorPlans = [
   {
     id: "fp-21st-typical",
-    name: "Sampan Twentyfirst Century - Typical Floor Plan",
+    name: "Sampan 21st Century - Typical Floor Plan",
     category: "Typical Apartment Layout",
     sizeSqFt: "2,000 sq ft",
     image: "/images/projects/21.jpg",
@@ -84,7 +84,7 @@ const floorPlans = [
   },
   {
     id: "fp-21st-ground",
-    name: "Sampan Twentyfirst Century - Ground Floor Plan",
+    name: "Sampan 21st Century - Ground Floor Plan",
     category: "Parking & Utility Layout",
     sizeSqFt: "2,000 sq ft Ground Footprint",
     image: "/images/projects/21.jpg",
@@ -174,7 +174,7 @@ const legalCredentials = [
 const renders = [
   {
     id: "r-21st-1",
-    title: "Sampan Twentyfirst Century Front Elevation",
+    title: "Sampan 21st Century Front Elevation",
     category: "exterior" as const,
     categoryLabel: "Exterior Renders",
     image: "/images/projects/21.jpg",
@@ -203,13 +203,13 @@ export default function Sampan21stCenturyPage() {
 
       {/* 1. Hero Overview */}
       <RealEstateHero
-        title="Sampan Twenty First Century"
+        title="Sampan 21st Century"
         subtitle="2,000 sq ft Luxury South-Facing Residences"
         divisionName="Sampan Development Ltd"
         statusBadge="REHAB Registered Project"
         statusType="ongoing"
         description="A premier South-facing residential address engineered with 40% open space, 2,000 sq ft typical floor plans, 25ft wide road frontage, and BNBC earthquake-resistant structural standards."
-        image="/images/projects/21.jpg"
+        image="/images/projects/21st.jpeg"
         facts={facts}
         accentColor="#25633a"
         badgeColor="#00a651"
@@ -223,7 +223,7 @@ export default function Sampan21stCenturyPage() {
 
       {/* 3. Building Specifications Module (New from Brochure) */}
       <BuildingSpecificationsModule
-        projectName="Sampan Twentyfirst Century"
+        projectName="Sampan 21st Century"
         subheading="Comprehensive architectural, structural, and interior material specifications from official project brochure."
         categories={specifications}
         developerInfo={developerInfo}

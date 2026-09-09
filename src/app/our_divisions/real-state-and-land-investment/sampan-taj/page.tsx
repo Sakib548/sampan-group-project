@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 const facts = [
   { value: "1,350 sft", label: "Single Unit Flat" },
   { value: "9-Storied", label: "G+8 Building Height" },
-  { value: "1 Flat / Floor", label: "Maximum Privacy (8 Total)" },
-  { value: "Bashundhara F", label: "Plot 235, Road 2" },
+  // { value: "1 Flat / Floor", label: "Maximum Privacy (8 Total)" },
+  { value: "Bashundhara R/A", label: "Plot 235, Road 2" },
 ];
 
 const units = [

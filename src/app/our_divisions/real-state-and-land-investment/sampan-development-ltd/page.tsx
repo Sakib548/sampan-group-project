@@ -35,7 +35,7 @@ const successfulProjects = [
     bathrooms: 1,
     balconies: 1,
     priceRange: "BDT 45 Lacs+",
-    orientation: "Dhaka-Mymensingh Highway, Mawna",
+    orientation: "Dhaka-Khulna Highway",
     highlights: [
       "Prime Highway Transit Landmark",
       "Luxury Guest Suites & Multi-Cuisine Restaurant",
@@ -47,13 +47,13 @@ const successfulProjects = [
   {
     id: "sdl-flagship-9",
     name: "Sampan 21st Century ",
-    category: "Commercial Trade Center",
+    category: "Residential Building",
     sizeSqFt: "800–2,500 sq ft",
     bedrooms: 0,
     bathrooms: 2,
     balconies: 1,
     priceRange: "BDT 1.1 Crore",
-    orientation: "Commercial Core Zone",
+    orientation: "Bashundhara R/A (Besides NSU)",
     highlights: [
       "Modern Corporate Suites & Financial Counters",
       "Central HVAC & Energy Efficient Facade",
@@ -65,13 +65,13 @@ const successfulProjects = [
   {
     id: "sdl-flagship-5",
     name: "Sampan Taj ",
-    category: "Luxury Condominium",
+    category: "Residential Building",
     sizeSqFt: "1,800+ sq ft",
     bedrooms: 3,
     bathrooms: 4,
     balconies: 3,
     priceRange: "BDT 1.45 Crore",
-    orientation: "Bashundhara R/A",
+    orientation: "Bashundhara R/A (Besides AIUB)",
     highlights: [
       "Exclusive Prime Residential Neighborhood",
       "Smart Home Automation Systems",
@@ -83,13 +83,13 @@ const successfulProjects = [
   {
     id: "sdl-flagship-4",
     name: "Sampan Niketon",
-    category: "Premium Residential",
+    category: "Residential Building",
     sizeSqFt: "1,250 sq ft",
     bedrooms: 3,
     bathrooms: 3,
     balconies: 2,
     priceRange: "BDT 95 Lacs",
-    orientation: "Shanti Niketon, Gulshan Link",
+    orientation: " Gulshan ",
     highlights: [
       "8-Storied Landmark on Gulshan Link Road",
       "RAJUK Approved Structural Design",
@@ -107,7 +107,7 @@ const successfulProjects = [
     bathrooms: 1,
     balconies: 1,
     priceRange: "BDT 38 Lacs+",
-    orientation: "Scenic Highway Zone, Mawna",
+    orientation: "Dhaka-Khulna Highway",
     highlights: [
       "Comfortable Motel Suites & Green Courtyard",
       "Family-Friendly Rest Stop & Dining Experience",
@@ -123,13 +123,13 @@ const upcomingProjects = [
   {
     id: "sdl-express-highway-inn",
     name: "Express Highway Inn",
-    category: "Highway Hospitality",
+    category: "Highway Transit and Luxury Lounge",
     sizeSqFt: "500–1,400 sq ft",
     bedrooms: 1,
     bathrooms: 1,
     balconies: 1,
     priceRange: "BDT 50 Lacs+",
-    orientation: "Express Highway Corridor, Mawna",
+    orientation: "Dhaka–Chattogram Highway, Near Kanchpur Bridge",
     highlights: [
       "Modern Highway Transit Accommodation",
       "VIP Club Lounge & Corporate Meeting Facilities",
@@ -147,7 +147,7 @@ const upcomingProjects = [
     bathrooms: 3,
     balconies: 2,
     priceRange: "BDT 58 Lacs",
-    orientation: "Ashulia Metro Corridor",
+    orientation: "Ashulia Model Town (Amin Mohammad Group)",
     highlights: [
       "B+G 12-floor building, engineered for modern contemporary living",
       "Exclusive rooftop drone landing station.",
@@ -162,13 +162,13 @@ const upcomingProjects = [
   {
     id: "sdl-flagship-2",
     name: "Sampan Trade Emporium ",
-    category: "Commercial Trade Center",
+    category: "Commercial Zone",
     sizeSqFt: "650–3,000 sq ft",
     bedrooms: 0,
     bathrooms: 2,
     balconies: 1,
     priceRange: "BDT 1.2 Crore+",
-    orientation: "Commercial Highway Hub",
+    orientation: "Commercial Hub (near Express Highway Inn)",
     highlights: [
       "The epicentre of Modern Commerce",
       "High Lease Rental Opportunities",
@@ -184,13 +184,13 @@ const upcomingProjects = [
   {
     id: "sdl-flagship-6",
     name: "Sampan Nexus ",
-    category: "Mixed-Use Corridor",
+    category: "Residential Land Share",
     sizeSqFt: "950–2,200 sq ft",
     bedrooms: 2,
     bathrooms: 2,
     balconies: 2,
     priceRange: "BDT 42 Lacs+",
-    orientation: "Mawna Growth Hub",
+    orientation: "Mawna ",
     highlights: [
       "Commercial Retail + Residential Apartments",
       "Rapidly Growing Industrial Growth Belt",
@@ -200,14 +200,14 @@ const upcomingProjects = [
   },
   {
     id: "sdl-flagship-7",
-    name: "Sampan  Skyline ",
-    category: "Skyline Residency",
+    name: "Sampan  Condominium ",
+    category: "Residential Building",
     sizeSqFt: "1,550 sq ft",
     bedrooms: 3,
     bathrooms: 3,
     balconies: 3,
     priceRange: "BDT 85 Lacs",
-    orientation: "Urban Metro Skyline",
+    orientation: "Residential Building (Express Highway Inn)",
     highlights: [
       "High-Elevation City Panoramas",
       "Dedicated Sub-Station & 100% Power Backup",
@@ -224,7 +224,7 @@ const upcomingProjects = [
     bathrooms: 2,
     balconies: 0,
     priceRange: "BDT 65 Lacs+",
-    orientation: "Metro Rail Interchange",
+    orientation: "Aftabnagar",
     highlights: [
       "Prime Footfall Metro Transit Location",
       "Boutique Cafe & Retail Showroom Bays",
@@ -359,7 +359,7 @@ export default function SampanDevelopmentLtdPage() {
         id="successful-projects"
         badge="Delivered Portfolio"
         title="Successful Projects"
-        subtitle="Completed landmark developments across our residential, commercial, and highway hospitality portfolio."
+        subtitle="Completed landmark developments across our residential, commercial zone, and investment portfolio."
         units={successfulProjects}
         bgTheme="divisions-green"
       />
@@ -367,9 +367,9 @@ export default function SampanDevelopmentLtdPage() {
       {/* 3. Upcoming & Ongoing Projects */}
       <UnitTypesAndSizes
         id="upcoming-projects"
-        badge="Active Pipeline"
+        badge=""
         title="Upcoming & Ongoing Projects"
-        subtitle="Explore upcoming developments, transit hubs, and residential land-share projects currently under planning and execution."
+        subtitle="Explore upcoming developments, transit hubs, and residential land-share projects currently under development,planning and execution."
         units={upcomingProjects}
         bgTheme="about-ivory"
       />

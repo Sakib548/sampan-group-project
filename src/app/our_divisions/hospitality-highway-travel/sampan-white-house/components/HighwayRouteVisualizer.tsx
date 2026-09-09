@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  FaMapMarkerAlt, 
-  FaCarSide, 
-  FaRoute, 
-  FaCompass, 
+import {
+  FaMapMarkerAlt,
+  FaCarSide,
+  FaRoute,
+  FaCompass,
   FaShieldAlt,
   FaBolt,
   FaCheckCircle,
@@ -44,7 +44,7 @@ const routeCorridor = [
     timeFromDhaka: "68 min",
     isDestination: true,
     type: "★ Hotel, Motel & Banquet",
-    detail: "Highway Frontage • Quiet Soundproof Zone • Gated 150+ Parking",
+    detail: "Highway Frontage • Quiet Rest Zone • Gated 150+ Parking",
   },
   {
     id: "gopalganj",
@@ -68,7 +68,7 @@ const origins = [
   { id: "dhaka", name: "Dhaka (Motijheel / Gulshan)", distanceToInn: "78 km", estTime: "1h 08m", advice: "Ideal midday rest and garden lunch before continuing down south." },
   { id: "narayanganj", name: "Narayanganj / Postogola", distanceToInn: "66 km", estTime: "58m", advice: "Smooth straight drive down the N8 corridor into our dedicated deceleration ramp." },
   { id: "padma", name: "Padma Bridge (Jajira Side)", distanceToInn: "43 km", estTime: "34m", advice: "Quick comfort stop right after crossing the bridge for family refreshment." },
-  { id: "khulna", name: "Khulna City (Heading North)", distanceToInn: "102 km", estTime: "1h 30m", advice: "Perfect evening stopover for dinner and soundproof motel sleep before Dhaka." },
+  { id: "khulna", name: "Khulna City (Heading North)", distanceToInn: "102 km", estTime: "1h 30m", advice: "Perfect evening stopover for dinner and quiet motel sleep before Dhaka." },
   { id: "barishal", name: "Barishal (via Bhanga)", distanceToInn: "56 km", estTime: "48m", advice: "Convenient event destination and stopover point for cross-divisional travelers." },
 ];
 
@@ -79,7 +79,7 @@ export default function HighwayRouteVisualizer() {
   return (
     <section id="route-map" className="relative bg-[#F5F5F2] py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 overflow-hidden">
       <div className="relative z-10 mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 border border-[#ca8a04]/30 bg-amber-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ca8a04] mb-4">
@@ -111,11 +111,10 @@ export default function HighwayRouteVisualizer() {
                 key={orig.id}
                 type="button"
                 onClick={() => setSelectedOrigin(orig.id)}
-                className={`p-3.5 rounded-none text-left border transition-all duration-300 cursor-pointer ${
-                  selectedOrigin === orig.id
+                className={`p-3.5 rounded-none text-left border transition-all duration-300 cursor-pointer ${selectedOrigin === orig.id
                     ? "bg-neutral-950 text-white border-neutral-950 shadow-sm"
                     : "bg-[#F5F5F2] text-neutral-800 border-neutral-200 hover:bg-neutral-100"
-                }`}
+                  }`}
               >
                 <p className="font-mono text-[11px] font-semibold">{orig.name}</p>
                 <p className={`text-sm font-bold mt-1 ${selectedOrigin === orig.id ? "text-[#e8b84b]" : "text-[#ca8a04]"}`}>
@@ -134,7 +133,7 @@ export default function HighwayRouteVisualizer() {
 
         {/* Visual Highway Route Line (Square & Light) */}
         <div className="relative rounded-none border border-neutral-200 bg-white p-8 sm:p-12 shadow-sm">
-          
+
           <div className="flex items-center justify-between mb-8 pb-6 border-b border-neutral-200">
             <div className="flex items-center gap-3">
               <div className="p-2.5 rounded-none bg-amber-50 border border-amber-200 text-[#ca8a04]">
@@ -162,40 +161,35 @@ export default function HighwayRouteVisualizer() {
             {routeCorridor.map((stop) => (
               <div
                 key={stop.id}
-                className={`relative z-10 flex flex-col p-5 rounded-none border transition-all duration-300 ${
-                  stop.isDestination
+                className={`relative z-10 flex flex-col p-5 rounded-none border transition-all duration-300 ${stop.isDestination
                     ? "bg-[#F5F5F2] border-2 border-[#e8b84b] shadow-md scale-105"
                     : "bg-white border-neutral-200 hover:border-neutral-300"
-                }`}
+                  }`}
               >
                 {/* Mile Marker Icon */}
                 <div className="flex items-center justify-between mb-4">
                   <div
-                    className={`w-9 h-9 rounded-none flex items-center justify-center font-mono font-bold text-xs ${
-                      stop.isDestination
+                    className={`w-9 h-9 rounded-none flex items-center justify-center font-mono font-bold text-xs ${stop.isDestination
                         ? "bg-[#e8b84b] text-neutral-950 shadow-sm"
                         : "bg-neutral-100 text-neutral-900 border border-neutral-300"
-                    }`}
+                      }`}
                   >
                     {stop.km}k
                   </div>
 
-                  <span className={`font-mono text-[10px] font-bold uppercase tracking-wider ${
-                    stop.isDestination ? "text-[#ca8a04]" : "text-neutral-500"
-                  }`}>
+                  <span className={`font-mono text-[10px] font-bold uppercase tracking-wider ${stop.isDestination ? "text-[#ca8a04]" : "text-neutral-500"
+                    }`}>
                     {stop.timeFromDhaka}
                   </span>
                 </div>
 
-                <p className={`font-mono text-[10px] font-bold uppercase tracking-wider ${
-                  stop.isDestination ? "text-[#ca8a04]" : "text-neutral-400"
-                }`}>
+                <p className={`font-mono text-[10px] font-bold uppercase tracking-wider ${stop.isDestination ? "text-[#ca8a04]" : "text-neutral-400"
+                  }`}>
                   {stop.type}
                 </p>
 
-                <h4 className={`text-base font-bold mt-1 ${
-                  stop.isDestination ? "text-neutral-950 text-lg" : "text-neutral-900"
-                }`}>
+                <h4 className={`text-base font-bold mt-1 ${stop.isDestination ? "text-neutral-950 text-lg" : "text-neutral-900"
+                  }`}>
                   {stop.name}
                 </h4>
 

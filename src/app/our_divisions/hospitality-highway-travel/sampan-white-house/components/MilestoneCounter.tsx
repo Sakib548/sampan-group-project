@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { 
-  FaUsers, 
-  FaStar, 
-  FaParking, 
-  FaGlassCheers, 
-  FaUtensils, 
-  FaShieldAlt 
+import {
+  FaUsers,
+  FaStar,
+  FaParking,
+  FaGlassCheers,
+  FaUtensils,
+  FaShieldAlt
 } from "react-icons/fa";
 
 const milestones = [
@@ -24,7 +24,7 @@ const milestones = [
     isDecimal: true,
     suffix: " ★",
     label: "Guest Satisfaction",
-    description: "Rated highly for soundproof room quietness & event hosting",
+    description: "Rated highly for room quietness & event hosting",
   },
   {
     icon: FaGlassCheers,
@@ -115,7 +115,7 @@ export default function MilestoneCounter() {
   return (
     <section ref={containerRef} className="relative bg-[#F5F5F2] py-20 lg:py-28 overflow-hidden text-neutral-950 border-y border-neutral-200">
       <div className="relative z-10 mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 border border-[#ca8a04]/30 bg-amber-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ca8a04] mb-4">

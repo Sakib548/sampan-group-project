@@ -42,8 +42,8 @@ const ugcPosts = [
     image: "/images/facilities/highway_inn/all_day_comfort.png",
     likes: 472,
     comments: 31,
-    caption: "A 2-hour power nap in a soundproof room before the next 100km drive. Saved my energy completely. 🛌💯 #DriverSafety #SampanHighwayInn",
-    location: "VVIP Soundproof Rest Suite",
+    caption: "A 2-hour power nap in a "" room before the next 100km drive. Saved my energy completely. 🛌💯 #DriverSafety #SampanHighwayInn",
+    location: "VVIP "" Rest Suite",
   },
   {
     id: 5,
@@ -73,7 +73,7 @@ export default function UGCFeed() {
   return (
     <section id="ugc" className="bg-[#faf9f6] py-24 sm:py-32 text-[#1a1a1a] border-t border-neutral-200">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -145,7 +145,7 @@ export default function UGCFeed() {
                   <strong className="text-black font-semibold mr-1">{post.handle}</strong>
                   {post.caption}
                 </p>
-                
+
                 <div className="mt-3 pt-2 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-400">
                   <span>View Post &amp; Comments</span>
                   <span className="text-emerald-700 font-bold">→</span>

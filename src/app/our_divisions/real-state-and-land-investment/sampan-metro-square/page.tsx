@@ -281,7 +281,7 @@ export default function SampanMetroSquarePage() {
               </h2>
             </div>
             <p className="max-w-xl text-sm sm:text-base leading-relaxed text-neutral-700 font-normal">
-              Masterfully designed on a 12 Katha land footprint. The architecture features a B+G 12-floor building, engineered for modern contemporary living.
+              {/* Masterfully designed on a 12 Katha land footprint. The architecture features a B+G 12-floor building, engineered for modern contemporary living. */}
             </p>
           </div>
 
@@ -316,7 +316,7 @@ export default function SampanMetroSquarePage() {
       {/* 3. Land Share Structure - Equity & Ownership */}
       <LandShareStructure
         title="Equity & Ownership."
-        subtitle="A highly transparent, high-yield investment framework."
+        subtitle=""
         totalLandArea="12 Katha"
         totalSharesCount="72 Exclusive Shares"
         registrationStatus="Clear Land Deed Titles"
@@ -327,7 +327,7 @@ export default function SampanMetroSquarePage() {
       {/* 4. Location & Map - Strategic Coordinates */}
       <RealEstateLocationMap
         title="Strategic Coordinates."
-        subtitle="Located in Ashulia Model Town (Amin Mohammad Group), Block–A, Road–11, 12, Plot–A (33, 34, 35, 36). Positioned right next to the Ashulia growth corridor, ensuring seamless accessibility and appreciating value."
+        subtitle=""
         projectName="Sampan Metro Square"
         address="Ashulia Model Town (Amin Mohammad Group), Block–A, Road–11, 12, Plot–A (33, 34, 35, 36), Ashulia, Dhaka"
         gpsCoordinates="23.8704° N, 90.3148° E"
@@ -451,9 +451,8 @@ export default function SampanMetroSquarePage() {
                       {amenity.images.map((img, i) => (
                         <div
                           key={i}
-                          className={`relative h-full flex-1 transition-all duration-500 ease-out hover:flex-[2.2] group/photo overflow-hidden ${
-                            i === 0 ? "border-r border-white/30" : ""
-                          }`}
+                          className={`relative h-full flex-1 transition-all duration-500 ease-out hover:flex-[2.2] group/photo overflow-hidden ${i === 0 ? "border-r border-white/30" : ""
+                            }`}
                         >
                           <Image
                             src={img.src}

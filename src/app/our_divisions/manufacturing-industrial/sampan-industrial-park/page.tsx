@@ -39,7 +39,7 @@ const logisticsCorridors = [
 export default function SampanIndustrialParkPage() {
   return (
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#047857] selection:text-white">
-      
+
       {/* 1. Hero Overview - Forest Green (#047857) Accent from Gear Logo */}
       <ManufacturingHero
         title="Sampan Industrial Park"
@@ -77,7 +77,7 @@ export default function SampanIndustrialParkPage() {
       />
 
       {/* 4. Section 7: "Located At" Note & Logistical Map */}
-      <IndustrialLocationNote
+      {/* <IndustrialLocationNote
         title="Park Location & Logistical Access"
         subtitle="Positioned right on the Mawna industrial belt with immediate access to major national freight highways."
         concernName="Sampan Industrial Park"
@@ -87,7 +87,7 @@ export default function SampanIndustrialParkPage() {
         logisticsCorridors={logisticsCorridors}
         bgTheme="divisions-green"
         accentColor="#047857"
-      />
+      /> */}
 
     </main>
   );

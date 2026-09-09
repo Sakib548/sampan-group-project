@@ -32,7 +32,7 @@ const nearbySpots: NearbySpot[] = [
     category: "Banquet & Motel Hub",
     distance: "12 km",
     driveTime: "12 mins drive",
-    description: "Iconic White Hall grand ballroom, quiet soundproof motel rooms, and 24/7 garden dining.",
+    description: "Iconic White Hall grand ballroom, quiet  motel rooms, and 24/7 garden dining.",
     image: "/images/projects/Sampan-White-House-&-Motel.png",
     link: "/our_divisions/hospitality-highway-travel/sampan-white-house",
   },
@@ -60,7 +60,7 @@ export default function NearbyLocationModule() {
   return (
     <section id="nearby" className="py-24 bg-[#eaf2e5] text-[#173326] relative border-b border-[#173326]/15">
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -93,7 +93,7 @@ export default function NearbyLocationModule() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
-                  
+
                   <span className="absolute top-4 left-4 bg-white/95 border border-[#2f6b45]/30 text-[#2f6b45] font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 backdrop-blur-md shadow-sm">
                     {spot.category}
                   </span>

@@ -67,7 +67,7 @@ export default function SampanHighwayInnClient() {
       {/* <UGCFeed /> */}
 
       {/* BOOK / ENQUIRE CTA (Direct Hotline, WhatsApp & Instant Form) */}
-      <BookEnquireCTA onOpenBookingWidget={() => scrollToSection("booking-widget")} />
+      {/* <BookEnquireCTA onOpenBookingWidget={() => scrollToSection("booking-widget")} /> */}
 
       {/* Floating Highway Quick Navigation Bar (Square Style) */}
       <aside aria-label="Highway Quick Navigation" className="fixed bottom-6 inset-x-0 z-40 flex justify-center pointer-events-none px-4">
@@ -105,11 +105,11 @@ export default function SampanHighwayInnClient() {
           </button>
 
           <a
-            href="tel:+8801929918408"
+            href="tel:+880 1711-459387"
             className="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-none transition-colors"
           >
             <FaPhoneAlt className="text-amber-400 text-[10px]" />
-            <span className="hidden lg:inline">+880 1929-918408</span>
+            <span className="hidden lg:inline">+880 1711-459387</span>
           </a>
         </div>
       </aside>

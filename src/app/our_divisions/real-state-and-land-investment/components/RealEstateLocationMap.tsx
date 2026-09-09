@@ -23,7 +23,7 @@ export interface RealEstateLocationMapProps {
 
 export default function RealEstateLocationMap({
   title = "Location & Regional Accessibility",
-  subtitle = "Strategically positioned along major growth corridors with direct connectivity to commercial and residential hubs.",
+  // subtitle = "Strategically positioned along major growth corridors with direct connectivity to commercial and residential hubs.",
   projectName,
   address,
   gpsCoordinates,
@@ -41,7 +41,7 @@ export default function RealEstateLocationMap({
 
   return (
     <section id="location-map" className={`py-24 relative overflow-hidden ${containerClasses}`}>
-      
+
       {/* Signature DivisionsSection Radial Ambient Overlay */}
       <div
         aria-hidden="true"
@@ -49,7 +49,7 @@ export default function RealEstateLocationMap({
       />
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -62,12 +62,12 @@ export default function RealEstateLocationMap({
             </h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed opacity-80 font-normal">
-            {subtitle}
+            { }
           </p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 items-stretch">
-          
+
           {/* Left Column: Location Specs & Landmarks */}
           <div className="lg:col-span-5 border border-current/15 p-8 bg-white flex flex-col justify-between space-y-6 shadow-sm">
             <div className="space-y-4">
@@ -91,7 +91,7 @@ export default function RealEstateLocationMap({
                 <span className="font-mono text-xs font-bold uppercase block opacity-60 border-b border-current/10 pb-2">
                   Proximity to Key Landmarks
                 </span>
-                
+
                 {landmarks.map((lm, idx) => (
                   <div key={idx} className="flex items-center justify-between text-xs py-1.5 border-b border-current/10">
                     <span className="opacity-90">{lm.landmark}</span>

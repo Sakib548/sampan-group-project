@@ -39,7 +39,7 @@ const galleryItems = [
   // },
   {
     id: 3,
-    title: "VVIP Soundproof Rest Suite",
+    title: "VVIP Rest Suite",
     category: "suites",
     src: "/images/facilities/highway_inn/all_day_comfort.png",
     aspect: "col-span-1",
@@ -150,8 +150,8 @@ export default function PhotoVideoGallery() {
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
-                  ? "bg-[#070b09] text-white shadow-md"
-                  : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
+                ? "bg-[#070b09] text-white shadow-md"
+                : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
                 }`}
             >
               {cat.label}
@@ -290,7 +290,7 @@ export default function PhotoVideoGallery() {
                   </div>
                   <h4 className="text-xl font-bold text-white">Full HD Stopover Experience</h4>
                   <p className="text-xs text-neutral-300 mt-2 max-w-md mx-auto leading-relaxed">
-                    Watch traveler arrivals, VVIP soundproof suites, live restaurant grilling, and 120kW EV charging in motion.
+                    Watch traveler arrivals, VVIP "" suites, live restaurant grilling, and 120kW EV charging in motion.
                   </p>
                 </div>
               </div>

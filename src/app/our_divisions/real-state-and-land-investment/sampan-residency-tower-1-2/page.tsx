@@ -15,7 +15,7 @@ import ResidencyFacilitiesOverview from "../components/ResidencyFacilitiesOvervi
 export const metadata: Metadata = {
   title: "Sampan Residency Tower 1 & 2 | Luxury Highway Corridor Residential Complex",
   description:
-    "Twin-tower luxury residential complex integrated with Express Highway Inn hospitality perks, soundproof suites, and land share ownership options.",
+    "Twin-tower luxury residential complex integrated with Express Highway Inn hospitality perks, "" suites, and land share ownership options.",
 };
 
 const facts = [
@@ -36,7 +36,7 @@ const units = [
     balconies: 3,
     priceRange: "BDT 72 Lacs",
     orientation: "South-West Highway View",
-    highlights: ["Integrated Highway Inn Concierge Access", "Double-Glazed Soundproof Glass", "Covered Basement Parking"],
+    highlights: ["Integrated Highway Inn Concierge Access", "Double-Glazed "" Glass", "Covered Basement Parking"],
   },
   {
     id: "res-b",
@@ -76,7 +76,7 @@ const floorPlans = [
     sizeSqFt: "4 Units Per Floor",
     image: "/images/our_divisions/sampan-tower/architectural_floor_plans.jpg.jpeg",
     description: "4-unit per floor symmetrical layout with central high-speed lifts and acoustic insulation.",
-    features: ["Dual High-Speed Passenger Lifts", "Soundproof Double Glass", "Fire Escape Stairs"],
+    features: ["Dual High-Speed Passenger Lifts", """ Double Glass", "Fire Escape Stairs"],
   },
 ];
 
@@ -128,9 +128,9 @@ export default function SampanResidencyTowerPage() {
       {/* 2. Unit Configurations - DivisionsSection Green bg-[#f3f6f2] */}
       <UnitTypesAndSizes
         title="Residency Unit Configurations"
-        subtitle="Explore 3 & 4 bedroom executive suites with double-glazed soundproof glass."
-        units={units}
-        bgTheme="divisions-green"
+        subtitle="Explore 3 & 4 bedroom executive suites with double-glazed "" glass."
+      units={units}
+      bgTheme="divisions-green"
       />
 
       {/* 3. Land Share Model - AboutPreview Warm Ivory bg-[#F5F5F2] */}

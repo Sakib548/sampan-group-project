@@ -57,7 +57,7 @@ const clubFacilities = [
   },
   {
     id: "vvip-lounge",
-    title: "VVIP Soundproof Private Lounge",
+    title: "VVIP "" Private Lounge",
     category: "Lounge & Leisure",
     description:
       "Ultra-private acoustic-dampened suites for executive meetings, confidential discussions, and tranquil relaxation away from travel fatigue.",
@@ -454,8 +454,8 @@ export default function ExpressHighwayInnClubLoungePage() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-[0.18em] transition-all duration-300 cursor-pointer ${activeCategory === cat
-                    ? "bg-neutral-950 text-white shadow-sm"
-                    : "bg-neutral-100 text-neutral-700 hover:bg-[#2563eb] hover:text-white border border-neutral-200"
+                  ? "bg-neutral-950 text-white shadow-sm"
+                  : "bg-neutral-100 text-neutral-700 hover:bg-[#2563eb] hover:text-white border border-neutral-200"
                   }`}
               >
                 {cat}
@@ -637,8 +637,8 @@ export default function ExpressHighwayInnClubLoungePage() {
                 key={i}
                 onClick={() => setSelectedImage(src)}
                 className={`group relative overflow-hidden rounded-none bg-neutral-100 border border-neutral-200 shadow-sm cursor-pointer ${i === 0
-                    ? "aspect-[16/10] md:col-span-2 md:row-span-2 md:aspect-auto min-h-[340px]"
-                    : "aspect-[16/10]"
+                  ? "aspect-[16/10] md:col-span-2 md:row-span-2 md:aspect-auto min-h-[340px]"
+                  : "aspect-[16/10]"
                   }`}
               >
                 <Image

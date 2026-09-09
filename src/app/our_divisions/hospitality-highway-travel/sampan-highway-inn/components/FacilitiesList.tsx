@@ -28,12 +28,12 @@ const facilitiesData = [
   {
     id: "vvip-suites",
     category: "suites",
-    title: "VVIP Soundproof Suites & Rest Rooms",
+    title: "VVIP Suites & Rest Rooms",
     badge: "Premium Comfort",
     image: "/images/facilities/highway_inn/all_day_comfort.png",
     description:
-      "Acoustically engineered, triple-glazed soundproof suites offering plush king-size beds, private en-suite rain showers, smart IPTV, and climate control for quiet respite from highway rumble.",
-    features: ["Acoustic Soundproofing", "King Orthopaedic Bedding", "High-Speed Fiber Wi-Fi", "In-Room Gourmet Service", "Hourly & Overnight Options"],
+      "Acoustically engineered, triple-glazed  suites offering plush king-size beds, private en-suite rain showers, smart IPTV, and climate control for quiet respite from highway rumble.",
+    features: ["King Orthopaedic Bedding", "High-Speed Fiber Wi-Fi", "In-Room Gourmet Service", "Hourly & Overnight Options"],
     hours: "24/7 Available",
   },
   // {
@@ -79,6 +79,23 @@ const facilitiesData = [
       "Conduct professional meetings, team debriefs, and corporate offsite retreats in our fully equipped conference rooms with high-speed presentation tech.",
     features: ["HD Projection & Video Tech", "Ergonomic Conference Seating", "High-Speed Fiber Network", "Coffee & Lunch Catering", "Private Secretariat Desk"],
     hours: "On Demand & Booking",
+  },
+  {
+    id: "sampan-white-house",
+    category: "events",
+    title: "Sampan White House",
+    badge: "Highway Motel",
+    image: "/images/featuredConcerns/highway-motel.png",
+    description:
+      "A sister hospitality property providing flexible hourly stays, quiet rooms, and private parking.",
+    features: [
+      " Motel Suites",
+      "Flexible Hourly & Overnight Stays",
+      "White Hall Banquet Facility",
+      "Secure Gated Parking",
+      "24/7 Dining & Room Service",
+    ],
+    hours: "24/7 Available",
   },
   // {
   //   id: "car-wash",
@@ -127,7 +144,7 @@ export default function FacilitiesList({ onSelectFacility }: { onSelectFacility?
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col gap-6 mb-12 max-w-3xl">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-emerald-600" />
@@ -135,12 +152,12 @@ export default function FacilitiesList({ onSelectFacility }: { onSelectFacility?
                 World-Class Facilities
               </p>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] leading-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-[#111111] leading-tight">
               Thoughtfully curated <br />
               <span className="text-emerald-700">for every traveler.</span>
             </h2>
           </div>
-          <p className="max-w-md text-sm sm:text-base text-neutral-600 leading-relaxed">
+          <p className="max-w-2xl text-sm sm:text-base text-neutral-600 leading-relaxed">
             Whether you need a rapid 15-minute coffee break or a full celebratory weekend, our multi-acre complex provides complete comfort under one roof.
           </p>
         </div>

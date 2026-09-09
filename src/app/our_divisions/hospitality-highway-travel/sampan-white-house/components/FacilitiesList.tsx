@@ -20,7 +20,7 @@ const facilityCategories = ["All", "Accommodations", "White Hall & Events", "Din
 const facilitiesData = [
   {
     id: "suites",
-    title: "Deluxe Soundproof Motel Suites",
+    title: "Deluxe  Motel Suites",
     category: "Accommodations",
     tagline: "Uninterrupted quiet rest just off the highway",
     description: "Designed with double-glazed acoustic windows and plush bedding, allowing travelers to nap or sleep peacefully away from vehicle noise.",
@@ -29,17 +29,17 @@ const facilitiesData = [
     hours: "24 Hours Check-in",
     highlights: ["Individual Climate Control", "Hot Rain Shower", "High-Speed Wi-Fi", "Daily Sanitized Linens"],
   },
-  {
-    id: "white-hall",
-    title: "White Hall Grand Banquet Ballroom",
-    category: "White Hall & Events",
-    tagline: "Premier venue for weddings, corporate offsites & reunions",
-    description: "A column-free, high-ceiling grand celebration hall equipped with acoustic stage lighting, crystal chandeliers, and banquet catering up to 300+ guests.",
-    icon: FaGlassCheers,
-    image: "/images/facilities/highway_inn/party_reservation.png",
-    hours: "Morning & Evening Slots",
-    highlights: ["300+ Guest Capacity", "HD Audio/Visual Staging", "Bridal Changing Suite", "Custom Banquet Menus"],
-  },
+  // {
+  //   id: "white-hall",
+  //   title: "White Hall Grand Banquet Ballroom",
+  //   category: "White Hall & Events",
+  //   tagline: "Premier venue for weddings, corporate offsites & reunions",
+  //   description: "A column-free, high-ceiling grand celebration hall equipped with acoustic stage lighting, crystal chandeliers, and banquet catering up to 300+ guests.",
+  //   icon: FaGlassCheers,
+  //   image: "/images/facilities/highway_inn/party_reservation.png",
+  //   hours: "Morning & Evening Slots",
+  //   highlights: ["300+ Guest Capacity", "HD Audio/Visual Staging", "Bridal Changing Suite", "Custom Banquet Menus"],
+  // },
   // {
   //   id: "garden-restaurant",
   //   title: "24/7 Garden Restaurant & Cafe",
@@ -80,16 +80,16 @@ const facilitiesData = [
     hours: "Always Open",
     highlights: ["Gender-Separated Halls", "Clean Marble Wudu Zone", "Air-Conditioned Comfort", "Adhan Audio Broadcast"],
   },
-  {
-    id: "concierge",
-    title: "Traveler Concierge & Route Assistance Desk",
-    category: "Traveler Services",
-    description: "On-site front desk team ready to assist with highway navigation, regional emergency towing, route conditions, and onward travel planning.",
-    icon: FaHeadset,
-    image: "/images/facilities/highway_inn/Official-Outing.png",
-    hours: "24/7 Concierge",
-    highlights: ["Live Highway Updates", "Emergency Travel Support", "Luggage Storage", "Local Tourism Advice"],
-  },
+  // {
+  //   id: "concierge",
+  //   title: "Traveler Concierge & Route Assistance Desk",
+  //   category: "Traveler Services",
+  //   description: "On-site front desk team ready to assist with highway navigation, regional emergency towing, route conditions, and onward travel planning.",
+  //   icon: FaHeadset,
+  //   image: "/images/facilities/highway_inn/Official-Outing.png",
+  //   hours: "24/7 Concierge",
+  //   highlights: ["Live Highway Updates", "Emergency Travel Support", "Luggage Storage", "Local Tourism Advice"],
+  // },
   {
     id: "mart",
     title: "24/7 Convenience Mart & Quick Takeaway",
@@ -140,8 +140,8 @@ export default function FacilitiesList() {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat
-                  ? "bg-neutral-950 text-white shadow-sm"
-                  : "bg-neutral-100 text-neutral-700 hover:bg-[#e8b84b] hover:text-neutral-950 border border-neutral-200"
+                ? "bg-neutral-950 text-white shadow-sm"
+                : "bg-neutral-100 text-neutral-700 hover:bg-[#e8b84b] hover:text-neutral-950 border border-neutral-200"
                 }`}
             >
               {cat}

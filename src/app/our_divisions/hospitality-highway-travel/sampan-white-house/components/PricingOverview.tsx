@@ -39,7 +39,7 @@ const packagesData = {
       highlight: true,
       description: "Ideal for business travelers or families breaking their journey during midday before onward travel.",
       features: [
-        "Spacious soundproof Double / King Room",
+        "Spacious Double / King Room",
         "Full in-room dining service from Garden Kitchen",
         "Access to family lounge & children play area",
         "Complimentary high-speed Wi-Fi",
@@ -78,7 +78,7 @@ const packagesData = {
       highlight: true,
       description: "24-hour comfortable accommodation with zero highway disturbance, premium linens, and hot breakfast.",
       features: [
-        "100% Soundproof Deluxe King Room",
+        "Deluxe King Room",
         "Complimentary hot breakfast for 2 guests",
         "24/7 front desk support & concierge service",
         "High-speed fiber Wi-Fi & Smart TV",
@@ -191,7 +191,7 @@ export default function PricingOverview() {
   return (
     <section id="pricing" className="bg-white py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 border border-[#ca8a04]/30 bg-amber-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ca8a04] mb-4">
@@ -214,11 +214,10 @@ export default function PricingOverview() {
                 key={cat.id}
                 type="button"
                 onClick={() => setActiveTab(cat.id as "transit" | "stay" | "events")}
-                className={`px-6 py-3 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                  activeTab === cat.id
+                className={`px-6 py-3 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeTab === cat.id
                     ? "bg-neutral-950 text-white shadow-sm"
                     : "text-neutral-700 hover:text-black hover:bg-neutral-200"
-                }`}
+                  }`}
               >
                 {cat.label}
               </button>
@@ -231,11 +230,10 @@ export default function PricingOverview() {
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className={`relative flex flex-col rounded-none p-8 transition-all duration-500 ${
-                pkg.highlight
+              className={`relative flex flex-col rounded-none p-8 transition-all duration-500 ${pkg.highlight
                   ? "bg-[#F5F5F2] border-2 border-[#e8b84b] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.12)] lg:-translate-y-2"
                   : "bg-white border border-neutral-200 hover:border-neutral-300 hover:shadow-sm"
-              }`}
+                }`}
             >
               {/* Top Accent Line */}
               <div className={`absolute top-0 left-0 h-[3px] w-full ${pkg.highlight ? "bg-[#e8b84b]" : "bg-neutral-200"}`} />
@@ -283,11 +281,10 @@ export default function PricingOverview() {
               {/* Action Button (Square) */}
               <a
                 href="#booking-widget"
-                className={`w-full text-center py-4 rounded-none font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 block cursor-pointer ${
-                  pkg.highlight
+                className={`w-full text-center py-4 rounded-none font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 block cursor-pointer ${pkg.highlight
                     ? "bg-[#e8b84b] hover:bg-[#d4a43e] text-neutral-950 shadow-sm"
                     : "bg-neutral-950 hover:bg-[#e8b84b] hover:text-neutral-950 text-white"
-                }`}
+                  }`}
               >
                 {pkg.cta}
               </a>

@@ -111,11 +111,11 @@ const accreditations = [
 const showrooms = [
   {
     name: "Sampan Fire Arms Co. Central Armory",
-    address: "Armed Forces & Commercial Armory Belt, Gulshan-1 Corridor, Dhaka, Bangladesh.",
+    address: "Topkhana Road / Purana Paltan, Dhaka, Bangladesh.",
     phone: "+880 1929 918408 / +880 2 9884512",
     hours: "Sat – Thu: 10:00 AM – 06:00 PM (Fri Closed)",
     securityProtocol: "Physical Arms License & NID Must Be Presented at Gate Entry.",
-    gpsCoordinates: "23.7812° N, 90.4154° E",
+    gpsCoordinates: "23.7308° N, 90.4073° E",
   },
 ];
 
@@ -181,7 +181,7 @@ export default function SampanFireArmsCoPage() {
         subtitle="Visit our high-security armory showroom. Presentation of valid original Arms License is mandatory at entry."
         projectName="Sampan Fire Arms Co."
         showrooms={showrooms}
-        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14603.6!2d90.4154!3d23.7812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQ6JzUyLjMiTiA5MMKwMjQnNTUuNCJF!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.4648409165675!2d90.40730447455967!3d23.730797678683754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f6f7524fab%3A0xb6273c5994ad5fd9!2sSampan%20Fire%20Arms%20Co.!5e0!3m2!1sen!2sbd!4v1788929937221!5m2!1sen!2sbd"
         bgTheme="divisions-green"
         accentColor="#b91c1c"
       />

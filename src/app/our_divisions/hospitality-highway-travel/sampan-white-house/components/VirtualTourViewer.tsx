@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { 
-  FaCompass, 
-  FaExpand, 
-  FaInfoCircle, 
-  FaBed, 
-  FaGlassCheers, 
-  FaUtensils, 
+import {
+  FaCompass,
+  FaExpand,
+  FaInfoCircle,
+  FaBed,
+  FaGlassCheers,
+  FaUtensils,
   FaCar,
   FaTimes
 } from "react-icons/fa";
@@ -28,7 +28,7 @@ const zones = [
   },
   {
     id: "motel-suite",
-    name: "Soundproof Deluxe Motel Suite",
+    name: "Deluxe Motel Suite",
     tagline: "Restful Sleeping Sanctuary",
     image: "/images/concerns/highway-motel.png",
     description: "Acoustically isolated private room with premium double-cushioned mattress and modern en-suite bathroom.",
@@ -71,7 +71,7 @@ export default function VirtualTourViewer() {
   return (
     <section id="virtual-tour" className="bg-[#F5F5F2] py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
@@ -86,9 +86,9 @@ export default function VirtualTourViewer() {
               <span className="text-[#ca8a04]">Interactive simulator.</span>
             </h2>
           </div>
-          
+
           <p className="max-w-md text-sm text-neutral-500 leading-relaxed font-normal">
-            Take a virtual tour of our banquet hall, soundproof suites, and garden restaurant before you arrive. Click the interactive pins to discover key amenities.
+            Take a virtual tour of our banquet hall, motel suites, and garden restaurant before you arrive. Click the interactive pins to discover key amenities.
           </p>
         </div>
 
@@ -101,11 +101,10 @@ export default function VirtualTourViewer() {
                 setActiveZoneId(zone.id);
                 setSelectedHotspot(null);
               }}
-              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                activeZoneId === zone.id
+              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeZoneId === zone.id
                   ? "bg-neutral-950 text-white shadow-sm"
                   : "bg-white text-neutral-700 hover:bg-[#e8b84b] hover:text-neutral-950 border border-neutral-200"
-              }`}
+                }`}
             >
               {zone.name}
             </button>

@@ -58,8 +58,8 @@ export default function BuildingSpecificationsModule({
   return (
     <section
       className={`py-20 sm:py-28 relative border-t ${isGreen
-          ? "bg-[#183b2b] text-white border-white/10"
-          : "bg-[#f8faf7] text-[#183b2b] border-[#183b2b]/10"
+        ? "bg-[#183b2b] text-white border-white/10"
+        : "bg-[#f8faf7] text-[#183b2b] border-[#183b2b]/10"
         }`}
     >
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
@@ -69,7 +69,7 @@ export default function BuildingSpecificationsModule({
             <span>Project Specifications</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-            {projectName} <span className="font-light text-emerald-600">Building Standards</span>
+            {projectName} <span className="font-light text-emerald-600"></span>
           </h2>
           <p className={`mt-4 text-sm sm:text-base leading-relaxed ${isGreen ? "text-white/70" : "text-[#183b2b]/70"}`}>
             {subheading}
@@ -82,8 +82,8 @@ export default function BuildingSpecificationsModule({
             <div
               key={idx}
               className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${isGreen
-                  ? "bg-white/[0.04] border-white/10 hover:border-emerald-400/40 hover:bg-white/[0.07]"
-                  : "bg-white border-[#183b2b]/10 hover:border-emerald-600/40 shadow-sm hover:shadow-md"
+                ? "bg-white/[0.04] border-white/10 hover:border-emerald-400/40 hover:bg-white/[0.07]"
+                : "bg-white border-[#183b2b]/10 hover:border-emerald-600/40 shadow-sm hover:shadow-md"
                 }`}
             >
               <div>

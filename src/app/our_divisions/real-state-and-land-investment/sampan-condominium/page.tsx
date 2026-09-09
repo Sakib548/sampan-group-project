@@ -20,7 +20,7 @@ const facts = [
   { value: "Private Units", label: "Absolute Privacy" },
   { value: "Shared Luxury", label: "Joint Ownership Amenities" },
   { value: "Express Highway Inn", label: "Master Complex Footprint" },
-  { value: "Hospitality-Grade", label: "Tranquillity & Luxury" },
+  { value: "Residential-Grade", label: "Tranquillity & Luxury" },
 ];
 
 const units = [
@@ -36,7 +36,7 @@ const units = [
     orientation: "South-East Corner with Panoramic Scenic View",
     highlights: [
       "Master Suite (16'-2\" x 12'-0\") with walk-in wardrobe, attached luxury bath & private panoramic balcony",
-      "Expansive Living & Formal Dining with floor-to-ceiling soundproof acoustic glass facade",
+      "Expansive Living & Formal Dining with floor-to-ceiling "" acoustic glass facade",
       "2 Deluxe Bedrooms with ensuite bathrooms & private garden verandas",
       "Executive Study / Guest Room (12'-0\" x 11'-6\") with cross-ventilation",
       "Gourmet Island Kitchen with connected utility gallery & maid's quarters with bath",
@@ -59,7 +59,7 @@ const units = [
       "Spacious Family Living (14'-0\" x 12'-6\") & Open Dining Area (12'-0\" x 10'-6\")",
       "Two Generous Children & Guest Bedrooms with abundant natural daylight",
       "Contemporary Kitchen with granite countertops, double burner line & dry yard",
-      "Soundproof double-glazed acoustic windows for whisper-quiet privacy",
+      """ double-glazed acoustic windows for whisper-quiet privacy",
       "Covered Ground Floor Parking Slot with EV Charging Provision",
     ],
     image: "/images/projects/sampan-condominium.jpg",
@@ -234,7 +234,7 @@ export default function SampanCondominiumPage() {
         title="Sampan Condominium."
         subtitle="Residential Elegance within Express Highway Inn Complex"
         divisionName="Sampan Development Ltd"
-        description="Redefining residential elegance within the Express Highway Inn complex. Experience the absolute privacy of your own premium unit, perfectly balanced with joint ownership of world-class shared amenities. A seamless blend of residential tranquillity and hospitality-grade luxury."
+        description="Redefining residential elegance within the Express Highway Inn complex. Experience the absolute privacy of your own premium unit, perfectly balanced with joint ownership of world-class shared amenities."
         image="/images/projects/sampan-condominium.jpg"
         facts={facts}
         accentColor="#ca8a04"
@@ -247,7 +247,7 @@ export default function SampanCondominiumPage() {
       {/* <UnitTypesAndSizes
         id="residences"
         title="Condominium Residences & Suite Configurations"
-        subtitle="Discover available 3 & 4 bedroom private units with soundproof acoustic glazing, panoramic balconies, and premium finishes."
+        subtitle="Discover available 3 & 4 bedroom private units with "" acoustic glazing, panoramic balconies, and premium finishes."
         units={units}
         bgTheme="divisions-green"
       /> */}

@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  FaCalendarAlt, 
-  FaClock, 
-  FaUserFriends, 
-  FaBed, 
-  FaCar, 
-  FaCheckCircle, 
-  FaWhatsapp, 
+import {
+  FaCalendarAlt,
+  FaClock,
+  FaUserFriends,
+  FaBed,
+  FaCar,
+  FaCheckCircle,
+  FaWhatsapp,
   FaTimes,
   FaPhoneAlt,
   FaGlassCheers
@@ -19,7 +19,7 @@ import { FiArrowRight } from "react-icons/fi";
 const stayTiers = [
   { id: "quick", name: "Quick Rest (1–2 Hrs)", price: 1500, desc: "Quick shower, refreshing bath & power nap between drives." },
   { id: "daystay", name: "Day Stay (6–8 Hrs)", price: 4000, desc: "Comfortable motel room + in-room dining + secure parking." },
-  { id: "overnight", name: "Overnight Stay", price: 7000, desc: "Full 24-hour soundproof accommodation + hot breakfast." },
+  { id: "overnight", name: "Overnight Stay", price: 7000, desc: "Full 24-hour comfortable accommodation + hot breakfast." },
   { id: "whitehall", name: "White Hall Event", price: 25000, desc: "Grand banquet hall for weddings, meetings & family galas." },
 ];
 
@@ -72,7 +72,7 @@ export default function OnlineBookingWidget({
     <div id="booking-widget" className="relative z-20 mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16 -mt-10 sm:-mt-14 mb-16">
       <div className="rounded-none border border-neutral-200 bg-white p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] text-neutral-950 relative">
         <div className="absolute top-0 left-0 h-[3px] w-full bg-[#e8b84b]" />
-        
+
         {/* Header Title */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-neutral-200">
           <div>
@@ -84,7 +84,7 @@ export default function OnlineBookingWidget({
               Plan Your Stay at Sampan White House
             </h2>
           </div>
-          
+
           <div className="flex items-center gap-3">
             <span className="text-xs text-neutral-500 hidden sm:inline">24/7 Front Desk Help:</span>
             <a
@@ -108,11 +108,10 @@ export default function OnlineBookingWidget({
                 key={tier.id}
                 type="button"
                 onClick={() => setStayType(tier.id)}
-                className={`p-4 rounded-none text-left border transition-all duration-300 cursor-pointer ${
-                  stayType === tier.id
+                className={`p-4 rounded-none text-left border transition-all duration-300 cursor-pointer ${stayType === tier.id
                     ? "bg-neutral-950 border-neutral-950 text-white shadow-sm"
                     : "bg-[#F5F5F2] border-neutral-200 text-neutral-800 hover:bg-neutral-100 hover:border-neutral-300"
-                }`}
+                  }`}
               >
                 <p className="font-mono text-[10px] font-bold uppercase tracking-wider">{tier.name}</p>
                 <p className={`text-xl font-bold mt-1 ${stayType === tier.id ? "text-[#e8b84b]" : "text-[#ca8a04]"}`}>
@@ -128,7 +127,7 @@ export default function OnlineBookingWidget({
 
         {/* Dynamic Booking Fields Form */}
         <form onSubmit={handleBookingSubmit} className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          
+
           {/* Room / Suite Type */}
           <div className="bg-[#F5F5F2] border border-neutral-300 rounded-none p-4 focus-within:border-[#e8b84b] transition-colors">
             <label className="flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-2">
@@ -317,7 +316,7 @@ export default function OnlineBookingWidget({
                   <FaWhatsapp className="text-base" />
                   <span>Instant WhatsApp Confirmation</span>
                 </a>
-                
+
                 <button
                   onClick={resetForm}
                   className="w-full rounded-none bg-[#F5F5F2] hover:bg-neutral-200 border border-neutral-300 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-neutral-800 transition-colors cursor-pointer"

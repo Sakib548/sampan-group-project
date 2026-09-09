@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { 
-  FaCamera, 
-  FaPlay, 
-  FaExpand, 
-  FaTimes, 
-  FaChevronLeft, 
-  FaChevronRight 
+import {
+  FaCamera,
+  FaPlay,
+  FaExpand,
+  FaTimes,
+  FaChevronLeft,
+  FaChevronRight
 } from "react-icons/fa";
 
 const galleryCategories = ["All", "White Hall Banquet", "Motel Suites", "Dining & Veranda", "Compound & Aerial"];
@@ -22,30 +22,30 @@ const galleryItems = [
     type: "photo",
     aspect: "landscape",
   },
-  {
-    id: 2,
-    title: "White Hall Grand Celebration Ballroom",
-    category: "White Hall Banquet",
-    image: "/images/facilities/highway_inn/party_reservation.png",
-    type: "photo",
-    aspect: "portrait",
-  },
+  // {
+  //   id: 2,
+  //   title: "White Hall Grand Celebration Ballroom",
+  //   category: "White Hall Banquet",
+  //   image: "/images/facilities/highway_inn/party_reservation.png",
+  //   type: "photo",
+  //   aspect: "portrait",
+  // },
   {
     id: 3,
-    title: "Deluxe Soundproof Motel Bedding",
+    title: "Deluxe  Motel Bedding",
     category: "Motel Suites",
     image: "/images/concerns/highway-motel.png",
     type: "photo",
     aspect: "square",
   },
-  {
-    id: 4,
-    title: "Garden Restaurant & Outdoor Dining",
-    category: "Dining & Veranda",
-    image: "/images/facilities/highway_inn/all_day_comfort.png",
-    type: "photo",
-    aspect: "landscape",
-  },
+  // {
+  //   id: 4,
+  //   title: "Garden Restaurant & Outdoor Dining",
+  //   category: "Dining & Veranda",
+  //   image: "/images/facilities/highway_inn/all_day_comfort.png",
+  //   type: "photo",
+  //   aspect: "landscape",
+  // },
   {
     id: 5,
     title: "Official Corporate Offsite Setup",
@@ -90,7 +90,7 @@ export default function PhotoVideoGallery() {
   return (
     <section id="gallery" className="bg-white py-24 sm:py-32 text-neutral-950 border-b border-neutral-200 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -123,11 +123,10 @@ export default function PhotoVideoGallery() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                activeCategory === cat
-                  ? "bg-neutral-950 text-white shadow-sm"
-                  : "bg-neutral-100 text-neutral-700 hover:bg-[#e8b84b] hover:text-neutral-950 border border-neutral-200"
-              }`}
+              className={`px-5 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat
+                ? "bg-neutral-950 text-white shadow-sm"
+                : "bg-neutral-100 text-neutral-700 hover:bg-[#e8b84b] hover:text-neutral-950 border border-neutral-200"
+                }`}
             >
               {cat}
             </button>
@@ -237,7 +236,7 @@ export default function PhotoVideoGallery() {
                 </div>
                 <h3 className="text-2xl font-bold text-white">Sampan White House Drone Film</h3>
                 <p className="text-sm text-neutral-400 mt-2 max-w-md mx-auto">
-                  Cinematic 4K aerial overview of the highway frontage, White Hall banquet hall, soundproof suites, and garden dining.
+                  Cinematic 4K aerial overview of the highway frontage, White Hall banquet hall, "" suites, and garden dining.
                 </p>
                 <p className="font-mono text-xs text-[#e8b84b] mt-4 uppercase tracking-wider">
                   Full 4K Video Streaming Ready

@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const facts = [
-  { value: "24/7", label: "Hydro Car Wash" },
+  { value: "24/7", label: "Automatic Hydro Car Wash" },
   { value: "08 AM - 11 PM", label: "Cafe Dining Hours" },
-  { value: "50+ Vehicles", label: "Auto Inventory" },
-  { value: "Expressway Exit", label: "Transit Location" },
+
+  { value: "Car Showroom", label: "Commercial Property" },
 ];
 
 const landmarks = [
@@ -36,7 +36,7 @@ export default function SampanCafeMetroPage() {
         statusBadge="Ongoing Operation"
         statusType="ongoing"
         description="A premier highway stopover combining high-pressure hydro car washing, organic coffee dining, and a curated Sampan Auto vehicle showroom."
-        image="/images/projects/sampanmetrosquare.jspg"
+        image="/images/projects/unit-coming-soon.jpg"
         facts={facts}
         accentColor="#4c2a85"
         badgeColor="#b21f24"
@@ -59,7 +59,7 @@ export default function SampanCafeMetroPage() {
 
       {/* 4. Site Visit / Slot Enquiry */}
       <SiteVisitBookingForm
-        title="Inquire Auto Service & VIP Lounge"
+        title="Inquire Auto Service, Cafe and Luxury Lounge"
         subtitle="Schedule a vehicle inspection or reserve a private dining table at Cafe Metro."
         projectName="Sampan Cafe Metro"
         bgTheme="divisions-green"

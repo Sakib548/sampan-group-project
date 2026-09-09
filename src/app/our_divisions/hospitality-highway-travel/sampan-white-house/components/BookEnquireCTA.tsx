@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  FaPhoneAlt, 
-  FaWhatsapp, 
-  FaEnvelope, 
-  FaMapMarkerAlt, 
+import {
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaEnvelope,
+  FaMapMarkerAlt,
   FaCheckCircle,
   FaHeadset
 } from "react-icons/fa";
@@ -31,9 +31,9 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
   return (
     <section id="contact-enquire" className="bg-[#F5F5F2] py-24 sm:py-32 text-neutral-950 relative overflow-hidden border-t border-neutral-200">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16 relative z-10">
-        
+
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column: Direct Outreach Info */}
           <div className="lg:col-span-6 space-y-8">
             <div className="inline-flex items-center gap-2 border border-[#ca8a04]/30 bg-amber-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#ca8a04]">
@@ -47,12 +47,12 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
             </h2>
 
             <p className="text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl font-normal">
-              Whether you are organizing a corporate offsite in White Hall, reserving a soundproof family motel room, or arranging an EV stopover, our front desk is ready 24/7.
+              Whether you are organizing a corporate offsite in White Hall, reserving a "" family motel room, or arranging an EV stopover, our front desk is ready 24/7.
             </p>
 
             {/* Direct Contact Cards (Square & Light) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              
+
               <a
                 href="tel:+8801929918408"
                 className="group p-5 rounded-none bg-white border border-neutral-200 hover:border-[#e8b84b] transition-all duration-300 flex items-start gap-4 shadow-sm"
@@ -115,7 +115,7 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
           <div className="lg:col-span-6">
             <div className="rounded-none border border-neutral-200 bg-white p-8 sm:p-10 shadow-sm relative">
               <div className="absolute top-0 left-0 h-[3px] w-full bg-[#e8b84b]" />
-              
+
               {!isSubmitted ? (
                 <>
                   <div className="flex items-center justify-between pb-6 border-b border-neutral-200 mb-6">
@@ -167,7 +167,7 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
                           onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                           className="w-full bg-[#F5F5F2] border border-neutral-300 rounded-none p-3.5 text-neutral-950 focus:outline-none focus:border-[#e8b84b] cursor-pointer"
                         >
-                          <option value="Motel Room Stay">Soundproof Motel Room Stay</option>
+                          <option value="Motel Room Stay">"" Motel Room Stay</option>
                           <option value="Day Pass Transit">Day Pass / Quick Refresh</option>
                           <option value="White Hall Banquet">White Hall Banquet &amp; Wedding</option>
                           <option value="Corporate Seminar">Corporate Seminar &amp; Offsite</option>
@@ -245,7 +245,7 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
                       <FaWhatsapp className="text-base" />
                       <span>Ping on WhatsApp</span>
                     </a>
-                    
+
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className="w-full sm:w-auto px-6 py-3 rounded-none bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-mono text-xs font-semibold uppercase tracking-wider cursor-pointer border border-neutral-300"

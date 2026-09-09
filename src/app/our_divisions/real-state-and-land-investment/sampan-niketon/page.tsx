@@ -11,6 +11,7 @@ import SiteVisitBookingForm from "../components/SiteVisitBookingForm";
 import DownloadableBrochureCTA from "../components/DownloadableBrochureCTA";
 import RealEstateLocationMap from "../components/RealEstateLocationMap";
 import RealEstateHero2 from "../components/RealEstateHero2";
+import RealEstateHero from "../components/RealEstateHero";
 
 export const metadata: Metadata = {
   title: "Sampan Niketon | 1,250 sft Residential Apartments in Shanti Niketon",
@@ -21,8 +22,8 @@ export const metadata: Metadata = {
 const facts = [
   { value: "1,250 sft", label: "Type-A & B Flats" },
   { value: "8-Storied", label: "G+7 Building Height" },
-  { value: "5 Katha", label: "Total Land Area" },
-  { value: "30-ft & 25-ft", label: "Dual Road Facing" },
+  // { value: "5 Katha(30-ft & 25-ft)", label: "Total Land Area(Dual Road Access" },
+  { value: "30-ft & 25-ft", label: "Dual Road Access" },
 ];
 
 const units = [
@@ -212,7 +213,7 @@ export default function SampanNiketonPage() {
     <main className="bg-[#f3f6f2] text-[#183b2b] antialiased selection:bg-[#25633a] selection:text-white">
 
       {/* 1. Hero Overview */}
-      <RealEstateHero2
+      <RealEstateHero
         title="Sampan Niketon"
         subtitle="1,250 sft 3-Bedroom Residential Apartments in Shanti Niketon"
         divisionName="Sampan Development Ltd"
