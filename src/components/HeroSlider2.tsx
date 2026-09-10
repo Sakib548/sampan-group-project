@@ -10,7 +10,7 @@ const slides = [
     subhead:
       "Cozy rooms, honest meals, a place to breathe before the road takes you again.",
     cta: "Book a Stay →",
-    href: "/our_divisions/hospitality-highway-travel/sampan-highway-inn",
+    href: "/our-divisions/hospitality-highway-travel/sampan-highway-inn",
     image: "/images/featuredConcerns/highway-inn.png",
   },
   {

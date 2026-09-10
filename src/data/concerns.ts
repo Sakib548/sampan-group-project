@@ -103,7 +103,7 @@ export const concerns: Concern[] = [
     category: "Development & Construction",
     tagline: "16-storied modern luxury high-rise residences.",
     logo: "/images/brand/development.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-condominium",
+    href: "/our-divisions/real-state-and-land-investment/sampan-condominium",
   },
 
   // Hospitality, Resort & Highway Travel
@@ -195,12 +195,12 @@ export const concerns: Concern[] = [
     href: "https://www.sampangroup.com.bd/sampan-eco-agro",
   },
   {
-    id: 37,
-    name: "Sampan Fish And Meat",
+    id: 36,
+    name: "Sampan Fish & Meat",
     category: "Agro & Fresh Produce",
-    tagline: "Bulk sale of a variety of fish and meats",
+    tagline: "Fresh, responsibly sourced food for every table",
     logo: "/images/brand/fishandmeat.png",
-    href: "https://www.sampangroup.com.bd/sampan-eco-agro",
+    href: "/our-divisions/agro-fresh-produce/sampan-fish-and-meat",
   },
 
   // Retail Shop & Super Shop

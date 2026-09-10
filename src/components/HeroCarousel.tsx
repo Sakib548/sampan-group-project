@@ -66,7 +66,7 @@ const slides: HeroSlide[] = [
     subhead:
       "A land-share residential project built for people who want to invest in a home, not just a plot.",
     cta: "Explore Metro Square",
-    href: "/our_divisions/real-state-and-land-investment/sampan-metro-square",
+    href: "/our-divisions/real-state-and-land-investment/sampan-metro-square",
     image: "/images/projects/sampanmetrosquare.jpg",
     imagePosition: "center center",
     drift: "driftLeft",
@@ -103,7 +103,7 @@ const slides: HeroSlide[] = [
       "One of Sampan's pioneering and well-established businesses, offering vehicle sales, imports, and genuine Japanese automotive parts.",
     cta: "Explore Sampan Auto",
     href: "https://www.sampangroup.com.bd/sampan-auto",
-    image: "/images/our_divisions/sampan-auto/sampan-auto.png",
+    image: "/images/our-divisions/sampan-auto/sampan-auto.png",
     imagePosition: "center center",
     drift: "driftLeft",
   },
@@ -114,8 +114,8 @@ const slides: HeroSlide[] = [
     subhead:
       "Discover a perfect blend of nature and luxury at Sampan Agro and Golf Resort. Your ultimate escape for relaxation, recreation, and family fun.",
     cta: "Explore Sampan Agro and Golf Resort",
-    href: "/our_divisions/agro-and-resort/sampan-agro-and-golf-resort",
-    image: "/images/our_divisions/sampan-agro-golf-resort/sampan-agro-golf-resort.png",
+    href: "/our-divisions/agro-and-resort/sampan-agro-and-golf-resort",
+    image: "/images/our-divisions/sampan-agro-golf-resort/sampan-agro-golf-resort.png",
     imagePosition: "center center",
     drift: "driftRight",
   },

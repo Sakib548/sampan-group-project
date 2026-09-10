@@ -139,7 +139,7 @@ export default function DivisionsSection() {
 
         <div className="mt-8 flex justify-end">
           <Link
-            href="/our_divisions"
+            href="/our-divisions"
             className="group inline-flex min-h-12 items-center gap-6 border border-[#183b2b]/18 bg-white/55 px-5 text-[0.64rem] font-bold uppercase tracking-[0.16em] text-[#183b2b] backdrop-blur transition duration-300 hover:border-[#008f68]/45 hover:bg-white"
           >
             View all divisions

@@ -138,13 +138,13 @@ const videos = [
   {
     title: "Behind the Scenes: Sampan Metro Square",
     duration: "01:12",
-    thumbnail: "/images/our_divisions/sampan-metro-square/metro-square.png",
+    thumbnail: "/images/our-divisions/sampan-metro-square/metro-square.png",
     size: "small",
   },
   {
     title: "A Day at Sampan Golf Academy",
     duration: "03:45",
-    thumbnail: "/images/our_divisions/sampan-agro-golf-resort/sampan-agro-golf-resort.png",
+    thumbnail: "/images/our-divisions/sampan-agro-golf-resort/sampan-agro-golf-resort.png",
     size: "small",
   },
   {

@@ -39,7 +39,7 @@ export default function SampanAutoFeature() {
   return (
     <section className="relative left-1/2 isolate min-h-[100svh] w-[100dvw] max-w-none -translate-x-1/2 overflow-hidden bg-[#07131f] text-white">
       <Image
-        src="/images/our_divisions/sampan-auto/sampan-auto.png"
+        src="/images/our-divisions/sampan-auto/sampan-auto.png"
         alt="Sampan Auto showroom with three premium vehicles"
         fill
         priority={false}
@@ -74,7 +74,7 @@ export default function SampanAutoFeature() {
             </p>
 
             <Link
-              href="/our_divisions/automotive-fuel-mobility/sampan-auto"
+              href="/our-divisions/automotive-fuel-mobility/sampan-auto"
               className="group mt-8 inline-flex min-h-14 items-center justify-between gap-10 bg-[#ffc52f] px-6 text-xs font-bold uppercase tracking-[0.15em] text-[#07131f] transition duration-300 hover:bg-white"
             >
               View Automobiles

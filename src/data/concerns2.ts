@@ -8,7 +8,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "Land sale, share, condominium, building construction",
     logo: "/images/brand/development.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-development-ltd",
+    href: "/our-divisions/real-state-and-land-investment/sampan-development-ltd",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "Residential condominium project in Ashulia",
     logo: "/images/brand/sampanmetrosquare.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-metro-square",
+    href: "/our-divisions/real-state-and-land-investment/sampan-metro-square",
   },
   // {
   //   id: 3,
@@ -24,7 +24,7 @@ export const concerns2: Concern[] = [
   //   category: "Development & Construction",
   //   tagline: "Commercial + residential construction project",
   //   logo: "/images/brand/sampanmotolibskyline.webp",
-  //   href: "/our_divisions/real-state-and-land-investment/sampan-skyline",
+  //   href: "/our-divisions/real-state-and-land-investment/sampan-skyline",
   // },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "Residential building, Mawna via SDL.",
     logo: "/images/brand/sampannexus.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-nexus",
+    href: "/our-divisions/real-state-and-land-investment/sampan-nexus",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "Commercial Mall beside Express Highway Inn",
     logo: "/images/brand/sampantradeemporium.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-trade-emporium",
+    href: "/our-divisions/real-state-and-land-investment/sampan-trade-emporium",
   },
   // {
   //   id: 6,
@@ -48,7 +48,7 @@ export const concerns2: Concern[] = [
   //   category: "Development & Construction",
   //   tagline: "Hotel/motel beside Express Highway Inn.",
   //   logo: "/images/brand/sampantower.png",
-  //   href: "/our_divisions/real-state-and-land-investment/sampan-residency-tower-1-2",
+  //   href: "/our-divisions/real-state-and-land-investment/sampan-residency-tower-1-2",
   // },
   {
     id: 7,
@@ -56,7 +56,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "Residential condominium in Bashundhara R/A",
     logo: "/images/brand/sampan21.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-21st-century",
+    href: "/our-divisions/real-state-and-land-investment/sampan-21st-century",
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "Residential condominium in Bashundhara R/A",
     logo: "/images/brand/sampantaj.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-taj",
+    href: "/our-divisions/real-state-and-land-investment/sampan-taj",
   },
   {
     id: 9,
@@ -72,7 +72,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "Residential condominium in Niketon",
     logo: "/images/brand/sampanniketon.webp",
-    href: "/our_divisions/real-state-and-land-investment/sampan-niketon",
+    href: "/our-divisions/real-state-and-land-investment/sampan-niketon",
   },
   {
     id: 10,
@@ -81,7 +81,7 @@ export const concerns2: Concern[] = [
     tagline:
       "Flagship manufacturing hub housing hollow bricks, tiles, pet & beverage units.",
     logo: "/images/brand/industrialpark.png",
-    href: "/our_divisions/manufacturing-industrial/sampan-industrial-park",
+    href: "/our-divisions/manufacturing-industrial/sampan-industrial-park",
   },
   {
     id: 11,
@@ -90,7 +90,7 @@ export const concerns2: Concern[] = [
     tagline:
       "Eco-friendly hollow bricks, paving blocks, and ceramic tiles manufacturing.",
     logo: "/images/brand/sampanhollowbricksandtiles.png",
-    href: "/our_divisions/manufacturing-industrial/sampan-hollow-bricks-tiles",
+    href: "/our-divisions/manufacturing-industrial/sampan-hollow-bricks-tiles",
   },
   {
     id: 12,
@@ -99,7 +99,7 @@ export const concerns2: Concern[] = [
     tagline:
       "Automated PET bottle preforms, mineral water, and beverage bottling.",
     logo: "/images/brand/petandbeverage.png",
-    href: "/our_divisions/manufacturing-industrial/sampan-pet-beverage",
+    href: "/our-divisions/manufacturing-industrial/sampan-pet-beverage",
   },
   {
     id: 13,
@@ -107,7 +107,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "New Auto showroom + cafe, car wash, facilities.",
     logo: "/images/brand/sampancafemetro.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-cafe-metro",
+    href: "/our-divisions/real-state-and-land-investment/sampan-cafe-metro",
   },
   {
     id: 39,
@@ -115,7 +115,7 @@ export const concerns2: Concern[] = [
     category: "Development & Construction",
     tagline: "16-storied modern luxury high-rise residences.",
     logo: "/images/brand/development.png",
-    href: "/our_divisions/real-state-and-land-investment/sampan-condominium",
+    href: "/our-divisions/real-state-and-land-investment/sampan-condominium",
   },
 
   // Hospitality, Resort & Highway Travel
@@ -125,7 +125,7 @@ export const concerns2: Concern[] = [
     category: "Hospitality & Leisure",
     tagline: "Flagship, most recognized brand nationally",
     logo: "/images/brand/sampanhighwayinn.png",
-    href: "/our_divisions/hospitality-highway-travel/sampan-highway-inn",
+    href: "/our-divisions/hospitality-highway-travel/sampan-highway-inn",
   },
   {
     id: 15,
@@ -133,7 +133,7 @@ export const concerns2: Concern[] = [
     category: "Hospitality & Leisure",
     tagline: "Hotel beside Sampan Highway Inn",
     logo: "/images/brand/whitehouse.webp",
-    href: "/our_divisions/hospitality-highway-travel/sampan-white-house",
+    href: "/our-divisions/hospitality-highway-travel/sampan-white-house",
   },
   {
     id: 16,
@@ -141,7 +141,7 @@ export const concerns2: Concern[] = [
     category: "Hospitality & Leisure",
     tagline: "Premier Highway Dining, Grand Event Halls & Party Banquet Center",
     logo: "/images/brand/sampanhighwayinnresturant.png",
-    href: "/our_divisions/hospitality-highway-travel/sampan-highway-inn-restaurant-party-center",
+    href: "/our-divisions/hospitality-highway-travel/sampan-highway-inn-restaurant-party-center",
   },
   {
     id: 17,
@@ -149,7 +149,7 @@ export const concerns2: Concern[] = [
     category: "Hospitality & Leisure",
     tagline: "Modern-tier sister property to Highway Inn",
     logo: "/images/brand/expresshighwayinn.png",
-    href: "/our_divisions/hospitality-highway-travel/express-highway-inn",
+    href: "/our-divisions/hospitality-highway-travel/express-highway-inn",
   },
   {
     id: 18,
@@ -157,7 +157,7 @@ export const concerns2: Concern[] = [
     category: "Hospitality & Leisure",
     tagline: "Club/membership share",
     logo: "/images/brand/ecl.png",
-    href: "/our_divisions/hospitality-highway-travel/express-highway-inn-club-lounge",
+    href: "/our-divisions/hospitality-highway-travel/express-highway-inn-club-lounge",
   },
   {
     id: 19,
@@ -165,7 +165,7 @@ export const concerns2: Concern[] = [
     category: "Hospitality & Leisure",
     tagline: "Integrated Luxury Resort, Championship Fairways & Sustainable Farm Escape (Ongoing)",
     logo: "/images/brand/agroandgolf.png",
-    href: "/our_divisions/hospitality-highway-travel/sampan-agro-golf-resort",
+    href: "/our-divisions/hospitality-highway-travel/sampan-agro-golf-resort",
   },
   {
     id: 20,
@@ -173,7 +173,7 @@ export const concerns2: Concern[] = [
     category: "Hospitality & Leisure",
     tagline: "Exclusive SAGCL VIP Membership Shares, Private Lounge & Resort Privileges (Ongoing)",
     logo: "/images/brand/sampanagroandgolfclubandlounge.png",
-    href: "/our_divisions/hospitality-highway-travel/sampan-agro-golf-club-lounge",
+    href: "/our-divisions/hospitality-highway-travel/sampan-agro-golf-club-lounge",
   },
   {
     id: 21,
@@ -181,7 +181,7 @@ export const concerns2: Concern[] = [
     category: "Hospitality & Leisure",
     tagline: "Resort around the Eco & Agro farm proven success.",
     logo: "/images/brand/sampanechoagro.png",
-    href: "/our_divisions/hospitality-highway-travel/sampan-eco-agro",
+    href: "/our-divisions/hospitality-highway-travel/sampan-eco-agro",
   },
 
   // Golf Zone
@@ -191,7 +191,7 @@ export const concerns2: Concern[] = [
     category: "Golf Zone",
     tagline: "PGA-Certified Golf Training, TrackMan Simulators & Junior Academy (Coming Soon)",
     logo: "/images/brand/golfacademy.png",
-    href: "/our_divisions/golf-zone/sampan-golf-academy",
+    href: "/our-divisions/golf-zone/sampan-golf-academy",
   },
   // {
   //   id: 23,
@@ -208,7 +208,7 @@ export const concerns2: Concern[] = [
     category: "Agro & Fresh Produce",
     tagline: "Bulk sale of vegetables, fruits, flowers, etc",
     logo: "/images/brand/sampanechoagro.png",
-    href: "/our_divisions/agro-fresh-produce/sampan-eco-agro",
+    href: "/our-divisions/agro-fresh-produce/sampan-eco-agro",
   },
 
   // Retail Shop & Super Shop
@@ -219,7 +219,7 @@ export const concerns2: Concern[] = [
     tagline:
       "Premium Sweets, Confectionery & Artisanal Mishti, tied to Highway Inn.",
     logo: "/images/brand/sweetbox.png",
-    href: "/our_divisions/retail-super-shops/sampan-sweet-box",
+    href: "/our-divisions/retail-super-shops/sampan-sweet-box",
   },
   {
     id: 25,
@@ -227,7 +227,7 @@ export const concerns2: Concern[] = [
     category: "Retail Shop & Super Shop",
     tagline: "Flagship online + offline super shop experience (Coming Soon).",
     logo: "/images/brand/sampanmart.png",
-    href: "/our_divisions/retail-super-shops/sampan-mart",
+    href: "/our-divisions/retail-super-shops/sampan-mart",
   },
   {
     id: 26,
@@ -236,7 +236,7 @@ export const concerns2: Concern[] = [
     tagline:
       "Express neighborhood super shop, fresh groceries & daily essentials.",
     logo: "/images/brand/happyshopping.png",
-    href: "/our_divisions/retail-super-shops/mini-sampan-super-shop",
+    href: "/our-divisions/retail-super-shops/mini-sampan-super-shop",
   },
 
   // Automotive, Fuel & Mobility
@@ -247,7 +247,7 @@ export const concerns2: Concern[] = [
     tagline:
       "Japanese vehicle imports, luxury recondition cars, and genuine auto parts.",
     logo: "/images/brand/sampanauto.png",
-    href: "/our_divisions/automotive-fuel-mobility/sampan-auto",
+    href: "/our-divisions/automotive-fuel-mobility/sampan-auto",
   },
   {
     id: 28,
@@ -256,7 +256,7 @@ export const concerns2: Concern[] = [
     tagline:
       "24/7 Octane 95, Diesel & Mobil lubricants station beside Highway Inn.",
     logo: "/images/brand/sampanfillingstation.png",
-    href: "/our_divisions/automotive-fuel-mobility/sampan-filling-station",
+    href: "/our-divisions/automotive-fuel-mobility/sampan-filling-station",
   },
   {
     id: 29,
@@ -264,7 +264,7 @@ export const concerns2: Concern[] = [
     category: "Automotive, Fuel & Mobility",
     tagline: "High-pressure Auto LPG dispensing station & cylinder refilling.",
     logo: "/images/brand/lpg.png",
-    href: "/our_divisions/automotive-fuel-mobility/sampan-lpg-filling-station",
+    href: "/our-divisions/automotive-fuel-mobility/sampan-lpg-filling-station",
   },
   {
     id: 30,
@@ -273,7 +273,7 @@ export const concerns2: Concern[] = [
     tagline:
       "Ultra-fast 120kW DC fast charging & AC Type 2 chargers beside Highway Inn.",
     logo: "/images/brand/evc.png",
-    href: "/our_divisions/automotive-fuel-mobility/sampan-ev-car-charging-station",
+    href: "/our-divisions/automotive-fuel-mobility/sampan-ev-car-charging-station",
   },
   {
     id: 31,
@@ -282,7 +282,7 @@ export const concerns2: Concern[] = [
     tagline:
       "24/7 emergency flatbed towing & highway vehicle recovery service.",
     logo: "/images/brand/towing.webp",
-    href: "/our_divisions/automotive-fuel-mobility/sampan-towing-service",
+    href: "/our-divisions/automotive-fuel-mobility/sampan-towing-service",
   },
 
   // Defense & Security
@@ -292,7 +292,7 @@ export const concerns2: Concern[] = [
     category: "Security",
     tagline: "Sampan Firearms & Defense",
     logo: "/images/brand/firearmsco.png",
-    href: "/our_divisions/defense-security/sampan-fire-arms-co",
+    href: "/our-divisions/defense-security/sampan-fire-arms-co",
   },
   {
     id: 33,
@@ -300,7 +300,7 @@ export const concerns2: Concern[] = [
     category: "Security",
     tagline: "Nagar Defense Solutions",
     logo: "/images/brand/nagararmsand.png",
-    href: "/our_divisions/defense-security/nagar-arms-ammunition",
+    href: "/our-divisions/defense-security/nagar-arms-ammunition",
   },
 
   // Education
@@ -310,7 +310,7 @@ export const concerns2: Concern[] = [
     category: "Professional Education",
     tagline: "CIPS-Accredited UK Procurement & Supply Chain, Hospitality & Business Qualifications",
     logo: "/images/brand/lshs.png",
-    // href: "/our_divisions/professional-education/london-school-of-higher-studies",
+    // href: "/our-divisions/professional-education/london-school-of-higher-studies",
     href: "https://london-schools-seven.vercel.app/",
   },
 
@@ -320,7 +320,7 @@ export const concerns2: Concern[] = [
     category: "Maritime / Alternative Assets",
     tagline: "Fractional Luxury Vessel & Maritime Asset Investment Shares (Coming Soon)",
     logo: "/images/brand/industrialpark.png",
-    href: "/our_divisions/maritime-alternative-assets/sampan-floating-pearl",
+    href: "/our-divisions/maritime-alternative-assets/sampan-floating-pearl",
   },
   {
     id: 36,
@@ -328,7 +328,7 @@ export const concerns2: Concern[] = [
     category: "Agro & Fresh Produce",
     tagline: "Fresh, responsibly sourced food for every table",
     logo: "/images/brand/fishandmeat.png",
-    href: "/our_divisions/agro-fresh-produce/sampan-fish-and-meat",
+    href: "/our-divisions/agro-fresh-produce/sampan-fish-and-meat",
   },
   {
     id: 38,
@@ -336,6 +336,6 @@ export const concerns2: Concern[] = [
     category: "Golf Zone",
     tagline: "Short Game Practice, Toptracer Bays, Night Floodlit Driving & Events (Coming Soon)",
     logo: "/images/brand/golfrage.png",
-    href: "/our_divisions/golf-zone/sampan-short-drive-range",
+    href: "/our-divisions/golf-zone/sampan-short-drive-range",
   },
 ];

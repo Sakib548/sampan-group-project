@@ -513,29 +513,15 @@
 @keyframes masked-reveal {
   from {
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
   }
 
   to {
-    clip-path: polygon(0 0, 112% 0, 100% 100%, 0 100%);
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
 .modeMask {
-  -webkit-mask-image: linear-gradient(
-    108deg,
-    transparent 0%,
-    #000 12%,
-    #000 100%
-  );
-  mask-image: linear-gradient(108deg, transparent 0%, #000 12%, #000 100%);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 220% 100%;
-  mask-size: 220% 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 @keyframes split-panel-up {

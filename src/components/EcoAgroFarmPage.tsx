@@ -9,8 +9,8 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const farmImage = "/images/our_divisions/eco_agro/fruits.jpg";
-const farmMark = "/images/our_divisions/eco_agro/veg.jpg";
+const farmImage = "/images/our-divisions/eco_agro/fruits.jpg";
+const farmMark = "/images/our-divisions/eco_agro/veg.jpg";
 
 const crops = [
   {

@@ -30,17 +30,12 @@ const divisionMegaMenu: MegaMenuColumn[] = divisionGroups.map((group) => ({
   id: group.id,
   title: group.title,
   href: group.href,
-  items: group.items.map((item) => {
-    const concern = concerns.find(
-      (c) => String(c.id) === String(item.concernId),
-    );
-    return {
-      id: String(item.id),
-      label: concern?.name ?? group.title,
-      href: item.href,
-      external: false,
-    };
-  }),
+  items: group.items.map((item) => ({
+    id: String(item.id),
+    label: item.label,
+    href: item.href,
+    external: item.external ?? false,
+  })),
 }));
 
 const whoAreWeMenu: MegaMenuColumn[] = [
@@ -116,7 +111,7 @@ export const navItems: NavItem[] = [
   {
     id: "2",
     label: "Our Divisions",
-    href: "/our_divisions",
+    href: "/our-divisions",
     layout: "concerns", // Uses the same column layout as Concerns
     megaMenu: divisionMegaMenu,
   },

@@ -263,7 +263,7 @@ export default function HighwayInnEditorial() {
 
               <div className="flex items-center gap-6">
                 <Link
-                  href="/our_divisions/hospitality-highway-travel/sampan-highway-inn"
+                  href="/our-divisions/hospitality-highway-travel/sampan-highway-inn"
                   className="group/cta inline-flex w-fit items-center gap-5 border-b border-white/30 pb-3 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-white/80 transition-all duration-500 hover:border-emerald-500 hover:text-emerald-500"
                 >
                   Explore Highway Inn
