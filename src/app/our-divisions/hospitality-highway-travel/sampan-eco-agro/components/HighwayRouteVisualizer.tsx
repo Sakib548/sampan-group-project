@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaRoute, FaMapPin, FaCar, FaBolt, FaClock, FaCheckCircle, FaCompass, FaChevronRight } from "react-icons/fa";
+import { FaRoute, FaMapMarkerAlt, FaCar, FaClock, FaCheckCircle, FaChevronRight, FaFacebook, FaPhoneAlt } from "react-icons/fa";
 
 interface RouteMarker {
   id: string;
@@ -17,51 +17,35 @@ const corridorMarkers: RouteMarker[] = [
   {
     id: "dhaka-start",
     mile: "KM 0",
-    name: "Dhaka Expressway Entry (Zero Point / Jatrabari)",
+    name: "Dhaka Expressway Entry (Jatrabari / Postogola)",
     type: "start",
     driveTimeFromDhaka: "0 Mins",
-    description: "Start journey along the 8-lane uninterrupted Dhaka–Mawa expressway corridor.",
+    description: "Start journey along the uninterrupted Dhaka–Mawa Expressway corridor.",
   },
   {
-    id: "postogola-toll",
-    mile: "KM 12",
-    name: "Postogola Bridge Toll Plaza",
-    type: "landmark",
-    driveTimeFromDhaka: "12 Mins",
-    description: "Smooth fast-track electronic toll lanes.",
-  },
-  {
-    id: "nimtoli-exit",
-    mile: "KM 28",
-    name: "Nimtoli Expressway Exit Ramp",
-    type: "exit",
-    driveTimeFromDhaka: "28 Mins",
-    description: "Take Exit 4 toward the Green Belt corridor.",
-  },
-  {
-    id: "sampan-eco-agro-marker",
-    mile: "KM 35",
-    name: "Sampan Eco & Agro Resort",
-    type: "resort",
-    driveTimeFromDhaka: "35 Mins",
-    description: "Dedicated deceleration slip road directly into 50+ acres organic farm, eco-cottages, and garden dining.",
-    isSampanEcoAgro: true,
-  },
-  {
-    id: "sampan-highway-inn-marker",
-    mile: "KM 42",
-    name: "Sampan Highway Inn (KM 74 Hub)",
-    type: "landmark",
-    driveTimeFromDhaka: "42 Mins",
-    description: "Sister hospitality hub with 24/7 motel suites and 120kW EV superchargers.",
-  },
-  {
-    id: "padma-toll",
+    id: "padma-bridge",
     mile: "KM 55",
-    name: "Padma Bridge Toll Plaza",
+    name: "Padma Multipurpose Bridge",
     type: "landmark",
-    driveTimeFromDhaka: "50 Mins",
-    description: "Access to Padma Bridge crossing.",
+    driveTimeFromDhaka: "45 Mins",
+    description: "Cross the landmark Padma Bridge into the southern transit expressway.",
+  },
+  {
+    id: "bhanga-interchange",
+    mile: "KM 75",
+    name: "Bhanga Expressway Interchange",
+    type: "exit",
+    driveTimeFromDhaka: "1 hr 10 mins",
+    description: "Take the cloverleaf exit onto the Faridpur regional highway corridor.",
+  },
+  {
+    id: "alphadanga-destination",
+    mile: "Destination",
+    name: "Sampan Eco & Agro Resort (Alphadanga, Faridpur)",
+    type: "resort",
+    driveTimeFromDhaka: "Approx 2 hrs",
+    description: "Arrival at Joydebpur, Boroga, Borice, Alphadanga-7870, Faridpur, Bangladesh.",
+    isSampanEcoAgro: true,
   },
 ];
 
@@ -77,14 +61,14 @@ export default function HighwayRouteVisualizer() {
           <div>
             <div className="inline-flex items-center gap-2 border border-[#b9e583]/40 bg-[#b9e583]/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[#b9e583] mb-4">
               <FaRoute className="text-xs" />
-              <span>14 • Dedicated Highway Corridor Map</span>
+              <span>Location &amp; Driving Directions</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-white">
-              Highway-Route Map &amp; <span className="font-semibold text-[#b9e583]">Stopover Guide</span>
+              Route Guide &amp; <span className="font-semibold text-[#b9e583]">Resort Location</span>
             </h2>
           </div>
           <p className="max-w-md text-sm text-white/70 leading-relaxed font-normal">
-            Planning a stopover? Track exactly where Sampan Eco &amp; Agro sits along the main Dhaka–Mawa Expressway corridor.
+            Located in Joydebpur, Boroga, Borice, Alphadanga, Faridpur — reachable smoothly via the Dhaka–Mawa Expressway and Padma Bridge.
           </p>
         </div>
 
@@ -95,10 +79,7 @@ export default function HighwayRouteVisualizer() {
           {/* Timeline Mile Markers */}
           <div className="relative pt-6">
             
-            {/* Horizontal Line across corridor */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-white/20 -translate-y-1/2 z-0" />
-            
-            <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 relative z-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
               {corridorMarkers.map((marker) => {
                 const isSelected = selectedMarker.id === marker.id;
                 return (
@@ -150,11 +131,11 @@ export default function HighwayRouteVisualizer() {
             <div className="lg:col-span-8 space-y-3">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs font-bold text-[#b9e583] bg-[#b9e583]/15 border border-[#b9e583]/40 px-3 py-1 uppercase">
-                  Selected Stop: {selectedMarker.mile}
+                  Route Step: {selectedMarker.mile}
                 </span>
                 <span className="font-mono text-xs text-white/70 flex items-center gap-1">
                   <FaCar className="text-[#b9e583]" />
-                  <span>{selectedMarker.driveTimeFromDhaka} from Dhaka City</span>
+                  <span>{selectedMarker.driveTimeFromDhaka} from Dhaka</span>
                 </span>
               </div>
 
@@ -167,18 +148,54 @@ export default function HighwayRouteVisualizer() {
             <div className="lg:col-span-4 flex flex-col gap-3 border-t lg:border-t-0 lg:border-l border-white/10 pt-4 lg:pt-0 lg:pl-6 font-mono text-xs">
               <div className="flex items-center gap-2 text-white/80">
                 <FaCheckCircle className="text-[#b9e583]" />
-                <span>8-Lane Smooth Expressway Access</span>
+                <span>Expressway &amp; Padma Bridge Route</span>
               </div>
               <div className="flex items-center gap-2 text-white/80">
                 <FaCheckCircle className="text-[#b9e583]" />
-                <span>Dedicated Deceleration Turning Slip</span>
+                <span>Scenic Countryside Driving Corridor</span>
               </div>
               <div className="flex items-center gap-2 text-white/80">
                 <FaCheckCircle className="text-[#b9e583]" />
-                <span>Highway Bus &amp; Private Car Bays</span>
+                <span>On-Site Secure Resort Parking</span>
               </div>
             </div>
 
+          </div>
+
+          {/* Location Details & Facebook Card */}
+          <div className="border border-white/15 bg-black/40 p-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-[#b9e583] text-xs font-mono font-bold uppercase tracking-wider">
+                <FaMapMarkerAlt />
+                <span>Resort Location Address</span>
+              </div>
+              <p className="text-sm font-medium text-white">
+                Joydebpur, Boroga, Borice, Alphadanga-7870, Faridpur, Bangladesh
+              </p>
+              <p className="text-xs text-white/60">
+                For detailed arrival assistance, call our concierge or visit our official Facebook page.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://www.facebook.com/sampanecoandagro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] text-white px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider transition-colors shadow-md"
+              >
+                <FaFacebook className="text-sm" />
+                <span>Facebook Page</span>
+              </a>
+
+              <a
+                href="tel:+8801929918408"
+                className="inline-flex items-center gap-2 border border-[#b9e583]/40 bg-[#b9e583]/15 hover:bg-[#b9e583]/25 text-[#b9e583] px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider transition-colors"
+              >
+                <FaPhoneAlt className="text-xs" />
+                <span>+880 1929-918408</span>
+              </a>
+            </div>
           </div>
 
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { FaTree, FaSmile, FaAppleAlt, FaSeedling, FaAward } from "react-icons/fa";
+import { FaBed, FaSmile, FaTree, FaClock, FaAward } from "react-icons/fa";
 
 interface Metric {
   id: string;
@@ -12,32 +12,32 @@ interface Metric {
 
 const metrics: Metric[] = [
   {
-    id: "acres",
-    value: "50+",
-    label: "Organic Cultivated Acres",
-    subtitle: "100% Chemical & Pesticide Free",
-    icon: FaTree,
+    id: "cottages",
+    value: "15+",
+    label: "Lakeview Luxury Cottages",
+    subtitle: "Crafted with Wooden Verandas & AC",
+    icon: FaBed,
   },
   {
     id: "guests",
     value: "120,000+",
-    label: "Eco Visitors Welcomed",
-    subtitle: "Families & Highway Travelers",
+    label: "Delighted Guests Hosted",
+    subtitle: "Weekend Getaways & Family Retreats",
     icon: FaSmile,
   },
   {
-    id: "varieties",
-    value: "45+",
-    label: "Crop & Fruit Varieties",
-    subtitle: "Mango, Guava, Organic Veggies",
-    icon: FaAppleAlt,
+    id: "grounds",
+    value: "25+",
+    label: "Resort Nature Grounds & Lake",
+    subtitle: "Botanical Trails & Waterways",
+    icon: FaTree,
   },
   {
-    id: "cottages",
-    value: "15+",
-    label: "Lakeview Eco Luxury Cottages",
-    subtitle: "Crafted from Bamboo & Wood",
-    icon: FaSeedling,
+    id: "service",
+    value: "24/7",
+    label: "Dedicated Hospitality & Dining",
+    subtitle: "Concierge & Private Lake Service",
+    icon: FaClock,
   },
 ];
 

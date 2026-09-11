@@ -66,4 +66,4 @@ Project: SAMPAN Group Website
 Notes:
 - Fridays were treated as weekly holidays.
 - Additional holidays: 5 August and 26 August.
-- Main technologies used: Next.js, React, TypeScript, Tailwind CSS, GSAP, Lenis, and responsive image components.
+- Main technologies used: Next.js, React, TypeScript, Tailwind CSS, GSAP, Lenis, and responsive image components..

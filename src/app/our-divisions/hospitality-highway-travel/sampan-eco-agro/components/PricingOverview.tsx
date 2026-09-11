@@ -15,20 +15,20 @@ interface PricingPackage {
 
 const packagesData: PricingPackage[] = [
   {
-    id: "day-harvest-pass",
-    name: "Day-Long Harvest & Refresh Pass",
+    id: "day-refresh-pass",
+    name: "Day-Long Resort Refresh Pass",
     subtitle: "Ideal for Expressway Travelers & Day Visitors",
     priceBDT: "1,850",
     unit: "per guest",
     inclusions: [
-      "Guided Orchard & Farm Walking Tour",
-      "Organic Farm-to-Table Lunch Buffet",
-      "Pick-Your-Own Fruit Basket (1.5 kg)",
+      "Welcome Farm Juice & Morning Tea",
+      "Lakeside Buffet Lunch",
       "Pedal Boating & Lake Access",
-      "Welcome Farm Juice & Tea",
-      "Access to Petting Zoo & Lawns",
+      "Botanical Trails & Garden Walk",
+      "Petting Lawns & Relaxation Benches",
+      "Complimentary Wi-Fi & Gated Parking",
     ],
-    idealFor: "Family day trips & highway travelers looking for a quick nature refresh.",
+    idealFor: "Family day trips & highway travelers looking for a refreshing nature break.",
   },
   {
     id: "eco-cottage-night",
@@ -38,52 +38,52 @@ const packagesData: PricingPackage[] = [
     unit: "per night / 2 guests",
     popular: true,
     inclusions: [
-      "AC Eco-Cottage with Lake Balcony",
-      "Organic Breakfast & Farm Lunch",
-      "Sunset Clay-Oven BBQ Dinner",
-      "Unlimited Boating & Angling Access",
-      "Complimentary Farm Harvest Gift Box",
-      "24/7 Butler & Room Concierge",
+      "AC Eco-Cottage with Private Lake Balcony",
+      "Complimentary Breakfast & Dinner",
+      "Evening Clay-Oven BBQ Dinner",
+      "Unlimited Boating & Pier Angling Access",
+      "Welcome Fruit Basket & Refreshments",
+      "24/7 Concierge & Hospitality Service",
     ],
-    idealFor: "Couples & families seeking an immersive weekend nature stay.",
+    idealFor: "Couples & families seeking an immersive, peaceful weekend lake stay.",
   },
   {
     id: "family-agro-suite",
-    name: "Family Agro-Retreat Suite (2D/1N)",
-    subtitle: "Two-Bedroom Family Lakeside Villa",
+    name: "Family Lakeside Villa (2D/1N)",
+    subtitle: "Two-Bedroom Waterfront Family Villa",
     priceBDT: "12,000",
     unit: "per night / up to 5 guests",
     inclusions: [
       "Spacious 2-Bedroom Lakeview Villa",
-      "All Meals (Breakfast, Lunch, BBQ Dinner)",
-      "Private Guided Agri-Workshop & Planting",
-      "Private Boat & Angling Gear",
-      "Fresh Fruit Basket & Raw Honey Jar",
-      "Night Bonfire & Acoustic Setup",
+      "All Meals (Breakfast, Lunch & BBQ Dinner)",
+      "Private Boat & Fishing Gear Access",
+      "Evening Bonfire & Campfire Setup",
+      "Outdoor Lawn Games & Badminton",
+      "Dedicated Cottage Caretaker",
     ],
-    idealFor: "Larger families and friend groups seeking privacy and space.",
+    idealFor: "Larger families and friend groups seeking privacy, comfort, and space.",
   },
   {
     id: "corporate-wellness",
-    name: "Corporate Eco-Wellness Package",
-    subtitle: "Executive Retreat & Team Outing",
+    name: "Corporate Eco-Retreat Package",
+    subtitle: "Executive Offsite & Team Outing",
     priceBDT: "2,200",
     unit: "per delegate (Min 15)",
     inclusions: [
-      "Exclusive Lawn & Pavilion Access",
-      "Welcome Drinks & Organic Buffet Lunch",
-      "Morning & Evening Herbal Tea Break",
-      "Team Building Farm Challenges",
-      "Sound & Projection Setup",
-      "Reserved Highway Bus Parking",
+      "Exclusive Lawn & Event Pavilion Access",
+      "Welcome Drinks & Gourmet Buffet Lunch",
+      "Morning & Evening Artisanal Tea Break",
+      "Team Building Grounds & Boating",
+      "Sound & Projection AV Equipment",
+      "Reserved Coach & Car Parking",
     ],
-    idealFor: "Corporate teams, AGMs, strategy sessions, and annual outings.",
+    idealFor: "Corporate teams, strategy retreats, AGMs, and annual family days.",
   },
 ];
 
 export default function PricingOverview({ onSelectPackage }: { onSelectPackage?: (pkgName: string) => void }) {
   return (
-    <section id="pricing" className="py-24 bg-[#10251b] text-white relative border-b border-white/10">
+    <section id="packages" className="py-24 bg-[#10251b] text-white relative border-b border-white/10">
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
         
         {/* Header */}
@@ -91,14 +91,14 @@ export default function PricingOverview({ onSelectPackage }: { onSelectPackage?:
           <div>
             <div className="inline-flex items-center gap-2 border border-[#b9e583]/40 bg-[#b9e583]/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[#b9e583] mb-4">
               <FaLeaf className="text-xs" />
-              <span>06 • Transparent Rates &amp; Packages</span>
+              <span>Resort Stay Packages</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-white">
-              Resort &amp; Harvest <span className="font-semibold text-[#b9e583]">Package Pricing</span>
+              Stay Packages &amp; <span className="font-semibold text-[#b9e583]">Day Passes</span>
             </h2>
           </div>
           <p className="max-w-md text-sm text-white/70 leading-relaxed font-normal">
-            Clear, all-inclusive pricing with zero hidden charges. All packages include access to organic farm zones and lake facilities.
+            Transparent, all-inclusive pricing with zero hidden charges. All packages include access to the scenic lake and resort grounds.
           </p>
         </div>
 

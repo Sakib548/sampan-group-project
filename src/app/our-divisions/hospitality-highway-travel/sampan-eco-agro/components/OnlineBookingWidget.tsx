@@ -87,10 +87,10 @@ export default function OnlineBookingWidget() {
               
               <div className="grid grid-cols-2 gap-3 font-mono text-xs">
                 {[
-                  { id: "day-pass", name: "Day Long Harvest Pass", price: "BDT 1,850/guest" },
-                  { id: "eco-cottage", name: "Eco-Cottage Overnighter", price: "BDT 6,500/night" },
-                  { id: "family-suite", name: "Family Agro-Suite (2D/1N)", price: "BDT 12,000/night" },
-                  { id: "corporate", name: "Corporate Eco Retreat", price: "BDT 2,200/delegate" },
+                  { id: "day-pass", name: "Day Long Refresh Pass", price: "BDT 1,850/guest" },
+                  { id: "eco-cottage", name: "Lakeview Eco-Cottage", price: "BDT 6,500/night" },
+                  { id: "family-suite", name: "Family Lakeside Villa", price: "BDT 12,000/night" },
+                  { id: "corporate", name: "Corporate Eco-Retreat", price: "BDT 2,200/delegate" },
                 ].map((pkg) => (
                   <button
                     key={pkg.id}
@@ -120,7 +120,7 @@ export default function OnlineBookingWidget() {
                   type="date"
                   value={checkInDate}
                   onChange={(e) => setCheckInDate(e.target.value)}
-                  className="w-full bg-[#f4f1e8] border border-[#173326]/20 px-3 py-2.5 text-xs text-[#173326] focus:border-[#2f6b45] focus:outline-none"
+                  className="w-full bg-[#fbfdfa] border border-[#173326]/20 px-3 py-2 text-xs text-[#173326] focus:border-[#2f6b45] focus:outline-none"
                 />
               </div>
 
@@ -175,7 +175,7 @@ export default function OnlineBookingWidget() {
             {/* Step 3: Optional Experience Add-Ons */}
             <div className="space-y-3 pt-2 border-t border-[#173326]/10">
               <label className="block font-mono text-xs font-bold uppercase tracking-wider text-[#2f6b45]">
-                3. Optional Farm Perks &amp; Add-ons
+                3. Optional Resort Add-ons
               </label>
 
               <div className="space-y-2 text-xs">
@@ -189,7 +189,7 @@ export default function OnlineBookingWidget() {
                     />
                     <div className="flex items-center gap-2">
                       <FaUtensils className="text-[#2f6b45]" />
-                      <span className="font-bold text-[#173326]">Live Garden Clay-Oven BBQ Dinner</span>
+                      <span className="font-bold text-[#173326]">Live Lakeside Clay-Oven BBQ Dinner</span>
                     </div>
                   </div>
                   <span className="font-mono text-[#2f6b45] font-bold">+BDT 650/guest</span>
@@ -205,7 +205,7 @@ export default function OnlineBookingWidget() {
                     />
                     <div className="flex items-center gap-2">
                       <FaGift className="text-[#2f6b45]" />
-                      <span className="font-bold text-[#173326]">Organic Farm Harvest Gift Box (2.5 kg produce)</span>
+                      <span className="font-bold text-[#173326]">Welcome Fresh Fruit &amp; Gourmet Basket</span>
                     </div>
                   </div>
                   <span className="font-mono text-[#2f6b45] font-bold">+BDT 500</span>
@@ -221,7 +221,7 @@ export default function OnlineBookingWidget() {
                     />
                     <div className="flex items-center gap-2">
                       <FaFish className="text-[#2f6b45]" />
-                      <span className="font-bold text-[#173326]">Lake Angling Equipment &amp; Bait Set</span>
+                      <span className="font-bold text-[#173326]">Private Wooden Boat Ride &amp; Fishing Gear Kit</span>
                     </div>
                   </div>
                   <span className="font-mono text-[#2f6b45] font-bold">+BDT 400</span>

@@ -28,46 +28,28 @@ export default function SampanEcoAgroClient() {
     <main className="bg-[#0c1c14] text-white antialiased selection:bg-[#b9e583] selection:text-[#0c1c14]">
 
       {/* 1. OVERVIEW (Hero with Dark Forest Contrast) */}
-      <HeroOverview onOpenBooking={() => scrollToSection("booking-widget")} />
+      <HeroOverview onOpenBooking={() => scrollToSection("book-enquire-cta")} />
 
-      {/* 10. ONLINE BOOKING WIDGET (Instant Calculator & Reservation) */}
-      {/* <OnlineBookingWidget /> */}
-
-      {/* 9. MILESTONE COUNTER (Track Record & Scale) */}
+      {/* 2. MILESTONE COUNTER (Track Record & Scale) */}
       <MilestoneCounter />
 
-      {/* 2. FACILITIES / OFFERINGS LIST (Category Filtered Cards) */}
+      {/* 3. FACILITIES / RESORT OFFERINGS LIST (Category Filtered Cards) */}
       <FacilitiesList />
 
-      {/* 14. DEDICATED HIGHWAY-ROUTE MAP (Corridor Map & Mile Markers) */}
-      <HighwayRouteVisualizer />
+      {/* 4. ROOM / PACKAGE PRICING OVERVIEW (Commented out per client request until pricing is finalized) */}
+      {/* <PricingOverview onSelectPackage={() => scrollToSection("book-enquire-cta")} /> */}
 
-      {/* 3. LOCATION + LIVE MAP (GPS Coordinates, Hub Distances & Embedded Map) */}
-      {/* <LocationAndMap /> */}
+      {/* 5. ONLINE BOOKING WIDGET (Commented out per client request until cost estimator/payment details are provided) */}
+      {/* <OnlineBookingWidget /> */}
 
-      {/* 6. ROOM / PACKAGE PRICING OVERVIEW (Transparent Tiers & Inclusions) */}
-      {/* <PricingOverview onSelectPackage={() => scrollToSection("booking-widget")} /> */}
-
-      {/* 12. VIRTUAL TOUR (360° Walkthrough Simulator & Interactive Hotspots) */}
-      {/* <VirtualTourViewer /> */}
-
-      {/* 5. PHOTO / VIDEO GALLERY (Meet the Harvest Showcase & YouTube Video) */}
+      {/* 6. PHOTO / VIDEO GALLERY (Resort Showcase & YouTube Video) */}
       <PhotoVideoGallery />
 
-      {/* 7. "NEARBY AT THIS LOCATION" MODULE (Adjacent Assets & Attractions) */}
-      {/* <NearbyLocationModule /> */}
+      {/* 7. DEDICATED HIGHWAY-ROUTE MAP (Corridor Map & Mile Markers) */}
+      <HighwayRouteVisualizer />
 
-      {/* 8. PRESS / MEDIA MENTIONS CAROUSEL (National Press Mentions) */}
-      {/* <PressMediaCarousel /> */}
-
-      {/* 11. GUEST REVIEWS (Verified Traveler Feedback & Rating Scorecard) */}
-      {/* <GuestReviews /> */}
-
-      {/* 13. USER-GENERATED CONTENT FEED (#SampanEcoAgro Community) */}
-      {/* <UGCFeed /> */}
-
-      {/* 4. BOOK / ENQUIRE CTA (Direct Hotline, WhatsApp & Instant Form) */}
-      <BookEnquireCTA onOpenBookingWidget={() => scrollToSection("booking-widget")} />
+      {/* 8. BOOK / ENQUIRE CTA (Direct Hotline, WhatsApp & Instant Form) */}
+      <BookEnquireCTA onOpenBookingWidget={() => scrollToSection("book-enquire-cta")} />
 
       {/* Floating Quick Navigation Dock */}
       <aside aria-label="Resort Quick Navigation" className="fixed bottom-6 inset-x-0 z-40 flex justify-center pointer-events-none px-4">
@@ -77,8 +59,8 @@ export default function SampanEcoAgroClient() {
             onClick={() => scrollToSection("gallery")}
             className="flex items-center gap-1.5 px-3 py-1.5 hover:bg-white/10 text-white/80 hover:text-white transition-colors cursor-pointer"
           >
-            <FaLeaf className="text-[#b9e583]" />
-            <span className="hidden sm:inline">Harvest Gallery</span>
+            <FaCamera className="text-[#b9e583]" />
+            <span className="hidden sm:inline">Gallery</span>
           </button>
 
           <button
@@ -86,7 +68,7 @@ export default function SampanEcoAgroClient() {
             className="flex items-center gap-1.5 px-3 py-1.5 hover:bg-white/10 text-white/80 hover:text-white transition-colors cursor-pointer"
           >
             <FaCompass className="text-[#b9e583]" />
-            <span className="hidden sm:inline">Facilities</span>
+            <span className="hidden sm:inline">Amenities</span>
           </button>
 
           <button
@@ -98,11 +80,11 @@ export default function SampanEcoAgroClient() {
           </button>
 
           <button
-            onClick={() => scrollToSection("booking-widget")}
+            onClick={() => scrollToSection("book-enquire-cta")}
             className="flex items-center gap-1.5 bg-[#b9e583] hover:bg-[#a6db6c] text-[#0c1c14] px-4 py-1.5 font-mono font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
           >
             <FaCalendarCheck />
-            <span>Book Visit</span>
+            <span>Inquire / Book</span>
           </button>
 
           <a

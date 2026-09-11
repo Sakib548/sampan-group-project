@@ -165,20 +165,20 @@ const hospitalityConcerns = [
   {
     id: "sampan-eco-agro",
     name: "Sampan Eco & Agro Resort",
-    category: "Sustainable Farm-Stay Resort",
-    status: "Operational Farm Stay",
+    category: "Lakeside Eco-Resort & Retreat",
+    status: "Active & Operational",
     statusType: "active",
-    location: "Agro Farm Belt Corridor",
+    location: "Padma Bridge Expressway Green Belt",
     description:
-      "A restorative eco farm retreat built alongside Sampan's active agro & horticulture estate, offering fresh air, organic fruit harvesting, and rustic lake cottages.",
-    image: "/images/concerns/eco-agro.png",
+      "A peaceful lakeside eco-resort sanctuary featuring luxury wooden cottages, serene boat rides, open-air lakeside dining & BBQ, and refreshing nature staycations.",
+    image: "/images/our-divisions/sampan-eco-agro/frontview2.jpg",
     link: "/our-divisions/hospitality-highway-travel/sampan-eco-agro",
-    badge: "Eco & Agri-Tourism",
+    badge: "Eco-Resort & Cottages",
     highlights: [
-      "Organic Farm-to-Fork Dining",
-      "Serene Lakeside Wooden Chalets",
-      "Fruit Orchard & Fishery Tours",
-      "Zero-Carbon Rural Wellness Retreat",
+      "Lakeview Luxury Eco-Cottages",
+      "Lakeside Open-Air Dining & BBQ",
+      "Tranquil Lake Boating & Sunset Pier",
+      "Botanical Trails & Family Lawns",
     ],
   },
 ];
@@ -431,7 +431,7 @@ export default function HospitalityHighwayTravelPage() {
             href="/contact"
             className="shrink-0 bg-[#ef636b] hover:bg-white text-[#071b13] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] transition-all duration-300"
           >
-            Contact Division Office
+            Contact Division Office.
           </Link>
         </div>
       </section>
