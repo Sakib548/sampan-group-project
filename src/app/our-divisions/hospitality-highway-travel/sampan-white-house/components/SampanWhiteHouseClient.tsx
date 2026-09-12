@@ -69,50 +69,42 @@ export default function SampanWhiteHouseClient() {
       {/* BOOK / ENQUIRE CTA (Direct Hotline, WhatsApp & Instant Form) */}
       {/* <BookEnquireCTA onOpenBookingWidget={() => scrollToSection("booking-widget")} /> */}
 
-      {/* Floating Highway Quick Navigation Bar (Square Style) */}
-      <aside aria-label="Highway Quick Navigation" className="fixed bottom-6 inset-x-0 z-40 flex justify-center pointer-events-none px-4">
-        <div className="pointer-events-auto bg-neutral-950/90 border border-white/20 backdrop-blur-xl px-4 py-2.5 rounded-none shadow-2xl flex items-center gap-2 sm:gap-4 text-xs font-mono font-bold text-white">
+      {/* Floating Highway Quick Navigation Bar (Only Icons and Text) */}
+      {/* <aside aria-label="Highway Quick Navigation" className="fixed bottom-6 inset-x-0 z-40 flex justify-center pointer-events-none px-4">
+        <div className="pointer-events-auto flex items-center gap-4 sm:gap-6 text-xs font-mono font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
           <button
             onClick={() => scrollToSection("route-map")}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-none hover:bg-white/10 text-neutral-300 hover:text-white transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 text-neutral-200 hover:text-white transition-colors cursor-pointer"
           >
-            <FaRoute className="text-[#e8b84b]" />
-            <span className="hidden sm:inline">Route</span>
+            <FaRoute className="text-[#e8b84b] text-sm" />
+            <span>Route</span>
           </button>
 
           <button
             onClick={() => scrollToSection("facilities")}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-none hover:bg-white/10 text-neutral-300 hover:text-white transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 text-neutral-200 hover:text-white transition-colors cursor-pointer"
           >
-            <FaBed className="text-[#e8b84b]" />
-            <span className="hidden sm:inline">Facilities</span>
+            <FaBed className="text-[#e8b84b] text-sm" />
+            <span>Facilities</span>
           </button>
-
-          {/* <button
-            onClick={() => scrollToSection("virtual-tour")}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-none hover:bg-white/10 text-neutral-300 hover:text-white transition-colors cursor-pointer"
-          >
-            <FaCompass className="text-[#e8b84b]" />
-            <span className="hidden md:inline">360° Tour</span>
-          </button> */}
 
           <button
             onClick={() => scrollToSection("booking-widget")}
-            className="flex items-center gap-1.5 bg-[#e8b84b] hover:bg-[#d4a43e] text-neutral-950 px-4 py-1.5 rounded-none font-mono font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+            className="flex items-center gap-1.5 text-[#e8b84b] hover:text-[#f3cd6d] font-mono font-bold uppercase tracking-wider transition-colors cursor-pointer"
           >
-            <FaCalendarCheck />
+            <FaCalendarCheck className="text-sm" />
             <span>Book Now</span>
           </button>
 
           <a
             href="tel:+8801929918408"
-            className="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-none transition-colors"
+            className="flex items-center gap-1.5 text-neutral-200 hover:text-[#e8b84b] transition-colors cursor-pointer"
           >
-            <FaPhoneAlt className="text-[#e8b84b] text-[10px]" />
-            <span className="hidden lg:inline">+880 1711-459387</span>
+            <FaPhoneAlt className="text-[#e8b84b] text-xs" />
+            <span>+880 1929-918408</span>
           </a>
         </div>
-      </aside>
+      </aside> */}
 
     </main>
   );

@@ -8,16 +8,17 @@ import {
   FaBed,
   FaPhoneAlt,
   FaShieldAlt,
-  FaClock
+  FaClock,
+  FaFacebook
 } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
 import { FiArrowRight } from "react-icons/fi";
 
 const heroImage = "/images/our-divisions/sampan-highway-inn/heromain3.jpg";
 
-export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => void }) {
+export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => void }) {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-20 pb-10 lg:pt-24 lg:pb-14 border-b border-white/10">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-24 pb-16 lg:pt-28 lg:pb-20 border-b border-white/10">
       {/* Real Background Image with cinematic dark gradient overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -61,13 +62,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
 
           {/* Square Quick Action CTAs */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <button
-              onClick={onOpenBooking}
-              className="group relative inline-flex items-center justify-center gap-3 rounded-none bg-emerald-600 hover:bg-emerald-500 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-emerald-900/30 transition-all duration-300 cursor-pointer"
-            >
-              <span>Reserve A Room / Table</span>
-              <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
-            </button>
+
 
             <a
               href="#route-map"
@@ -75,6 +70,17 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
             >
               <FaRoute className="text-emerald-400" />
               <span>View Route Map</span>
+            </a>
+
+            <a
+              href="https://www.facebook.com/sampanhighwayinn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center justify-center gap-3 rounded-none bg-emerald-600 hover:bg-emerald-500 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-emerald-900/30 transition-all duration-300"
+            >
+              <FaFacebook className="text-base" />
+              <span>Facebook Page</span>
+              <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
             </a>
             {/* 
             <a

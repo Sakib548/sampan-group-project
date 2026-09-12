@@ -19,21 +19,45 @@ import {
   FaTimes,
   FaChevronRight,
   FaPrayingHands,
-  FaStore
+  FaStore,
+  FaFacebookF,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
 // --- Asset Placeholders & Real Assets ---
 const heroBackground = "/images/projects/express-highway-inn.jpg";
 const masterplanImage = "/images/our-divisions/express-highway-inn/masterplan3d.jpg";
-const galleryImages = [
-  "/images/our-divisions/express-highway-inn/lounge2.jpeg",
-  "/images/facilities/express_highway_inn/1.Highway-Club-&-Lounge.png",
-  "/images/facilities/express_highway_inn/6.EV-Car-Charging.png",
-  "/images/facilities/express_highway_inn/10.swimming-pool.png",
-  "/images/facilities/express_highway_inn/7.Automatic-Car-Wash.png",
-  "/images/our-divisions/express-highway-inn/billiards.jpg",
-
+const galleryItems = [
+  {
+    src: "/images/our-divisions/express-highway-inn/lounge2.jpeg",
+    title: "Highway Club & Executive Lounge",
+    tag: "Hospitality & Social",
+  },
+  {
+    src: "/images/facilities/express_highway_inn/1.Highway-Club-&-Lounge.png",
+    title: "Club & Lounge Architectural Perspective",
+    tag: "Complex Architecture",
+  },
+  {
+    src: "/images/facilities/express_highway_inn/6.EV-Car-Charging.png",
+    title: "Ultra-Fast EV Charging Plaza",
+    tag: "Green Mobility",
+  },
+  {
+    src: "/images/facilities/express_highway_inn/10.swimming-pool.png",
+    title: "Heated Wellness Swimming Pool",
+    tag: "Sports & Fitness",
+  },
+  {
+    src: "/images/facilities/express_highway_inn/7.Automatic-Car-Wash.png",
+    title: "Touchless Rapid Car Detailing",
+    tag: "Mobility Services",
+  },
+  {
+    src: "/images/our-divisions/express-highway-inn/billiards.jpg",
+    title: "Tournament Billiards Parlor",
+    tag: "Recreation",
+  },
 ];
 
 // --- Facilities Data (Enhanced with Categories & Real Images) ---
@@ -196,22 +220,22 @@ const membershipPricing = [
 ];
 
 const nearbyLocations = [
-  {
-    name: "Sampan Filling Station",
-    distance: "100 m",
-    type: "Automotive & Fuel",
-    description:
-      "24/7 high-volume highway refuel, octane & diesel station with dedicated heavy vehicle bays.",
-    image: "/images/our-divisions/sampan-filling-station/hero.jpeg",
-  },
-  {
-    name: "Sampan LPG Station",
-    distance: "150 m",
-    type: "Clean Mobility & Fuel",
-    description:
-      "State-of-the-art LPG autogas conversion and rapid dispenser refueling station.",
-    image: "/images/our-divisions/lpg-filling-station/hero.jpeg",
-  },
+  // {
+  //   name: "Sampan Filling Station",
+  //   distance: "100 m",
+  //   type: "Automotive & Fuel",
+  //   description:
+  //     "24/7 high-volume highway refuel, octane & diesel station with dedicated heavy vehicle bays.",
+  //   image: "/images/our-divisions/sampan-filling-station/hero.jpeg",
+  // },
+  // {
+  //   name: "Sampan LPG Station",
+  //   distance: "150 m",
+  //   type: "Clean Mobility & Fuel",
+  //   description:
+  //     "State-of-the-art LPG autogas conversion and rapid dispenser refueling station.",
+  //   image: "/images/our-divisions/lpg-filling-station/hero.jpeg",
+  // },
   {
     name: "Sampan Mart",
     distance: "50 m",
@@ -226,7 +250,7 @@ const nearbyLocations = [
     type: "Express Convenience",
     description:
       "Quick-stop express retail kiosk for instant refreshments and travel accessories.",
-    image: "/images/logos/mini-sampan.png",
+    image: "/images/our-divisions/mini-sampan-super-shop/mart.jpg",
   },
   {
     name: "Sampan Condominium",
@@ -235,6 +259,22 @@ const nearbyLocations = [
     description:
       "Luxury residential condominium.",
     image: "/images/our-divisions/express-highway-inn/condominium.jpg",
+  },
+  {
+    name: "EV Car Charging Station",
+    distance: "50 m",
+    type: "EV Charging Station",
+    description:
+      "Future-ready EV charging hub with fast-charging infrastructure for electric vehicles.",
+    image: "/images/our-divisions/express-highway-inn/6.EV-Car-Charging.png",
+  },
+  {
+    name: "Trade Emporium",
+    distance: "50 m",
+    type: "Trade Emporium",
+    description:
+      "This expansive modern shopping mall features a department store, over 200 retail outlets, and a food court.",
+    image: "/images/our-divisions/express-highway-inn/trade-emporium.jpeg",
   },
 
 ];
@@ -262,7 +302,7 @@ export default function ExpressHighwayInnPage() {
     <main className="bg-[#F5F5F2] text-neutral-900 antialiased scroll-smooth selection:bg-[#58b9eb]/30 selection:text-neutral-900">
 
       {/* ================= 1. OVERVIEW (HERO WITH BACKGROUND IMAGE & DARK CONTRAST) ================= */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-20 pb-10 lg:pt-24 lg:pb-14 border-b border-white/10">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-24 pb-16 lg:pt-28 lg:pb-20 border-b border-white/10">
         {/* Real Background Image with cinematic dark gradient overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -287,10 +327,10 @@ export default function ExpressHighwayInnPage() {
           <div className="max-w-4xl space-y-5 sm:space-y-6">
 
             {/* Eyebrow Square Badge */}
-            <div className="inline-flex items-center gap-3 border border-[#58b9eb]/50 bg-[#58b9eb]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#58b9eb]">
+            {/* <div className="inline-flex items-center gap-3 border border-[#58b9eb]/50 bg-[#58b9eb]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#58b9eb]">
               <span className="h-2 w-2 rounded-none bg-[#58b9eb]" />
               <span>Express Highway Inn • Luxury Commercial Zone</span>
-            </div>
+            </div> */}
 
             {/* Headline */}
             <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold leading-[0.98] tracking-[-0.03em] text-white">
@@ -307,13 +347,7 @@ export default function ExpressHighwayInnPage() {
 
             {/* Square Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link
-                href="#waitlist"
-                className="group inline-flex items-center justify-center gap-2 rounded-none bg-[#58b9eb] hover:bg-[#3aa6df] px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-neutral-950 transition-all duration-300 shadow-lg shadow-[#58b9eb]/20"
-              >
-                <span>Join Waitlist</span>
-                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+
 
               <Link
                 href="#masterplan"
@@ -328,17 +362,27 @@ export default function ExpressHighwayInnPage() {
               >
                 Explore Facilities
               </Link>
+              <a
+                href="https://www.facebook.com/expresshighwayinn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center gap-2 rounded-none bg-[#58b9eb] hover:bg-[#3aa6df] px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-neutral-950 transition-all duration-300 shadow-lg shadow-[#58b9eb]/20"
+              >
+                <FaFacebookF className="text-sm" />
+                <span>Facebook</span>
+                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
             </div>
 
             {/* Quick Metrics (Square Cards) */}
             <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-xs">
               <div className="border-l-2 border-[#58b9eb] pl-4">
-                <p className="text-xl sm:text-2xl font-bold text-white">5.2 Acres</p>
-                <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">Total Area</p>
+                <p className="text-xl sm:text-2xl font-bold text-white">20 Katha</p>
+                <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">Total Land Area</p>
               </div>
               <div className="border-l-2 border-[#58b9eb] pl-4">
-                <p className="text-xl sm:text-2xl font-bold text-[#58b9eb]">85K sq. ft.</p>
-                <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">Built Complex</p>
+                <p className="text-xl sm:text-2xl font-bold text-[#58b9eb]">100+ rooms.</p>
+                <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">Rooms &amp; Suites</p>
               </div>
               <div className="border-l-2 border-[#58b9eb] pl-4">
                 <p className="text-xl sm:text-2xl font-bold text-white">200+ Bays</p>
@@ -370,66 +414,72 @@ export default function ExpressHighwayInnPage() {
             <span className="text-neutral-400">Built for seamless transit.</span>
           </h2>
 
-          <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          {/* Masterplan Image - Full View Display */}
+          <div
+            onClick={() => setSelectedImage(masterplanImage)}
+            className="group relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] overflow-hidden rounded-none bg-white shadow-xl border border-neutral-200 cursor-pointer"
+          >
+            <Image
+              src={masterplanImage}
+              alt="Express Highway Inn Masterplan"
+              fill
+              priority
+              sizes="(max-width: 1440px) 100vw, 1440px"
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
+            />
+            <div className="absolute top-0 left-0 h-[4px] w-0 bg-[#58b9eb] transition-all duration-700 group-hover:w-full z-10" />
+            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-10 bg-white/95 backdrop-blur-md px-4 py-2 rounded-none border border-neutral-200 font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-neutral-900 shadow-sm flex items-center gap-2">
+              <span className="h-2 w-2 bg-[#58b9eb]" />
+              <span>Official Masterplan Blueprint</span>
+            </div>
+            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-10 bg-black/75 hover:bg-black/90 backdrop-blur-md px-3.5 py-2 rounded-none text-white font-mono text-[10px] uppercase tracking-widest flex items-center gap-2 transition-colors shadow-sm">
+              <FaExpand className="text-xs text-[#58b9eb]" />
+              <span>Click to Expand</span>
+            </div>
+          </div>
 
-            {/* Masterplan Image Card */}
-            <div className="group relative aspect-[16/9] overflow-hidden rounded-none bg-white shadow-md border border-neutral-200">
-              <Image
-                src={masterplanImage}
-                alt="Express Highway Inn Masterplan"
-                fill
-                sizes="(max-width: 1024px) 100vw, 60vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-700 group-hover:w-full" />
-              <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-none border border-neutral-200 font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-900">
-                Official Masterplan Blueprint
-              </div>
+          {/* Masterplan Spec Cards (3 Columns across the view) */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div className="group relative rounded-none border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#58b9eb] hover:-translate-y-1">
+              <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-500 group-hover:w-full" />
+              <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#3298cb]">
+                Total Area
+              </h3>
+              <p className="mt-1 text-3xl font-bold text-neutral-950">
+                5.2 Acres
+              </p>
+              <p className="mt-1 text-xs text-neutral-500">
+                Comprehensive high-capacity highway hospitality complex with buffer zones
+              </p>
             </div>
 
-            {/* Masterplan Spec Cards (Square Architecture) */}
-            <div className="space-y-4">
-
-              <div className="group relative rounded-none border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#58b9eb] hover:-translate-y-1">
-                <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-500 group-hover:w-full" />
-                <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#3298cb]">
-                  Total Area
-                </h3>
-                <p className="mt-1 text-3xl font-bold text-neutral-950">
-                  5.2 Acres
-                </p>
-                <p className="mt-1 text-xs text-neutral-500">
-                  Comprehensive high-capacity highway hospitality complex with buffer zones
-                </p>
-              </div>
-
-              <div className="group relative rounded-none border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#58b9eb] hover:-translate-y-1">
-                <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-500 group-hover:w-full" />
-                <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#3298cb]">
-                  Total Built-up Area
-                </h3>
-                <p className="mt-1 text-3xl font-bold text-neutral-950">
-                  85,000 sq. ft.
-                </p>
-                <p className="mt-1 text-xs text-neutral-500">
-                  Multi-level state-of-the-art hospitality and wellness facilities
-                </p>
-              </div>
-
-              <div className="group relative rounded-none border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#58b9eb] hover:-translate-y-1">
-                <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-500 group-hover:w-full" />
-                <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#3298cb]">
-                  Parking &amp; EV Capacity
-                </h3>
-                <p className="mt-1 text-3xl font-bold text-neutral-950">
-                  200+ Vehicles
-                </p>
-                <p className="mt-1 text-xs text-neutral-500">
-                  Including high-speed DC charging stations, car detailing, and bus bays
-                </p>
-              </div>
-
+            <div className="group relative rounded-none border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#58b9eb] hover:-translate-y-1">
+              <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-500 group-hover:w-full" />
+              <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#3298cb]">
+                Total Built-up Area
+              </h3>
+              <p className="mt-1 text-3xl font-bold text-neutral-950">
+                85,000 sq. ft.
+              </p>
+              <p className="mt-1 text-xs text-neutral-500">
+                Multi-level state-of-the-art hospitality and wellness facilities
+              </p>
             </div>
+
+            <div className="group relative rounded-none border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#58b9eb] hover:-translate-y-1">
+              <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-500 group-hover:w-full" />
+              <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#3298cb]">
+                Parking &amp; EV Capacity
+              </h3>
+              <p className="mt-1 text-3xl font-bold text-neutral-950">
+                200+ Vehicles
+              </p>
+              <p className="mt-1 text-xs text-neutral-500">
+                Including high-speed DC charging stations, car detailing, and bus bays
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
@@ -514,9 +564,7 @@ export default function ExpressHighwayInnPage() {
                 {/* Card Content */}
                 <div className="flex flex-1 flex-col p-6 bg-white">
                   <div className="flex items-center gap-3 mb-2">
-
-                    <span className="text-[11px] text-neutral-300">•</span>
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">{facility.category}</span>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#3298cb]">{facility.category}</span>
                   </div>
 
                   <h3 className="text-lg font-bold text-neutral-950 group-hover:text-[#3298cb] transition-colors leading-snug">
@@ -544,7 +592,7 @@ export default function ExpressHighwayInnPage() {
           <div className="mb-6 flex items-center gap-4">
             <span className="h-px w-10 bg-[#58b9eb]" />
             <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-neutral-600">
-              04 / Location &amp; Accessibility
+              Location &amp; Accessibility
             </span>
           </div>
 
@@ -645,30 +693,38 @@ export default function ExpressHighwayInnPage() {
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {galleryImages.map((src, i) => (
+            {galleryItems.map((item, i) => (
               <div
-                key={i}
-                onClick={() => setSelectedImage(src)}
+                key={item.title}
+                onClick={() => setSelectedImage(item.src)}
                 className={`group relative overflow-hidden rounded-none bg-neutral-100 border border-neutral-200 shadow-sm cursor-pointer ${i === 0
                   ? "aspect-[16/10] md:col-span-2 md:row-span-2 md:aspect-auto min-h-[340px]"
                   : "aspect-[16/10]"
                   }`}
               >
                 <Image
-                  src={src}
-                  alt={`Express Highway Inn gallery view ${i + 1}`}
+                  src={item.src}
+                  alt={item.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-700 group-hover:w-full z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-between p-6">
-                  <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#58b9eb]">
-                    Preview Space 0{i + 1}
-                  </span>
-                  <span className="rounded-none bg-white text-neutral-950 font-mono text-[10px] uppercase tracking-wider px-3 py-1 font-bold">
-                    Zoom
-                  </span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-5 sm:p-6">
+                  <div className="flex items-end justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#58b9eb] block mb-1">
+                        {item.tag}
+                      </span>
+                      <h4 className="text-white text-sm sm:text-base font-bold leading-snug truncate">
+                        {item.title}
+                      </h4>
+                    </div>
+                    <span className="shrink-0 inline-flex items-center gap-1.5 rounded-none bg-white text-neutral-950 font-mono text-[10px] uppercase tracking-wider px-3 py-1.5 font-bold shadow-md group-hover:bg-[#58b9eb] group-hover:text-neutral-950 transition-colors">
+                      <FaExpand className="text-[10px]" />
+                      <span>Explore</span>
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -947,7 +1003,7 @@ export default function ExpressHighwayInnPage() {
       </section> */}
 
       {/* ================= 10. PRE-LAUNCH WAITLIST SIGNUP (LIGHT ARCHITECTURAL) ================= */}
-      <section
+      {/* <section
         id="waitlist"
         className="bg-white px-6 py-24 text-neutral-950 sm:px-10 lg:px-16 lg:py-32 border-b border-neutral-200 relative overflow-hidden"
       >
@@ -988,7 +1044,7 @@ export default function ExpressHighwayInnPage() {
               </ul>
             </div>
 
-            {/* Waitlist Form Card (Square & Crisp) */}
+         
             <div className="bg-[#F5F5F2] p-8 sm:p-10 rounded-none border border-neutral-200 shadow-sm relative">
               <div className="absolute top-0 left-0 h-[3px] w-full bg-[#58b9eb]" />
 
@@ -1075,7 +1131,7 @@ export default function ExpressHighwayInnPage() {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= 11. DRONE FOOTAGE (PRESERVED COMMENTED OUT) ================= */}
       {/* <section className="bg-white px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
@@ -1164,7 +1220,7 @@ export default function ExpressHighwayInnPage() {
       </section> */}
 
       {/* ================= FINAL CTA ================= */}
-      <section className="bg-[#F5F5F2] px-6 py-24 sm:px-10 lg:px-16 lg:py-32 text-center border-b border-neutral-200">
+      {/* <section className="bg-[#F5F5F2] px-6 py-24 sm:px-10 lg:px-16 lg:py-32 text-center border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
           <h2 className="text-[clamp(2.2rem,4.5vw,4rem)] font-bold leading-[0.95] tracking-[-0.03em] mb-6 text-neutral-950">
             Ready to elevate your journey?
@@ -1187,7 +1243,7 @@ export default function ExpressHighwayInnPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Lightbox Modal for Facility & Gallery Zoom (Square) */}
       {selectedImage && (
@@ -1239,11 +1295,11 @@ export default function ExpressHighwayInnPage() {
                     Facilities Gallery
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="#waitlist" className="hover:text-[#3298cb] transition-colors">
                     Join Waitlist
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="#location" className="hover:text-[#3298cb] transition-colors">
                     Location

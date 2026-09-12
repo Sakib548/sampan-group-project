@@ -5,84 +5,84 @@ import { FaCheck, FaArrowRight } from "react-icons/fa";
 
 const facilitiesData = [
   {
-    id: "grand-hall",
-    title: "Central AC Banquet Hall",
-    badge: "500+ Capacity",
+    id: "banquet-party-center",
+    title: "Celebration & Banquet Hall",
+    badge: "Grand Celebrations",
     image: "/images/facilities/highway_inn/party_reservation.png",
     description:
-      "A column-free, high-ceiling grand celebration hall equipped with acoustic stage lighting, crystal chandeliers, and flexible banquet seating for 500+ guests.",
-    features: ["500+ Seated Guests", "Central Air Conditioning", "Crystal Chandeliers", "Flexible Floor Layouts"],
-    hours: "Morning & Evening Slots",
+      "Magnificent event venue with modern acoustic treatment, flexible seating for 500+ guests, tailored banquet catering, and celebratory decor for weddings and galas.",
+    features: ["500+ Seating Capacity", "Full Banquet Catering", "AV Sound & Stage Lighting", "Dedicated Event Coordinator"],
+    hours: "Advance Reservation",
   },
   {
-    id: "gourmet-catering",
-    title: "Executive Master Chef Catering",
-    badge: "Royal Feasts",
-    image: "/images/facilities/highway_inn/buffet_setup.png",
+    id: "fast-food",
+    title: "Sampan Fast Food",
+    badge: "Quick Bites",
+    image: "/images/our-divisions/sampan-highway-inn/fast-food.jpeg",
     description:
-      "Authentic royal feasts including Shahi Mutton Kacchi Biryani, Polao, Chicken Roast, Rezala, and extensive live buffet spreads prepared by master executive chefs.",
-    features: ["Traditional Kacchi Biryani", "Multi-Course Buffets", "Live Cooking Counters", "Hygienic Preparation Standards"],
-    hours: "Feast on Event",
+      "Serving up delicious, piping-hot burgers, crispy fried chicken, wraps, and quick savory bites prepared freshly to keep you energized on your journey.",
+    features: ["Fresh Burgers & Wraps", "Crispy Fried Chicken", "Express 10-Min Ordering", "Takeaway & Dine-In"],
+    hours: "24/7 Service",
   },
   {
-    id: "vip-saloon",
-    title: "VIP Private Dining Saloons",
+    id: "vip-lounge",
+    title: "VIP Executive Lounge",
     badge: "Exclusive Lounge",
     image: "/images/our-divisions/sampan-highway-inn/vvip-lounge.jpeg",
     description:
-      "Acoustically quiet, lavish dining suites designed for high-profile delegates, executive committee meetings, and intimate family gatherings.",
-    features: ["Private Boardroom Seating", "Dedicated Attendants", "High-Speed Wi-Fi", "In-Suite Buffet Line"],
-    hours: "24/7 Available",
+      "Lavish seating with quiet ambiance, complimentary refreshments, and premium amenities for executives and families seeking an upscale rest stop.",
+    features: ["Plush Leather Recliners", "Complimentary Refreshments", "Dedicated Service Staff", "Workstations & High-Speed Wi-Fi"],
+    hours: "24/7 Open",
   },
   {
-    id: "bride-groom-suites",
-    title: "Dedicated Bride & Groom Prep Suites",
-    badge: "Private Comfort",
-    image: "/images/facilities/highway_inn/all_day_comfort.png",
+    id: "sweet-shop",
+    title: "Sampan Sweet Shop",
+    badge: "Traditional Delights",
+    image: "/images/our-divisions/sampan-highway-inn/sweet-shop.jpg",
     description:
-      "Private, climate-controlled suites equipped with full-length vanity mirrors, plush lounge sofas, private en-suite washrooms, and security safes.",
-    features: ["Full Vanity Mirrors", "Private En-Suite Restrooms", "Climate Control", "Secure Dressing Spaces"],
-    hours: "Included with Hall",
+      "Discover traditional Bengali sweets, freshly baked delicacies, and gourmet treats prepared daily with pure chhana, ghee, and premium ingredients.",
+    features: ["Traditional Chhana Sweets", "Fresh Ghee Delicacies", "Gift Box Packaging", "Daily Fresh Batches"],
+    hours: "7:00 AM – 11:30 PM",
   },
   {
-    id: "stage-av",
-    title: "Elevated Stage & Pro Acoustic Sound",
-    badge: "Audio & Visual",
-    image: "/images/facilities/highway_inn/dining_area.png",
-    description:
-      "State-of-the-art stage with programmable ambient LED lighting, concert-grade acoustic sound system, cordless microphones, and projection capabilities.",
-    features: ["Customizable Backdrops", "LED Stage Illumination", "Surround Sound Tech", "Wireless Mic Setup"],
-    hours: "Event Duration",
-  },
-  {
-    id: "generator-backup",
-    title: "100% Industrial Generator Redundancy",
-    badge: "Uninterrupted",
-    image: "/images/our-divisions/sampan-highway-inn-party-center/hero.jpg",
-    description:
-      "Heavy-duty industrial generator system ensuring seamless 24/7 power backup with zero interruption to your wedding celebrations or corporate events.",
-    features: ["Instant Auto-Switching", "Full Central AC Power", "Sound & Lighting Backup", "Zero Event Downtime"],
-    hours: "24/7 Standby",
-  },
-  {
-    id: "valet-parking",
-    title: "Spacious Parking & Valet Services",
-    badge: "Valet Security",
-    image: "/images/our-divisions/sampan-highway-inn/hero.jpeg",
-    description:
-      "Paved parking ground accommodating 100+ vehicles with dedicated valet drivers, bright perimeter illumination, and 24/7 CCTV surveillance.",
-    features: ["100+ Vehicle Capacity", "Dedicated Valet Drivers", "24/7 CCTV Monitoring", "Direct Highway Slipway"],
-    hours: "Guarded 24/7",
-  },
-  {
-    id: "corporate-meetings",
-    title: "Conference & Meeting Hub",
+    id: "executive-meetings",
+    title: "Meeting & Corporate Conference Hub",
     badge: "Corporate Ready",
     image: "/images/facilities/highway_inn/Official-Outing.png",
     description:
-      "Fully equipped setup for corporate offsites, annual general meetings, brand activations, and dealer meets with tea-break and lunch catering.",
-    features: ["HD Projection Systems", "Ergonomic Seating", "High-Speed Fiber Net", "Tea & Lunch Packages"],
-    hours: "On Demand Booking",
+      "Conduct professional meetings, team debriefs, and corporate offsite retreats in equipped conference spaces with presentation tech and catering.",
+    features: ["HD Projection & Video Tech", "Ergonomic Conference Seating", "High-Speed Fiber Network", "Coffee & Lunch Catering"],
+    hours: "On Demand & Booking",
+  },
+  {
+    id: "juice-bar",
+    title: "Sampan Juice Bar",
+    badge: "Fresh & Healthy",
+    image: "/images/our-divisions/sampan-highway-inn/sampan-juicebar.jpg",
+    description:
+      "Quench your thirst with freshly pressed, handcrafted juices, energizing seasonal fruit blends, smoothies, and detox drinks with zero artificial additives.",
+    features: ["100% Pure Fresh Fruits", "Seasonal Smoothies & Shakes", "Detox & Energy Blends", "Hygienic Cold-Pressed"],
+    hours: "8:00 AM – 12:00 AM",
+  },
+  {
+    id: "vvip-suites",
+    title: "VVIP Rest Suites",
+    badge: "Premium Comfort",
+    image: "/images/facilities/highway_inn/all_day_comfort.png",
+    description:
+      "Acoustically engineered suites offering plush king-size beds, private en-suite rain showers, smart IPTV, and climate control for quiet respite from highway rumble.",
+    features: ["King Orthopaedic Bedding", "High-Speed Fiber Wi-Fi", "In-Room Gourmet Service", "Hourly & Overnight Stays"],
+    hours: "24/7 Available",
+  },
+  {
+    id: "sampan-achar",
+    title: "Sampan Achar & Regional Delicacies",
+    badge: "Artisanal Spices",
+    image: "/images/our-divisions/sampan-highway-inn/sampan-achar.jpg",
+    description:
+      "A taste of authentic heritage packed in jars — artisanal pickles, specialty chutneys, and regional culinary treasures crafted with traditional family recipes.",
+    features: ["Traditional Homemade Recipes", "Sun-Dried Mustard Oil Base", "Assorted Mango, Olive & Garlic", "Travel-Friendly Sealed Jars"],
+    hours: "24/7 Available",
   },
 ];
 
@@ -101,16 +101,16 @@ export default function PartyCenterFacilitiesList({
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-amber-600" />
               <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-800">
-                Venue Amenities &amp; Infrastructure
+                World-Class Facilities
               </p>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-[#111111] leading-tight">
               Thoughtfully curated <br />
-              <span className="text-amber-700">for grand celebrations.</span>
+              <span className="text-amber-700">for every traveler &amp; celebration.</span>
             </h2>
           </div>
           <p className="max-w-2xl text-sm sm:text-base text-neutral-600 leading-relaxed">
-            Every detail is designed for your guests&apos; comfort, seamless event execution, and unforgettable memories on the highway corridor.
+            Whether you need a grand banquet celebration, quick refreshing bite, authentic Bengali sweets, artisanal pickles, or a quiet restful suite, our transit and party hub provides complete comfort and hospitality under one roof.
           </p>
         </div>
 
@@ -164,7 +164,7 @@ export default function PartyCenterFacilitiesList({
                     onClick={() => onSelectFacility?.(item.title)}
                     className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-700 group-hover:text-amber-900 transition-colors"
                   >
-                    <span>Enquire Availability</span>
+                    <span>Reserve Access</span>
                     <FaArrowRight className="text-[10px] transition-transform group-hover:translate-x-1" />
                   </a>
                 </div>

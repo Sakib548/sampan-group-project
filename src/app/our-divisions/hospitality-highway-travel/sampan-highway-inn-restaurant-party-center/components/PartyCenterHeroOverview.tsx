@@ -2,17 +2,17 @@
 
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
-import { FaRoute } from "react-icons/fa";
+import { FaRoute, FaFacebook } from "react-icons/fa";
 
 interface HeroOverviewProps {
-  onOpenBooking: () => void;
+  onOpenBooking?: () => void;
 }
 
 const heroImage = "/images/our-divisions/sampan-highway-inn-party-center/hero.jpg";
 
 export default function PartyCenterHeroOverview({ onOpenBooking }: HeroOverviewProps) {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-20 pb-10 lg:pt-24 lg:pb-14 border-b border-white/10">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-24 pb-16 lg:pt-28 lg:pb-20 border-b border-white/10">
       {/* Background Image with dark gradient overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -49,13 +49,7 @@ export default function PartyCenterHeroOverview({ onOpenBooking }: HeroOverviewP
 
           {/* CTAs */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <button
-              onClick={onOpenBooking}
-              className="group relative inline-flex items-center justify-center gap-3 rounded-none bg-amber-400 hover:bg-amber-300 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-slate-950 shadow-lg shadow-amber-900/30 transition-all duration-300 cursor-pointer"
-            >
-              <span>Book Date / Hall</span>
-              <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
-            </button>
+
 
             <a
               href="#route-map"
@@ -64,14 +58,25 @@ export default function PartyCenterHeroOverview({ onOpenBooking }: HeroOverviewP
               <FaRoute className="text-amber-400" />
               <span>View Route Map</span>
             </a>
+
+            <a
+              href="https://www.facebook.com/sampanhighwayinn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center justify-center gap-3 rounded-none bg-amber-400 hover:bg-amber-300 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-slate-950 shadow-lg shadow-amber-900/30 transition-all duration-300"
+            >
+              <FaFacebook className="text-base" />
+              <span>Facebook Page</span>
+              <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
 
           {/* Value Badges */}
           <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="border-l-2 border-amber-400 pl-4">
+            {/* <div className="border-l-2 border-amber-400 pl-4">
               <p className="text-xs font-bold text-white uppercase tracking-wider">500+ Capacity</p>
               <p className="text-[11px] text-white/60 mt-0.5">Grand Banquet Hall</p>
-            </div>
+            </div> */}
 
             <div className="border-l-2 border-amber-400 pl-4">
               <p className="text-xs font-bold text-white uppercase tracking-wider">Multi-Cuisine</p>
