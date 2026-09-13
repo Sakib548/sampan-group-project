@@ -43,7 +43,7 @@ export default function LocationAndMap() {
                   Direct Highway Slipway Access
                 </h3>
                 <p className="text-sm text-neutral-600 leading-relaxed">
-                  Located directly on the primary southern corridor with dedicated wide entry and exit deceleration ramps. Zero detour required.
+                  Located directly on the primary southern corridor in Gopalganj along the Dhaka–Khulna Highway with dedicated wide entry and exit deceleration ramps. Zero detour required.
                 </p>
               </div>
 
@@ -71,10 +71,10 @@ export default function LocationAndMap() {
               {/* GPS Coordinates Badge */}
               <div className="flex items-center gap-3">
                 <span className="font-mono text-[10px] font-semibold uppercase tracking-wider text-neutral-400">
-                  Exact GPS:
+                  Location:
                 </span>
                 <span className="rounded-none bg-white border border-neutral-200 px-3 py-1 font-mono text-xs font-bold text-neutral-800 shadow-sm">
-                  23.251° N, 89.782° E
+                  Dhaka–Khulna Highway, Gopalganj
                 </span>
               </div>
             </div>

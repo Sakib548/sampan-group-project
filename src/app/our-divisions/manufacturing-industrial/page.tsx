@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { FaIndustry, FaMapMarkerAlt, FaArrowRight, FaCheckCircle, FaCogs, FaClock } from "react-icons/fa";
+import { FaIndustry, FaMapMarkerAlt, FaArrowRight, FaCheckCircle, FaCogs } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Manufacturing & Industrial Division Archive | Sampan Group",
+  title: "Manufacturing & Industrial Division | Sampan Group",
   description:
-    "Explore Sampan Group's Manufacturing & Industrial division, featuring Sampan Industrial Park, eco-friendly hollow bricks & tiles manufacturing, and automated PET bottle & beverage bottling units.",
+    "Explore Sampan Group's Manufacturing & Industrial division in Alfadanga, Faridpur, featuring Sampan Industrial Park, eco-friendly hollow bricks & tiles manufacturing, and automated PET beverage bottling.",
 };
 
 const manufacturingConcerns = [
@@ -14,14 +14,14 @@ const manufacturingConcerns = [
     id: "sampan-industrial-park",
     name: "Sampan Industrial Park",
     category: "Master Manufacturing Hub",
-    status: "Coming Soon - Land Leasing",
-    statusType: "coming-soon",
-    location: "Mawna Industrial Zone Corridor",
-    description: "State-of-the-art master-planned industrial park equipped with dedicated high-voltage power substations, central ETP, 60ft freight roads, and resident manufacturing plants.",
-    image: "/images/brand/industrialpark.png",
+    status: "Master Industrial Zone",
+    statusType: "active",
+    location: "Alfadanga, Faridpur",
+    description: "Master-planned industrial park in Alfadanga, Faridpur housing anchor facilities for eco-friendly building materials and automated beverage packaging.",
+    image: "/images/our-divisions/sampan-hollow-bricks/Image-Edit.jpg",
     link: "/our-divisions/manufacturing-industrial/sampan-industrial-park",
     accentColor: "#047857",
-    highlights: ["Master Utility Infrastructure", "Resident Industrial Anchor Units", "Plot Leasing & Substation Access"],
+    highlights: ["Alfadanga Industrial Corridor", "Dedicated Electric Substation", "Resident Manufacturing Anchors"],
   },
   {
     id: "sampan-hollow-bricks-tiles",
@@ -29,91 +29,75 @@ const manufacturingConcerns = [
     category: "Eco Building Materials",
     status: "Active Manufacturing Unit",
     statusType: "active",
-    location: "Sampan Industrial Park, Mawna",
-    description: "Automated eco-friendly hollow concrete block, paving brick, and ceramic tile production line supplying major infrastructure and real estate projects.",
-    image: "/images/brand/sampanhollowbricksandtiles.png",
+    location: "Sampan Industrial Park, Alfadanga, Faridpur",
+    description: "Automated eco-friendly hollow concrete block, interlocking paver, and parking tile manufacturing plant with zero clay burning.",
+    image: "/images/our-divisions/sampan-hollow-bricks/Our-Products.jpg",
     link: "/our-divisions/manufacturing-industrial/sampan-hollow-bricks-tiles",
-    accentColor: "#991b1b",
-    highlights: ["50,000 Units/Day Output", "BSTI & ISO 9001 Certified", "Eco-Friendly Green Building Approved"],
+    accentColor: "#b91c1c",
+    highlights: ["Eco-Friendly Zero Burning", "10+ Parking Tile Designs", "BSTI Compliant Strength"],
   },
   {
     id: "sampan-pet-beverage",
-    name: "Sampan Pet & Beverage",
+    name: "Sampan PET & Beverage",
     category: "Packaging & Beverage Bottling",
     status: "Active Manufacturing Unit",
     statusType: "active",
-    location: "Sampan Industrial Park, Mawna",
-    description: "High-speed automated PET bottle preform injection molding, purified mineral water bottling, and carbonated beverage packaging plant.",
-    image: "/images/brand/petandbeverage.png",
+    location: "Sampan Industrial Park, Alfadanga, Faridpur",
+    description: "High-speed automated food-grade PET bottle preform injection molding, purified drinking water bottling, and beverage packaging plant.",
+    image: "/images/our-divisions/sampan-pet-beverage/Web-Banner-2.jpg",
     link: "/our-divisions/manufacturing-industrial/sampan-pet-beverage",
     accentColor: "#ea580c",
-    highlights: ["100,000 Bottles/Day Capacity", "ISO 22000 Food Safety Certified", "Food Grade Virgin PET Resin"],
+    highlights: ["Virgin Food-Grade PET", "Purified Water Bottling", "Automated Packaging Line"],
   },
 ];
 
 export default function ManufacturingIndustrialArchivePage() {
   return (
-    <main className="bg-[#f3f6f2] text-[#183b2b] antialiased min-h-screen selection:bg-[#047857] selection:text-white">
-      
+    <main className="bg-[#fcfbf9] text-[#183b2b] antialiased min-h-screen selection:bg-[#047857] selection:text-white">
+
       {/* Archive Dark Hero Header */}
-      <section className="relative pt-28 pb-16 lg:pt-32 lg:pb-20 border-b border-white/10 overflow-hidden bg-[#090d16] text-white">
+      <section className="relative pt-28 pb-16 lg:pt-32 lg:pb-20 border-b border-white/10 overflow-hidden bg-[#0a120e] text-white">
         <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 relative z-10">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 border border-[#047857]/40 bg-[#047857]/15 px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#00a651]">
-              <FaIndustry className="text-xs" />
-              <span>Manufacturing &amp; Industrial Division</span>
-            </div>
-
-            <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-white">
-              Industrial Hubs &amp; <br />
-              <span className="font-normal text-[#00a651]">Automated Manufacturing</span>
+            <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[0.95] tracking-tight text-white">
+              Manufacturing &amp; <br />
+              <span className="text-emerald-400">Industrial Division</span>
             </h1>
 
-            <p className="text-base text-white/80 leading-relaxed font-normal">
-              Explore Sampan Group’s manufacturing backbone—featuring our master industrial park, eco-friendly hollow bricks &amp; tiles plant, and automated PET bottle &amp; beverage packaging units.
+            <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-light max-w-2xl border-l-2 border-emerald-500/80 pl-4">
+              Explore Sampan Group&apos;s industrial manufacturing hub in Alfadanga, Faridpur—featuring Sampan Industrial Park, eco-friendly hollow bricks &amp; tiles, and automated PET beverage bottling.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Concerns Grid Section with Signature Ambient Radial Overlay */}
-      <section className="py-20 bg-[#f3f6f2] text-[#183b2b] relative overflow-hidden">
-        
-        {/* Signature DivisionsSection Ambient Radial Mesh */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_8%_4%,rgba(0,161,116,0.09),transparent_26%),radial-gradient(circle_at_94%_92%,rgba(239,99,107,0.07),transparent_23%)]"
-        />
-
+      {/* Concerns Grid Section */}
+      <section className="py-20 bg-[#fcfbf9] text-[#183b2b] relative overflow-hidden border-b border-neutral-200">
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {manufacturingConcerns.map((concern) => (
-              <div
+              <article
                 key={concern.id}
-                className="group border border-[#183b2b]/15 bg-white flex flex-col justify-between overflow-hidden hover:border-[#047857] transition-all duration-500 shadow-sm hover:shadow-md"
+                className="group border border-neutral-200 bg-white flex flex-col justify-between overflow-hidden hover:border-neutral-900 transition-all duration-300 shadow-sm hover:shadow-md rounded-none"
               >
                 <div>
-                  {/* Brand Logo Header Box */}
-                  <div className="relative h-60 w-full overflow-hidden bg-neutral-900 flex items-center justify-center p-8">
-                    <div className="relative h-36 w-36">
-                      <Image
-                        src={concern.image}
-                        alt={concern.name}
-                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-contain transition-transform duration-700 group-hover:scale-105"
-                      />
-                    </div>
-                    
-                    <span className="absolute top-4 left-4 bg-white/95 border border-[#183b2b]/20 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 text-neutral-900 shadow-sm">
+                  {/* Photo Header Box */}
+                  <div className="relative h-56 w-full overflow-hidden bg-neutral-900">
+                    <Image
+                      src={concern.image}
+                      alt={concern.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-85"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+                    <span className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm border border-white/20 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 text-white rounded-none">
                       {concern.category}
                     </span>
 
-                    <span className={`absolute top-4 right-4 font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 border backdrop-blur-md flex items-center gap-1 ${
-                      concern.statusType === "coming-soon"
-                        ? "bg-amber-500/20 text-amber-300 border-amber-500/40"
-                        : "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"
-                    }`}>
+                    <span className="absolute top-4 right-4 font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 border backdrop-blur-md flex items-center gap-1 bg-emerald-950/70 text-emerald-300 border-emerald-500/40 rounded-none">
                       <FaCogs className="text-[9px]" />
                       <span>{concern.status}</span>
                     </span>
@@ -121,22 +105,22 @@ export default function ManufacturingIndustrialArchivePage() {
 
                   {/* Body Content */}
                   <div className="p-6 space-y-4">
-                    <div className="flex items-center gap-2 text-xs font-mono opacity-75">
+                    <div className="flex items-center gap-2 text-xs font-mono text-neutral-500">
                       <FaMapMarkerAlt style={{ color: concern.accentColor }} />
                       <span>{concern.location}</span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-[#183b2b] transition-colors leading-snug">
+                    <h3 className="text-xl font-bold text-neutral-950 leading-snug">
                       {concern.name}
                     </h3>
 
-                    <p className="text-xs opacity-80 leading-relaxed font-normal">
+                    <p className="text-xs text-neutral-600 leading-relaxed">
                       {concern.description}
                     </p>
 
-                    <div className="pt-2 border-t border-[#183b2b]/10 space-y-2">
+                    <div className="pt-3 border-t border-neutral-100 space-y-2">
                       {concern.highlights.map((h, i) => (
-                        <div key={i} className="flex items-center gap-2 text-xs opacity-90">
+                        <div key={i} className="flex items-center gap-2 text-xs text-neutral-700 font-mono">
                           <FaCheckCircle className="text-emerald-700 text-[10px] shrink-0" />
                           <span>{h}</span>
                         </div>
@@ -148,15 +132,15 @@ export default function ManufacturingIndustrialArchivePage() {
                 <div className="p-6 pt-0">
                   <Link
                     href={concern.link}
-                    className="w-full inline-flex items-center justify-between text-white border px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-sm hover:opacity-90"
-                    style={{ backgroundColor: concern.accentColor, borderColor: concern.accentColor }}
+                    className="w-full inline-flex items-center justify-between text-white px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-none cursor-pointer"
+                    style={{ backgroundColor: concern.accentColor }}
                   >
-                    <span>Explore Concern</span>
+                    <span>Explore Plant</span>
                     <FaArrowRight className="text-xs" />
                   </Link>
                 </div>
 
-              </div>
+              </article>
             ))}
           </div>
 

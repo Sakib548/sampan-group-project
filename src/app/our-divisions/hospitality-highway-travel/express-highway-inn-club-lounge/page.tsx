@@ -203,6 +203,14 @@ const nearbyLocations = [
       "Future-ready EV charging hub with fast-charging infrastructure for electric vehicles.",
     image: "/images/our-divisions/express-highway-inn/6.EV-Car-Charging.png",
   },
+  {
+    name: "Trade Emporium",
+    distance: "50 m",
+    type: "Trade Emporium",
+    description:
+      "Showcasing local handicrafts, travel merchandise, and regional specialty products.",
+    image: "/images/our-divisions/express-highway-inn/trade-emporium.jpeg",
+  },
 ];
 
 const mapUrl =

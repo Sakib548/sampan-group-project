@@ -42,13 +42,13 @@ export default function PartyCenterLocationAndMap() {
                 <FaMapMarkerAlt className="text-amber-600" />
                 <span className="font-mono font-bold text-neutral-800">23.260464° N, 89.747525° E</span>
                 <span className="text-neutral-400">|</span>
-                <span className="text-neutral-600">Dhaka–Khulna Highway</span>
+                <span className="text-neutral-600">KM 74, Dhaka–Khulna Highway, Gopalganj</span>
               </div>
 
               <div>
                 <h3 className="text-2xl font-bold text-[#111111]">Direct Highway Frontage</h3>
                 <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-                  Located right along the primary national corridor with direct dual deceleration ramps. No narrow link roads or village detours, allowing tourist coaches and wedding motorcades to enter seamlessly.
+                  Located right along the primary national corridor at KM 74 in Gopalganj with direct dual deceleration ramps. No narrow link roads or village detours, allowing tourist coaches and wedding motorcades to enter seamlessly.
                 </p>
               </div>
 

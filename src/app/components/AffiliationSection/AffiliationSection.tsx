@@ -13,20 +13,96 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 /* ------------------------------------------------------------------ */
 
 const affiliations = [
-  { num: "01", name: "Real Estate & Housing Association of Bangladesh", logo: "/images/affiliation/rehab.png" },
-  { num: "02", name: "Federation of Bangladesh chambers of commerce & industry FBCCI", logo: "/images/affiliation/fbcci.png" },
-  { num: "03", name: "Bangladesh Reconditioned Vehicles Importers & Dealers Association (BARVIDA)", logo: "/images/affiliation/barvia.png" },
-  { num: "04", name: "Bangladesh Arm's Dealer and Impoter Association", logo: "/images/affiliation/bad.png" },
-  { num: "05", name: "Bangladesh PABX Association", logo: "/images/affiliation/pabx.png" },
-  { num: "06", name: "Bangladesh LPG Autogas Station & Conversion Workshop Ownerʼs Association", logo: "/images/affiliation/lpg.png" },
-  { num: "07", name: "Bangladesh volleyball federation (AD-Hoc Community)", logo: "/images/affiliation/bvf.png" },
-  { num: "08", name: "Barisal Bulls", logo: "/images/affiliation/barishalbulls.png" },
-  { num: "09", name: "Barisal Club (1864)", logo: "/images/affiliation/lis.png" },
-  { num: "10", name: "Bangladesh Premier League (BPL)", logo: "/images/affiliation/bpl.png" },
-  { num: "11", name: "Mercedes-Benz", logo: "/images/affiliation/mercedes.png" },
-  { num: "12", name: "Chartered Institute of Procurement & Supply UK-Authorized", logo: "/images/affiliation/cips.png" },
-  { num: "13", name: "Directorate General Defence Purchase", logo: "/images/affiliation/dgdp.png" },
-  { num: "14", name: "Shooter's Shooting Club", logo: "/images/affiliation/shoot.png" },
+  {
+    num: "01",
+    name: "Real Estate & Housing Association of Bangladesh",
+    logo: "/images/affiliation/rehab.png",
+  },
+  {
+    num: "02",
+    name: "Federation of Bangladesh chambers of commerce & industry FBCCI",
+    logo: "/images/affiliation/fbcci.png",
+  },
+  {
+    num: "03",
+    name: "Bangladesh Reconditioned Vehicles Importers & Dealers Association (BARVIDA)",
+    logo: "/images/affiliation/barvia.png",
+  },
+  {
+    num: "04",
+    name: "Bangladesh Arm's Dealer and Impoter Association",
+    logo: "/images/affiliation/bad.png",
+  },
+  {
+    num: "05",
+    name: "Bangladesh PABX Association",
+    logo: "/images/affiliation/pabx.png",
+  },
+  {
+    num: "06",
+    name: "Bangladesh LPG Autogas Station & Conversion Workshop Ownerʼs Association",
+    logo: "/images/affiliation/lpg.png",
+  },
+  {
+    num: "07",
+    name: "Bangladesh volleyball federation (AD-Hoc Community)",
+    logo: "/images/affiliation/bvf.png",
+  },
+  {
+    num: "08",
+    name: "Barisal Bulls",
+    logo: "/images/affiliation/barishalbulls.png",
+  },
+  {
+    num: "09",
+    name: "Barisal Club (1864)",
+    logo: "/images/affiliation/lis.png",
+  },
+  {
+    num: "10",
+    name: "Bangladesh Premier League (BPL)",
+    logo: "/images/affiliation/bpl.png",
+  },
+  {
+    num: "11",
+    name: "Mercedes-Benz",
+    logo: "/images/affiliation/mercedes.png",
+  },
+  {
+    num: "12",
+    name: "Chartered Institute of Procurement & Supply UK-Authorized",
+    logo: "/images/affiliation/cips.png",
+  },
+  {
+    num: "13",
+    name: "Directorate General Defence Purchase",
+    logo: "/images/affiliation/dgdp.png",
+  },
+  {
+    num: "14",
+    name: "Shooter's Shooting Club",
+    logo: "/images/affiliation/shoot.png",
+  },
+  {
+    num: "15",
+    name: "Express Highway Club And Lounge",
+    logo: "/images/affiliation/EHCl.png",
+  },
+  {
+    num: "16",
+    name: "Bangladesh Archery Federation",
+    logo: "/images/affiliation/Archery.png",
+  },
+  {
+    num: "17",
+    name: "Sampan Golf Academy",
+    logo: "/images/affiliation/Sampan Golf Academy.png",
+  },
+  {
+    num: "18",
+    name: "Sampan Golf Academy",
+    logo: "/images/affiliation/Asset 26@4x.png",
+  },
   // Add your remaining 20+ logos here. The grid will automatically wrap beautifully.
 ];
 

@@ -292,23 +292,15 @@ export default function SampanEcoAgroProduceClient() {
 
             {/* Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="https://www.facebook.com/sampanecoandagro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-md"
-              >
-                <FaFacebookF className="text-sm" />
-                <span>Facebook Page</span>
-              </a>
 
-              <a
+
+              {/* <a
                 href="tel:+8801929918408"
                 className="inline-flex items-center justify-center gap-2 border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-[#0c1c14] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm"
               >
                 <FaPhoneAlt className="text-xs text-[#b9e583]" />
                 <span>+880 1929-918408</span>
-              </a>
+              </a> */}
 
               <a
                 href="#products"
@@ -325,6 +317,15 @@ export default function SampanEcoAgroProduceClient() {
                 <FaMapMarkerAlt className="text-xs text-[#b9e583]" />
                 <span>Farm Address</span>
               </a>
+              <a
+                href="https://www.facebook.com/sampanecoandagro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-md"
+              >
+                <FaFacebookF className="text-sm" />
+                <span>Facebook Page</span>
+              </a>
             </div>
 
             {/* Quick Value Badges */}
@@ -339,14 +340,14 @@ export default function SampanEcoAgroProduceClient() {
                 <p className="text-[11px] text-white/60 mt-0.5">Field Okra, Pumpkins, Brinjal</p>
               </div>
 
-              <div className="border-l-2 border-[#b9e583] pl-4">
+              {/* <div className="border-l-2 border-[#b9e583] pl-4">
                 <p className="text-xs font-bold text-white uppercase tracking-wider">Fruit Orchards &amp; Flora</p>
                 <p className="text-[11px] text-white/60 mt-0.5">Sweet Mangoes &amp; Gerbera</p>
-              </div>
+              </div> */}
 
               <div className="border-l-2 border-[#b9e583] pl-4">
                 <p className="text-xs font-bold text-white uppercase tracking-wider">Alphadanga, Faridpur</p>
-                <p className="text-[11px] text-white/60 mt-0.5">Joydebpur, Boroga, Borice</p>
+                <p className="text-[11px] text-white/60 mt-0.5">Dhaka Division, Bangladesh</p>
               </div>
             </div>
 
@@ -388,22 +389,21 @@ export default function SampanEcoAgroProduceClient() {
             </div>
 
             {/* Filter Pills */}
-            <div className="flex flex-wrap gap-2">
+            {/* <div className="flex flex-wrap gap-2">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   type="button"
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer ${
-                    activeCategory === cat
+                  className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer ${activeCategory === cat
                       ? "bg-emerald-800 text-white border-emerald-900 shadow-md"
                       : "bg-white text-neutral-700 border-neutral-300 hover:border-emerald-600 hover:text-emerald-800"
-                  }`}
+                    }`}
                 >
                   {cat === "All" ? "All Produce" : cat}
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Simplified Products Grid */}
@@ -462,14 +462,14 @@ export default function SampanEcoAgroProduceClient() {
       </section>
 
       {/* ================= 4. SEASONAL AVAILABILITY SCHEDULE ================= */}
-      <AgroSeasonalAvailability
+      {/* <AgroSeasonalAvailability
         title="Seasonal Harvest Availability Schedule"
         subtitle="Natural seasonal crop cycles across Summer, Monsoon, and Winter growing periods."
         concernName="Sampan Eco & Agro"
         seasons={seasonalCalendar}
         bgTheme="divisions-green"
         accentColor="#15803d"
-      />
+      /> */}
 
       {/* ================= 5. PHOTO GALLERY ================= */}
       <AgroPhotosGallery
@@ -507,11 +507,11 @@ export default function SampanEcoAgroProduceClient() {
                 Physical Address
               </span>
               <h3 className="text-xl font-bold text-neutral-950">
-                Joydebpur, Boroga, Borice
+                Alphadanga, Faridpur
               </h3>
               <p className="text-sm text-neutral-600 leading-relaxed font-mono">
-                Alphadanga-7870, Faridpur <br />
-                Bangladesh
+                Alphadanga-7870, Faridpur District <br />
+                Dhaka Division, Bangladesh
               </p>
             </div>
 
@@ -529,8 +529,8 @@ export default function SampanEcoAgroProduceClient() {
               <div className="space-y-3 pt-1 text-sm text-neutral-700">
                 <div className="flex items-center gap-2">
                   <span className="font-mono text-xs text-neutral-400">Phone:</span>
-                  <a href="tel:+8801929918408" className="font-mono font-bold text-emerald-700 hover:underline">
-                    +880 1929-918408
+                  <a href="tel:+8801929918400" className="font-mono font-bold text-emerald-700 hover:underline">
+                    +8801929918400
                   </a>
                 </div>
                 <div className="flex items-center gap-2">

@@ -57,7 +57,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
 
           {/* Tagline & Subheading */}
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-[#e8b84b]/80 pl-4">
-            Motel suites, iconic White Hall banquet center, 24/7 garden dining, and dependable highway hospitality.
+            Motel suites, iconic White Hall banquet center, 24/7 garden dining, and dependable highway hospitality in Gopalganj.
           </p>
 
           {/* Square Quick Action CTAs */}
@@ -94,10 +94,10 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
               <p className="text-[11px] text-white/50 mt-0.5">Premium Capacity</p>
             </div>
 
-            {/* <div className="border-l-2 border-[#e8b84b] pl-4">
-              <p className="text-xs font-bold text-white uppercase tracking-wider">"" Stays</p>
-              <p className="text-[11px] text-white/50 mt-0.5">Quiet Motel Suites</p>
-            </div> */}
+            <div className="border-l-2 border-[#e8b84b] pl-4">
+              <p className="text-xs font-bold text-white uppercase tracking-wider">Gopalganj</p>
+              <p className="text-[11px] text-white/50 mt-0.5">Highway Corridor</p>
+            </div>
 
             <div className="border-l-2 border-[#e8b84b] pl-4">
               <p className="text-xs font-bold text-white uppercase tracking-wider">Garden Dining</p>

@@ -439,7 +439,7 @@ export default function ExpressHighwayInnPage() {
           </div>
 
           {/* Masterplan Spec Cards (3 Columns across the view) */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/*  <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
 
             <div className="group relative rounded-none border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#58b9eb] hover:-translate-y-1">
               <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#58b9eb] transition-all duration-500 group-hover:w-full" />
@@ -480,7 +480,7 @@ export default function ExpressHighwayInnPage() {
               </p>
             </div>
 
-          </div>
+          </div>*/}
         </div>
       </section>
 

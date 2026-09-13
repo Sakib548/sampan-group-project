@@ -50,13 +50,13 @@ export default function LocationAndMap() {
                 <FaMapMarkerAlt className="text-emerald-600" />
                 <span className="font-mono font-bold text-neutral-800">23.260464° N, 89.747525° E</span>
                 <span className="text-neutral-400">|</span>
-                <span className="text-neutral-600">Dhaka–Khulna Highway</span>
+                <span className="text-neutral-600">KM 74, Dhaka–Khulna Highway, Gopalganj</span>
               </div>
 
               <div>
                 <h3 className="text-2xl font-bold text-[#111111]">Direct Highway Access</h3>
                 <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-                  Located right on the main corridor. No narrow link roads, no rural detours, and no bridge bottlenecks. Turn in seamlessly and re-enter the highway within seconds.
+                  Located right on the main corridor at KM 74 in Gopalganj. No narrow link roads, no rural detours, and no bridge bottlenecks. Turn in seamlessly and re-enter the highway within seconds.
                 </p>
               </div>
 

@@ -44,7 +44,7 @@ export default function PartyCenterHeroOverview({ onOpenBooking }: HeroOverviewP
 
           {/* Subtitle / Tagline */}
           <p className="text-xs sm:text-sm text-amber-100/90 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-amber-400/80 pl-4">
-            Premier central air-conditioned banquet halls for 500+ guests, gourmet feasts, and authentic culinary dining on the highway corridor.
+            Premier central air-conditioned banquet halls for 500+ guests, gourmet feasts, and culinary dining on the Dhaka–Khulna Highway corridor in Gopalganj (KM 74).
           </p>
 
           {/* CTAs */}
@@ -73,14 +73,14 @@ export default function PartyCenterHeroOverview({ onOpenBooking }: HeroOverviewP
 
           {/* Value Badges */}
           <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {/* <div className="border-l-2 border-amber-400 pl-4">
-              <p className="text-xs font-bold text-white uppercase tracking-wider">500+ Capacity</p>
-              <p className="text-[11px] text-white/60 mt-0.5">Grand Banquet Hall</p>
-            </div> */}
-
             <div className="border-l-2 border-amber-400 pl-4">
               <p className="text-xs font-bold text-white uppercase tracking-wider">Multi-Cuisine</p>
               <p className="text-[11px] text-white/60 mt-0.5">Feast &amp; Buffet</p>
+            </div>
+
+            <div className="border-l-2 border-amber-400 pl-4">
+              <p className="text-xs font-bold text-white uppercase tracking-wider">Gopalganj</p>
+              <p className="text-[11px] text-white/60 mt-0.5">KM 74 Highway</p>
             </div>
 
             <div className="border-l-2 border-amber-400 pl-4">
