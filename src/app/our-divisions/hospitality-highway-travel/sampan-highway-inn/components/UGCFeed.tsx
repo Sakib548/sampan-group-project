@@ -13,7 +13,7 @@ const ugcPosts = [
     likes: 842,
     comments: 64,
     caption: "Highway night aesthetics done right! Stopped at @SampanHighwayInn after crossing Padma Bridge. Zero noise inside the VVIP suite! 🌙✨ #SampanHighwayInn #RoadTripBD",
-    location: "Sampan Highway Inn Plaza, KM 74",
+    location: "Sampan Highway Inn Plaza, KM 103",
   },
   {
     id: 2,

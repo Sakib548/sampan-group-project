@@ -45,7 +45,7 @@ export default function SampanHighwayInnPartyCenterClient() {
       {/* <PartyCenterMenuCustomizer /> */}
 
       {/* HIGHWAY CORRIDOR ROUTE MAP */}
-      <PartyCenterHighwayRouteVisualizer />
+      {/* <PartyCenterHighwayRouteVisualizer /> */}
 
       {/* LOCATION + LIVE MAP & HUB DISTANCES */}
       <PartyCenterLocationAndMap />
@@ -54,7 +54,7 @@ export default function SampanHighwayInnPartyCenterClient() {
       <PartyCenterPhotoVideoGallery />
 
       {/* VIRTUAL HALL & RESTAURANT TOUR */}
-      <PartyCenterVirtualTour />
+      {/* <PartyCenterVirtualTour /> */}
 
       {/* TESTIMONIALS & PAST EVENT REVIEWS */}
       {/* <PartyCenterTestimonials /> */}

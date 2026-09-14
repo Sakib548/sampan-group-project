@@ -3,17 +3,17 @@
 import { FaMapMarkerAlt, FaDirections, FaPhoneAlt, FaClock, FaCheck } from "react-icons/fa";
 
 const mapEmbedUrl =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.089219414334!2d89.74752500982524!3d23.260464021760214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ffc915b3e67a43%3A0xc9ccd3be4ea97668!2sSampan%20Highway%20Inn%20Restaurant%20%26%20Party%20Centre!5e0!3m2!1sen!2sbd!4v1788938537834!5m2!1sen!2sbd";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.089219414334!2d89.765406!3d23.260465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ffc915b3e67a43%3A0xc9ccd3be4ea97668!2sSampan%20Highway%20Inn%20Restaurant%20%26%20Party%20Centre!5e0!3m2!1sen!2sbd!4v1788938537834!5m2!1sen!2sbd";
 const googleMapsDeepLink =
-  "https://www.google.com/maps/dir/?api=1&destination=Sampan+Highway+Inn+Restaurant+%26+Party+Centre";
+  "https://maps.app.goo.gl/KXSdwQf41PxZLmvf8";
 
 const hubDistances = [
-  { hub: "Dhaka Zero Point / Jatrabari", distance: "74 km", time: "1h 05m" },
-  { hub: "Padma Bridge Toll Plaza (Mawa)", distance: "39 km", time: "30m" },
-  { hub: "Bhanga Junction Expressway Interchange", distance: "16 km", time: "15m" },
-  { hub: "Gopalganj District HQ", distance: "36 km", time: "32m" },
-  { hub: "Khulna Divisional City Hub", distance: "106 km", time: "1h 35m" },
-  { hub: "Barishal Divisional Airport Hub", distance: "68 km", time: "55m" },
+  { hub: "Dhaka Zero Point / Jatrabari", distance: "103 km", time: "1h 15m" },
+  { hub: "Padma Bridge Toll Plaza (Mawa)", distance: "72 km", time: "50m" },
+  { hub: "Bhanga Junction Expressway Interchange", distance: "30 km", time: "25m" },
+  { hub: "Gopalganj District HQ", distance: "41 km", time: "35m" },
+  { hub: "Khulna Divisional City Hub", distance: "98 km", time: "1h 15m" },
+  { hub: "Barishal Divisional City Hub", distance: "125 km", time: "1h 35m" },
 ];
 
 export default function LocationAndMap() {
@@ -29,13 +29,6 @@ export default function LocationAndMap() {
               Strategic Location
             </p>
           </div>
-          {/* <h2 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-[#111111] leading-tight">
-            Easy to access. <br />
-            <span className="text-emerald-700">Seamless to continue.</span>
-          </h2>
-          <p className="max-w-2xl text-sm sm:text-base text-neutral-600 leading-relaxed pt-1">
-            Positioned directly along the primary south-bound highway with dedicated acceleration and deceleration ramps for effortless stopping.
-          </p> */}
         </div>
 
         {/* Map & Distance Layout */}
@@ -48,15 +41,15 @@ export default function LocationAndMap() {
               {/* Coordinates Pill */}
               <div className="inline-flex items-center gap-3 bg-white px-4 py-2 rounded-xl border border-neutral-200 shadow-sm text-xs">
                 <FaMapMarkerAlt className="text-emerald-600" />
-                <span className="font-mono font-bold text-neutral-800">23.260464° N, 89.747525° E</span>
+                <span className="font-mono font-bold text-neutral-800">23.260465° N, 89.765979° E</span>
                 <span className="text-neutral-400">|</span>
-                <span className="text-neutral-600">KM 74, Dhaka–Khulna Highway, Gopalganj</span>
+                <span className="text-neutral-600">KM 103, Dhaka–Khulna Highway, Gopalganj</span>
               </div>
 
               <div>
                 <h3 className="text-2xl font-bold text-[#111111]">Direct Highway Access</h3>
                 <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-                  Located right on the main corridor at KM 74 in Gopalganj. No narrow link roads, no rural detours, and no bridge bottlenecks. Turn in seamlessly and re-enter the highway within seconds.
+                  Located right on the main corridor at KM 103 in Gopalganj. No narrow link roads, no rural detours, and no bridge bottlenecks. Turn in seamlessly and re-enter the highway within seconds.
                 </p>
               </div>
 

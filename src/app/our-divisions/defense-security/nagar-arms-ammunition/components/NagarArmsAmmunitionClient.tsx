@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
-const bannerImage = "/images/our-divisions/nagar-firearms/banner.jpg";
+const bannerImage = "/images/our-divisions/nagar-arms-ammunation/hero.jpg";
 
 const serviceHighlights = [
   {
@@ -41,8 +41,28 @@ const serviceHighlights = [
   },
 ];
 
+interface GalleryImage {
+  id: string;
+  image: string;
+}
+
+const facilityGallery: GalleryImage[] = [
+  { id: "img-1", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-13.jpg" },
+  { id: "img-2", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-&-Ammunition-iamge-6.jpg" },
+  { id: "img-3", image: "/images/our-divisions/nagar-arms-ammunation/1.jpeg" },
+  { id: "img-4", image: "/images/our-divisions/nagar-arms-ammunation/2.jpeg" },
+  { id: "img-5", image: "/images/our-divisions/nagar-arms-ammunation/3.jpeg" },
+  { id: "img-6", image: "/images/our-divisions/nagar-arms-ammunation/4.jpeg" },
+  { id: "img-7", image: "/images/our-divisions/nagar-arms-ammunation/5.jpeg" },
+  { id: "img-8", image: "/images/our-divisions/nagar-arms-ammunation/6.jpeg" },
+  { id: "img-9", image: "/images/our-divisions/nagar-arms-ammunation/7.jpeg" },
+  { id: "img-10", image: "/images/our-divisions/nagar-arms-ammunation/8.jpeg" },
+  { id: "img-11", image: "/images/our-divisions/nagar-arms-ammunation/9.jpeg" },
+  { id: "img-12", image: "/images/our-divisions/nagar-arms-ammunation/13.jpeg" },
+];
+
 export default function NagarArmsAmmunitionClient() {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -63,7 +83,7 @@ export default function NagarArmsAmmunitionClient() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-70"
+            className="object-cover object-top opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/35" />
         </div>
@@ -200,38 +220,28 @@ export default function NagarArmsAmmunitionClient() {
             </p>
           </div>
 
-          <div className="max-w-4xl">
-            <article
-              onClick={() => setLightboxOpen(true)}
-              className="group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-[#c2410c] transition-all duration-300 hover:shadow-md cursor-pointer"
-            >
-              <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#c2410c] transition-all duration-500 group-hover:w-full z-20" />
-
-              <div className="relative w-full h-[320px] sm:h-[420px] overflow-hidden bg-neutral-900">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            {facilityGallery.map((item) => (
+              <article
+                key={item.id}
+                onClick={() => setSelectedImage(item.image)}
+                className="group relative aspect-[4/3] w-full bg-[#16100b] border border-neutral-200 hover:border-[#c2410c] rounded-none overflow-hidden transition-all duration-300 hover:shadow-lg cursor-pointer"
+              >
+                <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#c2410c] transition-all duration-500 group-hover:w-full z-20" />
                 <Image
-                  src={bannerImage}
-                  alt="Nagar Arms & Ammunition Facility"
+                  src={item.image}
+                  alt="Nagar Arms Facility Showcase"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 80vw"
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105 opacity-90"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-6 z-10">
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-orange-400 block mb-1">
-                    Authorized Dealership
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 z-10">
+                  <span className="font-mono text-[10px] text-white flex items-center gap-1.5 font-bold uppercase tracking-wider">
+                    <FaExpand className="text-[9px]" /> Enlarge
                   </span>
-                  <h4 className="text-white text-lg sm:text-xl font-bold">
-                    Nagar Arms &amp; Ammunition Facility
-                  </h4>
-                  <p className="text-xs text-neutral-300 mt-1 max-w-xl">
-                    Authorized armory showroom operating under strict government guidelines and regulatory oversight in Dhaka.
-                  </p>
-                  <div className="mt-4 flex items-center gap-2 text-xs font-mono text-orange-300 font-bold">
-                    <FaExpand className="text-xs" />
-                    <span>Click to Enlarge</span>
-                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            ))}
           </div>
 
         </div>
@@ -336,13 +346,13 @@ export default function NagarArmsAmmunitionClient() {
       </section>
 
       {/* Lightbox Modal (Square Style) */}
-      {lightboxOpen && (
+      {selectedImage && (
         <div
-          onClick={() => setLightboxOpen(false)}
+          onClick={() => setSelectedImage(null)}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-8 animate-in fade-in"
         >
           <button
-            onClick={() => setLightboxOpen(false)}
+            onClick={() => setSelectedImage(null)}
             className="absolute top-6 right-6 text-white p-3 rounded-none bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
             aria-label="Close Lightbox"
           >
@@ -353,7 +363,7 @@ export default function NagarArmsAmmunitionClient() {
             className="relative max-w-5xl w-full max-h-[85vh] aspect-[16/10] rounded-none overflow-hidden border border-white/20 shadow-2xl bg-black"
           >
             <Image
-              src={bannerImage}
+              src={selectedImage}
               alt="Nagar Arms & Ammunition Preview"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

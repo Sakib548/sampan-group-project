@@ -209,7 +209,7 @@ export default function SampanMartClient() {
             sizes="100vw"
             className="object-cover object-center opacity-85"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/65 to-black/20" />
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">

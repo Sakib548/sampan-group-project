@@ -16,86 +16,24 @@ import {
   FaSearch,
   FaExternalLinkAlt,
   FaGasPump,
+  FaMapMarkerAlt,
+  FaCamera,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
+import { carStockList, CarStockItem } from "../data/carStockList";
 
 // Hero Background: Authentic showroom banner from sampan-auto folder
 const heroBackground = "/images/our-divisions/sampan-auto/Website-Banner-2.jpg";
 
-interface VehicleShowcase {
-  id: string;
-  name: string;
-  category: string;
-  image: string;
-  fuelType: string;
-  description: string;
-}
-
-const vehicleShowcase: VehicleShowcase[] = [
-  {
-    id: "v-1",
-    name: "Toyota Harrier Z",
-    category: "Luxury Hybrid Crossover",
-    image: "/images/our-divisions/sampan-auto/Toyota_Harrier_Z_2021.jpg",
-    fuelType: "Octane / Hybrid",
-    description: "Sleek aerodynamic styling, Modellista trim options, panoramic roof, and modern safety suite.",
-  },
-  {
-    id: "v-2",
-    name: "Lexus RX300 F Sport",
-    category: "Executive Sport SUV",
-    image: "/images/our-divisions/sampan-auto/Lexus_RX300_F_Sport_2021.jpg",
-    fuelType: "Turbo Petrol",
-    description: "High-spec executive SUV featuring F Sport leather interior, triple-beam LED, and panoramic camera.",
-  },
-  {
-    id: "v-3",
-    name: "Toyota Land Cruiser Prado TX",
-    category: "Full-Size 4WD SUV",
-    image: "/images/our-divisions/sampan-auto/Toyota-Prado-TX.jpg",
-    fuelType: "Petrol / Diesel",
-    description: "Unrivaled highway presence, heavy-duty chassis, 7-passenger capability, and premium luxury.",
-  },
-  {
-    id: "v-4",
-    name: "Nissan X-Trail Hybrid",
-    category: "Family Touring Crossover",
-    image: "/images/our-divisions/sampan-auto/NissanX-Trail.jpg",
-    fuelType: "Hybrid Crossover",
-    description: "Spacious dual-zone interior, intelligent 4x4, excellent fuel economy, and smooth ride comfort.",
-  },
-  {
-    id: "v-5",
-    name: "Toyota Corolla Cross",
-    category: "Compact Urban Crossover",
-    image: "/images/our-divisions/sampan-auto/Toyota-corolla-cross-1.jpg",
-    fuelType: "Hybrid / Petrol",
-    description: "Modern high ground-clearance crossover suited for city commuting and highway family tours.",
-  },
-  {
-    id: "v-6",
-    name: "Toyota Noah / Esquire",
-    category: "Premium 7-Seater MPV",
-    image: "/images/our-divisions/sampan-auto/Toyota-Noah-Squire-GL-2020.jpg",
-    fuelType: "Hybrid MPV",
-    description: "Dual power sliding doors, captain seating, flexible family boot space, and outstanding economy.",
-  },
-  {
-    id: "v-7",
-    name: "Lexus GX 460",
-    category: "Luxury All-Terrain 4WD",
-    image: "/images/our-divisions/sampan-auto/Toyota-Lexus-Gx460.jpg",
-    fuelType: "V8 Luxury 4WD",
-    description: "Proven V8 capability, plush leather cabin, multi-terrain select, and commanding stance.",
-  },
-  {
-    id: "v-8",
-    name: "Toyota Prius Hybrid",
-    category: "Aerodynamic Hybrid Sedan",
-    image: "/images/our-divisions/sampan-auto/Toyota-prius-gulliver-1.jpg",
-    fuelType: "Synergy Hybrid",
-    description: "World-class hybrid efficiency, dependable Japanese build, low maintenance, and smooth cruising.",
-  },
+const brandTags = [
+  "Toyota",
+  "Lexus",
+  "Nissan",
+  "Honda",
+  "Mercedes-Benz",
+  "Mitsubishi",
+  "Subaru",
+  "Mazda",
 ];
 
 const sourcingSteps = [
@@ -118,26 +56,19 @@ const sourcingSteps = [
     icon: FaShieldAlt,
   },
   {
-    title: "Direct Doorstep Handover",
+    title: "Doorstep Delivery & After-Sales",
     description:
-      "Your car is professionally cleaned, detailed, and delivered directly to your doorstep complete with all genuine ownership papers and keys.",
+      "Your vehicle is delivered directly to your doorstep in pristine condition with complete documentation, warranty options, and servicing guidance.",
     icon: FaTruckLoading,
   },
 ];
 
-const brandTags = [
-  "Toyota",
-  "Lexus",
-  "Nissan",
-  "Honda",
-  "Mercedes-Benz",
-  "Mitsubishi",
-  "Subaru",
-  "Mazda",
-];
-
 export default function SampanAutoClient() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedCar, setSelectedCar] = useState<CarStockItem | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedLocation, setSelectedLocation] = useState<string>("all");
+  const [onlyWithPhotos, setOnlyWithPhotos] = useState<boolean>(false);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -145,6 +76,32 @@ export default function SampanAutoClient() {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const filteredCars = carStockList.filter((car) => {
+    const query = searchQuery.trim().toLowerCase();
+    const matchesSearch =
+      query === "" ||
+      car.model.toLowerCase().includes(query) ||
+      car.subModel.toLowerCase().includes(query) ||
+      car.chassis.toLowerCase().includes(query) ||
+      car.engine.toLowerCase().includes(query) ||
+      car.color.toLowerCase().includes(query) ||
+      car.year.toString().includes(query);
+
+    const matchesCategory =
+      selectedCategory === "all" || car.category === selectedCategory;
+
+    const matchesLocation =
+      selectedLocation === "all" || car.location === selectedLocation;
+
+    const matchesPhoto = !onlyWithPhotos || Boolean(car.image);
+
+    return matchesSearch && matchesCategory && matchesLocation && matchesPhoto;
+  });
+
+  const withPhotoCount = carStockList.filter((c) => c.image).length;
+  const showroomCount = carStockList.filter((c) => c.location === "Showroom").length;
+  const portCount = carStockList.filter((c) => c.location === "Port").length;
 
   return (
     <main className="bg-[#fcfbf9] text-[#1a1714] selection:bg-amber-600 selection:text-white">
@@ -167,12 +124,6 @@ export default function SampanAutoClient() {
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
           <div className="max-w-4xl space-y-5 sm:space-y-6">
 
-            {/* Sourcing Badge */}
-            {/* <div className="inline-flex items-center gap-2 border border-amber-500/40 bg-amber-950/70 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-amber-400 rounded-none">
-              <FaCar className="text-xs text-amber-400" />
-              <span>Vehicle Importer &amp; Dealer • On-Demand Delivery</span>
-            </div> */}
-
             {/* Headline */}
             <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold tracking-tight text-white leading-[0.98]">
               Sampan <br />
@@ -183,24 +134,24 @@ export default function SampanAutoClient() {
 
             {/* Subheadline: Clear explanation of business model */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-amber-500/80 pl-4">
-              Specializing in imported Japanese reconditioned vehicles and quality pre-owned cars. While we currently operate on a bespoke on-demand model without a physical walk-in showroom, simply inform us what car you want—we source, inspect, import, and deliver it directly to you.
+              Specializing in imported Japanese reconditioned vehicles and quality pre-owned cars. Explore our live sales stock currently in port and showroom, or place a bespoke on-demand import order.
             </p>
 
             {/* Square Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button
-                onClick={() => scrollTo("process")}
+                onClick={() => scrollTo("inventory")}
                 className="group inline-flex items-center justify-center gap-2 rounded-none bg-amber-600 hover:bg-amber-500 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-amber-950/40 cursor-pointer"
               >
-                <span>How Sourcing Works</span>
+                <span>Sales Stock ({carStockList.length} Cars)</span>
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
               <button
-                onClick={() => scrollTo("inventory")}
+                onClick={() => scrollTo("process")}
                 className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
               >
-                Featured Vehicles
+                How Sourcing Works
               </button>
 
               <a
@@ -408,84 +359,275 @@ export default function SampanAutoClient() {
         </div>
       </section>
 
-      {/* ================= 4. FEATURED VEHICLE SHOWCASE ================= */}
-      <section id="inventory" className="py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#fcfbf9] border-b border-neutral-200">
+      {/* ================= 4. CURRENT VEHICLE STOCK & INCOMING UNITS ================= */}
+      <section id="inventory" className="py-20 sm:py-24 px-6 sm:px-10 lg:px-16 bg-[#fcfbf9] border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
             <div>
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-3">
                 <span className="h-px w-10 bg-amber-600" />
                 <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-amber-700">
-                  Import Showcase
+                  Stock Inventory ({carStockList.length} Vehicles)
                 </span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
-                Sourced vehicles. <br />
-                <span className="text-amber-700">Popular import portfolio.</span>
+                Current Stock &amp; <br />
+                <span className="text-amber-700">Incoming Shipments</span>
               </h2>
             </div>
-            <p className="max-w-md text-xs sm:text-sm text-neutral-500 leading-relaxed">
-              A sample of premier Japanese reconditioned crossovers, SUVs, and luxury sedans available for bespoke import.
+            <p className="max-w-md text-xs sm:text-sm text-neutral-600 leading-relaxed font-mono">
+              Live stock listing including port arrivals, showroom units, and verified pre-orders. Contact us with vehicle chassis number for immediate booking.
             </p>
           </div>
 
-          {/* Square Image Grid (Zero Blank Space, Anchored Label Bars) */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {vehicleShowcase.map((car) => (
-              <article
-                key={car.id}
-                onClick={() => setSelectedImage(car.image)}
-                className="group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-amber-600 transition-all duration-300 hover:shadow-md cursor-pointer min-h-[360px]"
-              >
-                <div className="absolute top-0 left-0 h-[3px] w-0 bg-amber-600 transition-all duration-500 group-hover:w-full z-20" />
+          {/* Filter & Search Bar */}
+          <div className="bg-white border border-neutral-200 p-4 sm:p-5 mb-8 shadow-sm space-y-4">
+            <div className="grid gap-4 md:grid-cols-12 items-center">
+              {/* Search Box */}
+              <div className="relative md:col-span-6 lg:col-span-5">
+                <FaSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400 text-xs" />
+                <input
+                  type="text"
+                  placeholder="Search model, submodel, chassis, engine, color..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-[#fdfcfa] border border-neutral-200 pl-9 pr-4 py-2.5 text-xs text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-amber-600 rounded-none font-mono"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-700 text-xs"
+                  >
+                    <FaTimes />
+                  </button>
+                )}
+              </div>
 
-                <div className="relative w-full flex-1 min-h-[220px] overflow-hidden bg-neutral-200">
-                  <Image
-                    src={car.image}
-                    alt={car.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 z-10">
-                    <div className="flex items-end justify-between gap-3">
-                      <div className="min-w-0 flex-1">
-                        <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-amber-400 block mb-1">
-                          {car.category}
+              {/* Category Filter */}
+              <div className="flex flex-wrap items-center gap-1.5 md:col-span-6 lg:col-span-7">
+                {[
+                  { id: "all", label: `All (${carStockList.length})` },
+                  { id: "suv-crossover", label: "SUV / Crossover" },
+                  { id: "mpv-van", label: "MPV / Van" },
+                  { id: "sedan-wagon", label: "Sedan / Wagon" },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setSelectedCategory(tab.id)}
+                    className={`px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider transition-colors rounded-none cursor-pointer ${
+                      selectedCategory === tab.id
+                        ? "bg-[#111318] text-white"
+                        : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+
+                {/* Location Filter */}
+                <div className="flex items-center gap-1.5 ml-auto">
+                  <button
+                    onClick={() => setSelectedLocation(selectedLocation === "Showroom" ? "all" : "Showroom")}
+                    className={`px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
+                      selectedLocation === "Showroom"
+                        ? "bg-amber-600 text-white border-amber-600"
+                        : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                    }`}
+                  >
+                    Showroom ({showroomCount})
+                  </button>
+                  <button
+                    onClick={() => setSelectedLocation(selectedLocation === "Port" ? "all" : "Port")}
+                    className={`px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
+                      selectedLocation === "Port"
+                        ? "bg-neutral-900 text-white border-neutral-900"
+                        : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                    }`}
+                  >
+                    Port ({portCount})
+                  </button>
+                  <button
+                    onClick={() => setOnlyWithPhotos(!onlyWithPhotos)}
+                    className={`px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer inline-flex items-center gap-1.5 border ${
+                      onlyWithPhotos
+                        ? "bg-amber-800 text-white border-amber-800"
+                        : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                    }`}
+                  >
+                    <FaCamera className="text-[10px]" />
+                    <span>Photos ({withPhotoCount})</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Active Filters Summary */}
+            <div className="flex items-center justify-between text-xs font-mono text-neutral-500 pt-2 border-t border-neutral-100">
+              <span>
+                Showing <strong className="text-neutral-900">{filteredCars.length}</strong> of {carStockList.length} vehicles
+              </span>
+              {(searchQuery || selectedCategory !== "all" || selectedLocation !== "all" || onlyWithPhotos) && (
+                <button
+                  onClick={() => {
+                    setSearchQuery("");
+                    setSelectedCategory("all");
+                    setSelectedLocation("all");
+                    setOnlyWithPhotos(false);
+                  }}
+                  className="text-amber-700 hover:underline font-bold text-[11px]"
+                >
+                  Reset all filters
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Vehicle Grid */}
+          {filteredCars.length === 0 ? (
+            <div className="text-center py-16 bg-white border border-neutral-200 p-8">
+              <FaCar className="mx-auto text-3xl text-neutral-300 mb-3" />
+              <h3 className="text-base font-bold text-neutral-800">No vehicles match your criteria</h3>
+              <p className="text-xs text-neutral-500 mt-1 font-mono">
+                Try clearing search filters or request custom sourcing.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery("");
+                  setSelectedCategory("all");
+                  setSelectedLocation("all");
+                  setOnlyWithPhotos(false);
+                }}
+                className="mt-4 px-4 py-2 bg-neutral-900 text-white font-mono text-xs font-bold uppercase tracking-wider rounded-none cursor-pointer"
+              >
+                Reset Filters
+              </button>
+            </div>
+          ) : (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {filteredCars.map((car) => (
+                <article
+                  key={car.sl}
+                  onClick={() => setSelectedCar(car)}
+                  className="group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-amber-600 transition-all duration-300 hover:shadow-md cursor-pointer"
+                >
+                  <div className="absolute top-0 left-0 h-[3px] w-0 bg-amber-600 transition-all duration-500 group-hover:w-full z-20" />
+
+                  {/* Top Image or Authentic Placeholder */}
+                  <div className="relative w-full h-[200px] overflow-hidden bg-neutral-100 flex items-center justify-center">
+                    {car.image ? (
+                      <>
+                        <Image
+                          src={car.image}
+                          alt={`${car.model} ${car.subModel}`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute top-3 right-3 z-10">
+                          <span className="inline-flex items-center gap-1 bg-black/75 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 font-bold uppercase">
+                            <FaCamera className="text-[9px]" />
+                            <span>Photo</span>
+                          </span>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="text-center p-6 space-y-2">
+                        <div className="w-12 h-12 mx-auto bg-neutral-200/70 border border-neutral-300 flex items-center justify-center text-neutral-400">
+                          <FaCar className="text-lg" />
+                        </div>
+                        <span className="font-mono text-[10px] uppercase tracking-wider text-neutral-400 block">
+                          Stock Spec Sheet
                         </span>
-                        <h4 className="text-white text-sm font-bold leading-snug truncate">
-                          {car.name}
-                        </h4>
-                        <p className="text-xs text-neutral-300 mt-1 line-clamp-1">
-                          {car.description}
-                        </p>
+                        <span className="font-mono text-[11px] font-bold text-neutral-700 block">
+                          {car.chassis}
+                        </span>
                       </div>
-                      <span className="shrink-0 inline-flex items-center gap-1.5 rounded-none bg-white text-neutral-950 font-mono text-[10px] uppercase tracking-wider px-3 py-1.5 font-bold shadow-md group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                        <FaExpand className="text-[10px]" />
-                        <span>View</span>
+                    )}
+
+                    {/* Location Badge */}
+                    <div className="absolute top-3 left-3 z-10">
+                      <span
+                        className={`inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 font-bold uppercase ${
+                          car.location === "Showroom"
+                            ? "bg-amber-600 text-white"
+                            : "bg-neutral-900 text-white"
+                        }`}
+                      >
+                        <FaMapMarkerAlt className="text-[8px]" />
+                        <span>{car.location}</span>
+                      </span>
+                    </div>
+
+                    {/* Auction Grade Badge */}
+                    <div className="absolute bottom-3 left-3 z-10">
+                      <span className="bg-white/95 text-neutral-900 border border-neutral-200 text-[10px] font-mono px-2 py-0.5 font-bold">
+                        Grade {car.grade}
                       </span>
                     </div>
                   </div>
-                </div>
 
-                {/* Lower label bar (Anchored at bottom, no empty vertical gap) */}
-                <div className="p-4 bg-white border-t border-neutral-100 flex flex-col justify-between shrink-0 mt-auto">
-                  <div className="flex items-center justify-between text-[11px] font-mono mb-1">
-                    <span className="text-amber-700 font-bold uppercase">
-                      {car.category}
-                    </span>
-                    <span className="text-neutral-400">
-                      {car.fuelType}
-                    </span>
+                  {/* Body Content */}
+                  <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+                    <div>
+                      <div className="flex items-center justify-between text-[11px] font-mono text-neutral-400 mb-1">
+                        <span className="text-amber-700 font-bold uppercase">
+                          SL #{car.sl.toString().padStart(2, "0")}
+                        </span>
+                        <span>{car.year} • {car.color}</span>
+                      </div>
+
+                      <h4 className="text-base font-bold text-neutral-950 leading-snug group-hover:text-amber-700 transition-colors line-clamp-1">
+                        {car.model}
+                      </h4>
+                      <p className="text-xs text-neutral-600 font-medium line-clamp-1">
+                        {car.subModel}
+                      </p>
+
+                      <div className="mt-2.5 pt-2.5 border-t border-neutral-100 grid grid-cols-2 gap-2 text-[11px] font-mono text-neutral-500">
+                        <div>
+                          <span className="block text-[10px] text-neutral-400 uppercase">Mileage</span>
+                          <span className="font-semibold text-neutral-700">{car.mileage}</span>
+                        </div>
+                        <div>
+                          <span className="block text-[10px] text-neutral-400 uppercase">Chassis</span>
+                          <span className="font-semibold text-neutral-700 truncate block" title={car.chassis}>
+                            {car.chassis}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Price & Action Row */}
+                    <div className="pt-3 border-t border-neutral-100 flex items-center justify-between">
+                      <div>
+                        <span className="block text-[10px] font-mono text-neutral-400 uppercase">Price (BDT)</span>
+                        <span className="font-mono text-sm font-bold text-neutral-950">
+                          {car.isSold ? (
+                            <span className="text-neutral-400 line-through">Pre-Sold</span>
+                          ) : (
+                            <span>{car.priceLakh} Lac</span>
+                          )}
+                        </span>
+                      </div>
+
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedCar(car);
+                        }}
+                        className="inline-flex items-center gap-1 bg-neutral-100 group-hover:bg-amber-600 group-hover:text-white text-neutral-800 px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider transition-colors rounded-none cursor-pointer"
+                      >
+                        <span>Details</span>
+                        <FiArrowRight className="text-[10px]" />
+                      </button>
+                    </div>
                   </div>
-                  <h4 className="text-sm font-bold text-neutral-900 truncate">
-                    {car.name}
-                  </h4>
-                </div>
-              </article>
-            ))}
-          </div>
+                </article>
+              ))}
+            </div>
+          )}
 
         </div>
       </section>
@@ -602,30 +744,154 @@ export default function SampanAutoClient() {
         </div>
       </section>
 
-      {/* Lightbox Modal (Square Style) */}
-      {selectedImage && (
+      {/* Vehicle Details & Image Lightbox Modal */}
+      {selectedCar && (
         <div
-          onClick={() => setSelectedImage(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-8 animate-in fade-in"
+          onClick={() => setSelectedCar(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 sm:p-6 overflow-y-auto animate-in fade-in"
         >
-          <button
-            onClick={() => setSelectedImage(null)}
-            className="absolute top-6 right-6 text-white p-3 rounded-none bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
-            aria-label="Close Lightbox"
-          >
-            <FaTimes className="text-lg" />
-          </button>
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl w-full max-h-[85vh] aspect-[16/10] rounded-none overflow-hidden border border-white/20 shadow-2xl bg-black"
+            className="relative max-w-4xl w-full bg-white border border-neutral-300 shadow-2xl rounded-none my-8 overflow-hidden"
           >
-            <Image
-              src={selectedImage}
-              alt="Sampan Auto Vehicle Preview"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain"
-            />
+            {/* Modal Header */}
+            <div className="bg-[#111318] text-white px-6 py-4 flex items-center justify-between border-b border-neutral-800">
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-xs font-bold text-amber-500 uppercase tracking-widest">
+                  SL #{selectedCar.sl.toString().padStart(2, "0")} • {selectedCar.categoryLabel}
+                </span>
+              </div>
+              <button
+                onClick={() => setSelectedCar(null)}
+                className="text-neutral-400 hover:text-white p-1 rounded-none transition-colors cursor-pointer"
+                aria-label="Close Modal"
+              >
+                <FaTimes className="text-base" />
+              </button>
+            </div>
+
+            {/* Modal Content Grid */}
+            <div className="grid md:grid-cols-12 gap-0">
+              {/* Image Preview / Placeholder */}
+              <div className="md:col-span-6 bg-neutral-950 relative min-h-[260px] md:min-h-[380px] flex items-center justify-center">
+                {selectedCar.image ? (
+                  <Image
+                    src={selectedCar.image}
+                    alt={`${selectedCar.model} ${selectedCar.subModel}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain"
+                  />
+                ) : (
+                  <div className="text-center p-8 space-y-3 text-neutral-400">
+                    <div className="w-16 h-16 mx-auto bg-neutral-800 border border-neutral-700 flex items-center justify-center text-neutral-400">
+                      <FaCar className="text-2xl" />
+                    </div>
+                    <p className="font-mono text-xs uppercase tracking-wider">
+                      Factory / Auction Spec Unit
+                    </p>
+                    <p className="text-xs text-neutral-500 font-mono">
+                      Chassis: {selectedCar.chassis}
+                    </p>
+                    <p className="text-[11px] text-amber-500 font-mono">
+                      Engine verification sheet available on request
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Vehicle Full Details */}
+              <div className="md:col-span-6 p-6 flex flex-col justify-between bg-white">
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="bg-amber-100 text-amber-900 border border-amber-300 font-mono text-[10px] font-bold px-2 py-0.5 uppercase">
+                        {selectedCar.location}
+                      </span>
+                      <span className="bg-neutral-100 text-neutral-800 border border-neutral-300 font-mono text-[10px] font-bold px-2 py-0.5">
+                        Grade {selectedCar.grade}
+                      </span>
+                      <span className="bg-neutral-100 text-neutral-800 border border-neutral-300 font-mono text-[10px] font-bold px-2 py-0.5">
+                        {selectedCar.year} Model
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-neutral-950">
+                      {selectedCar.model}
+                    </h3>
+                    <p className="text-xs text-neutral-600 font-medium">
+                      {selectedCar.subModel}
+                    </p>
+                  </div>
+
+                  {/* Spec Table */}
+                  <div className="border border-neutral-200 divide-y divide-neutral-200 text-xs font-mono">
+                    <div className="grid grid-cols-3 p-2 bg-neutral-50">
+                      <span className="text-neutral-500 uppercase text-[10px]">Chassis No.</span>
+                      <span className="col-span-2 font-bold text-neutral-900">{selectedCar.chassis}</span>
+                    </div>
+                    <div className="grid grid-cols-3 p-2">
+                      <span className="text-neutral-500 uppercase text-[10px]">Engine No.</span>
+                      <span className="col-span-2 font-bold text-neutral-900">{selectedCar.engine}</span>
+                    </div>
+                    <div className="grid grid-cols-3 p-2 bg-neutral-50">
+                      <span className="text-neutral-500 uppercase text-[10px]">Color / Odo</span>
+                      <span className="col-span-2 text-neutral-900">{selectedCar.color} • {selectedCar.mileage}</span>
+                    </div>
+                    <div className="grid grid-cols-3 p-2">
+                      <span className="text-neutral-500 uppercase text-[10px]">L/C Reference</span>
+                      <span className="col-span-2 text-neutral-900">{selectedCar.lcNo}</span>
+                    </div>
+                  </div>
+
+                  {/* Features */}
+                  {selectedCar.features && (
+                    <div className="text-xs">
+                      <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-500 block mb-1">
+                        Features &amp; Options:
+                      </span>
+                      <p className="text-neutral-700 text-xs leading-relaxed bg-[#fbfaf8] border border-neutral-200 p-2.5 font-mono text-[11px]">
+                        {selectedCar.features}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Price */}
+                  <div className="pt-2 border-t border-neutral-200 flex items-center justify-between">
+                    <div>
+                      <span className="block text-[10px] font-mono text-neutral-400 uppercase">Stock Price</span>
+                      <span className="text-xl font-bold font-mono text-neutral-950">
+                        {selectedCar.isSold ? (
+                          <span className="text-neutral-400">Pre-Sold</span>
+                        ) : (
+                          <span>BDT {selectedCar.priceLakh} Lac</span>
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTAs */}
+                <div className="pt-5 border-t border-neutral-200 flex flex-wrap gap-2 mt-4">
+                  <a
+                    href={`tel:+8801929918408`}
+                    className="flex-1 min-w-[140px] inline-flex items-center justify-center gap-2 bg-[#111318] hover:bg-amber-700 text-white py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors rounded-none text-center"
+                  >
+                    <FaPhoneAlt className="text-[10px]" />
+                    <span>Call Hotline</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/sampandhaka"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 border border-neutral-300 hover:border-neutral-900 text-neutral-800 px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors rounded-none text-center"
+                  >
+                    <FaFacebookF className="text-[11px]" />
+                    <span>Enquire</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}

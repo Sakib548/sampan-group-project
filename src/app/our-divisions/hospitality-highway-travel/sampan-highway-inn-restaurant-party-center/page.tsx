@@ -4,7 +4,7 @@ import SampanHighwayInnPartyCenterClient from "./components/SampanHighwayInnPart
 export const metadata: Metadata = {
   title: "Sampan Highway Inn Restaurant & Party Center | Grand Event Hall & Fine Highway Dining",
   description:
-    "Sampan Highway Inn Restaurant & Party Center in Gopalganj (KM 74, Dhaka–Khulna Highway) offers central AC banquet halls for 500+ guests, wedding reception packages, and fine highway dining.",
+    "Sampan Highway Inn Restaurant & Party Center in Gopalganj (KM 103, Dhaka–Khulna Highway) offers central AC banquet halls for 500+ guests, wedding reception packages, and fine highway dining.",
   keywords: [
     "Sampan Highway Inn Restaurant & Party Center",
     "Highway Party Center Bangladesh",

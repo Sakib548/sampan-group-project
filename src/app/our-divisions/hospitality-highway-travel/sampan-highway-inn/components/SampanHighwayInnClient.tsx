@@ -40,7 +40,7 @@ export default function SampanHighwayInnClient() {
       <FacilitiesList />
 
       {/* DEDICATED HIGHWAY-ROUTE MAP (Corridor Map & Mile Markers) */}
-      <HighwayRouteVisualizer />
+      {/* <HighwayRouteVisualizer /> */}
 
       {/* LOCATION + LIVE MAP (GPS Coordinates, Hub Distances & Embedded Map) */}
       <LocationAndMap />

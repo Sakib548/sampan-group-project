@@ -44,7 +44,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
           {/* Highway Corridor Square Eyebrow Badge */}
           {/* <div className="inline-flex items-center gap-3 border border-emerald-500/50 bg-emerald-950/60 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-emerald-400">
               <span className="h-2 w-2 rounded-none bg-emerald-400" />
-              <span>Dhaka – Khulna National Highway • KM 74 Transit Hub</span>
+              <span>Dhaka – Khulna National Highway • KM 103 Transit Hub</span>
             </div> */}
 
           {/* Main Headline */}
@@ -57,7 +57,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
 
           {/* Tagline & Subheading */}
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-emerald-400/80 pl-4">
-            24/7 gourmet dining and ultra-fast EV supercharging on the Dhaka–Khulna corridor in Gopalganj (KM 74).
+            24/7 gourmet dining and ultra-fast EV supercharging on the Dhaka–Khulna corridor in Gopalganj (KM 103).
           </p>
 
           {/* Square Quick Action CTAs */}
@@ -65,7 +65,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
 
 
             <a
-              href="#route-map"
+              href="#location"
               className="inline-flex items-center justify-center gap-2 rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm"
             >
               <FaRoute className="text-emerald-400" />
@@ -106,7 +106,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
 
             <div className="border-l-2 border-emerald-500 pl-4">
               <p className="text-xs font-bold text-white uppercase tracking-wider">Gopalganj</p>
-              <p className="text-[11px] text-white/50 mt-0.5">KM 74 Transit Hub</p>
+              <p className="text-[11px] text-white/50 mt-0.5">KM 103 Transit Hub</p>
             </div>
 
             <div className="border-l-2 border-emerald-500 pl-4">

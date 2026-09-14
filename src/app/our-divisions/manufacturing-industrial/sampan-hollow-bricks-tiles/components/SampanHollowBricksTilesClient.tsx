@@ -22,58 +22,163 @@ const heroBackground = "/images/our-divisions/sampan-hollow-bricks/Image-Edit.jp
 interface ProductItem {
   id: string;
   name: string;
-  category: string;
+  category: "blocks" | "pavers" | "infrastructure";
+  categoryLabel: string;
   image: string;
   specs: string;
   description: string;
+  contain?: boolean;
 }
 
 const mainProducts: ProductItem[] = [
   {
-    id: "hollow-block-8",
-    name: "8-Inch Standard Hollow Concrete Block",
-    category: "Load-Bearing Blocks",
+    id: "hollow-block-2-core",
+    name: "2-Core Standard Hollow Block (4″, 6″ & 8″)",
+    category: "blocks",
+    categoryLabel: "Structural Hollow Block",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/Hollow Block_4″_6″_8″.png",
+    specs: "390 × 190 × 190 mm (8″) / 390 × 140 × 190 mm (6″) | >10 MPa Strength",
+    description: "Vibro-compacted dual-cell load-bearing concrete hollow blocks engineered for external boundary walls, columns, and structural perimeter masonry.",
+    contain: true,
+  },
+  {
+    id: "hollow-block-3-core",
+    name: "3-Core Multi-Cavity Hollow Block (4″, 6″ & 8″)",
+    category: "blocks",
+    categoryLabel: "Load-Bearing & Insulated",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/Hollow Block+4″, 6″ & 8″.png",
+    specs: "3-Chamber Vertical Cavities | High Compressive Strength & Thermal Barrier",
+    description: "Uniform multi-chamber hollow blocks with reinforced vertical cores for rebar/mortar infill, conduit routing, and superior thermal insulation.",
+    contain: true,
+  },
+  {
+    id: "hollow-block-90mm",
+    name: "90 mm Slim Partition Hollow Block",
+    category: "blocks",
+    categoryLabel: "Interior Partition Block",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/Hollow_Block _90_mm.png",
+    specs: "390 × 90 × 190 mm | Space-Saving Light Partition",
+    description: "Lightweight 90 mm slim 3-core concrete block for internal wall separations, reducing dead weight load on multi-storey structures while maximizing usable floor area.",
+    contain: true,
+  },
+  {
+    id: "hollow-block-stretcher",
+    name: "Grooved Stretcher Hollow Masonry Block",
+    category: "blocks",
+    categoryLabel: "Stretcher Masonry Block",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/Hollow Block 4″_6″_8″.png",
+    specs: "Mortar-Locking End Grooves • 4″ / 6″ / 8″ Modules",
+    description: "Features specialized interlocking end mortar keys that lock neighboring blocks rigidly, preventing rainwater seepage and accelerating masonry laying speed.",
+    contain: true,
+  },
+  {
+    id: "solid-block-4-6-8",
+    name: "Solid Concrete Masonry Block (4″, 6″ & 8″)",
+    category: "blocks",
+    categoryLabel: "Solid Dense Masonry",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/Solid Block_4″_6″_8″.png",
+    specs: "400 × 200 × 100/150/200 mm | >15 MPa Extreme Compressive Load",
+    description: "Maximum density solid concrete blocks built for heavy basement retaining walls, structural plinths, heavy foundation courses, and acoustic isolation rooms.",
+    contain: true,
+  },
+  {
+    id: "i-shape-paver",
+    name: "I-Shape (Uni) Heavy-Duty Interlocking Paver",
+    category: "pavers",
+    categoryLabel: "Interlocking Traffic Paver",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/I_shape_Interlocking_Paver.png",
+    specs: "200 × 160 × 60/80 mm | Dual-Tone Non-Skid Finish | >35 MPa",
+    description: "Heavy-traffic interlocking bone/I-shape paver designed to transfer heavy wheel shear forces across adjacent blocks without shifting or rutting.",
+    contain: true,
+  },
+  {
+    id: "trihex-paver",
+    name: "Trihex Patterned Interlocking Paver (60 mm)",
+    category: "pavers",
+    categoryLabel: "Architectural Traffic Paver",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/Trihex_Paver_60_mm.png",
+    specs: "60 mm Thickness | Textured Non-Skid Geometric Face | >30 MPa",
+    description: "Triple-hexagonal interlocking paver with textured anti-slip surface ridges, offering high decorative aesthetic appeal for walkways, public plazas, and parking areas.",
+    contain: true,
+  },
+  {
+    id: "hexagonal-paver",
+    name: "Hexagonal Pavement Block (300 × 150 × 60 mm)",
+    category: "pavers",
+    categoryLabel: "Decorative Pavement Block",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/Hexagonal_Block_300 x150 x 60_mm.png",
+    specs: "300 × 150 × 60 mm | Terracotta Pigment Option | >35 MPa",
+    description: "Classic geometric hexagonal paver block engineered for upscale pedestrian zones, garden walkways, residential driveways, and institutional campuses.",
+    contain: true,
+  },
+  {
+    id: "uni-paver-wavy",
+    name: "Uni-Paver Wave Interlocking Block (222 × 109.5 mm)",
+    category: "pavers",
+    categoryLabel: "High-Stress Industrial Paver",
+    image: "/images/our-divisions/sampan-hollow-bricks/Uni_Paver_222×109.5_mm.png",
+    specs: "222 × 109.5 × 60/80 mm | Heavy Axle Rating | >40 MPa",
+    description: "Continuous wavy interlocking block system delivering maximum joint interlock for industrial freight yards, port container aprons, and fueling terminals.",
+    contain: true,
+  },
+  {
+    id: "curb-stone-500",
+    name: "Precast Concrete Road Curb Stone",
+    category: "infrastructure",
+    categoryLabel: "Roadway Infrastructure",
+    image: "/images/our-divisions/sampan-hollow-bricks/brick_paver/Curb_Stone_500 X 400 X 120 mm.png",
+    specs: "500 × 400 × 120 mm | Chamfered Edge Roadway Barrier",
+    description: "Heavy precast concrete road curbing providing edge restraint for pavement layers, roadway edge delineation, and median divider protection along highways.",
+    contain: true,
+  },
+  {
+    id: "factory-hollow-batch",
+    name: "Automated Plant Production Batch",
+    category: "blocks",
+    categoryLabel: "Factory Cured Units",
     image: "/images/our-divisions/sampan-hollow-bricks/Our-Products.jpg",
-    specs: "390 × 190 × 190 mm | >10 MPa Strength",
-    description: "High-density vibro-compacted hollow blocks engineered for exterior perimeter and load-bearing construction walls.",
+    specs: "Computerized Vibro-Compaction • Alfadanga Plant",
+    description: "Continuous automated manufacturing cycle ensuring uniform cement hydration, sharp crisp edges, and consistent dimensional accuracy across every pallet.",
+    contain: false,
   },
   {
-    id: "hollow-block-6",
-    name: "6-Inch Interior Partition Hollow Block",
-    category: "Partition Blocks",
+    id: "factory-stack-cured",
+    name: "Cured Block Staging & Palletized Inventory",
+    category: "blocks",
+    categoryLabel: "High-Volume Staging",
     image: "/images/our-divisions/sampan-hollow-bricks/Our-Products3.jpg",
-    specs: "390 × 140 × 190 mm | High Thermal Barrier",
-    description: "Lightweight, uniform concrete partition blocks offering quick mortar alignment, sound insulation, and reduced dead load.",
+    specs: "High-Capacity Storage • Ready for Immediate Truck Dispatch",
+    description: "Extensive cured stock kept in Alfadanga Industrial Park ready for immediate bulk delivery to construction sites across Faridpur, Dhaka, and nationwide.",
+    contain: false,
   },
   {
-    id: "uni-paver",
-    name: "Heavy-Duty Interlocking Paver Bricks",
-    category: "Pavement & Driveway",
+    id: "factory-paver-yard",
+    name: "Industrial Interlocking Paver Staging",
+    category: "pavers",
+    categoryLabel: "Paver Yard Staging",
     image: "/images/our-divisions/sampan-hollow-bricks/Our-Products-3.jpg",
-    specs: "200 × 100 × 80 mm | >35 MPa Strength",
-    description: "Heavy-traffic interlocking pavement bricks formulated for factory accessways, fuel stations, and urban parking zones.",
+    specs: "Multi-Tonne Paver Inventory • Industrial Grade Testing",
+    description: "Palletized interlocking pavers ready for prompt crane-unloading at highway service areas, industrial park internal roads, and commercial parking projects.",
+    contain: false,
   },
 ];
 
 interface ParkingTile {
   id: string;
-  name: string;
-  code: string;
   image: string;
-  texture: string;
 }
 
 const parkingTilesCollection: ParkingTile[] = [
-  { id: "pt-1", name: "Geometric Star Paver", code: "Model PT-01", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-1.jpg", texture: "Heavy-Duty Grip" },
-  { id: "pt-2", name: "Cross Fluted Surface", code: "Model PT-02", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-2.jpg", texture: "Anti-Skid Ribbed" },
-  { id: "pt-3", name: "Interlock Wave Pattern", code: "Model PT-03", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-3.jpg", texture: "Traffic Load Rated" },
-  { id: "pt-4", name: "Square Matrix Paver", code: "Model PT-04", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-4.jpg", texture: "High-Abrasion Proof" },
-  { id: "pt-5", name: "Diamond Check Textured", code: "Model PT-05", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-5.jpg", texture: "All-Weather Drainage" },
-  { id: "pt-6", name: "Radial Cobble Design", code: "Model PT-06", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-6.jpg", texture: "Heavy Axle Bearing" },
-  { id: "pt-7", name: "Sunburst Relief Paver", code: "Model PT-07", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-7.jpg", texture: "Commercial Parking" },
-  { id: "pt-8", name: "Hexagonal Grip Tile", code: "Model PT-08", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-8.jpg", texture: "Slip-Resistant" },
-  { id: "pt-9", name: "Multi-Groove Tread", code: "Model PT-09", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-9.jpg", texture: "Wash-Resistant" },
-  { id: "pt-10", name: "Classic Stud Pavement", code: "Model PT-10", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-10.jpg", texture: "High Tensile Concrete" },
+  { id: "pt-1", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-1.jpg" },
+  { id: "pt-2", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-2.jpg" },
+  { id: "pt-3", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-3.jpg" },
+  { id: "pt-4", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-4.jpg" },
+  { id: "pt-5", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-5.jpg" },
+  { id: "pt-6", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-6.jpg" },
+  { id: "pt-7", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-7.jpg" },
+  { id: "pt-8", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-8.jpg" },
+  { id: "pt-9", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-9.jpg" },
+  { id: "pt-10", image: "/images/our-divisions/sampan-hollow-bricks/Parking-Tiles-10.jpg" },
 ];
 
 const ecoAdvantages = [
@@ -94,8 +199,27 @@ const ecoAdvantages = [
   },
 ];
 
+interface ModalItem {
+  image: string;
+  title: string;
+  category?: string;
+  specs?: string;
+}
+
 export default function SampanHollowBricksTilesClient() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedModalItem, setSelectedModalItem] = useState<ModalItem | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("all");
+
+  const categories = [
+    { id: "all", label: "All Products", count: mainProducts.length },
+    { id: "blocks", label: "Hollow & Solid Blocks", count: mainProducts.filter((p) => p.category === "blocks").length },
+    { id: "pavers", label: "Interlocking Pavers", count: mainProducts.filter((p) => p.category === "pavers").length },
+    { id: "infrastructure", label: "Roadway Curb Stones", count: mainProducts.filter((p) => p.category === "infrastructure").length },
+  ];
+
+  const filteredProducts = activeCategory === "all"
+    ? mainProducts
+    : mainProducts.filter((p) => p.category === activeCategory);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -134,7 +258,7 @@ export default function SampanHollowBricksTilesClient() {
 
             {/* Shortened Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-red-500/80 pl-4">
-              Automated eco-friendly concrete hollow blocks, interlocking pavers, and heavy-duty parking tiles plant inside Sampan Industrial Park, Alfadanga, Faridpur.
+              Automated eco-friendly concrete hollow blocks, solid masonry, interlocking pavers, and heavy-duty parking tiles plant inside Sampan Industrial Park, Alfadanga, Faridpur.
             </p>
 
             {/* Action Buttons */}
@@ -143,7 +267,7 @@ export default function SampanHollowBricksTilesClient() {
                 onClick={() => scrollTo("products")}
                 className="group inline-flex items-center justify-center gap-2 rounded-none bg-red-700 hover:bg-red-600 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-red-950/40 cursor-pointer"
               >
-                <span>Product Catalogue</span>
+                <span>Product Catalogue ({mainProducts.length})</span>
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
@@ -173,12 +297,12 @@ export default function SampanHollowBricksTilesClient() {
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">100% Eco Green</p>
               </div>
               <div className="border-l-2 border-red-500 pl-4">
-                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">10+ Tile Types</p>
-                <p className="text-[11px] text-white/60 mt-0.5 font-mono">Heavy Vehicle Rated</p>
+                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">10+ Pavers &amp; Blocks</p>
+                <p className="text-[11px] text-white/60 mt-0.5 font-mono">High Compressive</p>
               </div>
               <div className="border-l-2 border-red-500 pl-4">
-                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Vibro-Press</p>
-                <p className="text-[11px] text-white/60 mt-0.5 font-mono">High Compressive</p>
+                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">10 Tile Types</p>
+                <p className="text-[11px] text-white/60 mt-0.5 font-mono">Heavy Vehicle Rated</p>
               </div>
             </div>
 
@@ -186,88 +310,84 @@ export default function SampanHollowBricksTilesClient() {
         </div>
       </section>
 
-      {/* ================= 2. ECO ADVANTAGES & CAPACITY ================= */}
-      {/* <section className="py-20 sm:py-24 px-6 sm:px-10 lg:px-16 bg-[#fcfbf9] border-b border-neutral-200">
-        <div className="mx-auto max-w-[1440px]">
-
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div>
-              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
-                Sustainable construction. <br />
-                <span className="text-red-700">Engineered concrete strength.</span>
-              </h2>
-            </div>
-            <p className="max-w-md text-xs sm:text-sm text-neutral-600 leading-relaxed">
-              Replacing burnt clay bricks with high-strength vibro-pressed concrete blocks manufactured cleanly in Alfadanga, Faridpur.
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-3">
-            {ecoAdvantages.map((adv, idx) => {
-              const Icon = adv.icon;
-              return (
-                <div
-                  key={idx}
-                  className="group border border-neutral-200 bg-white p-6 sm:p-7 rounded-none hover:border-red-600 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="w-10 h-10 bg-red-50 border border-red-200 flex items-center justify-center text-red-700 rounded-none group-hover:bg-red-600 group-hover:text-white transition-colors mb-6">
-                      <Icon className="text-base" />
-                    </div>
-                    <h3 className="text-lg font-bold text-neutral-950 group-hover:text-red-700 transition-colors">
-                      {adv.title}
-                    </h3>
-                    <p className="mt-3 text-xs text-neutral-600 leading-relaxed">
-                      {adv.desc}
-                    </p>
-                  </div>
-                  <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-[11px] font-mono text-red-800 font-bold">
-                    <span>BSTI Standard Compliant</span>
-                    <FaCheck className="text-[10px] text-red-600" />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-        </div>
-      </section> */}
-
-      {/* ================= 3. CORE PRODUCTS (HOLLOW BLOCKS & PAVERS) ================= */}
+      {/* ================= 3. CORE PRODUCTS (HOLLOW BLOCKS, PAVERS & CURB STONES) ================= */}
       <section id="products" className="py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="h-px w-10 bg-red-600" />
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-red-700">
+                  Engineered Product Catalogue
+                </p>
+              </div>
               <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
-                Hollow Blocks &amp; Pavement Pavers
+                Hollow Blocks, Pavers &amp; Curb Stones
               </h2>
             </div>
             <p className="max-w-md text-xs sm:text-sm text-neutral-500 leading-relaxed">
-              Precision manufactured for multi-storey residential projects, perimeter walls, and commercial pavement infrastructure.
+              Precision manufactured for multi-storey residential projects, perimeter walls, industrial factory roadways, and highway edge restraints.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-3">
-            {mainProducts.map((product) => (
+          {/* Category Filter Tabs */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-12 pb-6 border-b border-neutral-200">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-4 py-2.5 rounded-none font-mono text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+                  activeCategory === cat.id
+                    ? "bg-red-700 text-white shadow-sm"
+                    : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
+                }`}
+              >
+                <span>{cat.label}</span>
+                <span className={`ml-2 text-[10px] ${activeCategory === cat.id ? "text-white/80" : "text-neutral-500"}`}>
+                  ({cat.count})
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Products Grid */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {filteredProducts.map((product) => (
               <article
                 key={product.id}
-                onClick={() => setSelectedImage(product.image)}
-                className="group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-red-600 transition-all duration-300 hover:shadow-md cursor-pointer min-h-[380px]"
+                onClick={() =>
+                  setSelectedModalItem({
+                    image: product.image,
+                    title: product.name,
+                    category: product.categoryLabel,
+                    specs: product.specs,
+                  })
+                }
+                className="group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-red-600 transition-all duration-300 hover:shadow-lg cursor-pointer min-h-[420px]"
               >
                 <div className="absolute top-0 left-0 h-[3px] w-0 bg-red-600 transition-all duration-500 group-hover:w-full z-20" />
 
-                <div className="relative w-full h-56 overflow-hidden bg-neutral-200">
+                <div
+                  className={`relative w-full h-64 overflow-hidden border-b border-neutral-100 ${
+                    product.contain ? "bg-[#f8f6f3] flex items-center justify-center p-6" : "bg-neutral-200"
+                  }`}
+                >
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className={`${
+                      product.contain
+                        ? "object-contain p-4 transition-transform duration-700 group-hover:scale-105 drop-shadow-md"
+                        : "object-cover transition-transform duration-700 group-hover:scale-105"
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span className="inline-flex items-center gap-1 font-mono text-[10px] text-white bg-red-700 px-2 py-1">
-                      <FaExpand className="text-[9px]" /> Click to Zoom
+                    <span className="inline-flex items-center gap-1.5 font-mono text-[10px] text-white bg-red-700 px-2.5 py-1">
+                      <FaExpand className="text-[9px]" /> Click to Enlarge
                     </span>
                   </div>
                 </div>
@@ -275,7 +395,7 @@ export default function SampanHollowBricksTilesClient() {
                 <div className="p-6 flex flex-col flex-1 justify-between space-y-4">
                   <div>
                     <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-red-700 block mb-1">
-                      {product.category}
+                      {product.categoryLabel}
                     </span>
                     <h3 className="text-lg font-bold text-neutral-950 group-hover:text-red-700 transition-colors">
                       {product.name}
@@ -314,37 +434,30 @@ export default function SampanHollowBricksTilesClient() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
-            {parkingTilesCollection.map((tile) => (
+            {parkingTilesCollection.map((tile, idx) => (
               <div
                 key={tile.id}
-                onClick={() => setSelectedImage(tile.image)}
-                className="group relative flex flex-col bg-[#161010] border border-white/10 hover:border-red-500 rounded-none overflow-hidden transition-all duration-300 hover:shadow-lg cursor-pointer"
+                onClick={() =>
+                  setSelectedModalItem({
+                    image: tile.image,
+                    title: `Heavy-Duty Parking Tile (Design #${idx + 1})`,
+                    category: "Vehicular Parking & Driveway Tiles",
+                    specs: "Heavy Axle Load Support • Anti-Skid Grip",
+                  })
+                }
+                className="group relative aspect-square w-full bg-[#161010] border border-white/10 hover:border-red-500 rounded-none overflow-hidden transition-all duration-300 hover:shadow-lg cursor-pointer"
               >
-                <div className="relative aspect-square w-full overflow-hidden bg-black/40">
-                  <Image
-                    src={tile.image}
-                    alt={tile.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 20vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2.5">
-                    <span className="font-mono text-[9px] text-white flex items-center gap-1">
-                      <FaExpand className="text-[8px]" /> Enlarge
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-3">
-                  <span className="font-mono text-[9px] font-bold text-red-400 block mb-0.5">
-                    {tile.code}
+                <Image
+                  src={tile.image}
+                  alt={`Parking Tile Design #${idx + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 20vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2.5">
+                  <span className="font-mono text-[9px] text-white flex items-center gap-1">
+                    <FaExpand className="text-[8px]" /> Enlarge
                   </span>
-                  <h4 className="text-xs font-bold text-white truncate">
-                    {tile.name}
-                  </h4>
-                  <p className="font-mono text-[10px] text-neutral-400 mt-1">
-                    {tile.texture}
-                  </p>
                 </div>
               </div>
             ))}
@@ -482,30 +595,64 @@ export default function SampanHollowBricksTilesClient() {
         </div>
       </section>
 
-      {/* Lightbox Modal (Square Style) */}
-      {selectedImage && (
+      {/* Lightbox Modal (Square Architectural Spec Style) */}
+      {selectedModalItem && (
         <div
-          onClick={() => setSelectedImage(null)}
+          onClick={() => setSelectedModalItem(null)}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-8 animate-in fade-in"
         >
           <button
-            onClick={() => setSelectedImage(null)}
-            className="absolute top-6 right-6 text-white p-3 rounded-none bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+            onClick={() => setSelectedModalItem(null)}
+            className="absolute top-6 right-6 text-white p-3 rounded-none bg-white/10 hover:bg-white/20 transition-colors cursor-pointer z-30"
             aria-label="Close Lightbox"
           >
             <FaTimes className="text-lg" />
           </button>
+          
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl w-full max-h-[85vh] aspect-[16/10] rounded-none overflow-hidden border border-white/20 shadow-2xl bg-black"
+            className="relative max-w-4xl w-full max-h-[90vh] rounded-none overflow-hidden border border-white/20 shadow-2xl bg-[#141010] flex flex-col"
           >
-            <Image
-              src={selectedImage}
-              alt="Sampan Hollow Bricks & Tiles Preview"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain"
-            />
+            <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-[#1a1414] flex items-center justify-center p-6">
+              <Image
+                src={selectedModalItem.image}
+                alt={selectedModalItem.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 80vw"
+                className="object-contain p-4"
+              />
+            </div>
+
+            <div className="p-5 sm:p-6 bg-[#110c0c] border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                {selectedModalItem.category && (
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-red-500 block mb-1">
+                    {selectedModalItem.category}
+                  </span>
+                )}
+                <h3 className="text-lg sm:text-xl font-bold text-white">
+                  {selectedModalItem.title}
+                </h3>
+                {selectedModalItem.specs && (
+                  <p className="font-mono text-xs text-neutral-400 mt-1">
+                    {selectedModalItem.specs}
+                  </p>
+                )}
+              </div>
+
+              <div className="shrink-0 flex items-center gap-3">
+                <button
+                  onClick={() => {
+                    setSelectedModalItem(null);
+                    scrollTo("location");
+                  }}
+                  className="inline-flex items-center gap-2 rounded-none bg-red-700 hover:bg-red-600 text-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                >
+                  <span>Request Quote</span>
+                  <FiArrowRight className="text-xs" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}

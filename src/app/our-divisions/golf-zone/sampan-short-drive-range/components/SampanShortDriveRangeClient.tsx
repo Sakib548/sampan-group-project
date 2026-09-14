@@ -17,7 +17,7 @@ import {
 import { FiArrowRight } from "react-icons/fi";
 
 // --- Hero & Gallery Images (Distinct from Golf Academy) ---
-const heroBackground = "/images/our-divisions/sampan-golf-academy/golf-ball-field.jpg";
+const heroBackground = "/images/our-divisions/sampan-golf-academy/range-hero.jpeg";
 
 interface GalleryItem {
   id: string;
@@ -159,8 +159,8 @@ export default function SampanShortDriveRangeClient() {
             className="object-cover object-center opacity-75"
           />
           {/* Dual-layer dark gradient for optimal contrast and readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040e08]/95 via-[#06170e]/85 to-[#06170e]/55" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#07150d] via-transparent to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/65 to-black/30" />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-[#07150d] via-transparent to-black/50" /> */}
         </div>
 
         {/* Ambient Warm Glow */}

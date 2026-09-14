@@ -18,9 +18,9 @@ const heroBackground = "/images/our-divisions/sampan-sweet-box/DSC00468.JPG";
 // Photo Gallery Items (no sweet names, pure visual showcase from folder)
 const galleryItems = [
   { id: "g-1", src: "/images/our-divisions/sampan-sweet-box/DSC00468.JPG" },
-  { id: "g-2", src: "/images/our-divisions/sampan-sweet-box/DSC00471.JPG" },
-  { id: "g-3", src: "/images/our-divisions/sampan-sweet-box/DSC00473.JPG" },
-  { id: "g-4", src: "/images/our-divisions/sampan-sweet-box/DSC00482.JPG" },
+  // { id: "g-2", src: "/images/our-divisions/sampan-sweet-box/DSC00471.JPG" },
+  // { id: "g-3", src: "/images/our-divisions/sampan-sweet-box/DSC00473.JPG" },
+  // { id: "g-4", src: "/images/our-divisions/sampan-sweet-box/DSC00482.JPG" },
   { id: "g-5", src: "/images/our-divisions/sampan-sweet-box/Image-2.jpg" },
   { id: "g-6", src: "/images/our-divisions/sampan-sweet-box/Image-1.jpg" },
   { id: "g-7", src: "/images/our-divisions/sampan-sweet-box/Image-3.jpg" },
@@ -145,21 +145,21 @@ export default function SampanSweetBoxClient() {
             sizes="100vw"
             className="object-cover object-center opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/72 to-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-black/20 to-black/10" />
 
         </div>
 
-        <div className="pointer-events-none absolute top-1/4 left-10 w-80 h-80 bg-amber-500/15 rounded-full blur-[120px] z-0" />
-        <div className="pointer-events-none absolute bottom-10 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-[100px] z-0" />
+        {/* <div className="pointer-events-none absolute top-1/4 left-10 w-80 h-80 bg-amber-500/15 rounded-full blur-[120px] z-0" />
+        <div className="pointer-events-none absolute bottom-10 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-[100px] z-0" /> */}
 
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-6">
           <div className="max-w-3xl space-y-4">
 
             {/* Status Badge */}
-            <div className="inline-flex items-center gap-2.5 border border-amber-500/50 bg-amber-950/70 backdrop-blur-md px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-amber-300">
+            {/* <div className="inline-flex items-center gap-2.5 border border-amber-500/50 bg-amber-950/70 backdrop-blur-md px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-amber-300">
               <span className="h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
               <span>Dhaka-Khulna Highway • Sampan Complex, Gopalganj</span>
-            </div>
+            </div> */}
 
             {/* Headline */}
             <h1 className="text-[clamp(2.4rem,4.5vw,4.2rem)] font-bold tracking-tight text-white leading-[1.02]">

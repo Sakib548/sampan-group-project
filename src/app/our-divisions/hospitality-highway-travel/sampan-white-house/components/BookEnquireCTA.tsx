@@ -102,9 +102,9 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
                   <FaMapMarkerAlt />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-500">Corridor Location</p>
-                  <p className="text-xs font-bold text-neutral-950 mt-0.5">KM 78, Dhaka-Khulna Highway, Gopalganj</p>
-                  <p className="text-[10px] text-neutral-400 mt-1 font-mono">Zero Detour Entry Ramp</p>
+                  <p className="font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-500">Corridor Marker</p>
+                  <p className="text-xs font-bold text-neutral-950 mt-0.5">KM 103, Dhaka-Khulna Highway, Gopalganj</p>
+                  <p className="text-[10px] text-neutral-400 mt-1 font-mono">Zero Detour Slipway Entry</p>
                 </div>
               </div>
 

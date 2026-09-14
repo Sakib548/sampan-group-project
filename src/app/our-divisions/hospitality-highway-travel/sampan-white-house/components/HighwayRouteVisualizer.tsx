@@ -24,15 +24,15 @@ const routeCorridor = [
   {
     id: "padma-toll",
     name: "Padma Bridge Toll Plaza",
-    km: 35,
-    timeFromDhaka: "32 min",
+    km: 31,
+    timeFromDhaka: "28 min",
     type: "Major Landmark",
     detail: "Expressway link to Southern Divisions",
   },
   {
     id: "bhanga",
     name: "Bhanga Mega Interchange",
-    km: 58,
+    km: 73,
     timeFromDhaka: "50 min",
     type: "Cloverleaf Junction",
     detail: "Direct connection to Barishal, Khulna & Faridpur",
@@ -40,36 +40,36 @@ const routeCorridor = [
   {
     id: "sampan-white-house",
     name: "SAMPAN HIGHWAY MOTEL & WHITE HALL",
-    km: 78,
-    timeFromDhaka: "68 min",
+    km: 103,
+    timeFromDhaka: "1h 15m",
     isDestination: true,
     type: "★ Hotel, Motel & Banquet",
-    detail: "Highway Frontage • Quiet Rest Zone • Gated 150+ Parking",
+    detail: "Highway Frontage • Quiet Rest Zone • Gated 150+ Parking (Gopalganj)",
   },
   {
     id: "gopalganj",
     name: "Gopalganj City Terminal",
-    km: 110,
-    timeFromDhaka: "1h 35m",
+    km: 144,
+    timeFromDhaka: "1h 50m",
     type: "Regional Hub",
     detail: "Gateway to Southern Agri & Heritage Zones",
   },
   {
     id: "khulna",
     name: "Khulna Divisional Hub",
-    km: 180,
-    timeFromDhaka: "2h 40m",
+    km: 201,
+    timeFromDhaka: "2h 30m",
     type: "Southern Port Hub",
     detail: "Terminal connection to Mongla & Sundarbans",
   },
 ];
 
 const origins = [
-  { id: "dhaka", name: "Dhaka (Motijheel / Gulshan)", distanceToInn: "78 km", estTime: "1h 08m", advice: "Ideal midday rest and garden lunch before continuing down south." },
-  { id: "narayanganj", name: "Narayanganj / Postogola", distanceToInn: "66 km", estTime: "58m", advice: "Smooth straight drive down the N8 corridor into our dedicated deceleration ramp." },
-  { id: "padma", name: "Padma Bridge (Jajira Side)", distanceToInn: "43 km", estTime: "34m", advice: "Quick comfort stop right after crossing the bridge for family refreshment." },
-  { id: "khulna", name: "Khulna City (Heading North)", distanceToInn: "102 km", estTime: "1h 30m", advice: "Perfect evening stopover for dinner and quiet motel sleep before Dhaka." },
-  { id: "barishal", name: "Barishal (via Bhanga)", distanceToInn: "56 km", estTime: "48m", advice: "Convenient event destination and stopover point for cross-divisional travelers." },
+  { id: "dhaka", name: "Dhaka (Motijheel / Gulshan)", distanceToInn: "103 km", estTime: "1h 15m", advice: "Ideal midday rest and garden lunch before continuing down south." },
+  { id: "narayanganj", name: "Narayanganj / Postogola", distanceToInn: "98 km", estTime: "1h 10m", advice: "Smooth straight drive down the N8 corridor into our dedicated deceleration ramp." },
+  { id: "padma", name: "Padma Bridge (Jajira Side)", distanceToInn: "68 km", estTime: "45m", advice: "Quick comfort stop right after crossing the bridge for family refreshment." },
+  { id: "khulna", name: "Khulna City (Heading North)", distanceToInn: "98 km", estTime: "1h 15m", advice: "Perfect evening stopover for dinner and quiet motel sleep before Dhaka." },
+  { id: "barishal", name: "Barishal (via Bhanga)", distanceToInn: "125 km", estTime: "1h 35m", advice: "Convenient event destination and stopover point for cross-divisional travelers." },
 ];
 
 export default function HighwayRouteVisualizer() {
@@ -98,10 +98,10 @@ export default function HighwayRouteVisualizer() {
         <div className="mb-12 rounded-none border border-neutral-200 bg-white p-6 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-neutral-200">
             <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#ca8a04]">
-              Select Your Travel Departure Origin:
+              Select Your Travel Origin
             </span>
             <span className="text-xs text-neutral-500 font-mono">
-              Live estimated transit calculations:
+              Live distance &amp; ETA to KM 103:
             </span>
           </div>
 
@@ -112,20 +112,21 @@ export default function HighwayRouteVisualizer() {
                 type="button"
                 onClick={() => setSelectedOrigin(orig.id)}
                 className={`p-3.5 rounded-none text-left border transition-all duration-300 cursor-pointer ${selectedOrigin === orig.id
-                    ? "bg-neutral-950 text-white border-neutral-950 shadow-sm"
+                    ? "bg-[#111111] text-white border-[#111111] shadow-sm"
                     : "bg-[#F5F5F2] text-neutral-800 border-neutral-200 hover:bg-neutral-100"
                   }`}
               >
                 <p className="font-mono text-[11px] font-semibold">{orig.name}</p>
-                <p className={`text-sm font-bold mt-1 ${selectedOrigin === orig.id ? "text-[#e8b84b]" : "text-[#ca8a04]"}`}>
+                <p className={`text-sm font-bold mt-1 ${selectedOrigin === orig.id ? "text-[#e8b84b]" : "text-[#ca8a04]"
+                  }`}>
                   {orig.distanceToInn} • {orig.estTime}
                 </p>
               </button>
             ))}
           </div>
 
-          {/* Traveler Recommendation Pill */}
-          <div className="mt-4 flex items-center gap-3 bg-amber-50 border border-amber-200 rounded-none p-3.5 text-xs text-amber-950">
+          {/* Travel Tip */}
+          <div className="mt-4 flex items-center gap-3 bg-amber-50 border border-amber-200 rounded-none p-3.5 text-xs text-amber-900">
             <FaCheckCircle className="text-[#ca8a04] flex-shrink-0 text-base" />
             <span><strong>Trip Advice:</strong> {currentOrigin.advice}</span>
           </div>
@@ -143,12 +144,12 @@ export default function HighwayRouteVisualizer() {
                 <h3 className="text-lg sm:text-xl font-bold text-neutral-950">
                   National Corridor Transit Map (N8 Expressway)
                 </h3>
-                <p className="text-xs text-neutral-500 font-mono mt-0.5">KM 78 Marker • Zero Detour Slipway Ramp</p>
+                <p className="text-xs text-neutral-500 font-mono mt-0.5">KM 103 Marker • Zero Detour Slipway Ramp</p>
               </div>
             </div>
 
             <div className="hidden lg:flex items-center gap-4 text-xs font-mono text-neutral-600">
-              <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-none bg-[#e8b84b]"></span> Sampan White House (KM 78)</span>
+              <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-none bg-[#e8b84b]"></span> Sampan White House (KM 103)</span>
               <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-none bg-neutral-400"></span> Interchange Hubs</span>
             </div>
           </div>

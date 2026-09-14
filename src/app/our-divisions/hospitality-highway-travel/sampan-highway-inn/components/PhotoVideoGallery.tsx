@@ -311,22 +311,16 @@ export default function PhotoVideoGallery() {
                 </button>
               </div>
 
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-900 mt-6 flex items-center justify-center">
-                <Image
-                  src="/images/projects/sampan-highway-inn.png"
-                  alt="Aerial Drone Video Cover"
-                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover opacity-60"
-                />
-                <div className="relative z-10 text-center p-6">
-                  <div className="w-16 h-16 rounded-full bg-emerald-500 text-black flex items-center justify-center mx-auto mb-4 text-xl shadow-xl shadow-emerald-500/30">
-                    <FaPlay className="ml-1" />
-                  </div>
-                  <h4 className="text-xl font-bold text-white">Full HD Stopover Experience</h4>
-                  <p className="text-xs text-neutral-300 mt-2 max-w-md mx-auto leading-relaxed">
-                    Watch traveler arrivals, VVIP "" suites, live restaurant grilling, and 120kW EV charging in motion.
-                  </p>
-                </div>
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-black mt-6 flex items-center justify-center border border-white/10">
+                <video
+                  src="/videos/sampan-highway.MP4"
+                  controls
+                  autoPlay
+                  playsInline
+                  className="w-full h-full object-contain"
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
 
               <div className="mt-6 flex justify-end">

@@ -18,7 +18,7 @@ import {
 import { FiArrowRight } from "react-icons/fi";
 
 // Hero Background: Authentic banner from mini-sampan-super-shop
-const heroBackground = "/images/our-divisions/mini-sampan-super-shop/Web-Banner.jpg";
+const heroBackground = "/images/our-divisions/mini-sampan-super-shop/Web-Banner-new.jpg";
 
 interface GalleryItem {
   id: string;

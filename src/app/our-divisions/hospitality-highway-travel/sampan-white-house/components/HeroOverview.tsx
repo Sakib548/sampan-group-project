@@ -71,7 +71,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
             </button>
 
             <a
-              href="#route-map"
+              href="#location"
               className="inline-flex items-center justify-center gap-2 rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm"
             >
               <FaRoute className="text-[#e8b84b]" />

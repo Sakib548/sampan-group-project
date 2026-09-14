@@ -18,7 +18,7 @@ interface NearbySpot {
 const nearbySpots: NearbySpot[] = [
   {
     id: "sampan-highway-inn",
-    name: "Sampan Highway Inn (KM 74)",
+    name: "Sampan Highway Inn (KM 103)",
     category: "Sister Hospitality Hub",
     distance: "6.5 km",
     driveTime: "7 mins drive",

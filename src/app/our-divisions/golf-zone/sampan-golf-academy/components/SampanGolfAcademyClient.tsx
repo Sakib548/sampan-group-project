@@ -17,7 +17,7 @@ import {
 import { FiArrowRight } from "react-icons/fi";
 
 // --- Hero & Gallery Images ---
-const heroBackground = "/images/our-divisions/sampan-golf-academy/golf-ball-field-(3).jpg";
+const heroBackground = "/images/our-divisions/sampan-golf-academy/hero.jpg";
 
 interface GalleryItem {
   id: string;
@@ -115,8 +115,8 @@ export default function SampanGolfAcademyClient() {
             className="object-cover object-center opacity-75"
           />
           {/* Dual-layer dark gradient for optimal contrast and readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040e08]/95 via-[#06170e]/85 to-[#06170e]/55" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#07150d] via-transparent to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/60 to-black/45" />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-[#07150d] via-transparent to-black/50" /> */}
         </div>
 
         {/* Ambient Emerald & Warm Glow */}
@@ -323,13 +323,12 @@ export default function SampanGolfAcademyClient() {
               <article
                 key={item.id}
                 onClick={() => setSelectedImage(item.image)}
-                className={`group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-emerald-600 transition-all duration-300 hover:shadow-md cursor-pointer ${
-                  index === 0
-                    ? "sm:col-span-2 lg:col-span-2 aspect-[16/10] min-h-[340px]"
-                    : index === 1
+                className={`group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-emerald-600 transition-all duration-300 hover:shadow-md cursor-pointer ${index === 0
+                  ? "sm:col-span-2 lg:col-span-2 aspect-[16/10] min-h-[340px]"
+                  : index === 1
                     ? "sm:col-span-2 lg:col-span-1 min-h-[340px]"
                     : "aspect-[16/10] min-h-[280px]"
-                }`}
+                  }`}
               >
                 {/* Top Green Accent Line on Hover */}
                 <div className="absolute top-0 left-0 h-[3px] w-0 bg-emerald-600 transition-all duration-500 group-hover:w-full z-20" />

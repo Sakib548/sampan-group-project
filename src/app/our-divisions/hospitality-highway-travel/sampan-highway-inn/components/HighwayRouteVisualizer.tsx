@@ -19,57 +19,57 @@ const routeCorridor = [
     km: 0,
     timeFromDhaka: "0 min",
     type: "Origin Gateway",
-    detail: "Mayor Hanif Flyover & Postogola Bridge Exit",
+    detail: "Mayor Hanif Flyover & Postogola Expressway Exit",
   },
   {
     id: "padma-toll",
     name: "Padma Bridge Toll Plaza",
-    km: 35,
-    timeFromDhaka: "32 min",
+    km: 31,
+    timeFromDhaka: "28 min",
     type: "National Landmark",
-    detail: "Mawa Toll Plaza & Expressway Interchange",
+    detail: "Mawa Toll Plaza & Bangabandhu Expressway Entry",
   },
   {
     id: "bhanga",
     name: "Bhanga Junction Interchange",
-    km: 58,
+    km: 73,
     timeFromDhaka: "50 min",
     type: "Expressway Flyover",
-    detail: "Tri-directional Cloverleaf connecting Barishal & Khulna",
+    detail: "Tri-directional Cloverleaf connecting Barishal, Faridpur & Khulna",
   },
   {
     id: "sampan-inn",
     name: "SAMPAN HIGHWAY INN",
-    km: 74,
-    timeFromDhaka: "65 min",
+    km: 103,
+    timeFromDhaka: "1h 15m",
     isDestination: true,
     type: "★ Premier Rest Stop",
-    detail: "Direct Highway Frontage • Zero Detour • Dual Slipway Entry",
+    detail: "Direct Highway Frontage • Zero Detour • Dual Slipway Entry (Gopalganj)",
   },
   {
     id: "gopalganj",
     name: "Gopalganj District Hub",
-    km: 110,
-    timeFromDhaka: "1h 35m",
+    km: 144,
+    timeFromDhaka: "1h 50m",
     type: "Regional Hub",
-    detail: "Connecting Southern Agricultural Corridors",
+    detail: "Connecting Southern Agricultural Corridors & Tungipara",
   },
   {
     id: "khulna",
     name: "Khulna Divisional City",
-    km: 180,
-    timeFromDhaka: "2h 40m",
+    km: 201,
+    timeFromDhaka: "2h 30m",
     type: "Terminal Gateway",
     detail: "Khan Jahan Ali Bridge & Southern Port Gateways",
   },
 ];
 
 const origins = [
-  { id: "dhaka", name: "Dhaka (Motijheel / Gulshan)", distanceToInn: "74 km", estTime: "1h 05m", advice: "Ideal halfway breakfast / lunch stop before continuing south." },
-  { id: "narayanganj", name: "Narayanganj / Keraniganj", distanceToInn: "62 km", estTime: "55m", advice: "Smooth expressway driving directly into our private deceleration lane." },
-  { id: "padma", name: "Padma Bridge (Jajira Side)", distanceToInn: "39 km", estTime: "30m", advice: "Quick EV top-up and coffee break right after crossing the bridge." },
-  { id: "khulna", name: "Khulna City (Heading to Dhaka)", distanceToInn: "106 km", estTime: "1h 35m", advice: "Perfect evening dinner and vehicle wash before entering Dhaka traffic." },
-  { id: "barishal", name: "Barishal (via Bhanga)", distanceToInn: "52 km", estTime: "45m", advice: "Direct link via the Bhanga interchange with zero city congestion." },
+  { id: "dhaka", name: "Dhaka (Jatrabari / Motijheel)", distanceToInn: "103 km", estTime: "1h 15m", advice: "Direct 4-lane expressway cruise down the N8 corridor straight into our private deceleration lane." },
+  { id: "padma", name: "Padma Bridge (Jajira Side)", distanceToInn: "68 km", estTime: "45m", advice: "Quick EV supercharge and coffee break after crossing the bridge." },
+  { id: "bhanga", name: "Bhanga Mega Interchange", distanceToInn: "30 km", estTime: "25m", advice: "Seamless highway cruise heading southwest towards Gopalganj/Khulna." },
+  { id: "khulna", name: "Khulna City (Heading to Dhaka)", distanceToInn: "98 km", estTime: "1h 15m", advice: "Perfect evening dinner and vehicle wash before entering Dhaka traffic." },
+  { id: "barishal", name: "Barishal (via Bhanga)", distanceToInn: "125 km", estTime: "1h 35m", advice: "Direct link via the Bhanga cloverleaf with zero city congestion." },
 ];
 
 export default function HighwayRouteVisualizer() {
@@ -145,12 +145,12 @@ export default function HighwayRouteVisualizer() {
                 <h3 className="text-lg sm:text-xl font-bold text-neutral-950">
                   Dhaka – Padma Bridge – Bhanga – Khulna Highway Corridor (N8)
                 </h3>
-                <p className="text-xs text-neutral-500 font-mono mt-0.5">Total Length: 180 KM • 4-Lane High-Speed Controlled Access</p>
+                <p className="text-xs text-neutral-500 font-mono mt-0.5">Total Length: 201 KM • 4-Lane High-Speed Controlled Access</p>
               </div>
             </div>
 
             <div className="hidden lg:flex items-center gap-4 text-xs font-mono text-neutral-600">
-              <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-none bg-emerald-700"></span> Sampan Highway Inn (KM 74)</span>
+              <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-none bg-emerald-700"></span> Sampan Highway Inn (KM 103)</span>
               <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-none bg-neutral-400"></span> Interchanges</span>
             </div>
           </div>

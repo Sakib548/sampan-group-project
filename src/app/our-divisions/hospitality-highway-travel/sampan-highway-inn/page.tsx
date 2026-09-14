@@ -4,7 +4,7 @@ import SampanHighwayInnClient from "./components/SampanHighwayInnClient";
 export const metadata: Metadata = {
   title: "Sampan Highway Inn | Luxury Highway Transit & Hospitality Hub",
   description:
-    "Bangladesh's premier highway stopover on the Dhaka–Khulna Corridor (KM 74, Gopalganj). Featuring VVIP suites, 24/7 authentic farm-fresh dining, 120kW EV supercharging, and celebration banquet halls.",
+    "Bangladesh's premier highway stopover on the Dhaka–Khulna Corridor (KM 103, Gopalganj). Featuring VVIP suites, 24/7 authentic farm-fresh dining, 120kW EV supercharging, and celebration banquet halls.",
   keywords: [
     "Sampan Highway Inn",
     "Dhaka Khulna Highway Hotel",

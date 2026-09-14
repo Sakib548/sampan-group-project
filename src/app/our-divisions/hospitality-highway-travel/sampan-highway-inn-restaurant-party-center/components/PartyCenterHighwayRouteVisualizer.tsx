@@ -18,48 +18,48 @@ const routeCorridor = [
     km: 0,
     timeFromDhaka: "0 min",
     type: "Origin Gateway",
-    detail: "Mayor Hanif Flyover & Postogola Bridge Exit",
+    detail: "Mayor Hanif Flyover & Postogola Expressway Exit",
   },
   {
     id: "padma-toll",
     name: "Padma Bridge Toll Plaza",
-    km: 35,
-    timeFromDhaka: "32 min",
+    km: 31,
+    timeFromDhaka: "28 min",
     type: "National Landmark",
-    detail: "Mawa Toll Plaza & Expressway Interchange",
+    detail: "Mawa Toll Plaza & Bangabandhu Expressway Entry",
   },
   {
     id: "bhanga",
     name: "Bhanga Junction Interchange",
-    km: 58,
+    km: 73,
     timeFromDhaka: "50 min",
     type: "Expressway Flyover",
-    detail: "Tri-directional Cloverleaf connecting Barishal & Khulna",
+    detail: "Tri-directional Cloverleaf connecting Barishal, Faridpur & Khulna",
   },
   {
     id: "party-center",
     name: "SAMPAN HIGHWAY INN & PARTY CENTER",
-    km: 74,
-    timeFromDhaka: "65 min",
+    km: 103,
+    timeFromDhaka: "1h 15m",
     isDestination: true,
     type: "★ Premier Event Venue",
-    detail: "Direct Highway Frontage • Dedicated Valet Parking • Dual Slipway Entry",
+    detail: "Direct Highway Frontage • Dedicated Valet Parking • Dual Slipway Entry (Gopalganj)",
   },
   {
     id: "gopalganj",
     name: "Gopalganj District Hub",
-    km: 110,
-    timeFromDhaka: "1h 35m",
+    km: 144,
+    timeFromDhaka: "1h 50m",
     type: "Regional Hub",
-    detail: "Connecting Southern Agricultural Corridors",
+    detail: "Connecting Southern Agricultural Corridors & Tungipara",
   },
   {
     id: "khulna",
     name: "Khulna Divisional City",
-    km: 180,
-    timeFromDhaka: "2h 15m",
+    km: 201,
+    timeFromDhaka: "2h 30m",
     type: "Terminal Gateway",
-    detail: "Rupsha Bridge & Industrial Port Connection",
+    detail: "Khan Jahan Ali Bridge & Southern Port Gateways",
   },
 ];
 
@@ -67,36 +67,36 @@ const origins = [
   {
     id: "dhaka",
     name: "From Dhaka (Jatrabari / Motijheel)",
-    distanceToInn: "74 km",
-    estTime: "1h 05m",
+    distanceToInn: "103 km",
+    estTime: "1h 15m",
     advice: "Take Mayor Hanif Flyover down to Postogola, connect with the 4-Lane N8 Expressway directly to our gates.",
   },
   {
     id: "padma",
     name: "From Padma Bridge (Jajira Toll)",
-    distanceToInn: "39 km",
-    estTime: "30 min",
+    distanceToInn: "68 km",
+    estTime: "45 min",
     advice: "Follow the straight southern alignment of the expressway; our illuminated venue is visible 1 km in advance.",
   },
   {
     id: "bhanga",
     name: "From Bhanga Interchange",
-    distanceToInn: "16 km",
-    estTime: "14 min",
+    distanceToInn: "30 km",
+    estTime: "25 min",
     advice: "Keep right after the roundabout towards the southern highway corridor; take our dedicated deceleration slipway.",
   },
   {
     id: "barishal",
     name: "From Barishal City",
-    distanceToInn: "68 km",
-    estTime: "55 min",
+    distanceToInn: "125 km",
+    estTime: "1h 35m",
     advice: "Northbound route through the Bhanga junction with dedicated U-turn bay right before our complex gate.",
   },
   {
     id: "khulna",
     name: "From Khulna / Bagerhat",
-    distanceToInn: "106 km",
-    estTime: "1h 35m",
+    distanceToInn: "98 km",
+    estTime: "1h 15m",
     advice: "Direct highway cruise passing Gopalganj bypass with wide paved approach into our valet parking grounds.",
   },
 ];
@@ -113,20 +113,20 @@ export default function PartyCenterHighwayRouteVisualizer() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 border border-amber-700/30 bg-amber-50 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-amber-800 mb-4">
             <FaCompass />
-            <span>Corridor Navigation</span>
+            <span>Corridor Navigation &amp; Banquet Access</span>
           </div>
           <h2 className="text-[clamp(2.2rem,4.5vw,4rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950">
-            Convenient highway access for every guest.
+            Highway corridor &amp; venue proximity.
           </h2>
           <p className="mt-4 text-base text-neutral-600 leading-relaxed">
-            Positioned directly along the primary highway corridor with dedicated deceleration slipways so guests and wedding party motorcades arrive safely and smoothly.
+            Direct access from the Dhaka–Khulna National Highway corridor with uninterrupted multi-lane access for grand wedding motorcades, VIP luxury coaches, and corporate convoys.
           </p>
         </div>
 
         {/* Interactive Origin Selector */}
         <div className="mb-12 rounded-none border border-neutral-200 bg-white p-6 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-neutral-200">
-            <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-800">
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-amber-700">
               Where are your event guests traveling from?
             </span>
             <span className="text-xs text-neutral-500 font-mono">
@@ -173,7 +173,7 @@ export default function PartyCenterHighwayRouteVisualizer() {
             <div className="hidden sm:flex items-center gap-4 text-xs font-mono text-neutral-500">
               <span className="flex items-center gap-1.5">
                 <span className="h-2.5 w-2.5 rounded-full bg-amber-600 inline-block" />
-                <span>Venue (KM 74)</span>
+                <span>Venue (KM 103)</span>
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-2.5 w-2.5 rounded-full bg-neutral-300 inline-block" />
