@@ -6,7 +6,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { FiArrowRight, FiArrowUpRight, FiChevronDown } from "react-icons/fi";
-import Lenis from "lenis";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -73,13 +72,6 @@ export default function InvestmentArchivePage() {
 
       /* ======== CINEMATIC ANIMATIONS ======== */
       mm.add("(prefers-reduced-motion: no-preference)", () => {
-        /* --- Lenis Smooth Scroll --- */
-        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-        lenis.on("scroll", ScrollTrigger.update);
-        const rafCallback = (time: number) => lenis.raf(time * 1000);
-        gsap.ticker.add(rafCallback);
-        gsap.ticker.lagSmoothing(0);
-
         /* --- Scroll Progress Bar --- */
         if (progressRef.current) {
           gsap.to(progressRef.current, {
@@ -140,11 +132,6 @@ export default function InvestmentArchivePage() {
           y: 60, ease: "none",
           scrollTrigger: { trigger: ".cta-section", start: "top bottom", end: "bottom top", scrub: 1 },
         });
-
-        return () => {
-          gsap.ticker.remove(rafCallback);
-          lenis.destroy();
-        };
       });
     },
     { scope: containerRef }

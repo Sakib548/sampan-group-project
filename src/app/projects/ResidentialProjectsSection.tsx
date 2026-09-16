@@ -43,7 +43,7 @@ export default function ResidentialProjectsSection() {
         </div>
       </div>
 
-      <div className="mt-10 flex min-h-[70svh] w-full flex-col gap-1 overflow-hidden sm:flex-row lg:h-[78svh]">
+      <div className="mt-10 flex w-full flex-col gap-4 overflow-hidden sm:min-h-[70svh] sm:flex-row sm:gap-1 lg:h-[78svh]">
         {projects.map(([name, image, description, href], index) => {
           const isActive = active === index;
 
@@ -52,40 +52,42 @@ export default function ResidentialProjectsSection() {
               key={name}
               onMouseEnter={() => setActive(index)}
               onMouseLeave={() => setActive(null)}
-              className={`group relative min-h-[300px] flex-1 overflow-hidden transition-[flex] duration-700 sm:min-h-0 ${active === null
-                ? "flex-1"
-                : isActive
-                  ? "sm:flex-[1.8]"
-                  : "sm:flex-[0.7]"
-                }`}
+              className={`group relative aspect-square w-full overflow-hidden transition-[flex] duration-700 sm:aspect-auto sm:min-h-0 ${
+                active === null
+                  ? "sm:flex-1"
+                  : isActive
+                    ? "sm:flex-[1.8]"
+                    : "sm:flex-[0.7]"
+              }`}
             >
               <Image
                 src={image}
                 alt={name}
                 fill
                 sizes="(max-width: 640px) 100vw, 40vw"
-                className={`object-cover transition duration-1000 ${isActive ? "scale-105" : "scale-100"
-                  }`}
+                className={`object-cover transition duration-1000 ${
+                  isActive ? "scale-105" : "scale-100"
+                }`}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
 
-              <div className="absolute inset-x-6 bottom-8 lg:inset-x-10 lg:bottom-12">
-                <span className="text-sm tracking-[0.2em] text-[#a8df73]">
+              <div className="absolute inset-x-6 bottom-6 sm:bottom-8 lg:inset-x-10 lg:bottom-12">
+                <span className="text-xs sm:text-sm tracking-[0.2em] text-[#a8df73]">
                   COMPLETED
                 </span>
 
-                <h3 className="mt-4 text-3xl font-semibold uppercase leading-[0.95] sm:text-4xl lg:text-5xl">
+                <h3 className="mt-2.5 sm:mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold uppercase leading-[0.95]">
                   {name}
                 </h3>
 
-                <p className="mt-3 max-w-md text-base leading-6 text-white/80">
+                <p className="mt-2.5 sm:mt-3 max-w-md text-sm sm:text-base leading-relaxed text-white/80 line-clamp-2 sm:line-clamp-none">
                   {description}
                 </p>
 
                 <Link
                   href={href}
-                  className="group/link mt-6 inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#a8df73] transition-colors duration-300 hover:text-[#ef636b]"
+                  className="group/link mt-4 sm:mt-6 inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#a8df73] transition-colors duration-300 hover:text-[#ef636b]"
                 >
                   Learn More
                   <span className="transition-transform duration-300 group-hover/link:translate-x-2">

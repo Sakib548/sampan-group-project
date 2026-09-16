@@ -46,14 +46,15 @@ export default function ClubMembershipTiers() {
     <section className="py-20 px-6 sm:px-12 lg:px-20 bg-white text-[#183b2b]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3.5 py-1 rounded-full border border-amber-200">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3.5 py-1 rounded-none border border-amber-200">
             SAGCL Membership Tiers & Privileges
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-[#071d13]">
             Membership Tiers & Unlocked Benefits
           </h2>
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
-            Select your membership tier to unlock luxury lounge access, priority golf tee-times, villa discounts, and executive networking privileges.
+            Choose your level of involvement at Sampan Agro Golf Club & Lounge.
+            Early members enjoy locked-in pricing and exclusive founding privileges.
           </p>
         </div>
 
@@ -61,7 +62,7 @@ export default function ClubMembershipTiers() {
           {tiers.map((tier, idx) => (
             <div
               key={idx}
-              className={`rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 relative ${
+              className={`rounded-none p-8 flex flex-col justify-between transition-all duration-300 relative ${
                 tier.featured
                   ? "bg-[#071d13] text-white border-2 border-amber-400 shadow-2xl scale-[1.03]"
                   : "bg-amber-50/40 border border-amber-900/10 text-slate-900 hover:shadow-xl"
@@ -69,7 +70,7 @@ export default function ClubMembershipTiers() {
             >
               {tier.badge && (
                 <span
-                  className={`absolute -top-3.5 left-1/2 -translate-x-1/2 text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full ${
+                  className={`absolute -top-3.5 left-1/2 -translate-x-1/2 text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-none ${
                     tier.featured
                       ? "bg-amber-400 text-emerald-950 shadow-md"
                       : "bg-[#071d13] text-amber-300"
@@ -126,7 +127,7 @@ export default function ClubMembershipTiers() {
               <div className="mt-8 pt-6">
                 <a
                   href="#club-signup"
-                  className={`block w-full py-3.5 rounded-xl text-center font-bold text-xs uppercase tracking-wider transition-all ${
+                  className={`block w-full py-3.5 rounded-none text-center font-bold text-xs uppercase tracking-wider transition-all ${
                     tier.featured
                       ? "bg-amber-400 hover:bg-amber-300 text-emerald-950 shadow-lg"
                       : "bg-[#071d13] hover:bg-emerald-900 text-white"

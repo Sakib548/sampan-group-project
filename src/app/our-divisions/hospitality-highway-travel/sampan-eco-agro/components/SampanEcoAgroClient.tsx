@@ -25,7 +25,7 @@ export default function SampanEcoAgroClient() {
   };
 
   return (
-    <main className="bg-[#0c1c14] text-white antialiased selection:bg-[#b9e583] selection:text-[#0c1c14]">
+    <main className="bg-[#0c1c14] text-white antialiased selection:bg-[#b9e583] selection:text-[#0c1c14] overflow-x-hidden w-full">
 
       {/* 1. OVERVIEW (Hero with Dark Forest Contrast) */}
       <HeroOverview onOpenBooking={() => scrollToSection("book-enquire-cta")} />

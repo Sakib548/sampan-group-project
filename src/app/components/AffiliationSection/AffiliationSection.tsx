@@ -98,11 +98,11 @@ const affiliations = [
     name: "Sampan Golf Academy",
     logo: "/images/affiliation/Sampan Golf Academy.png",
   },
-  {
-    num: "18",
-    name: "Sampan Golf Academy",
-    logo: "/images/affiliation/Asset 26@4x.png",
-  },
+  // {
+  //   num: "18",
+  //   name: "Sampan Golf Academy",
+  //   logo: "/images/affiliation/Asset 26@4x.png",
+  // },
   // Add your remaining 20+ logos here. The grid will automatically wrap beautifully.
 ];
 
@@ -155,8 +155,8 @@ export default function AffiliationSection() {
   );
 
   return (
-    <section 
-      ref={containerRef} 
+    <section
+      ref={containerRef}
       className="relative w-full overflow-hidden bg-[#F5F5F2]"
     >
       {/* Giant Ghost Background Text */}
@@ -165,7 +165,7 @@ export default function AffiliationSection() {
       </span>
 
       <div className="relative mx-auto max-w-[1600px] px-[5vw]">
-        
+
         {/* ====== SECTION HEADER ====== */}
         <div className="aff-header mb-16 flex flex-col justify-between gap-8 border-b border-neutral-300/60 pb-8 lg:mb-24 lg:flex-row lg:items-end">
           <div>
@@ -184,8 +184,8 @@ export default function AffiliationSection() {
         {/* Subtle borders create a clean ledger feel. Hover state lifts to pure white. */}
         <div className="aff-grid grid grid-cols-2 border-l border-t border-neutral-200 sm:grid-cols-3 lg:grid-cols-6">
           {affiliations.map((aff) => (
-            <div 
-              key={aff.num} 
+            <div
+              key={aff.num}
               className="aff-cell group relative flex flex-col items-center justify-center border-b border-r border-neutral-200 p-8 transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] hover:bg-white hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.05)] hover:z-10"
             >
               {/* Logo Container - Fixed aspect ratio for perfect grid alignment */}

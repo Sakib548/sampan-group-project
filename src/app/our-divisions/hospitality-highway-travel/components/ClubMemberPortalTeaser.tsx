@@ -10,7 +10,7 @@ export default function ClubMemberPortalTeaser() {
     <section className="py-20 px-6 sm:px-12 lg:px-20 bg-[#071d13] text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-950/80 px-3.5 py-1 rounded-full border border-amber-800">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-950/80 px-3.5 py-1 rounded-none border border-amber-800">
             Digital Member Portal Teaser
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-white">
@@ -25,10 +25,10 @@ export default function ClubMemberPortalTeaser() {
           {portalFeatures.map((f, idx) => (
             <div
               key={idx}
-              className="bg-emerald-950/60 border border-emerald-800/40 hover:border-amber-400/50 rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-emerald-950/60 border border-emerald-800/40 hover:border-amber-400/50 rounded-none p-6 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-amber-400/20 text-amber-400 border border-amber-400/30 flex items-center justify-center font-bold text-lg mb-4">
+                <div className="w-12 h-12 rounded-none bg-amber-400/20 text-amber-400 border border-amber-400/30 flex items-center justify-center font-bold text-lg mb-4">
                   0{idx + 1}
                 </div>
 

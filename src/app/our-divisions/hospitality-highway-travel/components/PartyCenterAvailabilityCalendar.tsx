@@ -18,7 +18,7 @@ export default function PartyCenterAvailabilityCalendar() {
     <section className="py-20 px-6 sm:px-12 lg:px-20 bg-white text-[#183b2b]">
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-none">
             Real-Time Date Status
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-slate-900">
@@ -34,7 +34,7 @@ export default function PartyCenterAvailabilityCalendar() {
               <button
                 key={m}
                 onClick={() => setSelectedMonth(m)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                className={`px-4 py-2 rounded-none text-xs font-bold transition-all cursor-pointer ${
                   selectedMonth === m
                     ? "bg-[#1e1b18] text-amber-400 shadow-md"
                     : "bg-slate-100 text-slate-600 hover:bg-amber-50"
@@ -50,14 +50,14 @@ export default function PartyCenterAvailabilityCalendar() {
           {dates.map((d, idx) => (
             <div
               key={idx}
-              className="bg-amber-50/40 border border-amber-900/10 rounded-2xl p-6 flex flex-col justify-between"
+              className="bg-amber-50/40 border border-amber-900/10 rounded-none p-6 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-bold text-slate-900 font-serif">
                     {d.date}
                   </span>
-                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded border ${d.color}`}>
+                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-none border ${d.color}`}>
                     {d.status}
                   </span>
                 </div>

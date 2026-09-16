@@ -90,7 +90,7 @@ const slides: HeroSlide[] = [
     subhead:
       "CIPS and CMI qualifications from London School of Higher Studies—study locally, get recognized globally.",
     cta: "Apply to LSHS",
-    href: "https://london-schools-seven.vercel.app/",
+    href: "https://cips.lshs.co.uk/",
     image: "/images/projects/lshs.jpg",
     imagePosition: "center center",
     drift: "driftLeft",

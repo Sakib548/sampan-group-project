@@ -50,7 +50,7 @@ const golfConcerns = [
 
 export default function GolfZonePage() {
   return (
-    <main className="bg-[#f8faf6] text-[#183b2b] min-h-screen">
+    <main className="bg-[#f8faf6] text-[#183b2b] min-h-screen overflow-x-hidden w-full">
       {/* Hero Header */}
       <GolfHero
         title="Golf Zone Division"
@@ -65,29 +65,29 @@ export default function GolfZonePage() {
       />
 
       {/* Concerns Showcase */}
-      <section className="py-20 px-6 sm:px-12 lg:px-20 bg-white">
+      <section id="concerns" className="py-16 sm:py-20 px-4 sm:px-12 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3.5 py-1 rounded-full">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3.5 py-1 rounded-none">
               Division Portfolio
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-[#091e15]">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-serif mt-3 sm:mt-4 text-[#091e15]">
               Golf Zone Flagship Concerns
             </h2>
-            <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-600 mt-3 sm:mt-4 leading-relaxed">
               Explore our upcoming professional academy and short-drive practice range facilities.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
             {golfConcerns.map((concern) => (
               <div
                 key={concern.id}
-                className="bg-emerald-50/50 border border-emerald-900/10 rounded-3xl p-8 sm:p-10 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 group"
+                className="bg-emerald-50/50 border border-emerald-900/10 rounded-none p-6 sm:p-10 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 group"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-4 mb-6">
-                    <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-3.5 py-1 rounded-full border border-amber-200">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 mb-6">
+                    <span className="self-start text-[10px] sm:text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-none border border-amber-200">
                       {concern.badge}
                     </span>
                     <span className="text-xs font-semibold text-emerald-700">
@@ -95,8 +95,8 @@ export default function GolfZonePage() {
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-6 mb-6">
-                    <div className="relative w-20 h-20 bg-white p-2 rounded-2xl border border-emerald-200 flex-shrink-0 shadow-sm">
+                  <div className="flex items-center gap-4 sm:gap-6 mb-6">
+                    <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-white p-2 rounded-none border border-emerald-200 flex-shrink-0 shadow-sm">
                       <Image
                         src={concern.image}
                         alt={concern.name}
@@ -104,17 +104,17 @@ export default function GolfZonePage() {
                         className="object-contain p-1"
                       />
                     </div>
-                    <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-[#091e15] font-serif group-hover:text-emerald-800 transition-colors">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-xl sm:text-3xl font-bold text-[#091e15] font-serif group-hover:text-emerald-800 transition-colors leading-tight">
                         {concern.name}
                       </h3>
-                      <p className="text-xs font-medium text-emerald-700 mt-1 uppercase tracking-wider">
+                      <p className="text-[11px] sm:text-xs font-medium text-emerald-700 mt-1 uppercase tracking-wider">
                         Coming Soon to Sampan Agro & Golf Complex
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed mb-6">
                     {concern.tagline}
                   </p>
 
@@ -131,7 +131,7 @@ export default function GolfZonePage() {
                 <div className="mt-8 pt-6">
                   <Link
                     href={concern.href}
-                    className="block w-full py-4 rounded-xl bg-[#091e15] hover:bg-emerald-900 text-white font-bold text-xs uppercase tracking-wider text-center transition-all shadow-lg group-hover:scale-[1.01]"
+                    className="block w-full py-4 rounded-none bg-[#091e15] hover:bg-emerald-900 text-white font-bold text-xs uppercase tracking-wider text-center transition-all shadow-lg group-hover:scale-[1.01]"
                   >
                     View Full Facility Page & Requirements →
                   </Link>

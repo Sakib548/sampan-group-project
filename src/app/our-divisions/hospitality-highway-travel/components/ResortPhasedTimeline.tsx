@@ -35,7 +35,7 @@ export default function ResortPhasedTimeline() {
     <section className="py-20 px-6 sm:px-12 lg:px-20 bg-white text-[#183b2b]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3.5 py-1 rounded-none">
             Development Milestone Roadmap
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-[#071d13]">
@@ -50,7 +50,7 @@ export default function ResortPhasedTimeline() {
           {phases.map((item, idx) => (
             <div
               key={idx}
-              className={`rounded-3xl p-8 transition-all duration-300 border flex flex-col md:flex-row md:items-center justify-between gap-6 ${
+              className={`rounded-none p-8 transition-all duration-300 border flex flex-col md:flex-row md:items-center justify-between gap-6 ${
                 item.active
                   ? "bg-[#071d13] text-white border-2 border-amber-400 shadow-2xl scale-[1.02]"
                   : "bg-emerald-50/50 border-emerald-900/10 text-slate-900 hover:shadow-md"
@@ -58,7 +58,7 @@ export default function ResortPhasedTimeline() {
             >
               <div className="flex items-start gap-6">
                 <div
-                  className={`w-14 h-14 rounded-2xl flex items-center justify-center font-serif text-xl font-bold flex-shrink-0 shadow-md ${
+                  className={`w-14 h-14 rounded-none flex items-center justify-center font-serif text-xl font-bold flex-shrink-0 shadow-md ${
                     item.active ? "bg-amber-400 text-emerald-950" : "bg-emerald-800 text-white"
                   }`}
                 >
@@ -68,7 +68,7 @@ export default function ResortPhasedTimeline() {
                 <div>
                   <div className="flex items-center gap-3 mb-1">
                     <span
-                      className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md ${
+                      className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-none ${
                         item.active
                           ? "bg-amber-400/20 text-amber-300 border border-amber-400/40"
                           : "bg-emerald-100 text-emerald-800"
@@ -105,7 +105,7 @@ export default function ResortPhasedTimeline() {
 
               <div className="text-right flex-shrink-0">
                 <span
-                  className={`inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${
+                  className={`inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-none ${
                     item.active
                       ? "bg-amber-400 text-emerald-950"
                       : "bg-emerald-900/10 text-emerald-900"

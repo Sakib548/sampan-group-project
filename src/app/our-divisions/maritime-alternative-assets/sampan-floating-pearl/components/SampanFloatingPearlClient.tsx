@@ -161,7 +161,7 @@ export default function SampanFloatingPearlClient() {
 
   return (
     <div className="bg-[#FAF9F6] text-neutral-900 font-sans">
-      
+
       {/* 1. HERO SECTION (Compact, impactful, square styling) */}
       <section className="relative bg-[#07162C] text-white pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden border-b border-cyan-950">
         <div className="absolute inset-0 z-0 opacity-30">
@@ -196,7 +196,7 @@ export default function SampanFloatingPearlClient() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <div className="inline-flex items-center gap-2 border border-amber-400/40 bg-amber-950/40 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider text-amber-300">
               <span className="h-1.5 w-1.5 rounded-none bg-amber-400 animate-pulse" />
-              <span>Coming Soon • Under Active Fabrication</span>
+              <span>Coming Soon • Under Active Construction</span>
             </div>
 
             <a
@@ -253,7 +253,7 @@ export default function SampanFloatingPearlClient() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
+
             <div className="p-6 bg-[#FAF9F6] border border-neutral-200 rounded-none hover:border-neutral-400 transition-colors">
               <div className="w-10 h-10 rounded-none bg-cyan-900 text-amber-400 flex items-center justify-center text-base mb-4">
                 <FaBed />
@@ -301,7 +301,7 @@ export default function SampanFloatingPearlClient() {
       {/* 3. PHOTO & ARCHITECTURE GALLERY (Interactive, Square Lightbox) */}
       <section id="gallery" className="py-16 sm:py-24 bg-[#FAF9F6] border-b border-neutral-200">
         <div className="mx-auto max-w-6xl px-6 sm:px-10">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-neutral-200">
             <div>
               <span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-cyan-800">
@@ -331,11 +331,10 @@ export default function SampanFloatingPearlClient() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider transition-all cursor-pointer rounded-none border ${
-                    activeTab === tab.id
+                  className={`px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider transition-all cursor-pointer rounded-none border ${activeTab === tab.id
                       ? "bg-neutral-950 text-white border-neutral-950 shadow-sm"
                       : "bg-white text-neutral-700 border-neutral-300 hover:bg-neutral-100"
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -455,9 +454,9 @@ export default function SampanFloatingPearlClient() {
       <section id="contact" className="py-16 sm:py-24 bg-white">
         <div className="mx-auto max-w-5xl px-6 sm:px-10">
           <div className="border border-neutral-200 bg-[#FAF9F6] p-8 sm:p-12 shadow-sm rounded-none">
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              
+
               <div className="lg:col-span-7">
                 <div className="flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-wider text-cyan-800 mb-2">
                   <FaShip />

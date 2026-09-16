@@ -145,10 +145,10 @@ export default function RetailHero({
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4 pt-2">
               <button
                 onClick={onOrderOnline}
-                className="group inline-flex items-center justify-center gap-3 text-white px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] shadow-lg transition-all duration-300 cursor-pointer hover:opacity-90"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 text-white px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] shadow-lg transition-all duration-300 cursor-pointer hover:opacity-90 text-center"
                 style={{ backgroundColor: accentColor }}
               >
                 <FaShoppingBag className="text-sm" />
@@ -158,7 +158,7 @@ export default function RetailHero({
 
               <button
                 onClick={onExploreCatalog}
-                className="inline-flex items-center justify-center gap-2 border px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 backdrop-blur-sm cursor-pointer hover:bg-white hover:text-neutral-950"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 backdrop-blur-sm cursor-pointer hover:bg-white hover:text-neutral-950 text-center"
                 style={{
                   color: badgeColor,
                   borderColor: `${badgeColor}50`,
@@ -171,7 +171,7 @@ export default function RetailHero({
 
               <a
                 href="tel:+8801929918408"
-                className="inline-flex items-center justify-center gap-2 border border-white/20 bg-black/40 hover:bg-black px-6 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white/90 transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 bg-black/40 hover:bg-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white/90 transition-all duration-300 text-center"
               >
                 <FaPhoneAlt className="text-xs" style={{ color: accentColor }} />
                 <span>Store Hotline</span>

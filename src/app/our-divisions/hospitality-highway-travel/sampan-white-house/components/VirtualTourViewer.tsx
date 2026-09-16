@@ -132,8 +132,8 @@ export default function VirtualTourViewer() {
               className="absolute -translate-x-1/2 -translate-y-1/2 group cursor-pointer z-20"
             >
               <span className="relative flex h-8 w-8 items-center justify-center">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#e8b84b] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-6 w-6 bg-[#e8b84b] border-2 border-white text-neutral-950 items-center justify-center text-xs font-bold shadow-md">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-none bg-[#e8b84b] opacity-75"></span>
+                <span className="relative inline-flex rounded-none h-6 w-6 bg-[#e8b84b] border-2 border-white text-neutral-950 items-center justify-center text-xs font-bold shadow-md">
                   +
                 </span>
               </span>

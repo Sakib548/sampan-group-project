@@ -89,7 +89,7 @@ export default function UGCFeed() {
                 {/* Header Profile */}
                 <div className="p-4 border-b border-white/10 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <div className="h-7 w-7 rounded-full bg-[#b9e583] text-[#0c1c14] flex items-center justify-center font-bold font-mono text-xs">
+                    <div className="h-7 w-7 rounded-none bg-[#b9e583] text-[#0c1c14] flex items-center justify-center font-bold font-mono text-xs">
                       {post.handle[1].toUpperCase()}
                     </div>
                     <span className="font-mono text-xs font-bold text-white group-hover:text-[#b9e583] transition-colors">

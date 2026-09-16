@@ -110,14 +110,14 @@ const ownershipBenefits = [
     image: "/images/our-divisions/sampan-agro-golf-resort/basketball.jpg",
     description: "Floodlit championship courts for tennis, badminton, and basketball with professional equipment.",
   },
-  {
-    id: 9,
-    title: "Super Shop & Pharmacy",
-    category: "Convenience",
-    icon: FaStore,
-    image: "/images/our-divisions/mini-sampan-super-shop/mart.jpg",
-    description: "On-site convenience store for daily groceries, travel essentials, and fully stocked pharmacy.",
-  },
+  // {
+  //   id: 9,
+  //   title: "Super Shop & Pharmacy",
+  //   category: "Convenience",
+  //   icon: FaStore,
+  //   image: "/images/our-divisions/mini-sampan-super-shop/mart.jpg",
+  //   description: "On-site convenience store for daily groceries, travel essentials, and fully stocked pharmacy.",
+  // },
   {
     id: 10,
     title: "Library & Reading Lounge",
@@ -198,14 +198,14 @@ const ownershipBenefits = [
     image: "/images/our-divisions/sampan-agro-golf-resort/man-farmer-with-homemade-vegetables.jpg",
     description: "Extensive fruit orchards (mango, lemon, malta, dragonfruit) and automated greenhouse vegetable zones.",
   },
-  {
-    id: 20,
-    title: "Bonfire, Picnic Spot & BBQ Zone",
-    category: "Leisure",
-    icon: FaFire,
-    image: "/images/our-divisions/sampan-agro-golf-resort/Sampan-Agro-&-Golf-Resort-5.jpg",
-    description: "Open-air starlight fire pits, family picnic gazebos, and personal barbecue grill stations.",
-  },
+  // {
+  //   id: 20,
+  //   title: "Bonfire, Picnic Spot & BBQ Zone",
+  //   category: "Leisure",
+  //   icon: FaFire,
+  //   image: "/images/our-divisions/sampan-agro-golf-resort/Sampan-Agro-&-Golf-Resort-5.jpg",
+  //   description: "Open-air starlight fire pits, family picnic gazebos, and personal barbecue grill stations.",
+  // },
 ];
 
 const galleryMedia = [
@@ -392,10 +392,10 @@ export default function SampanAgroGolfResortClient() {
   };
 
   return (
-    <main className="bg-[#f8faf6] text-[#183b2b] selection:bg-[#2d6a4f] selection:text-white">
+    <main className="bg-[#f8faf6] text-[#183b2b] selection:bg-[#2d6a4f] selection:text-white overflow-x-hidden w-full">
 
       {/* ================= 1. HERO SECTION ================= */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#091a11] text-white pt-24 pb-16 sm:pt-28 sm:pb-20 border-b border-white/10">
+      <section data-no-reveal className="relative min-h-0 sm:min-h-screen flex flex-col justify-start sm:justify-center overflow-hidden bg-[#091a11] text-white pt-24 pb-12 sm:pt-28 sm:pb-20 border-b border-white/10">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage}
@@ -412,7 +412,7 @@ export default function SampanAgroGolfResortClient() {
         <div className="pointer-events-none absolute top-1/4 left-10 w-96 h-96 bg-emerald-500/15 rounded-full blur-[140px] z-0" />
         <div className="pointer-events-none absolute bottom-10 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px] z-0" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-6">
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-0 sm:pt-2 pb-6">
           <div className="max-w-4xl space-y-4 sm:space-y-5">
 
             {/* Status Badge */}
@@ -440,10 +440,10 @@ export default function SampanAgroGolfResortClient() {
             </div>
 
             {/* Quick Action CTAs */}
-            <div className="pt-2 flex flex-wrap items-center gap-3.5 font-mono text-xs">
+            <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4 font-mono text-xs">
               <button
                 onClick={() => scrollTo("benefits")}
-                className="group inline-flex items-center justify-center gap-2.5 rounded-none bg-emerald-600 hover:bg-emerald-500 px-6 py-3 font-bold uppercase tracking-[0.18em] text-white shadow-lg shadow-emerald-950/40 transition-all duration-300 cursor-pointer"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-none bg-emerald-600 hover:bg-emerald-500 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-emerald-950/40 transition-all duration-300 cursor-pointer text-center"
               >
                 <span>Explore Benefits</span>
                 <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
@@ -451,7 +451,7 @@ export default function SampanAgroGolfResortClient() {
 
               <button
                 onClick={() => scrollTo("specifications")}
-                className="inline-flex items-center justify-center gap-2 rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-6 py-3 font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
                 <FaShieldAlt className="text-emerald-400" />
                 <span>Resort Privileges</span>
@@ -461,7 +461,7 @@ export default function SampanAgroGolfResortClient() {
                 href="https://www.facebook.com/sampangolfresort/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-none border border-[#1877F2]/60 bg-[#1877F2]/20 hover:bg-[#1877F2] hover:text-white px-6 py-3 font-bold uppercase tracking-[0.18em] text-[#93c5fd] hover:border-[#1877F2] transition-all duration-300 shadow-md cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-none border border-[#1877F2]/60 bg-[#1877F2]/20 hover:bg-[#1877F2] hover:text-white px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#93c5fd] hover:border-[#1877F2] transition-all duration-300 shadow-md cursor-pointer text-center"
               >
                 <FaFacebookF className="text-sm" />
                 <span>Facebook Page</span>
@@ -590,7 +590,7 @@ export default function SampanAgroGolfResortClient() {
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs font-bold font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeTab === cat
+                className={`px-5 py-2.5 rounded-none text-xs font-bold font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeTab === cat
                   ? "bg-[#183b2b] text-white shadow-md"
                   : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
                   }`}
@@ -638,9 +638,9 @@ export default function SampanAgroGolfResortClient() {
                     </div>
 
                     {/* Floating Icon overlapping image bottom */}
-                    <div className="absolute -bottom-3.5 right-4 z-10 w-9 h-9 bg-white border border-neutral-200 shadow-md flex items-center justify-center text-emerald-700 text-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    {/* <div className="absolute -bottom-3.5 right-4 z-10 w-9 h-9 bg-white border border-neutral-200 shadow-md flex items-center justify-center text-emerald-700 text-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                       <Icon />
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Card Content */}
@@ -832,7 +832,7 @@ export default function SampanAgroGolfResortClient() {
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-emerald-600 text-white p-3 rounded-full shadow-lg">
+                  <div className="bg-emerald-600 text-white p-3 rounded-none shadow-lg">
                     <FaExpand className="text-sm" />
                   </div>
                 </div>
@@ -873,7 +873,7 @@ export default function SampanAgroGolfResortClient() {
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-emerald-600 text-white p-3 rounded-full shadow-lg">
+                  <div className="bg-emerald-600 text-white p-3 rounded-none shadow-lg">
                     <FaExpand className="text-sm" />
                   </div>
                 </div>
@@ -914,7 +914,7 @@ export default function SampanAgroGolfResortClient() {
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-emerald-600 text-white p-3 rounded-full shadow-lg">
+                  <div className="bg-emerald-600 text-white p-3 rounded-none shadow-lg">
                     <FaExpand className="text-sm" />
                   </div>
                 </div>
@@ -1107,33 +1107,33 @@ export default function SampanAgroGolfResortClient() {
               </p>
 
               <div className="mt-6 pt-6 border-t border-neutral-100 space-y-3 font-mono text-xs text-neutral-700">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <span className="text-neutral-500">Official Facebook:</span>
                   <a
                     href="https://www.facebook.com/sampangolfresort/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-[#1877F2] hover:underline flex items-center gap-1.5"
+                    className="font-bold text-[#1877F2] hover:underline flex items-center gap-1.5 break-all"
                   >
-                    <FaFacebookF className="text-xs" />
+                    <FaFacebookF className="text-xs shrink-0" />
                     <span>facebook.com/sampangolfresort</span>
-                    <FaExternalLinkAlt className="text-[9px]" />
+                    <FaExternalLinkAlt className="text-[9px] shrink-0" />
                   </a>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <span className="text-neutral-500">Corporate Email:</span>
                   <a
                     href="mailto:contact@sampangolfresort.com"
-                    className="font-bold text-emerald-700 hover:underline"
+                    className="font-bold text-emerald-700 hover:underline break-all"
                   >
                     contact@sampangolfresort.com
                   </a>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <span className="text-neutral-500">Investor Service:</span>
                   <span className="font-semibold">Saturday – Thursday (9AM – 6PM)</span>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <span className="text-neutral-500">Site Visit:</span>
                   <span className="font-semibold">Guided Inspection by Appointment</span>
                 </div>
@@ -1176,7 +1176,7 @@ export default function SampanAgroGolfResortClient() {
 
             {inquirySubmitted ? (
               <div className="bg-emerald-50 border border-emerald-300 p-8 text-center space-y-4">
-                <div className="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-xl">
+                <div className="w-12 h-12 bg-emerald-600 text-white rounded-none flex items-center justify-center mx-auto text-xl">
                   <FaCheck />
                 </div>
                 <h3 className="text-xl font-bold text-emerald-950">
@@ -1353,7 +1353,7 @@ export default function SampanAgroGolfResortClient() {
         >
           <button
             onClick={() => setLightboxImage(null)}
-            className="absolute top-6 right-6 z-50 text-white/70 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+            className="absolute top-6 right-6 z-50 text-white/70 hover:text-white p-3 rounded-none bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
             aria-label="Close Lightbox"
           >
             <FaTimes className="text-lg" />

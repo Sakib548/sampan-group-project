@@ -89,7 +89,7 @@ export default function PressMediaCarousel() {
         </div>
 
         {/* Featured Editorial Carousel Card */}
-        <div className="relative rounded-3xl bg-white border border-neutral-200/80 shadow-xl p-8 sm:p-12 lg:p-16 overflow-hidden">
+        <div className="relative rounded-none bg-white border border-neutral-200/80 shadow-xl p-8 sm:p-12 lg:p-16 overflow-hidden">
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
@@ -97,7 +97,7 @@ export default function PressMediaCarousel() {
             <div className="lg:col-span-8">
 
               <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full">
+                <span className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-none">
                   <FaAward className="text-emerald-600" />
                   {current.badge}
                 </span>
@@ -118,7 +118,7 @@ export default function PressMediaCarousel() {
 
               {/* Publication Outlet Signature */}
               <div className="mt-8 pt-6 border-t border-neutral-100 flex items-center gap-4">
-                <div className="h-10 w-10 rounded-full bg-[#070b09] text-white flex items-center justify-center font-serif font-bold text-sm">
+                <div className="h-10 w-10 rounded-none bg-[#070b09] text-white flex items-center justify-center font-serif font-bold text-sm">
                   {current.outlet.charAt(0)}
                 </div>
                 <div>
@@ -139,7 +139,7 @@ export default function PressMediaCarousel() {
                 <button
                   key={mention.id}
                   onClick={() => setActiveSlide(idx)}
-                  className={`p-4 rounded-2xl text-left border transition-all duration-300 cursor-pointer ${activeSlide === idx
+                  className={`p-4 rounded-none text-left border transition-all duration-300 cursor-pointer ${activeSlide === idx
                       ? "bg-[#070b09] text-white border-[#070b09] shadow-lg scale-[1.02]"
                       : "bg-[#faf9f6] text-neutral-700 border-neutral-200 hover:bg-neutral-100"
                     }`}
@@ -169,7 +169,7 @@ export default function PressMediaCarousel() {
                   key={i}
                   onClick={() => setActiveSlide(i)}
                   aria-label={`Slide ${i + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${activeSlide === i ? "w-8 bg-emerald-600" : "w-2 bg-neutral-300"
+                  className={`h-2 rounded-none transition-all duration-300 ${activeSlide === i ? "w-8 bg-emerald-600" : "w-2 bg-neutral-300"
                     }`}
                 />
               ))}
@@ -179,14 +179,14 @@ export default function PressMediaCarousel() {
               <button
                 onClick={() => setActiveSlide((prev) => (prev > 0 ? prev - 1 : pressMentions.length - 1))}
                 aria-label="Previous"
-                className="w-10 h-10 rounded-full border border-neutral-200 hover:bg-neutral-100 flex items-center justify-center text-neutral-700 transition-colors"
+                className="w-10 h-10 rounded-none border border-neutral-200 hover:bg-neutral-100 flex items-center justify-center text-neutral-700 transition-colors"
               >
                 <FaChevronLeft className="text-xs" />
               </button>
               <button
                 onClick={() => setActiveSlide((prev) => (prev < pressMentions.length - 1 ? prev + 1 : 0))}
                 aria-label="Next"
-                className="w-10 h-10 rounded-full border border-neutral-200 hover:bg-neutral-100 flex items-center justify-center text-neutral-700 transition-colors"
+                className="w-10 h-10 rounded-none border border-neutral-200 hover:bg-neutral-100 flex items-center justify-center text-neutral-700 transition-colors"
               >
                 <FaChevronRight className="text-xs" />
               </button>

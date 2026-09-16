@@ -10,7 +10,7 @@ export interface CarStockItem {
   color: string;
   grade: string;
   mileage: string;
-  location: "Port" | "Showroom" | "In Transit";
+  location: "Port" | "Showroom" | "In Transit" | "Upcoming";
   locationRaw: string;
   priceLakh: string;
   isSold?: boolean;
@@ -559,6 +559,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "31.00",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/COROLLA_WxB2.jpg"
   },
 
   // --- Corolla Touring Hybrid ---
@@ -579,6 +580,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "27.00",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/Corolla_S_Touring.jpg"
   },
   {
     sl: 29,
@@ -597,6 +599,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "29.00",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/Corolla_WxB_Touring.jpg"
   },
   {
     sl: 30,
@@ -615,6 +618,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "28.00",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/Corolla _S_Touring2.jpg"
   },
 
   // --- Axio Non-Hybrid ---
@@ -635,6 +639,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "26.50",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/AXIO_EX_OCTANE.jpg"
   },
   {
     sl: 32,
@@ -653,6 +658,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "26.50",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/AXIO_EX_OCTANE2.jpg"
   },
 
   // --- Fielder Hybrid ---
@@ -673,6 +679,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "22.00",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/FIELDER_EX_Hybrid.jpeg"
   },
   {
     sl: 34,
@@ -691,6 +698,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "21.00",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/FIELDER_EX_Hybrid.jpg"
   },
   {
     sl: 35,
@@ -709,6 +717,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "22.60",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/FIELDER_EX_Hybrid3.jpg"
   },
   {
     sl: 36,
@@ -727,6 +736,7 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "21.50",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/FIELDER_EX_Hybrid4.jpg"
   },
 
   // --- Fielder Non-Hybrid ---
@@ -747,5 +757,67 @@ export const carStockList: CarStockItem[] = [
     priceLakh: "24.00",
     category: "sedan-wagon",
     categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/FIELDER_EX_Octane.jpg"
+  },
+
+  // --- Lexus RX300 ---
+  {
+    sl: 38,
+    model: "Lexus RX300",
+    subModel: "Version L",
+    chassis: "AGL20W",
+    engine: "8AR-FTS (Non-Hybrid)",
+    features: "Version L, Black Exterior, Grade 4.5, 46,400 KM Mileage, AGL20W Chassis, Premium Lexus Identity, Expected Arrival: Late August",
+    lcNo: "Direct Booking / Sourcing",
+    year: 2021,
+    color: "Black",
+    grade: "4.5",
+    mileage: "46,400 km",
+    location: "Upcoming",
+    locationRaw: "Upcoming (Late August)",
+    priceLakh: "Call for Price",
+    category: "suv-crossover",
+    categoryLabel: "SUV & Crossover",
+    image: "/images/our-divisions/sampan-auto/with_engine/Lexus_RX300_Version_L_2021.jpg",
+  },
+
+  // --- Toyota Axio Hybrid ---
+  {
+    sl: 39,
+    model: "Toyota Axio Hybrid",
+    subModel: "EX Package",
+    chassis: "NKE165",
+    engine: "1NZ-FXE (Hybrid)",
+    features: "Hybrid, EX Package, 2021 Model, White Exterior, Grade 3.5, NKE165 Chassis, Smart & Practical Sedan, Expected Arrival: Mid-August",
+    lcNo: "Direct Booking / Sourcing",
+    year: 2021,
+    color: "White",
+    grade: "3.5",
+    mileage: "82,000 km",
+    location: "Upcoming",
+    locationRaw: "Upcoming (Mid-August)",
+    priceLakh: "Call for Price",
+    category: "sedan-wagon",
+    categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/Toyota_Axio_Hybrid_EX_2021.jpg",
+  },
+  {
+    sl: 40,
+    model: "Toyota Axio Hybrid",
+    subModel: "EX Package (Silver)",
+    chassis: "NKE165",
+    engine: "1NZ-FXE (Hybrid)",
+    features: "Hybrid, EX Package, 2021 Model, Silver Exterior, Grade 3.5, 117,000 KM Mileage, NKE165 Chassis, Clean Everyday Hybrid Sedan, Expected Arrival: Mid-August",
+    lcNo: "Direct Booking / Sourcing",
+    year: 2021,
+    color: "Silver",
+    grade: "3.5",
+    mileage: "117,000 km",
+    location: "Upcoming",
+    locationRaw: "Upcoming (Mid-August)",
+    priceLakh: "Call for Price",
+    category: "sedan-wagon",
+    categoryLabel: "Sedan & Wagon",
+    image: "/images/our-divisions/sampan-auto/with_engine/Toyota_Axio_Hybrid_EX_2021_Silver.jpg",
   },
 ];

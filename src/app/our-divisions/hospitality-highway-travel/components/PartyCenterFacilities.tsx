@@ -36,7 +36,7 @@ export default function PartyCenterFacilities() {
     <section className="py-20 px-6 sm:px-12 lg:px-20 bg-[#f8faf6] text-[#183b2b]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-none">
             Venue Amenities & Infrastructure
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-slate-900">
@@ -51,9 +51,9 @@ export default function PartyCenterFacilities() {
           {facilities.map((fac, idx) => (
             <div
               key={idx}
-              className="bg-white border border-amber-900/10 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex items-start gap-5"
+              className="bg-white border border-amber-900/10 rounded-none p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex items-start gap-5"
             >
-              <div className="w-14 h-14 rounded-2xl bg-amber-50 text-2xl flex items-center justify-center flex-shrink-0 border border-amber-200">
+              <div className="w-14 h-14 rounded-none bg-amber-50 text-2xl flex items-center justify-center flex-shrink-0 border border-amber-200">
                 {fac.icon}
               </div>
 

@@ -66,10 +66,10 @@ export default function ResortHero({
         {/* Main Content */}
         <div className="max-w-4xl space-y-5 sm:space-y-6">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            <span className="inline-flex items-center px-3.5 py-1 rounded-none text-xs font-semibold tracking-wider uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
               Hospitality &amp; Leisure Division
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-amber-500/20 text-amber-300 border border-amber-500/40">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-none text-xs font-bold tracking-wider uppercase bg-amber-500/20 text-amber-300 border border-amber-500/40">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
               {statusBadge}
             </span>
@@ -99,13 +99,13 @@ export default function ResortHero({
           <div className="pt-2 flex flex-wrap gap-4">
             <a
               href="#waitlist-form"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-sm bg-amber-500 hover:bg-amber-400 text-emerald-950 shadow-lg shadow-emerald-950/50 transition-all hover:scale-[1.02]"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-none font-bold text-sm bg-amber-500 hover:bg-amber-400 text-emerald-950 shadow-lg shadow-emerald-950/50 transition-all hover:scale-[1.02] cursor-pointer"
             >
               Pre-Launch Waitlist / Signup
             </a>
             <a
               href="#masterplan"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-sm bg-white/10 hover:bg-white/15 text-white border border-white/20 transition-all"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-none font-semibold text-sm bg-white/10 hover:bg-white/15 text-white border border-white/20 transition-all cursor-pointer"
             >
               Explore Masterplan
             </a>
@@ -114,7 +114,7 @@ export default function ResortHero({
           {/* Quick Stats Grid */}
           <div className="pt-6 border-t border-emerald-800/40 grid grid-cols-2 sm:grid-cols-4 gap-4">
             {facts.map((fact, idx) => (
-              <div key={idx} className="bg-emerald-950/50 border border-emerald-800/40 rounded-xl p-4">
+              <div key={idx} className="bg-emerald-950/50 border border-emerald-800/40 rounded-none p-4">
                 <div className="text-2xl font-bold text-amber-400">{fact.value}</div>
                 <div className="text-xs text-emerald-200/70 mt-1 font-medium">{fact.label}</div>
               </div>

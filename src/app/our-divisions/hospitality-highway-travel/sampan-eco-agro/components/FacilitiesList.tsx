@@ -99,10 +99,10 @@ export default function FacilitiesList() {
             return (
               <article
                 key={facility.id}
-                className="group flex flex-col rounded-2xl overflow-hidden bg-white border border-[#173326]/15 shadow-sm hover:shadow-xl hover:border-[#2f6b45]/40 transition-all duration-500 hover:-translate-y-1"
+                className="group flex flex-col rounded-none overflow-hidden bg-white border border-[#173326]/15 shadow-sm hover:shadow-xl hover:border-[#2f6b45]/40 transition-all duration-500 hover:-translate-y-1"
               >
                 {/* Image Header */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                <div className="relative aspect-square overflow-hidden bg-neutral-100">
                   <Image
                     src={facility.image}
                     alt={facility.name}
@@ -110,7 +110,7 @@ export default function FacilitiesList() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-[#b9e583]">
+                  <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-none text-[10px] font-bold uppercase tracking-widest text-[#b9e583]">
                     {facility.badge}
                   </div>
                 </div>

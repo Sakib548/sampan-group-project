@@ -343,27 +343,27 @@ const clubGallery = [
     src: "/images/our-divisions/sampan-agro-golf-resort/basketball.jpg",
     caption: "All-weather multi-sport courts for tennis, basketball, badminton, and active club play.",
   },
-  {
-    id: "cg-cred-1",
-    title: "Official Certificate of Share",
-    category: "Official Documents",
-    src: "/images/our-divisions/sampan-agro-golf-resort/certificate-of-share.jpg",
-    caption: "Statutory share certificate issued by Sampan Developments Ltd. (REHAB Member No. 1257/2012).",
-  },
-  {
-    id: "cg-cred-2",
-    title: "Permanent Member Loyalty Card",
-    category: "Official Documents",
-    src: "/images/our-divisions/sampan-agro-golf-resort/loyalty-card-permanent-member.jpg",
-    caption: "Official green RFID smart card for permanent & life members offering 24/7 nationwide club privileges.",
-  },
-  {
-    id: "cg-cred-3",
-    title: "Official Certificate of Member",
-    category: "Official Documents",
-    src: "/images/our-divisions/sampan-agro-golf-resort/certificate-of-member.jpg",
-    caption: "Member induction certificate endorsed by President Emamul Hasan granting full club rights and tournament access.",
-  },
+  // {
+  //   id: "cg-cred-1",
+  //   title: "Official Certificate of Share",
+  //   category: "Official Documents",
+  //   src: "/images/our-divisions/sampan-agro-golf-resort/certificate-of-share.jpg",
+  //   caption: "Statutory share certificate issued by Sampan Developments Ltd. (REHAB Member No. 1257/2012).",
+  // },
+  // {
+  //   id: "cg-cred-2",
+  //   title: "Permanent Member Loyalty Card",
+  //   category: "Official Documents",
+  //   src: "/images/our-divisions/sampan-agro-golf-resort/loyalty-card-permanent-member.jpg",
+  //   caption: "Official green RFID smart card for permanent & life members offering 24/7 nationwide club privileges.",
+  // },
+  // {
+  //   id: "cg-cred-3",
+  //   title: "Official Certificate of Member",
+  //   category: "Official Documents",
+  //   src: "/images/our-divisions/sampan-agro-golf-resort/certificate-of-member.jpg",
+  //   caption: "Member induction certificate endorsed by President Emamul Hasan granting full club rights and tournament access.",
+  // },
 ];
 
 // Member Privileges (NO 01, 02 numbers!)
@@ -443,10 +443,10 @@ export default function SampanAgroGolfClubLoungeClient() {
   };
 
   return (
-    <main className="bg-[#f8faf6] text-[#183b2b] selection:bg-[#2d6a4f] selection:text-white">
+    <main className="bg-[#f8faf6] text-[#183b2b] selection:bg-[#2d6a4f] selection:text-white overflow-x-hidden w-full">
 
       {/* ================= 1. HERO SECTION ================= */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#091a11] text-white pt-24 pb-16 sm:pt-28 sm:pb-20 border-b border-white/10">
+      <section data-no-reveal className="relative min-h-0 sm:min-h-screen flex flex-col justify-start sm:justify-center overflow-hidden bg-[#091a11] text-white pt-24 pb-12 sm:pt-28 sm:pb-20 border-b border-white/10">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage}
@@ -463,7 +463,7 @@ export default function SampanAgroGolfClubLoungeClient() {
         <div className="pointer-events-none absolute top-1/4 left-10 w-96 h-96 bg-emerald-500/15 rounded-full blur-[140px] z-0" />
         <div className="pointer-events-none absolute bottom-10 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px] z-0" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-6">
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-0 sm:pt-2 pb-6">
           <div className="max-w-4xl space-y-4 sm:space-y-5">
 
             {/* Status Badge */}
@@ -491,10 +491,10 @@ export default function SampanAgroGolfClubLoungeClient() {
             </div>
 
             {/* Quick Action CTAs */}
-            <div className="pt-2 flex flex-wrap items-center gap-3.5 font-mono text-xs">
+            <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4 font-mono text-xs">
               <button
                 onClick={() => scrollTo("lounge-experience")}
-                className="group inline-flex items-center justify-center gap-2.5 rounded-none bg-emerald-600 hover:bg-emerald-500 px-6 py-3 font-bold uppercase tracking-[0.18em] text-white shadow-lg shadow-emerald-950/40 transition-all duration-300 cursor-pointer"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-none bg-emerald-600 hover:bg-emerald-500 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-emerald-950/40 transition-all duration-300 cursor-pointer text-center"
               >
                 <span>Lounge Spaces</span>
                 <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
@@ -502,7 +502,7 @@ export default function SampanAgroGolfClubLoungeClient() {
 
               <button
                 onClick={() => scrollTo("privileges")}
-                className="inline-flex items-center justify-center gap-2 rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-6 py-3 font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
                 <FaShieldAlt className="text-emerald-400" />
                 <span>Club Privileges</span>
@@ -512,7 +512,7 @@ export default function SampanAgroGolfClubLoungeClient() {
                 href="https://www.facebook.com/sampangolfresort/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-none border border-[#1877F2]/60 bg-[#1877F2]/20 hover:bg-[#1877F2] hover:text-white px-6 py-3 font-bold uppercase tracking-[0.18em] text-[#93c5fd] hover:border-[#1877F2] transition-all duration-300 shadow-md cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-none border border-[#1877F2]/60 bg-[#1877F2]/20 hover:bg-[#1877F2] hover:text-white px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#93c5fd] hover:border-[#1877F2] transition-all duration-300 shadow-md cursor-pointer text-center"
               >
                 <FaFacebookF className="text-sm" />
                 <span>Facebook Page</span>
@@ -590,7 +590,7 @@ export default function SampanAgroGolfClubLoungeClient() {
                         {lounge.category}
                       </span>
                     </div>
-                    <div className="absolute bottom-4 right-4 h-8 w-8 rounded-full bg-black/60 text-white flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute bottom-4 right-4 h-8 w-8 rounded-none bg-black/60 text-white flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
                       <FaExpand className="text-xs" />
                     </div>
                   </div>
@@ -659,9 +659,9 @@ export default function SampanAgroGolfClubLoungeClient() {
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs font-bold font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer whitespace-nowrap ${activeTab === cat
-                    ? "bg-[#183b2b] text-white shadow-md"
-                    : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
+                className={`px-5 py-2.5 rounded-none text-xs font-bold font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer whitespace-nowrap ${activeTab === cat
+                  ? "bg-[#183b2b] text-white shadow-md"
+                  : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
                   }`}
               >
                 {cat}
@@ -765,7 +765,7 @@ export default function SampanAgroGolfClubLoungeClient() {
                       {item.caption}
                     </p>
                   </div>
-                  <div className="h-9 w-9 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                  <div className="h-9 w-9 rounded-none bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 group-hover:text-white transition-all">
                     <FaExpand className="text-xs" />
                   </div>
                 </div>
@@ -872,7 +872,7 @@ export default function SampanAgroGolfClubLoungeClient() {
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-emerald-600 text-white p-3 rounded-full shadow-lg">
+                  <div className="bg-emerald-600 text-white p-3 rounded-none shadow-lg">
                     <FaExpand className="text-sm" />
                   </div>
                 </div>
@@ -913,7 +913,7 @@ export default function SampanAgroGolfClubLoungeClient() {
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-emerald-600 text-white p-3 rounded-full shadow-lg">
+                  <div className="bg-emerald-600 text-white p-3 rounded-none shadow-lg">
                     <FaExpand className="text-sm" />
                   </div>
                 </div>
@@ -954,7 +954,7 @@ export default function SampanAgroGolfClubLoungeClient() {
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-emerald-600 text-white p-3 rounded-full shadow-lg">
+                  <div className="bg-emerald-600 text-white p-3 rounded-none shadow-lg">
                     <FaExpand className="text-sm" />
                   </div>
                 </div>
@@ -1143,33 +1143,33 @@ export default function SampanAgroGolfClubLoungeClient() {
                 </p>
 
                 <div className="mt-6 pt-6 border-t border-neutral-100 space-y-3 font-mono text-xs text-neutral-700">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <span className="text-neutral-500">Official Facebook:</span>
                     <a
                       href="https://www.facebook.com/sampangolfresort/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold text-[#1877F2] hover:underline flex items-center gap-1.5"
+                      className="font-bold text-[#1877F2] hover:underline flex items-center gap-1.5 break-all"
                     >
-                      <FaFacebookF className="text-xs" />
+                      <FaFacebookF className="text-xs shrink-0" />
                       <span>facebook.com/sampangolfresort</span>
-                      <FaExternalLinkAlt className="text-[9px]" />
+                      <FaExternalLinkAlt className="text-[9px] shrink-0" />
                     </a>
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <span className="text-neutral-500">Corporate Email:</span>
                     <a
                       href="mailto:contact@sampangolfresort.com"
-                      className="font-bold text-emerald-700 hover:underline"
+                      className="font-bold text-emerald-700 hover:underline break-all"
                     >
                       contact@sampangolfresort.com
                     </a>
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <span className="text-neutral-500">Member Services:</span>
                     <span className="font-semibold">Saturday – Thursday (9AM – 6PM)</span>
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <span className="text-neutral-500">Club Visits:</span>
                     <span className="font-semibold">Private Tours by Prior Appointment</span>
                   </div>
@@ -1235,7 +1235,7 @@ export default function SampanAgroGolfClubLoungeClient() {
             <div className="lg:col-span-7 bg-white text-neutral-900 p-8 sm:p-12 shadow-2xl">
               {inquirySubmitted ? (
                 <div className="py-12 text-center space-y-4">
-                  <div className="h-16 w-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">
+                  <div className="h-16 w-16 bg-emerald-100 text-emerald-700 rounded-none flex items-center justify-center mx-auto">
                     <FaCheck className="text-2xl" />
                   </div>
                   <h3 className="text-2xl font-bold text-neutral-900">

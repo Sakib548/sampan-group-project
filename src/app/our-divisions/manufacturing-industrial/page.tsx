@@ -18,7 +18,7 @@ const manufacturingConcerns = [
     statusType: "active",
     location: "Alfadanga, Faridpur",
     description: "Master-planned industrial park in Alfadanga, Faridpur housing anchor facilities for eco-friendly building materials and automated beverage packaging.",
-    image: "/images/our-divisions/sampan-hollow-bricks/Image-Edit.jpg",
+    image: "/images/our-divisions/sampan-industrial-park/6.jpeg",
     link: "/our-divisions/manufacturing-industrial/sampan-industrial-park",
     accentColor: "#047857",
     highlights: ["Alfadanga Industrial Corridor", "Dedicated Electric Substation", "Resident Manufacturing Anchors"],

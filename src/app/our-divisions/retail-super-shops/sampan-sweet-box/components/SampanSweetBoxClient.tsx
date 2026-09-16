@@ -132,10 +132,10 @@ export default function SampanSweetBoxClient() {
   };
 
   return (
-    <main className="bg-[#fcfbf7] text-[#1c140c] selection:bg-[#d97706] selection:text-white">
+    <main className="bg-[#fcfbf7] text-[#1c140c] selection:bg-[#d97706] selection:text-white overflow-x-hidden w-full">
 
       {/* ================= 1. HERO SECTION (LESS WORDY & COMPACT) ================= */}
-      <section className="relative min-h-[55vh] sm:min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#140d06] text-white pt-20 pb-10 sm:pt-24 sm:pb-12 border-b border-amber-900/30">
+      <section data-no-reveal className="relative min-h-0 sm:min-h-screen flex flex-col justify-start sm:justify-center overflow-hidden bg-[#140d06] text-white pt-24 pb-12 sm:pt-28 sm:pb-20 border-b border-amber-900/30">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroBackground}
@@ -152,7 +152,7 @@ export default function SampanSweetBoxClient() {
         {/* <div className="pointer-events-none absolute top-1/4 left-10 w-80 h-80 bg-amber-500/15 rounded-full blur-[120px] z-0" />
         <div className="pointer-events-none absolute bottom-10 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-[100px] z-0" /> */}
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-6">
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-0 sm:pt-2 pb-6">
           <div className="max-w-3xl space-y-4">
 
             {/* Status Badge */}
@@ -177,10 +177,10 @@ export default function SampanSweetBoxClient() {
             </div>
 
             {/* Quick Action CTAs */}
-            <div className="pt-2 flex flex-wrap items-center gap-3.5 font-mono text-xs">
+            <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4 font-mono text-xs">
               <button
                 onClick={() => scrollTo("gallery")}
-                className="group inline-flex items-center justify-center gap-2.5 rounded-none bg-amber-600 hover:bg-amber-500 px-6 py-3 font-bold uppercase tracking-[0.18em] text-white shadow-lg shadow-amber-950/40 transition-all duration-300 cursor-pointer"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-none bg-amber-600 hover:bg-amber-500 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-amber-950/40 transition-all duration-300 cursor-pointer text-center"
               >
                 <span>View Photos</span>
                 <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
@@ -188,7 +188,7 @@ export default function SampanSweetBoxClient() {
 
               <button
                 onClick={() => scrollTo("nearby")}
-                className="inline-flex items-center justify-center gap-2 rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-6 py-3 font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
                 <FaMapMarkerAlt className="text-amber-400" />
                 <span>Nearby Places</span>
@@ -196,7 +196,7 @@ export default function SampanSweetBoxClient() {
 
               <a
                 href="tel:+8801700000000"
-                className="inline-flex items-center justify-center gap-2 rounded-none border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 px-5 py-3 font-bold uppercase tracking-[0.18em] text-amber-300 transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-amber-300 transition-all duration-300 text-center"
               >
                 <FaPhoneAlt className="text-xs" />
                 <span>Contact Outlet</span>

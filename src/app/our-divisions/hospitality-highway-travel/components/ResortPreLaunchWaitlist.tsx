@@ -30,9 +30,9 @@ export default function ResortPreLaunchWaitlist({
 
   return (
     <section id="waitlist-form" className="py-20 px-6 sm:px-12 lg:px-20 bg-white text-[#183b2b]">
-      <div className="max-w-4xl mx-auto bg-gradient-to-b from-emerald-50 to-white border border-emerald-900/10 rounded-3xl p-8 sm:p-12 shadow-xl">
+      <div className="max-w-4xl mx-auto bg-gradient-to-b from-emerald-50 to-white border border-emerald-900/10 rounded-none p-8 sm:p-12 shadow-xl">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-none">
             Pre-Launch Priority Waitlist
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold font-serif mt-4 text-[#071d13]">
@@ -44,19 +44,19 @@ export default function ResortPreLaunchWaitlist({
         </div>
 
         {submitted ? (
-          <div className="bg-[#071d13] text-white rounded-2xl p-8 text-center space-y-4">
-            <div className="w-16 h-16 bg-emerald-800 text-amber-400 rounded-full flex items-center justify-center mx-auto text-3xl font-bold">
+          <div className="bg-[#071d13] text-white rounded-none p-8 text-center space-y-4">
+            <div className="w-16 h-16 bg-emerald-800 text-amber-400 rounded-none flex items-center justify-center mx-auto text-3xl font-bold">
               ✓
             </div>
             <h3 className="text-2xl font-bold font-serif text-white">
               Waitlist Pre-Registration Confirmed!
             </h3>
             <p className="text-emerald-100/90 text-sm max-w-md mx-auto">
-              Your priority code for <strong className="text-amber-400">{projectName}</strong> is <code className="bg-emerald-950 px-2 py-1 rounded font-mono text-amber-300">SAGR-2026-VIP</code>. Our resort concierge will reach out to you within 24 hours.
+              Your priority code for <strong className="text-amber-400">{projectName}</strong> is <code className="bg-emerald-950 px-2 py-1 rounded-none font-mono text-amber-300">SAGR-2026-VIP</code>. Our resort concierge will reach out to you within 24 hours.
             </p>
             <button
               onClick={() => setSubmitted(false)}
-              className="mt-4 px-6 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-bold text-xs uppercase tracking-wider transition-colors"
+              className="mt-4 px-6 py-2.5 rounded-none bg-amber-400 hover:bg-amber-300 text-emerald-950 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
             >
               Submit Another Registration
             </button>
@@ -74,7 +74,7 @@ export default function ResortPreLaunchWaitlist({
                   placeholder="e.g. Chowdhury Al-Mamun"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm"
+                  className="w-full px-4 py-3 rounded-none border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm"
                 />
               </div>
 
@@ -88,7 +88,7 @@ export default function ResortPreLaunchWaitlist({
                   placeholder="+880 1700-000000"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm"
+                  className="w-full px-4 py-3 rounded-none border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm"
                 />
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function ResortPreLaunchWaitlist({
                   placeholder="you@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm"
+                  className="w-full px-4 py-3 rounded-none border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm"
                 />
               </div>
 
@@ -115,7 +115,7 @@ export default function ResortPreLaunchWaitlist({
                 <select
                   value={formData.interestedCategory}
                   onChange={(e) => setFormData({ ...formData, interestedCategory: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm font-medium"
+                  className="w-full px-4 py-3 rounded-none border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm font-medium"
                 >
                   <option value="Founding Family Share">Founding Family Share (Lifetime)</option>
                   <option value="Founding Individual Share">Founding Individual Share</option>
@@ -135,13 +135,13 @@ export default function ResortPreLaunchWaitlist({
                 placeholder="Specify preferred villa layout, golf handicap status, or corporate event dates..."
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm"
+                className="w-full px-4 py-3 rounded-none border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-white text-slate-900 text-sm"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-4 rounded-xl bg-[#071d13] hover:bg-emerald-900 text-white font-bold text-sm uppercase tracking-wider shadow-lg transition-all hover:scale-[1.01]"
+              className="w-full py-4 rounded-none bg-[#071d13] hover:bg-emerald-900 text-white font-bold text-sm uppercase tracking-wider shadow-lg transition-all hover:scale-[1.01] cursor-pointer"
             >
               Submit Pre-Launch Waitlist Signup
             </button>

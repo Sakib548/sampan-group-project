@@ -59,10 +59,10 @@ export default function PartyCenterHero({
         {/* Main Content */}
         <div className="max-w-4xl space-y-5 sm:space-y-6">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-amber-500/20 text-amber-300 border border-amber-500/30">
+            <span className="inline-flex items-center px-3.5 py-1 rounded-none text-xs font-semibold tracking-wider uppercase bg-amber-500/20 text-amber-300 border border-amber-500/30">
               Hospitality &amp; Leisure Division
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-red-500/20 text-red-300 border border-red-500/40">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-none text-xs font-bold tracking-wider uppercase bg-red-500/20 text-red-300 border border-red-500/40">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
               {statusBadge}
             </span>
@@ -92,13 +92,13 @@ export default function PartyCenterHero({
           <div className="pt-2 flex flex-wrap gap-4">
             <a
               href="#booking-form"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-sm bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-lg transition-all hover:scale-[1.02]"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-none font-bold text-sm bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-lg transition-all hover:scale-[1.02] cursor-pointer"
             >
               Check Hall Availability & Book Date →
             </a>
             <a
               href="#menu-section"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-sm bg-white/10 hover:bg-white/15 text-white border border-white/20 transition-all"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-none font-semibold text-sm bg-white/10 hover:bg-white/15 text-white border border-white/20 transition-all cursor-pointer"
             >
               View Catering & Feast Menus
             </a>
@@ -107,7 +107,7 @@ export default function PartyCenterHero({
           {/* Quick Facts Grid */}
           <div className="pt-6 border-t border-amber-900/40 grid grid-cols-2 sm:grid-cols-4 gap-4">
             {facts.map((fact, idx) => (
-              <div key={idx} className="bg-amber-950/40 border border-amber-800/40 rounded-xl p-4">
+              <div key={idx} className="bg-amber-950/40 border border-amber-800/40 rounded-none p-4">
                 <div className="text-2xl font-bold text-amber-400">{fact.value}</div>
                 <div className="text-xs text-amber-200/70 mt-1 font-medium">{fact.label}</div>
               </div>

@@ -31,7 +31,7 @@ export default function PartyCenterMenuCustomizer() {
     <section className="py-20 px-6 sm:px-12 lg:px-20 bg-white text-[#183b2b]">
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-none">
             Custom Catering & Menu Builder
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-slate-900">
@@ -45,7 +45,7 @@ export default function PartyCenterMenuCustomizer() {
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={() => setServiceMode("fullVenue")}
-              className={`px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
+              className={`px-6 py-3 rounded-none text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 serviceMode === "fullVenue"
                   ? "bg-[#1e1b18] text-amber-400 shadow-md"
                   : "bg-slate-100 text-slate-600 hover:bg-amber-50"
@@ -55,7 +55,7 @@ export default function PartyCenterMenuCustomizer() {
             </button>
             <button
               onClick={() => setServiceMode("cateringOnly")}
-              className={`px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
+              className={`px-6 py-3 rounded-none text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 serviceMode === "cateringOnly"
                   ? "bg-[#1e1b18] text-amber-400 shadow-md"
                   : "bg-slate-100 text-slate-600 hover:bg-amber-50"
@@ -66,7 +66,7 @@ export default function PartyCenterMenuCustomizer() {
           </div>
         </div>
 
-        <div className="bg-amber-50/40 border border-amber-900/10 rounded-3xl p-8 sm:p-12 shadow-lg">
+        <div className="bg-amber-50/40 border border-amber-900/10 rounded-none p-8 sm:p-12 shadow-lg">
           <h3 className="text-xl font-bold font-serif text-slate-900 mb-4">
             Select Your Custom Menu Items:
           </h3>
@@ -79,7 +79,7 @@ export default function PartyCenterMenuCustomizer() {
                   key={idx}
                   type="button"
                   onClick={() => toggleItem(opt.name)}
-                  className={`p-4 rounded-2xl border text-left transition-all flex items-center justify-between ${
+                  className={`p-4 rounded-none border text-left transition-all flex items-center justify-between cursor-pointer ${
                     isSelected
                       ? "bg-[#1e1b18] text-amber-300 border-amber-400 shadow-md"
                       : "bg-white text-slate-800 border-slate-200 hover:border-amber-400"
@@ -107,7 +107,7 @@ export default function PartyCenterMenuCustomizer() {
 
             <a
               href="#booking-form"
-              className="px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md"
+              className="px-8 py-3.5 rounded-none bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer"
             >
               Get Custom Quote for Selected Menu →
             </a>

@@ -89,7 +89,7 @@ export default function UGCFeed() {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-4 py-2 rounded-full flex items-center gap-2">
+            <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-4 py-2 rounded-none flex items-center gap-2">
               <FaCamera className="text-emerald-700" />
               <span>Tag #SampanHighwayInn to get featured</span>
             </span>
@@ -102,12 +102,12 @@ export default function UGCFeed() {
             <article
               key={post.id}
               onClick={() => setSelectedPost(post)}
-              className="group relative overflow-hidden rounded-3xl bg-white border border-neutral-200/80 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 cursor-pointer flex flex-col"
+              className="group relative overflow-hidden rounded-none bg-white border border-neutral-200/80 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 cursor-pointer flex flex-col"
             >
               {/* Post Header */}
               <div className="p-4 flex items-center justify-between border-b border-neutral-100">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full bg-[#070b09] text-white flex items-center justify-center text-xs font-bold font-mono">
+                  <div className="w-8 h-8 rounded-none bg-[#070b09] text-white flex items-center justify-center text-xs font-bold font-mono">
                     {post.avatar}
                   </div>
                   <div>
@@ -123,9 +123,10 @@ export default function UGCFeed() {
                 <Image
                   src={post.image}
                   alt={post.caption}
-                  fill
+                  width={500}
+                  height={500}
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Hover Like Overlay */}
@@ -163,11 +164,11 @@ export default function UGCFeed() {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-3xl rounded-3xl overflow-hidden bg-white shadow-2xl grid grid-cols-1 md:grid-cols-12"
+              className="relative w-full max-w-3xl rounded-none overflow-hidden bg-white shadow-2xl grid grid-cols-1 md:grid-cols-12"
             >
               <button
                 onClick={() => setSelectedPost(null)}
-                className="absolute top-4 right-4 z-20 text-neutral-500 hover:text-black p-2 bg-white/80 rounded-full"
+                className="absolute top-4 right-4 z-20 text-neutral-500 hover:text-black p-2 bg-white/80 rounded-none cursor-pointer"
               >
                 <FaTimes />
               </button>
@@ -184,7 +185,7 @@ export default function UGCFeed() {
               <div className="md:col-span-5 p-6 flex flex-col justify-between text-neutral-800">
                 <div>
                   <div className="flex items-center gap-2.5 pb-4 border-b border-neutral-100">
-                    <div className="w-9 h-9 rounded-full bg-[#070b09] text-white flex items-center justify-center text-xs font-bold font-mono">
+                    <div className="w-9 h-9 rounded-none bg-[#070b09] text-white flex items-center justify-center text-xs font-bold font-mono">
                       {selectedPost.avatar}
                     </div>
                     <div>
@@ -211,7 +212,7 @@ export default function UGCFeed() {
                     href="https://instagram.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="block text-center w-full py-2.5 rounded-xl bg-[#070b09] text-white text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors"
+                    className="block text-center w-full py-2.5 rounded-none bg-[#070b09] text-white text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors"
                   >
                     View on Instagram
                   </a>

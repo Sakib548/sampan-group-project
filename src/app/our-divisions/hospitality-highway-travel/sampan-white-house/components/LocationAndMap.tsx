@@ -39,7 +39,7 @@ export default function LocationAndMap() {
 
             <div className="space-y-6">
               {/* Coordinates Pill */}
-              <div className="inline-flex items-center gap-3 bg-white px-4 py-2 rounded-xl border border-neutral-200 shadow-sm text-xs">
+              <div className="inline-flex items-center gap-3 bg-white px-4 py-2 rounded-none border border-neutral-200 shadow-sm text-xs">
                 <FaMapMarkerAlt className="text-[#ca8a04]" />
                 <span className="font-mono font-bold text-neutral-800">23.260465° N, 89.765979° E</span>
                 <span className="text-neutral-400">|</span>
@@ -54,7 +54,7 @@ export default function LocationAndMap() {
               </div>
 
               {/* Distance Matrix Table */}
-              <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+              <div className="rounded-none border border-neutral-200 bg-white p-6 shadow-sm">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-4">
                   Distance Matrix from Major Regional Gateways
                 </h4>
@@ -78,7 +78,7 @@ export default function LocationAndMap() {
                 href={googleMapsDeepLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#ca8a04] hover:bg-[#a16e03] px-6 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lg shadow-[#ca8a04]/20 transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-none bg-[#ca8a04] hover:bg-[#a16e03] px-6 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lg shadow-[#ca8a04]/20 transition-all duration-300"
               >
                 <FaDirections className="text-base" />
                 <span>Open Google Navigation</span>
@@ -86,7 +86,7 @@ export default function LocationAndMap() {
 
               <a
                 href="tel:+8801929918408"
-                className="inline-flex items-center gap-2 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-100 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-neutral-800 transition-colors"
+                className="inline-flex items-center gap-2 rounded-none border border-neutral-300 bg-white hover:bg-neutral-100 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-neutral-800 transition-colors"
               >
                 <FaPhoneAlt className="text-[#ca8a04] text-xs" />
                 <span>Route Concierge</span>
@@ -97,7 +97,7 @@ export default function LocationAndMap() {
 
           {/* Right Column: Google Maps Iframe Frame */}
           <div className="lg:col-span-7">
-            <div className="relative h-full min-h-[420px] rounded-3xl overflow-hidden border border-neutral-200 shadow-xl bg-neutral-100">
+            <div className="relative h-full min-h-[420px] rounded-none overflow-hidden border border-neutral-200 shadow-xl bg-neutral-100">
               <iframe
                 title="Sampan White House Location Live Map"
                 src={mapEmbedUrl}

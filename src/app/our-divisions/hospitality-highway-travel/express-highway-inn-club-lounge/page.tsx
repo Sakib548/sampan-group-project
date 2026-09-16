@@ -185,7 +185,7 @@ const nearbyLocations = [
     type: "Express Convenience",
     description:
       "Quick-stop express retail kiosk for instant refreshments, snacks, travel necessities, and beverages.",
-    image: "/images/our-divisions/mini-sampan-super-shop/mart.jpg",
+    image: "/images/our-divisions/mini-sampan-super-shop/Web-Banner-new.jpg",
   },
   {
     name: "Sampan Condominium",
@@ -236,10 +236,10 @@ export default function ExpressHighwayInnClubLoungePage() {
       : facilities.filter((f) => f.category === activeCategory);
 
   return (
-    <main className="bg-[#F5F5F2] text-neutral-900 antialiased scroll-smooth selection:bg-[#58b9eb]/30 selection:text-neutral-900">
+    <main className="bg-[#F5F5F2] text-neutral-900 antialiased scroll-smooth selection:bg-[#58b9eb]/30 selection:text-neutral-900 overflow-x-hidden w-full">
 
       {/* ================= 1. OVERVIEW (HERO WITH BACKGROUND IMAGE & DARK CONTRAST) ================= */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-950 text-white pt-24 pb-16 lg:pt-28 lg:pb-20 border-b border-white/10">
+      <section data-no-reveal className="relative min-h-0 sm:min-h-screen flex flex-col justify-start sm:justify-center overflow-hidden bg-neutral-950 text-white pt-24 pb-12 sm:pt-28 sm:pb-20 border-b border-white/10">
         {/* Real Background Image with cinematic dark gradient overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -252,6 +252,7 @@ export default function ExpressHighwayInnClubLoungePage() {
           />
           {/* Dual-layer dark gradient for text readability and navbar contrast */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/25 to-black/75" />
         </div>
 
         {/* Ambient Cyan Glow */}
@@ -259,7 +260,7 @@ export default function ExpressHighwayInnClubLoungePage() {
         <div className="pointer-events-none absolute right-10 bottom-10 h-80 w-80 rounded-none bg-[#58b9eb]/10 blur-[120px] z-0" />
 
         {/* Hero Content Container */}
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-0 sm:pt-2 pb-8 lg:pb-12">
           {/* Main Headline & Content */}
           <div className="max-w-4xl space-y-5 sm:space-y-6">
 
@@ -283,10 +284,10 @@ export default function ExpressHighwayInnClubLoungePage() {
             </p>
 
             {/* Square Action Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4">
               <Link
                 href="#facilities-gallery"
-                className="group inline-flex items-center justify-center gap-2 rounded-none bg-[#58b9eb] hover:bg-[#3aa6df] px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-neutral-950 transition-all duration-300 shadow-lg shadow-[#58b9eb]/20"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-[#58b9eb] hover:bg-[#3aa6df] px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-neutral-950 transition-all duration-300 shadow-lg shadow-[#58b9eb]/20 text-center"
               >
                 <span>Explore Facilities</span>
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -294,30 +295,30 @@ export default function ExpressHighwayInnClubLoungePage() {
 
               {/* <Link
                 href="#masterplan"
-                className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm text-center"
               >
                 View Masterplan
               </Link> */}
 
               <Link
                 href="#location"
-                className="inline-flex items-center justify-center rounded-none border border-[#58b9eb]/40 bg-[#58b9eb]/10 hover:bg-[#58b9eb]/20 px-6 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#58b9eb] transition-all duration-300 backdrop-blur-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-none border border-[#58b9eb]/40 bg-[#58b9eb]/10 hover:bg-[#58b9eb]/20 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#58b9eb] transition-all duration-300 backdrop-blur-sm text-center"
               >
                 Location &amp; Access
               </Link>
             </div>
 
             {/* Quick Metrics (Square Cards) */}
-            <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-xs">
+            <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/15 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               {/* <div className="border-l-2 border-[#58b9eb] pl-4">
                 <p className="text-xl sm:text-2xl font-bold text-white">35K sq. ft.</p>
                 <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">Dedicated Wing</p>
               </div> */}
-              <div className="border-l-2 border-[#58b9eb] pl-4">
+              <div className="border-l-2 border-[#58b9eb] pl-4 min-w-0">
                 <p className="text-xl sm:text-2xl font-bold text-[#58b9eb]">12+ Suites</p>
                 <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">Club Amenities</p>
               </div>
-              <div className="border-l-2 border-[#58b9eb] pl-4">
+              <div className="border-l-2 border-[#58b9eb] pl-4 min-w-0">
                 <p className="text-xl sm:text-2xl font-bold text-white">24/7 VIP</p>
                 <p className="text-white/50 mt-0.5 font-mono text-[10px] uppercase tracking-wider">Concierge Desk</p>
               </div>

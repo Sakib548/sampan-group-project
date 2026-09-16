@@ -109,26 +109,27 @@ export default function NearbyLocationModule() {
           {nearbySpots.map((spot) => (
             <article
               key={spot.id}
-              className="group flex flex-col rounded-3xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-emerald-500/40 hover:bg-white/[0.07] transition-all duration-500 hover:-translate-y-1.5 shadow-lg"
+              className="group flex flex-col rounded-none overflow-hidden bg-white/[0.04] border border-white/10 hover:border-emerald-500/40 hover:bg-white/[0.07] transition-all duration-500 hover:-translate-y-1.5 shadow-lg"
             >
               {/* Image Preview */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-neutral-900">
+              <div className="relative aspect-square overflow-hidden bg-neutral-900">
                 <Image
                   src={spot.image}
                   alt={spot.name}
-                  fill
+                  width={600}
+                  height={600}
                   sizes="(max-width: 768px) 100vw, 25vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Distance Chip */}
-                <div className="absolute top-3.5 right-3.5 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+                <div className="absolute top-3.5 right-3.5 bg-black/80 backdrop-blur-md px-3 py-1 rounded-none border border-white/10 text-xs font-bold text-emerald-400 flex items-center gap-1.5">
                   <FaMapMarkerAlt className="text-[10px]" />
                   <span>{spot.distance}</span>
                 </div>
 
                 {/* Drive Time Chip */}
-                <div className="absolute bottom-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-neutral-900 flex items-center gap-1">
+                <div className="absolute bottom-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-none text-[10px] font-semibold text-neutral-900 flex items-center gap-1">
                   <FaClock className="text-[9px] text-emerald-700" />
                   <span>{spot.driveTime}</span>
                 </div>

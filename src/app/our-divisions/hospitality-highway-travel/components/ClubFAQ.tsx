@@ -32,7 +32,7 @@ export default function ClubFAQ() {
     <section className="py-20 px-6 sm:px-12 lg:px-20 bg-[#f8faf6] text-[#183b2b]">
       <div className="max-w-4xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3.5 py-1 rounded-full border border-amber-200">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3.5 py-1 rounded-none border border-amber-200">
             Frequently Asked Questions
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-[#071d13]">
@@ -47,7 +47,7 @@ export default function ClubFAQ() {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-white border border-amber-900/10 rounded-2xl overflow-hidden shadow-sm transition-all"
+              className="bg-white border border-amber-900/10 rounded-none overflow-hidden shadow-sm transition-all"
             >
               <button
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}

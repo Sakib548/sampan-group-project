@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,14 +15,32 @@ type SmoothScrollProps = {
 export default function AnimationProvider({
   children,
 }: SmoothScrollProps) {
+  const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
+  // Reset scroll and refresh ScrollTrigger on route change
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [pathname]);
+
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: false,
       lerp: 0.08,
       smoothWheel: true,
       wheelMultiplier: 1,
-      overscroll: false,
+      touchMultiplier: 1.5,
     });
+
+    lenisRef.current = lenis;
 
     // --------------------------------------------------
     // LENIS + GSAP + SCROLLTRIGGER SYNC
@@ -35,8 +54,8 @@ export default function AnimationProvider({
 
     gsap.ticker.add(updateLenis);
 
-    // Prevent GSAP ticker from jumping after tab inactivity
-    gsap.ticker.lagSmoothing(0);
+    // Keep GSAP lag smoothing safe so tab switches don't lock scroll
+    gsap.ticker.lagSmoothing(500, 33);
 
     // --------------------------------------------------
     // REVEAL ANIMATIONS

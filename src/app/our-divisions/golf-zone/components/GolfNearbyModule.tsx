@@ -57,29 +57,29 @@ export default function GolfNearbyModule({
   const filtered = nearbyConcerns.filter((c) => c.name !== currentStoreName);
 
   return (
-    <section className="py-20 px-6 sm:px-12 lg:px-20 bg-[#091e15] text-white">
+    <section id="nearby" className="py-16 sm:py-20 px-4 sm:px-12 lg:px-20 bg-[#091e15] text-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-300 bg-emerald-950 px-3.5 py-1 rounded-full border border-emerald-800">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-300 bg-emerald-950 px-3.5 py-1 rounded-none border border-emerald-800">
             Nearby at this Location
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-white">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-serif mt-3 sm:mt-4 text-white">
             Integrated Destination Ecosystem
           </h2>
-          <p className="text-base sm:text-lg text-emerald-100/70 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-emerald-100/70 mt-3 sm:mt-4 leading-relaxed">
             Conveniently connected to sister Sampan hospitality, dining, and leisure facilities within the {locationHubName}.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {filtered.map((item, idx) => (
             <div
               key={idx}
-              className="bg-emerald-950/60 border border-emerald-800/40 hover:border-emerald-500/50 rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-emerald-950/60 border border-emerald-800/40 hover:border-emerald-500/50 rounded-none p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
-                <div className="flex items-center justify-between gap-4 mb-4">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-950/80 px-2.5 py-1 rounded-md border border-amber-800/50">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 mb-4">
+                  <span className="self-start text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-950/80 px-2.5 py-1 rounded-none border border-amber-800/50">
                     📍 {item.distance}
                   </span>
                   <span className="text-[10px] font-semibold text-emerald-300 uppercase tracking-wider">
@@ -87,8 +87,8 @@ export default function GolfNearbyModule({
                   </span>
                 </div>
 
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="relative w-12 h-12 rounded-xl bg-white p-1.5 flex-shrink-0 border border-emerald-700/30">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                  <div className="relative w-12 h-12 rounded-none bg-white p-1.5 flex-shrink-0 border border-emerald-700/30">
                     <Image
                       src={item.logo}
                       alt={item.name}
@@ -96,7 +96,7 @@ export default function GolfNearbyModule({
                       className="object-contain p-1"
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors font-serif leading-tight">
+                  <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-amber-400 transition-colors font-serif leading-tight">
                     {item.name}
                   </h3>
                 </div>

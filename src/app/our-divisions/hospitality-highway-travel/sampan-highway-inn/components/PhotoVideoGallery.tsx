@@ -167,9 +167,9 @@ export default function PhotoVideoGallery() {
           <div>
             <button
               onClick={() => setIsVideoModalOpen(true)}
-              className="inline-flex items-center gap-3 rounded-2xl bg-[#070b09] hover:bg-emerald-950 text-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md cursor-pointer"
+              className="inline-flex items-center gap-3 rounded-none bg-[#070b09] hover:bg-emerald-950 text-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md cursor-pointer"
             >
-              <div className="w-7 h-7 rounded-full bg-emerald-500 text-black flex items-center justify-center">
+              <div className="w-7 h-7 rounded-none bg-emerald-500 text-black flex items-center justify-center">
                 <FaPlay className="text-[10px] ml-0.5" />
               </div>
               <span>Watch Drone Tour Video</span>
@@ -183,7 +183,7 @@ export default function PhotoVideoGallery() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
+              className={`px-5 py-2.5 rounded-none text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
                 ? "bg-[#070b09] text-white shadow-md"
                 : "bg-white text-neutral-600 hover:bg-neutral-100 hover:text-black border border-neutral-200"
                 }`}
@@ -199,15 +199,17 @@ export default function PhotoVideoGallery() {
             <div
               key={item.id}
               onClick={() => setLightboxIndex(index)}
-              className={`group relative overflow-hidden rounded-2xl bg-neutral-200 shadow-sm border border-neutral-200 cursor-pointer ${index === 0 ? "aspect-[4/3] sm:col-span-2 sm:row-span-2 sm:aspect-auto min-h-[320px]" : "aspect-[4/3]"
-                }`}
+              className={`group relative overflow-hidden rounded-none bg-neutral-200 shadow-sm border border-neutral-200 cursor-pointer aspect-square ${
+                index === 0 ? "sm:col-span-2 sm:row-span-2" : ""
+              }`}
             >
               <Image
                 src={item.src}
                 alt={item.title}
-                fill
+                width={800}
+                height={800}
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
               {/* Hover Dark Overlay */}
@@ -220,7 +222,7 @@ export default function PhotoVideoGallery() {
               </div>
 
               {/* Expand Icon Badge */}
-              <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-4 right-4 w-9 h-9 rounded-none bg-black/50 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <FaExpand className="text-xs" />
               </div>
             </div>
@@ -235,7 +237,7 @@ export default function PhotoVideoGallery() {
           >
             <button
               onClick={() => setLightboxIndex(null)}
-              className="absolute top-6 right-6 z-50 text-white/70 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="absolute top-6 right-6 z-50 text-white/70 hover:text-white p-3 rounded-none bg-white/10 hover:bg-white/20 transition-colors"
             >
               <FaTimes className="text-lg" />
             </button>
@@ -243,7 +245,7 @@ export default function PhotoVideoGallery() {
             {/* Left Nav */}
             <button
               onClick={handlePrev}
-              className="absolute left-6 top-1/2 -translate-y-1/2 z-50 text-white p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors hidden sm:flex items-center justify-center"
+              className="absolute left-6 top-1/2 -translate-y-1/2 z-50 text-white p-4 rounded-none bg-white/10 hover:bg-white/20 transition-colors hidden sm:flex items-center justify-center"
             >
               <FaChevronLeft className="text-xl" />
             </button>
@@ -251,7 +253,7 @@ export default function PhotoVideoGallery() {
             {/* Lightbox Image Stage */}
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-5xl w-full max-h-[85vh] aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col justify-end"
+              className="relative max-w-5xl w-full max-h-[85vh] aspect-[16/10] rounded-none overflow-hidden shadow-2xl border border-white/10 flex flex-col justify-end"
             >
               <Image
                 src={filteredItems[lightboxIndex].src}
@@ -276,7 +278,7 @@ export default function PhotoVideoGallery() {
             {/* Right Nav */}
             <button
               onClick={handleNext}
-              className="absolute right-6 top-1/2 -translate-y-1/2 z-50 text-white p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors hidden sm:flex items-center justify-center"
+              className="absolute right-6 top-1/2 -translate-y-1/2 z-50 text-white p-4 rounded-none bg-white/10 hover:bg-white/20 transition-colors hidden sm:flex items-center justify-center"
             >
               <FaChevronRight className="text-xl" />
             </button>
@@ -291,11 +293,11 @@ export default function PhotoVideoGallery() {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl rounded-3xl overflow-hidden bg-[#070b09] border border-white/15 p-8 text-white shadow-2xl"
+              className="relative w-full max-w-4xl rounded-none overflow-hidden bg-[#070b09] border border-white/15 p-8 text-white shadow-2xl"
             >
               <div className="flex items-center justify-between pb-6 border-b border-white/10">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400">
+                  <div className="p-2 rounded-none bg-emerald-500/10 text-emerald-400">
                     <FaVideo />
                   </div>
                   <div>
@@ -305,13 +307,13 @@ export default function PhotoVideoGallery() {
                 </div>
                 <button
                   onClick={() => setIsVideoModalOpen(false)}
-                  className="text-neutral-400 hover:text-white p-2"
+                  className="text-neutral-400 hover:text-white p-2 rounded-none"
                 >
                   <FaTimes />
                 </button>
               </div>
 
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-black mt-6 flex items-center justify-center border border-white/10">
+              <div className="relative aspect-[16/9] rounded-none overflow-hidden bg-black mt-6 flex items-center justify-center border border-white/10">
                 <video
                   src="/videos/sampan-highway.MP4"
                   controls
@@ -326,7 +328,7 @@ export default function PhotoVideoGallery() {
               <div className="mt-6 flex justify-end">
                 <button
                   onClick={() => setIsVideoModalOpen(false)}
-                  className="px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-semibold text-white uppercase tracking-wider"
+                  className="px-6 py-2.5 rounded-none bg-white/10 hover:bg-white/20 text-xs font-semibold text-white uppercase tracking-wider"
                 >
                   Close Video
                 </button>

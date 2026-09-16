@@ -99,9 +99,12 @@ export default function SampanAutoClient() {
     return matchesSearch && matchesCategory && matchesLocation && matchesPhoto;
   });
 
-  const withPhotoCount = carStockList.filter((c) => c.image).length;
+  const suvCount = carStockList.filter((c) => c.category === "suv-crossover").length;
+  const mpvCount = carStockList.filter((c) => c.category === "mpv-van").length;
+  const sedanCount = carStockList.filter((c) => c.category === "sedan-wagon").length;
   const showroomCount = carStockList.filter((c) => c.location === "Showroom").length;
   const portCount = carStockList.filter((c) => c.location === "Port").length;
+  const upcomingCount = carStockList.filter((c) => c.location === "Upcoming" || c.location === "In Transit").length;
 
   return (
     <main className="bg-[#fcfbf9] text-[#1a1714] selection:bg-amber-600 selection:text-white">
@@ -383,104 +386,120 @@ export default function SampanAutoClient() {
           </div>
 
           {/* Filter & Search Bar */}
-          <div className="bg-white border border-neutral-200 p-4 sm:p-5 mb-8 shadow-sm space-y-4">
-            <div className="grid gap-4 md:grid-cols-12 items-center">
+          <div className="bg-white border border-neutral-200 p-5 mb-8 shadow-xs space-y-4">
+            {/* Row 1: Search Box & Location Status Pills */}
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               {/* Search Box */}
-              <div className="relative md:col-span-6 lg:col-span-5">
+              <div className="relative flex-1 max-w-xl">
                 <FaSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400 text-xs" />
                 <input
                   type="text"
                   placeholder="Search model, submodel, chassis, engine, color..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-[#fdfcfa] border border-neutral-200 pl-9 pr-4 py-2.5 text-xs text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-amber-600 rounded-none font-mono"
+                  className="w-full bg-[#fdfcfa] border border-neutral-200 pl-9 pr-8 py-2.5 text-xs text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-amber-600 rounded-none font-mono"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-700 text-xs"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-700 text-xs cursor-pointer"
                   >
                     <FaTimes />
                   </button>
                 )}
               </div>
 
-              {/* Category Filter */}
-              <div className="flex flex-wrap items-center gap-1.5 md:col-span-6 lg:col-span-7">
+              {/* Location Filter */}
+              <div className="flex flex-wrap items-center gap-1.5">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-neutral-400 mr-1">
+                  Location:
+                </span>
+                <button
+                  onClick={() => setSelectedLocation("all")}
+                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
+                    selectedLocation === "all"
+                      ? "bg-[#111318] text-white border-[#111318]"
+                      : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                  }`}
+                >
+                  All ({carStockList.length})
+                </button>
+                <button
+                  onClick={() => setSelectedLocation(selectedLocation === "Showroom" ? "all" : "Showroom")}
+                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
+                    selectedLocation === "Showroom"
+                      ? "bg-amber-600 text-white border-amber-600"
+                      : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                  }`}
+                >
+                  Showroom ({showroomCount})
+                </button>
+                <button
+                  onClick={() => setSelectedLocation(selectedLocation === "Port" ? "all" : "Port")}
+                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
+                    selectedLocation === "Port"
+                      ? "bg-neutral-900 text-white border-neutral-900"
+                      : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                  }`}
+                >
+                  Port ({portCount})
+                </button>
+                {upcomingCount > 0 && (
+                  <button
+                    onClick={() => setSelectedLocation(selectedLocation === "Upcoming" ? "all" : "Upcoming")}
+                    className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
+                      selectedLocation === "Upcoming"
+                        ? "bg-emerald-700 text-white border-emerald-700"
+                        : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                    }`}
+                  >
+                    Upcoming ({upcomingCount})
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Row 2: Category Tabs & Result Count */}
+            <div className="pt-3 border-t border-neutral-100 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex flex-wrap items-center gap-1.5">
                 {[
-                  { id: "all", label: `All (${carStockList.length})` },
-                  { id: "suv-crossover", label: "SUV / Crossover" },
-                  { id: "mpv-van", label: "MPV / Van" },
-                  { id: "sedan-wagon", label: "Sedan / Wagon" },
+                  { id: "all", label: `All Vehicles (${carStockList.length})` },
+                  { id: "suv-crossover", label: `SUV & Crossover (${suvCount})` },
+                  { id: "mpv-van", label: `MPV & Minivan (${mpvCount})` },
+                  { id: "sedan-wagon", label: `Sedan & Wagon (${sedanCount})` },
                 ].map((tab) => (
                   <button
                     key={tab.id}
                     onClick={() => setSelectedCategory(tab.id)}
-                    className={`px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider transition-colors rounded-none cursor-pointer ${
+                    className={`px-3.5 py-2 text-[11px] font-mono font-bold uppercase tracking-wider transition-colors rounded-none cursor-pointer border ${
                       selectedCategory === tab.id
-                        ? "bg-[#111318] text-white"
-                        : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
+                        ? "bg-[#111318] text-white border-[#111318]"
+                        : "bg-neutral-100 text-neutral-700 border-neutral-200 hover:bg-neutral-200"
                     }`}
                   >
                     {tab.label}
                   </button>
                 ))}
-
-                {/* Location Filter */}
-                <div className="flex items-center gap-1.5 ml-auto">
-                  <button
-                    onClick={() => setSelectedLocation(selectedLocation === "Showroom" ? "all" : "Showroom")}
-                    className={`px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
-                      selectedLocation === "Showroom"
-                        ? "bg-amber-600 text-white border-amber-600"
-                        : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-                    }`}
-                  >
-                    Showroom ({showroomCount})
-                  </button>
-                  <button
-                    onClick={() => setSelectedLocation(selectedLocation === "Port" ? "all" : "Port")}
-                    className={`px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
-                      selectedLocation === "Port"
-                        ? "bg-neutral-900 text-white border-neutral-900"
-                        : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-                    }`}
-                  >
-                    Port ({portCount})
-                  </button>
-                  <button
-                    onClick={() => setOnlyWithPhotos(!onlyWithPhotos)}
-                    className={`px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer inline-flex items-center gap-1.5 border ${
-                      onlyWithPhotos
-                        ? "bg-amber-800 text-white border-amber-800"
-                        : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-                    }`}
-                  >
-                    <FaCamera className="text-[10px]" />
-                    <span>Photos ({withPhotoCount})</span>
-                  </button>
-                </div>
               </div>
-            </div>
 
-            {/* Active Filters Summary */}
-            <div className="flex items-center justify-between text-xs font-mono text-neutral-500 pt-2 border-t border-neutral-100">
-              <span>
-                Showing <strong className="text-neutral-900">{filteredCars.length}</strong> of {carStockList.length} vehicles
-              </span>
-              {(searchQuery || selectedCategory !== "all" || selectedLocation !== "all" || onlyWithPhotos) && (
-                <button
-                  onClick={() => {
-                    setSearchQuery("");
-                    setSelectedCategory("all");
-                    setSelectedLocation("all");
-                    setOnlyWithPhotos(false);
-                  }}
-                  className="text-amber-700 hover:underline font-bold text-[11px]"
-                >
-                  Reset all filters
-                </button>
-              )}
+              {/* Active Filter Summary */}
+              <div className="flex items-center gap-3 text-xs font-mono text-neutral-500">
+                <span>
+                  Showing <strong className="text-neutral-900">{filteredCars.length}</strong> of {carStockList.length} vehicles
+                </span>
+                {(searchQuery || selectedCategory !== "all" || selectedLocation !== "all") && (
+                  <button
+                    onClick={() => {
+                      setSearchQuery("");
+                      setSelectedCategory("all");
+                      setSelectedLocation("all");
+                    }}
+                    className="text-amber-700 hover:underline font-bold text-[11px] cursor-pointer"
+                  >
+                    Reset filters
+                  </button>
+                )}
+              </div>
             </div>
           </div>
 
@@ -552,6 +571,8 @@ export default function SampanAutoClient() {
                         className={`inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 font-bold uppercase ${
                           car.location === "Showroom"
                             ? "bg-amber-600 text-white"
+                            : car.location === "Upcoming" || car.location === "In Transit"
+                            ? "bg-emerald-700 text-white"
                             : "bg-neutral-900 text-white"
                         }`}
                       >
@@ -606,6 +627,8 @@ export default function SampanAutoClient() {
                         <span className="font-mono text-sm font-bold text-neutral-950">
                           {car.isSold ? (
                             <span className="text-neutral-400 line-through">Pre-Sold</span>
+                          ) : car.priceLakh.toLowerCase().includes("call") || car.priceLakh.toLowerCase().includes("request") ? (
+                            <span className="text-amber-800 text-xs">{car.priceLakh}</span>
                           ) : (
                             <span>{car.priceLakh} Lac</span>
                           )}
@@ -863,6 +886,8 @@ export default function SampanAutoClient() {
                       <span className="text-xl font-bold font-mono text-neutral-950">
                         {selectedCar.isSold ? (
                           <span className="text-neutral-400">Pre-Sold</span>
+                        ) : selectedCar.priceLakh.toLowerCase().includes("call") || selectedCar.priceLakh.toLowerCase().includes("request") ? (
+                          <span className="text-amber-700">{selectedCar.priceLakh}</span>
                         ) : (
                           <span>BDT {selectedCar.priceLakh} Lac</span>
                         )}

@@ -241,12 +241,13 @@ export default function SampanEcoAgroProduceClient() {
       : ecoAgroProducts.filter((p) => p.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-[#F5F5F2] text-neutral-950">
+    <main className="min-h-screen bg-[#F5F5F2] text-neutral-950 overflow-x-hidden w-full">
 
       {/* ================= 1. HERO SECTION (Hospitality Eco-Agro Style) ================= */}
       <section
         id="overview"
-        className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#0c1c14] text-white pt-20 pb-12 lg:pt-24 lg:pb-16 border-b border-white/10"
+        data-no-reveal
+        className="relative min-h-0 sm:min-h-screen flex flex-col justify-start sm:justify-center overflow-hidden bg-[#0c1c14] text-white pt-24 pb-12 sm:pt-28 sm:pb-20 border-b border-white/10"
       >
         {/* Real Background Image with Dark Nature Gradient Overlay */}
         <div className="absolute inset-0 z-0">
@@ -267,15 +268,15 @@ export default function SampanEcoAgroProduceClient() {
         <div className="pointer-events-none absolute top-1/4 left-10 w-96 h-96 bg-[#2f6b45]/20 rounded-full blur-[140px] z-0" />
         <div className="pointer-events-none absolute bottom-10 right-10 w-96 h-96 bg-[#b9e583]/15 rounded-full blur-[120px] z-0" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-0 sm:pt-2 pb-8 lg:pb-12">
           {/* Main Hero Content */}
           <div className="max-w-4xl space-y-4 sm:space-y-5">
 
             {/* Eyebrow Badge */}
-            <div className="inline-flex items-center gap-3 border border-[#b9e583]/50 bg-[#b9e583]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#b9e583]">
+            {/* <div className="inline-flex items-center gap-3 border border-[#b9e583]/50 bg-[#b9e583]/15 backdrop-blur-md px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#b9e583]">
               <FaLeaf className="text-xs text-[#b9e583]" />
               <span>Agro &amp; Fresh Produce • Organic Farming &amp; Seasonal Harvest</span>
-            </div>
+            </div> */}
 
             {/* Main Headline */}
             <h1 className="text-[clamp(2.4rem,4.8vw,4.2rem)] font-bold tracking-tight text-white leading-[0.98]">
@@ -291,20 +292,10 @@ export default function SampanEcoAgroProduceClient() {
             </p>
 
             {/* Action Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-
-
-              {/* <a
-                href="tel:+8801929918408"
-                className="inline-flex items-center justify-center gap-2 border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-[#0c1c14] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm"
-              >
-                <FaPhoneAlt className="text-xs text-[#b9e583]" />
-                <span>+880 1929-918408</span>
-              </a> */}
-
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4">
               <a
                 href="#products"
-                className="inline-flex items-center justify-center gap-2 bg-[#b9e583] hover:bg-[#a6db6c] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0c1c14] shadow-lg shadow-[#b9e583]/20 transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-[#b9e583] hover:bg-[#a6db6c] px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0c1c14] shadow-lg shadow-[#b9e583]/20 transition-all duration-300 text-center"
               >
                 <span>What We Grow</span>
                 <FiArrowRight className="text-sm" />
@@ -312,16 +303,17 @@ export default function SampanEcoAgroProduceClient() {
 
               <a
                 href="#location"
-                className="inline-flex items-center justify-center gap-2 border border-white/15 bg-black/40 hover:bg-white/10 px-6 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none border border-white/15 bg-black/40 hover:bg-white/10 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm text-center"
               >
                 <FaMapMarkerAlt className="text-xs text-[#b9e583]" />
                 <span>Farm Address</span>
               </a>
+
               <a
                 href="https://www.facebook.com/sampanecoandagro"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-[#1877F2] hover:bg-[#166fe5] px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-md text-center"
               >
                 <FaFacebookF className="text-sm" />
                 <span>Facebook Page</span>
@@ -362,7 +354,7 @@ export default function SampanEcoAgroProduceClient() {
         concernName="Sampan Eco & Agro"
         storyParagraphs={storyParagraphs}
         pillars={storyPillars}
-        farmImage="/images/our-divisions/eco-agro/veg2.jpg"
+        farmImage="/images/our-divisions/sampan-eco-agro/vegetables-table-garden-sunlight.jpg"
         bgTheme="divisions-green"
         accentColor="#15803d"
       />

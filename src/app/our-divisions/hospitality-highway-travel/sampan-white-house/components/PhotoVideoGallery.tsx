@@ -84,7 +84,7 @@ export default function PhotoVideoGallery() {
             <div
               key={item.id}
               onClick={() => setLightboxIndex(index)}
-              className="group relative overflow-hidden rounded-2xl bg-neutral-200 shadow-sm border border-neutral-200/80 cursor-pointer aspect-[4/3] hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-none bg-neutral-200 shadow-sm border border-neutral-200/80 cursor-pointer aspect-square hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
             >
               <Image
                 src={item.src}
@@ -95,12 +95,12 @@ export default function PhotoVideoGallery() {
               />
 
               {/* Top Category Badge */}
-              <div className="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-[#e8b84b]">
+              <div className="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md px-3 py-1 rounded-none text-[10px] font-bold uppercase tracking-widest text-[#e8b84b]">
                 {item.category}
               </div>
 
               {/* Expand Icon Badge */}
-              <div className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute top-4 right-4 z-10 w-9 h-9 rounded-none bg-black/60 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <FaExpand className="text-xs" />
               </div>
 
@@ -130,7 +130,7 @@ export default function PhotoVideoGallery() {
         >
           <button
             onClick={() => setLightboxIndex(null)}
-            className="absolute top-6 right-6 z-50 text-white/70 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+            className="absolute top-6 right-6 z-50 text-white/70 hover:text-white p-3 rounded-none bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
             aria-label="Close Lightbox"
           >
             <FaTimes className="text-lg" />
@@ -139,7 +139,7 @@ export default function PhotoVideoGallery() {
           {/* Left Nav */}
           <button
             onClick={handlePrev}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-50 text-white p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors hidden sm:flex items-center justify-center cursor-pointer"
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-50 text-white p-4 rounded-none bg-white/10 hover:bg-white/20 transition-colors hidden sm:flex items-center justify-center cursor-pointer"
             aria-label="Previous image"
           >
             <FaChevronLeft className="text-xl" />
@@ -148,7 +148,7 @@ export default function PhotoVideoGallery() {
           {/* Right Nav */}
           <button
             onClick={handleNext}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-50 text-white p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors hidden sm:flex items-center justify-center cursor-pointer"
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-50 text-white p-4 rounded-none bg-white/10 hover:bg-white/20 transition-colors hidden sm:flex items-center justify-center cursor-pointer"
             aria-label="Next image"
           >
             <FaChevronRight className="text-xl" />
@@ -157,7 +157,7 @@ export default function PhotoVideoGallery() {
           {/* Lightbox Stage */}
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl w-full max-h-[85vh] aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col justify-end bg-black"
+            className="relative max-w-5xl w-full max-h-[85vh] aspect-[16/10] rounded-none overflow-hidden shadow-2xl border border-white/10 flex flex-col justify-end bg-black"
           >
             <Image
               src={galleryItems[lightboxIndex].src}

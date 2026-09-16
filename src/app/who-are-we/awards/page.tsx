@@ -53,7 +53,7 @@ const stats = [
   { value: "15+", label: "Accreditations" },
   { value: "20+", label: "Honors" },
   { value: "10+", label: "Awards" },
-  { value: "1998-2026", label: "Years of Recognition" },
+  { value: "2005-2026", label: "Years of Recognition" },
 ];
 
 const timelineData = [

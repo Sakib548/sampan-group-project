@@ -24,7 +24,7 @@ export default function SampanHighwayInnPartyCenterClient() {
   };
 
   return (
-    <main className="bg-[#F5F5F2] text-neutral-900 antialiased selection:bg-amber-500 selection:text-slate-950">
+    <main className="bg-[#F5F5F2] text-neutral-900 antialiased selection:bg-amber-500 selection:text-slate-950 overflow-x-hidden w-full">
 
       {/* OVERVIEW (Hero Header with current hero image & amber gradient) */}
       <PartyCenterHeroOverview onOpenBooking={() => scrollToSection("booking-form")} />

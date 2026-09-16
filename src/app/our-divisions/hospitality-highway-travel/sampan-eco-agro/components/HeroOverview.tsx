@@ -13,7 +13,7 @@ const heroImage = "/images/our-divisions/sampan-eco-agro/frontview2.jpg";
 
 export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => void }) {
   return (
-    <section id="overview" className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#0c1c14] text-white pt-20 pb-12 lg:pt-24 lg:pb-16 border-b border-white/10">
+    <section id="overview" data-no-reveal className="relative min-h-0 sm:min-h-screen flex flex-col justify-start sm:justify-center overflow-hidden bg-[#0c1c14] text-white pt-24 pb-12 sm:pt-28 sm:pb-20 border-b border-white/10">
       {/* Background Image with Dark Nature Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -33,7 +33,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
       <div className="pointer-events-none absolute top-1/4 left-10 w-96 h-96 bg-[#2f6b45]/20 rounded-full blur-[140px] z-0" />
       <div className="pointer-events-none absolute bottom-10 right-10 w-96 h-96 bg-[#b9e583]/15 rounded-full blur-[120px] z-0" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-0 sm:pt-2 pb-8 lg:pb-12">
         {/* Main Hero Content */}
         <div className="max-w-4xl space-y-4 sm:space-y-5">
           {/* Eyebrow Badge */}
@@ -56,17 +56,17 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
           </p>
 
           {/* CTAs */}
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4">
             {/* <button
                 onClick={onOpenBooking}
-                className="group relative inline-flex items-center justify-center gap-3 bg-[#b9e583] hover:bg-[#a6db6c] px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0c1c14] shadow-lg shadow-[#b9e583]/20 transition-all duration-300 cursor-pointer"
+                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#b9e583] hover:bg-[#a6db6c] px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0c1c14] shadow-lg shadow-[#b9e583]/20 transition-all duration-300 cursor-pointer text-center"
               >
                 <span>Inquire &amp; Reserve</span>
                 <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
               </button> */}
             <a
               href="#route-map"
-              className="inline-flex items-center justify-center gap-2 border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-[#0c1c14] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-[#0c1c14] px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm text-center"
             >
               <FaRoute className="text-[#b9e583]" />
               <span>Route Guide</span>
@@ -75,7 +75,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
               href="https://www.facebook.com/sampanecoandagro"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-md"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-md text-center"
             >
               <FaFacebook className="text-sm" />
               <span>Facebook Page</span>
@@ -83,13 +83,13 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking: () => v
 
 
 
-            <a
+            {/* <a
               href="tel:+8801929918400"
               className="inline-flex items-center justify-center gap-2 border border-white/15 bg-black/40 hover:bg-white/10 px-6 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm"
             >
               <FaPhoneAlt className="text-xs text-[#b9e583]" />
               <span>+8801929918400</span>
-            </a>
+            </a> */}
           </div>
 
           {/* Quick Value Badges */}

@@ -194,10 +194,10 @@ export default function MiniSampanClient() {
   };
 
   return (
-    <main className="bg-[#fcfbf9] text-[#1a1714] selection:bg-emerald-700 selection:text-white">
+    <main className="bg-[#fcfbf9] text-[#1a1714] selection:bg-emerald-700 selection:text-white overflow-x-hidden w-full">
 
       {/* ================= 1. HERO SECTION ================= */}
-      <section className="relative min-h-[75vh] lg:min-h-[82vh] flex items-center justify-center overflow-hidden bg-[#0a120e] text-white pt-24 pb-16 lg:pt-28 lg:pb-20 border-b border-emerald-900/30">
+      <section data-no-reveal className="relative min-h-0 sm:min-h-screen flex flex-col justify-start sm:justify-center overflow-hidden bg-[#0a120e] text-white pt-24 pb-12 sm:pt-28 sm:pb-20 border-b border-emerald-900/30">
         {/* Authentic Storefront Image with Light Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -212,7 +212,7 @@ export default function MiniSampanClient() {
 
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-2 pb-8 lg:pb-12">
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 pt-0 sm:pt-2 pb-8 lg:pb-12">
           <div className="max-w-4xl space-y-5 sm:space-y-6">
 
             {/* Status Badge */}
@@ -235,10 +235,10 @@ export default function MiniSampanClient() {
             </p>
 
             {/* Square Action Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4 font-mono text-xs">
               <button
                 onClick={() => scrollTo("overview")}
-                className="group inline-flex items-center justify-center gap-2 rounded-none bg-emerald-600 hover:bg-emerald-500 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-emerald-950/40 cursor-pointer"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-emerald-600 hover:bg-emerald-500 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-emerald-950/40 cursor-pointer text-center"
               >
                 <span>Explore Kiosk</span>
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -246,14 +246,14 @@ export default function MiniSampanClient() {
 
               <button
                 onClick={() => scrollTo("gallery")}
-                className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
                 View Photos
               </button>
 
               <button
                 onClick={() => scrollTo("nearby")}
-                className="inline-flex items-center justify-center rounded-none border border-emerald-500/40 bg-emerald-900/30 hover:bg-emerald-800/60 px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-emerald-300 transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-none border border-emerald-500/40 bg-emerald-900/30 hover:bg-emerald-800/60 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-emerald-300 transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
                 Nearby Places
               </button>

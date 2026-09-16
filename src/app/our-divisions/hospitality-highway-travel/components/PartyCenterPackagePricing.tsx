@@ -49,7 +49,7 @@ export default function PartyCenterPackagePricing() {
     <section className="py-20 px-6 sm:px-12 lg:px-20 bg-[#f8faf6] text-[#183b2b]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-none">
             Transparent Pricing
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-slate-900">
@@ -64,7 +64,7 @@ export default function PartyCenterPackagePricing() {
           {packages.map((pkg, idx) => (
             <div
               key={idx}
-              className={`rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 relative border ${
+              className={`rounded-none p-8 flex flex-col justify-between transition-all duration-300 relative border ${
                 pkg.featured
                   ? "bg-[#1e1b18] text-white border-2 border-amber-400 shadow-2xl scale-[1.03]"
                   : "bg-white border-amber-900/10 text-slate-900 hover:shadow-xl"
@@ -72,7 +72,7 @@ export default function PartyCenterPackagePricing() {
             >
               {pkg.tag && (
                 <span
-                  className={`absolute -top-3.5 left-1/2 -translate-x-1/2 text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full ${
+                  className={`absolute -top-3.5 left-1/2 -translate-x-1/2 text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-none ${
                     pkg.featured
                       ? "bg-amber-400 text-slate-950 shadow-md"
                       : "bg-[#1e1b18] text-amber-300"
@@ -129,7 +129,7 @@ export default function PartyCenterPackagePricing() {
               <div className="mt-8 pt-6">
                 <a
                   href="#booking-form"
-                  className={`block w-full py-3.5 rounded-xl text-center font-bold text-xs uppercase tracking-wider transition-all ${
+                  className={`block w-full py-3.5 rounded-none text-center font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
                     pkg.featured
                       ? "bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-lg"
                       : "bg-[#1e1b18] hover:bg-amber-700 text-white"

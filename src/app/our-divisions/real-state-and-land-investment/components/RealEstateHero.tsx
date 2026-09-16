@@ -46,7 +46,7 @@ export default function RealEstateHero({
   const remainingTitle = titleWords.slice(1).join(" ");
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-24 lg:pb-16 bg-[#090d16] text-white border-b border-white/10">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-28 lg:pb-20 bg-[#090d16] text-white border-b border-white/10">
 
       {/* Background Image with Dark Vignette for Navbar Readability */}
       <div className="absolute inset-0 z-0">

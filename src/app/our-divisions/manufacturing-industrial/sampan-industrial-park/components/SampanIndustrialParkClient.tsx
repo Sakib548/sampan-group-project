@@ -29,32 +29,46 @@ interface GalleryItem {
 
 const parkGallery: GalleryItem[] = [
   {
-    id: "park-1",
-    title: "Hollow Bricks & Concrete Products Plant",
-    category: "Anchor Industry",
-    image: "/images/our-divisions/sampan-hollow-bricks/Image-Edit.jpg",
-    description: "Automated concrete hollow brick and paver block manufacturing line inside the park.",
+    id: "park-facility-main",
+    title: "Industrial Manufacturing Facility",
+    category: "Production Plant",
+    image: "/images/our-divisions/sampan-industrial-park/6.jpeg",
+    description: "Main pre-engineered industrial production facility and logistics access road inside the park.",
   },
   {
-    id: "park-2",
-    title: "PET & Beverage Packaging Facility",
-    category: "Anchor Industry",
-    image: "/images/our-divisions/sampan-pet-beverage/Web-Banner-2.jpg",
-    description: "Automated PET bottle preforms and beverage bottling production unit inside the park.",
+    id: "park-shed-green",
+    title: "Structural Manufacturing Shed",
+    category: "Operations Shed",
+    image: "/images/our-divisions/sampan-industrial-park/2.jpeg",
+    description: "Heavy structural production shed equipped for automated machinery and manufacturing lines.",
   },
   {
-    id: "park-3",
-    title: "Beverage Bottling Operations",
-    category: "Anchor Industry",
-    image: "/images/our-divisions/sampan-pet-beverage/WhatsApp-Image-2024-05-30-at-6.53.17-PM-1-1(1).jpeg",
-    description: "High-speed hygienic bottling and packaging line serving wholesale distribution.",
+    id: "park-admin-office",
+    title: "Park Administration & Site Office",
+    category: "Site Infrastructure",
+    image: "/images/our-divisions/sampan-industrial-park/3.jpeg",
+    description: "Dedicated on-site management and engineering administrative quarters built with precision masonry.",
   },
   {
-    id: "park-4",
-    title: "Eco Building Materials Yard",
-    category: "Manufacturing Yard",
-    image: "/images/our-divisions/sampan-hollow-bricks/Our-Products.jpg",
-    description: "Finished heavy-duty interlocking pavers and hollow blocks ready for dispatch.",
+    id: "park-storage-facility",
+    title: "Logistics & Storage Warehouse",
+    category: "Logistics & Storage",
+    image: "/images/our-divisions/sampan-industrial-park/4.jpeg",
+    description: "Ramped masonry storage and material dispatch facility for secure industrial transit.",
+  },
+  {
+    id: "park-office-front",
+    title: "Administrative Complex & Grounds",
+    category: "Site Management",
+    image: "/images/our-divisions/sampan-industrial-park/5.jpeg",
+    description: "Frontal view of the administrative offices and landscaped perimeter grounds.",
+  },
+  {
+    id: "park-hero-overview",
+    title: "Primary Production Complex",
+    category: "Industrial Zone",
+    image: "/images/our-divisions/sampan-industrial-park/hero.jpeg",
+    description: "Panoramic ground perspective of the primary manufacturing complex at Alfadanga.",
   },
 ];
 
@@ -342,21 +356,21 @@ export default function SampanIndustrialParkClient() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {parkGallery.map((item) => (
               <article
                 key={item.id}
                 onClick={() => setSelectedImage(item.image)}
-                className="group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-emerald-600 transition-all duration-300 hover:shadow-md cursor-pointer min-h-[300px]"
+                className="group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-emerald-600 transition-all duration-300 hover:shadow-md cursor-pointer min-h-[320px]"
               >
                 <div className="absolute top-0 left-0 h-[3px] w-0 bg-emerald-600 transition-all duration-500 group-hover:w-full z-20" />
 
-                <div className="relative w-full flex-1 min-h-[220px] overflow-hidden bg-neutral-200">
+                <div className="relative w-full flex-1 min-h-[240px] overflow-hidden bg-neutral-200">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 z-10">

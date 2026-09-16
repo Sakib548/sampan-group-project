@@ -25,10 +25,10 @@ export default function SampanWhiteHouseClient() {
   };
 
   return (
-    <main className="bg-[#F5F5F2] text-neutral-900 antialiased selection:bg-[#e8b84b] selection:text-neutral-950">
+    <main className="bg-[#F5F5F2] text-neutral-900 antialiased selection:bg-[#e8b84b] selection:text-neutral-950 overflow-x-hidden w-full">
 
       {/* OVERVIEW (Hero with Background Image & Transparent Navbar Dark Contrast) */}
-      <HeroOverview onOpenBooking={() => scrollToSection("booking-widget")} />
+      <HeroOverview />
 
       {/* ONLINE BOOKING WIDGET (Instant Calculator & Reservation) */}
       {/* <OnlineBookingWidget /> */}

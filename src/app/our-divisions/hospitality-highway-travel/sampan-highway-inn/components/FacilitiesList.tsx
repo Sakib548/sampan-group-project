@@ -118,21 +118,22 @@ export default function FacilitiesList({ onSelectFacility }: { onSelectFacility?
           {facilitiesData.map((item, index) => (
             <article
               key={item.id}
-              className="group flex flex-col rounded-2xl overflow-hidden bg-white border border-neutral-200/80 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-500 hover:-translate-y-1.5"
+              className="group flex flex-col rounded-none overflow-hidden bg-white border border-neutral-200/80 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-500 hover:-translate-y-1.5"
             >
               {/* Card Image */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+              <div className="relative aspect-square overflow-hidden bg-neutral-100">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  fill
+                  width={600}
+                  height={600}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-emerald-400">
+                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-none text-[10px] font-bold uppercase tracking-widest text-emerald-400">
                   {item.badge}
                 </div>
-                <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-neutral-800">
+                <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-none text-[10px] font-semibold text-neutral-800">
                   {item.hours}
                 </div>
               </div>
