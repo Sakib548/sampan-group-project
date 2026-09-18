@@ -231,7 +231,7 @@ export default function SampanMartClient() {
 
             {/* Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-amber-500/80 pl-4">
-              A modern 24/7 retail convenience super shop located directly at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway (KM 74, Gopalganj). Stocked with fresh snacks, chilled beverages, travel toiletries, and everyday household essentials.
+              A modern 24/7 retail convenience super shop located directly at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway (KM 74, Dhaka–Khulna Highway). Stocked with fresh snacks, chilled beverages, travel toiletries, and everyday household essentials.
             </p>
 
             {/* Square Action Buttons */}
@@ -271,7 +271,7 @@ export default function SampanMartClient() {
               </div>
               <div className="border-l-2 border-amber-400 pl-4">
                 <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Location</p>
-                <p className="text-[11px] text-white/60 mt-0.5 font-mono">KM 74, Gopalganj</p>
+                <p className="text-[11px] text-white/60 mt-0.5 font-mono">KM 74, Dhaka–Khulna Highway</p>
               </div>
               <div className="border-l-2 border-amber-400 pl-4">
                 <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Travel Ready</p>
@@ -302,7 +302,7 @@ export default function SampanMartClient() {
               </h2>
 
               <p className="mt-6 text-sm sm:text-base text-neutral-600 leading-relaxed">
-                Sampan Mart is designed as a complete retail pit-stop for long-distance drivers, family road-trippers, passenger buses, and the local community along the Dhaka–Khulna Highway in Gopalganj.
+                Sampan Mart is designed as a complete retail pit-stop for long-distance drivers, family road-trippers, passenger buses, and the local community along the Dhaka–Khulna Highway.
               </p>
 
               <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
@@ -619,7 +619,7 @@ export default function SampanMartClient() {
               Visit Sampan Mart
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-              Situated right beside Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway, Gopalganj. Open around the clock for all travelers and local residents.
+              Situated right beside Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway, open around the clock for all travelers and local residents.
             </p>
           </div>
 
@@ -638,7 +638,7 @@ export default function SampanMartClient() {
               <p className="text-sm text-neutral-600 leading-relaxed font-mono">
                 Sampan Highway Inn Complex <br />
                 KM 74, Dhaka–Khulna Highway <br />
-                Gopalganj, Bangladesh
+                Dhaka–Khulna Highway, Bangladesh
               </p>
               <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
                 Wide storefront parking available
@@ -779,7 +779,7 @@ export default function SampanMartClient() {
               </h4>
               <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
                 <li>Sampan Highway Inn Complex</li>
-                <li>KM 74, Dhaka–Khulna Highway, Gopalganj</li>
+                <li>KM 74, Dhaka–Khulna Highway</li>
                 <li>Open 24 Hours / 7 Days</li>
                 <li>+880 1929-918408</li>
               </ul>

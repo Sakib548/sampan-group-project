@@ -219,7 +219,7 @@ const landmarks = [
   { landmark: "Express Highway Inn Complex", distance: "0 m", driveTime: "On-Site Footprint" },
   { landmark: "Bhanga Junction Expressway Interchange", distance: "16 km", driveTime: "15 Mins" },
   { landmark: "Padma Bridge Toll Plaza (Mawa)", distance: "39 km", driveTime: "30 Mins" },
-  { landmark: "Gopalganj District Hub", distance: "36 km", driveTime: "32 Mins" },
+  { landmark: "South Highway Hub", distance: "36 km", driveTime: "32 Mins" },
   { landmark: "Barishal Divisional Airport Hub", distance: "68 km", driveTime: "55 Mins" },
   { landmark: "Dhaka Zero Point / Jatrabari", distance: "74 km", driveTime: "1h 05m" },
   { landmark: "Khulna Divisional City Hub", distance: "106 km", driveTime: "1h 35m" },

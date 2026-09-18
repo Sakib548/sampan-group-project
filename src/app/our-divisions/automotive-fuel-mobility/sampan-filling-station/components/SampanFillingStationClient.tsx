@@ -34,7 +34,7 @@ const galleryItems: GalleryItem[] = [
     title: "Highway Forecourt & Main Canopy",
     category: "Main Station",
     image: "/images/our-divisions/sampan-filling-station/hero.jpeg",
-    description: "Spacious multi-lane fueling forecourt on the Dhaka–Khulna Highway at KM 74, Gopalganj.",
+    description: "Spacious multi-lane fueling forecourt on the Dhaka–Khulna Highway at KM 74.",
   },
   {
     id: "fs-2",
@@ -224,7 +224,7 @@ export default function SampanFillingStationClient() {
 
             {/* Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-emerald-500/80 pl-4">
-              24/7 calibrated Octane, Diesel, and Mobil lubricants at the Sampan Highway Inn Complex (KM 74, Gopalganj).
+              24/7 calibrated Octane, Diesel, and Mobil lubricants at the Sampan Highway Inn Complex (KM 74, Dhaka–Khulna Highway).
             </p>
 
             {/* Square Action Buttons */}
@@ -263,7 +263,7 @@ export default function SampanFillingStationClient() {
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">Digital Flow Meters</p>
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
-                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Gopalganj</p>
+                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Dhaka–Khulna Highway</p>
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">KM 74, Highway</p>
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
@@ -534,7 +534,7 @@ export default function SampanFillingStationClient() {
               </h2>
             </div>
             <p className="max-w-md text-xs sm:text-sm text-neutral-400 leading-relaxed">
-              Located directly within the Sampan Highway Inn complex alongside complementary dining, fueling, lodging, and retail stores in Gopalganj.
+              Located directly within the Sampan Highway Inn complex alongside complementary dining, fueling, lodging, and retail stores along the Dhaka–Khulna Highway.
             </p>
           </div>
 
@@ -612,7 +612,7 @@ export default function SampanFillingStationClient() {
               Visit Sampan Filling Station
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-              Situated right beside Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway in Gopalganj. Open 24/7 every day of the year.
+              Situated right beside Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway. Open 24/7 every day of the year.
             </p>
           </div>
 
@@ -631,7 +631,7 @@ export default function SampanFillingStationClient() {
               <p className="text-sm text-neutral-600 leading-relaxed font-mono">
                 Sampan Highway Inn Complex <br />
                 KM 74, Dhaka–Khulna Highway <br />
-                Gopalganj, Bangladesh
+                Dhaka–Khulna Highway, Bangladesh
               </p>
               <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
                 Wide highway slipway access
@@ -736,7 +736,7 @@ export default function SampanFillingStationClient() {
                 Sampan Filling Station
               </h3>
               <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                24/7 digital-metered Octane, Diesel, and official Mobil lubricants station located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway in Gopalganj.
+                24/7 digital-metered Octane, Diesel, and official Mobil lubricants station located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway.
               </p>
             </div>
             <div>
@@ -772,7 +772,7 @@ export default function SampanFillingStationClient() {
               </h4>
               <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
                 <li>Sampan Highway Inn Complex</li>
-                <li>KM 74, Dhaka–Khulna Highway, Gopalganj</li>
+                <li>KM 74, Dhaka–Khulna Highway</li>
                 <li>Open 24 Hours / 7 Days</li>
                 <li>+880 1929-918408</li>
               </ul>

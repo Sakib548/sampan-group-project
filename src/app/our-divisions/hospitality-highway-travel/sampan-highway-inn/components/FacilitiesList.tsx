@@ -1,177 +1,159 @@
 "use client";
 
 import Image from "next/image";
-import {
-  FaCheck,
-  FaArrowRight
-} from "react-icons/fa";
 
-const facilitiesData = [
+interface FacilityItem {
+  id: string;
+  title: string;
+  category: string;
+  badge: string;
+  image: string;
+  description: string;
+  hours: string;
+}
+
+const facilitiesData: FacilityItem[] = [
   {
     id: "vvip-suites",
     title: "VVIP Rest Suites",
+    category: "Rest & Accommodations",
     badge: "Premium Comfort",
     image: "/images/facilities/highway_inn/all_day_comfort.png",
     description:
       "Acoustically engineered suites offering plush king-size beds, private en-suite rain showers, smart IPTV, and climate control for quiet respite from highway rumble.",
-    features: ["King Orthopaedic Bedding", "High-Speed Fiber Wi-Fi", "In-Room Gourmet Service", "Hourly & Overnight Stays"],
     hours: "24/7 Available",
   },
   {
     id: "vip-lounge",
     title: "VIP Executive Lounge",
+    category: "Executive & Leisure",
     badge: "Exclusive Lounge",
     image: "/images/our-divisions/sampan-highway-inn/vvip-lounge.jpeg",
     description:
       "Lavish seating with quiet ambiance, complimentary refreshments, and premium amenities for executives and families seeking an upscale rest stop.",
-    features: ["Plush Leather Recliners", "Complimentary Refreshments", "Dedicated Service Staff", "Workstations & High-Speed Wi-Fi"],
     hours: "24/7 Open",
   },
   {
     id: "fast-food",
     title: "Sampan Fast Food",
+    category: "Quick Bites & Dining",
     badge: "Quick Bites",
     image: "/images/our-divisions/sampan-highway-inn/fast-food.jpeg",
     description:
       "Serving up delicious, piping-hot burgers, crispy fried chicken, wraps, and quick savory bites prepared freshly to keep you energized on your journey.",
-    features: ["Fresh Burgers & Wraps", "Crispy Fried Chicken", "Express 10-Min Ordering", "Takeaway & Dine-In"],
     hours: "24/7 Service",
   },
   {
     id: "sweet-shop",
     title: "Sampan Sweet Shop",
-    badge: "Traditional Delights",
+    category: "Traditional Delights",
+    badge: "Authentic Sweets",
     image: "/images/our-divisions/sampan-highway-inn/sweet-shop.jpg",
     description:
       "Discover traditional Bengali sweets, freshly baked delicacies, and gourmet treats prepared daily with pure chhana, ghee, and premium ingredients.",
-    features: ["Traditional Chhana Sweets", "Fresh Ghee Delicacies", "Gift Box Packaging", "Daily Fresh Batches"],
     hours: "7:00 AM – 11:30 PM",
   },
   {
     id: "juice-bar",
     title: "Sampan Juice Bar",
-    badge: "Fresh & Healthy",
+    category: "Fresh & Healthy",
+    badge: "Cold Pressed",
     image: "/images/our-divisions/sampan-highway-inn/sampan-juicebar.jpg",
     description:
       "Quench your thirst with freshly pressed, handcrafted juices, energizing seasonal fruit blends, smoothies, and detox drinks with zero artificial additives.",
-    features: ["100% Pure Fresh Fruits", "Seasonal Smoothies & Shakes", "Detox & Energy Blends", "Hygienic Cold-Pressed"],
     hours: "8:00 AM – 12:00 AM",
   },
   {
     id: "sampan-achar",
     title: "Sampan Achar & Regional Delicacies",
+    category: "Artisanal Specialty",
     badge: "Artisanal Spices",
     image: "/images/our-divisions/sampan-highway-inn/sampan-achar.jpg",
     description:
       "A taste of authentic heritage packed in jars — artisanal pickles, specialty chutneys, and regional culinary treasures crafted with traditional family recipes.",
-    features: ["Traditional Homemade Recipes", "Sun-Dried Mustard Oil Base", "Assorted Mango, Olive & Garlic", "Travel-Friendly Sealed Jars"],
     hours: "24/7 Available",
   },
-  // {
-  //   id: "banquet-party-center",
-  //   title: "Celebration & Banquet Hall",
-  //   badge: "Events & Galas",
-  //   image: "/images/facilities/highway_inn/party_reservation.png",
-  //   description:
-  //     "Magnificent event venue with modern acoustic treatment, flexible seating for 250+ guests, tailored banquet catering, and celebratory decor for highway stop celebrations.",
-  //   features: ["250+ Seating Capacity", "Full Banquet Catering", "AV Sound & Stage Lighting", "Dedicated Event Coordinator"],
-  //   hours: "Advance Reservation",
-  // },
   {
     id: "executive-meetings",
     title: "Meeting & Corporate Conference Hub",
+    category: "Corporate & Events",
     badge: "Corporate Ready",
     image: "/images/facilities/highway_inn/Official-Outing.png",
     description:
       "Conduct professional meetings, team debriefs, and corporate offsite retreats in equipped conference spaces with presentation tech and catering.",
-    features: ["HD Projection & Video Tech", "Ergonomic Conference Seating", "High-Speed Fiber Network", "Coffee & Lunch Catering"],
     hours: "On Demand & Booking",
   },
 ];
 
 export default function FacilitiesList({ onSelectFacility }: { onSelectFacility?: (title: string) => void }) {
   return (
-    <section id="facilities" className="bg-[#faf9f6] py-24 sm:py-32 text-[#1a1a1a]">
+    <section id="facilities" className="bg-[#faf9f6] py-24 sm:py-32 text-[#1a1a1a] border-b border-neutral-200">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
 
         {/* Section Header */}
-        <div className="flex flex-col gap-6 mb-12 max-w-3xl">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-4 mb-4">
               <span className="h-px w-10 bg-emerald-600" />
-              <p className="text-xs font-bold uppercase tracking-[0.28em] text-emerald-800">
+              <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-neutral-600">
                 World-Class Facilities
-              </p>
+              </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-[#111111] leading-tight">
-              Thoughtfully curated <br />
-              <span className="text-emerald-700">for every traveler.</span>
+            <h2 className="text-[clamp(2.2rem,4.5vw,4rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950">
+              Thoughtfully curated. <br />
+              <span className="text-emerald-700">For every traveler.</span>
             </h2>
           </div>
-          <p className="max-w-2xl text-sm sm:text-base text-neutral-600 leading-relaxed">
+          <p className="max-w-md text-sm text-neutral-500 leading-relaxed">
             Whether you need a quick refreshing bite, authentic Bengali sweets, artisanal pickles, or a quiet restful suite, our transit hub provides complete comfort and hospitality under one roof.
           </p>
         </div>
 
         {/* Facilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {facilitiesData.map((item, index) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {facilitiesData.map((item) => (
             <article
               key={item.id}
-              className="group flex flex-col rounded-none overflow-hidden bg-white border border-neutral-200/80 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-500 hover:-translate-y-1.5"
+              className="group relative flex flex-col rounded-none overflow-hidden bg-[#F5F5F2] border border-neutral-200 hover:border-emerald-600 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-1"
             >
-              {/* Card Image */}
-              <div className="relative aspect-square overflow-hidden bg-neutral-100">
+              {/* Top Emerald Line Hover */}
+              <div className="absolute top-0 left-0 h-[3px] w-0 bg-emerald-600 transition-all duration-700 group-hover:w-full z-10" />
+
+              {/* Gallery Image */}
+              <div className="relative aspect-[16/10] overflow-hidden bg-neutral-200">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={600}
-                  height={600}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-none text-[10px] font-bold uppercase tracking-widest text-emerald-400">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity" />
+
+                {/* Square Badge */}
+                <div className="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-md px-3 py-1 rounded-none border border-neutral-200 font-mono text-[9px] font-bold uppercase tracking-widest text-emerald-800">
                   {item.badge}
-                </div>
-                <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-none text-[10px] font-semibold text-neutral-800">
-                  {item.hours}
                 </div>
               </div>
 
-              {/* Card Body */}
-              <div className="flex flex-1 flex-col p-6">
-                {/* <span className="text-[11px] font-mono font-bold text-neutral-400 mb-2">
-                  0{index + 1}
-                </span> */}
+              {/* Card Content */}
+              <div className="flex flex-1 flex-col p-6 bg-white">
+                <div className="flex items-center justify-between gap-3 mb-2">
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700">
+                    {item.category}
+                  </span>
+                  <span className="font-mono text-[10px] text-neutral-400 font-medium">
+                    {item.hours}
+                  </span>
+                </div>
 
-                <h3 className="text-lg font-bold text-[#111111] group-hover:text-emerald-700 transition-colors leading-snug">
+                <h3 className="text-lg font-bold text-neutral-950 group-hover:text-emerald-700 transition-colors leading-snug">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-xs sm:text-sm text-neutral-600 leading-relaxed flex-1">
+                <p className="mt-2 text-xs sm:text-sm text-neutral-600 leading-relaxed flex-1">
                   {item.description}
                 </p>
-
-                {/* Features Pill List */}
-                <div className="mt-5 pt-4 border-t border-neutral-100 space-y-1.5">
-                  {item.features.slice(0, 3).map((feat, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-[11px] text-neutral-700">
-                      <FaCheck className="text-[9px] text-emerald-600 flex-shrink-0" />
-                      <span className="truncate">{feat}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
-                  <a
-                    href="#booking-widget"
-                    onClick={() => onSelectFacility?.(item.title)}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700 group-hover:text-emerald-900 transition-colors"
-                  >
-                    <span>Reserve Access</span>
-                    <FaArrowRight className="text-[10px] transition-transform group-hover:translate-x-1" />
-                  </a>
-                </div>
               </div>
             </article>
           ))}

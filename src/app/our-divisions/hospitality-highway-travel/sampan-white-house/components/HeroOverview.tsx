@@ -56,7 +56,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
 
           {/* Tagline & Subheading */}
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-[#e8b84b]/80 pl-4">
-            Motel suites, iconic White Hall banquet center, 24/7 garden dining, and dependable highway hospitality in Gopalganj.
+            Motel suites, iconic White Hall banquet center, 24/7 garden dining, and dependable highway hospitality on the Dhaka–Khulna Highway.
           </p>
 
           {/* Square Quick Action CTAs */}
@@ -94,7 +94,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
             </div>
 
             <div className="border-l-2 border-[#e8b84b] pl-4">
-              <p className="text-xs font-bold text-white uppercase tracking-wider">Gopalganj</p>
+              <p className="text-xs font-bold text-white uppercase tracking-wider">Dhaka–Khulna Highway</p>
               <p className="text-[11px] text-white/50 mt-0.5">Highway Corridor</p>
             </div>
 

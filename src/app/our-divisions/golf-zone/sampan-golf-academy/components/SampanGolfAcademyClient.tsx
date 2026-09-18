@@ -299,7 +299,7 @@ export default function SampanGolfAcademyClient() {
               <article
                 key={item.id}
                 onClick={() => setSelectedImage(item.image)}
-                className={`group relative flex flex-col rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-emerald-600 transition-all duration-300 hover:shadow-md cursor-pointer ${index === 0
+                className={`group relative flex flex-col h-full rounded-none overflow-hidden bg-white border border-neutral-200 hover:border-emerald-600 transition-all duration-300 hover:shadow-md cursor-pointer ${index === 0
                   ? "sm:col-span-2 lg:col-span-2"
                   : index === 1
                     ? "sm:col-span-2 lg:col-span-1"
@@ -309,7 +309,14 @@ export default function SampanGolfAcademyClient() {
                 {/* Top Green Accent Line on Hover */}
                 <div className="absolute top-0 left-0 h-[3px] w-0 bg-emerald-600 transition-all duration-500 group-hover:w-full z-20" />
 
-                <div className={`relative w-full overflow-hidden bg-neutral-200 ${index === 0 ? "aspect-[16/9] sm:aspect-[16/9]" : "aspect-[16/10]"}`}>
+                <div
+                  className={`relative w-full overflow-hidden bg-neutral-200 ${index === 0
+                    ? "aspect-[16/9]"
+                    : index === 1
+                      ? "aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-0"
+                      : "aspect-[16/10]"
+                    }`}
+                >
                   <Image
                     src={item.image}
                     alt={item.title}

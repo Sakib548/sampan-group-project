@@ -44,11 +44,11 @@ const routeCorridor = [
     timeFromDhaka: "1h 15m",
     isDestination: true,
     type: "★ Premier Rest Stop",
-    detail: "Direct Highway Frontage • Zero Detour • Dual Slipway Entry (Gopalganj)",
+    detail: "Direct Highway Frontage • Zero Detour • Dual Slipway Entry (Dhaka–Khulna Highway)",
   },
   {
-    id: "gopalganj",
-    name: "Gopalganj District Hub",
+    id: "south-corridor",
+    name: "South Highway Hub",
     km: 144,
     timeFromDhaka: "1h 50m",
     type: "Regional Hub",
@@ -67,7 +67,7 @@ const routeCorridor = [
 const origins = [
   { id: "dhaka", name: "Dhaka (Jatrabari / Motijheel)", distanceToInn: "103 km", estTime: "1h 15m", advice: "Direct 4-lane expressway cruise down the N8 corridor straight into our private deceleration lane." },
   { id: "padma", name: "Padma Bridge (Jajira Side)", distanceToInn: "68 km", estTime: "45m", advice: "Quick EV supercharge and coffee break after crossing the bridge." },
-  { id: "bhanga", name: "Bhanga Mega Interchange", distanceToInn: "30 km", estTime: "25m", advice: "Seamless highway cruise heading southwest towards Gopalganj/Khulna." },
+  { id: "bhanga", name: "Bhanga Mega Interchange", distanceToInn: "30 km", estTime: "25m", advice: "Seamless highway cruise heading southwest towards the Khulna Highway corridor." },
   { id: "khulna", name: "Khulna City (Heading to Dhaka)", distanceToInn: "98 km", estTime: "1h 15m", advice: "Perfect evening dinner and vehicle wash before entering Dhaka traffic." },
   { id: "barishal", name: "Barishal (via Bhanga)", distanceToInn: "125 km", estTime: "1h 35m", advice: "Direct link via the Bhanga cloverleaf with zero city congestion." },
 ];

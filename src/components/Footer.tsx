@@ -792,7 +792,7 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-6">
-            {["Privacy Policy", "Terms of Service", "Sitemap"].map((item) => (
+            {["Privacy Policy", "Terms Conditions", "Sitemap"].map((item) => (
               <Link
                 key={item}
                 href={

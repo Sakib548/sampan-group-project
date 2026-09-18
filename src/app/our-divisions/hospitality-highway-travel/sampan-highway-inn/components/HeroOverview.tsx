@@ -57,7 +57,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
 
           {/* Tagline & Subheading */}
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-emerald-400/80 pl-4">
-            24/7 gourmet dining and ultra-fast EV supercharging on the Dhaka–Khulna corridor in Gopalganj (KM 103).
+            24/7 gourmet dining, restful luxury suites, and highway hospitality on the Dhaka–Khulna corridor (KM 103).
           </p>
 
           {/* Square Quick Action CTAs */}
@@ -98,12 +98,12 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
             </div>
 
             <div className="border-l-2 border-emerald-500 pl-4">
-              <p className="text-xs font-bold text-white uppercase tracking-wider">EV Charging</p>
-              <p className="text-[11px] text-white/50 mt-0.5">Ultra-Fast DC</p>
+              <p className="text-xs font-bold text-white uppercase tracking-wider">Rest Suites</p>
+              <p className="text-[11px] text-white/50 mt-0.5">VVIP Comfort</p>
             </div>
 
             <div className="border-l-2 border-emerald-500 pl-4">
-              <p className="text-xs font-bold text-white uppercase tracking-wider">Gopalganj</p>
+              <p className="text-xs font-bold text-white uppercase tracking-wider">Dhaka–Khulna Highway</p>
               <p className="text-[11px] text-white/50 mt-0.5">KM 103 Transit Hub</p>
             </div>
 

@@ -103,7 +103,7 @@ export default function BookEnquireCTA({ onOpenBookingWidget }: { onOpenBookingW
                 </div>
                 <div>
                   <p className="font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-500">Corridor Hub</p>
-                  <p className="text-xs font-bold text-neutral-950 mt-0.5">KM 103, Dhaka-Khulna Highway, Gopalganj</p>
+                  <p className="text-xs font-bold text-neutral-950 mt-0.5">KM 103, Dhaka-Khulna Highway</p>
                   <p className="text-[10px] text-neutral-400 mt-1 font-mono">Zero Detour Slipway Ramp</p>
                 </div>
               </div>

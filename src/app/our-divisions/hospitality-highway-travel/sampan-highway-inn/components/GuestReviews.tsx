@@ -50,7 +50,7 @@ const reviewsData = [
     role: "Corporate Executive",
     category: "business",
     avatar: "NF",
-    route: "Gopalganj → Dhaka",
+    route: "Khulna Highway → Dhaka",
     rating: 5,
     date: "2 weeks ago",
     verified: true,

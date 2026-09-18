@@ -158,7 +158,7 @@ export default function SampanSweetBoxClient() {
             {/* Status Badge */}
             {/* <div className="inline-flex items-center gap-2.5 border border-amber-500/50 bg-amber-950/70 backdrop-blur-md px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-amber-300">
               <span className="h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
-              <span>Dhaka-Khulna Highway • Sampan Complex, Gopalganj</span>
+              <span>Dhaka-Khulna Highway • Sampan Complex, Dhaka-Khulna Highway</span>
             </div> */}
 
             {/* Headline */}
@@ -172,7 +172,7 @@ export default function SampanSweetBoxClient() {
             {/* Sub-Tagline */}
             <div className="border-l-2 border-amber-500/90 pl-4">
               <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-normal max-w-2xl">
-                Traditional Bangladeshi sweets, fresh handcrafted mishti, and celebration gift boxes located beside Sampan Highway Inn in Gopalganj.
+                Traditional Bangladeshi sweets, fresh handcrafted mishti, and celebration gift boxes located beside Sampan Highway Inn on the Dhaka–Khulna Highway.
               </p>
             </div>
 
@@ -221,7 +221,7 @@ export default function SampanSweetBoxClient() {
               </div>
 
               <div className="border-l-2 border-amber-500 pl-3">
-                <p className="text-lg sm:text-xl font-bold text-white">Gopalganj</p>
+                <p className="text-lg sm:text-xl font-bold text-white">Dhaka–Khulna Highway</p>
                 <p className="text-[10px] text-white/60 uppercase font-mono tracking-wider mt-0.5">Highway Complex</p>
               </div>
             </div>

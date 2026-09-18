@@ -4,13 +4,13 @@ import MiniSampanClient from "./components/MiniSampanClient";
 export const metadata: Metadata = {
   title: "Mini Sampan Super Shop | Express ~200 Sq. Ft. Convenience Kiosk",
   description:
-    "Mini Sampan Super Shop is a compact ~200 sq. ft. express convenience kiosk located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway (KM 74, Gopalganj), offering grab-and-go refreshments, road snacks, and travel essentials.",
+    "Mini Sampan Super Shop is a compact ~200 sq. ft. express convenience kiosk located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway (KM 74, Dhaka–Khulna Highway), offering grab-and-go refreshments, road snacks, and travel essentials.",
   keywords: [
     "Mini Sampan Super Shop",
     "Mini Sampan",
     "Express convenience kiosk",
     "Highway convenience store",
-    "Gopalganj convenience shop",
+    "Highway convenience shop",
     "Sampan Highway Inn",
     "Dhaka Khulna Highway Super Shop",
     "Travel snacks Bangladesh",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mini Sampan Super Shop | Express Convenience Kiosk",
     description:
-      "A ~200 sq. ft. rapid grab-and-go convenience kiosk at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway (KM 74, Gopalganj).",
+      "A ~200 sq. ft. rapid grab-and-go convenience kiosk at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway (KM 74, Dhaka–Khulna Highway).",
     images: [
       {
         url: "/images/our-divisions/mini-sampan-super-shop/Web-Banner.jpg",

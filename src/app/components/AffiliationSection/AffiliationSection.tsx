@@ -9,105 +9,67 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 /* ------------------------------------------------------------------ */
-/*  DATA                                                               */
+/*  DATA MODEL                                                         */
 /* ------------------------------------------------------------------ */
 
-const affiliations = [
+interface Affiliation {
+  id: string;
+  name: string;
+  description: string;
+  logo: string;
+}
+
+interface Category {
+  index: string;
+  title: string;
+  subtitle: string;
+  items: Affiliation[];
+}
+
+const categoriesData: Category[] = [
   {
-    num: "01",
-    name: "Real Estate & Housing Association of Bangladesh",
-    logo: "/images/affiliation/rehab.png",
+    index: "01",
+    title: "Entrepreneurial Leadership",
+    subtitle: "Commerce & Trade",
+    items: [
+      { id: "01", name: "REHAB", description: "Real Estate & Housing Association of Bangladesh", logo: "/images/affiliation/rehab.png" },
+      { id: "02", name: "FBCCI", description: "Federation of Bangladesh Chambers of Commerce & Industry", logo: "/images/affiliation/fbcci.png" },
+      { id: "03", name: "BARVIDA", description: "Bangladesh Reconditioned Vehicles Importers & Dealers Association", logo: "/images/affiliation/barvia.png" },
+      { id: "04", name: "BAD", description: "Bangladesh Arm's Dealer and Importer Association", logo: "/images/affiliation/bad.png" },
+      { id: "05", name: "PABX", description: "Bangladesh PABX Association", logo: "/images/affiliation/pabx.png" },
+      { id: "06", name: "LPG", description: "Bangladesh LPG Autogas Station & Conversion Workshop Ownerʼs Association", logo: "/images/affiliation/lpg.png" },
+      { id: "07", name: "DGDP", description: "Directorate General Defence Purchase", logo: "/images/affiliation/dgdp.png" },
+      { id: "08", name: "EHCL", description: "Express Highway Club And Lounge", logo: "/images/affiliation/EHCl.png" },
+    ],
   },
   {
-    num: "02",
-    name: "Federation of Bangladesh chambers of commerce & industry FBCCI",
-    logo: "/images/affiliation/fbcci.png",
+    index: "02",
+    title: "Sports & Social Development",
+    subtitle: "Youth & Sports",
+    items: [
+      { id: "09", name: "BVF", description: "Bangladesh Volleyball Federation (AD-Hoc Community)", logo: "/images/affiliation/bvf.png" },
+      { id: "10", name: "Barisal Bulls", description: "Bangladesh Premier League (BPL) Franchise", logo: "/images/affiliation/barishalbulls.png" },
+      { id: "11", name: "Barisal Club", description: "Established 1864 - Historical Social Club", logo: "/images/affiliation/lis.png" },
+      { id: "12", name: "BPL", description: "Bangladesh Premier League Official Affiliation", logo: "/images/affiliation/bpl.png" },
+      { id: "13", name: "SSC", description: "Shooter's Shooting Club", logo: "/images/affiliation/shoot.png" },
+      { id: "14", name: "BAF", description: "Bangladesh Archery Federation", logo: "/images/affiliation/Archery.png" },
+      { id: "15", name: "SGA", description: "Sampan Golf Academy", logo: "/images/affiliation/Sampan Golf Academy.png" },
+    ],
   },
   {
-    num: "03",
-    name: "Bangladesh Reconditioned Vehicles Importers & Dealers Association (BARVIDA)",
-    logo: "/images/affiliation/barvia.png",
+    index: "03",
+    title: "International Diplomacy",
+    subtitle: "Foreign Affairs & Global Standards",
+    items: [
+      { id: "16", name: "Mercedes-Benz", description: "Global Automotive Partner & Authorized Dealer", logo: "/images/affiliation/mercedes.png" },
+      { id: "17", name: "CIPS", description: "Chartered Institute of Procurement & Supply UK - Authorized", logo: "/images/affiliation/cips.png" },
+      { id: "18", name: "Global Initiative", description: "Strategic International Development Network", logo: "/images/affiliation/Asset 26@4x.png" },
+    ],
   },
-  {
-    num: "04",
-    name: "Bangladesh Arm's Dealer and Impoter Association",
-    logo: "/images/affiliation/bad.png",
-  },
-  {
-    num: "05",
-    name: "Bangladesh PABX Association",
-    logo: "/images/affiliation/pabx.png",
-  },
-  {
-    num: "06",
-    name: "Bangladesh LPG Autogas Station & Conversion Workshop Ownerʼs Association",
-    logo: "/images/affiliation/lpg.png",
-  },
-  {
-    num: "07",
-    name: "Bangladesh volleyball federation (AD-Hoc Community)",
-    logo: "/images/affiliation/bvf.png",
-  },
-  {
-    num: "08",
-    name: "Barisal Bulls",
-    logo: "/images/affiliation/barishalbulls.png",
-  },
-  {
-    num: "09",
-    name: "Barisal Club (1864)",
-    logo: "/images/affiliation/lis.png",
-  },
-  {
-    num: "10",
-    name: "Bangladesh Premier League (BPL)",
-    logo: "/images/affiliation/bpl.png",
-  },
-  {
-    num: "11",
-    name: "Mercedes-Benz",
-    logo: "/images/affiliation/mercedes.png",
-  },
-  {
-    num: "12",
-    name: "Chartered Institute of Procurement & Supply UK-Authorized",
-    logo: "/images/affiliation/cips.png",
-  },
-  {
-    num: "13",
-    name: "Directorate General Defence Purchase",
-    logo: "/images/affiliation/dgdp.png",
-  },
-  {
-    num: "14",
-    name: "Shooter's Shooting Club",
-    logo: "/images/affiliation/shoot.png",
-  },
-  {
-    num: "15",
-    name: "Express Highway Club And Lounge",
-    logo: "/images/affiliation/EHCl.png",
-  },
-  {
-    num: "16",
-    name: "Bangladesh Archery Federation",
-    logo: "/images/affiliation/Archery.png",
-  },
-  {
-    num: "17",
-    name: "Sampan Golf Academy",
-    logo: "/images/affiliation/Sampan Golf Academy.png",
-  },
-  // {
-  //   num: "18",
-  //   name: "Sampan Golf Academy",
-  //   logo: "/images/affiliation/Asset 26@4x.png",
-  // },
-  // Add your remaining 20+ logos here. The grid will automatically wrap beautifully.
 ];
 
 /* ------------------------------------------------------------------ */
-/*  COMPONENT                                                          */
+/*  MAIN COMPONENT                                                     */
 /* ------------------------------------------------------------------ */
 
 export default function AffiliationSection() {
@@ -118,7 +80,7 @@ export default function AffiliationSection() {
       const mm = gsap.matchMedia();
 
       mm.add("(prefers-reduced-motion: reduce)", () => {
-        gsap.set([".aff-header > *", ".aff-cell"], { opacity: 1, y: 0, clipPath: "none" });
+        gsap.set([".aff-header > *", ".cat-block", ".aff-card"], { opacity: 1, y: 0, clipPath: "none" });
       });
 
       mm.add("(prefers-reduced-motion: no-preference)", () => {
@@ -129,89 +91,147 @@ export default function AffiliationSection() {
           {
             y: 0,
             opacity: 1,
-            duration: 1,
+            duration: 1.2,
             stagger: 0.15,
             ease: "power3.out",
             scrollTrigger: { trigger: ".aff-header", start: "top 85%", once: true },
           }
         );
 
-        /* RAPID GRID FADE & LIFT REVEAL */
-        gsap.fromTo(
-          ".aff-cell",
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
+        /* CATEGORY BLOCKS REVEAL */
+        // FIX: Added <HTMLElement> generic to prevent TS unknown error
+        gsap.utils.toArray<HTMLElement>(".cat-block").forEach((block) => {
+          gsap.from(block, {
+            opacity: 0,
+            y: 60,
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: { trigger: block, start: "top 85%", once: true },
+          });
+        });
+
+        /* CARDS RAPID STAGGER REVEAL */
+        // FIX: Added <HTMLElement> generic to prevent TS unknown error
+        gsap.utils.toArray<HTMLElement>(".aff-card").forEach((card, i) => {
+          gsap.from(card, {
+            opacity: 0,
+            y: 30,
             duration: 0.8,
-            stagger: 0.04, // Fast stagger for 30+ items
             ease: "power3.out",
-            scrollTrigger: { trigger: ".aff-grid", start: "top 85%", once: true },
-          }
-        );
+            scrollTrigger: { trigger: card, start: "top 90%", once: true },
+            delay: (i % 4) * 0.05, // Slight stagger per row
+          });
+        });
       });
     },
     { scope: containerRef }
   );
 
   return (
-    <section
-      ref={containerRef}
-      className="relative w-full overflow-hidden bg-[#F5F5F2]"
-    >
-      {/* Giant Ghost Background Text */}
-      <span className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-[10rem] font-black uppercase tracking-tighter text-neutral-950 opacity-[0.02] md:text-[15rem]">
-        Affiliations
-      </span>
-
+    <section ref={containerRef} className="relative w-full overflow-hidden bg-[#F7F7F4] py-24 md:py-32 lg:py-40">
       <div className="relative mx-auto max-w-[1600px] px-[5vw]">
-
-        {/* ====== SECTION HEADER ====== */}
-        <div className="aff-header mb-16 flex flex-col justify-between gap-8 border-b border-neutral-300/60 pb-8 lg:mb-24 lg:flex-row lg:items-end">
-          <div>
-            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950">
+        
+        {/* ====== EDITORIAL HEADER ====== */}
+        <div className="aff-header mb-20 grid grid-cols-1 gap-8 border-b border-neutral-300/60 pb-12 lg:mb-32 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-8">
+            <p className="mb-6 flex items-center font-mono text-[11px] font-medium uppercase tracking-[0.4em] text-emerald-700">
+              <span className="mr-3 inline-block h-px w-6 bg-emerald-700"></span>
+              Network & Affiliations
+            </p>
+            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[0.95] tracking-[-0.04em] text-neutral-950">
               Connected to institutions
               <br />
               <span className="text-neutral-400">that shape our industries.</span>
             </h2>
           </div>
-          <p className="max-w-xs text-sm leading-7 text-neutral-500 lg:text-right">
-            Professional memberships and international affiliations reflecting the networks behind Sampan Group.
-          </p>
+          <div className="flex flex-col justify-end lg:col-span-4 lg:items-end">
+            <p className="max-w-xs text-sm leading-7 text-neutral-500 lg:text-right">
+              Professional memberships and international affiliations reflecting the networks behind Sampan Group.
+            </p>
+          </div>
         </div>
 
-        {/* ====== PREMIUM ARCHITECTURAL GRID ====== */}
-        {/* Subtle borders create a clean ledger feel. Hover state lifts to pure white. */}
-        <div className="aff-grid grid grid-cols-2 border-l border-t border-neutral-200 sm:grid-cols-3 lg:grid-cols-6">
-          {affiliations.map((aff) => (
-            <div
-              key={aff.num}
-              className="aff-cell group relative flex flex-col items-center justify-center border-b border-r border-neutral-200 p-8 transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] hover:bg-white hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.05)] hover:z-10"
-            >
-              {/* Logo Container - Fixed aspect ratio for perfect grid alignment */}
-              <div className="relative flex aspect-[16/10] w-full items-center justify-center">
-                <div className="relative h-full w-full max-w-[140px]">
-                  <Image
-                    src={aff.logo}
-                    alt={`${aff.name} Logo`}
-                    fill
-                    className="object-contain transition-transform duration-500 ease-out group-hover:scale-110"
-                    sizes="(min-width: 1024px) 16vw, 33vw"
-                  />
+        {/* ====== CATEGORIZED INSTITUTIONAL GRID ====== */}
+        <div className="flex flex-col gap-20 lg:gap-32">
+          {categoriesData.map((category) => (
+            <div key={category.index} className="cat-block">
+              
+              {/* Category Header */}
+              <div className="mb-10 flex items-end justify-between border-b border-neutral-200 pb-6">
+                <div className="flex items-baseline gap-6">
+                  <span className="font-mono text-sm font-medium text-neutral-400">{category.index}</span>
+                  <div>
+                    <h3 className="text-2xl font-semibold tracking-tight text-neutral-950 md:text-3xl">
+                      {category.title}
+                    </h3>
+                    <p className="mt-1 font-mono text-xs uppercase tracking-[0.3em] text-emerald-700">
+                      {category.subtitle}
+                    </p>
+                  </div>
                 </div>
+                <span className="hidden font-mono text-xs uppercase tracking-widest text-neutral-400 md:block">
+                  {category.items.length} Organizations
+                </span>
               </div>
 
-              {/* Organization Name (Always visible, premium typography) */}
-              <div className="mt-8 flex items-center gap-3">
-                <span className="h-[1px] w-0 bg-emerald-500 transition-all duration-500 group-hover:w-4"></span>
-                <p className="text-center text-[10px] font-mono font-semibold uppercase tracking-[0.15em] text-neutral-400 transition-colors duration-500 group-hover:text-neutral-900 lg:text-[11px]">
-                  {aff.name}
-                </p>
+              {/* Organization Cards Grid */}
+              <div className="grid grid-cols-1 gap-px overflow-hidden border border-neutral-200 bg-neutral-200 sm:grid-cols-2 lg:grid-cols-4">
+                {category.items.map((aff) => (
+                  <AffiliationCard key={aff.id} aff={aff} />
+                ))}
               </div>
+
             </div>
           ))}
         </div>
+
       </div>
     </section>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  AFFILIATION CARD SUBCOMPONENT                                      */
+/* ------------------------------------------------------------------ */
+
+interface AffiliationCardProps {
+  aff: Affiliation;
+}
+
+function AffiliationCard({ aff }: AffiliationCardProps) {
+  return (
+    <article className="aff-card group relative flex flex-col bg-[#F7F7F4] p-8 transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] hover:bg-white">
+      
+      {/* Top Row: Index & Hover Line */}
+      <div className="mb-8 flex items-center justify-between">
+        <span className="font-mono text-[10px] tracking-widest text-neutral-400">
+          {aff.id}
+        </span>
+        <span className="h-px w-0 bg-emerald-500 transition-all duration-500 ease-out group-hover:w-8"></span>
+      </div>
+
+      {/* Logo Container - Fixed aspect ratio for perfect grid alignment */}
+      <div className="relative flex aspect-[4/3] w-full items-center justify-center">
+        <div className="relative h-full w-full max-w-[140px]">
+          <Image
+            src={aff.logo}
+            alt={`${aff.name} Logo`}
+            fill
+            className="object-contain opacity-70 transition-all duration-500 ease-out group-hover:scale-110 group-hover:opacity-100"
+            sizes="(min-width: 1024px) 25vw, 50vw"
+          />
+        </div>
+      </div>
+
+      {/* Metadata Content */}
+      <div className="mt-8 flex flex-1 flex-col">
+        <h4 className="text-lg font-semibold tracking-tight text-neutral-950">
+          {aff.name}
+        </h4>
+        <p className="mt-2 text-xs leading-relaxed text-neutral-500">
+          {aff.description}
+        </p>
+      </div>
+    </article>
   );
 }

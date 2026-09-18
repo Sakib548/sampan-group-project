@@ -161,7 +161,7 @@ export default function SampanEvChargingStationClient() {
 
             {/* Shortened Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-emerald-500/80 pl-4">
-              Upcoming electric vehicle charging hub next to Sampan Highway Inn at KM 74, Dhaka–Khulna Highway, Gopalganj.
+              Upcoming electric vehicle charging hub next to Sampan Highway Inn at KM 74, Dhaka–Khulna Highway.
             </p>
 
             {/* Action Buttons */}
@@ -200,7 +200,7 @@ export default function SampanEvChargingStationClient() {
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">Clean Mobility</p>
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
-                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Gopalganj</p>
+                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Dhaka–Khulna Highway</p>
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">KM 74 Highway</p>
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
@@ -225,7 +225,7 @@ export default function SampanEvChargingStationClient() {
               </h2>
             </div>
             <p className="max-w-md text-xs sm:text-sm text-neutral-600 leading-relaxed">
-              Designed to bring convenient, high-capacity vehicle charging to the Dhaka–Khulna Highway right next to Sampan Highway Inn in Gopalganj.
+              Designed to bring convenient, high-capacity vehicle charging to the Dhaka–Khulna Highway right next to Sampan Highway Inn on the Dhaka–Khulna Highway.
             </p>
           </div>
 
@@ -306,7 +306,7 @@ export default function SampanEvChargingStationClient() {
               </h2>
             </div>
             <p className="max-w-md text-xs sm:text-sm text-neutral-400 leading-relaxed">
-              Positioned next to Sampan Highway Inn with comprehensive dining, refueling, shopping, and relaxation facilities in Gopalganj.
+              Positioned next to Sampan Highway Inn with comprehensive dining, refueling, shopping, and relaxation facilities along the Dhaka–Khulna Highway.
             </p>
           </div>
 
@@ -378,7 +378,7 @@ export default function SampanEvChargingStationClient() {
               Location &amp; Inquiries
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-              Located right next to Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway in Gopalganj.
+              Located right next to Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway.
             </p>
           </div>
 
@@ -394,7 +394,7 @@ export default function SampanEvChargingStationClient() {
               <p className="text-sm text-neutral-600 leading-relaxed font-mono">
                 Next to Sampan Highway Inn <br />
                 KM 74, Dhaka–Khulna Highway <br />
-                Gopalganj, Bangladesh
+                Dhaka–Khulna Highway, Bangladesh
               </p>
               <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
                 Direct highway access
@@ -487,7 +487,7 @@ export default function SampanEvChargingStationClient() {
                 Sampan EV Charging Station
               </h3>
               <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                Upcoming electric vehicle charging hub next to Sampan Highway Inn on the Dhaka–Khulna Highway in Gopalganj. A Sampan Group initiative.
+                Upcoming electric vehicle charging hub next to Sampan Highway Inn on the Dhaka–Khulna Highway. A Sampan Group initiative.
               </p>
             </div>
             <div>
@@ -518,7 +518,7 @@ export default function SampanEvChargingStationClient() {
               </h4>
               <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
                 <li>Next to Sampan Highway Inn</li>
-                <li>KM 74, Dhaka–Khulna Highway, Gopalganj</li>
+                <li>KM 74, Dhaka–Khulna Highway</li>
                 <li>Status: Opening Soon</li>
                 <li>+880 1929-918408</li>
               </ul>

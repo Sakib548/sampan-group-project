@@ -66,7 +66,7 @@ const reviewsData = [
     role: "Corporate Outing Organizer",
     category: "whitehall",
     avatar: "AR",
-    route: "Dhaka → Gopalganj",
+    route: "Dhaka → Khulna Highway",
     rating: 5,
     date: "3 weeks ago",
     verified: true,

@@ -364,7 +364,7 @@ export default function HospitalityHighwayTravelPage() {
               <p className="mt-6 text-sm sm:text-base leading-relaxed text-[#183b2b]/70">
                 Positioned directly on the Padma Bridge 8-lane expressway corridor, our hospitality properties
                 feature dedicated deceleration ramps, large bus/truck staging capacity, EV high-speed chargers,
-                and gated 24/7 security. Whether heading to Barishal, Khulna, Gopalganj, or Kuakata, Sampan is the dependable stop.
+                and gated 24/7 security. Whether heading to Barishal, Khulna, or Kuakata along the Dhaka–Khulna Highway, Sampan is the dependable stop.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">

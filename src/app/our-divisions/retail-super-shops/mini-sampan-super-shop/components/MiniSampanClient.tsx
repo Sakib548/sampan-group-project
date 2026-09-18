@@ -62,7 +62,7 @@ const galleryItems: GalleryItem[] = [
     title: "Kiosk Exterior & Complex Integration",
     category: "Highway Hub",
     image: "/images/our-divisions/mini-sampan-super-shop/Web-Banner-1.jpg",
-    description: "Positioned right beside the highway dining and fueling facilities in Gopalganj.",
+    description: "Positioned right beside the highway dining and fueling facilities along the Dhaka–Khulna Highway.",
   },
 ];
 
@@ -231,7 +231,7 @@ export default function MiniSampanClient() {
 
             {/* Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-emerald-500/80 pl-4">
-              A compact ~200 sq. ft. express convenience kiosk located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway (KM 74, Gopalganj). Perfectly curated for rapid grab-and-go refreshments, road snacks, and daily travel essentials.
+              A compact ~200 sq. ft. express convenience kiosk located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway (KM 74, Dhaka–Khulna Highway). Perfectly curated for rapid grab-and-go refreshments, road snacks, and daily travel essentials.
             </p>
 
             {/* Square Action Buttons */}
@@ -270,7 +270,7 @@ export default function MiniSampanClient() {
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">Counter Checkout</p>
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
-                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Gopalganj</p>
+                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Dhaka–Khulna Highway</p>
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">KM 74, Highway</p>
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
@@ -306,7 +306,7 @@ export default function MiniSampanClient() {
               </p>
 
               <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-                Situated right beside Sampan Highway Inn in Gopalganj, every product category is intentionally curated: ice-cold water, soft drinks, biscuits, chips, hygiene items, and travel necessities ready at your fingertips.
+                Situated right beside Sampan Highway Inn on the Dhaka–Khulna Highway, every product category is intentionally curated: ice-cold water, soft drinks, biscuits, chips, hygiene items, and travel necessities ready at your fingertips.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -619,7 +619,7 @@ export default function MiniSampanClient() {
               Visit Mini Sampan
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-              Located right inside the Sampan Highway Inn Complex at KM 74 on the Dhaka–Khulna Highway in Gopalganj. Open for all travelers and visitors.
+              Located right inside the Sampan Highway Inn Complex at KM 74 on the Dhaka–Khulna Highway. Open for all travelers and visitors.
             </p>
           </div>
 
@@ -638,7 +638,7 @@ export default function MiniSampanClient() {
               <p className="text-sm text-neutral-600 leading-relaxed font-mono">
                 Sampan Highway Inn Complex <br />
                 KM 74, Dhaka–Khulna Highway <br />
-                Gopalganj, Bangladesh
+                Dhaka–Khulna Highway, Bangladesh
               </p>
               <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
                 ~200 Sq. Ft. Express Kiosk
@@ -743,7 +743,7 @@ export default function MiniSampanClient() {
                 Mini Sampan Super Shop
               </h3>
               <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                A compact ~200 sq. ft. express convenience kiosk located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway in Gopalganj. Built for quick highway grab-and-go purchases.
+                A compact ~200 sq. ft. express convenience kiosk located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway. Built for quick highway grab-and-go purchases.
               </p>
             </div>
             <div>
@@ -779,7 +779,7 @@ export default function MiniSampanClient() {
               </h4>
               <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
                 <li>Sampan Highway Inn Complex</li>
-                <li>KM 74, Dhaka–Khulna Highway, Gopalganj</li>
+                <li>KM 74, Dhaka–Khulna Highway</li>
                 <li>~200 Sq. Ft. Express Format</li>
                 <li>+880 1929-918408</li>
               </ul>

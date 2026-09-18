@@ -43,11 +43,11 @@ const routeCorridor = [
     timeFromDhaka: "1h 15m",
     isDestination: true,
     type: "★ Premier Event Venue",
-    detail: "Direct Highway Frontage • Dedicated Valet Parking • Dual Slipway Entry (Gopalganj)",
+    detail: "Direct Highway Frontage • Dedicated Valet Parking • Dual Slipway Entry (Dhaka–Khulna Highway)",
   },
   {
-    id: "gopalganj",
-    name: "Gopalganj District Hub",
+    id: "south-corridor",
+    name: "South Highway Hub",
     km: 144,
     timeFromDhaka: "1h 50m",
     type: "Regional Hub",
@@ -97,7 +97,7 @@ const origins = [
     name: "From Khulna / Bagerhat",
     distanceToInn: "98 km",
     estTime: "1h 15m",
-    advice: "Direct highway cruise passing Gopalganj bypass with wide paved approach into our valet parking grounds.",
+    advice: "Direct highway cruise passing the highway junction bypass with wide paved approach into our valet parking grounds.",
   },
 ];
 

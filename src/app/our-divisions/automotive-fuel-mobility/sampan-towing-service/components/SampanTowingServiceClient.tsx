@@ -66,7 +66,7 @@ const serviceFeatures = [
     name: "Stationed at Sampan Highway Inn",
     type: "Complex Service",
     description:
-      "Stationed directly at Sampan Highway Inn for prompt dispatch across the Dhaka–Khulna Highway corridor in Gopalganj.",
+      "Stationed directly at Sampan Highway Inn for prompt dispatch across the Dhaka–Khulna Highway corridor.",
     icon: FaClock,
   },
   {
@@ -198,7 +198,7 @@ export default function SampanTowingServiceClient() {
 
             {/* Shortened Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-orange-500/80 pl-4">
-              24/7 highway emergency flatbed towing and recovery operated directly from Sampan Highway Inn (KM 74, Gopalganj).
+              24/7 highway emergency flatbed towing and recovery operated directly from Sampan Highway Inn (KM 74, Dhaka–Khulna Highway).
             </p>
 
             {/* Action Buttons */}
@@ -237,7 +237,7 @@ export default function SampanTowingServiceClient() {
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">Damage-Free</p>
               </div>
               <div className="border-l-2 border-orange-400 pl-4">
-                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Gopalganj</p>
+                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Dhaka–Khulna Highway</p>
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">KM 74 Highway</p>
               </div>
               <div className="border-l-2 border-orange-400 pl-4">
@@ -384,7 +384,7 @@ export default function SampanTowingServiceClient() {
               </h2>
             </div>
             <p className="max-w-md text-xs sm:text-sm text-neutral-400 leading-relaxed">
-              Stationed within the Sampan Highway Inn complex alongside dining, petrol/diesel &amp; autogas fueling, lodging, and retail stores in Gopalganj.
+              Stationed within the Sampan Highway Inn complex alongside dining, petrol/diesel &amp; autogas fueling, lodging, and retail stores along the Dhaka–Khulna Highway.
             </p>
           </div>
 
@@ -456,7 +456,7 @@ export default function SampanTowingServiceClient() {
               Service Base &amp; Emergency Hotline
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-              Based directly at Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway in Gopalganj. Available 24 hours a day for immediate highway dispatch.
+              Based directly at Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway. Available 24 hours a day for immediate highway dispatch.
             </p>
           </div>
 
@@ -472,7 +472,7 @@ export default function SampanTowingServiceClient() {
               <p className="text-sm text-neutral-600 leading-relaxed font-mono">
                 Sampan Highway Inn <br />
                 KM 74, Dhaka–Khulna Highway <br />
-                Gopalganj, Bangladesh
+                Dhaka–Khulna Highway, Bangladesh
               </p>
               <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
                 Direct highway response base
@@ -565,7 +565,7 @@ export default function SampanTowingServiceClient() {
                 Sampan Towing Service
               </h3>
               <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                24/7 highway emergency flatbed towing and recovery service stationed at Sampan Highway Inn on the Dhaka–Khulna Highway in Gopalganj.
+                24/7 highway emergency flatbed towing and recovery service stationed at Sampan Highway Inn on the Dhaka–Khulna Highway.
               </p>
             </div>
             <div>
@@ -601,7 +601,7 @@ export default function SampanTowingServiceClient() {
               </h4>
               <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
                 <li>Stationed at Sampan Highway Inn</li>
-                <li>KM 74, Dhaka–Khulna Highway, Gopalganj</li>
+                <li>KM 74, Dhaka–Khulna Highway</li>
                 <li>24/7 Emergency Dispatch</li>
                 <li>+880 1929-918408</li>
               </ul>

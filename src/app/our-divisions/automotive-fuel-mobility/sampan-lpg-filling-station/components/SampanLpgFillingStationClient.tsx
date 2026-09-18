@@ -31,7 +31,7 @@ const galleryItems: GalleryItem[] = [
     title: "Station Forecourt & Main Canopy",
     category: "Main Station",
     image: "/images/our-divisions/lpg-filling-station/Web-Banner.jpg",
-    description: "High-pressure Auto LPG refueling station on the Dhaka–Khulna Highway at KM 74, Gopalganj.",
+    description: "High-pressure Auto LPG refueling station on the Dhaka–Khulna Highway at KM 74.",
   },
   {
     id: "lpg-2",
@@ -193,7 +193,7 @@ export default function SampanLpgFillingStationClient() {
 
             {/* Shortened Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-amber-500/80 pl-4">
-              24/7 high-pressure Auto LPG autogas refueling at the Sampan Highway Inn Complex (KM 74, Gopalganj).
+              24/7 high-pressure Auto LPG autogas refueling at the Sampan Highway Inn Complex (KM 74, Dhaka–Khulna Highway).
             </p>
 
             {/* Square Action Buttons */}
@@ -232,7 +232,7 @@ export default function SampanLpgFillingStationClient() {
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">High Pressure</p>
               </div>
               <div className="border-l-2 border-amber-400 pl-4">
-                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Gopalganj</p>
+                <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Dhaka–Khulna Highway</p>
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">KM 74 Highway</p>
               </div>
               <div className="border-l-2 border-amber-400 pl-4">
@@ -257,7 +257,7 @@ export default function SampanLpgFillingStationClient() {
               </h2>
             </div>
             <p className="max-w-md text-xs sm:text-sm text-neutral-600 leading-relaxed">
-              Equipped with calibrated high-pressure dispensers for eco-friendly vehicle refueling along the Dhaka–Khulna corridor in Gopalganj.
+              Equipped with calibrated high-pressure dispensers for eco-friendly vehicle refueling along the Dhaka–Khulna corridor.
             </p>
           </div>
 
@@ -379,7 +379,7 @@ export default function SampanLpgFillingStationClient() {
               </h2>
             </div>
             <p className="max-w-md text-xs sm:text-sm text-neutral-400 leading-relaxed">
-              Situated within the Sampan Highway Inn complex alongside dining, petrol/diesel fueling, lodging, and retail stores in Gopalganj.
+              Situated within the Sampan Highway Inn complex alongside dining, petrol/diesel fueling, lodging, and retail stores along the Dhaka–Khulna Highway.
             </p>
           </div>
 
@@ -451,7 +451,7 @@ export default function SampanLpgFillingStationClient() {
               Highway Location &amp; Contact
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-              Situated right beside Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway in Gopalganj. Open 24/7 every day.
+              Situated right beside Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway. Open 24/7 every day.
             </p>
           </div>
 
@@ -467,7 +467,7 @@ export default function SampanLpgFillingStationClient() {
               <p className="text-sm text-neutral-600 leading-relaxed font-mono">
                 Sampan Highway Inn Complex <br />
                 KM 74, Dhaka–Khulna Highway <br />
-                Gopalganj, Bangladesh
+                Dhaka–Khulna Highway, Bangladesh
               </p>
               <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
                 Wide slipway access on highway
@@ -560,7 +560,7 @@ export default function SampanLpgFillingStationClient() {
                 Sampan LPG Station
               </h3>
               <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                24/7 high-pressure Auto LPG autogas refueling station located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway in Gopalganj.
+                24/7 high-pressure Auto LPG autogas refueling station located at the Sampan Highway Inn Complex on the Dhaka–Khulna Highway.
               </p>
             </div>
             <div>
@@ -596,7 +596,7 @@ export default function SampanLpgFillingStationClient() {
               </h4>
               <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
                 <li>Sampan Highway Inn Complex</li>
-                <li>KM 74, Dhaka–Khulna Highway, Gopalganj</li>
+                <li>KM 74, Dhaka–Khulna Highway</li>
                 <li>Open 24 Hours / 7 Days</li>
                 <li>+880 1929-918408</li>
               </ul>
