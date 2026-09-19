@@ -416,42 +416,38 @@ export default function SampanAutoClient() {
                 </span>
                 <button
                   onClick={() => setSelectedLocation("all")}
-                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
-                    selectedLocation === "all"
+                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${selectedLocation === "all"
                       ? "bg-[#111318] text-white border-[#111318]"
                       : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-                  }`}
+                    }`}
                 >
                   All ({carStockList.length})
                 </button>
                 <button
                   onClick={() => setSelectedLocation(selectedLocation === "Showroom" ? "all" : "Showroom")}
-                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
-                    selectedLocation === "Showroom"
+                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${selectedLocation === "Showroom"
                       ? "bg-amber-600 text-white border-amber-600"
                       : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-                  }`}
+                    }`}
                 >
                   Showroom ({showroomCount})
                 </button>
                 <button
                   onClick={() => setSelectedLocation(selectedLocation === "Port" ? "all" : "Port")}
-                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
-                    selectedLocation === "Port"
+                  className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${selectedLocation === "Port"
                       ? "bg-neutral-900 text-white border-neutral-900"
                       : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-                  }`}
+                    }`}
                 >
                   Port ({portCount})
                 </button>
                 {upcomingCount > 0 && (
                   <button
                     onClick={() => setSelectedLocation(selectedLocation === "Upcoming" ? "all" : "Upcoming")}
-                    className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${
-                      selectedLocation === "Upcoming"
+                    className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${selectedLocation === "Upcoming"
                         ? "bg-emerald-700 text-white border-emerald-700"
                         : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
-                    }`}
+                      }`}
                   >
                     Upcoming ({upcomingCount})
                   </button>
@@ -471,11 +467,10 @@ export default function SampanAutoClient() {
                   <button
                     key={tab.id}
                     onClick={() => setSelectedCategory(tab.id)}
-                    className={`px-3.5 py-2 text-[11px] font-mono font-bold uppercase tracking-wider transition-colors rounded-none cursor-pointer border ${
-                      selectedCategory === tab.id
+                    className={`px-3.5 py-2 text-[11px] font-mono font-bold uppercase tracking-wider transition-colors rounded-none cursor-pointer border ${selectedCategory === tab.id
                         ? "bg-[#111318] text-white border-[#111318]"
                         : "bg-neutral-100 text-neutral-700 border-neutral-200 hover:bg-neutral-200"
-                    }`}
+                      }`}
                   >
                     {tab.label}
                   </button>
@@ -568,13 +563,12 @@ export default function SampanAutoClient() {
                     {/* Location Badge */}
                     <div className="absolute top-3 left-3 z-10">
                       <span
-                        className={`inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 font-bold uppercase ${
-                          car.location === "Showroom"
+                        className={`inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 font-bold uppercase ${car.location === "Showroom"
                             ? "bg-amber-600 text-white"
                             : car.location === "Upcoming" || car.location === "In Transit"
-                            ? "bg-emerald-700 text-white"
-                            : "bg-neutral-900 text-white"
-                        }`}
+                              ? "bg-emerald-700 text-white"
+                              : "bg-neutral-900 text-white"
+                          }`}
                       >
                         <FaMapMarkerAlt className="text-[8px]" />
                         <span>{car.location}</span>
@@ -622,7 +616,7 @@ export default function SampanAutoClient() {
 
                     {/* Price & Action Row */}
                     <div className="pt-3 border-t border-neutral-100 flex items-center justify-between">
-                      <div>
+                      {/* <div>
                         <span className="block text-[10px] font-mono text-neutral-400 uppercase">Price (BDT)</span>
                         <span className="font-mono text-sm font-bold text-neutral-950">
                           {car.isSold ? (
@@ -633,7 +627,7 @@ export default function SampanAutoClient() {
                             <span>{car.priceLakh} Lac</span>
                           )}
                         </span>
-                      </div>
+                      </div> */}
 
                       <button
                         onClick={(e) => {
