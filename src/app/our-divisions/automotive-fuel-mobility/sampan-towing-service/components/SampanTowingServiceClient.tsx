@@ -140,7 +140,7 @@ const nearbySpots: NearbySpot[] = [
     type: "Artisanal Bengali Sweets",
     badge: "In Complex",
     driveTime: "In Complex",
-    image: "/images/our-divisions/sampan-sweet-box/DSC00468.JPG",
+    image: "/images/our-divisions/express-highway-inn/sampan-mart.jpg",
     description:
       "Authentic traditional mishti, fresh chhana sweets, celebration gift boxes, and travel refreshments.",
     link: "/our-divisions/retail-super-shops/sampan-sweet-box",
@@ -204,7 +204,7 @@ export default function SampanTowingServiceClient() {
             {/* Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="tel:+8801929918408"
+                href="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-none bg-orange-600 hover:bg-orange-500 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-orange-950/40 cursor-pointer"
               >
                 <FaPhoneAlt className="text-xs" />
@@ -410,11 +410,11 @@ export default function SampanTowingServiceClient() {
                     </span>
                   </div>
 
-                  <div className="absolute bottom-3 right-4 z-10">
+                  {/* <div className="absolute bottom-3 right-4 z-10">
                     <span className="inline-flex items-center rounded-none bg-white/10 backdrop-blur-md px-2.5 py-0.5 font-mono text-[10px] text-neutral-300">
                       {spot.driveTime}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="p-6 flex flex-col flex-1 justify-between">
@@ -471,8 +471,8 @@ export default function SampanTowingServiceClient() {
               </h3>
               <p className="text-sm text-neutral-600 leading-relaxed font-mono">
                 Sampan Highway Inn <br />
-                KM 74, Dhaka–Khulna Highway <br />
-                Dhaka–Khulna Highway, Bangladesh
+                KM 74, Dhaka–Khulna Highway,Kashiani <br />
+
               </p>
               <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
                 Direct highway response base
@@ -508,14 +508,14 @@ export default function SampanTowingServiceClient() {
               <div className="pt-1 text-sm text-neutral-700">
                 <div className="flex items-center gap-2">
                   <span className="font-mono text-xs text-neutral-400">Call:</span>
-                  <a href="tel:+8801929918408" className="font-mono font-bold text-orange-700 hover:underline">
+                  <a href="/contact" className="font-mono font-bold text-orange-700 hover:underline">
                     +880 1929-918408
                   </a>
                 </div>
               </div>
               <div className="pt-2">
                 <a
-                  href="tel:+8801929918408"
+                  href="/contact"
                   className="inline-flex items-center gap-2 rounded-none bg-orange-600 hover:bg-orange-500 text-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
                 >
                   <FaPhoneAlt className="text-[10px]" />
@@ -557,7 +557,7 @@ export default function SampanTowingServiceClient() {
       )}
 
       {/* ================= 6. SQUARE MINIMAL FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
+      {/* <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
         <div className="mx-auto max-w-[1440px]">
           <div className="grid gap-12 md:grid-cols-4 mb-12">
             <div className="md:col-span-2">
@@ -621,7 +621,7 @@ export default function SampanTowingServiceClient() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
     </main>
   );

@@ -14,6 +14,7 @@ import {
   FaShieldAlt,
   FaWater,
   FaLeaf,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -30,18 +31,20 @@ interface GalleryItem {
 
 const galleryItems: GalleryItem[] = [
   {
-    id: "fm-1",
-    title: "Fresh Farm Harvest Collection",
-    category: "Fresh Catch",
+    id: "gallery-fish-sorting",
+    title: "Morning Catch Inspection",
+    category: "Lake Harvest",
     image: "/images/our-divisions/sampan-fish-and-meat/fish.jpg",
-    description: "Assorted healthy freshwater fish harvested directly from Sampan Eco & Agro lake beds.",
+    description:
+      "Daily morning sorting of healthy freshwater fish immediately upon harvest from our Alphadanga lakes.",
   },
   {
-    id: "fm-2",
-    title: "Daily Catch Sorting & Packaging",
-    category: "Hygienic Handling",
-    image: "/images/our-divisions/sampan-fish-and-meat/480963810_122135838734588506_2075645700594314133_n.jpg",
-    description: "Carefully sorted and cleaned fish crated fresh for distribution and customer orders.",
+    id: "gallery-fish-basin",
+    title: "Live Basin Conditioning",
+    category: "Fresh Handling",
+    image: "/images/our-divisions/sampan-fish-and-meat/fish3.jpg",
+    description:
+      "Conditioning freshly caught fish in natural aerated water tanks before swift, chilled dispatch.",
   },
   {
     id: "fm-3",
@@ -98,6 +101,21 @@ const produceHighlights = [
 export default function SampanFishAndMeatClient() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const navOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      window.history.replaceState(null, "", `#${id}`);
+    }
+  };
+
   return (
     <main className="bg-[#f8faf6] text-[#183b2b] selection:bg-emerald-700 selection:text-white overflow-x-hidden w-full">
 
@@ -141,22 +159,24 @@ export default function SampanFishAndMeatClient() {
 
             {/* Square Action Buttons */}
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4 font-mono text-xs">
-              <Link
-                href="#overview"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-emerald-600 hover:bg-emerald-500 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-emerald-950/40 cursor-pointer text-center"
+              <a
+                href="#fresh-produce"
+                onClick={(e) => scrollToSection(e, "fresh-produce")}
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-emerald-600 hover:bg-emerald-500 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-emerald-950/40 cursor-pointer text-center select-none"
               >
                 <span>Explore Produce</span>
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-
-              <Link
-                href="#gallery"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
-              >
-                View Harvest Gallery
-              </Link>
+              </a>
 
               <a
+                href="#gallery"
+                onClick={(e) => scrollToSection(e, "gallery")}
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center select-none"
+              >
+                View Harvest Gallery
+              </a>
+
+              {/* <a
                 href="https://www.facebook.com/sampanecoandagro"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -164,7 +184,7 @@ export default function SampanFishAndMeatClient() {
               >
                 <FaFacebookF className="text-sm" />
                 <span>Facebook Page</span>
-              </a>
+              </a> */}
             </div>
 
             {/* Quick Metrics (Square Cards) */}
@@ -219,19 +239,14 @@ export default function SampanFishAndMeatClient() {
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 rounded-none bg-[#183b2b] hover:bg-emerald-800 text-white px-7 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] transition-colors shadow-sm cursor-pointer"
                 >
                   <span>Inquire for Orders</span>
                   <FiArrowRight className="text-xs" />
                 </Link>
 
-                <Link
-                  href="/our-divisions/agro-fresh-produce/sampan-eco-agro"
-                  className="inline-flex items-center gap-2 rounded-none border border-emerald-700 text-emerald-900 hover:bg-emerald-50 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] transition-colors cursor-pointer"
-                >
-                  <span>View Sourcing Farm</span>
-                </Link>
+
               </div>
             </div>
 
@@ -276,7 +291,7 @@ export default function SampanFishAndMeatClient() {
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-neutral-950">
-                      Farm Sourced &amp; Wholesome
+                      Farm Sourced
                     </h3>
                     <p className="mt-1 text-xs text-neutral-600 leading-relaxed">
                       Direct supply pipeline from the rural fields of Alphadanga, ensuring fair pricing and reliable agricultural transparency.
@@ -291,7 +306,7 @@ export default function SampanFishAndMeatClient() {
       </section>
 
       {/* ================= 3. PRODUCE SPOTLIGHT ================= */}
-      <section className="py-20 sm:py-24 px-6 sm:px-10 lg:px-16 bg-white border-b border-neutral-200">
+      <section id="fresh-produce" className="scroll-mt-20 py-20 sm:py-24 px-6 sm:px-10 lg:px-16 bg-white border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -348,7 +363,7 @@ export default function SampanFishAndMeatClient() {
       </section>
 
       {/* ================= 4. REAL HARVEST GALLERY ================= */}
-      <section id="gallery" className="py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#f8faf6] border-b border-neutral-200">
+      <section id="gallery" className="scroll-mt-20 py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#f8faf6] border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -445,87 +460,123 @@ export default function SampanFishAndMeatClient() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Card 1: Farm Origin Address */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
-                <FaMapMarkerAlt className="text-lg" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+            {/* Left Column: Farm Details, Direct Contact & Social */}
+            <div className="flex flex-col gap-6 justify-between">
+              {/* Card 1: Farm Origin Address */}
+              <div className="bg-white border border-neutral-300 p-6 sm:p-7 rounded-none shadow-sm space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none shrink-0">
+                    <FaMapMarkerAlt className="text-base" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
+                      Sourcing Farm &amp; Origin
+                    </span>
+                    <h3 className="text-lg font-bold text-neutral-950">
+                      Sampan Eco &amp; Agro
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-mono">
+                  Joydebpur, Boroga, Borice, Alphadanga <br />
+                  Faridpur District, Dhaka Division, Bangladesh
+                </p>
+                <p className="pt-2 text-[11px] text-neutral-500 font-mono border-t border-neutral-100 flex items-center gap-2">
+                  <FaWater className="text-xs text-emerald-600 shrink-0" />
+                  <span>Freshwater lake beds &amp; aquaculture cultivation ponds</span>
+                </p>
               </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Sourcing Farm
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Sampan Eco &amp; Agro
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed font-mono">
-                Alphadanga-7870, Faridpur District <br />
-                Dhaka Division, Bangladesh
-              </p>
-              <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
-                Freshwater lakes &amp; aquaculture ponds
-              </p>
-            </div>
 
-            {/* Card 2: Contact Numbers */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
-                <FaPhoneAlt className="text-base" />
-              </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Direct Contact
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Farm Orders &amp; Inquiries
-              </h3>
-              <div className="space-y-3 pt-1 text-sm text-neutral-700">
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Phone:</span>
-                  <a href="tel:+8801929918400" className="font-mono font-bold text-emerald-700 hover:underline">
-                    +8801929918400
+              {/* Sub-grid for Contact & Social Cards */}
+              <div className="grid sm:grid-cols-2 gap-6 flex-1">
+                {/* Card 2: Contact Numbers */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
+                      <FaPhoneAlt className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
+                      Direct Inquiries
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Farm Orders
+                    </h4>
+                    <div className="text-xs text-neutral-700">
+                      <span className="font-mono text-[11px] text-neutral-400 block mb-0.5">Phone:</span>
+                      <a href="tel:+8801929918400" className="font-mono font-bold text-emerald-700 hover:underline text-sm">
+                        +8801929918400
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    href="tel:+8801929918400"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaPhoneAlt className="text-[10px]" />
+                    <span>Call For Inquiry</span>
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Alt:</span>
-                  <a href="tel:+8801929918408" className="font-mono font-semibold text-emerald-700 hover:underline">
-                    +880 1929-918408
+
+                {/* Card 3: Social & Farm Updates */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
+                      <FaFacebookF className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
+                      Live Updates
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Harvest News
+                    </h4>
+                    <p className="text-xs text-neutral-600 leading-relaxed">
+                      Follow our Facebook page for live photos, announcements, and available catch batches.
+                    </p>
+                  </div>
+                  <a
+                    href="https://www.facebook.com/sampanecoandagro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-[#1877F2] hover:bg-[#166fe5] text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaFacebookF className="text-[10px]" />
+                    <span>Facebook Page</span>
                   </a>
                 </div>
               </div>
-              <div className="pt-2">
-                <a
-                  href="tel:+8801929918400"
-                  className="inline-flex items-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 text-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-                >
-                  <FaPhoneAlt className="text-[10px]" />
-                  <span>Call For Inquiry</span>
-                </a>
-              </div>
             </div>
 
-            {/* Card 3: Social & Farm Updates */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
-                <FaFacebookF className="text-base" />
-              </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Social Updates
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Farm Harvest News
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                Follow our Facebook page for live photos, harvest announcements, and available batches from the ponds.
-              </p>
-              <div className="pt-2">
+            {/* Right Column: 50% Width Interactive Google Map */}
+            <div className="border border-neutral-300 bg-white p-2 sm:p-3 shadow-sm flex flex-col h-full min-h-[420px] lg:min-h-0">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-3 py-2.5 mb-2 border-b border-neutral-200">
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-700 min-w-0">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse shrink-0" />
+                  <span className="font-bold text-neutral-900 uppercase tracking-wider shrink-0">Map:</span>
+                  <span className="truncate">Joydebpur, Alphadanga, Faridpur</span>
+                </div>
                 <a
-                  href="https://www.facebook.com/sampanecoandagro"
+                  href="https://www.google.com/maps/search/?api=1&query=Joydebpur,+Boroga,+Borice,+Alphadanga,+Faridpur,+Bangladesh"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-none bg-[#1877F2] hover:bg-[#166fe5] text-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-emerald-800 hover:text-emerald-950 transition-colors shrink-0"
                 >
-                  <FaFacebookF className="text-[10px]" />
-                  <span>Visit Facebook Page</span>
+                  <span>Open in Maps</span>
+                  <FaExternalLinkAlt className="text-[10px]" />
                 </a>
+              </div>
+
+              <div className="relative w-full flex-1 min-h-[360px] bg-neutral-100 overflow-hidden">
+                <iframe
+                  src="https://maps.google.com/maps?q=Joydebpur+Alphadanga+Faridpur+Bangladesh&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sampan Fish & Meat Farm Origin Map"
+                />
               </div>
             </div>
           </div>
@@ -562,70 +613,7 @@ export default function SampanFishAndMeatClient() {
       )}
 
       {/* ================= 6. FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-12 md:grid-cols-4 mb-12">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-neutral-950 mb-3">
-                Sampan Fish &amp; Meat
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                Naturally cultivated freshwater fish and quality farm produce sourced from Sampan Eco &amp; Agro in Alphadanga, Faridpur. Chemical-free, wholesome, and fresh for your family table.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Quick Links
-              </h4>
-              <ul className="space-y-2.5 text-xs font-mono">
-                <li>
-                  <Link href="#overview" className="hover:text-emerald-700 transition-colors">
-                    Produce Overview
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#gallery" className="hover:text-emerald-700 transition-colors">
-                    Harvest Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#contact" className="hover:text-emerald-700 transition-colors">
-                    Farm Origin &amp; Orders
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/our-divisions/agro-fresh-produce/sampan-eco-agro" className="hover:text-emerald-700 transition-colors">
-                    Sampan Eco &amp; Agro
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Farm Origin
-              </h4>
-              <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
-                <li>Sampan Eco &amp; Agro</li>
-                <li>Alphadanga-7870, Faridpur</li>
-                <li>+8801929918400</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-mono">
-            <p>
-              © {new Date().getFullYear()} Sampan Fish &amp; Meat. A Sampan Group Venture.
-            </p>
-            <div className="flex gap-6">
-              <Link href="#" className="hover:text-emerald-700 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:text-emerald-700 transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+
 
     </main>
   );

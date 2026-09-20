@@ -15,8 +15,16 @@ import {
   FaShoppingBag,
   FaShieldAlt,
   FaExternalLinkAlt,
+  FaFacebookF,
+  FaDirections,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
+
+const highwayInnFacebookUrl = "https://www.facebook.com/sampanhighwayinn/";
+const highwayInnDirectionsUrl =
+  "https://www.google.com/maps/dir/?api=1&destination=Sampan+Highway+Inn+Restaurant+%26+Party+Centre";
+const highwayInnMapEmbed =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.089219414334!2d89.765406!3d23.260465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ffc915b3e67a43%3A0xc9ccd3be4ea97668!2sSampan%20Highway%20Inn%20Restaurant%20%26%20Party%20Centre!5e0!3m2!1sen!2sbd!4v1788938537834!5m2!1sen!2sbd";
 
 // Hero Background: Authentic storefront photo of Sampan Mart
 const heroBackground = "/images/our-divisions/sampan-mart/Sampan-Mart.jpg";
@@ -70,15 +78,15 @@ const galleryItems: GalleryItem[] = [
 // Product Category Highlights (Concise & Realistic)
 const categoryHighlights = [
   {
-    name: "Chilled Beverages & Ice Cream",
+    name: "All Refreshments & Cold Drinks",
     type: "Refrigerated Drinks",
     description:
-      "Chilled mineral water, soft drinks, energy drinks, fruit juices, and cold ice creams for road refreshment.",
+      "Any type of chilled mineral water, soft drinks, energy drinks, fruit juices, and cold ice creams for road refreshment.",
     icon: FaCoffee,
     status: "24/7 Chilled Stock",
   },
   {
-    name: "Snacks, Biscuits & Confectionery",
+    name: "Road Snacks & Confectionery",
     type: "Quick Road Bites",
     description:
       "Branded potato crisps, savory snacks, cookies, wafers, premium chocolates, and packaged sweets.",
@@ -86,10 +94,10 @@ const categoryHighlights = [
     status: "Wide Selection",
   },
   {
-    name: "Travel & Personal Hygiene",
-    type: "Journey Necessities",
+    name: "Foreign Foods & Travel Essentials",
+    type: "Imported Goods & Hygiene",
     description:
-      "Hand sanitizers, wet wipes, facial tissues, oral care, soaps, and road-trip personal care essentials.",
+      "Selected foreign foods, packaged imported goods, hand sanitizers, wet wipes, oral care, soaps, and travel personal care essentials.",
     icon: FaShieldAlt,
     status: "Always Available",
   },
@@ -133,7 +141,7 @@ const nearbySpots: NearbySpot[] = [
     type: "Artisanal Bengali Sweets",
     badge: "In Complex",
     driveTime: "In Complex",
-    image: "/images/our-divisions/sampan-sweet-box/DSC00468.JPG",
+    image: "/images/our-divisions/express-highway-inn/sampan-mart.jpg",
     description:
       "Authentic traditional mishti, fresh chhana sweets, celebration gift boxes, and highway travel treats.",
     link: "/our-divisions/retail-super-shops/sampan-sweet-box",
@@ -190,7 +198,14 @@ export default function SampanMartClient() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      const navOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      window.history.replaceState(null, "", `#${id}`);
     }
   };
 
@@ -235,10 +250,10 @@ export default function SampanMartClient() {
             </p>
 
             {/* Square Action Buttons */}
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4 font-mono text-xs">
+            <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4 font-mono text-xs">
               <button
                 onClick={() => scrollTo("overview")}
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-amber-600 hover:bg-amber-500 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-amber-950/40 cursor-pointer text-center"
+                className="group inline-flex items-center justify-center gap-2 rounded-none bg-amber-600 hover:bg-amber-500 px-6 py-3 sm:px-7 sm:py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 shadow-lg shadow-amber-950/40 cursor-pointer text-center"
               >
                 <span>Explore Store</span>
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -246,17 +261,20 @@ export default function SampanMartClient() {
 
               <button
                 onClick={() => scrollTo("gallery")}
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
+                className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-6 py-3 sm:px-7 sm:py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
                 View Store Gallery
               </button>
 
-              <button
-                onClick={() => scrollTo("nearby")}
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-none border border-amber-500/40 bg-amber-900/30 hover:bg-amber-800/60 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-amber-300 transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
+              <a
+                href={highwayInnFacebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-none border border-amber-500/40 bg-amber-900/30 hover:bg-amber-800/60 hover:border-amber-400 px-6 py-3 sm:px-7 sm:py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-amber-300 hover:text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
-                Nearby Locations
-              </button>
+                <FaFacebookF className="text-xs text-amber-400" />
+                <span>Facebook Page</span>
+              </a>
             </div>
 
             {/* Quick Metrics (Square Cards) */}
@@ -271,7 +289,7 @@ export default function SampanMartClient() {
               </div>
               <div className="border-l-2 border-amber-400 pl-4">
                 <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Location</p>
-                <p className="text-[11px] text-white/60 mt-0.5 font-mono">KM 74, Dhaka–Khulna Highway</p>
+                <p className="text-[11px] text-white/60 mt-0.5 font-mono"> Dhaka–Khulna Highway</p>
               </div>
               <div className="border-l-2 border-amber-400 pl-4">
                 <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Travel Ready</p>
@@ -290,7 +308,7 @@ export default function SampanMartClient() {
           <div className="mb-6 flex items-center gap-4">
             <span className="h-px w-10 bg-amber-600" />
             <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-amber-700">
-              01 • Store Overview
+              Store Overview
             </span>
           </div>
 
@@ -352,10 +370,10 @@ export default function SampanMartClient() {
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-neutral-950">
-                      Chilled Refreshments &amp; Road Snacks
+                      Any Type of Refreshments &amp; Road Snacks
                     </h3>
                     <p className="mt-1 text-xs text-neutral-600 leading-relaxed">
-                      Massive refrigerated coolers stocked with cold beverages, mineral water, ice creams, crisps, biscuits, and bakery snacks.
+                      Complete variety of all refreshments and highway road snacks — chilled beverages, mineral water, juices, ice creams, crisps, biscuits, and bakery items.
                     </p>
                   </div>
                 </div>
@@ -368,10 +386,10 @@ export default function SampanMartClient() {
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-neutral-950">
-                      Travel Toiletries &amp; Daily Essentials
+                      Foreign Foods, Travel Toiletries &amp; Daily Essentials
                     </h3>
                     <p className="mt-1 text-xs text-neutral-600 leading-relaxed">
-                      Personal care items, emergency travel supplies, oral care, soaps, tissues, sanitizers, and packaged dry grocery goods.
+                      Imported foreign food items, personal care necessities, emergency travel supplies, oral care, soaps, tissues, sanitizers, and packaged dry grocery goods.
                     </p>
                   </div>
                 </div>
@@ -391,7 +409,7 @@ export default function SampanMartClient() {
               <div className="flex items-center gap-4 mb-4">
                 <span className="h-px w-10 bg-amber-600" />
                 <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-amber-700">
-                  02 • What You&apos;ll Find
+                  • What You&apos;ll Find
                 </span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
@@ -569,11 +587,11 @@ export default function SampanMartClient() {
                     </span>
                   </div>
 
-                  <div className="absolute bottom-3 right-4 z-10">
+                  {/* <div className="absolute bottom-3 right-4 z-10">
                     <span className="inline-flex items-center rounded-none bg-white/10 backdrop-blur-md px-2.5 py-0.5 font-mono text-[10px] text-neutral-300">
                       {spot.driveTime}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="p-6 flex flex-col flex-1 justify-between">
@@ -607,98 +625,142 @@ export default function SampanMartClient() {
       </section>
 
       {/* ================= 6. LOCATION & CONTACT ================= */}
-      <section id="location" className="py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#f7f5f0] text-[#1a1714] border-b border-neutral-200">
+      <section id="location" className="scroll-mt-20 py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#f7f5f0] text-[#1a1714] border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
 
           <div className="max-w-3xl mb-14">
             <div className="inline-flex items-center gap-2 border border-amber-600/40 bg-amber-600/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-amber-800 mb-4 rounded-none">
               <FaMapMarkerAlt className="text-xs text-amber-700" />
-              <span>Location &amp; Access</span>
+              <span>Location &amp; Route Access</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
-              Visit Sampan Mart
+              Visit Sampan Mart &amp; Highway Inn
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-              Situated right beside Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway, open around the clock for all travelers and local residents.
+              Situated directly within the Sampan Highway Inn Complex on the Dhaka–Khulna Highway, open 24 hours a day with smooth vehicle drive-in and parking.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Card 1: Store Address */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
-                <FaMapMarkerAlt className="text-lg" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+            {/* Left Column: Store Details, Operating Hours & Contact */}
+            <div className="flex flex-col gap-6 justify-between">
+              {/* Card 1: Store Location & Address */}
+              <div className="bg-white border border-neutral-300 p-6 sm:p-7 rounded-none shadow-sm space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none shrink-0">
+                    <FaMapMarkerAlt className="text-base" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
+                      Physical Location
+                    </span>
+                    <h3 className="text-lg font-bold text-neutral-950">
+                      Sampan Highway Inn Complex
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-mono">
+                  KM 74, Dhaka–Khulna Highway <br />
+                  Direct Highway Access, Bangladesh
+                </p>
+                <p className="pt-2 text-[11px] text-neutral-500 font-mono border-t border-neutral-100 flex items-center gap-2">
+                  <FaClock className="text-xs text-amber-600 shrink-0" />
+                  <span>Open 24 Hours / 7 Days • Ample Front Parking</span>
+                </p>
               </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-700 block">
-                Highway Location
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Sampan Mart 24/7
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed font-mono">
-                Sampan Highway Inn Complex <br />
-                KM 74, Dhaka–Khulna Highway <br />
-                Dhaka–Khulna Highway, Bangladesh
-              </p>
-              <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
-                Wide storefront parking available
-              </p>
-            </div>
 
-            {/* Card 2: Operating Hours */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
-                <FaClock className="text-base" />
-              </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-700 block">
-                Store Schedule
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                24 Hours / 7 Days
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed font-mono">
-                Open All Day &amp; Night <br />
-                Every Day of the Year <br />
-                No Closures
-              </p>
-              <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
-                Full night staff &amp; security on site
-              </p>
-            </div>
-
-            {/* Card 3: Contact & Highway Help */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
-                <FaPhoneAlt className="text-base" />
-              </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-700 block">
-                Direct Contact
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Store Manager &amp; Orders
-              </h3>
-              <div className="space-y-3 pt-1 text-sm text-neutral-700">
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Phone:</span>
-                  <a href="tel:+8801929918408" className="font-mono font-bold text-amber-700 hover:underline">
-                    +880 1929-918408
+              {/* Sub-grid: Direct Contact & Social */}
+              <div className="grid sm:grid-cols-2 gap-6 flex-1">
+                {/* Card 2: Contact Numbers */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
+                      <FaPhoneAlt className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
+                      Direct Inquiries
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Store Manager
+                    </h4>
+                    <div className="text-xs text-neutral-700 space-y-1">
+                      <a href="tel:+8801929918408" className="font-mono font-bold text-amber-700 hover:underline block text-sm">
+                        +880 1929-918408
+                      </a>
+                      {/* <a href="tel:+8801929918400" className="font-mono text-neutral-500 hover:underline block text-xs">
+                        +880 1929-918400
+                      </a> */}
+                    </div>
+                  </div>
+                  <a
+                    href="tel:+8801929918408"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-amber-700 hover:bg-amber-600 text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaPhoneAlt className="text-[10px]" />
+                    <span>Call Store</span>
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Alt:</span>
-                  <a href="tel:+8801929918400" className="font-mono font-semibold text-amber-700 hover:underline">
-                    +880 1929-918400
+
+                {/* Card 3: Social Updates (Sampan Highway Inn Facebook Page) */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
+                      <FaFacebookF className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
+                      Live Updates
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Highway Inn Page
+                    </h4>
+                    <p className="text-xs text-neutral-600 leading-relaxed">
+                      Follow our official Facebook page for live updates, offers, and announcements.
+                    </p>
+                  </div>
+                  <a
+                    href={highwayInnFacebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-[#1877F2] hover:bg-[#166fe5] text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaFacebookF className="text-[10px]" />
+                    <span>Facebook Page</span>
                   </a>
                 </div>
               </div>
-              <div className="pt-2">
+            </div>
+
+            {/* Right Column: 50% Interactive Google Map routing to Sampan Highway Inn */}
+            <div className="border border-neutral-300 bg-white p-2 sm:p-3 shadow-sm flex flex-col h-full min-h-[420px] lg:min-h-0">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-3 py-2.5 mb-2 border-b border-neutral-200">
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-700 min-w-0">
+                  <span className="w-2 h-2 rounded-full bg-amber-600 animate-pulse shrink-0" />
+                  <span className="font-bold text-neutral-900 uppercase tracking-wider shrink-0">Route to:</span>
+                  <span className="truncate">Sampan Highway Inn Restaurant &amp; Party Centre</span>
+                </div>
                 <a
-                  href="tel:+8801929918408"
-                  className="inline-flex items-center gap-2 rounded-none bg-amber-700 hover:bg-amber-600 text-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  href={highwayInnDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-amber-800 hover:text-amber-950 transition-colors shrink-0"
                 >
-                  <FaPhoneAlt className="text-[10px]" />
-                  <span>Call Store Manager</span>
+                  <FaDirections className="text-xs text-amber-700" />
+                  <span>Get Directions</span>
+                  <FaExternalLinkAlt className="text-[10px]" />
                 </a>
+              </div>
+
+              <div className="relative w-full flex-1 min-h-[380px] bg-neutral-100 overflow-hidden">
+                <iframe
+                  src={highwayInnMapEmbed}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sampan Highway Inn Live Map Route"
+                />
               </div>
             </div>
           </div>
@@ -735,7 +797,7 @@ export default function SampanMartClient() {
       )}
 
       {/* ================= 7. SQUARE MINIMAL FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
+      {/* <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
         <div className="mx-auto max-w-[1440px]">
           <div className="grid gap-12 md:grid-cols-4 mb-12">
             <div className="md:col-span-2">
@@ -799,7 +861,7 @@ export default function SampanMartClient() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
     </main>
   );

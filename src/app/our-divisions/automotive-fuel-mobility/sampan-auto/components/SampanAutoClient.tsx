@@ -150,6 +150,14 @@ export default function SampanAutoClient() {
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-none border border-amber-500/60 bg-amber-500/15 hover:bg-amber-600 hover:border-amber-600 hover:text-white px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-amber-300 transition-all duration-300 backdrop-blur-sm cursor-pointer"
+              >
+                <span>Get a Car</span>
+                <FiArrowRight className="text-xs" />
+              </Link>
+
               <button
                 onClick={() => scrollTo("process")}
                 className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
@@ -175,7 +183,7 @@ export default function SampanAutoClient() {
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">Bespoke Sourcing</p>
               </div>
               <div className="border-l-2 border-amber-400 pl-4">
-                <p className="text-sm sm:text-base font-bold text-amber-400 uppercase tracking-wider">Recondition &amp; Used</p>
+                <p className="text-sm sm:text-base font-bold text-amber-400 uppercase tracking-wider">Imported</p>
                 <p className="text-[11px] text-white/60 mt-0.5 font-mono">Certified Inspections</p>
               </div>
               <div className="border-l-2 border-amber-400 pl-4">
@@ -238,7 +246,7 @@ export default function SampanAutoClient() {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-[11px] font-mono text-amber-800 font-bold">
-                    <span>Verified Process</span>
+                    <span>Step {idx + 1}</span>
                     <FaCheck className="text-[10px] text-amber-600" />
                   </div>
                 </div>
@@ -372,7 +380,7 @@ export default function SampanAutoClient() {
               <div className="flex items-center gap-4 mb-3">
                 <span className="h-px w-10 bg-amber-600" />
                 <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-amber-700">
-                  Stock Inventory ({carStockList.length} Vehicles)
+                  Stock Inventory
                 </span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
@@ -417,8 +425,8 @@ export default function SampanAutoClient() {
                 <button
                   onClick={() => setSelectedLocation("all")}
                   className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${selectedLocation === "all"
-                      ? "bg-[#111318] text-white border-[#111318]"
-                      : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                    ? "bg-[#111318] text-white border-[#111318]"
+                    : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
                     }`}
                 >
                   All ({carStockList.length})
@@ -426,8 +434,8 @@ export default function SampanAutoClient() {
                 <button
                   onClick={() => setSelectedLocation(selectedLocation === "Showroom" ? "all" : "Showroom")}
                   className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${selectedLocation === "Showroom"
-                      ? "bg-amber-600 text-white border-amber-600"
-                      : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                    ? "bg-amber-600 text-white border-amber-600"
+                    : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
                     }`}
                 >
                   Showroom ({showroomCount})
@@ -435,8 +443,8 @@ export default function SampanAutoClient() {
                 <button
                   onClick={() => setSelectedLocation(selectedLocation === "Port" ? "all" : "Port")}
                   className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${selectedLocation === "Port"
-                      ? "bg-neutral-900 text-white border-neutral-900"
-                      : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                    ? "bg-neutral-900 text-white border-neutral-900"
+                    : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
                     }`}
                 >
                   Port ({portCount})
@@ -445,8 +453,8 @@ export default function SampanAutoClient() {
                   <button
                     onClick={() => setSelectedLocation(selectedLocation === "Upcoming" ? "all" : "Upcoming")}
                     className={`px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded-none cursor-pointer border ${selectedLocation === "Upcoming"
-                        ? "bg-emerald-700 text-white border-emerald-700"
-                        : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                      ? "bg-emerald-700 text-white border-emerald-700"
+                      : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
                       }`}
                   >
                     Upcoming ({upcomingCount})
@@ -468,8 +476,8 @@ export default function SampanAutoClient() {
                     key={tab.id}
                     onClick={() => setSelectedCategory(tab.id)}
                     className={`px-3.5 py-2 text-[11px] font-mono font-bold uppercase tracking-wider transition-colors rounded-none cursor-pointer border ${selectedCategory === tab.id
-                        ? "bg-[#111318] text-white border-[#111318]"
-                        : "bg-neutral-100 text-neutral-700 border-neutral-200 hover:bg-neutral-200"
+                      ? "bg-[#111318] text-white border-[#111318]"
+                      : "bg-neutral-100 text-neutral-700 border-neutral-200 hover:bg-neutral-200"
                       }`}
                   >
                     {tab.label}
@@ -564,10 +572,10 @@ export default function SampanAutoClient() {
                     <div className="absolute top-3 left-3 z-10">
                       <span
                         className={`inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 font-bold uppercase ${car.location === "Showroom"
-                            ? "bg-amber-600 text-white"
-                            : car.location === "Upcoming" || car.location === "In Transit"
-                              ? "bg-emerald-700 text-white"
-                              : "bg-neutral-900 text-white"
+                          ? "bg-amber-600 text-white"
+                          : car.location === "Upcoming" || car.location === "In Transit"
+                            ? "bg-emerald-700 text-white"
+                            : "bg-neutral-900 text-white"
                           }`}
                       >
                         <FaMapMarkerAlt className="text-[8px]" />
@@ -916,77 +924,7 @@ export default function SampanAutoClient() {
       )}
 
       {/* ================= 6. SQUARE MINIMAL FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-12 md:grid-cols-4 mb-12">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-neutral-950 mb-3">
-                Sampan Auto
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                Automotive vehicle importer and dealer offering Japanese recondition pre-orders, verified used cars, and doorstep delivery across Bangladesh. A division of Sampan Group.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Quick Links
-              </h4>
-              <ul className="space-y-2.5 text-xs font-mono">
-                <li>
-                  <button onClick={() => scrollTo("process")} className="hover:text-amber-700 transition-colors text-left">
-                    How Sourcing Works
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollTo("inventory")} className="hover:text-amber-700 transition-colors text-left">
-                    Import Showcase
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollTo("contact")} className="hover:text-amber-700 transition-colors text-left">
-                    Order Inquiries
-                  </button>
-                </li>
-                <li>
-                  <a
-                    href="https://www.facebook.com/sampandhaka"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-amber-700 transition-colors inline-flex items-center gap-1.5"
-                  >
-                    <span>Facebook Page</span>
-                    <FaExternalLinkAlt className="text-[9px]" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Contact Desk
-              </h4>
-              <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
-                <li>Dhaka, Bangladesh</li>
-                <li>+880 1929-918408</li>
-                <li>+880 1929-918400</li>
-                <li>facebook.com/sampandhaka</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-mono">
-            <p>
-              © {new Date().getFullYear()} Sampan Auto. A Sampan Group Venture.
-            </p>
-            <div className="flex gap-6">
-              <Link href="/our-divisions/automotive-fuel-mobility/sampan-filling-station" className="hover:text-amber-700 transition-colors">
-                Sampan Filling Station
-              </Link>
-              <Link href="/our-divisions/automotive-fuel-mobility/sampan-lpg-filling-station" className="hover:text-amber-700 transition-colors">
-                Sampan LPG Station
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+
 
     </main>
   );

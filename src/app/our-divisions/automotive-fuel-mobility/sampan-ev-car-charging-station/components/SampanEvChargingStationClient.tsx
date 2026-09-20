@@ -12,8 +12,17 @@ import {
   FaTimes,
   FaShieldAlt,
   FaCar,
+  FaDirections,
+  FaExternalLinkAlt,
+  FaFacebookF,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
+
+const highwayInnFacebookUrl = "https://www.facebook.com/sampanhighwayinn/";
+const highwayInnDirectionsUrl =
+  "https://www.google.com/maps/dir/?api=1&destination=Sampan+Highway+Inn+Restaurant+%26+Party+Centre";
+const highwayInnMapEmbed =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.089219414334!2d89.765406!3d23.260465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ffc915b3e67a43%3A0xc9ccd3be4ea97668!2sSampan%20Highway%20Inn%20Restaurant%20%26%20Party%20Centre!5e0!3m2!1sen!2sbd!4v1788938537834!5m2!1sen!2sbd";
 
 const evImage = "/images/our-divisions/express-highway-inn/6.EV-Car-Charging.png";
 
@@ -33,7 +42,7 @@ const plannedFeatures = [
     icon: FaCar,
   },
   {
-    title: "Located at Highway Inn Complex",
+    title: "Located at Sampan Highway Inn",
     type: "Highway Hub",
     description:
       "Situated next to Sampan Highway Inn, allowing travelers to dine, rest, and shop while their vehicle charges safely.",
@@ -103,7 +112,7 @@ const nearbySpots: NearbySpot[] = [
     type: "Artisanal Bengali Sweets",
     badge: "In Complex",
     driveTime: "In Complex",
-    image: "/images/our-divisions/sampan-sweet-box/DSC00468.JPG",
+    image: "/images/our-divisions/express-highway-inn/sampan-mart.jpg",
     description:
       "Authentic traditional mishti, fresh chhana sweets, celebration gift boxes, and travel refreshments.",
     link: "/our-divisions/retail-super-shops/sampan-sweet-box",
@@ -127,7 +136,14 @@ export default function SampanEvChargingStationClient() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      const navOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      window.history.replaceState(null, "", `#${id}`);
     }
   };
 
@@ -161,14 +177,14 @@ export default function SampanEvChargingStationClient() {
 
             {/* Shortened Subheadline */}
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-emerald-500/80 pl-4">
-              Upcoming electric vehicle charging hub next to Sampan Highway Inn at KM 74, Dhaka–Khulna Highway.
+              Upcoming electric vehicle charging hub next to Sampan Highway Inn at KM 74, Dhaka–Khulna Highway,Kashiani.
             </p>
 
             {/* Action Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4 font-mono text-xs">
               <button
                 onClick={() => scrollTo("overview")}
-                className="group inline-flex items-center justify-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-lg shadow-emerald-950/40 cursor-pointer"
+                className="group inline-flex items-center justify-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 px-6 py-3 sm:px-7 sm:py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 shadow-lg shadow-emerald-950/40 cursor-pointer text-center"
               >
                 <span>Station Overview</span>
                 <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -176,24 +192,27 @@ export default function SampanEvChargingStationClient() {
 
               <button
                 onClick={() => scrollTo("nearby")}
-                className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-8 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                className="inline-flex items-center justify-center rounded-none border border-white/25 bg-white/5 hover:border-white hover:bg-white hover:text-black px-6 py-3 sm:px-7 sm:py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
                 Nearby Places
               </button>
 
-              <button
-                onClick={() => scrollTo("location")}
-                className="inline-flex items-center justify-center rounded-none border border-emerald-500/40 bg-emerald-950/30 hover:bg-emerald-900/60 px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-emerald-300 transition-all duration-300 backdrop-blur-sm cursor-pointer"
+              <a
+                href={highwayInnFacebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-none border border-emerald-500/40 bg-emerald-900/30 hover:bg-emerald-800/60 hover:border-emerald-400 px-6 py-3 sm:px-7 sm:py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-emerald-300 hover:text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
-                Location &amp; Inquiries
-              </button>
+                <FaFacebookF className="text-xs text-emerald-400" />
+                <span>Facebook Page</span>
+              </a>
             </div>
 
             {/* Quick Metrics */}
             <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
               <div className="border-l-2 border-emerald-400 pl-4">
-                <p className="text-sm sm:text-base font-bold text-amber-400 uppercase tracking-wider">Opening Soon</p>
-                <p className="text-[11px] text-white/60 mt-0.5 font-mono">Under Development</p>
+                <p className="text-sm sm:text-base font-bold text-amber-400 uppercase tracking-wider">Construction Ongoing</p>
+                <p className="text-[11px] text-white/60 mt-0.5 font-mono">Development Status</p>
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
                 <p className="text-sm sm:text-base font-bold text-emerald-400 uppercase tracking-wider">Fast EV Hub</p>
@@ -225,7 +244,7 @@ export default function SampanEvChargingStationClient() {
               </h2>
             </div>
             <p className="max-w-md text-xs sm:text-sm text-neutral-600 leading-relaxed">
-              Designed to bring convenient, high-capacity vehicle charging to the Dhaka–Khulna Highway right next to Sampan Highway Inn on the Dhaka–Khulna Highway.
+              Designed to bring convenient, high-capacity vehicle charging to the Dhaka–Khulna Highway right next to Sampan Highway Inn in Kashiani.
             </p>
           </div>
 
@@ -332,11 +351,11 @@ export default function SampanEvChargingStationClient() {
                     </span>
                   </div>
 
-                  <div className="absolute bottom-3 right-4 z-10">
+                  {/* <div className="absolute bottom-3 right-4 z-10">
                     <span className="inline-flex items-center rounded-none bg-white/10 backdrop-blur-md px-2.5 py-0.5 font-mono text-[10px] text-neutral-300">
                       {spot.driveTime}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="p-6 flex flex-col flex-1 justify-between">
@@ -370,79 +389,134 @@ export default function SampanEvChargingStationClient() {
       </section>
 
       {/* ================= 4. LOCATION & INQUIRIES ================= */}
-      <section id="location" className="py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#f7f9f7] text-[#1a1714] border-b border-neutral-200">
+      <section id="location" className="scroll-mt-20 py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#f7f9f7] text-[#1a1714] border-b border-neutral-200">
         <div className="mx-auto max-w-[1440px]">
 
           <div className="max-w-3xl mb-14">
+            <div className="inline-flex items-center gap-2 border border-emerald-600/40 bg-emerald-600/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-emerald-800 mb-4 rounded-none">
+              <FaMapMarkerAlt className="text-xs text-emerald-700" />
+              <span>Location &amp; Route Access</span>
+            </div>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
-              Location &amp; Inquiries
+              Visit Sampan EV Charging &amp; Highway Inn
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
-              Located right next to Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway.
+              Located right next to Sampan Highway Inn at KM 74 on the Dhaka–Khulna Highway. Open 24/7 access planned for electric vehicles, passenger cars, and transit fleets.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Card 1: Address */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
-                <FaMapMarkerAlt className="text-lg" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+            {/* Left Column: Station Details, Schedule & Contact */}
+            <div className="flex flex-col gap-6 justify-between">
+              {/* Card 1: Station Location & Address */}
+              <div className="bg-white border border-neutral-300 p-6 sm:p-7 rounded-none shadow-sm space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none shrink-0">
+                    <FaMapMarkerAlt className="text-base" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
+                      Physical Location
+                    </span>
+                    <h3 className="text-lg font-bold text-neutral-950">
+                      Sampan Highway Inn Complex
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-mono">
+                  KM 74, Dhaka–Khulna Highway <br />
+                  Direct Highway Access, Bangladesh
+                </p>
+                <p className="pt-2 text-[11px] text-neutral-500 font-mono border-t border-neutral-100 flex items-center gap-2">
+                  <FaClock className="text-xs text-amber-600 shrink-0" />
+                  <span>Status: Construction Ongoing • Planned 24/7 Fast-Charging Bay</span>
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-neutral-950">
-                EV Charging Site
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed font-mono">
-                Next to Sampan Highway Inn <br />
-                KM 74, Dhaka–Khulna Highway <br />
-                Dhaka–Khulna Highway, Bangladesh
-              </p>
-              <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
-                Direct highway access
-              </p>
-            </div>
 
-            {/* Card 2: Status */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
-                <FaClock className="text-base" />
-              </div>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Development Status
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed font-mono">
-                Opening Soon <br />
-                Infrastructure Under Setup <br />
-                Planned 24/7 Access
-              </p>
-              <p className="pt-2 text-[11px] text-amber-700 font-mono border-t border-neutral-100">
-                Haven&apos;t opened yet
-              </p>
-            </div>
+              {/* Sub-grid: Direct Contact & Social */}
+              <div className="grid sm:grid-cols-2 gap-6 flex-1">
+                {/* Card 2: Contact Numbers */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
+                      <FaPhoneAlt className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
+                      Direct Inquiries
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Complex Desk
+                    </h4>
+                    <div className="text-xs text-neutral-700 space-y-1">
+                      <a href="tel:+8801929918408" className="font-mono font-bold text-emerald-700 hover:underline block text-sm">
+                        +880 1929-918408
+                      </a>
+                    </div>
+                  </div>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaPhoneAlt className="text-[10px]" />
+                    <span>Call Complex Desk</span>
+                  </Link>
+                </div>
 
-            {/* Card 3: Complex Desk Inquiries */}
-            <div className="bg-white border border-neutral-300 p-8 rounded-none shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
-                <FaPhoneAlt className="text-base" />
-              </div>
-              <h3 className="text-xl font-bold text-neutral-950">
-                General Inquiries
-              </h3>
-              <div className="pt-1 text-sm text-neutral-700">
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Desk:</span>
-                  <a href="tel:+8801929918408" className="font-mono font-bold text-emerald-700 hover:underline">
-                    +880 1929-918408
-                  </a>
+                {/* Card 3: Development Status */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
+                      <FaClock className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
+                      Site Timeline
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Development Status
+                    </h4>
+                    <p className="text-xs text-neutral-600 leading-relaxed">
+                      Civil works and dedicated high-voltage electrical grid setup are underway for fast DC vehicle charging.
+                    </p>
+                  </div>
+                  <div className="inline-flex items-center justify-center gap-2 rounded-none bg-amber-600 text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider text-center select-none shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    <span>Construction Ongoing</span>
+                  </div>
                 </div>
               </div>
-              <div className="pt-2">
+            </div>
+
+            {/* Right Column: 50% Interactive Google Map routing to Sampan Highway Inn */}
+            <div className="border border-neutral-300 bg-white p-2 sm:p-3 shadow-sm flex flex-col h-full min-h-[420px] lg:min-h-0">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-3 py-2.5 mb-2 border-b border-neutral-200">
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-700 min-w-0">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse shrink-0" />
+                  <span className="font-bold text-neutral-900 uppercase tracking-wider shrink-0">Route to:</span>
+                  <span className="truncate">Sampan Highway Inn Restaurant &amp; Party Centre</span>
+                </div>
                 <a
-                  href="tel:+8801929918408"
-                  className="inline-flex items-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 text-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  href={highwayInnDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-emerald-800 hover:text-emerald-950 transition-colors shrink-0"
                 >
-                  <FaPhoneAlt className="text-[10px]" />
-                  <span>Call Complex Desk</span>
+                  <FaDirections className="text-xs text-emerald-700" />
+                  <span>Get Directions</span>
+                  <FaExternalLinkAlt className="text-[10px]" />
                 </a>
+              </div>
+
+              <div className="relative w-full flex-1 min-h-[380px] bg-neutral-100 overflow-hidden">
+                <iframe
+                  src={highwayInnMapEmbed}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sampan Highway Inn Live Map Route"
+                />
               </div>
             </div>
           </div>
@@ -478,67 +552,7 @@ export default function SampanEvChargingStationClient() {
         </div>
       )}
 
-      {/* ================= 5. SQUARE MINIMAL FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-12 md:grid-cols-4 mb-12">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-neutral-950 mb-3">
-                Sampan EV Charging Station
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                Upcoming electric vehicle charging hub next to Sampan Highway Inn on the Dhaka–Khulna Highway. A Sampan Group initiative.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Quick Links
-              </h4>
-              <ul className="space-y-2.5 text-xs font-mono">
-                <li>
-                  <button onClick={() => scrollTo("overview")} className="hover:text-emerald-700 transition-colors text-left">
-                    Hub Overview
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollTo("nearby")} className="hover:text-emerald-700 transition-colors text-left">
-                    Nearby Places
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollTo("location")} className="hover:text-emerald-700 transition-colors text-left">
-                    Highway Location
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Highway Location
-              </h4>
-              <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
-                <li>Next to Sampan Highway Inn</li>
-                <li>KM 74, Dhaka–Khulna Highway</li>
-                <li>Status: Opening Soon</li>
-                <li>+880 1929-918408</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-mono">
-            <p>
-              © {new Date().getFullYear()} Sampan EV Charging Station. A Sampan Group Venture.
-            </p>
-            <div className="flex gap-6">
-              <Link href="/our-divisions/hospitality-highway-travel/sampan-highway-inn" className="hover:text-emerald-700 transition-colors">
-                Sampan Highway Inn
-              </Link>
-              <Link href="/our-divisions/automotive-fuel-mobility/sampan-filling-station" className="hover:text-emerald-700 transition-colors">
-                Sampan Filling Station
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* Duplicate local footer removed: Global site layout renders footer */}
 
     </main>
   );

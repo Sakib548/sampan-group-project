@@ -197,7 +197,7 @@ export default function SampanIndustrialParkClient() {
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
                 <p className="text-sm sm:text-base font-bold text-emerald-400 uppercase tracking-wider">2 Anchor Plants</p>
-                <p className="text-[11px] text-white/60 mt-0.5 font-mono">Hollow Bricks &amp; PET</p>
+                <p className="text-[11px] text-white/60 mt-0.5 font-mono">Hollow Bricks &amp; PET & Beverage</p>
               </div>
               <div className="border-l-2 border-emerald-400 pl-4">
                 <p className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">Heavy Power</p>
@@ -439,7 +439,7 @@ export default function SampanIndustrialParkClient() {
                 <FaIndustry className="text-base" />
               </div>
               <h3 className="text-xl font-bold text-white">
-                Resident Operations
+                Industry Operations
               </h3>
               <p className="text-sm text-neutral-300 leading-relaxed font-mono">
                 • Hollow Bricks &amp; Tiles <br />
@@ -517,7 +517,7 @@ export default function SampanIndustrialParkClient() {
       )}
 
       {/* ================= 6. SQUARE MINIMAL FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
+      {/* <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
         <div className="mx-auto max-w-[1440px]">
           <div className="grid gap-12 md:grid-cols-4 mb-12">
             <div className="md:col-span-2">
@@ -573,7 +573,7 @@ export default function SampanIndustrialParkClient() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
     </main>
   );

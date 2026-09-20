@@ -11,6 +11,7 @@ import {
   FaRoute,
   FaShoppingBasket,
   FaCheckCircle,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 import FarmToTableStorytelling from "../../components/FarmToTableStorytelling";
@@ -62,12 +63,12 @@ interface SimplifiedProduceItem {
 
 const ecoAgroProducts: SimplifiedProduceItem[] = [
   {
-    id: "organic-okra",
-    name: "Field Okra & Green Vegetables",
-    category: "Fresh Vegetables",
-    image: "/images/our-divisions/eco-agro/veg2.jpg",
-    tag: "Morning Harvest",
-    description: "Crisp, tender field okra and seasonal leafy greens cultivated naturally in our Alphadanga soil beds.",
+    id: "dragon-fruits",
+    name: "Fresh Dragon Fruits",
+    category: "Seasonal Fruits",
+    image: "/images/our-divisions/eco-agro/dragon_fruits.png",
+    tag: "Farm Fresh",
+    description: "Vibrant, sweet, nutrient-rich dragon fruits naturally cultivated and hand-harvested in our Alphadanga orchards.",
   },
   {
     id: "field-pumpkin",
@@ -240,6 +241,21 @@ export default function SampanEcoAgroProduceClient() {
       ? ecoAgroProducts
       : ecoAgroProducts.filter((p) => p.category === activeCategory);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const navOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      window.history.replaceState(null, "", `#${id}`);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[#F5F5F2] text-neutral-950 overflow-x-hidden w-full">
 
@@ -295,7 +311,8 @@ export default function SampanEcoAgroProduceClient() {
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4">
               <a
                 href="#products"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-[#b9e583] hover:bg-[#a6db6c] px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0c1c14] shadow-lg shadow-[#b9e583]/20 transition-all duration-300 text-center"
+                onClick={(e) => scrollToSection(e, "products")}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-[#b9e583] hover:bg-[#a6db6c] px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0c1c14] shadow-lg shadow-[#b9e583]/20 transition-all duration-300 text-center cursor-pointer select-none"
               >
                 <span>What We Grow</span>
                 <FiArrowRight className="text-sm" />
@@ -303,7 +320,8 @@ export default function SampanEcoAgroProduceClient() {
 
               <a
                 href="#location"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none border border-white/15 bg-black/40 hover:bg-white/10 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm text-center"
+                onClick={(e) => scrollToSection(e, "location")}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none border border-white/15 bg-black/40 hover:bg-white/10 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm text-center cursor-pointer select-none"
               >
                 <FaMapMarkerAlt className="text-xs text-[#b9e583]" />
                 <span>Farm Address</span>
@@ -349,7 +367,7 @@ export default function SampanEcoAgroProduceClient() {
 
       {/* ================= 2. FARM PHILOSOPHY & STORYTELLING ================= */}
       <FarmToTableStorytelling
-        title="Wholesome Cultivation & Farming Values"
+        title=" Cultivation & Farming Values"
         subtitle="Nurturing the fertile soil of Alphadanga, Faridpur with natural compost and sustainable agricultural care."
         concernName="Sampan Eco & Agro"
         storyParagraphs={storyParagraphs}
@@ -360,7 +378,7 @@ export default function SampanEcoAgroProduceClient() {
       />
 
       {/* ================= 3. WHAT'S SOLD (SIMPLIFIED) ================= */}
-      <section id="products" className="py-24 bg-[#F5F5F2] border-b border-neutral-300/60">
+      <section id="products" className="scroll-mt-20 py-24 bg-[#F5F5F2] border-b border-neutral-300/60">
         <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
 
           {/* Section Header & Category Filter Tabs */}
@@ -473,7 +491,7 @@ export default function SampanEcoAgroProduceClient() {
       />
 
       {/* ================= 6. LOCATION & CONTACT (Address Only - Not Google Verified) ================= */}
-      <section id="location" className="py-24 bg-[#f3f6f2] text-[#183b2b] border-b border-[#183b2b]/15">
+      <section id="location" className="scroll-mt-20 py-24 bg-[#f3f6f2] text-[#183b2b] border-b border-[#183b2b]/15">
         <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
 
           <div className="max-w-3xl mb-14">
@@ -482,78 +500,131 @@ export default function SampanEcoAgroProduceClient() {
               <span>Estate Location</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950">
-              Farm Estate Address
+              Farm Estate Location &amp; Map
             </h2>
             <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
               Located in Alphadanga, Faridpur, with direct road connectivity from Dhaka via the Padma Bridge corridor.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1: Physical Address */}
-            <div className="bg-white border border-neutral-300 p-8 shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700">
-                <FaMapMarkerAlt className="text-lg" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+            {/* Left Column: Farm Details, Direct Contact & Social */}
+            <div className="flex flex-col gap-6 justify-between">
+              {/* Card 1: Physical Address */}
+              <div className="bg-white border border-neutral-300 p-6 sm:p-7 rounded-none shadow-sm space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none shrink-0">
+                    <FaMapMarkerAlt className="text-base" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
+                      Physical Estate Address
+                    </span>
+                    <h3 className="text-lg font-bold text-neutral-950">
+                      Joydebpur, Alphadanga
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-mono">
+                  Joydebpur, Boroga, Borice, Alphadanga <br />
+                  Faridpur District, Dhaka Division, Bangladesh
+                </p>
+                <p className="pt-2 text-[11px] text-neutral-500 font-mono border-t border-neutral-100 flex items-center gap-2">
+                  <FaRoute className="text-xs text-emerald-600 shrink-0" />
+                  <span>Padma Bridge Corridor via Bhanga Interchange</span>
+                </p>
               </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Physical Address
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Alphadanga, Faridpur
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed font-mono">
-                Alphadanga-7870, Faridpur District <br />
-                Dhaka Division, Bangladesh
-              </p>
-            </div>
 
-            {/* Card 2: Contact & Social */}
-            <div className="bg-white border border-neutral-300 p-8 shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700">
-                <FaPhoneAlt className="text-base" />
-              </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Inquiries &amp; Information
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Direct Contact
-              </h3>
-              <div className="space-y-3 pt-1 text-sm text-neutral-700">
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Phone:</span>
-                  <a href="tel:+8801929918400" className="font-mono font-bold text-emerald-700 hover:underline">
-                    +8801929918400
+              {/* Sub-grid for Contact & Social Cards */}
+              <div className="grid sm:grid-cols-2 gap-6 flex-1">
+                {/* Card 2: Contact Numbers */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
+                      <FaPhoneAlt className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
+                      Direct Inquiries
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Farm Office
+                    </h4>
+                    <div className="text-xs text-neutral-700">
+                      <span className="font-mono text-[11px] text-neutral-400 block mb-0.5">Phone:</span>
+                      <a href="tel:+8801929918400" className="font-mono font-bold text-emerald-700 hover:underline text-sm">
+                        +8801929918400
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    href="tel:+8801929918400"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaPhoneAlt className="text-[10px]" />
+                    <span>Call For Inquiry</span>
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Social:</span>
+
+                {/* Card 3: Social & Farm Updates */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
+                      <FaFacebookF className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-700 block">
+                      Live Updates
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Harvest News
+                    </h4>
+                    <p className="text-xs text-neutral-600 leading-relaxed">
+                      Follow our official Facebook page for live crop updates, orchard photos, and seasonal yields.
+                    </p>
+                  </div>
                   <a
                     href="https://www.facebook.com/sampanecoandagro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-[#1877F2] hover:underline"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-[#1877F2] hover:bg-[#166fe5] text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
                   >
-                    <FaFacebookF className="text-xs" />
-                    <span>facebook.com/sampanecoandagro</span>
+                    <FaFacebookF className="text-[10px]" />
+                    <span>Facebook Page</span>
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Card 3: Route Notes */}
-            <div className="bg-white border border-neutral-300 p-8 shadow-sm space-y-4">
-              <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700">
-                <FaRoute className="text-lg" />
+            {/* Right Column: 50% Width Interactive Google Map */}
+            <div className="border border-neutral-300 bg-white p-2 sm:p-3 shadow-sm flex flex-col h-full min-h-[420px] lg:min-h-0">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-3 py-2.5 mb-2 border-b border-neutral-200">
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-700 min-w-0">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse shrink-0" />
+                  <span className="font-bold text-neutral-900 uppercase tracking-wider shrink-0">Map:</span>
+                  <span className="truncate">Joydebpur, Alphadanga, Faridpur</span>
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Joydebpur,+Boroga,+Borice,+Alphadanga,+Faridpur,+Bangladesh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-emerald-800 hover:text-emerald-950 transition-colors shrink-0"
+                >
+                  <span>Open in Maps</span>
+                  <FaExternalLinkAlt className="text-[10px]" />
+                </a>
               </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Accessibility
-              </span>
-              <h3 className="text-xl font-bold text-neutral-950">
-                Padma Bridge Corridor
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                From Dhaka, take the expressway across Padma Bridge to Bhanga Interchange, then proceed along the Faridpur regional highway toward Alphadanga.
-              </p>
+
+              <div className="relative w-full flex-1 min-h-[360px] bg-neutral-100 overflow-hidden">
+                <iframe
+                  src="https://maps.google.com/maps?q=Joydebpur+Alphadanga+Faridpur+Bangladesh&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sampan Eco & Agro Location Map"
+                />
+              </div>
             </div>
           </div>
 
