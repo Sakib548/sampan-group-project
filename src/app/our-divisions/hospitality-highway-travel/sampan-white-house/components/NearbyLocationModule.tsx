@@ -59,6 +59,17 @@ const nearbySpots: NearbySpot[] = [
     link: "/our-divisions/retail-super-shops/mini-sampan-super-shop",
   },
   {
+    id: "sweet-box",
+    name: "Sampan Sweet Box",
+    type: "Artisanal Bengali Sweets",
+    distance: "10 m",
+    driveTime: "In Complex",
+    image: "/images/facilities/highway_inn/sweet-shop.jpg",
+    description:
+      "Authentic traditional mishti, fresh chhana sweets, celebration gift boxes, and highway travel treats.",
+    link: "/our-divisions/retail-super-shops/sampan-sweet-box",
+  },
+  {
     id: "highway-inn",
     name: "Sampan Highway Inn",
     type: "Flagship Highway Dining & Stay",

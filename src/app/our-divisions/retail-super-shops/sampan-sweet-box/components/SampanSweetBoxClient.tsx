@@ -95,7 +95,7 @@ const nearbySpots: NearbySpot[] = [
     type: "Express Convenience",
     distance: "50 m",
     driveTime: "In Complex",
-    image: "/images/logos/mini-sampan.png",
+    image: "/images/our-divisions/mini-sampan-super-shop/Web-Banner-new.jpg",
     description: "Quick-stop express retail kiosk for instant refreshments and travel accessories.",
     link: "/our-divisions/retail-super-shops/mini-sampan-super-shop",
   },

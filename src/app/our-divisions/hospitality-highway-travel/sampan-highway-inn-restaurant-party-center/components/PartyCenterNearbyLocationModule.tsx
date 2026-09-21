@@ -74,9 +74,19 @@ const nearbySpots: NearbySpot[] = [
     distance: "10 m",
     driveTime: "In Complex",
     image: "/images/our-divisions/mini-sampan-super-shop/Web-Banner-new.jpg",
-
     description: "Quick-stop express retail kiosk for instant refreshments and travel accessories.",
     link: "/our-divisions/retail-super-shops/mini-sampan-super-shop",
+  },
+  {
+    id: "sweet-box",
+    name: "Sampan Sweet Box",
+    type: "Artisanal Bengali Sweets",
+    distance: "10 m",
+    driveTime: "In Complex",
+    image: "/images/facilities/highway_inn/sweet-shop.jpg",
+    description:
+      "Authentic traditional mishti, fresh chhana sweets, celebration gift boxes, and highway travel treats.",
+    link: "/our-divisions/retail-super-shops/sampan-sweet-box",
   },
   {
     id: "short-drive-range",
@@ -92,7 +102,7 @@ const nearbySpots: NearbySpot[] = [
 
 export default function PartyCenterNearbyLocationModule() {
   return (
-    <section className="bg-[#111613] py-24 sm:py-32 text-white border-t border-neutral-800">
+    <section id="nearby" className="bg-[#0b100d] py-24 sm:py-32 text-white border-t border-white/10 relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
 
         {/* Section Header */}
@@ -100,55 +110,53 @@ export default function PartyCenterNearbyLocationModule() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-amber-500" />
-              <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-400">
-                Connected Highway Ecosystem
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-400 font-mono">
+                Regional Surroundings
               </p>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
-              Nearby at this location. <br />
-              <span className="text-amber-400">Complete destination amenities.</span>
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+              Nearby attractions &amp; <br />
+              <span className="text-amber-400">Sampan destinations.</span>
             </h2>
           </div>
-
-          <p className="max-w-md text-sm text-neutral-400 leading-relaxed font-light">
+          <p className="max-w-md text-sm sm:text-base text-neutral-400 leading-relaxed font-light">
             Located within the expansive Sampan Highway Complex, event hosts and guests enjoy immediate access to fuel, shopping, and lodging without detours.
           </p>
         </div>
 
-        {/* Spot Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Nearby Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {nearbySpots.map((spot) => (
             <article
               key={spot.id}
-              className="group flex flex-col rounded-none overflow-hidden bg-neutral-900/90 border border-neutral-800 hover:border-amber-500/50 transition-all duration-500 hover:-translate-y-1 shadow-lg"
+              className="group flex flex-col rounded-none overflow-hidden bg-white/[0.04] border border-white/10 hover:border-amber-500/40 hover:bg-white/[0.07] transition-all duration-500 hover:-translate-y-1.5 shadow-lg"
             >
-              {/* Image Container */}
-              <div className="relative aspect-square overflow-hidden bg-neutral-800">
+              {/* Image Preview */}
+              <div className="relative aspect-square overflow-hidden bg-neutral-900">
                 <Image
                   src={spot.image}
                   alt={spot.name}
-                  width={600}
-                  height={600}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Distance Chip */}
-                <div className="absolute top-3.5 right-3.5 bg-black/80 backdrop-blur-md px-3 py-1 rounded-none border border-white/10 text-xs font-bold text-amber-400 flex items-center gap-1.5">
+                <div className="absolute top-3.5 right-3.5 bg-black/80 backdrop-blur-md px-3 py-1 rounded-none border border-white/10 text-xs font-bold text-amber-400 flex items-center gap-1.5 font-mono">
                   <FaMapMarkerAlt className="text-[10px]" />
                   <span>{spot.distance}</span>
                 </div>
 
                 {/* Drive Time Chip */}
-                <div className="absolute bottom-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-none text-[10px] font-semibold text-neutral-900 flex items-center gap-1">
-                  <FaClock className="text-[9px] text-emerald-700" />
+                <div className="absolute bottom-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-none text-[10px] font-semibold text-neutral-900 flex items-center gap-1 font-mono">
+                  <FaClock className="text-[9px] text-amber-700" />
                   <span>{spot.driveTime}</span>
                 </div>
               </div>
 
               {/* Body Content */}
               <div className="flex flex-1 flex-col p-6">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1 font-mono">
                   {spot.type}
                 </span>
 
@@ -156,7 +164,7 @@ export default function PartyCenterNearbyLocationModule() {
                   {spot.name}
                 </h3>
 
-                <p className="mt-3 text-xs sm:text-sm text-neutral-400 leading-relaxed flex-1">
+                <p className="mt-3 text-xs sm:text-sm text-neutral-400 leading-relaxed flex-1 font-light">
                   {spot.description}
                 </p>
 
@@ -166,7 +174,7 @@ export default function PartyCenterNearbyLocationModule() {
                       href={spot.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors font-mono"
                     >
                       <span>Explore Directions</span>
                       <FaExternalLinkAlt className="text-[10px]" />
@@ -174,7 +182,7 @@ export default function PartyCenterNearbyLocationModule() {
                   ) : (
                     <Link
                       href={spot.link}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors font-mono"
                     >
                       <span>Discover Property</span>
                       <span>→</span>

@@ -112,7 +112,7 @@ const nearbySpots: NearbySpot[] = [
     type: "Artisanal Bengali Sweets",
     badge: "In Complex",
     driveTime: "In Complex",
-    image: "/images/our-divisions/express-highway-inn/sampan-mart.jpg",
+    image: "/images/facilities/highway_inn/sweet-shop.jpg",
     description:
       "Authentic traditional mishti, fresh chhana sweets, celebration gift boxes, and travel refreshments.",
     link: "/our-divisions/retail-super-shops/sampan-sweet-box",

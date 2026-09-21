@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import GolfHero from "./components/GolfHero";
+import GolfLocationAndMap from "./components/GolfLocationAndMap";
 import GolfNearbyModule from "./components/GolfNearbyModule";
 
 export const metadata: Metadata = {
@@ -141,6 +142,22 @@ export default function GolfZonePage() {
           </div>
         </div>
       </section>
+
+      {/* Location & Map */}
+      <GolfLocationAndMap
+        title="Golf Zone Locations & Regional Connectivity"
+        subtitle="Conveniently situated along the Padma Bridge expressway corridor and regional leisure complexes, providing direct highway access from Dhaka."
+        projectName="Sampan Golf Zone Complex"
+        address="Dhaka–Khulna Highway & Alfadanga, Faridpur, Bangladesh"
+        gpsCoordinates="23.2605° N, 89.7654° E"
+        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.089219414334!2d89.765406!3d23.260465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ffc915b3e67a43%3A0xc9ccd3be4ea97668!2sSampan%20Highway%20Inn%20Restaurant%20%26%20Party%20Centre!5e0!3m2!1sen!2sbd!4v1788938537834!5m2!1sen!2sbd"
+        landmarks={[
+          { landmark: "Sampan Highway Inn Complex", distance: "Adjacent", driveTime: "1 min" },
+          { landmark: "Bhanga Expressway Interchange", distance: "28 km", driveTime: "20 mins" },
+          { landmark: "Padma Bridge Toll Plaza", distance: "42 km", driveTime: "30 mins" },
+          { landmark: "Dhaka Zero Point", distance: "74 km", driveTime: "65 mins" },
+        ]}
+      />
 
       {/* Nearby Location Module */}
       <GolfNearbyModule

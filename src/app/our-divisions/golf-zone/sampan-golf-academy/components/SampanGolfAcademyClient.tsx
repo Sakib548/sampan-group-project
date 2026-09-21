@@ -13,6 +13,8 @@ import {
   FaCheck,
   FaGraduationCap,
   FaUserFriends,
+  FaDirections,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -381,80 +383,117 @@ export default function SampanGolfAcademyClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {/* Card 1: Physical Address */}
-            <div className="bg-white border border-neutral-300 p-5 sm:p-8 rounded-none shadow-sm space-y-3 sm:space-y-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
-                <FaMapMarkerAlt className="text-base sm:text-lg" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Left Column: Details Cards */}
+            <div className="lg:col-span-6 space-y-4 flex flex-col justify-between">
+              {/* Card 1: Physical Address */}
+              <div className="bg-white border border-neutral-300 p-5 sm:p-6 rounded-none shadow-sm space-y-3">
+                <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
+                  <FaMapMarkerAlt className="text-base" />
+                </div>
+                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
+                  Physical Address
+                </span>
+                <h3 className="text-lg font-bold text-neutral-950">
+                  Alphadanga, Faridpur
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-mono">
+                  Alphadanga-7870, Faridpur District <br />
+                  Dhaka Division, Bangladesh
+                </p>
+                <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
+                  Direct physical address • Alphadanga Regional Hub
+                </p>
               </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Physical Address
-              </span>
-              <h3 className="text-lg sm:text-xl font-bold text-neutral-950">
-                Alphadanga, Faridpur
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-mono">
-                Alphadanga-7870, Faridpur District <br />
-                Dhaka Division, Bangladesh
-              </p>
-              <p className="pt-2 text-[11px] text-neutral-400 font-mono border-t border-neutral-100">
-                Direct physical address • Awaiting Google Maps verification
-              </p>
+
+              {/* Card 2: Contact & Inquiry */}
+              <div className="bg-white border border-neutral-300 p-5 sm:p-6 rounded-none shadow-sm space-y-3">
+                <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
+                  <FaPhoneAlt className="text-sm" />
+                </div>
+                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
+                  Direct Contact
+                </span>
+                <h3 className="text-lg font-bold text-neutral-950">
+                  Inquiries &amp; Information
+                </h3>
+                <div className="space-y-2 pt-1 text-xs sm:text-sm text-neutral-700">
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-xs text-neutral-400">Phone:</span>
+                    <a href="tel:+8801929918408" className="font-mono font-bold text-emerald-700 hover:underline">
+                      +880 1929-918408
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-xs text-neutral-400">Concern:</span>
+                    <span className="font-mono text-xs font-semibold text-neutral-900">
+                      Sampan Group Golf Zone
+                    </span>
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <Link
+                    href="/contact"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 text-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaPhoneAlt className="text-[10px]" />
+                    <span>Call For Inquiry</span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Card 3: Route Notes */}
+              <div className="bg-white border border-neutral-300 p-5 sm:p-6 rounded-none shadow-sm space-y-3">
+                <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
+                  <FaRoute className="text-base" />
+                </div>
+                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
+                  Accessibility
+                </span>
+                <h3 className="text-lg font-bold text-neutral-950">
+                  Padma Bridge Corridor
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                  From Dhaka, travel along the expressway across the Padma Bridge to Bhanga Interchange, then proceed along the regional highway directly to Alphadanga.
+                </p>
+                <div className="pt-2 flex items-center gap-1.5 text-xs text-emerald-700 font-mono font-bold">
+                  <FaCheck className="text-[10px]" />
+                  <span>Paved Road Access</span>
+                </div>
+              </div>
             </div>
 
-            {/* Card 2: Contact & Social */}
-            <div className="bg-white border border-neutral-300 p-5 sm:p-8 rounded-none shadow-sm space-y-3 sm:space-y-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
-                <FaPhoneAlt className="text-sm sm:text-base" />
-              </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Direct Contact
-              </span>
-              <h3 className="text-lg sm:text-xl font-bold text-neutral-950">
-                Inquiries &amp; Information
-              </h3>
-              <div className="space-y-2 sm:space-y-3 pt-1 text-xs sm:text-sm text-neutral-700">
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Phone:</span>
-                  <a href="tel:+8801929918408" className="font-mono font-bold text-emerald-700 hover:underline">
-                    +880 1929-918408
-                  </a>
+            {/* Right Column: Google Maps Embed */}
+            <div className="lg:col-span-6 border border-neutral-300 bg-white p-2 sm:p-3 shadow-sm flex flex-col h-full min-h-[420px] lg:min-h-0">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-3 py-2.5 mb-2 border-b border-neutral-200">
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-700 min-w-0">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse shrink-0" />
+                  <span className="font-bold text-neutral-900 uppercase tracking-wider shrink-0">Map:</span>
+                  <span className="truncate">Alphadanga, Faridpur, Bangladesh</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs text-neutral-400">Concern:</span>
-                  <span className="font-mono text-xs font-semibold text-neutral-900">
-                    Sampan Group Golf Zone
-                  </span>
-                </div>
-              </div>
-              <div className="pt-2">
                 <a
-                  href="tel:+8801929918408"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none bg-emerald-700 hover:bg-emerald-600 text-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  href="https://www.google.com/maps/search/?api=1&query=Alphadanga,+Faridpur,+Bangladesh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-emerald-800 hover:text-emerald-950 transition-colors shrink-0"
                 >
-                  <FaPhoneAlt className="text-[10px]" />
-                  <span>Call For Inquiry</span>
+                  <FaDirections className="text-xs text-emerald-700" />
+                  <span>Get Directions</span>
+                  <FaExternalLinkAlt className="text-[10px]" />
                 </a>
               </div>
-            </div>
 
-            {/* Card 3: Route Notes */}
-            <div className="bg-white border border-neutral-300 p-5 sm:p-8 rounded-none shadow-sm space-y-3 sm:space-y-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 rounded-none">
-                <FaRoute className="text-base sm:text-lg" />
-              </div>
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
-                Accessibility
-              </span>
-              <h3 className="text-lg sm:text-xl font-bold text-neutral-950">
-                Padma Bridge Corridor
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                From Dhaka, travel along the expressway across the Padma Bridge to Bhanga Interchange, then proceed along the regional highway directly to Alphadanga.
-              </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs text-emerald-700 font-mono font-bold">
-                <FaCheck className="text-[10px]" />
-                <span>Paved Road Access</span>
+              <div className="relative w-full flex-1 min-h-[380px] bg-neutral-100 overflow-hidden">
+                <iframe
+                  src="https://maps.google.com/maps?q=Alphadanga+Faridpur+Bangladesh&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sampan Golf Academy Location Map"
+                />
               </div>
             </div>
           </div>
@@ -544,66 +583,8 @@ export default function SampanGolfAcademyClient() {
         </div>
       )}
 
-      {/* ================= 6. FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-4 sm:px-10 lg:px-16 py-10 sm:py-12 text-neutral-600">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mb-8 sm:mb-12">
-            <div className="sm:col-span-2">
-              <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 mb-2 sm:mb-3">
-                Sampan Golf Academy
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                Dedicated golf instruction and practice greens in Alphadanga, Faridpur. Encouraging newcomers, young talent, and experienced players to enjoy the game of golf.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-3 sm:mb-4">
-                Quick Navigation
-              </h4>
-              <ul className="space-y-2 text-xs font-mono">
-                <li>
-                  <Link href="#overview" className="hover:text-emerald-700 transition-colors">
-                    Academy Overview
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#gallery" className="hover:text-emerald-700 transition-colors">
-                    Photo Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#location" className="hover:text-emerald-700 transition-colors">
-                    Location &amp; Address
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-3 sm:mb-4">
-                Contact
-              </h4>
-              <ul className="space-y-2 text-xs text-neutral-500 font-mono">
-                <li>Alphadanga-7870</li>
-                <li>Faridpur, Bangladesh</li>
-                <li>+880 1929-918408</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-6 sm:pt-8 border-t border-neutral-200 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs text-neutral-500 font-mono text-center sm:text-left">
-            <p>
-              © {new Date().getFullYear()} Sampan Golf Academy. A Sampan Group Venture.
-            </p>
-            <div className="flex gap-4 sm:gap-6">
-              <Link href="#" className="hover:text-emerald-700 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:text-emerald-700 transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+
+
 
     </main>
   );

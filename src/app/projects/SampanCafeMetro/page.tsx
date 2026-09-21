@@ -32,11 +32,26 @@ function Arrow() {
   );
 }
 
-export default function SampanCafeMetroFeature() {
+export interface SampanCafeMetroFeatureProps {
+  id?: string;
+  badge?: string;
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+}
+
+export default function SampanCafeMetroFeature({
+  id,
+  badge,
+  eyebrow = "Our New-Generation Automotive Destination",
+  title = "Sampan Cafe Metro",
+  subtitle = "A modern automotive lifestyle destination featuring a contemporary car showroom, café, swimming pool, gym, and professional car-wash experience, all under one roof.",
+}: SampanCafeMetroFeatureProps = {}) {
   const layout = getCafeMetroLayout();
 
   return (
     <section
+      id={id}
       className={`relative left-1/2 isolate w-[100dvw] max-w-none -translate-x-1/2 overflow-hidden bg-[#071b13] text-white ${layout.mobileHeightClass} ${layout.desktopHeightClass}`}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_24%,rgba(168,223,115,0.18),transparent_30%),linear-gradient(135deg,#071b13,#123c2b)]" />
@@ -72,18 +87,23 @@ export default function SampanCafeMetroFeature() {
           <div
             className={`${layout.contentFlowClass} max-w-[52rem] py-14 lg:py-10`}
           >
+            {badge && (
+              <div className="mb-4 inline-flex items-center gap-2 rounded-none bg-[#a8df73]/15 border border-[#a8df73]/40 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[#a8df73] shadow-sm backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-[#a8df73] animate-pulse" />
+                <span>{badge}</span>
+              </div>
+            )}
+
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.32em] text-[#a8df73]">
-              Our New-Generation Automotive Destination
+              {eyebrow}
             </p>
 
-            <h2 className="max-w-[10ch] text-[clamp(3rem,5vw,5.75rem)] font-medium leading-[0.79] tracking-[-0.072em]">
-              Sampan Cafe Metro
+            <h2 className="max-w-[12ch] text-[clamp(3rem,5vw,5.75rem)] font-medium leading-[0.79] tracking-[-0.072em]">
+              {title}
             </h2>
 
             <p className="mt-7 max-w-xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
-              A modern automotive lifestyle destination featuring a contemporary
-              car showroom, café, swimming pool, gym, and professional car-wash
-              experience, all under one roof.
+              {subtitle}
             </p>
 
             <Link

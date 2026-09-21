@@ -57,7 +57,7 @@ export default function HeroOverview({ onOpenBooking }: { onOpenBooking?: () => 
 
           {/* Tagline & Subheading */}
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-emerald-400/80 pl-4">
-            24/7 gourmet dining, restful luxury suites, and highway hospitality on the Dhaka–Khulna corridor (KM 103).
+            24/7 gourmet dining, restful luxury suites, and highway hospitality on the Dhaka–Khulna corridor,Kashiani (KM 103).
           </p>
 
           {/* Square Quick Action CTAs */}

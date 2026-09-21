@@ -1271,7 +1271,7 @@ export default function ExpressHighwayInnPage() {
       )}
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
+      {/* <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
         <div className="mx-auto max-w-[1440px]">
           <div className="grid gap-12 md:grid-cols-4 mb-12">
             <div className="md:col-span-2">
@@ -1294,11 +1294,11 @@ export default function ExpressHighwayInnPage() {
                     Facilities Gallery
                   </Link>
                 </li>
-                {/* <li>
+                <li>
                   <Link href="#waitlist" className="hover:text-[#3298cb] transition-colors">
                     Join Waitlist
                   </Link>
-                </li> */}
+                </li> 
                 <li>
                   <Link href="#location" className="hover:text-[#3298cb] transition-colors">
                     Location
@@ -1329,7 +1329,7 @@ export default function ExpressHighwayInnPage() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
     </main>
   );

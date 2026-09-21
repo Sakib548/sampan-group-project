@@ -84,13 +84,13 @@ export default function LocationAndMap() {
                 <span>Open Google Navigation</span>
               </a>
 
-              <a
+              {/* <a
                 href="tel:+8801929918408"
                 className="inline-flex items-center gap-2 rounded-none border border-neutral-300 bg-white hover:bg-neutral-100 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-neutral-800 transition-colors"
               >
                 <FaPhoneAlt className="text-[#ca8a04] text-xs" />
                 <span>Route Concierge</span>
-              </a>
+              </a> */}
             </div>
 
           </div>

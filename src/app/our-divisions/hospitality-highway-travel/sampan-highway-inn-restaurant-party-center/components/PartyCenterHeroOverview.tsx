@@ -46,7 +46,7 @@ export default function PartyCenterHeroOverview({ onOpenBooking }: HeroOverviewP
 
           {/* Subtitle / Tagline */}
           <p className="text-xs sm:text-sm text-amber-100/90 leading-relaxed max-w-xl font-light tracking-wide border-l-2 border-amber-400/80 pl-4">
-            Premier central air-conditioned banquet halls for 500+ guests, gourmet feasts, and culinary dining on the Dhaka–Khulna Highway corridor (KM 103).
+            Premier central air-conditioned banquet halls for 500+ guests, gourmet feasts, and culinary dining on the Dhaka–Khulna Highway corridor,Kashiani (KM 103).
           </p>
 
           {/* CTAs */}

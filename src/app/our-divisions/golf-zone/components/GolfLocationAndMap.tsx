@@ -24,10 +24,10 @@ export default function GolfLocationAndMap({
   landmarks,
 }: GolfLocationAndMapProps) {
   return (
-    <section className="py-20 px-6 sm:px-12 lg:px-20 bg-[#091e15] text-white">
+    <section id="location" className="py-20 px-6 sm:px-12 lg:px-20 bg-[#091e15] text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-300 bg-emerald-950 px-3.5 py-1 rounded-full border border-emerald-800">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-300 bg-emerald-950 px-3.5 py-1 rounded-none border border-emerald-800">
             Location + Map
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mt-4 text-white">
@@ -40,7 +40,7 @@ export default function GolfLocationAndMap({
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Map Info Box */}
-          <div className="lg:col-span-5 bg-emerald-950/60 border border-emerald-800/40 rounded-3xl p-8 flex flex-col justify-between">
+          <div className="lg:col-span-5 bg-emerald-950/60 border border-emerald-800/40 rounded-none p-6 sm:p-8 flex flex-col justify-between">
             <div className="space-y-6">
               <div>
                 <span className="text-xs font-semibold text-amber-400 uppercase tracking-widest">
@@ -54,7 +54,7 @@ export default function GolfLocationAndMap({
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-emerald-900/40 border border-emerald-700/30">
+              <div className="p-4 rounded-none bg-emerald-900/40 border border-emerald-700/30">
                 <span className="text-xs text-emerald-300 font-semibold block">
                   GPS Coordinates
                 </span>
@@ -71,7 +71,7 @@ export default function GolfLocationAndMap({
                   {landmarks.map((lm, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center justify-between p-3 rounded-xl bg-emerald-900/20 border border-emerald-800/30 text-xs"
+                      className="flex items-center justify-between p-3 rounded-none bg-emerald-900/20 border border-emerald-800/30 text-xs"
                     >
                       <span className="font-medium text-emerald-100">{lm.landmark}</span>
                       <div className="text-right">
@@ -98,7 +98,7 @@ export default function GolfLocationAndMap({
           </div>
 
           {/* Embedded Google Map iframe */}
-          <div className="lg:col-span-7 relative min-h-[400px] rounded-3xl overflow-hidden border border-emerald-800/40 shadow-2xl">
+          <div className="lg:col-span-7 relative min-h-[400px] rounded-none overflow-hidden border border-emerald-800/40 shadow-2xl">
             <iframe
               src={embedMapUrl}
               width="100%"
