@@ -39,6 +39,8 @@ import {
   FaIdCard,
   FaAward,
   FaCertificate,
+  FaDirections,
+  FaCompass,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -1031,122 +1033,172 @@ export default function SampanAgroGolfResortClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
 
-            {/* Site Location Card */}
-            <div className="border border-neutral-200 bg-white p-8 sm:p-10 shadow-sm relative group hover:border-emerald-600 transition-colors">
-              <div className="absolute top-0 left-0 h-[3px] w-full bg-emerald-600" />
+            {/* Left Column: Location & Office Cards */}
+            <div className="flex flex-col gap-6 justify-between">
+              {/* Site Location Card */}
+              <div className="border border-neutral-200 bg-white p-7 sm:p-8 shadow-sm relative group hover:border-emerald-600 transition-colors">
+                <div className="absolute top-0 left-0 h-[3px] w-full bg-emerald-600" />
 
-              <div className="flex items-center gap-3 mb-4 text-emerald-700">
-                <FaMapMarkerAlt className="text-2xl" />
-                <span className="font-mono text-xs font-bold uppercase tracking-widest text-emerald-800">
-                  Project Site Location
-                </span>
+                <div className="flex items-center gap-3 mb-4 text-emerald-700">
+                  <FaMapMarkerAlt className="text-xl" />
+                  <span className="font-mono text-xs font-bold uppercase tracking-widest text-emerald-800">
+                    Project Site Location
+                  </span>
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-950">
+                  Podunapur, Moulvibazar Sadar
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 mt-1">
+                  Moulvibazar District, Sylhet Division — Bangladesh
+                </p>
+
+                <div className="mt-5 pt-5 border-t border-neutral-100 space-y-2.5 font-mono text-xs text-neutral-700">
+                  <div className="flex items-center justify-between">
+                    <span className="text-neutral-500">Landscape:</span>
+                    <span className="font-semibold">100 Acres Rolling Terrain</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-neutral-500">Region:</span>
+                    <span className="font-semibold">Greater Tea Capital Corridor</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-neutral-500">Access:</span>
+                    <span className="font-semibold">Direct Paved Regional Highway</span>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-5 border-t border-neutral-100 flex flex-wrap gap-3">
+                  <a
+                    href="tel:+8801906-896326"
+                    className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 px-3.5 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-100 transition-colors"
+                  >
+                    <FaPhoneAlt className="text-xs" />
+                    <span>+880 1906-896326</span>
+                  </a>
+                  <a
+                    href="tel:+8801906896326"
+                    className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 px-3.5 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-100 transition-colors"
+                  >
+                    <FaPhoneAlt className="text-xs" />
+                    <span>+880 1906-896 326</span>
+                  </a>
+                </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-neutral-950">
-                Podunapur, Moulvibazar Sadar
-              </h3>
-              <p className="text-sm text-neutral-600 mt-1">
-                Moulvibazar District, Sylhet Division — Bangladesh
-              </p>
+              {/* Corporate Head Office Card */}
+              <div className="border border-neutral-200 bg-white p-7 sm:p-8 shadow-sm relative group hover:border-emerald-600 transition-colors">
+                <div className="absolute top-0 left-0 h-[3px] w-full bg-[#183b2b]" />
 
-              <div className="mt-6 pt-6 border-t border-neutral-100 space-y-3 font-mono text-xs text-neutral-700">
-                <div className="flex items-center justify-between">
-                  <span className="text-neutral-500">Landscape:</span>
-                  <span className="font-semibold">100 Acres Rolling Green Terrain</span>
+                <div className="flex items-center gap-3 mb-4 text-[#183b2b]">
+                  <FaStore className="text-xl" />
+                  <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#183b2b]">
+                    Corporate Head Office
+                  </span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-neutral-500">Region:</span>
-                  <span className="font-semibold">Greater Tea Capital Corridor</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-neutral-500">Environment:</span>
-                  <span className="font-semibold">Zero-Pollution Eco Sanctuary</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-neutral-500">Access:</span>
-                  <span className="font-semibold">Direct Paved Regional Highway</span>
-                </div>
-              </div>
 
-              <div className="mt-8 pt-6 border-t border-neutral-100 flex flex-wrap gap-4">
-                <a
-                  href="tel:+8801906-896326"
-                  className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-100 transition-colors"
-                >
-                  <FaPhoneAlt className="text-xs" />
-                  <span>+880 1906-896326</span>
-                </a>
-                <a
-                  href="tel:+8801906896326"
-                  className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-100 transition-colors"
-                >
-                  <FaPhoneAlt className="text-xs" />
-                  <span>+880 1906-896 326</span>
-                </a>
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-950">
+                  Sampan 21st Century
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 mt-1">
+                  House-284, Block-B, Road-1/A, Bashundhara R/A, Dhaka, Bangladesh.
+                </p>
+
+                <div className="mt-5 pt-5 border-t border-neutral-100 space-y-2.5 font-mono text-xs text-neutral-700">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <span className="text-neutral-500">Official Facebook:</span>
+                    <a
+                      href="https://www.facebook.com/sampangolfresort/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-[#1877F2] hover:underline flex items-center gap-1.5 break-all"
+                    >
+                      <FaFacebookF className="text-xs shrink-0" />
+                      <span>facebook.com/sampangolfresort</span>
+                      <FaExternalLinkAlt className="text-[9px] shrink-0" />
+                    </a>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <span className="text-neutral-500">Corporate Email:</span>
+                    <a
+                      href="mailto:contact@sampangolfresort.com"
+                      className="font-bold text-emerald-700 hover:underline break-all"
+                    >
+                      contact@sampangolfresort.com
+                    </a>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <span className="text-neutral-500">Office Hours:</span>
+                    <span className="font-semibold">Sat – Thu (9AM – 6PM)</span>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-5 border-t border-neutral-100">
+                  <button
+                    onClick={() => scrollTo("inquiry")}
+                    className="w-full inline-flex items-center justify-center gap-2 bg-[#183b2b] hover:bg-emerald-800 text-white py-3 px-5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  >
+                    <FaCalendarCheck />
+                    <span>Request Guided Site Visit / Allotment</span>
+                  </button>
+                </div>
               </div>
             </div>
 
-            {/* Corporate Head Office Card */}
-            <div className="border border-neutral-200 bg-white p-8 sm:p-10 shadow-sm relative group hover:border-emerald-600 transition-colors">
-              <div className="absolute top-0 left-0 h-[3px] w-full bg-[#183b2b]" />
-
-              <div className="flex items-center gap-3 mb-4 text-[#183b2b]">
-                <FaStore className="text-2xl" />
-                <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#183b2b]">
-                  Corporate Head Office
-                </span>
-              </div>
-
-              <h3 className="text-2xl font-bold text-neutral-950">
-                Sampan 21st Century
-              </h3>
-              <p className="text-sm text-neutral-600 mt-1">
-                House-284, Block-B, Road-1/A, Bashundhara R/A, Dhaka, Bangladesh.
-              </p>
-
-              <div className="mt-6 pt-6 border-t border-neutral-100 space-y-3 font-mono text-xs text-neutral-700">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <span className="text-neutral-500">Official Facebook:</span>
-                  <a
-                    href="https://www.facebook.com/sampangolfresort/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-[#1877F2] hover:underline flex items-center gap-1.5 break-all"
-                  >
-                    <FaFacebookF className="text-xs shrink-0" />
-                    <span>facebook.com/sampangolfresort</span>
-                    <FaExternalLinkAlt className="text-[9px] shrink-0" />
-                  </a>
+            {/* Right Column: 50% Interactive Google Map */}
+            <div className="border border-neutral-200 bg-white shadow-sm flex flex-col h-full min-h-[480px] lg:min-h-0 overflow-hidden">
+              <div className="p-4 sm:p-5 bg-[#091a11] text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-emerald-900/50">
+                <div className="flex items-center gap-2.5">
+                  <span className="flex h-2.5 w-2.5 relative shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                  </span>
+                  <div>
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-emerald-400 block">
+                      Interactive Route &amp; Satellite
+                    </span>
+                    <p className="text-xs sm:text-sm font-bold text-white">
+                      Sampan Agro &amp; Golf Resort — Moulvibazar
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <span className="text-neutral-500">Corporate Email:</span>
-                  <a
-                    href="mailto:contact@sampangolfresort.com"
-                    className="font-bold text-emerald-700 hover:underline break-all"
-                  >
-                    contact@sampangolfresort.com
-                  </a>
-                </div>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <span className="text-neutral-500">Investor Service:</span>
-                  <span className="font-semibold">Saturday – Thursday (9AM – 6PM)</span>
-                </div>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <span className="text-neutral-500">Site Visit:</span>
-                  <span className="font-semibold">Guided Inspection by Appointment</span>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-neutral-100">
-                <button
-                  onClick={() => scrollTo("inquiry")}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#183b2b] hover:bg-emerald-800 text-white py-3.5 px-6 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                <a
+                  href="https://maps.google.com/?q=Podunapur+Moulvibazar+Sylhet+Bangladesh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-sm shrink-0"
                 >
-                  <FaCalendarCheck />
-                  <span>Request Guided Site Visit / Allotment</span>
-                </button>
+                  <FaDirections className="text-xs" />
+                  <span>Get Directions</span>
+                  <FaExternalLinkAlt className="text-[9px]" />
+                </a>
+              </div>
+
+              <div className="relative w-full flex-1 min-h-[380px] bg-neutral-100">
+                <iframe
+                  title="Sampan Agro & Golf Resort Map"
+                  src="https://maps.google.com/maps?q=Podunapur+Moulvibazar+Sylhet+Bangladesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full filter saturate-[0.95]"
+                />
+              </div>
+
+              <div className="p-4 bg-[#f8faf6] border-t border-neutral-200 grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-mono text-[11px] text-neutral-700">
+                <div className="flex items-center gap-2">
+                  <FaCompass className="text-emerald-700 text-xs shrink-0" />
+                  <span><strong className="text-neutral-900">GPS:</strong> 24.4829° N, 91.7774° E</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaCar className="text-emerald-700 text-xs shrink-0" />
+                  <span><strong className="text-neutral-900">Corridor:</strong> Dhaka–Sylhet Highway</span>
+                </div>
               </div>
             </div>
 

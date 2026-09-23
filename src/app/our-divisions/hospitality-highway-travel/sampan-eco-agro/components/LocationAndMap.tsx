@@ -37,18 +37,18 @@ export default function LocationAndMap() {
               <div>
                 <h3 className="text-xl font-bold text-[#173326]">Sampan Eco &amp; Agro Resort</h3>
                 <p className="text-xs text-[#173326]/75 mt-1 leading-relaxed">
-                  Dhaka–Mawa Expressway Corridor Exit, Munshiganj / Gazipur Eco Belt, Bangladesh.
+                  Joydebpur, Boroga, Borice, Alphadanga-7870, Faridpur, Bangladesh.
                 </p>
               </div>
 
               <div className="p-4 bg-[#f4f1e8] border border-[#173326]/15 font-mono text-xs space-y-2">
                 <div className="flex justify-between text-[#173326]/75">
                   <span>GPS Coordinates:</span>
-                  <span className="text-[#2f6b45] font-bold">23.5412° N, 90.3289° E</span>
+                  <span className="text-[#2f6b45] font-bold">23.23° N, 89.70° E</span>
                 </div>
                 <div className="flex justify-between text-[#173326]/75">
                   <span>Highway Access:</span>
-                  <span className="text-[#173326] font-bold">Direct Deceleration Slip Road</span>
+                  <span className="text-[#173326] font-bold">Dhaka-Mawa Expressway &amp; Padma Bridge</span>
                 </div>
               </div>
 
@@ -61,31 +61,31 @@ export default function LocationAndMap() {
                 <div className="flex items-center justify-between text-xs py-1.5 border-b border-[#173326]/10">
                   <div className="flex items-center gap-2 text-[#173326]/75">
                     <FaClock className="text-[#2f6b45]" />
-                    <span>Dhaka City Center (Zero Point)</span>
+                    <span>Dhaka City Center (Jatrabari / Postogola)</span>
                   </div>
-                  <span className="font-mono font-bold text-[#173326]">35 Mins (32 km)</span>
+                  <span className="font-mono font-bold text-[#173326]">~2 Hours</span>
                 </div>
 
                 <div className="flex items-center justify-between text-xs py-1.5 border-b border-[#173326]/10">
                   <div className="flex items-center gap-2 text-[#173326]/75">
                     <FaCompass className="text-[#2f6b45]" />
-                    <span>Padma Bridge Toll Plaza</span>
+                    <span>Padma Bridge</span>
                   </div>
-                  <span className="font-mono font-bold text-[#173326]">20 Mins (18 km)</span>
+                  <span className="font-mono font-bold text-[#173326]">45 Mins</span>
                 </div>
 
                 <div className="flex items-center justify-between text-xs py-1.5">
                   <div className="flex items-center gap-2 text-[#173326]/75">
                     <FaDirections className="text-[#2f6b45]" />
-                    <span>Nimtoli Expressway Exit</span>
+                    <span>Bhanga Expressway Interchange</span>
                   </div>
-                  <span className="font-mono font-bold text-[#173326]">10 Mins (8 km)</span>
+                  <span className="font-mono font-bold text-[#173326]">35 Mins</span>
                 </div>
               </div>
 
               {/* Directions Button */}
               <a
-                href="https://maps.google.com/?q=23.5412,90.3289"
+                href="https://www.google.com/maps/search/?api=1&query=Joydebpur,+Boroga,+Borice,+Alphadanga,+Faridpur,+Bangladesh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-3 bg-[#173326] hover:bg-[#2f6b45] py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 shadow-md"
@@ -102,14 +102,14 @@ export default function LocationAndMap() {
                 <FaCheck className="text-[#2f6b45] mt-0.5 shrink-0" />
                 <div>
                   <p className="font-bold text-[#173326]">Secure Gated Parking</p>
-                  <p className="text-[11px] text-[#173326]/60 mt-0.5">200+ car &amp; bus bays</p>
+                  <p className="text-[11px] text-[#173326]/60 mt-0.5">100+ car &amp; bus bays</p>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
                 <FaCheck className="text-[#2f6b45] mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-bold text-[#173326]">EV Charging Ready</p>
-                  <p className="text-[11px] text-[#173326]/60 mt-0.5">Dual 120kW fast chargers</p>
+                  <p className="font-bold text-[#173326]">Concierge Support</p>
+                  <p className="text-[11px] text-[#173326]/60 mt-0.5">Route &amp; arrival assistance</p>
                 </div>
               </div>
             </div>
@@ -119,13 +119,13 @@ export default function LocationAndMap() {
           <div className="lg:col-span-7 border border-[#173326]/20 bg-[#10251b] relative min-h-[420px] overflow-hidden shadow-sm">
             <iframe
               title="Sampan Eco & Agro Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14618.361907689943!2d90.3289!3d23.5412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzI4LjMiTiA5MMKwMTknNDQuMCJF!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+              src="https://maps.google.com/maps?q=Joydebpur+Alphadanga+Faridpur+Bangladesh&t=&z=14&ie=UTF8&iwloc=&output=embed"
               className="w-full h-full min-h-[480px] border-0 filter saturate-90 brightness-90 grayscale-[20%]"
               loading="lazy"
               allowFullScreen
             />
             <div className="absolute bottom-4 right-4 bg-[#0c1c14]/90 border border-white/20 p-3 font-mono text-[11px] text-white backdrop-blur-md">
-              <span className="text-[#b9e583] font-bold">Live GPS Stream:</span> Munshiganj Expressway Green Zone
+              <span className="text-[#b9e583] font-bold">Live GPS:</span> Alphadanga, Faridpur Eco Belt
             </div>
           </div>
 

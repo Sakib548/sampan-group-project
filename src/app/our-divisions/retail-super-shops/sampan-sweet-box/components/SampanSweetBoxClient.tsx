@@ -9,12 +9,20 @@ import {
   FaTimes,
   FaExpand,
   FaPhoneAlt,
+  FaFacebookF,
+  FaDirections,
   FaExternalLinkAlt,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
-const heroBackground = "/images/our-divisions/sampan-sweet-box/DSC00468.JPG";
+const highwayInnFacebookUrl = "https://www.facebook.com/sampanhighwayinn/";
+const highwayInnDirectionsUrl =
+  "https://www.google.com/maps/dir/?api=1&destination=Sampan+Highway+Inn+Restaurant+%26+Party+Centre";
+const highwayInnMapEmbed =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.089219414334!2d89.765406!3d23.260465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ffc915b3e67a43%3A0xc9ccd3be4ea97668!2sSampan%20Highway%20Inn%20Restaurant%20%26%20Party%20Centre!5e0!3m2!1sen!2sbd!4v1788938537834!5m2!1sen!2sbd";
 
+const heroBackground = "/images/our-divisions/sampan-sweet-box/DSC00468.JPG";
+// const heroBackground = "/images/our-divisions/sampan-highway-inn/sweet-shop.JPG";
 // Photo Gallery Items (no sweet names, pure visual showcase from folder)
 const galleryItems = [
   { id: "g-1", src: "/images/our-divisions/sampan-sweet-box/DSC00468.JPG" },
@@ -35,88 +43,94 @@ const galleryItems = [
   { id: "g-16", src: "/images/our-divisions/sampan-sweet-box/Gemini_Generated_Image_3kfk583kfk583kfk.jpg" },
 ];
 
-// Nearby Spots (Same structure as Sampan Highway Inn)
+// Nearby Spots (Same as Sampan Mart / Highway Inn, NO meters/km)
 interface NearbySpot {
   id: string;
   name: string;
   type: string;
-  distance: string;
+  badge: string;
   driveTime: string;
   image: string;
   description: string;
   link: string;
-  external?: boolean;
 }
 
 const nearbySpots: NearbySpot[] = [
   {
     id: "highway-inn",
     name: "Sampan Highway Inn",
-    type: "Hospitality & Leisure",
-    distance: "Adjacent (50 m)",
-    driveTime: "1 min walk",
+    type: "Hospitality & Dining",
+    badge: "Adjacent / In Complex",
+    driveTime: "Short Walk",
     image: "/images/our-divisions/sampan-highway-inn/hero.jpeg",
-    description: "Flagship highway hotel, multi-cuisine restaurant, and 24/7 passenger transit rest stop.",
+    description:
+      "Flagship highway hotel, multi-cuisine dining hall, prayer facilities, and 24/7 traveler rest stop.",
     link: "/our-divisions/hospitality-highway-travel/sampan-highway-inn",
-  },
-  {
-    id: "filling-station",
-    name: "Sampan Filling Station",
-    type: "Automotive & Fuel",
-    distance: "100 m",
-    driveTime: "1 min walk",
-    image: "/images/our-divisions/sampan-filling-station/hero.jpeg",
-    description: "24/7 high-volume highway refuel, octane & diesel station with dedicated heavy vehicle bays.",
-    link: "/our-divisions/automotive-fuel-mobility/sampan-filling-station",
-  },
-  {
-    id: "lpg-station",
-    name: "Sampan LPG Station",
-    type: "Clean Mobility & Fuel",
-    distance: "150 m",
-    driveTime: "2 min walk",
-    image: "/images/our-divisions/lpg-filling-station/hero.jpeg",
-    description: "State-of-the-art LPG autogas conversion and rapid dispenser refueling station.",
-    link: "/our-divisions/automotive-fuel-mobility/sampan-lpg-filling-station",
   },
   {
     id: "sampan-mart",
     name: "Sampan Mart",
     type: "Retail Super Shop",
-    distance: "50 m",
+    badge: "In Complex",
     driveTime: "In Complex",
     image: "/images/facilities/express_highway_inn/4.Sampan-Mart.png",
-    description: "24/7 highway retail super shop stocked with travel essentials, groceries, and fresh snacks.",
+    description:
+      "24/7 highway retail super shop stocked with travel essentials, groceries, and fresh snacks.",
     link: "/our-divisions/retail-super-shops/sampan-mart",
   },
   {
     id: "mini-sampan",
     name: "Mini Sampan Super Shop",
     type: "Express Convenience",
-    distance: "50 m",
+    badge: "In Complex",
     driveTime: "In Complex",
     image: "/images/our-divisions/mini-sampan-super-shop/Web-Banner-new.jpg",
-    description: "Quick-stop express retail kiosk for instant refreshments and travel accessories.",
+    description:
+      "Quick-stop express retail kiosk for instant refreshments and travel accessories.",
     link: "/our-divisions/retail-super-shops/mini-sampan-super-shop",
+  },
+  {
+    id: "filling-station",
+    name: "Sampan Filling Station",
+    type: "Automotive & Fuel",
+    badge: "Highway Complex",
+    driveTime: "Nearby Fuel Bay",
+    image: "/images/our-divisions/sampan-filling-station/hero.jpeg",
+    description:
+      "24/7 high-volume highway refuel, octane and diesel dispensers with dedicated heavy vehicle bays.",
+    link: "/our-divisions/automotive-fuel-mobility/sampan-filling-station",
+  },
+  {
+    id: "lpg-station",
+    name: "Sampan LPG Station",
+    type: "Clean Mobility & Fuel",
+    badge: "Highway Complex",
+    driveTime: "Clean Mobility",
+    image: "/images/our-divisions/lpg-filling-station/hero.jpeg",
+    description:
+      "Rapid dispenser LPG autogas refueling station for modern eco-friendly and clean vehicles.",
+    link: "/our-divisions/automotive-fuel-mobility/sampan-lpg-filling-station",
   },
   {
     id: "white-house",
     name: "Sampan White House & Motel",
     type: "Transit Accommodation",
-    distance: "1.2 km",
-    driveTime: "2 min drive",
+    badge: "Transit Stop",
+    driveTime: "Short Drive",
     image: "/images/projects/Sampan-White-House-&-Motel.png",
-    description: "A sister hospitality property providing flexible hourly stays, quiet rooms, and private parking.",
+    description:
+      "Sister hospitality property providing comfortable private rooms, quiet overnight rest, and secured parking.",
     link: "/our-divisions/hospitality-highway-travel/sampan-white-house",
   },
   {
     id: "short-drive-range",
-    name: "Sampan Short Drive Range (Coming Soon)",
+    name: "Sampan Short Drive Range",
     type: "Golf & Recreation",
-    distance: "Adjacent",
+    badge: "Adjacent",
     driveTime: "Coming Soon",
     image: "/images/featuredConcerns/sampan-agro-golf-resort.png",
-    description: "Upcoming precision short-game golf practice range and driving bays for golf enthusiasts and highway visitors.",
+    description:
+      "Upcoming short-game golf practice range and driving bays for golf enthusiasts and highway visitors.",
     link: "/our-divisions/golf-zone/sampan-short-drive-range",
   },
 ];
@@ -195,11 +209,13 @@ export default function SampanSweetBoxClient() {
               </button>
 
               <a
-                href="tel:+8801700000000"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-amber-300 transition-all duration-300 text-center"
+                href={highwayInnFacebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-none border border-amber-500/40 bg-amber-900/30 hover:bg-amber-800/60 hover:border-amber-400 px-7 py-3.5 sm:px-8 sm:py-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-amber-300 hover:text-white transition-all duration-300 backdrop-blur-sm cursor-pointer text-center"
               >
-                <FaPhoneAlt className="text-xs" />
-                <span>Contact Outlet</span>
+                <FaFacebookF className="text-xs text-amber-400" />
+                <span>Facebook Page</span>
               </a>
             </div>
 
@@ -285,93 +301,74 @@ export default function SampanSweetBoxClient() {
       </section>
 
 
-      {/* ================= 3. NEARBY SECTION (SAME AS SAMPAN HIGHWAY INN) ================= */}
-      <section id="nearby" className="bg-[#0b100d] py-24 sm:py-32 text-white border-t border-white/10 relative overflow-hidden">
-        <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
+      {/* ================= 3. NEARBY SISTER CONCERNS (NO METERS/KM) ================= */}
+      <section id="nearby" className="py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#0f0c08] text-white border-b border-white/10 relative overflow-hidden">
+        <div className="mx-auto max-w-[1440px]">
 
-          {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="h-px w-10 bg-amber-500" />
-                <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-400 font-mono">
-                  Regional Surroundings
-                </p>
+              <div className="flex items-center gap-4 mb-4">
+                <span className="h-px w-10 bg-amber-400" />
+                <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.4em] text-amber-400">
+                  03 • Highway Complex Assets
+                </span>
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-                Nearby attractions &amp; <br />
-                <span className="text-amber-400">Sampan destinations.</span>
+              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+                Nearby at this location. <br />
+                <span className="text-amber-400">Highway Inn Complex.</span>
               </h2>
             </div>
-            <p className="max-w-md text-sm sm:text-base text-neutral-400 leading-relaxed font-normal">
-              Located right within the Sampan Highway Complex, explore our sister hotel, 24/7 fuel stations, super shops, and leisure developments just footsteps away.
+            <p className="max-w-md text-xs sm:text-sm text-neutral-400 leading-relaxed">
+              Situated in the Sampan Highway Inn complex alongside complementary dining, fueling, lodging, and leisure facilities.
             </p>
           </div>
 
-          {/* Nearby Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Nearby Cards Grid (Square Cards, matching Sampan Mart) */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {nearbySpots.map((spot) => (
               <article
                 key={spot.id}
-                className="group flex flex-col rounded-3xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-amber-500/40 hover:bg-white/[0.07] transition-all duration-500 hover:-translate-y-1.5 shadow-lg"
+                className="group relative flex flex-col h-full rounded-none overflow-hidden bg-[#16120b] border border-white/10 hover:border-amber-500/60 transition-all duration-300"
               >
-                {/* Image Preview */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-neutral-900">
+                <div className="relative h-52 w-full overflow-hidden bg-neutral-900 shrink-0">
                   <Image
                     src={spot.image}
                     alt={spot.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#16120b] via-transparent to-black/30" />
 
-                  {/* Distance Chip */}
-                  <div className="absolute top-3.5 right-3.5 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-xs font-bold text-amber-400 flex items-center gap-1.5 font-mono">
-                    <FaMapMarkerAlt className="text-[10px]" />
-                    <span>{spot.distance}</span>
-                  </div>
-
-                  {/* Drive Time Chip */}
-                  <div className="absolute bottom-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-neutral-900 flex items-center gap-1 font-mono">
-                    <FaClock className="text-[9px] text-amber-700" />
-                    <span>{spot.driveTime}</span>
+                  {/* Badge WITHOUT meters/km */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="inline-flex items-center rounded-none bg-black/80 backdrop-blur-md px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-amber-400 border border-amber-500/30">
+                      {spot.badge}
+                    </span>
                   </div>
                 </div>
 
-                {/* Body Content */}
-                <div className="flex flex-1 flex-col p-6">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1 font-mono">
-                    {spot.type}
-                  </span>
-
-                  <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                    {spot.name}
-                  </h3>
-
-                  <p className="mt-3 text-xs sm:text-sm text-neutral-400 leading-relaxed flex-1 font-normal">
-                    {spot.description}
-                  </p>
+                <div className="p-6 flex flex-col flex-1 justify-between">
+                  <div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-400 block mb-1">
+                      {spot.type}
+                    </span>
+                    <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
+                      {spot.name}
+                    </h3>
+                    <p className="mt-2 text-xs text-neutral-400 leading-relaxed">
+                      {spot.description}
+                    </p>
+                  </div>
 
                   <div className="mt-6 pt-4 border-t border-white/10">
-                    {spot.external ? (
-                      <a
-                        href={spot.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors font-mono"
-                      >
-                        <span>Explore Directions</span>
-                        <FaExternalLinkAlt className="text-[10px]" />
-                      </a>
-                    ) : (
-                      <Link
-                        href={spot.link}
-                        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors font-mono"
-                      >
-                        <span>Discover Property</span>
-                        <span>→</span>
-                      </Link>
-                    )}
+                    <Link
+                      href={spot.link}
+                      className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors"
+                    >
+                      <span>Explore Division</span>
+                      <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -382,7 +379,149 @@ export default function SampanSweetBoxClient() {
       </section>
 
 
-      {/* ================= 4. FULLSCREEN LIGHTBOX MODAL ================= */}
+      {/* ================= 4. LOCATION & MAP (MATCHING SAMPAN MART / HIGHWAY INN) ================= */}
+      <section id="location" className="scroll-mt-20 py-24 sm:py-28 px-6 sm:px-10 lg:px-16 bg-[#f7f5f0] text-[#1a1714] border-b border-neutral-200">
+        <div className="mx-auto max-w-[1440px]">
+
+          <div className="max-w-3xl mb-14">
+            <div className="inline-flex items-center gap-2 border border-amber-600/40 bg-amber-600/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-amber-800 mb-4 rounded-none">
+              <FaMapMarkerAlt className="text-xs text-amber-700" />
+              <span>Location &amp; Route Access</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-950 leading-tight">
+              Visit Sampan Sweet Box &amp; Highway Inn
+            </h2>
+            <p className="mt-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
+              Situated directly within the Sampan Highway Inn Complex on the Dhaka–Khulna Highway, open with smooth vehicle drive-in and parking.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+            {/* Left Column: Outlet Details, Operating Hours & Contact */}
+            <div className="flex flex-col gap-6 justify-between">
+              {/* Card 1: Store Location & Address */}
+              <div className="bg-white border border-neutral-300 p-6 sm:p-7 rounded-none shadow-sm space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none shrink-0">
+                    <FaMapMarkerAlt className="text-base" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
+                      Physical Location
+                    </span>
+                    <h3 className="text-lg font-bold text-neutral-950">
+                      Sampan Highway Inn Complex
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-mono">
+                  KM 74, Dhaka–Khulna Highway <br />
+                  Direct Highway Access, Bangladesh
+                </p>
+                <p className="pt-2 text-[11px] text-neutral-500 font-mono border-t border-neutral-100 flex items-center gap-2">
+                  <FaClock className="text-xs text-amber-600 shrink-0" />
+                  <span>Open Daily 7:00 AM – 11:30 PM • Ample Front Parking</span>
+                </p>
+              </div>
+
+              {/* Sub-grid: Direct Contact & Social */}
+              <div className="grid sm:grid-cols-2 gap-6 flex-1">
+                {/* Card 2: Contact Numbers */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
+                      <FaPhoneAlt className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
+                      Direct Inquiries
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Outlet Manager
+                    </h4>
+                    <div className="text-xs text-neutral-700 space-y-1">
+                      <a href="tel:+8801929918408" className="font-mono font-bold text-amber-700 hover:underline block text-sm">
+                        +880 1929-918408
+                      </a>
+                    </div>
+                  </div>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-amber-700 hover:bg-amber-600 text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaPhoneAlt className="text-[10px]" />
+                    <span>Contact Outlet</span>
+                  </Link>
+                </div>
+
+                {/* Card 3: Social Updates (Sampan Highway Inn Facebook Page) */}
+                <div className="bg-white border border-neutral-300 p-6 rounded-none shadow-sm flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 rounded-none">
+                      <FaFacebookF className="text-sm" />
+                    </div>
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
+                      Live Updates
+                    </span>
+                    <h4 className="text-base font-bold text-neutral-950">
+                      Highway Inn Page
+                    </h4>
+                    <p className="text-xs text-neutral-600 leading-relaxed">
+                      Follow our official Facebook page for live updates, offers, and announcements.
+                    </p>
+                  </div>
+                  <a
+                    href={highwayInnFacebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-[#1877F2] hover:bg-[#166fe5] text-white px-4 py-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center"
+                  >
+                    <FaFacebookF className="text-[10px]" />
+                    <span>Facebook Page</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: 50% Interactive Google Map routing to Sampan Highway Inn */}
+            <div className="border border-neutral-300 bg-white p-2 sm:p-3 shadow-sm flex flex-col h-full min-h-[420px] lg:min-h-0">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-3 py-2.5 mb-2 border-b border-neutral-200">
+                <div className="flex items-center gap-2 text-xs font-mono text-neutral-700 min-w-0">
+                  <span className="w-2 h-2 rounded-full bg-amber-600 animate-pulse shrink-0" />
+                  <span className="font-bold text-neutral-900 uppercase tracking-wider shrink-0">Route to:</span>
+                  <span className="truncate">Sampan Highway Inn Restaurant &amp; Party Centre</span>
+                </div>
+                <a
+                  href={highwayInnDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-amber-800 hover:text-amber-950 transition-colors shrink-0"
+                >
+                  <FaDirections className="text-xs text-amber-700" />
+                  <span>Get Directions</span>
+                  <FaExternalLinkAlt className="text-[10px]" />
+                </a>
+              </div>
+
+              <div className="relative w-full flex-1 min-h-[380px] bg-neutral-100 overflow-hidden">
+                <iframe
+                  src={highwayInnMapEmbed}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sampan Sweet Box Highway Inn Map Route"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* ================= 5. FULLSCREEN LIGHTBOX MODAL ================= */}
       {lightboxImage && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 backdrop-blur-md"

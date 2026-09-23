@@ -102,8 +102,11 @@ const renders = [
 ];
 
 const landmarks = [
-  { landmark: "Express Highway Interchange", distance: "2 km", driveTime: "3 Mins" },
-  { landmark: "Dhaka Financial District", distance: "25 km", driveTime: "25 Mins" },
+  { landmark: "Express Highway Inn & Club Lounge", distance: "50 m" },
+  { landmark: "Sampan Condominium Complex", distance: "50 m" },
+  { landmark: "Jatrabari / Mayor Hanif Flyover", distance: "~18 km" },
+  { landmark: "Sonargaon", distance: "21.6 km" },
+  { landmark: "Dhaka Motijheel (CBD)", distance: "21.7 km" },
 ];
 
 export default function SampanTradeEmporiumPage() {
@@ -142,14 +145,17 @@ export default function SampanTradeEmporiumPage() {
       /> */}
 
       {/* 4. Location + Map */}
-      {/* <RealEstateLocationMap
+      <RealEstateLocationMap
+        title="Location & Strategic Highway Connectivity"
+        subtitle="Conveniently located near Express Highway Inn along the bustling Dhaka–Chattogram Highway corridor, offering exceptional visibility, high commercial footfall, and effortless connectivity."
         projectName="Sampan Trade Emporium"
-        address="Commercial Corridor Hub, Dhaka, Bangladesh."
-        gpsCoordinates="23.7812° N, 90.3954° E"
-        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14603.6!2d90.3954!3d23.7812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQ6JzUyLjMiTiA5MMKwMjMnNDMuNCJF!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+        address="Located near Express Highway Inn, Dhaka–Chattogram Highway, Narayanganj, Bangladesh."
+        gpsCoordinates="23.6968° N, 90.5335° E"
+        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.0838383905207!2d90.53096697455837!3d23.69683467870696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b5d09a1b0c3f%3A0x5b0f161298224bab!2sExpress%20Highway%20Inn!5e1!3m2!1sen!2sus!4v1790156916637!5m2!1sen!2sus"
+        googleMapsUrl="https://maps.app.goo.gl/V71DDe9dXmhJezs8A"
         landmarks={landmarks}
         bgTheme="divisions-green"
-      /> */}
+      />
 
       {/* 5. Construction Progress */}
       {/* <ConstructionProgressTracker

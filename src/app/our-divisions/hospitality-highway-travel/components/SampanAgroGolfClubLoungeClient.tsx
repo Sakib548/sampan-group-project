@@ -43,6 +43,8 @@ import {
   FaUsers,
   FaTv,
   FaCertificate,
+  FaDirections,
+  FaCompass,
 } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -1071,78 +1073,82 @@ export default function SampanAgroGolfClubLoungeClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* Site Address Card */}
-            <div className="lg:col-span-6 bg-white border border-neutral-200 p-8 sm:p-10 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="inline-flex items-center gap-2 text-emerald-700 bg-emerald-50 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+
+            {/* Left Column: Location & Office Cards */}
+            <div className="flex flex-col gap-6 justify-between">
+              {/* Site Address Card */}
+              <div className="bg-white border border-neutral-200 p-7 sm:p-8 shadow-sm relative group hover:border-emerald-600 transition-colors">
+                <div className="absolute top-0 left-0 h-[3px] w-full bg-emerald-600" />
+
+                <div className="inline-flex items-center gap-2 text-emerald-700 bg-emerald-50 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider mb-5">
                   <FaMapMarkerAlt />
                   <span>Resort &amp; Golf Club Site</span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-neutral-950">
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-950">
                   Podunapur, Moulvibazar Sadar
                 </h3>
-                <p className="text-sm text-neutral-600 mt-1">
+                <p className="text-xs sm:text-sm text-neutral-600 mt-1">
                   Moulvibazar District, Sylhet Division — Bangladesh.
                 </p>
 
-                <div className="mt-6 pt-6 border-t border-neutral-100 space-y-4 text-xs sm:text-sm text-neutral-700">
-                  <div className="flex items-start gap-3">
-                    <span className="h-2 w-2 rounded-full bg-emerald-600 mt-2 shrink-0" />
+                <div className="mt-5 pt-5 border-t border-neutral-100 space-y-3 text-xs text-neutral-700">
+                  <div className="flex items-start gap-2.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" />
                     <p>
-                      <strong>Regional Proximity:</strong> Located in close distance to Sreemangal tea estates, Lawachara National Park, and Moulvibazar city center.
+                      <strong>Regional Proximity:</strong> Close distance to Sreemangal tea estates and Moulvibazar town.
                     </p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <span className="h-2 w-2 rounded-full bg-emerald-600 mt-2 shrink-0" />
+                  <div className="flex items-start gap-2.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" />
                     <p>
-                      <strong>Express Highway Route:</strong> Directly connected via Dhaka-Sylhet Highway corridor with express road links for convenient weekend travel.
+                      <strong>Express Route:</strong> Connected via Dhaka–Sylhet Highway corridor for convenient travel.
                     </p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <span className="h-2 w-2 rounded-full bg-emerald-600 mt-2 shrink-0" />
+                  <div className="flex items-start gap-2.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" />
                     <p>
-                      <strong>Natural Landscape:</strong> Encompasses scenic rolling hills, natural fresh water lake bodies, and tranquil organic agro cultivation zones.
+                      <strong>Landscape:</strong> Rolling green hills, natural freshwater lakes, and agro plantations.
                     </p>
                   </div>
                 </div>
+
+                <div className="mt-6 pt-5 border-t border-neutral-100 flex flex-wrap gap-3">
+                  <a
+                    href="tel:+8801906896326"
+                    className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 px-3.5 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-100 transition-colors"
+                  >
+                    <FaPhoneAlt className="text-xs" />
+                    <span>+880 1906-896 326</span>
+                  </a>
+                  <a
+                    href="tel:+8801906896327"
+                    className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 px-3.5 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-100 transition-colors"
+                  >
+                    <FaPhoneAlt className="text-xs" />
+                    <span>+880 1906-896 327</span>
+                  </a>
+                </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-neutral-100 flex flex-wrap gap-4">
-                <a
-                  href="tel:+8801906896326"
-                  className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-100 transition-colors"
-                >
-                  <FaPhoneAlt className="text-xs" />
-                  <span>+880 1906-896 326</span>
-                </a>
-                <a
-                  href="tel:+8801906896327"
-                  className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-100 transition-colors"
-                >
-                  <FaPhoneAlt className="text-xs" />
-                  <span>+880 1906-896 327</span>
-                </a>
-              </div>
-            </div>
+              {/* Corporate Head Office Card */}
+              <div className="bg-white border border-neutral-200 p-7 sm:p-8 shadow-sm relative group hover:border-emerald-600 transition-colors">
+                <div className="absolute top-0 left-0 h-[3px] w-full bg-[#183b2b]" />
 
-            {/* Corporate Head Office Card */}
-            <div className="lg:col-span-6 bg-white border border-neutral-200 p-8 sm:p-10 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="inline-flex items-center gap-2 text-emerald-700 bg-emerald-50 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider mb-6">
-                  <FaMapMarkerAlt />
+                <div className="inline-flex items-center gap-2 text-emerald-700 bg-emerald-50 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider mb-5">
+                  <FaStore />
                   <span>Corporate Head Office</span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-neutral-950">
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-950">
                   Sampan 21st Century
                 </h3>
-                <p className="text-sm text-neutral-600 mt-1">
+                <p className="text-xs sm:text-sm text-neutral-600 mt-1">
                   House-284, Block-B, Road-1/A, Bashundhara R/A, Dhaka, Bangladesh.
                 </p>
 
-                <div className="mt-6 pt-6 border-t border-neutral-100 space-y-3 font-mono text-xs text-neutral-700">
+                <div className="mt-5 pt-5 border-t border-neutral-100 space-y-2.5 font-mono text-xs text-neutral-700">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <span className="text-neutral-500">Official Facebook:</span>
                     <a
@@ -1167,25 +1173,77 @@ export default function SampanAgroGolfClubLoungeClient() {
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <span className="text-neutral-500">Member Services:</span>
-                    <span className="font-semibold">Saturday – Thursday (9AM – 6PM)</span>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                    <span className="text-neutral-500">Club Visits:</span>
-                    <span className="font-semibold">Private Tours by Prior Appointment</span>
+                    <span className="font-semibold">Sat – Thu (9AM – 6PM)</span>
                   </div>
                 </div>
-              </div>
 
-              <div className="mt-8 pt-6 border-t border-neutral-100">
-                <button
-                  onClick={() => scrollTo("inquiry")}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#183b2b] hover:bg-emerald-800 text-white py-3.5 px-6 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-                >
-                  <FaCalendarCheck />
-                  <span>Request Membership Information</span>
-                </button>
+                <div className="mt-6 pt-5 border-t border-neutral-100">
+                  <button
+                    onClick={() => scrollTo("inquiry")}
+                    className="w-full inline-flex items-center justify-center gap-2 bg-[#183b2b] hover:bg-emerald-800 text-white py-3 px-5 font-mono text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  >
+                    <FaCalendarCheck />
+                    <span>Request Membership Information</span>
+                  </button>
+                </div>
               </div>
             </div>
+
+            {/* Right Column: 50% Interactive Google Map */}
+            <div className="border border-neutral-200 bg-white shadow-sm flex flex-col h-full min-h-[480px] lg:min-h-0 overflow-hidden">
+              <div className="p-4 sm:p-5 bg-[#091a11] text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-emerald-900/50">
+                <div className="flex items-center gap-2.5">
+                  <span className="flex h-2.5 w-2.5 relative shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                  </span>
+                  <div>
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-emerald-400 block">
+                      Interactive Route &amp; Satellite
+                    </span>
+                    <p className="text-xs sm:text-sm font-bold text-white">
+                      Sampan Agro &amp; Golf Club &amp; Lounge — Moulvibazar
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="https://maps.google.com/?q=Podunapur+Moulvibazar+Sylhet+Bangladesh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-sm shrink-0"
+                >
+                  <FaDirections className="text-xs" />
+                  <span>Get Directions</span>
+                  <FaExternalLinkAlt className="text-[9px]" />
+                </a>
+              </div>
+
+              <div className="relative w-full flex-1 min-h-[380px] bg-neutral-100">
+                <iframe
+                  title="Sampan Agro & Golf Club & Lounge Map"
+                  src="https://maps.google.com/maps?q=Podunapur+Moulvibazar+Sylhet+Bangladesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full filter saturate-[0.95]"
+                />
+              </div>
+
+              <div className="p-4 bg-[#f8faf6] border-t border-neutral-200 grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-mono text-[11px] text-neutral-700">
+                <div className="flex items-center gap-2">
+                  <FaCompass className="text-emerald-700 text-xs shrink-0" />
+                  <span><strong className="text-neutral-900">GPS:</strong> 24.4829° N, 91.7774° E</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaCar className="text-emerald-700 text-xs shrink-0" />
+                  <span><strong className="text-neutral-900">Corridor:</strong> Dhaka–Sylhet Highway</span>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>

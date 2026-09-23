@@ -5,7 +5,6 @@ import OnlineBookingWidget from "./OnlineBookingWidget";
 import MilestoneCounter from "./MilestoneCounter";
 import FacilitiesList from "./FacilitiesList";
 import HighwayRouteVisualizer from "./HighwayRouteVisualizer";
-import LocationAndMap from "./LocationAndMap";
 import PricingOverview from "./PricingOverview";
 import VirtualTourViewer from "./VirtualTourViewer";
 import PhotoVideoGallery from "./PhotoVideoGallery";

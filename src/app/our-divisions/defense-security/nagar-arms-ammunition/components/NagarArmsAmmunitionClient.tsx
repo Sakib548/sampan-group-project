@@ -49,16 +49,16 @@ interface GalleryImage {
 const facilityGallery: GalleryImage[] = [
   { id: "img-1", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-13.jpg" },
   { id: "img-2", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-&-Ammunition-iamge-6.jpg" },
-  { id: "img-3", image: "/images/our-divisions/nagar-arms-ammunation/1.jpeg" },
-  { id: "img-4", image: "/images/our-divisions/nagar-arms-ammunation/2.jpeg" },
-  { id: "img-5", image: "/images/our-divisions/nagar-arms-ammunation/3.jpeg" },
-  { id: "img-6", image: "/images/our-divisions/nagar-arms-ammunation/4.jpeg" },
-  { id: "img-7", image: "/images/our-divisions/nagar-arms-ammunation/5.jpeg" },
-  { id: "img-8", image: "/images/our-divisions/nagar-arms-ammunation/6.jpeg" },
-  { id: "img-9", image: "/images/our-divisions/nagar-arms-ammunation/7.jpeg" },
-  { id: "img-10", image: "/images/our-divisions/nagar-arms-ammunation/8.jpeg" },
-  { id: "img-11", image: "/images/our-divisions/nagar-arms-ammunation/9.jpeg" },
-  { id: "img-12", image: "/images/our-divisions/nagar-arms-ammunation/13.jpeg" },
+  { id: "img-3", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image.jpg" },
+  { id: "img-4", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-1.jpg" },
+  { id: "img-5", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-2.jpg" },
+  { id: "img-6", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-3.jpg" },
+  { id: "img-7", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-4.jpg" },
+  { id: "img-8", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-5.jpg" },
+  { id: "img-9", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-6.jpg" },
+  { id: "img-10", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-7.jpg" },
+  { id: "img-11", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-8.jpg" },
+  { id: "img-12", image: "/images/our-divisions/nagar-arms-ammunation/Nagar-Arms-Image-10.jpg" },
 ];
 
 export default function NagarArmsAmmunitionClient() {
@@ -373,63 +373,7 @@ export default function NagarArmsAmmunitionClient() {
         </div>
       )}
 
-      {/* ================= 5. SQUARE MINIMAL FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-12 md:grid-cols-4 mb-12">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-neutral-950 mb-3">
-                Nagar Arms &amp; Ammunition
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                Government-licensed arms and ammunition dealership in Bangladesh operating under official Ministry of Home Affairs authorization. A Sampan Group Venture.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Quick Links
-              </h4>
-              <ul className="space-y-2.5 text-xs font-mono">
-                <li>
-                  <button onClick={() => scrollTo("compliance")} className="hover:text-[#c2410c] transition-colors text-left">
-                    Compliance &amp; Operations
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollTo("facility")} className="hover:text-[#c2410c] transition-colors text-left">
-                    Facility Visual
-                  </button>
-                </li>
-                <li>
-                  <Link href="/our-divisions/defense-security/sampan-fire-arms-co" className="hover:text-[#c2410c] transition-colors">
-                    Sampan Fire Arms Co.
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Head Office
-              </h4>
-              <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
-                <li>Dhaka, Bangladesh</li>
-                <li>Tel: +880 1929918400</li>
-                <li>info@sampangroup.com.bd.bd</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-mono">
-            <p>
-              © {new Date().getFullYear()} Nagar Arms &amp; Ammunition. All Rights Reserved.
-            </p>
-            <div className="flex gap-6">
-              <Link href="/our-divisions/defense-security" className="hover:text-[#c2410c] transition-colors">
-                Defense Division Archive
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+
 
     </main>
   );

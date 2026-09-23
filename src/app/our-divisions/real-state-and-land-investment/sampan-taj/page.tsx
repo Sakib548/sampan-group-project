@@ -246,14 +246,14 @@ export default function SampanTajPage() {
       /> */}
 
       {/* 6. Location + Map */}
-      {/* <RealEstateLocationMap
+      <RealEstateLocationMap
         projectName="Sampan Taj"
         address="Plot 235, Road 2, Block F, Bashundhara R/A, Baridhara, Dhaka."
         gpsCoordinates="23.8124° N, 90.4326° E"
         embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14601.6!2d90.4326!3d23.8124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a5613%3A0x4b8e2b834460f1b2!2sBashundhara%20Residential%20Area%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
         landmarks={landmarks}
         bgTheme="divisions-green"
-      /> */}
+      />
 
       {/* 7. Construction Progress */}
       {/* <ConstructionProgressTracker

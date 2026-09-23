@@ -257,14 +257,14 @@ export default function SampanNiketonPage() {
       /> */}
 
       {/* 6. Location + Map */}
-      {/* <RealEstateLocationMap
+      <RealEstateLocationMap
         projectName="Sampan Niketon"
         address="Plot 168/10, Road 4, Shanti Niketon, Gulshan Link Road, Tejgaon, Dhaka."
         gpsCoordinates="23.7782° N, 90.4084° E"
         embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14603.6!2d90.4084!3d23.7782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7715b9a89eb%3A0x6b5c00d603a111b2!2sNiketon%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
         landmarks={landmarks}
         bgTheme="divisions-green"
-      /> */}
+      />
 
       {/* 7. Construction Progress */}
       {/* <ConstructionProgressTracker

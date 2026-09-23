@@ -184,8 +184,10 @@ const renders = [
 ];
 
 const landmarks = [
-  { landmark: "25'-0\" Wide Front Road", distance: "0 km", driveTime: "Direct Access" },
-  { landmark: "Corporate Center & Markets", distance: "1.5 km", driveTime: "4 Mins" },
+  { landmark: "Bashundhara Main Entrance / Pragati Sarani", distance: "1.0 km", driveTime: "3 Mins" },
+  { landmark: "Jamuna Future Park", distance: "1.8 km", driveTime: "5 Mins" },
+  { landmark: "Evercare Hospital Dhaka", distance: "2.2 km", driveTime: "6 Mins" },
+  { landmark: "North South University & IUB", distance: "2.5 km", driveTime: "7 Mins" },
 ];
 
 const developerInfo = {
@@ -246,14 +248,14 @@ export default function Sampan21stCenturyPage() {
       /> */}
 
       {/* 6. Location + Map */}
-      {/* <RealEstateLocationMap
-        projectName="Sampan Twenty First Century"
-        address="25-ft Wide Road, Dhaka, Bangladesh."
-        gpsCoordinates="23.8212° N, 90.3554° E"
-        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14599.6!2d90.3554!3d23.8212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQ5JzE2LjMiTiA5MMKwMjEnMTkuNCJF!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+      <RealEstateLocationMap
+        projectName="Sampan 21st Century"
+        address="Sampan 21st Century Tower, House 284, Road 1/A, Block B, Bashundhara R/A, Dhaka, Bangladesh, 1229."
+        gpsCoordinates="23.8124° N, 90.4285° E"
+        embedMapUrl="https://www.google.com/maps?q=SAMPAN%2021ST%20CENTURY%20TOWER%2C%20House%23284%2C%20Block%20B%2C%20Road%23%201%2FA%2C%20Bashundhara%2C%20Dhaka%2C%20Bangladesh%2C%201229&z=15&output=embed"
         landmarks={landmarks}
         bgTheme="divisions-green"
-      /> */}
+      />
 
       {/* 7. Construction Progress */}
       {/* <ConstructionProgressTracker

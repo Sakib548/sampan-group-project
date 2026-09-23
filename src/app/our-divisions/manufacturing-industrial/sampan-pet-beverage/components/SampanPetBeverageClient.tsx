@@ -39,7 +39,7 @@ const factoryGallery: GalleryItem[] = [
     id: "pet-2",
     title: "Industrial Packaging & Bottling Machinery",
     category: "Machinery & Quality",
-    image: "/images/our-divisions/sampan-pet-beverage/WhatsApp-Image-2024-05-30-at-6.53.17-PM-1-1(1).jpeg",
+    image: "/images/our-divisions/sampan-pet-beverage/image-2.jpeg",
     description: "Automated filling, capping, and label application system for food-grade bottled beverages.",
   },
 ];
@@ -427,67 +427,7 @@ export default function SampanPetBeverageClient() {
         </div>
       )}
 
-      {/* ================= 6. SQUARE MINIMAL FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-12 md:grid-cols-4 mb-12">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-neutral-950 mb-3">
-                Sampan PET &amp; Beverage
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                Automated PET bottle preforms and beverage bottling plant inside Sampan Industrial Park in Alfadanga, Faridpur. A Sampan Group Venture.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Quick Links
-              </h4>
-              <ul className="space-y-2.5 text-xs font-mono">
-                <li>
-                  <button onClick={() => scrollTo("capabilities")} className="hover:text-orange-700 transition-colors text-left">
-                    Capabilities
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollTo("gallery")} className="hover:text-orange-700 transition-colors text-left">
-                    Factory Photos
-                  </button>
-                </li>
-                <li>
-                  <Link href="/our-divisions/manufacturing-industrial/sampan-industrial-park" className="hover:text-orange-700 transition-colors">
-                    Sampan Industrial Park
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Plant Location
-              </h4>
-              <ul className="space-y-2.5 text-xs text-neutral-500 font-mono">
-                <li>Sampan Industrial Park</li>
-                <li>Alfadanga, Faridpur, Bangladesh</li>
-                <li>Tel: +880 1929918400</li>
-                <li>info@sampangroup.com.bd.bd</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-mono">
-            <p>
-              © {new Date().getFullYear()} Sampan PET &amp; Beverage. All Rights Reserved.
-            </p>
-            <div className="flex gap-6">
-              <Link href="/our-divisions/manufacturing-industrial" className="hover:text-orange-700 transition-colors">
-                Manufacturing Division Archive
-              </Link>
-              <Link href="/our-divisions/manufacturing-industrial/sampan-hollow-bricks-tiles" className="hover:text-orange-700 transition-colors">
-                Hollow Bricks &amp; Tiles
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+
 
     </main>
   );

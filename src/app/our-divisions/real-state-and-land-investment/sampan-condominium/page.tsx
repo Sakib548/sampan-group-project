@@ -216,13 +216,11 @@ const renders = [
 ];
 
 const landmarks = [
-  { landmark: "Express Highway Inn Complex", distance: "0 m", driveTime: "On-Site Footprint" },
-  { landmark: "Bhanga Junction Expressway Interchange", distance: "16 km", driveTime: "15 Mins" },
-  { landmark: "Padma Bridge Toll Plaza (Mawa)", distance: "39 km", driveTime: "30 Mins" },
-  { landmark: "South Highway Hub", distance: "36 km", driveTime: "32 Mins" },
-  { landmark: "Barishal Divisional Airport Hub", distance: "68 km", driveTime: "55 Mins" },
-  { landmark: "Dhaka Zero Point / Jatrabari", distance: "74 km", driveTime: "1h 05m" },
-  { landmark: "Khulna Divisional City Hub", distance: "106 km", driveTime: "1h 35m" },
+  { landmark: "Express Highway Inn Complex", distance: "0 m (On-Site)" },
+  { landmark: "Sampan Trade Emporium", distance: "50 m" },
+  { landmark: "Jatrabari / Mayor Hanif Flyover", distance: "~18 km" },
+  { landmark: "Sonargaon", distance: "21.6 km" },
+  { landmark: "Dhaka Motijheel (CBD)", distance: "21.7 km" },
 ];
 
 export default function SampanCondominiumPage() {
@@ -238,7 +236,7 @@ export default function SampanCondominiumPage() {
         image="/images/projects/sampan-condominium.jpg"
         facts={facts}
         accentColor="#ca8a04"
-        locationLabel="Express Highway Inn Footprint, Dhaka–Khulna Expressway Corridor"
+        locationLabel="Express Highway Inn Footprint, Dhaka–Chattogram Highway Corridor"
         primaryCtaLabel="Explore the Residences"
         primaryCtaLink="#residences"
       />
@@ -286,17 +284,18 @@ export default function SampanCondominiumPage() {
       /> */}
 
       {/* 2. Location & Map */}
-      {/* <RealEstateLocationMap
-        title="Strategic Connectivity."
-        subtitle="Prominently situated within the Express Highway Inn footprint. Offering immediate transit access to major corridors while maintaining a secure, serene residential environment."
+      <RealEstateLocationMap
+        title="Strategic Connectivity Near Express Highway Inn"
+        subtitle="Prominently situated right near and within the Express Highway Inn complex footprint. Offering immediate transit access to major national corridors while maintaining a secure, serene residential environment."
         projectName="Sampan Condominium"
-        address="Express Highway Inn Footprint, Dhaka–Khulna Expressway Corridor, Bangladesh."
-        gpsCoordinates="23.260465° N, 89.765979° E"
-        embedMapUrl="https://www.google.com/maps?q=23.2604651,89.7659791&hl=en&z=14&output=embed"
+        address="Located near Express Highway Inn, Dhaka–Chattogram Highway, Narayanganj, Bangladesh."
+        gpsCoordinates="23.6968° N, 90.5335° E"
+        embedMapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.0838383905207!2d90.53096697455837!3d23.69683467870696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b5d09a1b0c3f%3A0x5b0f161298224bab!2sExpress%20Highway%20Inn!5e1!3m2!1sen!2sus!4v1790156916637!5m2!1sen!2sus"
+        googleMapsUrl="https://maps.app.goo.gl/V71DDe9dXmhJezs8A"
         landmarks={landmarks}
-        ctaText="View Interactive Map"
+        ctaText="Get Live Directions"
         bgTheme="about-ivory"
-      /> */}
+      />
 
       {/* 3. Enquiry Form */}
       <RealEstateEnquiryForm

@@ -102,7 +102,7 @@ export default function FacilitiesList() {
                 className="group flex flex-col rounded-none overflow-hidden bg-white border border-[#173326]/15 shadow-sm hover:shadow-xl hover:border-[#2f6b45]/40 transition-all duration-500 hover:-translate-y-1"
               >
                 {/* Image Header */}
-                <div className="relative aspect-square overflow-hidden bg-neutral-100">
+                <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
                   <Image
                     src={facility.image}
                     alt={facility.name}

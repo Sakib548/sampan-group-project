@@ -214,7 +214,7 @@ const nearbyLocations = [
 ];
 
 const mapUrl =
-  "https://www.google.com/maps?q=Express+Highway+Inn+Bangladesh&output=embed";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.0838383905207!2d90.53096697455837!3d23.69683467870696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b5d09a1b0c3f%3A0x5b0f161298224bab!2sExpress%20Highway%20Inn!5e1!3m2!1sen!2sus!4v1790156916637!5m2!1sen!2sus";
 
 const facilityCategories = [
   "All",
@@ -557,16 +557,16 @@ export default function ExpressHighwayInnClubLoungePage() {
                   </h4>
                   <ul className="space-y-3 text-xs sm:text-sm text-neutral-700">
                     <li className="flex items-center justify-between border-b border-neutral-100 pb-2.5">
-                      <span>Dhaka City Center</span>
-                      <span className="font-bold text-neutral-950">45 km</span>
+                      <span>Jatrabari / Hanif Flyover</span>
+                      <span className="font-bold text-neutral-950">~18 km</span>
                     </li>
                     <li className="flex items-center justify-between border-b border-neutral-100 pb-2.5">
-                      <span>Gazipur Intersection</span>
-                      <span className="font-bold text-neutral-950">25 km</span>
+                      <span>Sonargaon</span>
+                      <span className="font-bold text-neutral-950">21.6 km</span>
                     </li>
                     <li className="flex items-center justify-between">
-                      <span>Mymensingh Divisional Hub</span>
-                      <span className="font-bold text-neutral-950">85 km</span>
+                      <span>Dhaka Motijheel (CBD)</span>
+                      <span className="font-bold text-neutral-950">21.7 km</span>
                     </li>
                   </ul>
                 </div>
@@ -576,14 +576,14 @@ export default function ExpressHighwayInnClubLoungePage() {
                     GPS Coordinates
                   </h4>
                   <p className="inline-block rounded-none bg-white border border-neutral-200 px-3 py-1 font-mono text-xs font-bold text-neutral-800">
-                    23.95° N, 90.42° E
+                    23.6968° N, 90.5335° E
                   </p>
                 </div>
               </div>
 
               <div>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Express+Highway+Inn+Bangladesh"
+                  href="https://maps.app.goo.gl/V71DDe9dXmhJezs8A"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex items-center gap-2 border-b-2 border-[#58b9eb] pb-2 font-mono text-xs font-bold uppercase tracking-[0.2em] text-neutral-950 transition-all duration-300 hover:text-[#3298cb]"
@@ -753,66 +753,7 @@ export default function ExpressHighwayInnClubLoungePage() {
         </div>
       )}
 
-      {/* ================= FOOTER ================= */}
-      <footer className="bg-white border-t border-neutral-200 px-6 py-12 sm:px-10 lg:px-16 text-neutral-600">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-12 md:grid-cols-4 mb-12">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-neutral-950 mb-3">
-                Express Highway Inn Club &amp; Lounge
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
-                Blending executive relaxation and luxury with modern comfort, fine dining, private lounges, and unmatched service for members on the national highway.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Quick Links
-              </h4>
-              <ul className="space-y-2.5 text-xs">
-                <li>
-                  <Link href="#masterplan" className="hover:text-[#3298cb] transition-colors">
-                    Masterplan
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#facilities-gallery" className="hover:text-[#3298cb] transition-colors">
-                    Facilities Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#location" className="hover:text-[#3298cb] transition-colors">
-                    Location &amp; Access
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-950 mb-4">
-                Contact
-              </h4>
-              <ul className="space-y-2.5 text-xs text-neutral-500">
-                <li>National Highway Corridor, Bangladesh</li>
-                <li>+880 1929-918408</li>
-                <li>club@expresshighwayinn.com</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-mono">
-            <p>
-              © {new Date().getFullYear()} Express Highway Inn Club &amp; Lounge. A Sampan Group Venture.
-            </p>
-            <div className="flex gap-6">
-              <Link href="#" className="hover:text-[#3298cb] transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:text-[#3298cb] transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+
 
     </main>
   );

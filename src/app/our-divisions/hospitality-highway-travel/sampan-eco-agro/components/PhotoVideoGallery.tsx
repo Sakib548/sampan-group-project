@@ -143,7 +143,7 @@ export default function PhotoVideoGallery() {
             <div
               key={item.id}
               onClick={() => setLightboxIndex(index)}
-              className="group relative overflow-hidden rounded-none bg-neutral-200 shadow-sm border border-neutral-200/80 cursor-pointer aspect-square hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-none bg-neutral-200 shadow-sm border border-neutral-200/80 cursor-pointer aspect-[16/10] hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
             >
               <Image
                 src={item.src}
