@@ -35,5 +35,5 @@ Sampan Pet & Beverage(Refreshing beverage choice)
 
 Kingini freight system(Reliable freight solutions )
 
-Sampan Build Trade ltd(Trusted construction partner)
+//Sampan Build Trade ltd(Trusted construction partner)
 
