@@ -44,7 +44,7 @@ Specs to implement:
    - variant?: "default" | "secondary" | "success" | "warning" | "danger" | "outline"
    - size?: "sm" | "md"
 2. Styling features:
-   - Pill shape: "rounded-full font-medium"
+   - Pill shape: "rounded-full font-mediu m"
    - Compact sizing: "px-2.5 py-0.5 text-xs"
    - Soft pastel / tinted backgrounds that match our clean minimalist theme:
      * default: bg-zinc-900 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900
