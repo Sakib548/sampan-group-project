@@ -6,7 +6,7 @@ keeps all slides mounted, uses activeIndex to choose the current slide, uses
 GSAP to crossfade images, uses an autoplay timer, and provides previous/next
 buttons.
 
-1. Client component and imports
+1. Client component and importss
 --------------------------------
 
 "use client" is required because the component uses React state, browser
